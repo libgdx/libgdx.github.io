@@ -18,8 +18,10 @@
     {% endif %}
 
     {% if page.show_author %}
-        <a href="https://github.com/{{page.author_username}}">{% avatar {{ page.author_username }} size=20 %}</a>
-        {{ page.author_displayname }}
+        {% assign author_id = page.author_username %}
+        {% assign author_displayname = page.author_displayname %}
+        <a href="https://github.com/{{ author_id }}">{% avatar user=author_id size=20 %}</a>
+        {{ author_displayname }}
     {% endif %}
 
     {% if page.read_time and page.show_author %}
