@@ -1,0 +1,19 @@
+elements:
+  - image: assets/images/index_showcase/game0.png
+    title: Space Haven <br/>by Bugbyte Ltd.
+    link: https://store.steampowered.com/app/979110/Space_Haven/
+  - image: assets/images/index_showcase/game1.png
+    title: Pathway <br/>by Robotality
+    link: https://store.steampowered.com/app/546430/Pathway/
+  - image: assets/images/index_showcase/game2.png
+    title: Delver <br/>by Priority Interrupt
+    link: https://store.steampowered.com/app/249630/Delver/
+  - image: assets/images/index_showcase/game3.png
+    title: Residual <br/>by Orangepixel
+    link: https://store.steampowered.com/app/1290780/Residual/
+  - image: assets/images/index_showcase/game4.png
+    title: Transfinite Dungeon <br/>by icefill
+    link: https://store.steampowered.com/app/1290750/Transfinite_Dungeon/
+  - image: assets/images/index_showcase/game5.png
+    title: Forsaken Portals <br/>by Pottgames
+    link: https://store.steampowered.com/app/1338220/Forsaken_Portals/

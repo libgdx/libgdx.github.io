@@ -1,0 +1,86 @@
+---
+layout: splash #home # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+author_profile: false
+
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.15"
+  overlay_image: /assets/images/index.jpg
+  actions:
+    - label: "Get started"
+      url: "/dev/"
+  caption: "Photo credit: [**Delver by  Priority Interrupt**](https://store.steampowered.com/app/249630/Delver/)"
+
+excerpt: "LibGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, Mac OS, Android, your browser and iOS."
+intro:
+  - excerpt: '_LibGDX provides a well-tried and robust environment for rapid prototyping and fast iterations. LibGDX does not force a specific design or coding style on you, it rather gives you the freedom to create a game the way you like it._'
+feature_row:
+  - title: "Cross Platform"
+    excerpt: "Publish your games on Windows, Mac OS, Linux (including the RPi!), Android, iOS, and HTML5, all with the [same code base](/features/)."
+  - title: "Open Source"
+    excerpt: "libGDX is licensed under Apache 2.0 and maintained by the community. [Contribute today!](/dev/#contributing-to-libgdx)"
+  - title: "Feature Packed"
+    excerpt: "libGDX comes with [batteries included](/features/). Write 2D or 3D games and let libGDX worry about low-level details."
+feature_row2:
+  - title: "Super Fast"
+    excerpt: "Heavy emphasis is put on avoiding garbage collection for Dalvik/JavaScript by careful API design and the use of custom collections."
+  - title: "Documentation"
+    excerpt: "Learn libGDX inside out on the [Wiki](https://github.com/libgdx/libgdx/wiki), study the [Javadocs](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/), or read a third-party tutorial. Learn from example code and demos."
+  - title: "Community Support"
+    excerpt: "Get great support from a very welcoming [community](/community/) of game and application developers."
+feature_row3:
+  - image_path: /assets/images/update.jpeg
+    alt: "Latest version"
+    title: "libGDX 1.9.11"
+    excerpt: 'The latest version of libGDX, 1.9.11, has been released on 22 July 2020. Among various fixes and improvements it contains support for Linux ARM builds, which allows libGDX apps to be deployed on Rasperry Pis.'
+    url: "/gdx_1_9_11/"
+    btn_label: "See the full changelog"
+    btn_class: "btn--primary"
+feature_row4:
+  - image_path: /assets/images/discord.png
+    alt: "Discord"
+    title: "The libGDX Community"
+    excerpt: 'LibGDX has a very active community on various platforms, including Discord, Reddit, StackOverflow and IRC. If you are looking for a place to start, our Discord server is most definitely the right place.'
+    url: "/community/"
+    btn_label: "Find out more"
+    btn_class: "btn--primary"
+feature_row5:
+  - excerpt: 'Head over to our showcase section to see some games!'
+    url: "/showcase/"
+    btn_label: "Show me more"
+    btn_class: "btn--primary"
+feature_row6:
+  - image_path: /assets/images/jams.jpeg
+    alt: "Game Jams"
+    title: "Game Jams"
+    excerpt: "Our community regularly offers game jams for libGDX centered around different themes. These are an ideal oppurtunity to get to know both libGDX and our community."
+    url: "/community/jams/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+---
+
+<style>
+  .page__title {
+    display: none;
+  }
+</style>
+
+{% include feature_row id="intro" type="center" %}
+
+<div style="max-width: 600px !important; margin-left: auto; margin-right: auto;">
+      {% include carousel.html height="337" unit="px" duration="7" %}
+</div>
+
+{% include feature_row id="feature_row5" type="center" %}
+
+{% include feature_row %}
+
+{% include feature_row id="feature_row2" %}
+
+<br/>
+
+{% include feature_row id="feature_row3" type="left" %}
+
+{% include feature_row id="feature_row4" type="right" %}
+
+{% include feature_row id="feature_row6" type="left" %}
