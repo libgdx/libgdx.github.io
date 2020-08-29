@@ -17,7 +17,7 @@ toc_sticky: false
 {% include breadcrumbs.html %}
 
 # Upcoming
-If you want to stay up to date – join the official [libGDX discord](https://discord.gg/6pgDK9F)!
+If you want to stay up to date – join the official [libGDX Discord](https://discord.gg/6pgDK9F)!
 
 ## September 2020
 * Theme Suggestions: 6th - 12th

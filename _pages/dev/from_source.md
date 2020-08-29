@@ -32,7 +32,7 @@ cd libgdx
 
     a) <u>Via IntelliJ/Android Studio:</u>
 
-     - File > Open > LibGDX root build.gradle
+     - File > Open > libGDX root build.gradle
      - Import all projects
      - Wait until everything is synced and indexed
      - View > Tool Windows > Gradle, sync gradle button
@@ -48,7 +48,7 @@ cd libgdx
 # Building
 All of the other projects are hooked up and ready to test given that you have set up your system correctly, so give them a go.
 
-Its recommended to run the android and gwt tests on command line with the following:
+Its recommended to run the Android and GWT tests on command line with the following:
 
 ```
 ./gradlew tests:gdx-tests-android:installDebug
@@ -61,7 +61,7 @@ To use your local changes in another project, you can install libGDX to your loc
 mvn install
 ```
 
-This will build and install LibGDX and all core components to your local maven repository with the current version declared in the pom.xml files.
+This will build and install libGDX and all core components to your local maven repository with the current version declared in the pom.xml files.
 
 # Natives
 If you want to build the libGDX natives yourself, you can find [instructions](/dev/natives/) here.

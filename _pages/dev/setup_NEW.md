@@ -11,7 +11,7 @@ header:
     - label: "Download gdx-liftoff"
       url: "https://github.com/tommyettinger/gdx-liftoff/releases"
 
-excerpt: "LibGDX offers a community-made setup tool, which automatically creates a project and downloads everything necessary."
+excerpt: "libGDX offers a community-made setup tool, which automatically creates a project and downloads everything necessary."
 
 toc: true
 toc_sticky: false
@@ -61,9 +61,9 @@ To setup your first project and download the necessary dependencies, libGDX offe
 ## Different platforms:
 Then, plug in whatever options you see fit:
 - **Desktop and/or LWJGL3** should usually be checked, so you can test on the same computer you develop on.
-  - LWJGL3 is almost the same as Desktop, but because it has better support for new hardware (such as high-DPI displays), it should probably be preferred. It also allows multiple windows and drag+drop.
+  - LWJGL3 is almost the same as Desktop, but because it has better support for new hardware (such as high-DPI displays), it should probably be preferred. It also allows multiple Windows and drag+drop.
   - Desktop should mostly be preferred if you need to also depend on gdx-tools, such as if you need to run the texture packer at runtime. Some machines have issues with an inconsistent or very high framerate with LWJGL3, and using the "Legacy" desktop can fix that.
-- **iOS** should not be checked if you aren't running MacOS (as it won't run elsewhere) and you don't intend to later build an iOS app on a Mac. It needs some large dependencies to be downloaded when you first import the project.
+- **iOS** should not be checked if you aren't running macOS (as it won't run elsewhere) and you don't intend to later build an iOS app on a Mac. It needs some large dependencies to be downloaded when you first import the project.
 - **Android** should only be checked if you've set up your computer for Android development.
 - **HTML** is a more-involved target, with some perfectly-normal code on all other platforms acting completely different on HTML due to the tool used, Google Web Toolkit (GWT). See [this small guide to GWT](https://github.com/libgdx/libgdx/wiki/HTML5-Backend-and-GWT-Specifics) for more information. However, it's very likely that you won't notice any difference at all, unless you try to make behavior identical on GWT and other platforms, and even then there may be nothing apparent.
   - GWT 2.9.0 is available but doesn't integrate with libGDX by default; there's a third-party [replacement to the official GWT backend](https://github.com/tommyettinger/gdx-backends#19112) that supports it with libGDX 1.9.11. Using GWT 2.9.0 allows Java 11's `var` keyword to be used, plus other Java 11 features, but doesn't change much of what's available from the standard library.
@@ -71,7 +71,7 @@ Then, plug in whatever options you see fit:
 If you aren't interested in any extensions, etc. you can skip the next few subsections.
 
 ## Non-Java JVM Languages
-- For dependencies, you don't need LibGDX checked (the tool is ready to download LibGDX and set it as a dependency in all cases).
+- For dependencies, you don't need libGDX checked (the tool is ready to download libGDX and set it as a dependency in all cases).
 - There are options to add language support for **non-Java JVM languages**; of these, Kotlin is the best-supported.
   - The HTML target won't work with non-Java languages, and others targets may be questionable.
   - Kotlin should work well on Android, Desktop (LWJGL2) and LWJGL3, and will probably work well on iOS.
