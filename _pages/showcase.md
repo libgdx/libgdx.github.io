@@ -104,9 +104,9 @@ PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Grashers](https://store.steampowered.com/app/670250/Grashers/) by Pink Array
-<img align="right" src="https://cdn.cloudflare.steamstatic.com/steam/apps/670250/header.jpg?t=1590977396" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="right" src="http://grashers.com/images/linked/thumbnail-libgdx.png" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
 
-Grashers is a twin-stick shooter roguelike set in space where you play as an interstellar custodian known as a Grasher who removes junk from the surface of various planets and fights radioactive mutant monsters.
+Vacuum stuff, blast foes, and hurl objects in this roguelite clean-'em-up! The universe is up to its ears in pollution, and only the Grashers can wipe it clean!
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
