@@ -60,7 +60,7 @@ Common limitations on GWT include:
 - Reflection, use [libGDX reflection](https://github.com/libgdx/libgdx/wiki/Reflection) instead
 - Multithreading. Timers are supported on GWT, but threads are strictly not.
 
-Determine if any new classes are compatible with GWT, and either **include** or **exclude** elements to the [gwt module](https://github.com/libgdx/libgdx/blob/master/gdx/res/com/badlogic/gdx.gwt.xml).
+Determine if any new classes are compatible with GWT, and either **include** or **exclude** elements to the [GWT module](https://github.com/libgdx/libgdx/blob/master/gdx/res/com/badlogic/gdx.gwt.xml).
 
 ## Performance considerations
 Due to some of the targets of the framework being mobile and the web, along with it being a game development focused framework, its important to keep performance as tight as possible.
