@@ -47,7 +47,7 @@ A curated list of our favourite libraries can be found at [Awesome-libGDX](https
 <br/>
 
 # Contributing to libGDX
-Contributing to libGDX can come in a few different forms, you can help out on our Discord, pledge to the [patreon page](https://www.patreon.com/libgdx), or submit [code](https://github.com/libgdx/libgdx/) and [documentation](https://github.com/libgdx/libgdx/wiki) back to the project on GitHub.
+Contributing to libGDX can come in a few different forms: you can help out on our Discord, pledge to the [patreon page](https://www.patreon.com/libgdx), or [submit code and documentation back to the project](/dev/contributing/) on GitHub.
 
 ## Reporting an Issue
 Please note the issue tracker isn't for personal assistance, if you have a problem that isn't a reproducable bug in the core framework, please use the [community](/community/) for assistance.
@@ -61,4 +61,4 @@ Before you report an issue on our issue tracker, we ask you to do a few things:
 Once you have done this, please submit this along with any stacktraces or assets to the [issue tracker](https://github.com/libgdx/libgdx/issues), whilst filling out the template that is shown when creating a new issue.
 
 ## Working from Source
-If you want to contribute to libGDX itself, you need to get it set up on your local machine. Instructions for that can be found [here](/dev/from_source/).
+If you want to contribute to libGDX itself, please review our [contributing guidelines](/dev/contributing/). After that, you need to get libGDX set up on your local machine. Instructions for that can be found [here](/dev/from_source/).

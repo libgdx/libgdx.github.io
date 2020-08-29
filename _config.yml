@@ -74,6 +74,9 @@ footer:
     - label: "Wiki"
       icon: "fas fa-fw fa-link"
       url: "https://github.com/libgdx/libgdx/wiki"
+    - label: "Patreon"
+      icon: "fab fa-fw fa-patreon"
+      url: "https://www.patreon.com/libgdx"
 
 defaults:
   # _posts

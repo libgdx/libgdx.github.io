@@ -143,16 +143,16 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
 }
 
 a {
-  color: #de421f;
+  color: #ce320f;
 }
 a:visited {
-  color: #de421f;
+  color: #ce320f;
 }
 a:hover {
-  color: #b34127;
+  color: #de421f;
 }
 a:active {
-  color: #b34127;
+  color: #de421f;
 }
 </style>
 
@@ -161,13 +161,13 @@ a:active {
   <div class="container left">
     <div class="content">
       <h2>2020</h2>
-      <p>In 2020, libGDX <a href="/gdx_1_9_11/">version 1.9.11</a> saw the light of the world. Exactly as version 1.9.10, it contained a plethora of fixes and improvements. In August, our <a href="/welcome_on_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth an we are excited for the features and improvements planned.</p>
+      <p>In 2020, libGDX <a href="/gdx_1_9_11/">version 1.9.11</a> saw the light of the world. Exactly as version 1.9.10, it contained a plethora of fixes and improvements. In August of the same year, our <a href="/welcome_on_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements planned.</p>
     </div>
   </div>
   <div class="container right">
     <div class="content">
       <h2>2019</h2>
-      <p>In 2019, libGDX kept moving forward: version 1.9.10, containing lots of fixes and improvements, was released. The majority of work done in the libGDX ecosystem is now done outside of the main repo: libGDX as a framework is mature enough to not require substantial changes, but the toolset and frameworks surrounding libGDX are constantly improved upon by the community.</p>
+      <p>In 2019, libGDX kept moving forward: <a href="/gdx_1_9_10/">version 1.9.10</a>, containing lots of fixes and improvements, was released. The majority of work done in the libGDX ecosystem is now done outside of the main repo: libGDX as a framework is mature enough to not require substantial changes, but the toolset and frameworks surrounding libGDX are constantly improved upon by the community.</p>
     </div>
   </div>
   <div class="container left">
@@ -179,13 +179,13 @@ a:active {
   <div class="container right">
     <div class="content">
       <h2>2017</h2>
-      <p>By 2017, libGDX had become quite a bit more mature, so changes were not as frequently needed as in the early years. Nonetheless, the versions 1.9.6 and 1.9.7 were released.</p>
+      <p>By 2017, libGDX had become quite a bit more mature, so major changes were not as frequently needed as in the early years. Nonetheless, the versions 1.9.6 and 1.9.7 were released (the latter not by Mario Zechner – a first for libGDX) and some experimentation was done in the area of <a href="https://github.com/badlogic/gdx-vr">VR</a>.</p>
     </div>
   </div>
   <div class="container left">
     <div class="content">
       <h2>2016</h2>
-      <p>2016 brought the versions 1.8, 1.9 and later that year, a new iOS backend based on Intel's Multi-OS Engine was released, intended to replace the RoboVM one.</a>.</p>
+      <p>Apart from versions 1.8 and 1.9, 2016 brought us a new iOS backend based on Intel's Multi-OS Engine. It was released to replace the RoboVM one, since RoboVM itself was discontinued.</p>
     </div>
   </div>
   <div class="container right">
