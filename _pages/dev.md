@@ -8,14 +8,14 @@ header:
   overlay_image: /assets/images/dev.jpeg
   caption: "Photo credit: [**Fotis Fotopoulos**](https://unsplash.com/photos/DuHKoV44prg)"
   actions:
-    - label: "Github"
+    - label: "GitHub"
       url: "https://github.com/libgdx/libgdx"
     - label: "Issue Tracker"
       url: "https://github.com/libgdx/libgdx/issues"
     - label: "Wiki"
       url: "https://github.com/libgdx/libgdx/wiki"
 
-excerpt: "libGDX is hosted on Github, where all team members collaborate. Fork, star and contribute to our project!."
+excerpt: "libGDX is hosted on GitHub, where all team members collaborate. Fork, star and contribute to our project!."
 
 sidebar:
   nav: "dev"
@@ -47,7 +47,7 @@ A curated list of our favourite libraries can be found at [awesome-libgdx](https
 <br/>
 
 # Contributing to libGDX
-Contributing to libGDX can come in a few different forms, you can help out on our Discord, pledge to the [patreon page](https://www.patreon.com/libgdx), or submit [code](https://github.com/libgdx/libgdx/) and [documentation](https://github.com/libgdx/libgdx/wiki) back to the project on github.
+Contributing to libGDX can come in a few different forms, you can help out on our Discord, pledge to the [patreon page](https://www.patreon.com/libgdx), or submit [code](https://github.com/libgdx/libgdx/) and [documentation](https://github.com/libgdx/libgdx/wiki) back to the project on GitHub.
 
 ## Reporting an Issue
 Please note the issue tracker isn't for personal assistance, if you have a problem that isn't a reproducable bug in the core framework, please use the [community](/community/) for assistance.

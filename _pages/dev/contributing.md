@@ -16,13 +16,13 @@ toc_sticky: false
 
 {% include breadcrumbs.html %}
 
-Contributing to libGDX can come in a few different forms, you can help out on the forums and irc, pledge to the patreon page, and submit code and documentation back to the project on github.
+Contributing to libGDX can come in a few different forms, you can help out on the forums and irc, pledge to the patreon page, and submit code and documentation back to the project on GitHub.
 
 If you want to submit code back to the project, please take a moment to review over the guidelines below.
 
 # Guidelines
 ## Discussion of changes
-If you have a proposal for changes that you aren't sure about, or questions about a specific change you would like to make, you can start a conversation with the developers on the irc channel/forums or by starting up an issue on the issue tracker on Github.
+If you have a proposal for changes that you aren't sure about, or questions about a specific change you would like to make, you can start a conversation with the developers on the irc channel/forums or by starting up an issue on the issue tracker on GitHub.
 
 ## Formatting
 If you are working on any of the libGDX code, we require you to use the formatter that we use. You can find it [here](https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml). Failure to use the formatter will most likely get your pull request rejected. The formatter provided can be imported into Intellij and Android Studio also, its not just for Eclipse. See [here](https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/) for official documentation on this.
@@ -86,7 +86,7 @@ Pull requests for the master repository will be checked by automation tools, and
 <br/>
 
 # How to contribute code
-libGDX uses git, with our codebase situated on Github. In order to submit changes back to the official libGDX project, you will need to fork the project, clone your fork, [work on its source](/dev/from_source/), push changes back to your fork, and then submit a pull request based on your changes.
+libGDX uses git, with our codebase situated on GitHub. In order to submit changes back to the official libGDX project, you will need to fork the project, clone your fork, [work on its source](/dev/from_source/), push changes back to your fork, and then submit a pull request based on your changes.
 
 For a short yet very detailed explanation of how the system works, check out [this](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#Forked-Public-Project).
 
@@ -95,7 +95,7 @@ For an even shorter rundown, this is the flow:
 - Clone the forked repository.
 - Add the libGDX repository as a remote (to sync latest changes).
 - Make your changes to your locally cloned (of your fork), repository. Best to use new branches.
-- Commit your changes, and push the changes back to your forked repository on Github.
+- Commit your changes, and push the changes back to your forked repository on GitHub.
 - Go to GitHub, view your forked repository, select your branch and request a pull request be created.
 - Write a detailed description of what your pull request does, how it has been tested, what platforms it has been tested on, and why it belongs in libGDX.
 
