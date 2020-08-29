@@ -11,7 +11,7 @@ header:
     - label: "Download gdx-liftoff"
       url: "https://github.com/tommyettinger/gdx-liftoff/releases"
 
-excerpt: "LibGDX offers a community-made setup tool, which automatically creates a project and downloads everything necessary."
+excerpt: "libGDX offers a community-made setup tool, which automatically creates a project and downloads everything necessary."
 
 toc: true
 toc_sticky: false

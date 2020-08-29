@@ -17,7 +17,7 @@ feature_row:
   - image_path: /assets/images/discord.png
     alt: "Discord"
     title: "The Official Discord Sever"
-    excerpt: 'LibGDX also has a friendly Discord community. There are a number of channels, including but not limited to: screenshot sharing, question & answers, and kotlin discussions.'
+    excerpt: 'libGDX also has a friendly Discord community. There are a number of channels, including but not limited to: screenshot sharing, question & answers, and kotlin discussions.'
     url: "https://discord.gg/6pgDK9F"
     btn_label: "Join Us"
     btn_class: "btn--primary"
@@ -33,7 +33,7 @@ feature_row3:
   - image_path: /assets/images/reddit.png
     alt: "Reddit"
     title: "Reddit"
-    excerpt: "LibGDX also has a friendly Reddit community. Feel free to join us."
+    excerpt: "libGDX also has a friendly Reddit community. Feel free to join us."
     url: "https://www.reddit.com/r/libgdx/"
     btn_label: "Join Us"
     btn_class: "btn--primary"
@@ -47,7 +47,7 @@ feature_row3:
   - image_path: /assets/images/irc.jpeg
     alt: "IRC"
     title: "IRC"
-    excerpt: "LibGDX has an official IRC channel on irc.freenode.net, channel #libgdx."
+    excerpt: "libGDX has an official IRC channel on irc.freenode.net, channel #libgdx."
 ---
 
 {% include feature_row type="left" %}

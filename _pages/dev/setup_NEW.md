@@ -11,7 +11,7 @@ header:
     - label: "Download gdx-liftoff"
       url: "https://github.com/tommyettinger/gdx-liftoff/releases"
 
-excerpt: "LibGDX offers a community-made setup tool, which automatically creates a project and downloads everything necessary."
+excerpt: "libGDX offers a community-made setup tool, which automatically creates a project and downloads everything necessary."
 
 toc: true
 toc_sticky: false
@@ -72,7 +72,7 @@ Then, plug in whatever options you see fit:
 If you aren't interested in any extensions, etc. you can skip the next few subsections.
 
 ## Non-Java JVM Languages
-- For dependencies, you don't need LibGDX checked (the tool is ready to download LibGDX and set it as a dependency in all cases).
+- For dependencies, you don't need libGDX checked (the tool is ready to download libGDX and set it as a dependency in all cases).
 - There are options to add language support for **non-Java JVM languages**; of these, Kotlin is the best-supported.
   - The HTML target won't work with non-Java languages, and others targets may be questionable.
   - Kotlin should work well on Android, Desktop (LWJGL2) and LWJGL3, and will probably work well on iOS.
