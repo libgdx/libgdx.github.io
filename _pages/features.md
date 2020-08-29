@@ -18,7 +18,7 @@ feature_row:
 feature_row2:
   - image_path: /assets/images/features/reliable.png
     title: "Well proven"
-    excerpt: 'The libGDX project was started over 10 years ago. Over the years, libGDX and its community matured: nowadays, libGDX is a **well proven and reliable framework** with a sound base and documenation. Furthermore, there are plenty of games built on top of libGDX, many of which are open source.'
+    excerpt: 'The libGDX project was started [over 10 years ago](/history/). Over the years, libGDX and its community matured: nowadays, libGDX is a **[well proven](/showcase/) and reliable framework** with a sound base and documentation. Furthermore, there are plenty of games built on top of libGDX, many of which are open source.'
     url: "/showcase/"
     btn_label: "See some projects"
     btn_class: "btn--primary"

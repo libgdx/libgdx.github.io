@@ -26,9 +26,9 @@ An open-source reimplementation of the most famous civilization-building game ev
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Spine](http://en.esotericsoftware.com) by Esoteric Software <a href="https://github.com/yairm210/Unciv" style="margin-left: 10px" class="btn btn--info">Tool</a>
-<img align="left" src="http://de.esotericsoftware.com/img/front-what-is-spine.jpg" style="margin-right: 25px; margin-top: 17px; margin-bottom:20px; max-width: 440px;">
+<img align="left" src="http://de.esotericsoftware.com/img/front-what-is-spine.jpg" style="margin-right: 25px; margin-top: 20px; margin-bottom:35px; max-width: 440px;">
 
-Spine is an animation tool that focuses specifically on 2D animation for games. Spine aims to have an efficient, streamlined workflow, both for creating animations using the editor and for making use of those animations in games using the Spine Runtimes.
+Spine is an animation tool that focuses specifically on 2D animation for games. Spine aims to have an efficient, streamlined workflow, both for creating animations using the editor and for making use of those animations in games.
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
@@ -68,7 +68,7 @@ Halfway is a turn-based strategy RPG taking place a few hundred years into the f
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Residual](https://store.steampowered.com/app/1290780/Residual/) by Orangepixel
-<img align="left" src="https://steamcdn-a.akamaihd.net/steam/apps/1290780/header.jpg?t=1597948954" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="left" src="https://steamcdn-a.akamaihd.net/steam/apps/1290780/header.jpg?t=1597948954" style="margin-right: 25px; margin-top: 17px; margin-bottom:20px">
 
 Survive and explore a procedurally generated planet and cave-system. Discover old remnants of an ancient, advanced, alien society. Their residuals made a mark on the planet. Their technology might help you survive it.
 
@@ -111,7 +111,7 @@ Grashers is a twin-stick shooter roguelike set in space where you play as an int
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Forsaken Portals](https://store.steampowered.com/app/1338220/Forsaken_Portals/) by Pottgames <span style="margin-left 10px" class="btn btn--success">3D</span>
-<img align="left" src="https://steamcdn-a.akamaihd.net/steam/apps/1338220/header.jpg?t=1596602601" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="left" src="https://steamcdn-a.akamaihd.net/steam/apps/1338220/header.jpg?t=1596602601" style="margin-right: 25px; margin-top: 17px; margin-bottom:20px">
 
 Explore a huge universe on your journey on behalf of the Stellar Union. Trade with alien races, build your own space stations, collect resources and craft a wide variety of items. Upgrade your ship to defeat even the strongest enemies in the galaxy.
 
@@ -158,7 +158,7 @@ Sandship is a factory management game set in a post-apocalyptic sci-fi universe.
 ## [Shattered Pixel Dungeon](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon) by Shattered Pixel <a href="https://github.com/00-Evan/shattered-pixel-dungeon" style="margin-left: 10px" class="btn btn--primary">Also on GitHub</a>
 <img align="left" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-right: 25px; margin-top: 17px; margin-bottom:25px; max-width: 460px; max-height: 215px;">
 
-Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels and enemies, and over 150 items to collect and use. The game is simple to get into, but has lots of depth. Strategy is required if you want to win!
+Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels and enemies, and over 150 items to collect and use.
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 

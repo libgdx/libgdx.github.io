@@ -32,7 +32,6 @@ First off, you need an IDE (Integrated Development Environments), basically an e
 - For iOS: [RoboVM OSS Intellij plugin](http://robovm.mobidevelop.com)
 
 ## (2.) Android Studio
-- [JDK 8+](https://adoptopenjdk.net)
 - IDE itself: [Android Studio](https://developer.android.com/studio)
 - Android: is offered out-of-the-box
 - For iOS: [RoboVM OSS Intellij plugin](http://robovm.mobidevelop.com)
