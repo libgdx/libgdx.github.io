@@ -22,7 +22,7 @@ Building the natives is slightly more involved. The natives are built for every 
 - Android arm6, arm7, x86, x86_64
 - iOS i386, arm7, arm64, x86_64
 
-To do this we use a Linux host for crosscompilation of windows/linux and android antives. We also use a Mac host for the iOS and MacOS natives. Mac and iOS natives can only be built on MacOS.
+To do this we use a Linux host for crosscompilation of Windows/Linux and Android natives. We also use a Mac host for the iOS and macOS natives. Mac and iOS natives can only be built on macOS.
 
 # Linux host
 What you need:
@@ -40,7 +40,7 @@ What you need:
 - ccache (optional)
 - lib32z1
 
-# Mac OS X host
+# macOS host
 What you need:
 
 - JDK 8+

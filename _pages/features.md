@@ -14,7 +14,7 @@ intro:
 feature_row:
   - image_path: /assets/images/features/crossplatform.jpeg
     title: "Cross-Platform"
-    excerpt: 'libGDX offers a single API to target: **Windows, Linux (including the Raspberry Pi), Mac OS, Android, iOS and Web**. Developers can use various backends to access the capabilities of the host platform, **without having to write platform-specific code**. Rendering is handled on all platforms through Open GL ES 2.0/3.0.'
+    excerpt: 'libGDX offers a single API to target: **Windows, Linux (including the Raspberry Pi), macOS, Android, iOS and Web**. Developers can use various backends to access the capabilities of the host platform, **without having to write platform-specific code**. Rendering is handled on all platforms through Open GL ES 2.0/3.0.'
 feature_row2:
   - image_path: /assets/images/features/reliable.png
     title: "Well proven"
