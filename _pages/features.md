@@ -25,9 +25,9 @@ feature_row2:
 feature_row3:
   - image_path: /assets/images/features/ecosystem.png
     title: "Extensive third-party ecosystem"
-    excerpt: 'libGDX offers a very extensive third-party ecosystem. There are numerous [tools](/dev/tools/) and libraries that take a lot of work off the hands of developers. [Awesome-libgdx](https://github.com/rafaskb/awesome-libgdx) is a curated list of libGDX-centered **libraries** and a good starting point for anyone new in the libGDX world.'
+    excerpt: 'libGDX offers a very extensive third-party ecosystem. There are numerous [tools](/dev/tools/) and libraries that take a lot of work off the hands of developers. [Awesome-libGDX](https://github.com/rafaskb/awesome-libgdx) is a curated list of libGDX-centered **libraries** and a good starting point for anyone new in the libGDX world.'
     url: "https://github.com/rafaskb/awesome-libgdx"
-    btn_label: "Check out awesome-libgdx"
+    btn_label: "Check out Awesome-libGDX"
     btn_class: "btn--primary"
 ---
 
