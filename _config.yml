@@ -23,6 +23,7 @@ description: "libGDX is a cross-platform Java game development framework based o
 
 github_username: libgdx
 search: true
+future: false
 
 # Build settings
 markdown: kramdown
