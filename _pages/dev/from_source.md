@@ -48,7 +48,7 @@ cd libgdx
 # Building
 All of the other projects are hooked up and ready to test given that you have set up your system correctly, so give them a go.
 
-Its recommended to run the android and gwt tests on command line with the following:
+Its recommended to run the Android and GWT tests on command line with the following:
 
 ```
 ./gradlew tests:gdx-tests-android:installDebug

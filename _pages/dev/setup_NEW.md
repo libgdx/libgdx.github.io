@@ -62,7 +62,7 @@ To setup your first project and download the necessary dependencies, libGDX offe
 ## Different platforms:
 Then, plug in whatever options you see fit:
 - **Desktop and/or LWJGL3** should usually be checked, so you can test on the same computer you develop on.
-  - LWJGL3 is almost the same as Desktop, but because it has better support for new hardware (such as high-DPI displays), it should probably be preferred. It also allows multiple windows and drag+drop.
+  - LWJGL3 is almost the same as Desktop, but because it has better support for new hardware (such as high-DPI displays), it should probably be preferred. It also allows multiple Windows and drag+drop.
   - Desktop should mostly be preferred if you need to also depend on gdx-tools, such as if you need to run the texture packer at runtime. Some machines have issues with an inconsistent or very high framerate with LWJGL3, and using the "Legacy" desktop can fix that.
 - **iOS** should not be checked if you aren't running macOS (as it won't run elsewhere) and you don't intend to later build an iOS app on a Mac. It needs some large dependencies to be downloaded when you first import the project.
 - **Android** should only be checked if you've set up your computer for Android development.
