@@ -50,7 +50,7 @@ A curated list of our favourite libraries can be found at [Awesome-libGDX](https
 Contributing to libGDX can come in a few different forms: you can help out on our Discord, pledge to the [patreon page](https://www.patreon.com/libgdx), or [submit code and documentation back to the project](/dev/contributing/) on GitHub.
 
 ## Reporting an Issue
-Please note the issue tracker isn't for personal assistance, if you have a problem that isn't a reproducable bug in the core framework, please use the [community](/community/) for assistance.
+Please note the issue tracker isn't for personal assistance. If you have a problem that isn't a reproducable bug in the core framework, please use the [community](/community/) for assistance.
 {: .notice--primary}
 
 Before you report an issue on our issue tracker, we ask you to do a few things:
