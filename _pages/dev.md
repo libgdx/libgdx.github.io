@@ -15,7 +15,7 @@ header:
     - label: "Wiki"
       url: "https://github.com/libgdx/libgdx/wiki"
 
-excerpt: "libGDX is hosted on GitHub, where all team members collaborate. Fork, star and contribute to our project!."
+excerpt: "libGDX is hosted on GitHub, where all team members collaborate. Fork, star and contribute to our project!"
 
 sidebar:
   nav: "dev"

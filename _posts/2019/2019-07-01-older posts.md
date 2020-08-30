@@ -9,6 +9,8 @@ header:
 excerpt: "What happened to the old blog?"
 
 show_author: false
+
+categories: news
 ---
 
 If you're looking for the old blog posts, don't worry, they are still on the [badlogicgames site](https://www.badlogicgames.com/wordpress/).

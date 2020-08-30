@@ -7,6 +7,8 @@ header:
 show_author: true
 author_username: "crykn"
 author_displayname: "damios"
+
+categories: news
 ---
 
 In the last few days, we have been hard at work to polish our web presence and show you all what libGDX is really capable of. We are particularly proud of our new [showcase](/showcase/) section, demonstrating some really impressive projects. Going forward, we also want to post info on our regular game jams here. Next week, we'll start with collecting theme suggestions for our [September 2020 Jam](/community/jams/).
