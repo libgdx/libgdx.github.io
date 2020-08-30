@@ -34,9 +34,10 @@ We have even more long-awaited improvements, this time for the GWT backend:
 - Webaudio will be used instead of the SoundManager2 lib,
 - The possibility to lazy load assets is added,
 - Some improvements for mobile, Retina and HDPI screens are coming, as well as
-- Support for Gyroscopes
+- Support for gyroscopes and
+- some general quality of life improvements
 
-These efforts are spearheaded primarily by MrStahlfelge and SimonIT.
+These efforts are spearheaded primarily by MrStahlfelge.
 
 ### Gradle Build Migration
 We also want to migrate our whole build process to gradle. For this, the work on gdx-jnigen (mostly done by PokeMMO) has to be completed. Moreover, SimonIT has started on implementing the Android backend as proper Android library (AAR), in order to facilitate the deployment of libGDX. This migration has been long in the making and there is still a lot of work to be done, but we're crossing our fingers it gets finished without any major hurdles.
