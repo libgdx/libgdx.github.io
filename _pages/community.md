@@ -17,7 +17,7 @@ feature_row:
   - image_path: /assets/images/discord.png
     alt: "Discord"
     title: "The Official Discord Sever"
-    excerpt: 'libGDX also has a friendly Discord community. There are a number of channels, including but not limited to: screenshot sharing, question & answers, and kotlin discussions.'
+    excerpt: 'libGDX also has a friendly Discord community. There are a number of channels, including but not limited to: screenshot sharing, question & answers, and Kotlin discussions.'
     url: "https://discord.gg/6pgDK9F"
     btn_label: "Join Us"
     btn_class: "btn--primary"
