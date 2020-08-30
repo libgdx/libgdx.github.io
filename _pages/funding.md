@@ -11,7 +11,7 @@ header:
     - label: "Patreon"
       url: "https://www.patreon.com/libgdx"
 
-excerpt: "Libgdx is free, Apache 2 licensed open-source software anyone can use to create the games of their dreams. Libgdx is made with love by over 300 contributors around the world."
+excerpt: "libGDX is free, Apache 2 licensed open-source software anyone can use to create the games of their dreams. libGDX is made with love by over 300 contributors around the world."
 ---
 
 libGDX is being developed lovingly and not for profit by over [300 contributors](https://github.com/libgdx/libgdx/graphs/contributors) across the globe. Some of them work on it in their free-time, others can make it part of their day job. All of them contribute their code under the very permissive Apache 2 license, which means you can use all our code in commercial and non-commercial projects without any strings or license fees attached.
