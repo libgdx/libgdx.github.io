@@ -162,16 +162,9 @@ Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of 
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
-## [Ingress](http://www.ingress.com) by Google
-<img align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ingress_Logo_vector.svg/210px-Ingress_Logo_vector.svg.png" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
-
-[Before Ingress Prime!] The discovery of XM, a mysterious resource of unknown origin, has sparked a covert struggle between two distinct Factions. Choose your side and band together with Agents of your Faction to hold your ground, share resources, and explore this strange world.
-
-<div style="clear: both;with: 100%; height: 1px;"></div>
-
 ## [Hair Dash](https://play.google.com/store/apps/details?id=com.zplay.hairdash&hl=en_US) by Clean Cut Games
-<img align="left" src="https://play-lh.googleusercontent.com/w1NLihd6eUGILQ1jPqizEesFAftBN3_MKTIZV_KVdMDHQLNj0TOcxo_BvTG3bh_C190=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="right" src="https://play-lh.googleusercontent.com/w1NLihd6eUGILQ1jPqizEesFAftBN3_MKTIZV_KVdMDHQLNj0TOcxo_BvTG3bh_C190=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
 
-Become a fighting legend in this arcade beat em up in the vein of One Finger Death Punch with AAA-quality retro pixel art! Fight in intense battles against King Octopus’ pirate minions, customize your characters, compete with your friends in leaderboards and much more!
+Become a fighting legend in this arcade beat 'em up in the vein of One Finger Death Punch with AAA-quality retro pixel art! Fight in intense battles against King Octopus’ pirate minions, customize your characters, compete with your friends in leaderboards and much more!
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
