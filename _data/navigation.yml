@@ -27,7 +27,7 @@ dev:
   - title: "Tools & Frameworks"
     children:
       - title: "Awesome-libGDX"
-        url: https://github.com/rafaskb/awesome-libgdx
+        url: https://github.com/rafaskb/awesome-libgdx#readme
       - title: "Tools"
         url: /dev/tools/
   - title: "Contributing to libGDX"
