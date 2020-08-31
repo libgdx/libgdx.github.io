@@ -7,11 +7,8 @@ header:
   overlay_filter: "0.3"
   overlay_image: /assets/images/dev/dev.jpeg
   caption: "Photo credit: [**Florian Olivo**](https://unsplash.com/photos/Ek9Znm8lQ1U)"
-  actions:
-    - label: "Download gdx-liftoff"
-      url: "https://github.com/tommyettinger/gdx-liftoff/releases"
 
-excerpt: "libGDX offers a community-made setup tool, which automatically creates a project and downloads everything necessary."
+excerpt: "libGDX offers a setup tool, which automatically creates a project and downloads everything necessary."
 
 toc: true
 toc_sticky: false
