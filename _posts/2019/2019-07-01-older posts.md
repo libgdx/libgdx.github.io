@@ -8,8 +8,6 @@ header:
   caption: "Photo credit: [**Serge Izquierdo**](https://unsplash.com/photos/F1o-LmqqH08)"
 excerpt: "What happened to the old blog?"
 
-show_author: false
-
 categories: news
 ---
 

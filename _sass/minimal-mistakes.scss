@@ -54,6 +54,7 @@
   }
 
   .page__related {
+    width: 100%;
     @include breakpoint($large) {
       padding-left: 10%;
     }

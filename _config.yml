@@ -92,6 +92,7 @@ defaults:
       share: true
       related: true
       show_date: true
+      show_author: false
   # _pages
   - scope:
       path: "_pages"
