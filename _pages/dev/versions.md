@@ -14,18 +14,20 @@ sidebar:
 
 {% include breadcrumbs.html %}
 
-# libGDX 1.9.11
+<!-- TO EDIT THIS DATA SEE _data/versions.json -->
+
+# libGDX {{ site.data.versions.libgdxRelease }}
 Keep up to date with the latest versions of dependencies and dev tools!
 
 ### RoboVM
-- RoboVM Version: 2.3.8+
-- RoboVM Gradle Plugin Version: 2.3.8+
+- RoboVM Version: {{ site.data.versions.robovmVersion }}
+- RoboVM Gradle Plugin Version: {{ site.data.versions.robovmPluginVersion }}
 
 ### Android
-- Android Build Tools Version: 29.0.2+
-- Android SDK Version: 29+
-- Android Gradle Tool Version: 3.4.1+
+- Android Build Tools Version: {{ site.data.versions.androidBuildtoolsVersion }}
+- Android SDK Version: {{ site.data.versions.androidSDKVersion }}
+- Android Gradle Tool Version: {{ site.data.versions.androidGradleToolVersion }}
 
 ### GWT
-- GWT Version: 2.8.2 (experimental support for 2.9.0)
-- GWT Gradle Plugin Version: 1.0.9+
+- GWT Version: {{ site.data.versions.gwtVersion }} (experimental support for 2.9.0)
+- GWT Gradle Plugin Version: {{ site.data.versions.gwtPluginVersion }}
