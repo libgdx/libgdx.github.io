@@ -1,5 +1,5 @@
 ---
-permalink: /service/versions/
+permalink: /service/versions.json
 layout: null
 ---
 {{ site.data.versions | jsonify }}
