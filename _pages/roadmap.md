@@ -9,11 +9,11 @@ header:
   caption: "Photo credit: [**Slidebean**](https://unsplash.com/photos/iW9oP7Ljkbg)"
 
 excerpt: "Here you can learn more about our plans for the future of libGDX and get an idea of when you can expect new features."
-published: true
+published: false
 ---
 
 <!--
-Avaialble status values:
+Available status values:
 
 {% include status.html is='planned' %}
 {% include status.html is='drafting' %}
@@ -38,7 +38,7 @@ Avaialble status values:
 
    <tr>
      <td><h4>Welcome MobiVM, Goodbye MOE</h4>
-     <br>MobiVM has proved to be a worthy successor of RoboVM. As a consequence, we are removing the MOE backend in favor of MobiVM.</td>
+     <br>MobiVM has proven to be a worthy successor of RoboVM. As a consequence, we are removing the MOE backend in favor of MobiVM.</td>
      <td>{% include status.html is='done' %}</td>
    </tr>
 

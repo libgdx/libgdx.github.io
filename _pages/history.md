@@ -142,16 +142,16 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
   }
 }
 
-a {
+p a {
   color: #ce320f;
 }
-a:visited {
+p a:visited {
   color: #ce320f;
 }
-a:hover {
+p a:hover {
   color: #de421f;
 }
-a:active {
+p a:active {
   color: #de421f;
 }
 </style>
@@ -160,14 +160,14 @@ a:active {
 <div class="timeline">
   <div class="container left">
     <div class="content">
-      <h2>2020</h2>
-      <p>In 2020, libGDX <a href="/gdx_1_9_11/">version 1.9.11</a> saw the light of the world. Exactly as version 1.9.10, it contained a plethora of fixes and improvements. In August of the same year, our <a href="/welcome_on_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements planned.</p>
+      <h2>2020 - New Beginnings</h2>
+      <p>In 2020, libGDX <a href="/news/2020/07/gdx_1_9_11/">version 1.9.11</a> saw the light of the world. Exactly as version 1.9.10, it contained a plethora of fixes and improvements. In August of the same year, our <a href="/2020/08/welcome_to_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements planned.</p>
     </div>
   </div>
   <div class="container right">
     <div class="content">
       <h2>2019</h2>
-      <p>In 2019, libGDX kept moving forward: <a href="/gdx_1_9_10/">version 1.9.10</a>, containing lots of fixes and improvements, was released. The majority of work done in the libGDX ecosystem is now done outside of the main repo: libGDX as a framework is mature enough to not require substantial changes, but the toolset and frameworks surrounding libGDX are constantly improved upon by the community.</p>
+      <p>In 2019, libGDX kept moving forward: <a href="/news/2019/07/gdx_1_9_10/">version 1.9.10</a>, containing lots of fixes and improvements, was released. The majority of work done in the libGDX ecosystem is now done outside of the main repo: libGDX as a framework is mature enough to not require substantial changes, but the toolset and frameworks surrounding libGDX are constantly improved upon by the community.</p>
     </div>
   </div>
   <div class="container left">
@@ -178,7 +178,7 @@ a:active {
   </div>
   <div class="container right">
     <div class="content">
-      <h2>2017</h2>
+      <h2>2017 - Parting Ways</h2>
       <p>By 2017, libGDX had become quite a bit more mature, so major changes were not as frequently needed as in the early years. Nonetheless, the versions 1.9.6 and 1.9.7 were released (the latter not by Mario Zechner – a first for libGDX) and some experimentation was done in the area of <a href="https://github.com/badlogic/gdx-vr">VR</a>.</p>
     </div>
   </div>
@@ -202,7 +202,7 @@ a:active {
   </div>
   <div class="container right">
     <div class="content">
-      <h2>2013</h2>
+      <h2>2013 – Polishing</h2>
       <p>In the first half of 2013 we cleaned up many parts of libGDX, from the build system to tile map supported. The fragile iOS backend based on MonoTouch was replaced by a libGDX RoboVM backend. In June our now old, but then <a href="https://www.badlogicgames.com/wordpress/?p=3093">new and improved website</a>, created by a lot of awesome volunteers, went love. With the new site, we made it possible for people to submit their games to a gallery. Moreover, the wiki and the issues, that we up until now still on Google Code, transferred <a href="https://www.badlogicgames.com/wordpress/?p=3176">with more or less issues</a>.At the end of 2013 we started looking into Gradle as our new savior. Up until that point, libgdx was bound to Eclipse and dependency management had to be done manually (copy jar X into folder y)</p>
     </div>
   </div>
@@ -221,13 +221,13 @@ a:active {
   </div>
   <div class="container left">
     <div class="content">
-      <h2>2010 - Going OSS</h2>
+      <h2>2010 - Going Open Source</h2>
       <p>In March 2010, Zechner decided to open-source AFX, hosting it on Google Code under the GNU Lesser General Public License (LGPL). On the 6th of March 2010, the world saw the <a href="https://www.badlogicgames.com/wordpress/?p=267">first libGDX code</a>. In early April 2010, libGDX got its first contributor, Christoph Widulle. He helped with various bits and pieces and was a nice wall to bounce ideas against. His involvement was a sign to other people that contributing to libGDX is a thing. From then on, the list of contributors to libGDX started to grow slowly but steadily.</p>
     </div>
   </div>
   <div class="container right">
     <div class="content">
-      <h2>2009</h2>
+      <h2>2009 – When It Began</h2>
       <p>It all started in the middle of 2009, when Mario Zechner, the creator of libGDX, started developing a framework called AFX (Android Effects) to create Android Games. When he found that deploying the changes from desktop to Android device was cumbersome, he modified AFX to work on desktop as well, making it easier to test programs.</p>
     </div>
   </div>
