@@ -25,7 +25,7 @@ feature_row2:
   - image_path: /assets/images/jams.jpeg
     alt: "Game Jams"
     title: "Game Jams"
-    excerpt: "Our community regularly offers game jams for libGDX centered around different themes. These are an ideal oppurtunity to get to know both libGDX and our community."
+    excerpt: "Our community regularly offers game jams for libGDX centered around different themes. These are ideal oppurtunities to get to know both libGDX and our community."
     url: "/community/jams/"
     btn_label: "Read More"
     btn_class: "btn--primary"

@@ -26,8 +26,9 @@
 
   /* button colors */
   $buttoncolors:
-  (waiting, $primary-color),
-  (inprogress, $info-color),
+  (planned, $primary-color),
+  (drafting, $info-color),
+  (wip, $warning-color),
   (done, $success-color);
 
   @each $buttoncolor, $color in $buttoncolors {
