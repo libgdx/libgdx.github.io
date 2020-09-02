@@ -39,6 +39,9 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
+/* Custom stylesheets */
+@import "status";
+
 // see https://github.com/mmistakes/minimal-mistakes/issues/1322#issuecomment-571208318
 .wide2 {
   .page {
