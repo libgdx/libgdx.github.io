@@ -1,3 +1,5 @@
+<!-- https://jekyllcodex.org/without-plugin/slider/ -->
+
 {% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
 {% assign letters = letterstring | split: ',' %}
 
@@ -86,7 +88,7 @@
 .overlay-fade-content:hover {
   opacity: 1;
   background-color: rgba(255,255,255,0.4);
-  transition: all 0.2s ease-in;
+  transition: all 0.25s ease-in;
 }
 
 .overlay-fade-content {
@@ -100,6 +102,7 @@
     display: block;
     color: #eeeeee;
     background-color: #ff3b05;
+    border-radius: 3px;
     text-align: center;
     margin: auto;
     left: 0;
