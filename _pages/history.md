@@ -197,13 +197,13 @@ p a:active {
   <div class="container left">
     <div class="content">
       <h2>2014 - libGDX 1.0</h2>
-      <p>With all pieces in place, Q1 2014 was used to polish up libGDX’s user experience and documentation for the 1.0 release. After 4 years of development, on 20 April 2014, libGDX had finally reached <a href="https://www.badlogicgames.com/wordpress/?p=3412">version 1.0</a>. The rest of 2014 brought a lot of different libGDX iterations: 1.1 (May), 1.2 (June), 1.3 (August), 1.4 (October) and 1.5 (December) were released.</p>
+      <p>With all pieces in place, Q1 of 2014 was used to polish up libGDX’s user experience and documentation for the 1.0 release. After 4 years of development, on 20 April 2014, libGDX had finally reached <a href="https://www.badlogicgames.com/wordpress/?p=3412">version 1.0</a>. The remainder of 2014 brought a lot of different libGDX iterations: the versions 1.1 (May), 1.2 (June), 1.3 (August), 1.4 (October) and 1.5 (December) were released.</p>
     </div>
   </div>
   <div class="container right">
     <div class="content">
       <h2>2013 – Polishing</h2>
-      <p>In the first half of 2013 we cleaned up many parts of libGDX, from the build system to tile map supported. The fragile iOS backend based on MonoTouch was replaced by a libGDX RoboVM backend. In June our now old, but then <a href="https://www.badlogicgames.com/wordpress/?p=3093">new and improved website</a>, created by a lot of awesome volunteers, went live. With the new site, we made it possible for people to submit their games to a gallery. Moreover, the wiki and the issues, that we up until now still on Google Code, transferred <a href="https://www.badlogicgames.com/wordpress/?p=3176">with more or less issues</a>. At the end of 2013 we started looking into Gradle as our new savior. Up until that point, libgdx was bound to Eclipse and dependency management had to be done manually (copy jar X into folder y).</p>
+      <p>In the first half of 2013, we cleaned up many parts of libGDX, from the build system to tile map supported. The fragile iOS backend based on MonoTouch was replaced by a libGDX RoboVM backend. In June, our now old, but then <a href="https://www.badlogicgames.com/wordpress/?p=3093">new and improved website</a>, (created by a lot of awesome volunteers) went live. With the new site, we made it possible for people to submit their games to a gallery. Moreover, we transferred the wiki and the issues, that were up until now still on Google Code, <a href="https://www.badlogicgames.com/wordpress/?p=3176">with more or less issues</a>. At the end of 2013 we started looking into Gradle as our new savior. Up until that point, libGDX was bound to Eclipse and dependency management had to be done manually (i.e., copy jar X into folder y).</p>
     </div>
   </div>
   <div class="container left">
@@ -216,7 +216,7 @@ p a:active {
   <div class="container right">
     <div class="content">
       <h2>2011 - Incremental Improvements</h2>
-      <p>At the end of Feburary 2011, <a href="https://www.badlogicgames.com/wordpress/?p=1596">version 0.9 was released</a>. In this time so many internal changes happened to libGDX, that it was hard keeping track of what was going on. But it paid off: libGDX 0.9 saw immense adoption, not only due to feature density, but also due to us starting to create video tutorials and making the setup process a lot easier.</p>
+      <p>At the end of February 2011, <a href="https://www.badlogicgames.com/wordpress/?p=1596">version 0.9 was released</a>. In this time so many internal changes happened to libGDX, that it was hard keeping track of what was going on. But it paid off: libGDX 0.9 saw immense adoption, not only due to feature density, but also due to us starting to create video tutorials and making the setup process a lot easier.</p>
     </div>
   </div>
   <div class="container left">

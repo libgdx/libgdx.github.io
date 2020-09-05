@@ -24,8 +24,6 @@ dev:
         url: https://libgdx.badlogicgames.com/ci/nightlies/docs/api/
       - title: "Versions"
         url: /dev/versions/
-      - title: "Brand Guidelines"
-        url: "/brand/"
   - title: "Tools & Frameworks"
     children:
       - title: "Awesome-libGDX"

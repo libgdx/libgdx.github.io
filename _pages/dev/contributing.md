@@ -30,7 +30,7 @@ Don't let the formatter run automatically, or on the whole file you are changing
 {: .notice--primary}
 
 ## Code Style
-libGDX stands by the usual java style, but we don't have an official coding standard.
+libGDX stands by the usual Java style, but we don't have an official coding standard.
 
 **Please do <u>not</u> do any of the following:**
 - Underscores in identifiers
@@ -89,9 +89,9 @@ To sum it up, this is the general workflow:
 - Add the libGDX repository as a remote (to sync latest changes).
 - Make your changes to your locally cloned (of your fork), repository, ideally on a new branch. See [here](/dev/from_source/) for a guide on how to get the libGDX code running locally.
 - Commit your changes, and push the changes back to your forked repository on GitHub.
-- Go to GitHub, view your forked repository, select your branch and request a pull request be created.
+- Go to GitHub, view your forked repository, select your branch and create a pull request.
 - Write a detailed description of what your pull request does, how it has been tested, what platforms it has been tested on, and why it belongs in libGDX.
 
-For a very detailed explanation of how the pull request system on GitHub is supposed to work, check out [this guide](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#Forked-Public-Project).
+For a very extensive explanation of how the pull request system on GitHub is supposed to work, check out [this guide](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#Forked-Public-Project).
 
 Pull requests may be denied for not being ready, or not fitting the scope of the project. Please do not take any offense to having a pull request rejected. We appreciate every contribution, but some code submissions are just not a good fit for the project.

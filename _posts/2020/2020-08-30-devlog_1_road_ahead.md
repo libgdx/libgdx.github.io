@@ -42,10 +42,10 @@ We have even more long-awaited improvements, this time for the GWT backend:
 These efforts are spearheaded primarily by **MrStahlfelge**.
 
 ### Gradle Build Migration
-We also want to migrate our whole build process to Gradle. For this, the work on ``gdx-jnigen`` (mostly done by PokeMMO) has to be completed. Moreover, **SimonIT** has started implementing the Android backend as proper Android library (AAR) in order to facilitate the deployment of libGDX. This migration has been long in the making and there is still a lot of work to be done, but we're crossing our fingers it gets finished without any major hurdles.
+We also want to migrate our whole build process to Gradle. For this, the work on ``gdx-jnigen`` (mostly done by **PokeMMO**) has to be completed. Moreover, **SimonIT** has started implementing the Android backend as proper Android library (AAR) in order to facilitate the deployment of libGDX. This migration has been long in the making and there is still a lot of work to be done, but we're crossing our fingers it gets finished without any major hurdles.
 
 ### iOS MOE – quo vadis?
-In April 2016, the iOS Multi-OS Engine backend was introduced because RoboVM was discontinued and hence its future uncertain. However, the MOE backend never quite caught up to the RoboVM in features and the [MobiVM](http://robovm.mobidevelop.com) fork of RoboVM proved to be a worthy successor of RoboVM. As a consequence, we are removing the MOE backend in the coming version of libGDX.
+In April 2016, the iOS Multi-OS Engine backend was introduced because RoboVM was discontinued and hence its future uncertain. However, the MOE backend never quite caught up to the RoboVM in features and the [MobiVM](http://robovm.mobidevelop.com) fork of RoboVM proved to be a worthy successor of RoboVM. As a consequence, we are removing the MOE backend in the next version of libGDX.
 
 ### gdx-video
 There are also currently some plans drawn up to revive the ``gdx-video`` extension.

@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/images/dev/tools.jpeg
   caption: "Photo credit: [**Marvin Meyer**](https://unsplash.com/photos/SYTO3xs06fU)"
 
-excerpt: "There are different tools – both official and community-made – that make the development process for libGDX easier."
+excerpt: "There are different tools – both official and community-made – that can help make the development process for libGDX much easier."
 
 feature_row:
   - image_path: /assets/images/dev/tools/spine.jpg
