@@ -50,7 +50,7 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
   height: 25px;
   right: -17px;
   background-color: #e8e8e8;
-  border: 4px solid #de421f;
+  border: 4px solid #f5370c;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -75,9 +75,9 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid #6f777d;
+  border: medium solid #9da3a8;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #6f777d;
+  border-color: transparent transparent transparent #9da3a8;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -89,9 +89,9 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid #6f777d;
+  border: medium solid #9da3a8;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #6f777d transparent transparent;
+  border-color: transparent #9da3a8 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -102,7 +102,7 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
 /* The actual content */
 .content {
   padding:  1px 18px;
-  background-color: #6f777d;
+  background-color: #9da3a8;
   position: relative;
   border-radius: 6px;
   color: white;
@@ -126,9 +126,9 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
   left: 60px;
-  border: medium solid #6f777d;
+  border: medium solid #9da3a8;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #6f777d transparent transparent;
+  border-color: transparent #9da3a8 transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
@@ -143,16 +143,16 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
 }
 
 p a {
-  color: #ce320f;
+  color: #e83107;
 }
 p a:visited {
-  color: #ce320f;
+  color: #e83107;
 }
 p a:hover {
-  color: #de421f;
+  color: #ff4c24;
 }
 p a:active {
-  color: #de421f;
+  color: #ff4c24;
 }
 </style>
 
@@ -227,7 +227,7 @@ p a:active {
   </div>
   <div class="container right">
     <div class="content">
-      <h2>2009 – When It Began</h2>
+      <h2>2009 – When It All Began</h2>
       <p>It all started in the middle of 2009, when Mario Zechner, the creator of libGDX, started developing a framework called AFX (Android Effects) to create Android Games. When he found that deploying the changes from desktop to Android device was cumbersome, he modified AFX to work on desktop as well, making it easier to test programs.</p>
     </div>
   </div>
