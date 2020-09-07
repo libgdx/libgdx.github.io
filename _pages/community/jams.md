@@ -49,6 +49,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 * [GLOBAL THERMONUCLEAR WAR](https://itch.io/jam/libgdx-jam-march-2020) (March 2020)
 * [THE WORLD IS FOOD](https://itch.io/jam/libgdx-jam-december-2019) (December 2019)
 * [Halloween](https://itch.io/jam/libgdx-jam-october-2019) (October 2019)
+* [One Room](https://itch.io/jam/libgdx-jam-august-2019) (August 2019)
 * [Upside Down](https://libgdxjam.com/entries.php?jid=7) (April 2019)
 * [Energy](https://libgdxjam.com/entries.php?jid=6) (February 2019)
 * [Time](https://libgdxjam.com/entries.php?jid=5) (October 2018)
