@@ -26,7 +26,7 @@ An open-source reimplementation of the most famous civilization-building game ev
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Spine](http://en.esotericsoftware.com) by Esoteric Software <a href="https://github.com/yairm210/Unciv" style="margin-left: 10px" class="btn btn--info">Tool</a>
-<img align="left" src="http://de.esotericsoftware.com/img/front-what-is-spine.jpg" style="margin-right: 25px; margin-top: 20px; margin-bottom:35px; max-width: 440px;">
+<img align="left" src="https://de.esotericsoftware.com/img/front-what-is-spine.jpg" style="margin-right: 25px; margin-top: 20px; margin-bottom:35px; max-width: 440px;">
 
 Spine is an animation tool that focuses specifically on 2D animation for games. Spine aims to have an efficient, streamlined workflow, both for creating animations using the editor and for making use of those animations in games.
 
