@@ -8,7 +8,7 @@ header:
   caption: "Photo credit: [**Scott Graham**](https://unsplash.com/photos/5fNmWej4tAA)"
   teaser: /assets/images/posts/2020-08-30/teaser.png
 
-excerpt: What is happening behind the scenes?
+excerpt: What is currently happening behind the scenes?
 
 show_author: true
 author_username: "crykn"

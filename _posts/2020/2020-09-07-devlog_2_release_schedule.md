@@ -8,7 +8,7 @@ header:
   caption: "Photo credit: [**Jessica Lewis**](https://unsplash.com/photos/fJXv46LT7Xk)"
   teaser: /assets/images/posts/2020-09-07/header.jpeg
 
-excerpt: When can we expect the next libGDX version?
+excerpt: When can we expect the next libGDX version? Find out everything about our new release schedule.
 
 show_author: true
 author_username: "crykn"

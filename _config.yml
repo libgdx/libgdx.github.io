@@ -18,16 +18,25 @@ minimal_mistakes_skin: default
 
 logo: "/assets/images/logo.png"
 masthead_title: " " # disable the written title in the header
-
 description: "libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS."
-
 github_username: libgdx
+
+# Search, Google, SEO
+google_site_verification: "qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8"
+
 search: true
-future: false
+search_provider: google
+google:
+  search_engine_id: "1429d808fde2f9b89"
+
+og_image: /assets/images/logo.png # default open graph (=social media) image
+
 
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+
+future: false # allow scheduling posts
 
 # Outputting
 permalink: /:categories/:year/:month/:title
@@ -35,24 +44,10 @@ paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 #timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-#baseurl: "gdx-showcase"
-
 include:
   - _pages
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
+# Plugins:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -61,8 +56,6 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-avatar
-
-og_image: /assets/images/logo.png # default open graph (=social media) image
 
 footer:
   links:
@@ -100,10 +93,3 @@ defaults:
     values:
       layout: single
       author_profile: false
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
