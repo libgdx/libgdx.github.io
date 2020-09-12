@@ -1,0 +1,44 @@
+{% assign tag_preview = page.tag_preview %}
+
+{% assign changelog_posts = site.posts | where_exp: "post", "post.tags contains include.tag" %}
+
+
+<div class="feature__wrapper">
+
+  <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
+    <div class="archive__item">
+      {% if tag_preview.image_path %}
+        <div class="archive__item-teaser">
+          <img src="{{ tag_preview.image_path | relative_url }}"
+               alt="{% if tag_preview.alt %}{{ tag_preview.alt }}{% endif %}">
+          {% if tag_preview.image_caption %}
+            <span class="archive__item-caption">{{ tag_preview.image_caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="archive__item-body">
+        {% for post in changelog_posts limit:1 %}
+
+          {% if post.title %}
+            <h2 class="archive__item-title">{{ post.title }}</h2>
+          {% endif %}
+
+          {% if post.content %}
+            <div class="archive__item-excerpt">
+              <p>
+              {{ post.content | strip_html | strip_newlines | truncate: 220 }}
+              </p>
+            </div>
+          {% endif %}
+
+          {% if post.url %}
+            <p><a href="{{ post.url | relative_url }}" class="btn {{ tag_preview.btn_class }}">{{ tag_preview.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          {% endif %}
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>

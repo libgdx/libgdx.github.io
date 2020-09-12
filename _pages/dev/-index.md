@@ -25,7 +25,7 @@ sidebar:
 ## Set up a new project
 libGDX offers a setup tool, which automatically creates a project and downloads everything necessary. **Setup instruction** as well as a download link can be found **[here](/dev/setup/)**. See [here](/dev/running/) on how to get an imported project running.
 
-## First Game
+## First Game - Tutorials
 Our [wiki](https://github.com/libgdx/libgdx/wiki/A-Simple-Game) details how you can create your very first libGDX game. If you're new to game dev and have never developed a game before, take a look at this (even more straight-forward) [tutorial](http://tann.space/HelloLibgdx/) by tann.
 
 <br/>
@@ -54,9 +54,9 @@ Please note the issue tracker isn't for personal assistance. If you have a probl
 {: .notice--primary}
 
 Before you report an issue on our issue tracker, we ask you to do a few things:
-- Verify that the problem hasn't already been reported on the tracker
-- Make sure the bug hasn't already been fixed. Use the latest SNAPSHOT of libGDX to try to reproduce your issue
-- Create a self-contained example to demonstrate the issue. Don't hack a project down. Start fresh to reproduce the error.
+- Verify that the problem hasn't already been reported on the tracker.
+- Make sure the bug hasn't already been fixed. Use the latest snapshot of libGDX to try to reproduce your issue.
+- Create a concise, self-contained example to demonstrate the issue.
 
 Once you have done this, please submit this along with any stacktraces or assets to the [issue tracker](https://github.com/libgdx/libgdx/issues), whilst filling out the template that is shown when creating a new issue.
 

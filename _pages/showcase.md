@@ -9,7 +9,7 @@ header:
   caption: "Photo credit: [**Pathway by Robotality**](https://store.steampowered.com/app/546430/Pathway/)"
 ---
 # Prominent libGDX Games
-The following collection of games built with libGDX give an impression of what the framework is capable of.
+The following collection of games built with libGDX gives an impression of what the framework is capable of.
 
 ## [Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/) by Mega Crit Games
 <img align="left" src="https://steamcdn-a.akamaihd.net/steam/apps/646570/header.jpg?t=1592339399" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">

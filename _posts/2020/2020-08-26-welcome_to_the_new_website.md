@@ -3,6 +3,7 @@ title: "Welcome to the new libGDX homepage!"
 classes: wide2
 header:
   image: /assets/images/posts/2020-08-26/header.png
+  teaser: /assets/images/posts/2020-08-30/header.jpeg
 
 show_author: true
 author_username: "crykn"

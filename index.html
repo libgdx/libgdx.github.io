@@ -4,7 +4,7 @@ author_profile: false
 
 header:
   overlay_color: "#000"
-  overlay_filter: "0.15"
+  overlay_filter: "0.1"
   overlay_image: /assets/images/index.jpg
   actions:
     - label: "Get started"
@@ -13,7 +13,9 @@ header:
 
 excerpt: "libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS."
 intro:
-  - excerpt: '_libGDX provides a well-tried and robust environment for rapid prototyping and fast iterations. libGDX does not force a specific design or coding style on you; it rather gives you the freedom to create a game the way you prefer._'
+  - excerpt: '_libGDX provides a well-tried and robust environment for rapid prototyping and fast iterations. libGDX does not force a specific design or coding style on you; it rather gives you the freedom to create a game the way you prefer._ <!-- Place this tag where you want the button to render. -->
+<br/><br/><a class="github-button" href="https://github.com/libgdx/libgdx" data-size="large" data-show-count="true" aria-label="Star libgdx/libgdx on GitHub">Star</a>
+<a class="github-button" href="https://github.com/libgdx/libgdx/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork libgdx/libgdx on GitHub">Fork</a>'
 feature_row:
   - title: "Cross Platform"
     excerpt: "Publish your games on Windows, macOS, Linux (including the RPi!), Android, iOS, and HTML5, all with the [same code base](/features/)."
@@ -24,16 +26,13 @@ feature_row:
 feature_row2:
   - title: "Super Fast"
     excerpt: "Heavy emphasis is put on avoiding garbage collection for ART/JavaScript by careful API design and the use of custom collections."
-  - title: "Documentation"
-    excerpt: "Learn libGDX inside out on the [Wiki](https://github.com/libgdx/libgdx/wiki), study the [Javadocs](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/), or read a third-party tutorial. Learn from example code and demos."
-  - title: "Community Support"
-    excerpt: "Get great support from a very welcoming [community](/community/) of game and application developers."
-feature_row3:
-  - image_path: /assets/images/update.jpeg
+  - title: "Well Proven"
+    excerpt: "libGDX is a well proven and reliable framework with a sound base and [documentation](https://github.com/libgdx/libgdx/wiki). Furthermore, there are [plenty of games](/showcase/) built on top of libGDX, many of which are open source."
+  - title: "Active Community"
+    excerpt: "Get great support from a very welcoming [community](/community/) of game and application developers or take a look at our extensive [third-party ecosystem](https://github.com/rafaskb/awesome-libgdx#readme)."
+tag_preview:
+    image_path: /assets/images/update.jpeg
     alt: "Latest version"
-    title: "libGDX 1.9.11"
-    excerpt: 'The latest version of libGDX, 1.9.11, has been released on 22 July 2020. It contains various fixes and improvements.'
-    url: "/news/2020/07/gdx_1_9_11"
     btn_label: "See the full changelog"
     btn_class: "btn--primary"
 feature_row4:
@@ -79,8 +78,19 @@ feature_row6:
 
 <br/>
 
-{% include feature_row id="feature_row3" type="left" %}
+{% include tag_preview.html tag="changelog" type="left" %}
 
 {% include feature_row id="feature_row4" type="right" %}
 
 {% include feature_row id="feature_row6" type="left" %}
+
+<br/>
+
+<h1>Latest News</h1>
+<div class="grid__wrapper">
+  {% for post in site.posts limit:4 %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

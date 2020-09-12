@@ -1,6 +1,6 @@
 ---
 permalink: /dev/setup/
-title: "Setup"
+title: "Getting Started: Setup"
 classes: wide2
 header:
   overlay_color: "#000"

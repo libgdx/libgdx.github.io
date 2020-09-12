@@ -6,6 +6,7 @@ header:
   overlay_filter: "0.4"
   overlay_image: /assets/images/posts/2020-08-30/header.jpeg
   caption: "Photo credit: [**Scott Graham**](https://unsplash.com/photos/5fNmWej4tAA)"
+  teaser: /assets/images/posts/2020-08-30/teaser.png
 
 excerpt: What is happening behind the scenes?
 

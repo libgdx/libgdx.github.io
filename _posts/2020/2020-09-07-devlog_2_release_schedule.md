@@ -6,6 +6,7 @@ header:
   overlay_filter: "0.4"
   overlay_image: /assets/images/posts/2020-09-07/header.jpeg
   caption: "Photo credit: [**Jessica Lewis**](https://unsplash.com/photos/fJXv46LT7Xk)"
+  teaser: /assets/images/posts/2020-09-07/header.jpeg
 
 excerpt: When can we expect the next libGDX version?
 

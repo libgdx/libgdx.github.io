@@ -15,7 +15,7 @@ toc_sticky: false # =not on top
 
 {% include breadcrumbs.html %}
 
-This article explains how you can get your imported projects running.
+This article explains how you can get your [freshly created](/dev/setup/) libGDX project running.
 
 # Desktop
 ## IDEA/Android Studio:
