@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/images/community.jpeg
   actions:
     - label: "Discord"
-      url: "https://discord.gg/6pgDK9F"
+      url: "/community/discord/"
   caption: "Photo credit: [**You X Ventures**](https://unsplash.com/photos/Oalh2MojUuk)"
 
 excerpt: "libGDX has a very active community on Discord, Stack Overflow and Reddit. If you want to join us, the best place to start is our official Discord server."
@@ -18,7 +18,7 @@ feature_row:
     alt: "Discord"
     title: "The Official Discord Sever"
     excerpt: 'libGDX also has a friendly Discord community. There are a number of channels, including but not limited to: screenshot sharing, question & answers, and Kotlin discussions.'
-    url: "https://discord.gg/6pgDK9F"
+    url: "/community/discord/"
     btn_label: "Join Us"
     btn_class: "btn--primary"
 feature_row2:

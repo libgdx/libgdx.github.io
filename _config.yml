@@ -64,7 +64,7 @@ footer:
       url: "https://github.com/libgdx/libgdx"
     - label: "Discord"
       icon: "fab fa-fw fa-discord"
-      url: "https://discord.gg/6pgDK9F"
+      url: "/community/discord/"
     - label: "Wiki"
       icon: "fas fa-fw fa-link"
       url: "https://github.com/libgdx/libgdx/wiki"
