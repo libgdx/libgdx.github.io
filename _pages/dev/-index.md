@@ -22,43 +22,28 @@ sidebar:
 ---
 
 # How to get started with libGDX?
-## Set up a new project
-libGDX offers a setup tool, which automatically creates a project and downloads everything necessary. **Setup instruction** as well as a download link can be found **[here](/dev/setup/)**. See [here](/dev/running/) on how to get an imported project running.
+libGDX offers a [setup tool](/dev/setup/), which automatically creates a project and downloads everything necessary.
+{: .notice--primary}
 
-## First Game - Tutorials
-Our [wiki](https://github.com/libgdx/libgdx/wiki/A-Simple-Game) details how you can create your very first libGDX game. If you're new to game dev and have never developed a game before, take a look at this (even more straight-forward) [tutorial](http://tann.space/HelloLibgdx/) by tann.
+Please take a look at our **[Setup Instructions](/dev/setup/)** to get started. These walk you through the process of creating your very first libGDX project using our setup tool. We also provide a [selection of **demos** and **tutorials**](/dev/tutorials/).
 
 <br/>
 
 # Documentation
 The libGDX codebase is documented in two ways:
 - In our [Wiki](https://github.com/libgdx/libgdx/wiki)
-- And via the [Javadocs](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/)
+- And via [Javadocs](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/)
 
 <br/>
 
 # Tools & Libraries
-## Tools
-There are different tools that make the development process for libGDX easier. See our [tools list](/dev/tools/) for some of the most commonly used ones.
+There are different tools and libraries that make the development process for libGDX easier. See our **[Tools List](/dev/tools/)** for some of the most commonly used tools.
 
-## Libraries
-A curated list of our favourite libraries can be found at [Awesome-libGDX](https://github.com/rafaskb/awesome-libgdx#readme). On our Discord server we also have an extensive collection of libGDX-centered libraries that are currently work in progress.
+A curated list of our favourite libraries can be found at **[Awesome-libGDX](https://github.com/rafaskb/awesome-libgdx#readme)**. On our Discord server we also have an extensive collection of libGDX-centered libraries that are currently work in progress.
 
 <br/>
 
 # Contributing to libGDX
-Contributing to libGDX can come in a few different forms: you can help out on our Discord, pledge to the [patreon page](https://www.patreon.com/libgdx), or [submit code and documentation back to the project](/dev/contributing/) on GitHub.
+Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on our [Discord](/community/), pledge to the [Patreon page](/funding/), or [submit code and documentation back to the project](/dev/contributing/) on GitHub.
 
-## Reporting an Issue
-Please note the issue tracker isn't for personal assistance. If you have a problem that isn't a reproducable bug in the core framework, please use the [community](/community/) for assistance.
-{: .notice--primary}
-
-Before you report an issue on our issue tracker, we ask you to do a few things:
-- Verify that the problem hasn't already been reported on the tracker.
-- Make sure the bug hasn't already been fixed. Use the latest snapshot of libGDX to try to reproduce your issue.
-- Create a concise, self-contained example to demonstrate the issue.
-
-Once you have done this, please submit this along with any stacktraces or assets to the [issue tracker](https://github.com/libgdx/libgdx/issues), whilst filling out the template that is shown when creating a new issue.
-
-## Working from Source
-If you want to contribute to libGDX itself, please review our [contributing guidelines](/dev/contributing/). After that, you need to get libGDX set up on your local machine. Instructions for that can be found [here](/dev/from_source/).
+If you want to contribute to the code base of libGDX, please review our [contributing guidelines](/dev/contributing/). After that, you need to get libGDX set up on your local machine. Instructions for that can be found [here](/dev/from_source/).

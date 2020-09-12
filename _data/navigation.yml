@@ -12,10 +12,12 @@ main:
 dev:
   - title: "Getting Started"
     children:
-      - title: "Set up a project"
+      - title: "Set up a Project"
         url: /dev/setup/
-      - title: "Get it running"
+      - title: "Get It Running"
         url: /dev/running/
+      - title: "Demos & Tutorials"
+        url: /dev/tutorials/
   - title: "Documentation"
     children:
       - title: "Wiki"
@@ -34,7 +36,9 @@ dev:
     children:
       - title: "Contributing Guidelines"
         url: /dev/contributing/
-      - title: "Working from source"
+      - title: "Reporting an Issue"
+        url: /dev/issues/
+      - title: "Working from Source"
         url: /dev/from_source/
-      - title: "Building the natives"
+      - title: "Building the Natives"
         url: /dev/natives/

@@ -18,6 +18,8 @@ libGDX is being developed lovingly and not for profit by over [300 contributors]
 
 Sadly, libGDX's infrastructure does not yet run on love. We currently have 2 Linodes and one Mac Mini which are responsible for serving you the forum, the blog, the nightly and release builds and which are also sharing the load of building nightlies on every code change via our Jenkins instance. All of this costs us roughly $45 per month. The libGDX [core team](https://github.com/orgs/libgdx/people) is hence kindly asking for minimal support to cover these monthly costs. Any excess income through [Patreon](https://www.patreon.com/libgdx) will be used to buy development and test devices for core contributors.
 
+<a href="https://www.patreon.com/libgdx"><img src="/assets/images/patreon.png" style="max-width:240px;display: block;margin: 0 auto;"></a>
+
 If you can't help us out financially that's OK! Give back by contributing code and participating in our community!
 
 Thank you very much, <br/>

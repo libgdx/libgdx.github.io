@@ -1,7 +1,7 @@
 ---
 permalink: /dev/setup/
 title: "Getting Started: Setup"
-classes: wide2
+classes: wide
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -10,9 +10,8 @@ header:
 
 excerpt: "libGDX offers a setup tool, which automatically creates a project and downloads everything necessary."
 
-toc: true
-toc_sticky: false
-
+sidebar:
+  nav: "dev"
 ---
 
 {% include breadcrumbs.html %}

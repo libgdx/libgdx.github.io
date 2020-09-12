@@ -1,15 +1,15 @@
 ---
 permalink: /dev/from_source/
 title: "From Source"
-classes: wide2
+classes: wide
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
   overlay_image: /assets/images/dev/dev.jpeg
   caption: "Photo credit: [**Florian Olivo**](https://unsplash.com/photos/Ek9Znm8lQ1U)"
 
-toc: true
-toc_sticky: false
+sidebar:
+  nav: "dev"
 ---
 
 {% include breadcrumbs.html %}

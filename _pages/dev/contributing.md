@@ -1,21 +1,20 @@
 ---
 permalink: /dev/contributing/
 title: "Contributing Guidelines"
-classes: wide2
+classes: wide
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
   overlay_image: /assets/images/dev/dev.jpeg
   caption: "Photo credit: [**Florian Olivo**](https://unsplash.com/photos/Ek9Znm8lQ1U)"
 
-toc: true
-toc_sticky: false
-
+sidebar:
+  nav: "dev"
 ---
 
 {% include breadcrumbs.html %}
 
-Contributing to libGDX can come in a few different forms: you can help out on the [Discord](/community/) and IRC, pledge to the [Patreon](https://www.patreon.com/libgdx) page, and submit [code](https://github.com/libgdx/libgdx/) and [documentation](https://github.com/libgdx/libgdx/wiki) back to the project on GitHub.
+Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on the [Discord](/community/) and IRC, pledge to the [Patreon](/funding/) page, and submit [code](https://github.com/libgdx/libgdx/) and [documentation](https://github.com/libgdx/libgdx/wiki) back to the project on GitHub.
 
 If you want to submit code back to the project, please take a moment to review our guidelines below.
 
