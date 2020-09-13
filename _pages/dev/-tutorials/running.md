@@ -128,4 +128,4 @@ All the targets can be run and deployed to via the command line interface.
 <br/>
 
 # What to do next?
-Now that you're done with the set up, you can get to do some real coding. Take a look at [these tutorials](/dev/tutorials/) for some pointers on where to start.
+Now that you're done with the set up, you can get to do some real coding. Take a look at our post [A Simple Game](/dev/simple_game/) for a step-by-step description.

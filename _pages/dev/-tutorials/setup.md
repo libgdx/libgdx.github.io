@@ -1,6 +1,6 @@
 ---
 permalink: /dev/setup/
-title: "Getting Started: Setup"
+title: "Creating a Project"
 classes: wide
 header:
   overlay_color: "#000"

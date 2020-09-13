@@ -5,17 +5,21 @@ main:
     url: /features/
   - title: "Showcase"
     url: /showcase/
-  - title: "Source & Documentation"
+  - title: "Documentation"
     url: /dev/
   - title: "Community"
     url: /community/
 dev:
   - title: "Getting Started"
     children:
-      - title: "Set up a Project"
+      - title: "Creating a Project"
         url: /dev/setup/
       - title: "Get It Running"
         url: /dev/running/
+      - title: "A Simple Game"
+        url: /dev/simple_game/
+      - title: "Extending the Simple Game"
+        url: /dev/simple_game_extended/
       - title: "Demos & Tutorials"
         url: /dev/tutorials/
   - title: "Documentation"
