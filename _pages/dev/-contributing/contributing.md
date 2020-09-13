@@ -19,8 +19,15 @@ Contributing to libGDX can come in a few different forms: you can [report issues
 If you want to submit code back to the project, please take a moment to review our guidelines below.
 
 # Guidelines
-## Discussion of changes
-If you have a proposal for changes that you aren't sure about, or questions about a specific change you would like to make, you can start a conversation with the developers on the Discord or by starting up an issue on the issue tracker on GitHub.
+## API Changes & Additions
+If you modify a public API, or add a new one, make sure to add these changes to the [CHANGES](https://github.com/libgdx/libgdx/blob/master/CHANGES) file in the root of the repository.
+
+If you want to poll the brains of other devs, either open an issue on our issue tracker, send a pull request and start a conversation on Github, or join our official [Discord server](/community/discord/).
+
+## Contributor License Agreement
+Libgdx is licensed under the [Apache 2.0 license](http://en.wikipedia.org/wiki/Apache_License). Before we can accept (major) code contributions, we need you to sign our [Contributor License Agreement](https://github.com/libgdx/libgdx/blob/master/CLA.txt). Just print it out, fill in the blanks and send a copy to contact@badlogicgames.com, with the subject `[Libgdx] CLA`.
+
+Signing the CLA will allow us to use and distribute your code. This is a non-exclusive license, so you retain all rights to your code. It's a fail-safe for us should someone contribute essential code and later decide to take it back.
 
 ## Formatting
 If you are working on any of the libGDX code, we require you to use the formatter that we use. You can find it [here](https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml). Failure to use the formatter will most likely get your pull request rejected. The formatter provided can be imported into Intellij and Android Studio also, its not just for Eclipse. See [here](https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/) for official documentation on this.
@@ -29,11 +36,11 @@ Don't let the formatter run automatically, or on the whole file you are changing
 {: .notice--primary}
 
 ## Code Style
-libGDX stands by the usual Java style, but we don't have an official coding standard.
+libGDX doesn't have an official coding standard, but we stand by the usual Java style, as should you.
 
 **Please do <u>not</u> do any of the following:**
 - Underscores in identifiers
-- Hungarian notation
+- [Hungarian notation](http://en.wikipedia.org/wiki/Hungarian_notation)
 - Prefixes for fields or arguments
 - Curly braces on new lines
 
@@ -52,11 +59,18 @@ If some java features are not supported on GWT they must either be emulated or a
 
 Common limitations on GWT include:
 - Formatting: String.format() not supported
-- RegEx: use the Pattern and Matcher provided by the GWT backend
-- Reflection: use [libGDX reflection](https://github.com/libgdx/libgdx/wiki/Reflection) instead
-- Multithreading: Timers are supported on GWT, but threads are strictly not.
+- Regular expressions. A basic emulation of [Pattern](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Pattern.java) and [Matcher](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Matcher.java) is provided.
+- Reflection. Use [libGDX reflection](https://github.com/libgdx/libgdx/wiki/Reflection) instead
+- Multithreading: [Timers](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/utils/Timer.java) are supported on GWT, but threads are strictly not.
 
-Determine if any new classes are compatible with GWT, and either **include** or **exclude** elements to the [GWT module](https://github.com/libgdx/libgdx/blob/master/gdx/res/com/badlogic/gdx.gwt.xml).
+Determine if any new classes are compatible with GWT, and either **include** or **exclude** elements to the [GWT module](https://github.com/libgdx/libgdx/blob/master/gdx/res/com/badlogic/gdx.gwt.xml). See for example [this PR](https://github.com/libgdx/libgdx/pull/5018/files#diff-13b547f0d1b0872d60d67db4ca0b266d).
+If the new file isn't added to `gdx/src/com/badlogic/gdx.gwt.xml`, an error similar to
+
+`    [ERROR] Errors in 'jar:file:<...>'
+          [ERROR] Line <line num>: No source code is available for type com.badlogic.gdx.graphics.g3d.environment.PointShadowLight; did you forget to inherit a required module?
+    [ERROR] Aborting compile due to errors in some input files`
+
+may be seen.
 
 ## Performance considerations
 Due to some of the targets of the framework being mobile and the web, along with it being a game development focused framework, its important to keep performance as tight as possible. On mobile platforms especially, memory management is very important, so we don't create any garbage in the core of libGDX. (Its advised you don't in your applications either)

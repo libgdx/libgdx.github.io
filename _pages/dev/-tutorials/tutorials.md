@@ -24,4 +24,4 @@ From then on, our [wiki](https://github.com/libgdx/libgdx/wiki/A-Simple-Game) is
 
 If you want to inspect some open source libGDX games for reference, this [wiki article](https://github.com/libgdx/libgdx/wiki/External-tutorials#some-simple-open-source-projects-for-reference) is the right place to start looking.
 
-The official [libGDX organization](https://github.com/libgdx) on GitHub also offers a few demo projects.
+The official [libGDX organization](https://github.com/libgdx) on GitHub also offers a few [demo projects](https://github.com/libgdx/libgdx/wiki/Running-Demos).

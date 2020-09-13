@@ -115,6 +115,8 @@ All the targets can be run and deployed to via the command line interface.
 ./gradlew android:installDebug android:run
 ```
 
+The `ANDROID_HOME` environment variable needs to be pointing to a valid android SDK before you can do any command line wizardry for Android. On Windows, use: `set ANDROID_HOME=C:/Path/To/Your/Android/Sdk`; on Linux and Mac OS X: `export ANDROID_HOME=/Path/To/Your/Android/Sdk`. Alternatively you can create a file called "local.properties" with the following content: `sdk.dir /Path/To/Your/Android/Sdk`.
+
 **iOS:**
 ```
 ./gradlew ios:launchIPhoneSimulator
@@ -124,6 +126,17 @@ All the targets can be run and deployed to via the command line interface.
 ```
 ./gradlew html:superDev
 ```
+
+## Gradle tasks are failing?
+If when you invoke gradle, the build or refresh fails to get more information, run the same command again and add the --debug arguments to the command,
+e.g.:
+
+```
+./gradlew desktop:run --debug
+```
+
+This will provide you with a stacktrace and give you a better idea of why gradle is failing.
+
 
 <br/>
 

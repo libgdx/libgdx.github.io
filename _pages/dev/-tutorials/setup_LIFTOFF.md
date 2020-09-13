@@ -22,7 +22,9 @@ sidebar:
 If this is your first time using libGDX, you're at the right place. The following article details how you can get your fist libGDX project up and running.
 
 # I. Getting a Proper Development Environment
-First off, you need an IDE (Integrated Development Environments), basically an editor for your java files, which makes developing java applications more convenient in various ways. The java world offers a lot of different IDEs, so feel free to choose whichever you like most:
+First off, you need an IDE (Integrated Development Environments), basically an editor for your java files, which makes developing java applications more convenient in various ways. _If you already have an IDE installed, you can skip to the next [section](/dev/setup/#ii-creating-a-new-project)._
+
+The java world offers a lot of different IDEs, so feel free to choose whichever you like most:
 
 ## (1.) IDEA
 - [JDK 8+](https://adoptopenjdk.net)
