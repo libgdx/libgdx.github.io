@@ -58,17 +58,19 @@ Due to the cross platform nature of libGDX, there are some things you have to av
 If some java features are not supported on GWT they must either be emulated or avoided. Emulation is also required for native code (`Matrix4`). An example of emulation is shown [here](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/com/badlogic/gdx/math/Matrix4.java).
 
 Common limitations on GWT include:
-- Formatting: String.format() not supported
-- Regular expressions. A basic emulation of [Pattern](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Pattern.java) and [Matcher](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Matcher.java) is provided.
-- Reflection. Use [libGDX reflection](https://github.com/libgdx/libgdx/wiki/Reflection) instead
+- Formatting: String.format() is not supported.
+- Regular expressions. However, a basic emulation of [Pattern](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Pattern.java) and [Matcher](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Matcher.java) is provided.
+- Reflection. Use [libGDX reflection](https://github.com/libgdx/libgdx/wiki/Reflection) instead.
 - Multithreading: [Timers](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/utils/Timer.java) are supported on GWT, but threads are strictly not.
 
 Determine if any new classes are compatible with GWT, and either **include** or **exclude** elements to the [GWT module](https://github.com/libgdx/libgdx/blob/master/gdx/res/com/badlogic/gdx.gwt.xml). See for example [this PR](https://github.com/libgdx/libgdx/pull/5018/files#diff-13b547f0d1b0872d60d67db4ca0b266d).
 If the new file isn't added to `gdx/src/com/badlogic/gdx.gwt.xml`, an error similar to
 
-`    [ERROR] Errors in 'jar:file:<...>'
-          [ERROR] Line <line num>: No source code is available for type com.badlogic.gdx.graphics.g3d.environment.PointShadowLight; did you forget to inherit a required module?
-    [ERROR] Aborting compile due to errors in some input files`
+```
+[ERROR] Errors in 'jar:file:<...>'
+[ERROR] Line <line num>: No source code is available for type com.badlogic.gdx.graphics.g3d.environment.PointShadowLight; did you forget to inherit a required module?
+[ERROR] Aborting compile due to errors in some input files
+```
 
 may be seen.
 

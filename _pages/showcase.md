@@ -26,7 +26,7 @@ An open-source reimplementation of the most famous civilization-building game ev
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Spine](http://en.esotericsoftware.com) by Esoteric Software <a href="https://github.com/yairm210/Unciv" style="margin-left: 10px" class="btn btn--info">Tool</a>
-<img align="left" src="https://de.esotericsoftware.com/img/front-what-is-spine.jpg" style="margin-right: 25px; margin-top: 20px; margin-bottom:35px; max-width: 440px;">
+<p style="width: 435px; overflow:hidden; float:left"><img align="left" src="https://de.esotericsoftware.com/img/front-what-is-spine.jpg" style="margin-left: -20px; margin-right: 25px; margin-top: 13px; margin-bottom:23px"></p>
 
 Spine is an animation tool that focuses specifically on 2D animation for games. Spine aims to have an efficient, streamlined workflow, both for creating animations using the editor and for making use of those animations in games.
 
@@ -54,7 +54,7 @@ Delve into the shifting dungeons on your hunt for the Yithidian orb, but getting
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Pathway](https://store.steampowered.com/app/546430/Pathway/) by Robotality
-<img align="left" src="https://steamcdn-a.akamaihd.net/steam/apps/546430/header.jpg?t=1593431294" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="left" src="https://steamcdn-a.akamaihd.net/steam/apps/546430/header.jpg?t=1593431294" style="margin-right: 25px; margin-top: 17px; margin-bottom:15px">
 
 Explore the strange unknown with Pathway, a strategy adventure set in the 1930s great wilderness. Unravel long-forgotten mysteries of the occult, raid ancient tombs and outwit your foes in turn-based squad combat!
 
