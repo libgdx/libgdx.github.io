@@ -127,6 +127,8 @@ The `ANDROID_HOME` environment variable needs to be pointing to a valid android 
 ./gradlew html:superDev
 ```
 
+Then go to [`http://localhost:8080/index.html`](http://localhost:8080/index.html).
+
 ## Gradle tasks are failing?
 If when you invoke gradle, the build or refresh fails to get more information, run the same command again and add the --debug arguments to the command,
 e.g.:
