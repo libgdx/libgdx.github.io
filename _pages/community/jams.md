@@ -19,11 +19,6 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## September 2020
-* Theme Suggestions: 6th - 12th
-* Theme Voting: 13th - 19th
-* Jam: 20th - 26th
-
 ## December 2020
 * Theme Suggestions: 6th - 12th
 * Theme Voting: 13th - 19th
@@ -45,6 +40,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 
 # Past Jams
 
+* [Parallel Worlds](https://itch.io/jam/libgdx-jam-september-2020) (September 2020)
 * [Tower Defense Without Towers](https://itch.io/jam/libgdx-jam-june-2020) (June 2020)
 * [GLOBAL THERMONUCLEAR WAR](https://itch.io/jam/libgdx-jam-march-2020) (March 2020)
 * [THE WORLD IS FOOD](https://itch.io/jam/libgdx-jam-december-2019) (December 2019)
