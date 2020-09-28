@@ -31,11 +31,11 @@ feature_row:
     btn_class: "btn--primary"
 
 feature_row2:
- - image_path: /assets/images/dev/tools/flame.gif
+  - image_path: /assets/images/dev/tools/flame.gif
     title: "Setup Tool"
     excerpt: 'A simple wizard tool for libGDX projects'
     url: "/assets/gdx-setup.jar"
-    btn_label: "Documentation & Download"
+    btn_label: "Download"
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/setup_tool_old.jpg
     title: "Skin Composer"
@@ -51,7 +51,7 @@ feature_row2:
     btn_class: "btn--primary"
 
 feature_row3:
-   - image_path: /assets/images/dev/tools/flame.gif
+  - image_path: /assets/images/dev/tools/flame.gif
     title: "Flame"
     excerpt: 'A powerful 3D particle editor'
     url: "https://github.com/libgdx/libgdx/wiki/3D-Particle-Effects"
@@ -69,7 +69,7 @@ feature_row3:
     url: "https://github.com/libgdx/fbx-conv"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    
+
 feature_row4:
   - image_path: /assets/images/dev/tools/texture_packer.jpeg
     title: "Texture Packer"
