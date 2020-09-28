@@ -23,9 +23,21 @@ feature_row:
     url: "https://talosvfx.com"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
+  - image_path: /assets/images/dev/tools/hyperlap.gif
+    title: "HyperLap2D"
+    excerpt: 'A visual editor for complex 2D worlds and scenes'
+    url: "https://github.com/rednblackgames/HyperLap2D"
+    btn_label: "Documentation & Download"
+    btn_class: "btn--primary"
 
 feature_row2:
-  - image_path: /assets/images/dev/tools/skin_composer.png
+ - image_path: /assets/images/dev/tools/flame.gif
+    title: "Setup Tool"
+    excerpt: 'A simple wizard tool for libGDX projects'
+    url: "/assets/gdx-setup.jar"
+    btn_label: "Documentation & Download"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/dev/tools/setup_tool_old.jpg
     title: "Skin Composer"
     excerpt: 'A skin creator for libGDX'
     url: "https://github.com/raeleus/skin-composer/wiki"
@@ -37,14 +49,14 @@ feature_row2:
     url: "https://github.com/libgdx/libgdx/wiki/2D-Particle-Editor"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-  - image_path: /assets/images/dev/tools/flame.gif
+
+feature_row3:
+   - image_path: /assets/images/dev/tools/flame.gif
     title: "Flame"
     excerpt: 'A powerful 3D particle editor'
     url: "https://github.com/libgdx/libgdx/wiki/3D-Particle-Effects"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-
-feature_row3:
   - image_path: /assets/images/dev/tools/hiero.png
     title: "Hiero"
     excerpt: 'A bitmap font packing tool'
@@ -57,6 +69,8 @@ feature_row3:
     url: "https://github.com/libgdx/fbx-conv"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
+    
+feature_row4:
   - image_path: /assets/images/dev/tools/texture_packer.jpeg
     title: "Texture Packer"
     excerpt: 'A tool for packing images into atlases'
@@ -76,3 +90,5 @@ sidebar:
 {% include feature_row id="feature_row2" %}
 
 {% include feature_row id="feature_row3" %}
+
+{% include feature_row id="feature_row4" %}
