@@ -31,13 +31,13 @@ feature_row:
     btn_class: "btn--primary"
 
 feature_row2:
-  - image_path: /assets/images/dev/tools/flame.gif
+  - image_path: /assets/images/dev/tools/setup_tool_old.jpg
     title: "Setup Tool"
     excerpt: 'A simple wizard tool for libGDX projects'
     url: "/assets/gdx-setup.jar"
     btn_label: "Download"
     btn_class: "btn--primary"
-  - image_path: /assets/images/dev/tools/setup_tool_old.jpg
+  - image_path: /assets/images/dev/tools/skin_composer.png
     title: "Skin Composer"
     excerpt: 'A skin creator for libGDX'
     url: "https://github.com/raeleus/skin-composer/wiki"
