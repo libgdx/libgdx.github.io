@@ -1,5 +1,5 @@
 ---
-title: "Status Report #3: Roadmap for 1.10"
+title: "Status Report #3: Roadmap for 1.12"
 classes: wide2
 header:
   overlay_color: "#000"
@@ -8,7 +8,7 @@ header:
   caption: "Photo credit: [**Slidebean**](https://unsplash.com/photos/iW9oP7Ljkbg)"
   teaser: /assets/images/posts/2020-10-05/header.jpg
 
-excerpt: LibGDX 1.10 - where, when, what, why? This post tells you everything you need to know about our plans for the next version of libGDX.
+excerpt: libGDX 1.12 - where, when, what, why? This post tells you everything you need to know about our plans for the next version of libGDX.
 
 show_author: true
 author_username: "crykn"
