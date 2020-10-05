@@ -36,7 +36,7 @@ As mentioned in Status Report #1, there were some plans drawn up to revive the o
 Sadly, we can't give an ETA for a release yet, as there are still some things having to be worked out.
 
 ## New Web-Based Setup Tool
-As some of you may have noticed, there was quite some talk on our Discord server relating to our setup tool and how we could improve on it. There are a lot of different suggestions in the room and a lot of people interested to help, so we have still some things to sort out - but we are positive that we can show a working prototype before 1.10!
+As some of you may have noticed, there was quite some talk on our Discord server relating to our setup tool and how we could improve on it. There are a lot of different suggestions in the room and a lot of people interested to help, so we have still some things to sort out - but we are positive that we can show a working prototype before 1.12!
 
 Just to give you all a quick teaser, this is a draft for a new GUI that **raeleus** has been working on:
 
