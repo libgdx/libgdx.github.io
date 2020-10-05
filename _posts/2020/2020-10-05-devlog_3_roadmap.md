@@ -17,7 +17,7 @@ author_displayname: "damios"
 categories: news
 ---
 
-In this Status Report we want to give you an overview of our plans for the upcoming version 1.10 of libGDX. As mentioned in [Status Report #2](/news/2020/09/devlog_2_release_schedule), we are on track to release it around the end of October.
+In this Status Report we want to give you an overview of our plans for the upcoming version 1.12 of libGDX. As mentioned in [Status Report #2](/news/2020/09/devlog_2_release_schedule), we are on track to release it around the end of October.
 
 ## gdx-controller Improvements
 **MrStahlfelge**'s hard work improving the controller functionality of libGDX will finally come to fruition: version 2.0 of gdx-controllers is set to release. It will include, inter alia, more [reliable mappings](https://github.com/libgdx/gdx-controllers/wiki#mappings-and-codes), hotplugging, [vibration](https://github.com/libgdx/gdx-controllers/wiki#vibration) (on most platforms), as well as methods to [query controller features](https://github.com/libgdx/gdx-controllers/wiki#query-available-features), and an all-new iOS implementation. The desktop implementation is now based on SDL, with a Java wrapper named Jamepad - if you are interested in some of the internals, check out the [jamepad repo](https://github.com/libgdx/Jamepad). That means, next to other advantages, arm is supported on Linux!
@@ -43,13 +43,13 @@ Just to give you all a quick teaser, this is a draft for a new GUI that **raeleu
 ![Preview of the Setup Tool](/assets/images/posts/2020-10-05/setup_preview.gif)
 
 ## Miscellaneous
-There are also a lot of other features and improvements planned for 1.10 and beyond, some of which we already talked about:
+There are also a lot of other features and improvements planned for 1.12 and beyond, some of which we already talked about:
 - **iOS MOE** is set to be **removed**
 - **Linux ARM builds** are included with libGDX (if you have some screenshots or videos to show off, hit me up on Discord!)
 - A **Box2D** update to version [2.4.0](https://github.com/erincatto/box2d/releases/tag/v2.4.0): **MobiDevelop** is checking out what we can do here, but no promises yet!
 - **GWT improvements** (we already mentioned those in Status Report #1)
 - **LWJGL3 backend improvements** (get ready for a `foregroundFPS` option!)
 - As always: general Scene2D Improvements
-- We are also continuing to go through the issues and pull requests on GitHub, so you can be sure that gdx 1.10 will also include a plethora of bug fixes.
+- We are also continuing to go through the issues and pull requests on GitHub, so you can be sure that gdx 1.12 will also include a plethora of bug fixes.
 
 This is it for today's Status Report! If you yourself want to get involved in the development process, we are always happy for comments on PRs as well as issues and welcome you to join our official [Discord server](/community/)! If some of you are interested in working on [Ashley](https://github.com/libgdx/ashley), we could use some help there as well. Otherwise, see you in Status Report #4, which will probably be released around the end of October!
