@@ -90,7 +90,7 @@ Breathtakingly fast and tough-as-nails, Rifter is an acrobatic platformer drench
 libGDX really shines if you plan to release games for mobile platforms as well!
 
 ## [Disney Heroes: Battle Mode](https://perblue.com/games/DisneyHeroes.aspx) by PerBlue Entertainment
-<img align="left" src="https://play-lh.googleusercontent.com/Lv75VsRcaJ4IJAW8CWZCW1_owedvAvyRdyanaEnPCxFFdbitVAx27NHN2uITJUpAa94=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="left" src="https://lh3.googleusercontent.com/9iWANe2crKqFiDCY8EVGMhrLzq9O47lQIu0t-1k-snQ1Tj3P-OJx2qQHgiW_rNpv11-t=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
 
 Battle your way through a dangerous digital world and save it from an evil virus with the help of your favorite Disney and Pixar heroes! It’s no-holds barred in this battle-packed strategy RPG game starring heroes from Frozen, Wall-E, Toy Story, The Lion King, Pirates of the Caribbean, Monsters, Inc., and more.  [[Android](https://play.google.com/store/apps/details?id=com.perblue.disneyheroes) / [iOS](https://itunes.apple.com/us/app/disney-heroes-battle-mode/id1327925104?mt=8)]
 
