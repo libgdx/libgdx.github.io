@@ -4,16 +4,6 @@ title: "Brand Guidelines"
 classes: wide2
 ---
 
-<style>
-.pseudolink {
-  color: #2f7d95;
-  text-decoration:underline;
-  cursor:pointer;
-}
-.pseudolink:visited { color: #4e91a5; }
-.pseudolink:hover { color: #235e70; outline: 0; }
-</style>
-
 We’ve had a lot of inquiries from developers wondering whether they can use our logo in their games. We love to get credit for the great games you produce using libGDX, so we created these guidelines to help you to make fair use of our name and logo.
 
 **Any use of our brand and visual identity must adhere to the requirements and restrictions set out hereinafter.**
