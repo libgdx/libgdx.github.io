@@ -89,6 +89,20 @@ Breathtakingly fast and tough-as-nails, Rifter is an acrobatic platformer drench
 # Mobile Games
 libGDX really shines if you plan to release games for mobile platforms as well!
 
+## [Disney Heroes: Battle Mode](https://perblue.com/games/DisneyHeroes.aspx) by PerBlue Entertainment
+<img align="left" src="https://play-lh.googleusercontent.com/Lv75VsRcaJ4IJAW8CWZCW1_owedvAvyRdyanaEnPCxFFdbitVAx27NHN2uITJUpAa94=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
+
+Battle your way through a dangerous digital world and save it from an evil virus with the help of your favorite Disney and Pixar heroes! It’s no-holds barred in this battle-packed strategy RPG game starring heroes from Frozen, Wall-E, Toy Story, The Lion King, Pirates of the Caribbean, Monsters, Inc., and more.  [[Android](https://play.google.com/store/apps/details?id=com.perblue.disneyheroes) / [iOS](https://itunes.apple.com/us/app/disney-heroes-battle-mode/id1327925104?mt=8)]
+
+<div style="clear: both;with: 100%; height: 1px;"></div>
+
+## [Sandship](http://rockbitegames.com/sandship/) by Rockbite Games
+<img align="right" src="https://play-lh.googleusercontent.com/zVcowfZOhVnUaYCRDu5YkLTczk7eHG2JeVoHZ36aY249O1I0Mm2e_f_IqzPsDNzUug=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
+
+Sandship is a factory management game set in a post-apocalyptic sci-fi universe. You control the last remaining sandship: a gigantic, artificially intelligent mega-factory, which roams across the endless deserts of a far-away planet. [[Android](https://play.google.com/store/apps/details?id=com.rockbite.sandship) / [iOS](https://apps.apple.com/us/app/sandship-crafting-factory/id1440385758)]
+
+<div style="clear: both;with: 100%; height: 1px;"></div>
+
 ## [Zombie Age 3](https://divmob.com/1853-zombie-age-3.html) by DIVMOB
 <img align="left" src="https://play-lh.googleusercontent.com/Lv75VsRcaJ4IJAW8CWZCW1_owedvAvyRdyanaEnPCxFFdbitVAx27NHN2uITJUpAa94=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
 
@@ -110,43 +124,36 @@ Epic Heroes War is a real-time strategy game, online side-scroller defense combi
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
-## [Sandship](http://rockbitegames.com/sandship/) by Rockbite Games
-<img align="right" src="https://play-lh.googleusercontent.com/zVcowfZOhVnUaYCRDu5YkLTczk7eHG2JeVoHZ36aY249O1I0Mm2e_f_IqzPsDNzUug=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
-
-Sandship is a factory management game set in a post-apocalyptic sci-fi universe. You control the last remaining sandship: a gigantic, artificially intelligent mega-factory, which roams across the endless deserts of a far-away planet. [[Android](https://play.google.com/store/apps/details?id=com.rockbite.sandship) / [iOS](https://apps.apple.com/us/app/sandship-crafting-factory/id1440385758)]
-
-<div style="clear: both;with: 100%; height: 1px;"></div>
-
 ## [Unciv](https://github.com/yairm210/Unciv) by Yair Morgenstern <a href="https://github.com/yairm210/Unciv" style="margin-left 10px" class="btn btn--primary">On GitHub</a>
-<img align="left" src="https://play-lh.googleusercontent.com/l8fuQ2DnNjoD9pFnHLsli1xt8OClfr6O9GSBJJ9w7IIb2VHOyxqKZ9lNZXtMqOabCfyI=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="right" src="https://play-lh.googleusercontent.com/l8fuQ2DnNjoD9pFnHLsli1xt8OClfr6O9GSBJJ9w7IIb2VHOyxqKZ9lNZXtMqOabCfyI=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
 
 An open-source reimplementation of the most famous civilization-building game ever - fast, small, no ads, free forever! Build your civilization, research technologies, expand your cities and defeat your foes! [[Android](https://play.google.com/store/apps/details?id=com.unciv.app) / [Desktop](https://yairm210.itch.io/unciv)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Shattered Pixel Dungeon](https://shatteredpixel.com) by Shattered Pixel <a href="https://github.com/00-Evan/shattered-pixel-dungeon" style="margin-left: 10px" class="btn btn--primary">On GitHub</a>
-<img align="right" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-left: 25px; margin-top: 17px; margin-bottom:25px; max-width: 460px; max-height: 215px;">
+<img align="left" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-right: 25px; margin-top: 17px; margin-bottom:25px; max-width: 460px; max-height: 215px;">
 
 Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels and enemies, and over 150 items to collect and use. [[Android](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon) / [Desktop](https://github.com/00-Evan/shattered-pixel-dungeon/blob/master/docs/getting-started-desktop.md#quick-setup)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Mirage Realms](http://www.miragerealms.co.uk/devblog/) by Liam Stewart
-<img align="left" src="https://lh3.googleusercontent.com/dE5E2CzrSoT_NLCgMGiG7oN_0XSuqUT3QPRCgT9_d0QzTXN4_Pa_FCAweFhNiyQoLYQ=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px; max-width: 460px; max-height: 240px;">
+<img align="right" src="https://lh3.googleusercontent.com/dE5E2CzrSoT_NLCgMGiG7oN_0XSuqUT3QPRCgT9_d0QzTXN4_Pa_FCAweFhNiyQoLYQ=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px; max-width: 460px; max-height: 240px;">
 
 Mirage Realms is an ambitious solo project to produce a free to play MMORPG for different platforms. [[Android](https://play.google.com/store/apps/details?id=com.foxcake.mirage.android) / [Desktop](http://www.miragerealms.co.uk/devblog/desktop/)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [PokeMMO](https://pokemmo.eu/)
-<img align="right" src="https://pokemmo.eu/images/screenshot/c-t.jpg" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="left" src="https://pokemmo.eu/images/screenshot/c-t.jpg" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
 
 PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to a new era of online monster battles! [[Android](https://pokemmo.eu/downloads/android/) / [Desktop](https://pokemmo.eu/downloads/)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 ## [Hair Dash](http://www.cleancutgames.com) by Clean Cut Games
-<img align="left" src="https://play-lh.googleusercontent.com/w1NLihd6eUGILQ1jPqizEesFAftBN3_MKTIZV_KVdMDHQLNj0TOcxo_BvTG3bh_C190=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
+<img align="right" src="https://play-lh.googleusercontent.com/w1NLihd6eUGILQ1jPqizEesFAftBN3_MKTIZV_KVdMDHQLNj0TOcxo_BvTG3bh_C190=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
 
 Become a fighting legend in this arcade beat 'em up in the vein of One Finger Death Punch with AAA-quality retro pixel art! Fight in intense battles against King Octopus’ pirate minions, customize your characters, compete with your friends! [[Android](https://play.google.com/store/apps/details?id=com.zplay.hairdash&hl=en_US) / [iOS](https://apps.apple.com/us/app/hair-dash-hero-battle/id1441517314)]
 
