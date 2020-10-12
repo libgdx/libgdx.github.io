@@ -8,7 +8,7 @@ header:
   overlay_image: /assets/images/dev/dev.jpeg
   caption: "Photo credit: [**Florian Olivo**](https://unsplash.com/photos/Ek9Znm8lQ1U)"
 
-excerpt: "libGDX offers a setup tool, which automatically creates a project and downloads everything necessary."
+excerpt: "Before you can get started with libGDX, you need to set up a development environment for Java."
 
 sidebar:
   nav: "dev"
@@ -16,10 +16,11 @@ sidebar:
 
 {% include breadcrumbs.html %}
 
-If this is your first time using libGDX, you're at the right place. The following article details how you can get your fist libGDX project up and running.
+If this is your first time using libGDX, you're at the right place. The following steps detail how you can get your fist libGDX project up and running.
 
-# I. Getting a Proper Development Environment
-First off, you need an IDE (Integrated Development Environments), basically an editor for your java files, which makes developing java applications more convenient in various ways. _If you already have an IDE installed, you can skip to the next [section](/dev/setup/#ii-creating-a-new-project)._
+{% include setup_flowchart.html current='0' %}
+
+First off, you need an IDE (Integrated Development Environments), basically an editor for your java files, which makes developing java applications more convenient in various ways. _If you already have an IDE installed, you can skip to the next [step](/dev/project_generation/)._
 
 The java world offers a lot of different IDEs, so feel free to choose whichever you like most:
 
@@ -53,21 +54,4 @@ The java world offers a lot of different IDEs, so feel free to choose whichever 
 
 <br/>
 
-# II. Creating a New Project
-To setup your first project and download the necessary dependencies, libGDX offers a setup tool. See [here](https://github.com/libgdx/libgdx/wiki/Project-Setup-Gradle) on how to use it.
-
-<br/>
-
-# III. Finishing the project generation
-Click generate. Now you'll have a project all set up with a sample.
-
-<br/>
-
-# IV. Importing the Project
-Lastly, you need to import your project into your IDE.
-
-In **IntelliJ IDEA or Android Studio**, you can choose to open the `build.gradle` file and select "Open as Project" to get started. In **Eclipse**, choose `File -> Import -> Gradle`, in Netbeans `File -> Open Project`.
-
-You may need to refresh the Gradle project after the initial import, if some dependencies weren't downloaded yet. In **IntelliJ IDEA/Android Studio**, the `Reimport all Gradle projects` button is a pair of circling arrows in the Gradle tool window, which can be opened with `View -> Tool Windows -> Gradle`. In **Eclipse** right click on your project `Gradle -> Refresh Gradle Project`.
-
-Now you can focus on getting your project [running](/dev/running/).
+Now that you have a development environment, you can create your very first libGDX project. libGDX offers a setup tool for that, which generates all the necessary files. To get started with it, take a look [here](/dev/project_generation/).

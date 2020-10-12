@@ -16,6 +16,8 @@ sidebar:
 
 Before diving into the APIs provided by libGDX, let's create **a very simple "game"**, that touches each module provided by the framework, to get a feeling for things. We'll introduce a few different concepts without going into unnecessary detail.
 
+{% include setup_flowchart.html current='3' %}
+
 In the following, we'll look at:
 
   * Basic file access
@@ -26,7 +28,7 @@ In the following, we'll look at:
   * Playing sound effects
 
 ## Project Setup
-Follow the steps in [Creating a Project](/dev/setup/). In the following, we will use the following settings:
+Follow the steps in the [Creating a Project](/dev/setup/) guide. In the following, we will use the following settings:
 
   * Application name: drop
   * Package name: com.badlogic.drop
@@ -36,7 +38,7 @@ We also filled in the destination and Android SDK folders, and unchecked the iOS
 
 Once imported into your IDE, you should have 5 projects or modules: the main one `drop`, and the sub projects `android` (or `drop-android` under Eclipse), `core` / `drop-core`, `desktop` / `drop-desktop`, and `html` / `drop-html`.
 
-To launch or debug the game, see the page [Get it Running](/dev/running/).
+To launch or debug the game, see the page [Importing & Running a Project](/dev/import_and running/).
 
 If we just run the project, we will get an error: `Couldn't load file: badlogic.jpg`. Your Run Configuration has to be properly configured first: Select as working directory `PATH_TO_YOUR_PROJECT\drop\android\assets`.
 

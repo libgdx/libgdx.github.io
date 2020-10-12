@@ -1,6 +1,6 @@
 ---
-permalink: /dev/running/
-title: "Running a Project"
+permalink: /dev/import_and_running/
+title: "Importing & Running a Project"
 classes: wide
 header:
   overlay_color: "#000"
@@ -14,10 +14,22 @@ sidebar:
 
 {% include breadcrumbs.html %}
 
-This article explains how you can get your [freshly created](/dev/setup/) libGDX project running.
+Next up, you need to import your project into your IDE.
 
-# Desktop
-## In IDEA/Android Studio:
+{% include setup_flowchart.html current='2' %}
+
+
+# Importing the Project
+In **IntelliJ IDEA or Android Studio**, you can choose to open the `build.gradle` file and select "Open as Project" to get started. In **Eclipse**, choose `File -> Import -> Gradle`, in Netbeans `File -> Open Project`.
+
+You may need to refresh the Gradle project after the initial import, if some dependencies weren't downloaded yet. In **IntelliJ IDEA/Android Studio**, the `Reimport all Gradle projects` button is a pair of circling arrows in the Gradle tool window, which can be opened with `View -> Tool Windows -> Gradle`. In **Eclipse** right click on your project `Gradle -> Refresh Gradle Project`.
+
+<br/>
+
+# Getting it Running
+If you want to execute your freshly imported project, you have to follow different steps, depending on your IDE and the platform you are targeting.
+## Desktop
+### In IDEA/Android Studio:
 1. Right click your DesktopLauncher class
 2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
 3. Open up Run Configurations
@@ -30,7 +42,7 @@ This article explains how you can get your [freshly created](/dev/setup/) libGDX
 
 5. Run your application using the run button
 
-## In Eclipse:
+### In Eclipse:
 1. Right click your desktop project > Build Path > Configure Build Path
 2. Click the sources tab, and click 'Add Folder'
 3. Select the assets folder and hit OK.
@@ -39,20 +51,20 @@ This article explains how you can get your [freshly created](/dev/setup/) libGDX
 
 4. Right click your desktop project > Run as > Java Application
 
-## In Netbeans:
+### In Netbeans:
 Right click the desktop project > Run
 
 <br/>
 
-# Android
+## Android
 - **IDEA/Android Studio:** Right click AndroidLauncher > Run AndroidLauncher
 - **Eclipse:** Right click Android project > Run As > AndroidApplication
 - **Netbeans:** Right click Android project > Run As > AndroidApplication
 
 <br/>
 
-# iOS
-## In IDEA/Android Studio
+## iOS
+### In IDEA/Android Studio
 1. Open Run/Debug Configurations
 2. Create a new run configuration for a RoboVM iOS application
 
@@ -66,7 +78,7 @@ For more information on using and configuring the RoboVM intellij plugin please 
 **NOTE:** This documentation is for the 'Official' RoboVM plugin. We are currently using a forked version, which means some of the information (such as about licensing) may be redundant. Configuring and using the plugin should however be very similar.
 {: .notice--primary}
 
-## In Eclipse
+### In Eclipse
 - Right click the iOS RoboVM project > Run As > RoboVM runner of your choice
 
 ![](/assets/images/dev/eclipse/1.png)
@@ -78,7 +90,7 @@ For more information on using and configuring the RoboVM intellij plugin please 
 
 <br/>
 
-# HTML
+## HTML
 HTML is best suited to be run on command line. You are welcome to manually setup GWT in the IDE of your choice if you are familiar with it, but the recommended way is to drop down to terminal or command prompt.
 
 The HTML target can be run in **Super Dev** mode, which allows you to recompile on the fly, and debug your application in browser.
@@ -102,7 +114,7 @@ For further info on configuring and debugging with SuperDev check the [GWT docum
 
 <br/>
 
-# Command Line
+## Command Line
 All the targets can be run and deployed to via the command line interface.
 
 **Desktop:**
@@ -129,7 +141,7 @@ The `ANDROID_HOME` environment variable needs to be pointing to a valid android 
 
 Then go to [`http://localhost:8080/index.html`](http://localhost:8080/index.html).
 
-## Gradle tasks are failing?
+### Gradle tasks are failing?
 If when you invoke gradle, the build or refresh fails to get more information, run the same command again and add the --debug arguments to the command,
 e.g.:
 
@@ -143,4 +155,4 @@ This will provide you with a stacktrace and give you a better idea of why gradle
 <br/>
 
 # What to do next?
-Now that you're done with the set up, you can get to do some real coding. Take a look at our post [A Simple Game](/dev/simple_game/) for a step-by-step description.
+Now that you're done with the set up, you can get to do some real coding. Take a look at our post [A Simple Game](/dev/simple_game/) for a step-by-step guide.
