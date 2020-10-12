@@ -7,6 +7,9 @@ header:
   overlay_filter: "0.3"
   overlay_image: /assets/images/dev/dev.jpeg
   caption: "Photo credit: [**Florian Olivo**](https://unsplash.com/photos/Ek9Znm8lQ1U)"
+  actions:
+   - label: "Download gdx-setup"
+     url: "https://libgdx.com/assets/downloads/legacy_setup/gdx-setup-1.9.11.jar"
 
 excerpt: "libGDX offers a setup tool, which automatically creates a project and downloads everything necessary."
 

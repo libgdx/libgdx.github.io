@@ -12,17 +12,17 @@ main:
 dev:
   - title: "Getting Started"
     children:
-      - title: "(1.) Set Up A Dev Environment"
+      - title: "Set Up a Dev Env"
         url: /dev/setup/
-      - title: "(2.) Generate a Project"
+      - title: "Generate a Project"
         url: /dev/project_generation/
-      - title: "(3.) Importing & Running"
+      - title: "Importing & Running"
         url: /dev/import_and_running/
-      - title: "(4.) A Simple Game"
+      - title: "A Simple Game"
         url: /dev/simple_game/
-      - title: "(5.) Extending the Simple Game"
+      - title: "Extending the Simple Game"
         url: /dev/simple_game_extended/
-      - title: "(6.) Demos & Tutorials"
+      - title: "Demos & Tutorials"
         url: /dev/tutorials/
   - title: "Documentation"
     children:

@@ -24,6 +24,9 @@ If you want to stay up to date – join the official [libGDX Discord](/community
 * Theme Voting: 13th - 19th
 * Jam: 20th - 26th
 
+## Jams in 2021
+The jam dates for 2021 will be announced shortly!
+
 <br/>
 
 # Rules
