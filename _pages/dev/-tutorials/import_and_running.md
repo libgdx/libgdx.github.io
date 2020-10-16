@@ -20,7 +20,7 @@ Next up, you need to import your project into your IDE.
 
 
 # Importing the Project
-In **IntelliJ IDEA or Android Studio**, you can choose to open the `build.gradle` file and select "Open as Project" to get started. In **Eclipse**, choose `File -> Import -> Gradle`, in Netbeans `File -> Open Project`.
+In **IntelliJ IDEA or Android Studio**, you can choose to open the `build.gradle` file and select "Open as Project" to get started. In **Eclipse**, choose `File -> Import... -> Gradle -> Existing Gradle Project` (make sure that your freshly generated project is not located inside of your workspace). In Netbeans it is `File -> Open Project`.
 
 You may need to refresh the Gradle project after the initial import, if some dependencies weren't downloaded yet. In **IntelliJ IDEA/Android Studio**, the `Reimport all Gradle projects` button is a pair of circling arrows in the Gradle tool window, which can be opened with `View -> Tool Windows -> Gradle`. In **Eclipse** right click on your project `Gradle -> Refresh Gradle Project`.
 
@@ -33,23 +33,20 @@ If you want to execute your freshly imported project, you have to follow differe
 1. Right click your DesktopLauncher class
 2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
 3. Open up Run Configurations
-
-![](/assets/images/dev/idea/0.png)
-
+  ![](/assets/images/dev/idea/0.png)
 4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `core/assets` folder
-
-![](/assets/images/dev/idea/1.png)
-
+  ![](/assets/images/dev/idea/1.png)
 5. Run your application using the run button
 
 ### In Eclipse:
-1. Right click your desktop project > Build Path > Configure Build Path
-2. Click the sources tab, and click 'Add Folder'
-3. Select the assets folder and hit OK.
-
-![](/assets/images/dev/eclipse/0.png)
-
-4. Right click your desktop project > Run as > Java Application
+1. Right click your desktop project > Run as > Run Configurations...
+2. In the top left click the icon to create a new run configuration
+  ![](/assets/images/dev/eclipse/0.png)
+3. As Main class select your `DesktopLauncher` class
+4. After that, click on the Arguments tag
+5. At the bottom, under Working directory select 'Other' -> Workspace...
+  ![](/assets/images/dev/eclipse/1.png)
+6. Then select your asset folder (located in `core/assets`)
 
 ### In Netbeans:
 Right click the desktop project > Run
@@ -81,7 +78,7 @@ For more information on using and configuring the RoboVM intellij plugin please 
 ### In Eclipse
 - Right click the iOS RoboVM project > Run As > RoboVM runner of your choice
 
-![](/assets/images/dev/eclipse/1.png)
+![](/assets/images/dev/eclipse/2.png)
 
 For more information on using and configuring the RoboVM intellij plugin please see the [documentation](http://robovm.mobidevelop.com).
 
