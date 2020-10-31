@@ -27,7 +27,8 @@
           {% if post.content %}
             <div class="archive__item-excerpt">
               <p>
-              {{ post.content | strip_html | strip_newlines | truncate: 220 }}
+              <!--{{ post.content | strip_html | strip_newlines | truncate: 220 }}-->
+              {{ post.excerpt }}
               </p>
             </div>
           {% endif %}

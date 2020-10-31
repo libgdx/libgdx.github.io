@@ -25,7 +25,7 @@ To keep you all updated on what is happening behind the scenes, we want to give 
 We are very much committed to increasing the frequency of releases. Thus, we are currently working out a broad release schedule that fits both our plans and goals for libGDX as well as our time available and the needs of you, the developers using libGDX. We will keep you posted, as soon as we have something more concrete to share. We also want to involve the community in such decisions, so please feel free to join our official [Discord](/community/) and give us some feedback!
 
 ## What Is Planned?
-There are different areas of focus for our development efforts. While most certainly not all of them will make it into the ``1.10`` release, we hope most will – and you can be sure that some other improvements, not mentioned here, will be part of ``1.10`` as well. If you yourself want to work on some (major) features, join our community and talk to the contributors team!
+There are different areas of focus for our development efforts. While most certainly not all of them will make it into the `1.10` release, we hope most will – and you can be sure that some other improvements, not mentioned here, will be part of `1.10` as well. If you yourself want to work on some (major) features, join our community and talk to the contributors team!
 
 ### Linux ARM builds
 They are finally here: Linux ARM builds. These allow developers to deploy their games, for example, on the [Raspberry Pi](https://www.raspberrypi.org). When can you start trying this out? Right now! Just use the latest snapshot of libGDX.
@@ -43,13 +43,13 @@ We have even more long-awaited improvements, this time for the GWT backend:
 These efforts are spearheaded primarily by **MrStahlfelge**.
 
 ### Gradle Build Migration
-We also want to migrate our whole build process to Gradle. For this, the work on ``gdx-jnigen`` (mostly done by **PokeMMO**) has to be completed. Moreover, **SimonIT** has started implementing the Android backend as proper Android library (AAR) in order to facilitate the deployment of libGDX. This migration has been long in the making and there is still a lot of work to be done, but we're crossing our fingers it gets finished without any major hurdles.
+We also want to migrate our whole build process to Gradle. For this, the work on `gdx-jnigen` (mostly done by **PokeMMO**) has to be completed. Moreover, **SimonIT** has started implementing the Android backend as proper Android library (AAR) in order to facilitate the deployment of libGDX. This migration has been long in the making and there is still a lot of work to be done, but we're crossing our fingers it gets finished without any major hurdles.
 
 ### iOS MOE – quo vadis?
 In April 2016, the iOS Multi-OS Engine backend was introduced because RoboVM was discontinued and hence its future uncertain. However, the MOE backend never quite caught up to the RoboVM in features and the [MobiVM](http://robovm.mobidevelop.com) fork of RoboVM proved to be a worthy successor of RoboVM. As a consequence, we are removing the MOE backend in the next version of libGDX.
 
 ### gdx-video
-There are also currently some plans drawn up to revive the ``gdx-video`` extension.
+There are also currently some plans drawn up to revive the `gdx-video` extension.
 
 <br/>
 

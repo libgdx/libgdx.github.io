@@ -25,7 +25,7 @@ In this Status Report we want to give you an overview of our plans for the upcom
 A pre-release version of gdx-controllers is available as `2.0.0-SNAPSHOT`. Be sure to take a look at the [v2 migration guide](https://github.com/libgdx/gdx-controllers/wiki/Migrate-from-v1) before updating!
 
 ## Packr
-Packr has got a new maintainer: **karlsabo** - Welcome to the team! Karlsabo was very busy in the last few weeks porting over the changes from his fork and fixing the issues that have piled up in the repo. Packr now supports Mac OS signing and notarization and works with Java 11 and 14 - but there is more, a lot (and I mean _a lot_!) [more](https://github.com/libgdx/packr/pull/163). The latest jar can be tried [here](https://github.com/orgs/libgdx/packages?repo_name=packr).
+Packr has got a new maintainer: **karlsabo** - Welcome to the team! Karlsabo was very busy in the last few weeks porting over the changes from his fork and fixing the issues that have piled up in the repo. Packr now supports Mac OS signing and notarisation and works with Java 11 and 14 - but there is more, a lot (and I mean _a lot_!) [more](https://github.com/libgdx/packr/pull/163). The latest jar can be tried [here](https://github.com/orgs/libgdx/packages?repo_name=packr).
 
 ## gdx-video
 As mentioned in Status Report #1, there were some plans drawn up to revive the old gdx-video extension. **SimonIT** was the one to take the lead and has done quite some work in the last weeks.
