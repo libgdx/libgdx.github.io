@@ -8,10 +8,10 @@ header:
   overlay_image: /assets/images/dev.jpeg
   caption: "Photo credit: [**Fotis Fotopoulos**](https://unsplash.com/photos/DuHKoV44prg)"
   actions:
+    - label: "Setup a Project"
+      url: "/dev/setup/"
     - label: "GitHub"
       url: "https://github.com/libgdx/libgdx"
-    - label: "Setup"
-      url: "/dev/setup/"
     - label: "Wiki"
       url: "https://github.com/libgdx/libgdx/wiki"
 
@@ -22,7 +22,7 @@ sidebar:
 ---
 
 # How to get started with libGDX?
-libGDX offers a [setup tool](/dev/setup/), which automatically creates a project and downloads everything necessary.
+libGDX offers a [setup tool](/dev/project_generation/), which automatically creates a project and downloads everything necessary.
 {: .notice--primary}
 
 Please take a look at our **[Setup Instructions](/dev/setup/)** to get started. These walk you through the process of creating your very first libGDX project using our setup tool. To get started with developing, take a look at our post **[A Simple Game](/dev/simple_game/)**, a short tutorial aiding your first steps.
