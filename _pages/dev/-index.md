@@ -10,8 +10,8 @@ header:
   actions:
     - label: "GitHub"
       url: "https://github.com/libgdx/libgdx"
-    - label: "Issue Tracker"
-      url: "https://github.com/libgdx/libgdx/issues"
+    - label: "Setup"
+      url: "/dev/setup/"
     - label: "Wiki"
       url: "https://github.com/libgdx/libgdx/wiki"
 
