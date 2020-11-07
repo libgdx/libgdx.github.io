@@ -14,6 +14,9 @@ show_author: true
 author_username: "crykn"
 author_displayname: "damios"
 
+tags:
+  - devlog
+
 categories: news
 ---
 

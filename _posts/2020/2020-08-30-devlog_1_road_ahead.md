@@ -14,18 +14,21 @@ show_author: true
 author_username: "crykn"
 author_displayname: "damios"
 
+tags:
+  - devlog
+
 categories: news
 ---
 
 As some of you may have noticed, the libGDX team was expanded in the last couple days: **ten** new faces were welcomed as members of the contributors team!
 
-To keep you all updated on what is happening behind the scenes, we want to give you an overview of the things we are currently working on as well as our plans for the upcoming **version `1.10`**.
+To keep you all updated on what is happening behind the scenes, we want to give you a rough overview of the things we are working on at the moment as well as our plans for the upcoming **version `1.10`**.
 
 ## Release Schedule?
 We are very much committed to increasing the frequency of releases. Thus, we are currently working out a broad release schedule that fits both our plans and goals for libGDX as well as our time available and the needs of you, the developers using libGDX. We will keep you posted, as soon as we have something more concrete to share. We also want to involve the community in such decisions, so please feel free to join our official [Discord](/community/) and give us some feedback!
 
 ## What Is Planned?
-There are different areas of focus for our development efforts. While most certainly not all of them will make it into the `1.10` release, we hope most will – and you can be sure that some other improvements, not mentioned here, will be part of `1.10` as well. If you yourself want to work on some (major) features, join our community and talk to the contributors team!
+There are different areas of focus for our development efforts. While most certainly not all of them will make it into the `1.10` release, we hope most will – and you can be sure that some other improvements, not mentioned here, will be part of `1.10` as well. We will talk about some of those in future Status Reports. If you yourself want to work on some (major) features, join our community and talk to the contributors team!
 
 ### Linux ARM builds
 They are finally here: Linux ARM builds. These allow developers to deploy their games, for example, on the [Raspberry Pi](https://www.raspberrypi.org). When can you start trying this out? Right now! Just use the latest snapshot of libGDX.

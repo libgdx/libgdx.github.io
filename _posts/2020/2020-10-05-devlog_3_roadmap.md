@@ -1,5 +1,5 @@
 ---
-title: "Status Report #3: Roadmap for 1.10"
+title: "Status Report #3: Plans for 1.10 and beyond"
 classes: wide2
 header:
   overlay_color: "#000"
@@ -8,16 +8,19 @@ header:
   caption: "Photo credit: [**Slidebean**](https://unsplash.com/photos/iW9oP7Ljkbg)"
   teaser: /assets/images/posts/2020-10-05/header.jpg
 
-excerpt: libGDX 1.10 - where, when, what, why? This post tells you everything you need to know about our plans for the next version of libGDX.
+excerpt: libGDX 1.10 - where, when, what, why? This post tells you everything you need to know about our plans for the next versions of libGDX.
 
 show_author: true
 author_username: "crykn"
 author_displayname: "damios"
 
+tags:
+  - devlog
+
 categories: news
 ---
 
-In this Status Report we want to give you an overview of our plans for the upcoming version 1.10 of libGDX. As mentioned in [Status Report #2](/news/2020/09/devlog_2_release_schedule), we are on track to release it around the end of October.
+In this Status Report we want to give you an overview of our plans for the upcoming versions of libGDX. As mentioned in [Status Report #2](/news/2020/09/devlog_2_release_schedule), we are on track to release version 1.10 around the end of October.
 
 ## gdx-controller Improvements
 **MrStahlfelge**'s hard work improving the controller functionality of libGDX will finally come to fruition: version 2.0 of gdx-controllers is set to release. It will include, inter alia, more [reliable mappings](https://github.com/libgdx/gdx-controllers/wiki#mappings-and-codes), hotplugging, [vibration](https://github.com/libgdx/gdx-controllers/wiki#vibration) (on most platforms), as well as methods to [query controller features](https://github.com/libgdx/gdx-controllers/wiki#query-available-features), and an all-new iOS implementation. The desktop implementation is now based on SDL, with a Java wrapper named Jamepad - if you are interested in some of the internals, check out the [jamepad repo](https://github.com/libgdx/Jamepad). That means, next to other advantages, arm is supported on Linux!
