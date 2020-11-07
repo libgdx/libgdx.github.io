@@ -8,55 +8,52 @@ header:
   overlay_image: /assets/images/roadmap.jpg
   caption: "Photo credit: [**Slidebean**](https://unsplash.com/photos/iW9oP7Ljkbg)"
 
-excerpt: "Here you can learn more about our plans for the future of libGDX and get an idea of when you can expect new features."
-published: false
+excerpt: "Here you can learn more about our plans for the future of libGDX and what to expect from upcoming updates."
 ---
 
 <!--
 Available status values:
 
-{% include status.html is='planned' %}
-{% include status.html is='drafting' %}
-{% include status.html is='wip' %}
-{% include status.html is='done' %}
+{% include status.html is='planned' %} // is planned for the future
+{% include status.html is='wip' %} // work in progress
+{% include status.html is='close' %} // nearly done
+{% include status.html is='done' %} //in the next release
  -->
 
-<h1>Release Schedule</h1>
+This is a broad list of the **major features and improvements** we have currently planned for libGDX. As we're all doing this in our spare time, we refrained from giving any concrete dates and deadlines – plans are always subject to change.
 
- Some interesting text.
-
- <br/>
-
-<h1>Roadmap</h1>
+There are also a lot of other improvements in the works, which may not be not big enough to be mentioned on here, but are no less noteworthy. If you want to keep up to date with what is going on with libGDX at the moment, be sure to read our **regular [Status Reports](/news/)**.
 
 <table>
   <tr>
-     <td><h4>GWT Improvements</h4>
-     <br>Web Audio, lazy loading of asset, support for hdpi screens and more.</td>
-     <td>{% include status.html is='wip' %}</td>
-   </tr>
-
-   <tr>
-     <td><h4>Welcome MobiVM, Goodbye MOE</h4>
-     <br>MobiVM has proven to be a worthy successor of RoboVM. As a consequence, we are removing the MOE backend in favor of MobiVM.</td>
-     <td>{% include status.html is='done' %}</td>
-   </tr>
-
+    <td><h4>Box2D Update</h4>
+    <br>In July, the original <a href="https://github.com/erincatto/box2d">Box2D</a> received its first update in over 6 years! Now we're working to include those changes in libGDX.</td>
+    <td>{% include status.html is='wip' %}</td>
+  </tr>
+  <tr>
+    <td><h4>gdx-video Resurrection</h4>
+    <br>We have some plans drawn up to revive the <a href="https://github.com/libgdx/gdx-video">gdx-video</a> extension.</td>
+    <td>{% include status.html is='wip' %}</td>
+  </tr>
   <tr>
     <td><h4>Gradle Build Migration</h4>
     <br>We want to migrate our whole build process to gradle. This migration has been long in the making and there is still a lot of work to be done, but we’re crossing our fingers it gets finished without any major hurdles.</td>
     <td>{% include status.html is='wip' %}</td>
   </tr>
-
   <tr>
-    <td><h4>gdx-video Resurrection</h4>
-    <br>We have some plans drawn up to revive the gdx-video extension.</td>
+    <td><h4>Improved Controller Support</h4>
+    <br><a href="/news/2020/10/devlog_3_roadmap#gdx-controller-improvements">Version 2.0.0 of gdx-controller</a> is done and will be released shortly.</td>
+    <td>{% include status.html is='close' %}</td>
+  </tr>
+  <tr>
+    <td><h4>Web-Based Setup Tool</h4>
+    <br>We already have a working prototype of our new web-based setup tool and are now working on polishing it up to start public testing.</td>
+    <td>{% include status.html is='close' %}</td>
+  </tr>
+  <tr>
+    <td><h4>WebGL 2.0</h4>
+    <br>Our web backend is the last one, where support for OpenGL ES 3.0 (~ WebGL 2.0) is still lacking. We have plans to change that!</td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
 
-  <tr>
-    <td><h4>Better Controller Support</h4>
-    <br>There are plans to improve the controller support of libGDX on all backends.</td>
-    <td>{% include status.html is='drafting' %}</td>
-  </tr>
 </table>
