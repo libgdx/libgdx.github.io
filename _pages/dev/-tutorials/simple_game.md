@@ -261,7 +261,7 @@ So, to describe both the bucket and raindrops we need to store their position an
 
 ```java
    // add this import and NOT the one in the standard library
-   import com.badlogic.gdx.math.Rectangle
+   import com.badlogic.gdx.math.Rectangle;
    private Rectangle bucket;
 ```
 
