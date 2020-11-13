@@ -163,7 +163,7 @@ Become a fighting legend in this arcade beat 'em up in the vein of One Finger De
 <br/>
 
 # Apps
-There are also some apps made with libGDX.
+There are also some non-game applications made with libGDX.
 
 ## [Spine](http://en.esotericsoftware.com) by Esoteric Software
 <p style="width: 435px; overflow:hidden; float:left"><img align="left" src="https://de.esotericsoftware.com/img/front-what-is-spine.jpg" style="margin-left: -20px; margin-right: 25px; margin-top: 13px; margin-bottom:23px"></p>

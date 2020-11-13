@@ -28,11 +28,11 @@ In the following, we'll look at:
   * Playing sound effects
 
 ## Project Setup
-Follow the steps in the [Creating a Project](/dev/setup/) guide. In the following, we will use the following settings:
+Follow the steps in the [Generating a Project](/dev/project_generation/) guide. In the following, we will use these settings:
 
-  * Application name: drop
-  * Package name: com.badlogic.drop
-  * Game class: Drop
+  * Application name: `drop`
+  * Package name: `com.badlogic.drop`
+  * Game class: `Drop`
 
 We also filled in the destination and Android SDK folders, and unchecked the iOS sub project (as you would need OS X to run it) and all extensions (extensions are a more advanced topic).
 
@@ -56,17 +56,17 @@ The game idea is very simple:
 ## The Assets
 We need a few images and sound effects to make the game look somewhat pretty. For the graphics we need to define a target resolution of 800x480 pixels (landscape mode on Android). If the device the game is run on does not have that resolution, we simply scale everything to fit on the screen.
 
-*Note:* for high profile games you might want to consider using different assets for different screen densities. This is a big topic on its own and won't be covered here.
+**Note:** for high profile games you might want to consider using different assets for different screen densities. This is a big topic on its own and won't be covered here.
 {: .notice--primary}
 
 The raindrop and the bucket should take up a small(ish) portion of the screen vertically, so we'll let them have a size of 64x64 pixels.
 
 The following sources provide some sample assets:
 
-  * water drop sound by _junggle_, see http://www.freesound.org/people/junggle/sounds/30341/
-  * rain sounds by _acclivity_, see http://www.freesound.org/people/acclivity/sounds/28283/
-  * droplet sprite by _mvdv_, see [link](https://github.com/Quillraven/SimpleKtxGame/blob/01-app/android/assets/images/drop.png?raw=true)
-  * bucket sprite by _mvdv_, see [link](https://github.com/Quillraven/SimpleKtxGame/blob/01-app/android/assets/images/bucket.png?raw=true)
+  * water drop sound by _junggle_, see [here](http://www.freesound.org/people/junggle/sounds/30341/)
+  * rain sounds by _acclivity_, see [here](http://www.freesound.org/people/acclivity/sounds/28283/)
+  * droplet sprite by _mvdv_, see [here](https://github.com/Quillraven/SimpleKtxGame/blob/01-app/android/assets/images/drop.png?raw=true)
+  * bucket sprite by _mvdv_, see [here](https://github.com/Quillraven/SimpleKtxGame/blob/01-app/android/assets/images/bucket.png?raw=true)
 
 To make the assets available to the game, we have to place them in the Android `assets` folder. I named the 4 files: _drop.wav_, _rain.mp3_, _droplet.png_ and _bucket.png_ and put them in `android/assets/`. We only need to store the assets once, as both the desktop and HTML5 projects are configured to 'see' this folder through different means. After that, depending on your IDE you may have to refresh the project tree to make the new files known (in Eclipse, right click -> Refresh), otherwise you may get a 'file not found' runtime exception.
 
@@ -262,6 +262,7 @@ So, to describe both the bucket and raindrops we need to store their position an
 ```java
    // add this import and NOT the one in the standard library
    import com.badlogic.gdx.math.Rectangle;
+
    private Rectangle bucket;
 ```
 

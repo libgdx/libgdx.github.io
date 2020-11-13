@@ -25,4 +25,4 @@ To setup your first project and download the necessary dependencies, libGDX offe
 
 **The setup tool can be downloaded [here](https://libgdx.com/assets/downloads/legacy_setup/gdx-setup-1.9.12.jar). See [here](https://github.com/libgdx/libgdx/wiki/Project-Setup-Gradle) on how to use it.**
 
-Now you can focus on [importing your project and getting it running](/dev/import_and_running/).
+Afterwards, you can focus on [importing your project and getting it running](/dev/import_and_running/).
