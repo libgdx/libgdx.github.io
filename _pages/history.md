@@ -161,7 +161,7 @@ p a:active {
   <div class="container left">
     <div class="content">
       <h2>2020 - New Beginnings</h2>
-      <p>In 2020, libGDX <a href="/news/2020/07/gdx_1_9_11/">version 1.9.11</a> saw the light of the world. Exactly as version 1.9.10, it contained a plethora of fixes and improvements. In August of the same year, our <a href="/2020/08/welcome_to_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements planned.</p>
+      <p>The year 2020 brought a plethora of fixes and improvements for libGDX. In August, our <a href="/2020/08/welcome_to_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements [planned](/roadmap/).</p>
     </div>
   </div>
   <div class="container right">
