@@ -161,13 +161,13 @@ p a:active {
   <div class="container left">
     <div class="content">
       <h2>2020 - New Beginnings</h2>
-      <p>The year 2020 brought a plethora of fixes and improvements for libGDX. In August, our <a href="/2020/08/welcome_to_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements [planned](/roadmap/).</p>
+      <p>The year 2020 brought a plethora of fixes and improvements for libGDX. In August, our <a href="/2020/08/welcome_to_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements <a href="/roadmap/">planned</a>.</p>
     </div>
   </div>
   <div class="container right">
     <div class="content">
       <h2>2019</h2>
-      <p>In 2019, libGDX kept moving forward: <a href="/news/2019/07/gdx_1_9_10/">version 1.9.10</a>, containing lots of fixes and improvements, was released. The majority of work done in the libGDX ecosystem is now done outside of the main repo: libGDX as a framework is mature enough to not require substantial changes, but the toolset and frameworks surrounding libGDX are constantly improved upon by the community.</p>
+      <p>In 2019, libGDX kept moving forward: <a href="/news/2019/07/gdx_1_9_10/">version 1.9.10</a>, containing lots of fixes and improvements, was released. The majority of work done in the libGDX ecosystem is now done outside of the main repo: libGDX as a framework is mature enough to not require substantial changes, but the <a href="/dev/#tools--libraries">toolset and frameworks</a> surrounding libGDX are constantly improved upon by the community.</p>
     </div>
   </div>
   <div class="container left">
@@ -209,14 +209,14 @@ p a:active {
   <div class="container left">
     <div class="content">
       <h2>2012 - New Worlds</h2>
-      <p>In 2012, <a href="https://www.badlogicgames.com/wordpress/?p=2254">gdx-jnigen</a> was created. It became an integral part of libGDX's native code development, making it a lot easier to integrate C/C++ libraries with the framework. Apart from that, 2012 became the year of discovering new worlds: HTML5/WebGL, iOS, GitHub and Maven. Inspired by Google's <a href="https://github.com/playn/playn">PlayN</a> Mario started working on the GWT backend, which to this day remains an integral part of libGDX' identity. The next big change came in June, when the team <a href="https://www.badlogicgames.com/wordpress/?p=2450">started investigating iOS</a>, again based on work done in the PlayN camp. In August, discussing started regarding <a href="https://www.badlogicgames.com/wordpress/?p=2551">moving to GitHub and adding proper Maven support</a>.
+      <p>In 2012, <a href="https://www.badlogicgames.com/wordpress/?p=2254">gdx-jnigen</a> was created. It became an integral part of libGDX's native code development, making it a lot easier to integrate C/C++ libraries with the framework. Apart from that, 2012 became the year of discovering new worlds: HTML5/WebGL, iOS, GitHub and Maven. Inspired by Google's <a href="https://github.com/playn/playn">PlayN</a> Mario started working on the GWT backend, which to this day remains an essential part of libGDX' identity. The next big change came in June, when the team <a href="https://www.badlogicgames.com/wordpress/?p=2450">started investigating iOS</a>, again based on work done in the PlayN camp. In August, discussing started regarding <a href="https://www.badlogicgames.com/wordpress/?p=2551">moving to GitHub and adding proper Maven support</a>.
       </p>
     </div>
   </div>
   <div class="container right">
     <div class="content">
       <h2>2011 - Incremental Improvements</h2>
-      <p>At the end of February 2011, <a href="https://www.badlogicgames.com/wordpress/?p=1596">version 0.9 was released</a>. In this time so many internal changes happened to libGDX, that it was hard keeping track of what was going on. But it paid off: libGDX 0.9 saw immense adoption, not only due to feature density, but also due to us starting to create video tutorials and making the setup process a lot easier.</p>
+      <p>At the end of February 2011, <a href="https://www.badlogicgames.com/wordpress/?p=1596">version 0.9 was released</a>. In this time, so many internal changes happened to libGDX that it was hard keeping track of what was going on. But it paid off: libGDX 0.9 saw immense adoption, not only due to feature density, but also due to us starting to create video tutorials and making the setup process a lot easier.</p>
     </div>
   </div>
   <div class="container left">
