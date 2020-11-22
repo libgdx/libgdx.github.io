@@ -30,7 +30,7 @@ cd libgdx
 ```
 3. Importing the project:
 
-    a) <u>Via IntelliJ/Android Studio:</u>
+    a) **Via IntelliJ/Android Studio:**
 
      - File > Open > libGDX root build.gradle
      - Import all projects
@@ -38,17 +38,21 @@ cd libgdx
      - View > Tool Windows > Gradle, sync gradle button
      - Make sure the Gradle sync succeeds, if not resolve the issues at hand.
      - Go into preferences and turn off configure on demand
-     - Try running the LwjglTestStart class located in tests/gdx-tests/gdx-tests-lwjgl/src by right clicking and running
-     - You should get assets not found when you try to run a test, edit the run configuration and point it to the correct assets folder (tests/gdx-tests-android/assets)
+
+    b) **Via Eclipse:** File > Import > Gradle > Gradle project
+
+If you encounter any issues while setting up your development environment for libGDX, please join our community on [Discord](/community/discord/) to ask for help.
+
+<br/>
+
+# Tests
+All of the projects are hooked up and ready to test given that you have set up your system correctly, so give them a go.
+
+**LWJGL:** Run the `LwjglTestStart` class located in tests/gdx-tests/gdx-tests-lwjgl/src by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ:
 
 ![](/assets/images/dev/source/0.png)
 
-  b) <u>Via Eclipse:</u> File > Import > Gradle > Gradle project
-
-# Building
-All of the other projects are hooked up and ready to test given that you have set up your system correctly, so give them a go.
-
-Its recommended to run the Android and GWT tests on command line with the following:
+Its recommended to run the **Android** and **GWT** tests on command line with the following:
 
 ```
 ./gradlew tests:gdx-tests-android:installDebug
@@ -56,12 +60,17 @@ Its recommended to run the Android and GWT tests on command line with the follow
 ./gradlew tests:gdx-tests-gwt:superDev
 ```
 
+<br/>
+
+# Building
 To use your local changes in another project, you can install libGDX to your local maven repository by running the following command:
 ```
 mvn install
 ```
 
 This will build and install libGDX and all core components to your local maven repository with the current version declared in the pom.xml files.
+
+<br/>
 
 # Natives
 If you want to build the libGDX natives yourself, you can find [instructions](/dev/natives/) here.
