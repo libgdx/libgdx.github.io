@@ -19,7 +19,7 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## December 2020
+## [December 2020](/news/2020/12/jam_december_2020)
 * Theme Suggestions: 6th - 12th
 * Theme Voting: 13th - 19th
 * Jam: 20th - 26th
