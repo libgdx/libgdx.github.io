@@ -48,15 +48,17 @@ If you encounter any issues while setting up your development environment for li
 # Tests
 All of the projects are hooked up and ready to test given that you have set up your system correctly, so give them a go.
 
-**LWJGL:** Run the `LwjglTestStart` class located in tests/gdx-tests/gdx-tests-lwjgl/src by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ:
+**LWJGL/LWJGL3:** Run the `LwjglTestStart` class located in tests/gdx-tests/gdx-tests-lwjgl/src by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ:
 
 ![](/assets/images/dev/source/0.png)
 
-Its recommended to run the **Android** and **GWT** tests on command line with the following:
-
+**Android:** Use the following command to install the tests on the test device: 
 ```
 ./gradlew tests:gdx-tests-android:installDebug
+```
 
+**GWT:** Start the test server as follows:
+```
 ./gradlew tests:gdx-tests-gwt:superDev
 ```
 
