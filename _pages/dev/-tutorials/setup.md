@@ -45,7 +45,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 - For iOS: [RobovmOSS Eclipse plugin](http://robovm.mobidevelop.com)
 
 ## (4.) Netbeans
-As Netbeans is not commonly used in the libGDX support, it may prove difficult to get any help if IDE-specific issues arise.
+As Netbeans is not commonly used in the libGDX community, it may prove difficult to get any help if IDE-specific issues arise.
 {: .notice--primary}
 
 - [JDK 8+](https://adoptopenjdk.net)
