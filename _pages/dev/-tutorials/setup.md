@@ -28,18 +28,19 @@ The java world offers a lot of different IDEs. All of them will have minor advan
 For newcomers wanting to not only target desktop, but mobile platforms as well, we recommend Android Studio.
 {: .notice--primary}
 
+- JDK: is provided by Android Studio
 - IDE itself: [Android Studio](https://developer.android.com/studio)
 - Android: is offered out-of-the-box
 - For iOS: [RoboVM OSS Intellij plugin](http://robovm.mobidevelop.com)
 
 ## (2.) IDEA
-- [JDK 8+](https://adoptopenjdk.net)
+- JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) (the "Community" edition is sufficient)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - For iOS: [RoboVM OSS Intellij plugin](http://robovm.mobidevelop.com)
 
 ## (3.) Eclipse
-- [JDK 8+](https://adoptopenjdk.net)
+- JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
 - Android: not officially supported.
 - For iOS: [RobovmOSS Eclipse plugin](http://robovm.mobidevelop.com)
@@ -48,7 +49,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 As Netbeans is not commonly used in the libGDX community, it may prove difficult to get any help if IDE-specific issues arise.
 {: .notice--primary}
 
-- [JDK 8+](https://adoptopenjdk.net)
+- JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
 - IDE itself: [Netbeans](https://netbeans.apache.org/download/index.html)
 - Android: not officially supported.
 - iOS: not officially supported.
@@ -57,7 +58,7 @@ As Netbeans is not commonly used in the libGDX community, it may prove difficult
 It is also possible to develop libGDX applications entirely without any IDE, just using a simple editor like Notepad or [Vim](https://www.vim.org). This is **not** recommended, because IDEs provide some very convenient features, such as code completion and error checking. However, if you insist on doing so: libGDX applications are Gradle applications, so they can be build and executed via the commandline.
 {: .notice--primary}
 
-- [JDK 8+](https://adoptopenjdk.net)
+- JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - Set the ANDROID_HOME environment variable, or use gradle.properties
 
