@@ -92,7 +92,7 @@ libGDX really shines if you plan to release games for mobile platforms as well!
 ## [Disney Heroes: Battle Mode](https://perblue.com/games/DisneyHeroes.aspx) by PerBlue Entertainment
 <img align="left" src="https://lh3.googleusercontent.com/9iWANe2crKqFiDCY8EVGMhrLzq9O47lQIu0t-1k-snQ1Tj3P-OJx2qQHgiW_rNpv11-t=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
 
-Battle your way through a dangerous digital world and save it from an evil virus with the help of your favorite Disney and Pixar heroes! It’s no-holds barred in this battle-packed strategy RPG game starring heroes from Frozen, Wall-E, Toy Story, The Lion King, Pirates of the Caribbean, Monsters, Inc., and more.  [[Android](https://play.google.com/store/apps/details?id=com.perblue.disneyheroes) / [iOS](https://itunes.apple.com/us/app/disney-heroes-battle-mode/id1327925104?mt=8)]
+Battle your way through a dangerous digital world and save it from an evil virus with the help of your favorite Disney and Pixar heroes! It’s no-holds barred in this battle-packed RPG starring heroes from Frozen, Wall-E, Toy Story, The Lion King, Pirates of the Caribbean, and more.  [[Android](https://play.google.com/store/apps/details?id=com.perblue.disneyheroes) / [iOS](https://itunes.apple.com/us/app/disney-heroes-battle-mode/id1327925104?mt=8)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
@@ -134,7 +134,7 @@ An open-source reimplementation of the most famous civilization-building game ev
 ## [Shattered Pixel Dungeon](https://shatteredpixel.com) by Shattered Pixel <a href="https://github.com/00-Evan/shattered-pixel-dungeon" style="margin-left: 10px" class="btn btn--primary">On GitHub</a>
 <img align="left" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-right: 25px; margin-top: 17px; margin-bottom:25px; max-width: 460px; max-height: 215px;">
 
-Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels and enemies, and over 150 items to collect and use. [[Android](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon) / [Desktop](https://github.com/00-Evan/shattered-pixel-dungeon/blob/master/docs/getting-started-desktop.md#quick-setup)]
+Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels, and over 150 items to collect and use. [[Android](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon) / [Desktop](https://github.com/00-Evan/shattered-pixel-dungeon/blob/master/docs/getting-started-desktop.md#quick-setup)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
