@@ -75,5 +75,7 @@ There are also a lot of other improvements in the works, which may not be not bi
     <br>Our web backend is the last one, where support for OpenGL ES 3.0 (~ WebGL 2.0) is still lacking. We have plans to change that!<sup><a href="https://github.com/libgdx/libgdx/pull/5763">1</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
-
 </table>
+
+<br/>
+Last updated: December 2020
