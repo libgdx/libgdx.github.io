@@ -37,7 +37,7 @@ There are also a lot of other improvements in the works, which may not be not bi
   </tr>
   <tr>
     <td><h4>gdx-video Resurrection</h4>
-    <br>We have some plans drawn up to revive the <a href="https://github.com/libgdx/gdx-video">gdx-video</a> extension.</td>
+    <br>We have some plans drawn up to revive the old <a href="https://github.com/libgdx/gdx-video">gdx-video</a> extension. The first snapshots are now available!</td>
     <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
@@ -78,4 +78,4 @@ There are also a lot of other improvements in the works, which may not be not bi
 </table>
 
 <br/>
-Last updated: December 2020
+Last updated: January 2020

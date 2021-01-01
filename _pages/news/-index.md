@@ -5,8 +5,8 @@ classes: wide2
 header:
   overlay_color: "#000"
   overlay_filter: "0.35"
-  overlay_image: /assets/images/news.jpeg
-  caption: "Photo credit: [**Chris Ried**](https://unsplash.com/photos/ieic5Tq8YMk)"
+  overlay_image: /assets/images/news/news.jpeg
+  caption: "Photo credit: [**Tim Mossholder**](https://unsplash.com/photos/H6eaxcGNQbU)"
 #excerpt: "All the latest news concerning libGDX and its development."
 ---
 
