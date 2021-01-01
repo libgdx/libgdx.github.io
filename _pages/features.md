@@ -29,6 +29,68 @@ feature_row3:
     url: "https://github.com/rafaskb/awesome-libgdx"
     btn_label: "Check out Awesome-libGDX"
     btn_class: "btn--primary"
+list1:
+  - "[Streaming music](https://github.com/libgdx/libgdx/wiki/Streaming-music) and [sound effect playback](https://github.com/libgdx/libgdx/wiki/Sound-effects) for WAV, MP3 and OGG"
+  - "Direct access to audio device for [PCM sample playback](https://github.com/libgdx/libgdx/wiki/Playing-pcm-audio) and [recording](https://github.com/libgdx/libgdx/wiki/Recording-pcm-audio)"
+list2:
+  - "Abstractions for [mouse, keyboard, touchscreen](https://github.com/libgdx/libgdx/wiki/Mouse%2C-Touch-and-Keyboard), [controllers](https://github.com/libgdx/gdx-controllers), [accelerometer](https://github.com/libgdx/libgdx/wiki/Accelerometer), [gyroscope](https://github.com/libgdx/libgdx/wiki/Gyroscope) and [compass](https://github.com/libgdx/libgdx/wiki/Compass)"
+  - "[Gesture detection](https://github.com/libgdx/libgdx/wiki/Gesture-detection) (recognising taps, panning, flinging and pinch zooming)"
+list3:
+  - "[Matrix, vector and quaternion](https://github.com/libgdx/libgdx/wiki/Vectors%2C-matrices%2C-quaternions) classes; accelerated via native C code where possible (if you are interested in that, also note our [gdx-jnigen](https://github.com/libgdx/libgdx/wiki/jnigen) project)"
+  - "[Bounding shapes and volumes as well as a Frustum class for picking and culling](https://github.com/libgdx/libgdx/wiki/Circles%2C-planes%2C-rays%2C-etc.)"
+  - "[Intersection and overlap testing](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/math/Intersector.html)"
+  - "[Steering Behaviours, Formation Motion, Pathfinding, Behaviour Trees and Finite State Machines](https://github.com/libgdx/gdx-ai)"
+  - "Common [interpolators](https://github.com/libgdx/libgdx/wiki/Interpolation), different [spline implementations](https://github.com/libgdx/libgdx/wiki/Path-interface-and-Splines), concave polygon triangulators and more"
+  - "2D physics: JNI wrapper for the popular [Box2D physics](https://github.com/libgdx/libgdx/wiki/Box2d) (see also [Box2DLights](https://github.com/libgdx/box2dlights)). Alternatively, you can take a look at [jbump](https://github.com/tommyettinger/jbump) for a simpler physics implementation."
+  - "3D physics: JNI Wrapper for [Bullet physics](https://github.com/libgdx/libgdx/wiki/Bullet-physics)"
+list4:
+  - "[File system abstraction](https://github.com/libgdx/libgdx/wiki/File-handling) for all platforms"
+  - "Straight-forward [asset management](https://github.com/libgdx/libgdx/wiki/Managing-your-assets)"
+  - "[Preferences](https://github.com/libgdx/libgdx/wiki/Preferences) for lightweight setting storage"
+  - "[JSON](https://github.com/libgdx/libgdx/wiki/Reading-and-writing-JSON) and [XML](https://github.com/libgdx/libgdx/wiki/Reading-and-writing-XML) serialisation"
+list5:
+  - "Easy integration of [game services](https://github.com/MrStahlfelge/gdx-gamesvcs), such as Google Play Games, Apple Game Center, and more."
+  - "Cross-platform API for [in-app purchases](https://github.com/libgdx/gdx-pay)."
+  - "Third-party support for Google's [Firebase](https://github.com/mk-5/gdx-fireapp), the [Steamworks API](https://github.com/code-disaster/steamworks4j), [gameanalytics.com](https://github.com/MrStahlfelge/gdx-gameanalytics) and Facebook's [Graph API](https://github.com/TomGrill/gdx-facebook)."
+list6:
+  - "Rendering through [OpenGL ES 2.0/3.0](https://github.com/libgdx/libgdx/wiki/OpenGL-%28ES%29-Support) on all platforms"
+  - a:
+    title: "**Low-Level OpenGL helpers:**"
+    items:
+      - "Vertex arrays and vertex buffer objects"
+      - "[Meshes](https://github.com/libgdx/libgdx/wiki/Meshes)"
+      - "[Textures](https://github.com/libgdx/libgdx/wiki/Textures-and-TextureRegions)"
+      - "[Framebuffer objects](https://github.com/libgdx/libgdx/wiki/Frame-buffer-objects)"
+      - "[Shaders](https://github.com/libgdx/libgdx/wiki/Shaders), integrating easily with meshes"
+      - "[Immediate mode rendering](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ImmediateModeRenderer.html) emulation"
+      - "Simple [shape rendering](https://github.com/libgdx/libgdx/wiki/Rendering-shapes)"
+      - "Automatic software or hardware mipmap generation"
+      - "Automatic handling of OpenGL ES context loss. Restores all textures, shaders and other OpenGL resources"
+  - b:
+    title: "**High-level 2D APIs:**"
+    items:
+      - "[Orthographic camera](https://github.com/libgdx/libgdx/wiki/Orthographic-camera)"
+      - "High-performance [sprite](https://github.com/libgdx/libgdx/wiki/Spritebatch%2C-Textureregions%2C-and-Sprites) batching and caching"
+      - "[Texture atlases](https://github.com/libgdx/libgdx/wiki/Using-textureatlases), with whitespace stripping support. Either generated [offline](https://github.com/libgdx/libgdx/wiki/Packing-atlases-offline) or [at runtime](https://github.com/libgdx/libgdx/wiki/Packing-atlases-at-runtime)"
+      - "[Bitmap fonts](https://github.com/libgdx/libgdx/wiki/Bitmap-fonts). Either generated offline or [loaded from TTF files](https://github.com/libgdx/libgdx/wiki/Gdx-freetype)"
+      - "[2D Particle system](https://github.com/libgdx/libgdx/wiki/2D-ParticleEffects)"
+      - "[TMX tile map support](https://github.com/libgdx/libgdx/wiki/Tile-maps)"
+      - "[2D scene-graph API](https://github.com/libgdx/libgdx/wiki/Scene2d)"
+  - c:
+    title: "**A Powerful UI Solution:**"
+    items:
+      - "[2D UI library](https://github.com/libgdx/libgdx/wiki/Scene2d.ui), based on scene-graph API"
+      - "A plethora of [official](https://github.com/libgdx/libgdx/wiki/Scene2d.ui#widgets) and third-party widgets"
+      - "Fully [skinnable](https://github.com/libgdx/libgdx/wiki/Skin); [Composer](https://github.com/raeleus/skin-composer) for creating UI skins"
+  - d:
+    title: "**High-Level 3D APIs:**"
+    items:
+      - "Decal batching, for 3D billboards or [particle systems](https://github.com/libgdx/libgdx/wiki/3D-Particle-Effects)"
+      - "Basic loaders for Wavefront OBJ and MD5"
+      - "[3D rendering API](https://github.com/libgdx/libgdx/wiki/3D-Graphics) with materials, animation and lighting system and support for loading FBX models via fbx-conv"
+      - "Third-party support for [gltf 2.0](https://github.com/mgsx-dev/gdx-gltf)"
+      - "Rudimentary [VR support](https://github.com/libgdx/libgdx/wiki/Virtual-Reality-%28VR%29)"
+
 ---
 
 {% include feature_row type="left" %}
@@ -37,23 +99,29 @@ feature_row3:
 
 {% include feature_row id="feature_row3" type="left" %}
 
-# Feature Packed
-_libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry about low-level details._
-
-- libGDX provides you with everything you need for proper **2D development**, right out-of-the-box.
-- **3D Graphics** are also supported via various high-level APIs. Take a look at our [showcase](/showcase/) to see some 3D games made with libGDX.
-- We built a powerful set of APIs that help you with all of the common game development tasks. **Physics, Audio, Networking, Input Handling, File I/O & Storage, Asset Loading:** you name it, we got it! Check out [our wiki](https://github.com/libgdx/libgdx/wiki) for an extensive list of features.
-- **Super Fast:** Heavy emphasis was put on avoiding garbage collection for ART/JavaScript by careful API design and the use of custom collections.
-- **Small game sizes:** libGDX games can be very small – starting from around a couple MBs for Android and web games and even less than <60 MB for desktop projects with a bundled JRE.
-
-<br/>
-
 # Do whatever you want
 _Unlike many popular editor-based platforms, libGDX is entirely code-centric, offering developers fine-grained control over every aspect of their game._
 
 - **Freedom:** While libGDX gives you access to various different tools and abstractions, you can still access the underlying base. libGDX acknowledges that there is no one-size-fits-all solution, so it doesn't force you to use certain tools or coding styles: you are free to do whatever you want!
 - **Open Source:** libGDX is licensed under Apache 2.0 and maintained by the community, so you can take a look [under the hood](https://github.com/libgdx/libgdx) and see how everything works.
-- **Java:** Since libGDX uses Java, you can profit from the wide java ecosystem – Powerful IDEs, out-of-the-box support for Git, fined-tuned debuggers, performance profilers, and an abundance of well-tried libraries and frameworks, as well as many resources and extensive documentation.
+- **Java:** Since libGDX uses Java, you can profit from the wide Java ecosystem – Powerful IDEs, out-of-the-box support for Git, fined-tuned debuggers, performance profilers, and an abundance of well-tried libraries and frameworks, as well as many resources and extensive documentation.
+
+<br/>
+
+# Feature Packed
+_libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry about low-level details._
+<div class="row">
+  <div class="column">
+    {% include list.html title="Audio" items=page.list1 %}
+    {% include list.html title="Input Handling" items=page.list2 %}
+    {% include list.html title="Math & Physics" items=page.list3 %}  
+    {% include list.html title="Integration of Services" items=page.list5 %}
+    {% include list.html title="File I/O & Storage" items=page.list4 %}
+  </div>
+  <div class="column">
+    {% include list.html title="Graphics" items=page.list6 %}
+  </div>
+</div>
 
 <br/>
 
@@ -61,3 +129,21 @@ _Unlike many popular editor-based platforms, libGDX is entirely code-centric, of
 **...a Great Community!** Get support from a very friendly [community](/community/) of game and application developers or use any of the libraries and tools created by members of our community. Join us today and get started with your very first libGDX game!
 
 <center><a href="/dev/setup/" class="btn btn--primary btn--large">Get Started!</a></center>
+
+<style>
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>

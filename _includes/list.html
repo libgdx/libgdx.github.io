@@ -1,0 +1,22 @@
+<div class="{{ include.class }}">
+  {% if include.image %}
+    <img src="{{ include.image }}" alt="{{ include.title }}" style="border-radius: 4px; object-fit: cover; max-height: 125px; width: 100%" >
+  {% endif %}
+  <h2 class="archive__item-title" style="line-height: 1.25">{{ include.title }}</h2>
+  <ul style="font-size: 0.75em; line-height: 1.25">
+    {% for item in include.items %}
+      {% if item.title %}
+        <li>
+          {{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}
+          <ul>
+            {% for i in item.items %}
+              <li>{{ i | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% else %}
+        <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
