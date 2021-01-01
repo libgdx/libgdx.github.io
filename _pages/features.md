@@ -131,12 +131,16 @@ _libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry
 <center><a href="/dev/setup/" class="btn btn--primary btn--large">Get Started!</a></center>
 
 <style>
-.row {
-  display: flex;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .column {
-  flex: 50%;
+  float: left;
+  width: 50%;
   padding-left: 15px;
   padding-right: 20px;
 }
