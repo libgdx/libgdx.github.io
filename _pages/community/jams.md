@@ -19,13 +19,7 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## [December 2020](/news/2020/12/jam_december_2020)
-* Theme Suggestions: 6th - 12th
-* Theme Voting: 13th - 19th
-* Jam: 20th - 26th
-
-## Jams in 2021
-The jam dates for 2021 will be announced shortly!
+**The jam dates for 2021 will be announced shortly!**
 
 <br/>
 
@@ -43,6 +37,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 
 # Past Jams
 
+* [The player is asleep](https://itch.io/jam/libgdx-jam-15) (December 2020)
 * [Parallel Worlds](https://itch.io/jam/libgdx-jam-september-2020) (September 2020)
 * [Tower Defense Without Towers](https://itch.io/jam/libgdx-jam-june-2020) (June 2020)
 * [GLOBAL THERMONUCLEAR WAR](https://itch.io/jam/libgdx-jam-march-2020) (March 2020)
