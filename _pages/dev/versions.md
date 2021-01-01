@@ -29,5 +29,5 @@ Keep up to date with the latest versions of dependencies and dev tools!
 - Android Gradle Tool Version: {{ site.data.versions.androidGradleToolVersion }}
 
 ### GWT
-- GWT Version: {{ site.data.versions.gwtVersion }} (experimental support for 2.9.0)
+- GWT Version: {{ site.data.versions.gwtVersion }}
 - GWT Gradle Plugin Version: {{ site.data.versions.gwtPluginVersion }}

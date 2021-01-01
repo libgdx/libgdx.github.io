@@ -1,7 +1,7 @@
 {
-  "libgdxRelease":"1.9.12",
-  "robovmVersion":"2.3.11",
-  "robovmPluginVersion":"2.3.11",
+  "libgdxRelease":"1.9.13",
+  "robovmVersion":"2.3.12",
+  "robovmPluginVersion":"2.3.12",
   "androidBuildtoolsVersion":"29.0.2",
   "androidSDKVersion":"29",
   "androidGradleToolVersion":"3.4.3",
