@@ -71,6 +71,12 @@ feature_row3:
     btn_class: "btn--primary"
 
 feature_row4:
+  - image_path: /assets/images/dev/tools/tiled.png
+    title: "Tiled"
+    excerpt: 'A flexible 2D level editor for your game'
+    url: "https://www.mapeditor.org"
+    btn_label: "Documentation & Download"
+    btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/texture_packer.jpeg
     title: "Texture Packer"
     excerpt: 'A tool for packing images into atlases'

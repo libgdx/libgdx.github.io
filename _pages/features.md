@@ -46,12 +46,14 @@ list3:
 list4:
   - "[File system abstraction](https://github.com/libgdx/libgdx/wiki/File-handling) for all platforms"
   - "Straight-forward [asset management](https://github.com/libgdx/libgdx/wiki/Managing-your-assets)"
-  - "[Preferences](https://github.com/libgdx/libgdx/wiki/Preferences) for lightweight setting storage"
+  - "[Preferences](https://github.com/libgdx/libgdx/wiki/Preferences) for lightweight settings storage"
   - "[JSON](https://github.com/libgdx/libgdx/wiki/Reading-and-writing-JSON) and [XML](https://github.com/libgdx/libgdx/wiki/Reading-and-writing-XML) serialisation"
+  - "Custom, [optimised collections](https://github.com/libgdx/libgdx/wiki/Collections), with primitive support"
 list5:
   - "Easy integration of [game services](https://github.com/MrStahlfelge/gdx-gamesvcs), such as Google Play Games, Apple Game Center, and more."
   - "Cross-platform API for [in-app purchases](https://github.com/libgdx/gdx-pay)."
   - "Third-party support for Google's [Firebase](https://github.com/mk-5/gdx-fireapp), the [Steamworks API](https://github.com/code-disaster/steamworks4j), [gameanalytics.com](https://github.com/MrStahlfelge/gdx-gameanalytics) and Facebook's [Graph API](https://github.com/TomGrill/gdx-facebook)."
+  - "Easy integration of [AdMob](https://github.com/libgdx/libgdx/wiki/Admob-in-libgdx)"
 list6:
   - "Rendering through [OpenGL ES 2.0/3.0](https://github.com/libgdx/libgdx/wiki/OpenGL-%28ES%29-Support) on all platforms"
   - a:
@@ -65,7 +67,7 @@ list6:
       - "[Immediate mode rendering](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ImmediateModeRenderer.html) emulation"
       - "Simple [shape rendering](https://github.com/libgdx/libgdx/wiki/Rendering-shapes)"
       - "Automatic software or hardware mipmap generation"
-      - "Automatic handling of OpenGL ES context loss. Restores all textures, shaders and other OpenGL resources"
+      - "Automatic handling of OpenGL ES context loss"
   - b:
     title: "**High-level 2D APIs:**"
     items:
@@ -88,8 +90,13 @@ list6:
       - "Decal batching, for 3D billboards or [particle systems](https://github.com/libgdx/libgdx/wiki/3D-Particle-Effects)"
       - "Basic loaders for Wavefront OBJ and MD5"
       - "[3D rendering API](https://github.com/libgdx/libgdx/wiki/3D-Graphics) with materials, animation and lighting system and support for loading FBX models via fbx-conv"
-      - "Third-party support for [gltf 2.0](https://github.com/mgsx-dev/gdx-gltf)"
+      - "Third-party support for [GLTF 2.0](https://github.com/mgsx-dev/gdx-gltf)"
       - "Rudimentary [VR support](https://github.com/libgdx/libgdx/wiki/Virtual-Reality-%28VR%29)"
+  - "Third-party [post-processing](https://github.com/crashinvaders/gdx-vfx) shader effects"
+list7:
+  - "[Gdx.net](https://github.com/libgdx/libgdx/wiki/Networking) for simple networking (TCP sockets and HTTP requests)"
+  - "Cross-platform [WebSocket support](https://github.com/MrStahlfelge/gdx-websockets)"
+  - "Common Java networking solutions: [KryoNet](https://github.com/EsotericSoftware/kryonet) & [Netty](https://github.com/netty/netty) (not supported on Web)"
 
 ---
 
@@ -120,6 +127,7 @@ _libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry
   </div>
   <div class="column">
     {% include list.html title="Graphics" items=page.list6 %}
+    {% include list.html title="Networking" items=page.list7 %}
   </div>
 </div>
 
