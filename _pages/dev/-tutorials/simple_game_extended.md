@@ -322,16 +322,15 @@ This code is almost 95% the same as the original implementation, except now we u
 
 We also added a string to the top left corner of the game, which tracks the number of raindrops collected.
 
-Note that the `dispose()` method of the `GameScreen` class is not called automatically, see [the Screen API](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Screen.html). It is your duty to get it called. You can call this method from the `dispose()` method of the `Game` class, if the `GameScreen` class passes a reference to itself to the `Game` class. It is important to do this, else `GameScreen` assets might persist and occupy memory even after exiting the application.
+Note that the `dispose()` method of the `GameScreen` class is not called automatically, see [the Screen API](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Screen.html). It is your responsibility to take care of that. You can call this method from the `dispose()` method of the `Game` class, if the `GameScreen` class passes a reference to itself to the `Game` class. It is important to do this, else `GameScreen` assets might persist and occupy memory even after exiting the application.
 
 That's it, you have the complete game finished. That is all there is to know about the Screen interface and Game abstract Class, and all there is to creating multifaceted games with multiple states.
 
-For the full Java code, please visit [this Github gist](https://gist.github.com/sinistersnare/6367829).
-For the full Kotlin code, please visit [this one](https://gist.github.com/dksmiffs/d921cc20ca6d96284266d13077929705).
+The For the full Java code can be found [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-java), the full Kotlin code [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-kotlin).
 
 ## The Future
-If you've also read the [next steps](/dev/simple_game/#where-to-go-from-here) from the previous Drop tutorial, you should be ready to make your own game. The best practice is to get out there and do it, so go and make the next big thing!
+After this tutorial you should have a basic understanding how libGDX works and what to expect going forward. Some things can still be improved, like using the [Memory Management](https://github.com/libgdx/libgdx/wiki/Memory-management#object-pooling) classes to recycle all the Rectangles we have the garbage collector clean up each time we delete a raindrop. OpenGL is also not too fond if we hand it too many different images in a batch (in our case it's OK as we only had two images). Usually one would put all those images into a single `Texture`, also known as a `TextureAtlas`.
 
 To continue learning about libGDX we highly **recommend reading our [wiki](https://github.com/libgdx/libgdx/wiki)** and checking out the demos and tests in our main GitHub repository. If you have any questions, **join our official [Discord server](/community/)**, we are always glad to help!
 
-So: Farewell and happy coding!
+The best practice is to get out there and do it, so farewell and happy coding!

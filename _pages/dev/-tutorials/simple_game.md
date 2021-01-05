@@ -607,4 +607,4 @@ public class Drop extends ApplicationAdapter {
 ```
 
 ## Where to go from here
-This was a very basic example of how to use libGDX to create a minimalistic game. Some things can be improved, like using the [Memory Management](https://github.com/libgdx/libgdx/wiki/Memory-management#object-pooling) class to recycle all the Rectangles we have the garbage collector clean up each time we delete a raindrop. OpenGL is also not too fond if we hand it too many different images in a batch (in our case it's OK as we only had two images). Usually one would put all those images into a single `Texture`, also known as a `TextureAtlas`. `Screen`s and `Game`s can also be utilized for increased interaction; to learn more, there is a **[second tutorial](/dev/simple_game_extended/)** following on from this one.
+This was a very basic example of how to use libGDX to create a minimalistic game. There are quite a few things that can be improved from here on. Your next steps should most certainly entail looking at `Screen`s and `Game`s. To learn about these, there is a **[second tutorial](/dev/simple_game_extended/)** following on from this one.
