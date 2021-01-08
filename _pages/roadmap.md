@@ -61,8 +61,8 @@ There are also a lot of other improvements in the works, which may not be not bi
     <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
-    <td><h4>Metal Support</h4>
-    <br>We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a></sup></td>
+    <td><h4>Metal/Vulkan Support</h4>
+    <br>We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal/Vulkan support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a>, <a href="https://github.com/LWJGL/lwjgl3#khronos-apis">2</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
