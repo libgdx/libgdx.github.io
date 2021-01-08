@@ -31,7 +31,7 @@ There are also a lot of other improvements in the works, which may not be not bi
     <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
-    <td><h4>Geometry/Tesslation/Compute Shaders</h4>
+    <td><h4>Geometry/Tesselation/Compute Shaders</h4>
     <br>We really want to look into geometry, tesselation and compute shaders. However, we can't give any promises yet, as this is still just a far-off idea.<sup><a href="https://github.com/libgdx/libgdx/pull/4963">1</a>, <a href="https://github.com/mgsx-dev/libgdx/tree/modern-shaders/compute">2</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
