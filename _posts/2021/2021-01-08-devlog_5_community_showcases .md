@@ -23,7 +23,7 @@ categories: news
 In today’s Status Report we are going to be talking about some of our plans for more community involvement.
 
 ## Community Showcases
-Going forward, we’d like to give the creators of interesting community projects the opportunity to present their exiting libraries or tools on the official blog. For this purpose, we have decided to introduce a new category of posts: Community Showcases. Community Showcases are meant to give an overview of the features a library/tool offers (screenshots, demos and videos are very welcome!) and provide examples how any of us libGDX users can profit from using that very project. The first of these showcases will be posted in around a week, so stay tuned!
+Going forward, we’d like to give the creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. For this purpose, we have decided to introduce a new category of posts: Community Showcases. Community Showcases are meant to give an overview of the features a library/tool offers (screenshots, demos and videos are very welcome!) and provide examples of how any of us libGDX users can profit from using that very project. The first of these showcases will be posted in around a week, so stay tuned!
 
 If you yourself want to participate, there are some broad criteria for libraries to be considered for Community Showcases:
 - First and foremost, the tool/library has to be useful and of interest to the community!
@@ -39,4 +39,4 @@ Another area we want to improve upon is the documentation of libGDX. We are well
 
 We are also thinking about ways to better integrate community tutorials into our documentation. If you have any ideas, hit us up on Discord.
 
-That was it for todays Status Report! If you want to pass the time until our first Community Showcase, be sure to check out our [roadmap](/roadmap/), which we recently brought up to date!
+That was it for today's Status Report! If you want to pass the time until our first Community Showcase, be sure to check out our [roadmap](/roadmap/), which we recently brought up to date!
