@@ -24,10 +24,11 @@ github_username: libgdx
 # Search, Google, SEO
 google_site_verification: "qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8"
 
-search: true
-search_provider: google
-google:
-  search_engine_id: "1429d808fde2f9b89"
+
+search: false
+#search_provider: google
+#google:
+#  search_engine_id: "1429d808fde2f9b89"
 
 og_image: /assets/images/logo.png # default open graph (=social media) image
 
