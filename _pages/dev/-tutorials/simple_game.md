@@ -287,14 +287,13 @@ Time to render our bucket. The first thing we want to do is to clear the screen 
 ```java
    @Override
    public void render() {
-      Gdx.gl.glClearColor(0, 0, 0.2f, 1);
-      Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+      ScreenUtils.clear(0, 0, 0.2f, 1);
 
       ... more to come here ...
    }
 ```
 
-These two lines are the only things you need to know about OpenGL if you use the high-level classes such as `Texture` or `SpriteBatch`. The first call will set the clear color to the color blue. The arguments are the red, green, blue and alpha component of that color, each within the range [0, 1]. The next call instructs OpenGL to actually clear the screen.
+The arguments for `ScreenUtils.clear(r, g, b, a)` are the red, green, blue and alpha component of that color, each within the range [0, 1].
 
 Next we need to tell our camera to make sure it is updated. Cameras use a mathematical entity called a matrix that is responsible for setting up the coordinate system for rendering. These matrices need to be recomputed every time we change a property of the camera, like its position. We don't do this in our simple example, but it is generally a good practice to update the camera once per frame:
 
@@ -476,7 +475,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -484,6 +482,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.TimeUtils;
 
 public class Drop extends ApplicationAdapter {
@@ -541,11 +540,10 @@ public class Drop extends ApplicationAdapter {
    @Override
    public void render() {
       // clear the screen with a dark blue color. The
-      // arguments to glClearColor are the red, green
+      // arguments to clear are the red, green
       // blue and alpha component in the range [0,1]
       // of the color to be used to clear the screen.
-      Gdx.gl.glClearColor(0, 0, 0.2f, 1);
-      Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+      ScreenUtils.clear(0, 0, 0.2f, 1);
 
       // tell the camera to update its matrices.
       camera.update();

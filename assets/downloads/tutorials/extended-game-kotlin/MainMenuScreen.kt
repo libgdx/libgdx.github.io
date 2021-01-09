@@ -3,7 +3,6 @@ package drop
 import com.badlogic.gdx.audio.Music
 import com.badlogic.gdx.audio.Sound
 import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.Input.Keys
@@ -12,6 +11,7 @@ import com.badlogic.gdx.math.Rectangle
 import com.badlogic.gdx.math.Vector3
 import com.badlogic.gdx.Screen
 import com.badlogic.gdx.utils.Array
+import com.badlogic.gdx.utils.ScreenUtils
 import com.badlogic.gdx.utils.TimeUtils
 
 class GameScreen(val game: Drop) : Screen {
@@ -71,11 +71,10 @@ class GameScreen(val game: Drop) : Screen {
   }
 
   override fun render(delta: Float) {
-    // clear the screen with a dark blue color. The arguments to glClearColor
+    // clear the screen with a dark blue color. The arguments to clear
     //    are the RGB and alpha component in the range [0,1] of the color to
     //    be used to clear the screen.
-    Gdx.gl.glClearColor(0f, 0f, 0.2f, 1f)
-    Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
+    ScreenUtils.clear(0, 0, 0.2f, 1)
 
     // generally good practice to update the camera's matrices once per frame
     camera.update()
