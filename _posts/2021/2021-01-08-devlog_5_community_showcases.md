@@ -32,7 +32,7 @@ If you yourself want to participate, there are some broad criteria for libraries
 - The project should generally be compatible with GWT (or there is a good reason why it is not).
 - The creator should be a member of our Discord server.
 
-If you are interested in participating and positive that you fulfil these criteria, contact us on Discord.
+If you are interested in participating and positive that you fulfil these criteria, contact us on Discord. Please take a look at the corresponding [wiki page](https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases) as well, which will be used to communicate any future changes to those requirements.
 
 ## Any other plans?
 Another area we want to improve upon is the documentation of libGDX. We are well aware it can be spotty in some places. That is why we want to invite all of you to contribute to our libGDX wiki. If you find any incorrect, outdated or missing information, please feel free to edit the wiki page in question. This is a big undertaking and we could use any help we can get!

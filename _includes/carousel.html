@@ -5,10 +5,10 @@
 
 <div class="carousel__holder">
     <div class="carousel">
-        {% for elem in site.data.carousel.elements %}
+        {% for elem in include.elements %}
           <input class="carousel__activator" type="radio" name="carousel" id="{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked"{% endif %} />
         {% endfor %}
-        {% for elem in site.data.carousel.elements %}
+        {% for elem in include.elements %}
           {% if forloop.index == forloop.length %}
             {% assign nextindex = 0 %}
           {% else %}
@@ -28,18 +28,20 @@
         {% endfor %}
         <div class="carousel__track">
           <ul>
-            {% for elem in site.data.carousel.elements %}
+            {% for elem in include.elements %}
              <li class="carousel__slide" style="background-image: url('{{ elem.image }}');">
-               <div class="overlay-fade-content" style="height: 100%;">
-                 <a href="{{ elem.link }}">{{ elem.title }}</a>
-               <div>
+               {% if elem.title %}
+                <div class="overlay-fade-content" style="height: 100%;">
+                  <a href="{{ elem.link }}">{{ elem.title }}</a>
+                <div>
+               {% endif %}
              </li>
 
             {% endfor %}
           </ul>
         </div>
         <div class="carousel__indicators">
-            {% for elem in site.data.carousel.elements %}
+            {% for elem in include.elements %}
               <label class="carousel__indicator" for="{{ letters[forloop.index0] }}"></label>
             {% endfor %}
         </div>
@@ -60,7 +62,7 @@
 .carousel__activator {
   display: none;
 }
-{% for elem in site.data.carousel.elements %}
+{% for elem in include.elements %}
 .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__track {
   -webkit-transform: translateX(-{{ forloop.index0 }}00%);
           transform: translateX(-{{ forloop.index0 }}00%);
@@ -130,7 +132,7 @@
   cursor: pointer;
   border-width: 5px 5px 0 0;
   border-style: solid;
-  border-color: #fafafa;
+  border-color: {% if include.control_color %} {{include.control_color}} {% else %} #fafafa {% endif %};
   opacity: 0.35;
   opacity: 1;
   outline: 0;
@@ -187,7 +189,7 @@
   right: 0;
   opacity: 1;
 }
-{% for elem in site.data.carousel.elements %}
+{% for elem in include.elements %}
 .carousel__track .carousel__slide:nth-of-type({{ forloop.index }}) {
   -webkit-transform: translateX({{ forloop.index0 }}00%);
           transform: translateX({{ forloop.index0 }}00%);
@@ -206,9 +208,9 @@
   width: 30px;
 }
 .carousel__indicator {
-  background-color: #fafafa;
+  background-color: {% if include.control_color %} {{include.control_color}} {% else %} #fafafa {% endif %};
 }
-{% for elem in site.data.carousel.elements %}
+{% for elem in include.elements %}
 .carousel__slide:nth-of-type({{ forloop.index }}),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type({{ forloop.index }}) {
   background-size: cover;
