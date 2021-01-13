@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from libgdxjam.com/home.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 16:42:18 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="google-site-verification" content="SOg1pGiJsh8b4HXCMPMp2iTcy6SCuSYQkyOqNruQU-U" />
+	<meta property="og:image" content="images/tempLibGDXLogo.png">
+	<meta property="og:title" content="LibGDX Jam - Home">
+	<title>LibGDX Jam - Home</title>
+	<link rel="stylesheet" type="text/css" href="css/commonc177.css?v=1.12">
+	<link rel="stylesheet" type="text/css" href="css/jamstatusc619.css?v=1.0">
+
+	<link rel="shortcut icon" href="images/favicon-trans.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16-trans.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32-trans.png">
+
+</head>
+
+<body>
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<div class="logo">
+		<center><img src="images/tempLibGDXLogo.png"></center>
+	</div>
+	<div class="header">
+		<ul class="topmenu">
+			<li class="selected"><a href="home.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="entries.html">Entries</a></li>
+		</ul>
+	</div>
+	<div class="contentframe">
+		<div class="content">
+			<div class="split-view-container">
+				<div class="split-view-grid-container">
+					<div class="split-view-item split-view-left">
+						<h2>
+							<center>Welcome to the LibGDX Jam site!</center>
+						</h2>
+						<p>
+							<center><b>Greetings! Until further notice, this site will no longer be used for LibGDX
+									Jams.</b></center><br>
+
+							<center>However, this site will remain online and functional so that people can still
+								explore and play all of the entries from past Jams.</center>
+							<br>
+							<center><b><a href="https://discord.gg/seGZJ3K">Join us on Discord!</a></b></center>
+						</p>
+					</div>
+					<div class="split-view-item split-view-right center">
+						<table class="status">
+							<tr class="major-header">
+								<td>Jam Status</td>
+							</tr>
+							<tr class="minor-header">
+								<td>No Jams Happening Here</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script>
+		$('[data-countdown]').each(function () {
+			var $this = $(this), finalDate = $(this).data('countdown');
+			$this.countdown(finalDate, function (event) {
+				$(this).html(event.strftime('%-DD %HH %MM %SS'));
+			});
+		});
+	</script>
+	<footer>
+		<center>
+			<div class="copyright">
+				This site was created for the LibGDX community, by Bigbass and tecksup.
+			</div>
+		</center>
+	</footer>
+</body>
+
+<!-- Mirrored from libgdxjam.com/home.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 16:42:20 GMT -->
+
+</html>

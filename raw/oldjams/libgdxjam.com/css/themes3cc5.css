@@ -1,0 +1,329 @@
+div.timer-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5px;
+    text-align: center;
+}
+
+div.timer-announcement {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 34px;
+    
+    border: 1px dashed #E44D3C;
+    background-color: #444;
+}
+
+
+div.submitted-container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+div.submitted-announcement {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 26px;
+    
+    border: 1px dashed #0FF;
+    background-color: #444;
+}
+
+
+div.error-container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+div.error-announcement {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 26px;
+    
+    border: 1px dashed #FFF;
+    background-color: #844;
+}
+
+
+div.instructions-container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+div.instructions-announcement {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 26px;
+    
+    border: 1px dashed #FFF;
+    background-color: #444;
+}
+
+
+div.submission {
+    width: 100%;
+}
+
+table.submission {
+    margin: 0 auto;
+    width: 100%;
+}
+
+table.submission td.theme {
+}
+
+table.submission td.submit {
+    width: 10%;
+}
+
+table.submission input[type=text] {
+    width: 100%;
+    height: 69px;
+    font-size: 40px;
+    text-align: center;
+    
+    border-collapse: collapse;
+    border: none;
+}
+
+table.submission input[type=submit] {
+    width: 100%;
+    height: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    border-collapse: collapse;
+    border: none;
+    
+    font-size: 40px;
+    
+    background-color: #1BAA3C;
+    color: #FFF;
+}
+
+table.submission input[type=submit]:hover {
+    background-color: #040;
+}
+
+table.list {
+    width: calc(100% - 6px);
+    margin-left: 3px;
+    margin-bottom: 5px;
+    border-collapse: collapse;
+    border: 1px solid white;
+    background-color: #444;
+}
+
+table.list th {
+    border: 1px solid #DDD;
+    padding: 5px;
+    color: #1BDD3C;
+    font-size: 110%;
+}
+
+table.list td {
+    width: 33%;
+    padding: 5px;
+    border: 1px solid #DDD;
+}
+
+/* VOTING */
+
+div.voting {
+    width: 100%;
+    font-size: 44px;
+    margin-bottom: 5px;
+}
+
+table.vote {
+    margin: 0 auto;
+    border-collapse: collapse;
+    
+    text-align: center;
+    
+    font-size: 26px;
+    line-height: 0;
+}
+
+table.vote td {
+    margin: 0;
+    padding: 1px;
+    padding-top: 2px;
+    
+    border-bottom: dashed 1px gray;
+    border-top: dashed 1px gray;
+}
+
+table.vote td.count {
+    height: 30px;
+    
+    border-collapse: collapse;
+    
+    font-size: 25px;
+}
+
+table.vote td.themetitle {
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: left;
+}
+
+table.vote input[type=radio] {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+    display: none;
+}
+
+table.vote td.submit {
+    border: none;
+}
+
+table.vote input[type=submit] {
+    width: 100%;
+    height: 65px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-bottom: 2px;
+    
+    border-collapse: collapse;
+    border: none;
+    
+    font-size: 35px;
+    
+    background-color: #E44D3C;
+    color: #FFF;
+}
+table.vote input[type=submit]:hover {
+    -webkit-filter: brightness(1.2);
+       -moz-filter: brightness(1.2);
+            filter: brightness(1.2);
+    border: dashed 1px white;
+}
+
+/* images */
+table.vote .minusImage {
+    background-image: url("../images/vote-1.png");
+}
+table.vote .neutImage {
+    background-image: url("../images/vote0.png");
+}
+table.vote .plusImage {
+    background-image: url("../images/vote%2b1.png");
+}
+
+table.vote input[type=radio]:active+.fadecard {
+    opacity: .9;
+}
+table.vote input[type=radio]:checked+.fadecard {
+    -webkit-filter: brightness(1.2);
+       -moz-filter: brightness(1.2);
+            filter: brightness(1.2);
+}
+
+.fadecard {
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:32px;height:32px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(0.5) opacity(.7);
+       -moz-filter: brightness(0.5) opacity(.7);
+            filter: brightness(0.5) opacity(.7);
+}
+
+.fadecard:hover {
+    -webkit-filter: brightness(0.9) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(0.9) grayscale(.5) opacity(.9);
+            filter: brightness(0.9) grayscale(.5) opacity(.9);
+}
+
+/* Results */
+
+div.results {
+    width: 100%;
+    
+    margin-bottom: 5px;
+    
+    font-size: 22px;
+}
+
+table.resultlist {
+    border-collapse: collapse;
+    border: dashed 1px white;
+    
+    margin: 0 auto;
+    text-align: center;
+    
+    background-color: #444;
+}
+
+table.resultlist th {
+    border-bottom: dashed 1px gray;
+    border-top: dashed 1px white;
+    padding: 3px;
+    font-size: 110%;
+}
+
+table.resultlist td {
+    padding: 3px;
+    border-top: dashed 1px gray;
+    font-size: 80%;
+}
+
+table.resultlist td.alignright {
+    text-align: left;
+    padding-left: 10px;
+}
+
+table.resultlist td.first {
+    color: #1BDD3C;
+    font-weight: bold;
+}
+
+table.resultlist td.left {
+    border-left: dashed 1px gray;
+}
+
+table.resultlist th.neg1 {
+    border-left: dashed 1px gray;
+    color: #F44;
+    width: 40px;
+}
+table.resultlist th.neut {
+    color: #FFE502;
+    width: 40px;
+}
+table.resultlist th.pos1 {
+    color: #1BDD3C;
+    width: 40px;
+}
+table.resultlist th.total {
+    border-left: dashed 1px gray;
+    width: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+	table.resultlist td {
+    padding: 3px;
+    border-top: dashed 1px gray;
+    font-size: 30px;
+}
+}
