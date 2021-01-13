@@ -1,0 +1,412 @@
+/*Don't you just love it when there are little to no comments around stuff?*/
+
+html {
+	height: 100%;
+	min-width:765px;
+}
+
+body {
+    font-family: Arial;
+    font-size: 14px;
+    background-color: #333333;
+    color: #fff;
+    margin: 0 auto;
+		height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+a {
+    color: #EF4854;
+}
+
+center {
+    text-align: center;
+}
+.center {
+    text-align: center;
+}
+
+div.logo {
+	width:100%;
+	background:white;
+        /*border-bottom: 16px solid #1BAA3C;*/
+        border-top: 16px solid #e84c3d;
+}
+
+div.logo img {
+	padding:10px;
+}
+
+div.header {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    background-color: #222;
+}
+
+div.contentframe {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    flex: 1;
+	overflow: auto;
+}
+
+div.content {
+    background-color: #333333;
+    padding: 10px 20px 10px 20px;
+
+    font-size: 16px;
+
+	flex: 2;
+	overflow: auto;
+}
+
+div.text-header {
+    font-weight: bold;
+    border-bottom: 1px solid #EEE;
+}
+
+div.indent {
+    margin-left: 30px;
+    padding: 5px;
+    border-left: 1px solid #EEE;
+}
+
+.split-view-container {
+    width: 100%;
+    margin: auto;
+}
+
+.split-view-grid-container {
+    display: grid;
+    grid-gap: 0px 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.split-view-grid-container_two {
+    display: grid;
+    grid-gap: 0px 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.split-view {
+    background-color:#4d4d4d;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.split-view-left {
+	grid-column-start: 1;
+	grid-column-end: 3;
+    background-color:#4d4d4d;
+    border-radius: 5px;
+}
+
+.split-view-right {
+	grid-column-start: 3;
+	grid-column-end: 3;
+    background-color:#4d4d4d;
+    border-radius: 5px;
+}
+
+.split-view-left_two {
+	grid-column-start: 1;
+	grid-column-end: 1;
+    background-color:#4d4d4d;
+    border-radius: 5px;
+}
+
+.split-view-right_two {
+	grid-column-start: 2;
+	grid-column-end: 2;
+    background-color:#4d4d4d;
+    border-radius: 5px;
+}
+
+.split-view-item {
+    justify-self: stretch;
+
+    /* Provides buffer between edge and text */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-header {
+	font-size:28px;
+	color:#1BDD3C;
+}
+
+.split-view i {
+    color: #00ff00;
+}
+
+/* These spans are used to simply color text. Currently used on the theme page during the voting phase. */
+span.red {
+    color: #F00;
+}
+span.yellow {
+    color: #FFE502;
+}
+span.green {
+    color: #1BDD3C;
+}
+
+/* --- menus --- */
+
+/* topmenu */
+ul.topmenu {
+    display: inline;
+    list-style-type: none;
+    padding-left: 10px;
+    margin: 0;
+}
+
+ul.topmenu a {
+    text-decoration: none;
+}
+
+ul.topmenu li {
+    display: inline;
+    padding: 4px 8px 4px 8px;
+    margin: 0 0px;
+    font-size: 120%;
+    font-weight: bold;
+
+    background-color: #FFF;
+}
+
+ul.topmenu li a {
+    color: #000;
+}
+
+ul.topmenu li:hover {
+    background-color: #1BAA3C;
+	/*padding: 10px 8px 4px 8px;*/
+}
+
+ul.topmenu li:hover a {
+    color: #FFF;
+}
+
+ul.topmenu li.selected {
+    background-color: #1BAA3C;
+	/*padding: 10px 8px 4px 8px;*/
+}
+
+ul.topmenu li.selected a {
+    color: #FFF;
+}
+
+/* topmenu-loginstatus */
+ul.topmenu-loginstatus {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    padding-right: 10px;
+    margin: 0;
+}
+
+ul.topmenu-loginstatus a {
+    text-decoration: none;
+	color: black;
+}
+
+ul.topmenu-loginstatus li {
+    display: inline;
+    padding: 4px 8px 4px 8px;
+    font-size: 120%;
+    font-weight: bold;
+	color: red;
+
+    background-color: #FFF;
+}
+
+ul.topmenu-loginstatus li:hover {
+    background-color: #1BAA3C;
+}
+ul.topmenu-loginstatus li:hover a {
+    color: #FFF;
+}
+
+/* Timer */
+div.timer {
+    margin-bottom: 10px;
+    font-size: 130%;
+    color: #EEE;
+}
+
+div.timer div.container {
+    border: 1px dashed #E44D3C;
+    margin: 0 auto;
+    width: 420px;
+    background: #444;
+}
+
+div.timer header {
+    font-size: 180%;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #222;
+
+    color: #FFF;
+    font-size: 13px;
+    font-style: italic;
+
+    height: 37px;
+    padding-top: 7px;
+    padding-bottom: 1px;
+    margin-top: 0px;
+}
+
+div.copyright {
+    display: inline-block;
+
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+div.patreon {
+    display: inline-block;
+    float:right;
+
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    font-family: America;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: normal;
+}
+
+div.paypal {
+    display: inline-block;
+    float:right;
+
+    margin-right: 7px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+
+    font-family: America;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: normal;
+}
+
+div.patreon img {
+    width: 20px;
+    padding-right: 7px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+
+div.patreon a {
+    padding: 7px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #FFF;
+    background-color: rgb(249, 104, 84);
+}
+
+@media screen and (max-width: 1000px) {
+
+	body {
+		font-size: 16px;
+	}
+
+	div.content {
+		padding: 10px 20px 10px 20px;
+
+		font-size: 28px;
+
+		flex: 2;
+		overflow: auto;
+	}
+
+	ul.topmenu li {
+		padding: 8px 8px 4px 8px;
+		font-size: 30px;
+	}
+
+	ul.topmenu-loginstatus li {
+		padding: 8px 8px 4px 8px;
+		font-size: 30px;
+	}
+
+	.split-view-grid-container {
+		grid-gap: 15px 0px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	.split-view-grid-container_two {
+		grid-gap: 15px 0px;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.split-view {
+		background-color:#4d4d4d;
+		padding: 10px;
+		border-radius: 5px;
+	}
+
+	.split-view-left {
+		grid-row-start: 1;
+		grid-column-start: 1;
+		grid-row-end: 3;
+		grid-column-end: 1;
+		background-color:#4d4d4d;
+		border-radius: 5px;
+	}
+
+	.split-view-right {
+		grid-row-start: 3;
+		grid-column-start: 1;
+		grid-row-end: 3;
+		grid-column-end: 1;
+		background-color:#4d4d4d;
+		border-radius: 5px;
+	}
+
+	.split-view-left_two {
+		grid-row-start: 1;
+		grid-column-start: 1;
+		grid-row-end: 1;
+		background-color:#4d4d4d;
+		border-radius: 5px;
+	}
+
+	.split-view-right_two {
+		grid-row-start: 2;
+		grid-column-start: 1;
+		grid-row-end: 2;
+		background-color:#4d4d4d;
+		border-radius: 5px;
+	}
+
+	.split-view-item {
+		justify-self: stretch;
+
+		/* Provides buffer between edge and text */
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+        footer {
+            font-size: 18px;
+        }
+}

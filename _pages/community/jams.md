@@ -36,7 +36,6 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
-
 * [The player is asleep](https://itch.io/jam/libgdx-jam-15) (December 2020)
 * [Parallel Worlds](https://itch.io/jam/libgdx-jam-september-2020) (September 2020)
 * [Tower Defense Without Towers](https://itch.io/jam/libgdx-jam-june-2020) (June 2020)
@@ -44,11 +43,11 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 * [THE WORLD IS FOOD](https://itch.io/jam/libgdx-jam-december-2019) (December 2019)
 * [Halloween](https://itch.io/jam/libgdx-jam-october-2019) (October 2019)
 * [One Room](https://itch.io/jam/libgdx-jam-august-2019) (August 2019)
-* [Upside Down](/raw/oldjams/libgdxjam.com/entries1d1f.html) (April 2019)
-* [Energy](/raw/oldjams/libgdxjam.com/entries303d.html) (February 2019)
-* [Time](/raw/oldjams/libgdxjam.com/entries34de.html) (October 2018)
-* [The World Is Shrinking](/raw/oldjams/libgdxjam.com/entries280b.html) (July 2018)
-* [Light vs. Dark](/raw/oldjams/libgdxjam.com/entries8a8a.html) (May 2018)
-* [A Rainy Day](/raw/oldjams/libgdxjam.com/entries62c9.html) (March 2018)
-* [Three Colors, Three Buttons](/raw/oldjams/libgdxjam.com/entriesd8d2.html) (February 2018)
+* [Upside Down](/archive/libgdxjam.com/entries1d1f.html) (April 2019)
+* [Energy](/archive/libgdxjam.com/entries303d.html) (February 2019)
+* [Time](/archive/libgdxjam.com/entries34de.html) (October 2018)
+* [The World Is Shrinking](/archive/libgdxjam.com/entries280b.html) (July 2018)
+* [Light vs. Dark](/archive/libgdxjam.com/entries8a8a.html) (May 2018)
+* [A Rainy Day](/archive/libgdxjam.com/entries62c9.html) (March 2018)
+* [Three Colors, Three Buttons](/archive/libgdxjam.com/entriesd8d2.html) (February 2018)
 * [Life in space](https://itch.io/jam/libgdxjam) (December 2015)
