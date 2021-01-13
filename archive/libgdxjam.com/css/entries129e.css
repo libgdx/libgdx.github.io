@@ -1,6 +1,6 @@
 table.jam-header {
     width: 100%;
-    
+
     border-collapse: collapse;
     border: none;
 }
@@ -12,18 +12,13 @@ table.jam-header td {
 table.jam-header td.theme {
     text-align: center;
     color: #e84c3d;
-    
+
     font-size: 24px;
     font-weight: bold;
 }
 
 table.jam-header a {
     color: white;
-}
-
-form.create {
-    display: inline;
-    float: right;
 }
 
 form.status {
@@ -33,32 +28,16 @@ form.status {
 form.status select {
     height: 26px;
     padding-left: 3px;
-    
+
     border-collapse: collapse;
     border: none;
-    
+
     font-size: 16px;
 }
 
 form.status input[type=submit],
-form.create input[type=submit] {
-    height: 26px;
-    padding-left: 10px;
-    padding-right: 10px;
-    
-    border-collapse: collapse;
-    border: none;
-    
-    font-size: 16px;
-    
-    background-color: #1BAA3C;
-    color: #FFF;
-}
 
 form.status input[type=submit]:hover,
-form.create input[type=submit]:hover {
-    background-color: #3BBB4C;
-}
 
 div.entry-list {
     text-align: center;
@@ -67,10 +46,10 @@ div.entry-list {
 table.entrylist {
     width: 90%;
     margin: 0 auto;
-    
+
     border-collapse: collapse;
     border: none;
-    
+
     background-color: #444;
 }
 
@@ -81,9 +60,9 @@ table.entrylist tr {
 
 table.entrylist td {
     padding: 10px;
-    
+
     width: 20%;
-    
+
     vertical-align: top;
 }
 

@@ -18,7 +18,7 @@ body {
 }
 
 a {
-    color: #EF4854;
+    color: #FFF;
 }
 
 center {
@@ -84,7 +84,7 @@ div.indent {
 
 .section-header {
 	font-size:28px;
-	color:#1BDD3C;
+	color:#EF4854;
 }
 
 /* --- menus --- */
@@ -141,6 +141,10 @@ ul.topmenu li.selected a {
 		margin: 0 auto;
 		padding-right: 153px; /* width of floating <ul> */
 		display: table;
+}
+
+.archive-notice a {
+    color: #EF4854;
 }
 
 /* FOOTER */
