@@ -2,10 +2,10 @@ div.project {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 8px;
-    
+
     border: 2px solid #AAA;
     background-color: #444;
-    
+
     border-radius: 0 0 50px 50px;
 }
 
@@ -16,7 +16,7 @@ img {
 div.title {
     font-size: 42px;
     font-weight: bold;
-    
+
     color: #1BDD3C;
 }
 
