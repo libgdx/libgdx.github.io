@@ -1,0 +1,43 @@
+div.project {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 8px;
+
+    border: 2px solid #AAA;
+    background-color: #444;
+
+    border-radius: 0 0 50px 50px;
+}
+
+img {
+    padding-top: 5px;
+}
+
+div.title {
+    font-size: 42px;
+    font-weight: bold;
+
+    color: #EF4854;
+}
+
+div.author {
+    font-size: 22px;
+    font-style: italic;
+}
+
+div.section {
+    margin-left: 10px;
+}
+
+div.section-header {
+    font-size: 26px;
+    color: #EF4854;
+}
+
+div.section-content {
+    margin-left: 30px;
+}
+
+div.content {
+    border-radius: 0 0 50px 50px !important;
+}
