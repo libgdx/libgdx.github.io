@@ -1,5 +1,5 @@
 ---
-permalink: /archive/
+permalink: /news-archive/
 title: "News"
 layout: posts
 classes: wide2

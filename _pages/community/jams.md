@@ -16,10 +16,28 @@ toc_sticky: false
 
 {% include breadcrumbs.html %}
 
-# Upcoming
+# Upcoming (2021)
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-**The jam dates for 2021 will be announced shortly!**
+## March
+- Jam Suggestions: 7th - 13th
+- Jam Voting: 14th - 20st
+- Jam: 21nd - 27th
+
+## June
+- Jam Suggestions: 6th - 12th
+- Jam Voting: 13th - 19th
+- Jam: 20st - 26th
+
+## September
+- Jam Suggestions: 5th - 11th
+- Jam Voting: 12th - 18th
+- Jam: 19th - 25th
+
+## December
+- Jam Suggestions: 5th - 11th
+- Jam Voting: 12th - 18th
+- Jam: 19th - 25th
 
 <br/>
 
