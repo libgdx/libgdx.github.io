@@ -26,7 +26,7 @@ Our roadmap is intended to list all of the major features and improvements plann
 
 The list is not exhaustive, meaning there are also a lot of other improvements in the works, which may not be not big enough to be mentioned on here, but are no less noteworthy. We purposely refrained from giving any concrete dates and deadlines – as we’re all doing this in our spare time, plans are always subject to change.
 
-**To take a look at the roadmap click [here](/roadmap/).** It can also be found in the footer and via Documentation > Contributing to libGDX > Roadmap.
+**To take a look at the roadmap click [here](/roadmap/).** It can also be found via Documentation > Contributing to libGDX > Roadmap.
 {: .notice--success}
 
 This was it for today's Status Report! See you all in #5, where we will take a look at the new setup tool.

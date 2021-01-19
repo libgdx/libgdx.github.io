@@ -44,6 +44,10 @@
 @import "pseudolink";
 
 /* Custom classes */
+.no-top-margin {
+  margin-top: 0px !important;
+}
+
 // see https://github.com/mmistakes/minimal-mistakes/issues/1322#issuecomment-571208318
 .wide2 {
   .page {

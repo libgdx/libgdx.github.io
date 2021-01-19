@@ -16,4 +16,4 @@ header:
   {% endfor %}
 </div>
 
-<a href="/news-archive/"><i class="fa fa-arrow-right" aria-hidden="true"></i> Show all posts</a>{: .align-right}
+<a href="/news/all/"><i class="fa fa-arrow-right" aria-hidden="true"></i> Show all posts</a>{: .align-right}
