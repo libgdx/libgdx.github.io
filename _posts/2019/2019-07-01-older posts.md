@@ -8,7 +8,10 @@ header:
   caption: "Photo credit: [**Serge Izquierdo**](https://unsplash.com/photos/F1o-LmqqH08)"
 excerpt: "What happened to the old blog?"
 
+tags:
+  - changelog
+
 categories: news
 ---
 
-If you're looking for the old blog posts, don't worry, they are still on the [badlogicgames site](https://www.badlogicgames.com/wordpress/).
+If you're looking for the old blog posts, don't worry, they are still on the [BadLogicGames site](https://www.badlogicgames.com/wordpress/).
