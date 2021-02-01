@@ -4,9 +4,6 @@ excerpt: "Raeleus presents his Skin Composer tool in our first ever Community Sh
 classes: wide2
 header:
   teaser: /assets/images/posts/2021-01-10/header.png
-  actions:
-    - label: "Skin Composer"
-      url: "https://github.com/raeleus/skin-composer"
 
 show_author: true
 author_username: "raeleus"
@@ -23,12 +20,12 @@ carousel_elements:
 ---
 
 <div class="notice--primary">
-<p>
-  Hey everybody! As announced in <a href="/news/2021/01/devlog_5_community_showcases">Status Report #5</a> we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. This is the very first of these <b>Community Showcases</b>, in which Raeleus is going to present his tool <a href="https://github.com/raeleus/skin-composer">Skin Composer</a>!
-</p>
-<p>
-  If you are interested in other cool community projects, be sure to check out the <a href="https://github.com/rafaskb/awesome-libgdx#readme">libGDX Awesome List</a> as well. To participate in future showcases, take a look <a href="https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases">here</a>.
-</p>
+  <p>
+    Hey everybody! As announced in <a href="/news/2021/01/devlog_5_community_showcases">Status Report #5</a> we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. This is the very first of these <b>Community Showcases</b>, in which Raeleus is going to present his tool <a href="https://github.com/raeleus/skin-composer">Skin Composer</a>!
+  </p>
+  <p>
+    If you are interested in other cool community projects, be sure to check out the <a href="https://github.com/rafaskb/awesome-libgdx#readme">libGDX Awesome List</a> as well. To participate in future showcases, take a look <a href="https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases">here</a>.
+  </p>
 </div>
 
 ![](/assets/images/posts/2021-01-10/logo.png){: .align-center}
