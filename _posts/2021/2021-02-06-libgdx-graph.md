@@ -13,13 +13,6 @@ author_username: "marcinsc"
 author_displayname: "Gempukku Studio"
 
 categories: news
-
-carousel_elements:
-    - image: /assets/images/posts/2021-01-10/main.png
-    - image: /assets/images/posts/2021-01-10/drawables.png
-    - image: /assets/images/posts/2021-01-10/ninepatch.png
-    - image: /assets/images/posts/2021-01-10/ftf.png
-    - image: /assets/images/posts/2021-01-10/scene-composer.png
 ---
 
 # Introduction
