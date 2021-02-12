@@ -34,7 +34,7 @@ feature_row2:
   - image_path: /assets/images/dev/tools/setup_tool_old.jpg
     title: "Setup Tool"
     excerpt: 'A simple wizard tool for libGDX projects'
-    url: "/assets/gdx-setup_latest.jar"
+    url: "/assets/downloads/legacy_setup/gdx-setup_latest.jar"
     btn_label: "Download"
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/skin_composer.png
