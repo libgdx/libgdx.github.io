@@ -16,7 +16,7 @@ excerpt: "libGDX has a very active community on Discord, Stack Overflow and Redd
 feature_row:
   - image_path: /assets/images/discord.png
     alt: "Discord"
-    title: "The Official Discord Sever"
+    title: "The Official Discord Server"
     excerpt: 'libGDX also has a friendly Discord community. There are a number of channels, including but not limited to: screenshot sharing, question & answers, and Kotlin discussions.'
     url: "/community/discord/"
     btn_label: "Join Us"
