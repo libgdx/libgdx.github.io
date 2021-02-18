@@ -19,7 +19,7 @@ toc_sticky: false
 # Upcoming (2021)
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## March
+## [March](/news/2021/02/jam-march-2021)
 - Jam Suggestions: 7th - 13th
 - Jam Voting: 14th - 20st
 - Jam: 21nd - 27th
@@ -45,11 +45,11 @@ If you want to stay up to date – join the official [libGDX Discord](/community
 We encourage camaraderie, teamwork, and good sportsmanship with a side of well-intentioned buffoonery. Nonetheless, there are some rules to be followed:
 
 - The game must be created with the libGDX framework.
-- The game must be created within the jam period.
+- The game must be created within the jam period. Late submissions are to be approved by admins.
 - Starter projects and templates are permitted, so long as they are not fully fledged games.
 - You can work in groups or individually.
 - Your game must be based on the selected theme.
-- Any and all copyright laws pertaining to assets used must be followed.
+- Any and all copyright laws pertaining to assets you use must be followed.
 
 <br/>
 
