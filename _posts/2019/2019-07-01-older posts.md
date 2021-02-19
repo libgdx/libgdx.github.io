@@ -14,4 +14,4 @@ tags:
 categories: news
 ---
 
-If you're looking for the old blog posts, don't worry, they are still on the [BadLogicGames site](https://www.badlogicgames.com/wordpress/).
+If you're looking for the old blog posts, don't worry, they are still available via the [Internet Archive](https://web.archive.org/web/20201109040808/http://www.badlogicgames.com/wordpress/). The old [forum](https://web.archive.org/web/20201028185002/https://www.badlogicgames.com/forum/) can be found there as well.

@@ -46,7 +46,7 @@ You are asked to provide the following parameters:
 * **extensions**: the extensions offered are:<br>
     **[Bullet](https://github.com/libgdx/libgdx/wiki/Bullet-physics)**: 3D Collision Detection and Rigid Body Dynamics Library.<br>
     **[FreeType](https://github.com/libgdx/libgdx/wiki/Gdx-freetype)**: Scalable font. Great to manipulate font size dynamically. However be aware that it does not work with HTML target if you cross compile for that target.<br>
-    **[Tools](https://libgdx.badlogicgames.com/tools.html)**: Set of tools including: particle editor (2d/3d), bitmap font and image texture packers.<br>
+    **Tools**: Set of tools including: particle editor (2d/3d), bitmap font and image texture packers.<br>
     **[Controller](https://github.com/libgdx/libgdx/wiki/Controllers)** Library to handle controllers (e.g.: XBox 360 controller).<br>
     **[Box2d](https://github.com/libgdx/libgdx/wiki/Box2d)**: Box2D is a 2D physics library.<br>
     **[Box2dlights](https://github.com/libgdx/box2dlights)**: 2D lighting framework that uses box2d for raycasting and OpenGL ES 2.0 for rendering.<br>
@@ -108,4 +108,4 @@ A **dependency management** system is an easy way to pull in third-party librari
 A **build system** helps with building and packaging your application, without being tied to a specific IDE. This is especially useful if you use a build or continuous integration server, where IDEs aren't readily available. Instead, the build server can call the build system, providing it with a build configuration so it knows how to build your application for different platforms. If you want to know more about deploying your application, take a look [here](https://github.com/libgdx/libgdx/wiki/Deploying-your-application).
 {: .notice--primary}
 
-**Now you are ready to [import the project into your IDE and run it](https://libgdx.com/dev/import_and_running/).**
+**Now you are ready to [import the project into your IDE and run it](/dev/import_and_running/).**

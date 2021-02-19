@@ -41,7 +41,7 @@ feature_row3:
     alt: "Forum"
     title: "Forum"
     excerpt: "Our forums have been archived due to spam issues, but are still used as reference."
-    url: "https://www.badlogicgames.com/forum/"
+    url: "https://web.archive.org/web/20201028185002/https://www.badlogicgames.com/forum/"
     btn_label: "Read Archived Forums"
     btn_class: "btn--primary"
   - image_path: /assets/images/irc.jpeg
