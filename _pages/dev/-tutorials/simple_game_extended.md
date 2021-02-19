@@ -1,5 +1,7 @@
 ---
-permalink: /dev/simple_game_extended/
+permalink: /dev/simple-game-extended/
+redirect_from:
+  - /dev/simple_game_extended/
 title: "Extending the Simple Game"
 classes: wide
 header:
@@ -14,7 +16,7 @@ sidebar:
 
 {% include breadcrumbs.html %}
 
-In this tutorial we will be **extending the simple game** "Drop", made in [the previous tutorial](/dev/simple_game/). We will be adding a menu screen and a couple of features to make this game a little more fully featured.
+In this tutorial we will be **extending the simple game** "Drop", made in [the previous tutorial](/dev/simple-game/). We will be adding a menu screen and a couple of features to make this game a little more fully featured.
 
 Let's get started with an introduction to a few more advanced classes in libGDX.
 

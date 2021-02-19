@@ -20,7 +20,7 @@ If this is your first time using libGDX, you're at the right place. The followin
 
 {% include setup_flowchart.html current='0' %}
 
-First off, you need an IDE (Integrated Development Environment). It is basically an editor for your java files, which makes developing java applications considerably more convenient in various ways. **If you already have an IDE installed, you can skip to the next [step](/dev/project_generation/).**
+First off, you need an IDE (Integrated Development Environment). It is basically an editor for your java files, which makes developing java applications considerably more convenient in various ways. **If you already have an IDE installed, you can skip to the next [step](/dev/project-generation/).**
 
 The java world offers a lot of different IDEs. All of them will have minor advantages and disadvantages, but in the end they all do their job, so feel free to choose whichever you like most.
 
@@ -64,4 +64,4 @@ It is also possible to develop libGDX applications entirely without any IDE, jus
 
 <br/>
 
-**Now that you have a development environment, you can create your very first libGDX project. libGDX offers a setup tool for that, which generates all the necessary files. To get started with it, take a look [here](/dev/project_generation/).**
+**Now that you have a development environment, you can create your very first libGDX project. libGDX offers a setup tool for that, which generates all the necessary files. To get started with it, take a look [here](/dev/project-generation/).**

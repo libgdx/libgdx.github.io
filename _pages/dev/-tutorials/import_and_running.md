@@ -1,5 +1,7 @@
 ---
-permalink: /dev/import_and_running/
+permalink: /dev/import-and-running/
+redirect_from:
+  - /dev/import_and_running/
 title: "Importing & Running a Project"
 classes: wide
 header:
@@ -152,4 +154,4 @@ This will provide you with a stacktrace and give you a better idea of why gradle
 <br/>
 
 # What to do next?
-Now that you're done with the set up, you can get to do some real coding. Take a look at our post [A Simple Game](/dev/simple_game/) for a step-by-step guide.
+Now that you're done with the set up, you can get to do some real coding. Take a look at our post [A Simple Game](/dev/simple-game/) for a step-by-step guide.

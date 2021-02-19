@@ -94,7 +94,7 @@ To reduce the chances of introducing errant behavior and to increase the chance 
 <br/>
 
 # How to contribute code
-libGDX uses git, with our codebase situated on GitHub. In order to submit changes back to the official libGDX project, you will need to fork the project, clone your fork, [work on its source](/dev/from_source/), push changes back to your fork, and then submit a pull request based on your changes.
+libGDX uses git, with our codebase situated on GitHub. In order to submit changes back to the official libGDX project, you will need to fork the project, clone your fork, [work on its source](/dev/from-source/), push changes back to your fork, and then submit a pull request based on your changes.
 
 Pull requests will then be checked by automation tools as well as the core contributors before merging. Please do not leave it up to the core contributors to test your code, make sure it compiles, and test on every platform you can. State in your pull request what you have tested on.
 
@@ -102,7 +102,7 @@ To sum it up, this is the general workflow:
 - [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the libGDX repository on GitHub.
 - Clone the forked repository either via the command line or your IDE.
 - Add the libGDX repository as a remote (to sync latest changes).
-- Make your changes to your locally cloned (of your fork), repository, ideally on a new branch. See [here](/dev/from_source/) for a guide on how to get the libGDX code running locally.
+- Make your changes to your locally cloned (of your fork), repository, ideally on a new branch. See [here](/dev/from-source/) for a guide on how to get the libGDX code running locally.
 - Commit your changes, and push the changes back to your forked repository on GitHub.
 - Go to GitHub, view your forked repository, select your branch and create a pull request.
 - Write a detailed description of what your pull request does, how it has been tested, what platforms it has been tested on, and why it belongs in libGDX.

@@ -15,13 +15,13 @@ dev:
       - title: "Set Up a Dev Env"
         url: /dev/setup/
       - title: "Generate a Project"
-        url: /dev/project_generation/
+        url: /dev/project-generation/
       - title: "Importing & Running"
-        url: /dev/import_and_running/
+        url: /dev/import-and-running/
       - title: "A Simple Game"
-        url: /dev/simple_game/
+        url: /dev/simple-game/
       - title: "Extending the Simple Game"
-        url: /dev/simple_game_extended/
+        url: /dev/simple-game-extended/
       - title: "Demos & Tutorials"
         url: /dev/tutorials/
   - title: "Documentation"
@@ -47,7 +47,7 @@ dev:
       - title: "Roadmap"
         url: /roadmap/
       - title: "Working from Source"
-        url: /dev/from_source/
+        url: /dev/from-source/
       - title: "Building the Natives"
         url: /dev/natives/
       - title: "Funding"

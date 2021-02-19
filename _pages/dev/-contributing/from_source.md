@@ -1,5 +1,7 @@
 ---
-permalink: /dev/from_source/
+permalink: /dev/from-source/
+redirect_from:
+  - /dev/from_source/
 title: "From Source"
 classes: wide
 header:
@@ -52,7 +54,7 @@ All of the projects are hooked up and ready to test given that you have set up y
 
 ![](/assets/images/dev/source/0.png)
 
-**Android:** Use the following command to install the tests on the test device: 
+**Android:** Use the following command to install the tests on the test device:
 ```
 ./gradlew tests:gdx-tests-android:installDebug
 ```

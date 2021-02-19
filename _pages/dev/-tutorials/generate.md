@@ -1,5 +1,7 @@
 ---
-permalink: /dev/project_generation/
+permalink: /dev/project-generation/
+redirect_from:
+  - /dev/project_generation/
 title: "Creating a Project"
 classes: wide
 header:
@@ -108,4 +110,4 @@ A **dependency management** system is an easy way to pull in third-party librari
 A **build system** helps with building and packaging your application, without being tied to a specific IDE. This is especially useful if you use a build or continuous integration server, where IDEs aren't readily available. Instead, the build server can call the build system, providing it with a build configuration so it knows how to build your application for different platforms. If you want to know more about deploying your application, take a look [here](https://github.com/libgdx/libgdx/wiki/Deploying-your-application).
 {: .notice--primary}
 
-**Now you are ready to [import the project into your IDE and run it](/dev/import_and_running/).**
+**Now you are ready to [import the project into your IDE and run it](/dev/import-and-running/).**

@@ -1,5 +1,7 @@
 ---
-permalink: /dev/simple_game/
+permalink: /dev/simple-game/
+redirect_from:
+  - /dev/simple_game/
 title: "A Simple Game"
 classes: wide
 header:
@@ -605,4 +607,4 @@ public class Drop extends ApplicationAdapter {
 ```
 
 ## Where to go from here
-This was a very basic example of how to use libGDX to create a minimalistic game. There are quite a few things that can be improved from here on. Your next steps should most certainly entail looking at `Screen`s and `Game`s. To learn about these, there is a **[second tutorial](/dev/simple_game_extended/)** following on from this one.
+This was a very basic example of how to use libGDX to create a minimalistic game. There are quite a few things that can be improved from here on. Your next steps should most certainly entail looking at `Screen`s and `Game`s. To learn about these, there is a **[second tutorial](/dev/simple-game-extended/)** following on from this one.
