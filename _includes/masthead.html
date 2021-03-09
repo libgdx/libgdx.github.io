@@ -10,9 +10,12 @@
         {% unless logo_path == empty %}
           <a class="site-logo" href="{{ '/' | relative_url }}">
             <picture>
-              <source
-                srcset="{{ logo_path_dark | relative_url }}"
-                media="(prefers-color-scheme: dark)">
+              {% unless logo_path_dark == empty %}
+                <!-- dark mode logo -->
+                <source
+                  srcset="{{ logo_path_dark | relative_url }}"
+                  media="(prefers-color-scheme: dark)">
+              {% endunless %}
               <img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
             </picture>
         {% endunless %}
