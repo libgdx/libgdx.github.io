@@ -1,13 +1,9 @@
-/* overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes.scss */
-
 /*!
  * Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
  * Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
 
-
-/* ORIGINAL THEME STUFF */
 /* Variables */
 @import "minimal-mistakes/variables";
 
@@ -43,8 +39,6 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
-
-/* CUSTOM ADDITIONS */
 /* Custom stylesheets */
 @import "status";
 @import "pseudolink";
@@ -54,7 +48,8 @@
   margin-top: 0px !important;
 }
 
-.wide2 { // see https://github.com/mmistakes/minimal-mistakes/issues/1322#issuecomment-571208318
+// see https://github.com/mmistakes/minimal-mistakes/issues/1322#issuecomment-571208318
+.wide2 {
   .page {
     float: left;
     width: 100%;

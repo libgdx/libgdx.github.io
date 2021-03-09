@@ -1,7 +1,7 @@
-<!-- Based on: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/feature_row -->
-
 {% assign tag_preview = page.tag_preview %}
+
 {% assign changelog_posts = site.posts | where_exp: "post", "post.tags contains include.tag" %}
+
 
 <div class="feature__wrapper">
 
