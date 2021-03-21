@@ -24,13 +24,9 @@ Let's get started with an introduction to a few more advanced classes in libGDX.
 Screens are _fundamental_ to any game with multiple components. Screens contain many of the methods you are used to from ApplicationListener objects, and include a couple of new methods: `show` and `hide`, which are called when the Screen gains or loses focus, respectively. Screens are responsible for handling (i.e., processing and rendering) one aspect of your game: a menu screen, a settings screen, a game screen, etc.
 
 ## The Game Class
-The Game class is responsible for handling multiple screens and provides some helper methods for this purpose, alongside an implementation of ApplicationListener for you to use.
+The Game class is responsible for handling multiple screens and provides some helper methods for this purpose, alongside an implementation of ApplicationListener for you to use. Together, Screen and Game objects are used to create a simple and powerful structure for games.
 
-Together, Screen and Game objects are used to create a simple and powerful structure for games.
-
-We will start with creating a Game object, which will be the entry point to our game.
-
-Let's show some code and walk through it:
+We will start with creating a Game object, whose `create()` method will be the entry point to our game. Let's take a look at some code:
 
 ```java
 package com.badlogic.drop;
@@ -47,13 +43,12 @@ public class Drop extends Game {
 
 	public void create() {
 		batch = new SpriteBatch();
-		//Use LibGDX's default Arial font.
-		font = new BitmapFont();
+		font = new BitmapFont(); // use libGDX's default Arial font
 		this.setScreen(new MainMenuScreen(this));
 	}
 
 	public void render() {
-		super.render(); //important!
+		super.render(); // important!
 	}
 
 	public void dispose() {
@@ -68,12 +63,11 @@ We start the application with instantiating a SpriteBatch and a BitmapFont. It i
 
 Next, we set the Screen of the Game to a `MainMenuScreen` object, with a Drop instance as its first and only parameter.
 
-A common mistake is to forget to call `super.render()` with a Game implementation. Without this call, the Screen that you set in the `create()` method will not be rendered!
-
-Finally, another reminder to dispose of objects!
-
-Some further reading on this can be found [here](https://github.com/libgdx/libgdx/wiki/Managing-your-assets).
+A common mistake is to forget to call `super.render()` with a Game implementation. Without this call, the Screen that you set in the `create()` method will not be rendered if you override the render method in your Game class!
 {: .notice--primary}
+
+Finally, another reminder to dispose of your (heavy) objects! Some further reading on this can be found [here](https://github.com/libgdx/libgdx/wiki/Managing-your-assets).
+
 
 ## The Main Menu
 Now, let's get into the nitty-gritty of the `MainMenuScreen` class.
@@ -131,7 +125,7 @@ public class MainMenuScreen implements Screen {
 		}
 	}
 
-        //Rest of class still omitted...
+        // Rest of class still omitted...
 
 }
 
@@ -313,18 +307,13 @@ public class GameScreen implements Screen {
 	}
 
 }
-
 ```
 
-This code is almost 95% the same as the original implementation, except now we use a constructor instead of the `create()` method of the `ApplicationListener`, and pass in a `Drop` object, like in the `MainMenuScreen` class. We also start playing the music as soon as the Screen is set to `GameScreen`.
+This code is almost 95% the same as the original implementation, except now we use a constructor instead of the `create()` method of the `ApplicationListener`, and pass in a `Drop` object, like in the `MainMenuScreen` class. We also start playing the music as soon as the Screen is set to `GameScreen`. Moreover, we added a string to the top left corner of the game, which tracks the number of raindrops collected.
 
-We also added a string to the top left corner of the game, which tracks the number of raindrops collected.
+Note that the `dispose()` method of the `GameScreen` class is not called automatically, see the [Screen API](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Screen.html). It is your responsibility to take care of that. You can call this method from the `dispose()` method of the `Game` class, if the `GameScreen` class passes a reference to itself to the `Game` class. It is important to do this, else `GameScreen` assets might persist and occupy memory even after exiting the application.
 
-Note that the `dispose()` method of the `GameScreen` class is not called automatically, see [the Screen API](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Screen.html). It is your responsibility to take care of that. You can call this method from the `dispose()` method of the `Game` class, if the `GameScreen` class passes a reference to itself to the `Game` class. It is important to do this, else `GameScreen` assets might persist and occupy memory even after exiting the application.
-
-That's it, you have the complete game finished. That is all there is to know about the Screen interface and Game abstract Class, and all there is to creating multifaceted games with multiple states.
-
-The full Java code can be found [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-java), the full Kotlin code [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-kotlin).
+And that's it, you have the complete game finished. That is all there is to know about the Screen interface and abstract Game Class, and all there is to creating multifaceted games with multiple states. The **full Java code** can be found [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-java). If you are developing in **Kotlin**, take a look [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-kotlin) for the full code.
 
 ## The Future
 After this tutorial you should have a basic understanding how libGDX works and what to expect going forward. Some things can still be improved, like using the [Memory Management](https://github.com/libgdx/libgdx/wiki/Memory-management#object-pooling) classes to recycle all the Rectangles we have the garbage collector clean up each time we delete a raindrop. OpenGL is also not too fond if we hand it too many different images in a batch (in our case it's OK as we only had two images). Usually one would put all those images into a single `Texture`, also known as a `TextureAtlas`.

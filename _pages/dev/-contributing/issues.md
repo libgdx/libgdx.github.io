@@ -15,7 +15,7 @@ sidebar:
 {% include breadcrumbs.html %}
 
 Please note the issue tracker isn't for personal assistance. If you have a problem that isn't a reproducible bug in the core framework, please use the [community](/community/) for assistance.
-{: .notice--primary}
+{: .notice--info}
 
 Before you report an issue on our [issue tracker](https://github.com/libgdx/libgdx/issues), we ask you to do a few things:
 - Verify that the problem hasn't already been reported on the tracker.

@@ -34,6 +34,9 @@ This will open the following setup that will allow you to generate your project:
 
 <img src="https://i.imgur.com/nI5lQKT.jpg" style="max-width: 500px;"/>
 
+**Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](https://github.com/libgdx/libgdx/wiki/Project-Setup-via-Command-Line) to create your project.
+{: .notice--primary}
+
 You are asked to provide the following parameters:
 * **Name**: the name of the application; lower-case with minuses is usually a good idea, e.g. `mygame`
 * **Package**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
@@ -44,6 +47,9 @@ You are asked to provide the following parameters:
 <img src="https://i.imgur.com/Y4F3UsH.png" style="max-width: 700px;"/>
 
 * **Sub Projects**: libGDX is cross-platform. By default, all the target platforms are included (Desktop; Android; iOS; HTML). There is no need to change the default value unless you are sure you will never compile for a specific target.
+
+**Note:** iOS projects can only be compiled on macOS.
+{: .notice--info}
 
 * **extensions**: the extensions offered are:<br>
     **[Bullet](https://github.com/libgdx/libgdx/wiki/Bullet-physics)**: 3D Collision Detection and Rigid Body Dynamics Library.<br>
@@ -60,10 +66,7 @@ By clicking "Show Third Party Extensions" you can access the list of community-m
 When ready, click "Generate".
 
 **Note:** You may get a message indicating that you have a more recent version of Android build tools or Android API than the recommended. This is not a blocking message and you may continue.
-{: .notice--primary}
-
-**Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](https://github.com/libgdx/libgdx/wiki/Project-Setup-via-Command-Line) to create your project.
-{: .notice--primary}
+{: .notice--info}
 
 ## Project Layout
 This will create a directory called `mygame` with the following layout:
@@ -104,10 +107,10 @@ ios/
 ## What is Gradle?
 libGDX projects are [Gradle](http://www.gradle.org/) projects, which makes managing dependencies and building considerably easier.
 
-A **dependency management** system is an easy way to pull in third-party libraries into your project, without having to manually download them. Instead, the dependency management system just needs you to provide it with the names and versions of the libraries you want to include in your application. This is all done in the Gradle configuration files. Adding, removing and changing the version of a third-party library is as easy as changing a few lines in that configuration file. The dependency management system will pull in the libraries you specified from a central repository (in our case [Maven Central](http://search.maven.org/)) and store them in a directory outside of your project. Find out more in our [wiki](https://github.com/libgdx/libgdx/wiki/Dependency-management-with-Gradle).
-{: .notice--primary}
+Gradle is a **dependency management** system and thus provides an easy way to pull in third-party libraries into your project, without having to manually download them. Instead, Gradle just needs you to provide it with the names and versions of the libraries you want to include in your application. This is all done in the Gradle configuration files. Adding, removing and changing the version of a third-party library is as easy as changing a few lines in that configuration file. The dependency management system will pull in the libraries you specified from a central repository (in our case [Maven Central](http://search.maven.org/)) and store them in a directory outside of your project. Find out more in our [wiki](https://github.com/libgdx/libgdx/wiki/Dependency-management-with-Gradle).
+{: .notice--info}
 
-A **build system** helps with building and packaging your application, without being tied to a specific IDE. This is especially useful if you use a build or continuous integration server, where IDEs aren't readily available. Instead, the build server can call the build system, providing it with a build configuration so it knows how to build your application for different platforms. If you want to know more about deploying your application, take a look [here](https://github.com/libgdx/libgdx/wiki/Deploying-your-application).
-{: .notice--primary}
+In addition, Gradle is also a **build system** helping with building and packaging your application, without being tied to a specific IDE. This is especially useful if you use a build or continuous integration server, where IDEs aren't readily available. Instead, the build server can call the build system, providing it with a build configuration so it knows how to build your application for different platforms. If you want to know more about deploying your application, take a look [here](https://github.com/libgdx/libgdx/wiki/Deploying-your-application).
+{: .notice--info}
 
 **Now you are ready to [import the project into your IDE and run it](/dev/import-and-running/).**
