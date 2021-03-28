@@ -63,12 +63,6 @@ gallery:
   image_path: /assets/images/posts/2021-04-03/effect-rainbow.gif
   alt: "Rainbow Token"
   title: "Rainbow Token"
-
-carousel_elements:
-- image: /assets/images/posts/2021-03-15/retention.png
-- image: /assets/images/posts/2021-03-15/progression.png
-- image: /assets/images/posts/2021-03-15/designevent.png
-- image: /assets/images/posts/2021-03-15/crash.png
 ---
 
  <div class="notice--primary">
