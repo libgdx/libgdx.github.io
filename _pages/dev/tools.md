@@ -31,7 +31,7 @@ feature_row:
     btn_class: "btn--primary"
 
 feature_row2:
-  - image_path: /assets/images/dev/tools/setup_tool_old.jpg
+  - image_path: /assets/images/dev/tools/setup_tool.jpg
     title: "Setup Tool"
     excerpt: 'A simple wizard tool for libGDX projects'
     url: "/assets/downloads/legacy_setup/gdx-setup_latest.jar"
