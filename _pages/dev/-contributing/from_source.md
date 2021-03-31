@@ -54,6 +54,11 @@ All of the projects are hooked up and ready to test given that you have set up y
 
 ![](/assets/images/dev/source/0.png)
 
+You can directly run indidual test and change few options via program arguments: `[options] [Test class name]`
+
+- `--gl30` enable GLES 3 with core profile 3.2 (default is GLES 2.0)
+- `--glErrors` enable GLProfiler and log any GL errors. (default is disabled)
+
 **Android:** Use the following command to install the tests on the test device:
 ```
 ./gradlew tests:gdx-tests-android:installDebug
