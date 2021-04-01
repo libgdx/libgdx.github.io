@@ -16,25 +16,20 @@ toc_sticky: false
 
 {% include breadcrumbs.html %}
 
-# Upcoming (2021)
+# Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## [March](/news/2021/02/jam-march-2021)
-- Jam Suggestions: 7th - 13th
-- Jam Voting: 14th - 20st
-- Jam: 21nd - 27th
-
-## June
+## June 2021
 - Jam Suggestions: 6th - 12th
 - Jam Voting: 13th - 19th
 - Jam: 20st - 26th
 
-## September
+## September 2021
 - Jam Suggestions: 5th - 11th
 - Jam Voting: 12th - 18th
 - Jam: 19th - 25th
 
-## December
+## December 2021
 - Jam Suggestions: 5th - 11th
 - Jam Voting: 12th - 18th
 - Jam: 19th - 25th
@@ -54,6 +49,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [ALICE IN WONDERLAND](https://itch.io/jam/libgdx-jam-16) (March 2021)
 * [The player is asleep](https://itch.io/jam/libgdx-jam-15) (December 2020)
 * [Parallel Worlds](https://itch.io/jam/libgdx-jam-september-2020) (September 2020)
 * [Tower Defense Without Towers](https://itch.io/jam/libgdx-jam-june-2020) (June 2020)
