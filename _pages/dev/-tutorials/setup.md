@@ -42,7 +42,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 ## (3.) Eclipse
 - JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
-- Android: not officially supported.
+- Android: not officially supported, but you may have success with [Andmore](https://projects.eclipse.org/projects/tools.andmore) or tinkering around with an older [ADT](https://marketplace.eclipse.org/content/android-development-tools-eclipse) version
 - For iOS: [RobovmOSS Eclipse plugin](http://robovm.mobidevelop.com)
 
 ## (4.) Netbeans
@@ -50,7 +50,7 @@ As Netbeans is not commonly used in the libGDX community, it may prove difficult
 {: .notice--primary}
 
 - JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
-- IDE itself: [Netbeans](https://netbeans.apache.org/download/index.html)
+- IDE itself: [Netbeans](https://netbeans.apache.org/download/index.html) & the Netbeans Gradle Plugin
 - Android: not officially supported.
 - iOS: not officially supported.
 
