@@ -17,11 +17,14 @@ sidebar:
 # Prerequisites
 Building the natives is slightly more involved. The natives are built for every platform we target:
 
-- Desktop Windows, Linux and Mac both 32 and 64 bit
-- Android arm6, arm7, x86, x86_64
-- iOS i386, arm7, arm64, x86_64
+- Windows (32 and 64 bit), Linux (arm32, arm64, x86_64), macOS (arm64, x86_64)
+- Android (armeabi-v7a, arm64-v8a, x86, x86_64)
+- iOS (armv7, arm64, x86_64)
 
-To do this we use a Linux host for crosscompilation of Windows/Linux and Android natives. We also use a Mac host for the iOS and macOS natives. Mac and iOS natives can only be built on macOS.
+To do this we use [GitHub Actions](https://github.com/libgdx/libgdx/actions), which compiles the Windows, Linux and Android natives on a Linux host and the macOS and iOS natives on a mac host. If you are interested in the behind-the-scenes stuff, you should take a look at the [gdx-jnigen project](https://github.com/libgdx/gdx-jnigen).
+
+Please note that the information below may be outdated. If you are interested in building libGDX's natives yourself, be sure to check out our actual [build configuration](https://github.com/libgdx/libgdx/blob/master/.github/workflows/build-snapshot.yml) on GitHub.
+{: .notice--danger}
 
 # Linux host
 What you need:
@@ -51,7 +54,7 @@ What you need:
 # Compiling
 Compiling the natives is handled through **Ant** scripts.
 
-To compile the Mac and iOS natives, run:
+To compile the macOS and iOS natives, run:
 
 ```
 ./ant -f build-mac-ios.xml
