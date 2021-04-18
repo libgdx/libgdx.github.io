@@ -17,7 +17,7 @@ author_displayname: "damios"
 categories: news
 ---
 
-We know that a lot of you are still “stuck” on older versions of libGDX. The following post is intended to make porting your games easier by summarising all the breaking changes that happened in the last two years. If you are looking for the past changelogs themselves, check out [this](/news/changelog/) page.
+We know that a lot of you are still stuck on older versions of libGDX. The following post is intended to make porting your games easier by summarising all the breaking changes that happened in the last two years. If you are looking for the past changelogs themselves, check out [this](/news/changelog/) page.
 
 First things first: be sure to bring the versions of gradle, any plugins and your dependencies [up to date](https://libgdx.com/dev/versions/)!
 {: .notice--warning}
