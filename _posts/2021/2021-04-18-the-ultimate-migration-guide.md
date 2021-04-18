@@ -27,10 +27,10 @@ First things first: be sure to bring the versions of gradle, any plugins and you
 - **[1.10.0] Android ARMv5 (armeabi) support has been dropped. Remove any dependency with the** `natives-armeabi` **qualifier from your gradle build file. This applies to gdx-platform, gdx-bullet-platform, gdx-freetype-platform and gdx-box2d-platform.**
 
 ## Controllers
-- **Since version 1.9.13, [gdx-controllers](https://github.com/libgdx/gdx-controllers) now use its own versioning scheme, the latest version being** `2.2.0`**. Find out more in the corresponding [migration guide](https://github.com/libgdx/gdx-controllers/wiki/Migrate-from-v1).**
+- **Since version 1.9.13, [gdx-controllers](https://github.com/libgdx/gdx-controllers) now uses its own versioning scheme, the latest version being** `2.2.0`**. Find out more in the corresponding [migration guide](https://github.com/libgdx/gdx-controllers/wiki/Migrate-from-v1).**
 
 ## Graphics
-- [1.9.11] DefaultTextureBinder `WEIGHTED` strategy replaced by `LRU` strategy ([#5942](https://github.com/libgdx/libgdx/pull/5942)).
+- [1.9.11] DefaultTextureBinder `WEIGHTED` strategy was replaced by `LRU` strategy ([#5942](https://github.com/libgdx/libgdx/pull/5942)).
 - [1.9.11] ShaderProgram begin and end methods are deprecated in favour to bind method ([#5944](https://github.com/libgdx/libgdx/pull/5944)).
 - [1.9.14] `AnimationDesc#update` now returns `-1` (instead of `0`) if an animation is not finished ([#6303](https://github.com/libgdx/libgdx/pull/6303))
 
