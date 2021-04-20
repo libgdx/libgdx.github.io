@@ -19,6 +19,9 @@ sidebar:
 # libGDX {{ site.data.versions.libgdxRelease }}
 Keep up to date with the latest versions of dependencies and dev tools!
 
+Please note that if you are using a Web subproject, the maximum Gradle version supported is 6.8.3, which does not support Java 16!
+{: .notice--success}
+
 ### RoboVM
 - RoboVM Version: {{ site.data.versions.robovmVersion }}
 - RoboVM Gradle Plugin Version: {{ site.data.versions.robovmPluginVersion }}
