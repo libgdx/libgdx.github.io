@@ -19,7 +19,7 @@ sidebar:
 # libGDX {{ site.data.versions.libgdxRelease }}
 Keep up to date with the latest versions of dependencies and dev tools!
 
-Please note that if you are using a Web subproject, the maximum Gradle version supported is 6.8.3, which does not support Java 16!
+If you are using **Java 16**, be sure to update to Gradle 7.0 (`./gradlew wrapper --gradle-version 7.0`)! Please be aware, that as Gretty doesn't yet work with Gradle 7, you are advised to stay on Java 8-15 if you are using a Web subproject.
 {: .notice--success}
 
 ### RoboVM
