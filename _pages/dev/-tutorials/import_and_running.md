@@ -32,16 +32,21 @@ You may need to refresh the Gradle project after the initial import, if some dep
 If you want to execute your freshly imported project, you have to follow different steps, depending on your IDE and the platform you are targeting.
 ## Desktop
 ### In IDEA/Android Studio:
+1. Extend the Gradle tab on the right sight of your window: <br/>
+  ![](/assets/images/dev/idea/3.png)
+2. Expand the tasks of your project and then select: desktop -> other -> run.
+
+<u><b>Alternatively</b></u>, you can create a run configuration:
 1. Right click your DesktopLauncher class
 2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
-3. Open up Run Configurations
+3. Open up Run Configurations <br/>
   ![](/assets/images/dev/idea/0.png)
-4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `core/assets` folder
+4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `core/assets` folder <br/>
   ![](/assets/images/dev/idea/1.png)
 5. Run your application using the run button
 
 ### In Eclipse:
-1. Right click your desktop project > Run as > Run Configurations...
+1. Right click your desktop project -> Run as -> Run Configurations...
 2. In the top left click the icon to create a new run configuration
   ![](/assets/images/dev/eclipse/0.png)
 3. As Main class select your `DesktopLauncher` class
@@ -51,14 +56,14 @@ If you want to execute your freshly imported project, you have to follow differe
 6. Then select your asset folder (located in `core/assets`)
 
 ### In Netbeans:
-Right click the desktop project > Run
+Right click the desktop project -> Run
 
 <br/>
 
 ## Android
-- **IDEA/Android Studio:** Right click AndroidLauncher > Run AndroidLauncher
-- **Eclipse:** Right click Android project > Run As > AndroidApplication
-- **Netbeans:** Right click Android project > Run As > AndroidApplication
+- **IDEA/Android Studio:** Right click AndroidLauncher -> Run AndroidLauncher
+- **Eclipse:** Right click Android project -> Run As -> AndroidApplication
+- **Netbeans:** Right click Android project -> Run As -> AndroidApplication
 
 <br/>
 
