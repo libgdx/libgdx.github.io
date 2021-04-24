@@ -4,3 +4,7 @@ _site
 Gemfile.lock
 vendor
 .DS_Store
+
+# for IntelliJ
+.idea
+*.iml
