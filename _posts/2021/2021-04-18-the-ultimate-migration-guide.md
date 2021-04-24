@@ -79,3 +79,16 @@ The method signatures for `GL20#glGetActiveUniform` and `#glGetActiveAttrib` wer
 
 ### 2. iOS app uses only a quarter of the screen
 If you are wondering why your iOS app is displayed in the lower left corner and is using only half of the screen’s width and height, you should take a look at the [iOS section above](#ios).
+
+### 3. Could not resolve Gretty dependency
+```
+> Task :html:beforeRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':html:beforeRun'.
+> Could not resolve all files for configuration ':html:grettyRunnerJetty94'.
+   > Could not find org.gretty:gretty-runner-jetty94:3.0.2.
+```
+The Gretty dependency could not be resolved, because the corresponding repository is missing. Open the main `build.gradle` file in your project and in both of the two `repositories {}` sections add `gradlePluginPortal()`.
