@@ -1,7 +1,7 @@
 ---
 permalink: /community/jams/
 title: "Game Jams"
-classes: wide2
+classes: wide3
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

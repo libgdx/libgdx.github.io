@@ -1,5 +1,5 @@
 ---
-layout: splash #home # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: splash
 author_profile: false
 
 header:
@@ -78,12 +78,24 @@ carousel_elements:
 ---
 
 <style>
+  .splash {
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
   .page__title {
     display: none;
   }
+
+  .intro_text .archive__item-body {
+      max-width: 700px;
+      width: auto;
+  }
 </style>
 
-{% include feature_row id="intro" type="center" %}
+<div class="intro_text">
+  {% include feature_row id="intro" type="center" %}
+</div>
 
 <div style="max-width: 600px !important; margin-left: auto; margin-right: auto;">
       {% include carousel.html elements=page.carousel_elements height="337" unit="px" duration="7" %}

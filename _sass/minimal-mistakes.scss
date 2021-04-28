@@ -1,8 +1,8 @@
 /* overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes.scss */
 
 /*!
- * Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
- * Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+ * Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+ * Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
 
@@ -54,36 +54,46 @@
   margin-top: 0px !important;
 }
 
-.wide2 { // see https://github.com/mmistakes/minimal-mistakes/issues/1322#issuecomment-571208318
+.wide2 { // no sidebars
   .page {
-    float: left;
+    clear:both;
+    float: none;
+    margin: 0 auto;
+    max-width: 880px;
+    padding-right: 0px;
+    padding-left: 0px;
     width: 100%;
-    @include breakpoint($large) {
-      padding-left: 10%;
-    }
-
-    @include breakpoint($x-large) {
-      padding-left: 10%;
-    }
   }
 
   .page__related {
+    float: none;
+    margin: 2em auto 0;
+    max-width: 960px;
+    width: auto;
+  }
+
+  .pagination {
+    margin-bottom: 2em;
+  }
+}
+
+.wide3 { // only right sidebar, https://github.com/mmistakes/minimal-mistakes/issues/1322#issuecomment-571208318
+  .page {
+    float: left;
     width: 100%;
+    max-width: 1235px;
+
     @include breakpoint($large) {
-      padding-left: 0%;
+      padding-left: 10%;
     }
 
     @include breakpoint($x-large) {
-      padding-left: 0%;
+      padding-left: 10%;
     }
   }
 }
 
 /* Theme overrides */
-.sidebar__right {
-  margin-bottom: 45px;
-}
-
 .grid__item {
   .archive__item-teaser {
       @include breakpoint($small) {
@@ -94,4 +104,20 @@
         max-height: 150px;
       }
     }
+}
+
+.sidebar__right {
+  margin-bottom: 45px;
+}
+
+.wide { // only left sidebar
+  .page {
+    float: left;
+    max-width: 940px;
+    width: auto;
+
+    @include breakpoint($large) {
+      padding-left: 25px;
+    }
+  }
 }

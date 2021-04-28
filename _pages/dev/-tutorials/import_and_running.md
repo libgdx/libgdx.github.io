@@ -146,8 +146,7 @@ The `ANDROID_HOME` environment variable needs to be pointing to a valid android 
 Then go to [`http://localhost:8080/index.html`](http://localhost:8080/index.html).
 
 ### Gradle tasks are failing?
-If when you invoke gradle, the build or refresh fails to get more information, run the same command again and add the --debug arguments to the command,
-e.g.:
+If whenever you invoke Gradle, the build or refresh fails to get more information, run the same command again and add the `--debug` parameter to the command, e.g.:
 
 ```
 ./gradlew desktop:run --debug

@@ -34,10 +34,10 @@ cd libgdx
 
     a) **Via IntelliJ/Android Studio:**
 
-     - File > Open > libGDX root build.gradle
+     - File -> Open -> libGDX root `build.gradle`
      - Import all projects
      - Wait until everything is synced and indexed
-     - View > Tool Windows > Gradle, sync gradle button
+     - View -> Tool Windows -> Gradle, sync gradle button
      - Make sure the Gradle sync succeeds, if not resolve the issues at hand.
      - Go into preferences and turn off configure on demand
 
@@ -48,9 +48,9 @@ If you encounter any issues while setting up your development environment for li
 <br/>
 
 # Tests
-All of the projects are hooked up and ready to test given that you have set up your system correctly, so give them a go.
+If you set everything up correctly, you can try to give the libGDX tests a go.
 
-**LWJGL/LWJGL3:** Run the `LwjglTestStart` class located in tests/gdx-tests/gdx-tests-lwjgl/src by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ:
+**LWJGL/LWJGL3:** Run the `LwjglTestStart` class located in tests/gdx-tests/gdx-tests-lwjgl/src (or tests/gdx-tests/gdx-tests-lwjgl3/src respectively) by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ:
 
 ![](/assets/images/dev/source/0.png)
 
@@ -64,7 +64,7 @@ You can directly run individual tests and/or configure the test starter by setti
 ./gradlew tests:gdx-tests-android:installDebug
 ```
 
-**GWT:** Start the test server as follows:
+**GWT:** To access the tests at [`http://localhost:8080/index.html`](http://localhost:8080/index.html), start a local server as follows:
 ```
 ./gradlew tests:gdx-tests-gwt:superDev
 ```
