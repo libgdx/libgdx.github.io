@@ -24,7 +24,7 @@ First things first: be sure to bring the versions of gradle, any plugins and you
 
 ## Android
 - **[1.9.12]** `Gdx.files.external` **on Android now uses an app's external storage directory. See this [wiki article](https://github.com/libgdx/libgdx/wiki/File-handling#android) for more information.**
-- **[1.10.0] Android ARMv5 (armeabi) support has been dropped. Remove any dependency with the** `natives-armeabi` **qualifier from your gradle build file. This applies to gdx-platform, gdx-bullet-platform, gdx-freetype-platform and gdx-box2d-platform.**
+- **[1.10.0] Android ARMv5 (armeabi) support has been dropped. Remove any dependency with the** `natives-armeabi` **qualifier (but not** `natives-armeabi-v7a`**!) from your gradle build files. This applies to gdx-platform, gdx-bullet-platform, gdx-freetype-platform and gdx-box2d-platform.**
 
 ## Controllers
 - **Since version 1.9.13, [gdx-controllers](https://github.com/libgdx/gdx-controllers) now uses its own versioning scheme, the latest version being** `2.2.0`**. Find out more in the corresponding [migration guide](https://github.com/libgdx/gdx-controllers/wiki/Migrate-from-v1).**
