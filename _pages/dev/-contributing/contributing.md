@@ -25,7 +25,7 @@ If you modify a public API, or add a new one, make sure to add these changes to 
 If you want to poll the brains of other devs, either open an issue on our issue tracker, send a pull request and start a conversation on Github, or join our official [Discord server](/community/discord/).
 
 ## Contributor License Agreement
-libGDX is licensed under the [Apache 2.0 license](http://en.wikipedia.org/wiki/Apache_License). Before we can accept (major) code contributions, we need you to sign our [Contributor License Agreement](https://github.com/libgdx/libgdx/blob/master/CLA.txt). Just print it out, fill in the blanks and send a copy to contact@badlogicgames.com, with the subject `[Libgdx] CLA`.
+libGDX is licensed under the [Apache 2.0 license](http://en.wikipedia.org/wiki/Apache_License). Before we can accept (major) code contributions, we need you to sign our [Contributor License Agreement](https://github.com/libgdx/libgdx/blob/master/CLA.txt). Just print it out, fill in the blanks and send a copy to contact@badlogicgames.com, with the subject `[libGDX] CLA`.
 
 Signing the CLA will allow us to use and distribute your code. This is a non-exclusive license, so you retain all rights to your code. It's a fail-safe for us should someone contribute essential code and later decide to take it back.
 {: .notice--info}

@@ -22,7 +22,7 @@ Next up, you need to import your project into your IDE.
 
 
 # Importing the Project
-In **IntelliJ IDEA or Android Studio**, you can choose to open the `build.gradle` file and select "Open as Project" to get started. In **Eclipse**, choose `File -> Import... -> Gradle -> Existing Gradle Project` (make sure that your freshly generated project is not located inside of your workspace). In Netbeans it is `File -> Open Project`.
+In **IntelliJ IDEA or Android Studio**, you can choose to open the `build.gradle` file and select "Open as Project" to get started. In **Eclipse**, choose `File -> Import... -> Gradle -> Existing Gradle Project` (make sure that your freshly generated project is not located inside of your workspace). In **Netbeans** it is `File -> Open Project`.
 
 You may need to refresh the Gradle project after the initial import, if some dependencies weren't downloaded yet. In **IntelliJ IDEA/Android Studio**, the `Reimport all Gradle projects` button is a pair of circling arrows in the Gradle tool window, which can be opened with `View -> Tool Windows -> Gradle`. In **Eclipse** right click on your project `Gradle -> Refresh Gradle Project`.
 
@@ -32,11 +32,16 @@ You may need to refresh the Gradle project after the initial import, if some dep
 If you want to execute your freshly imported project, you have to follow different steps, depending on your IDE and the platform you are targeting.
 ## Desktop
 ### In IDEA/Android Studio:
+1. Extend the Gradle tab on the right sight of your window: <br/>
+  ![](/assets/images/dev/idea/3.png)
+2. Expand the tasks of your project and then select: desktop -> other -> run.
+
+<u><b>Alternatively</b></u>, you can create a run configuration:
 1. Right click your DesktopLauncher class
 2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
 3. Open up Run Configurations <br/>
   ![](/assets/images/dev/idea/0.png)
-4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `core/assets` folder
+4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `core/assets` folder  (or `android/assets` if you are using an Android subproject)<br/>
   ![](/assets/images/dev/idea/1.png)
 
     On **macOS**, LWJGL3 projects require one extra step: In your Run Configuration you need to set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](https://github.com/libgdx/libgdx/wiki/Starter-classes-and-configuration#common-issues).
@@ -44,27 +49,29 @@ If you want to execute your freshly imported project, you have to follow differe
 5. Run your application using the run button
 
 ### In Eclipse:
-1. Right click your desktop project > Run as > Run Configurations...
-2. In the top left click the icon to create a new run configuration
+1. Right click your desktop project -> Run as -> Run Configurations...
+2. On the right side, select Java Application: <br/>
+  ![](/assets/images/dev/eclipse/3.png)
+3. At the top left, click the icon to create a new run configuration:
   ![](/assets/images/dev/eclipse/0.png)
-3. As Main class select your `DesktopLauncher` class
-4. After that, click on the Arguments tag
-5. At the bottom, under Working directory select 'Other' -> Workspace...
+4. As Main class select your `DesktopLauncher` class
+5. After that, click on the Arguments tab
+6. At the bottom, under 'Working directory' select 'Other' -> Workspace...
   ![](/assets/images/dev/eclipse/1.png)
 
     On **macOS**, LWJGL3 projects require one extra step: In your Run Configuration you need to set the VM arguments to `-XstartOnFirstThread`. Additional information can be found [here](https://github.com/libgdx/libgdx/wiki/Starter-classes-and-configuration#common-issues).
     {: .notice--warning}
-6. Then select your asset folder (located in `core/assets`)
+7. Then select your asset folder located in `core/assets` (or `android/assets` if you are using an Android subproject)
 
 ### In Netbeans:
-Right click the desktop project > Run
+Right click the desktop project -> Run
 
 <br/>
 
 ## Android
-- **IDEA/Android Studio:** Right click AndroidLauncher > Run AndroidLauncher
-- **Eclipse:** Right click Android project > Run As > AndroidApplication
-- **Netbeans:** Right click Android project > Run As > AndroidApplication
+- **IDEA/Android Studio:** Right click AndroidLauncher -> Run AndroidLauncher
+- **Eclipse:** Right click Android project -> Run As -> AndroidApplication
+- **Netbeans:** Right click Android project -> Run As -> AndroidApplication
 
 <br/>
 
@@ -147,8 +154,7 @@ The `ANDROID_HOME` environment variable needs to be pointing to a valid android 
 Then go to [`http://localhost:8080/index.html`](http://localhost:8080/index.html).
 
 ### Gradle tasks are failing?
-If when you invoke gradle, the build or refresh fails to get more information, run the same command again and add the --debug arguments to the command,
-e.g.:
+If whenever you invoke Gradle, the build or refresh fails to get more information, run the same command again and add the `--debug` parameter to the command, e.g.:
 
 ```
 ./gradlew desktop:run --debug

@@ -31,26 +31,26 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 - JDK: is provided by Android Studio
 - IDE itself: [Android Studio](https://developer.android.com/studio)
 - Android: is offered out-of-the-box
-- For iOS: [RoboVM OSS Intellij plugin](http://robovm.mobidevelop.com)
+- For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
 
 ## (2.) IDEA
 - JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) (the "Community" edition is sufficient)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
-- For iOS: [RoboVM OSS Intellij plugin](http://robovm.mobidevelop.com)
+- For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
 
 ## (3.) Eclipse
 - JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
-- Android: not officially supported.
-- For iOS: [RobovmOSS Eclipse plugin](http://robovm.mobidevelop.com)
+- Android: not officially supported, but you may have success with [Andmore](https://projects.eclipse.org/projects/tools.andmore) or tinkering around with an older [ADT](https://marketplace.eclipse.org/content/android-development-tools-eclipse) version
+- For iOS: [RoboVM OSS Eclipse plugin](http://robovm.mobidevelop.com)
 
 ## (4.) Netbeans
 As Netbeans is not commonly used in the libGDX community, it may prove difficult to get any help if IDE-specific issues arise.
 {: .notice--primary}
 
 - JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
-- IDE itself: [Netbeans](https://netbeans.apache.org/download/index.html)
+- IDE itself: [Netbeans](https://netbeans.apache.org/download/index.html) & the Netbeans Gradle Plugin
 - Android: not officially supported.
 - iOS: not officially supported.
 

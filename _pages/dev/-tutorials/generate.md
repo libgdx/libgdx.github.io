@@ -10,8 +10,10 @@ header:
   overlay_image: /assets/images/dev/dev.jpeg
   caption: "Photo credit: [**Florian Olivo**](https://unsplash.com/photos/Ek9Znm8lQ1U)"
   actions:
-   - label: "Download gdx-setup"
-     url: "/assets/downloads/legacy_setup/gdx-setup_latest.jar"
+    - label: "Stable Release"
+      url: "/assets/downloads/legacy_setup/gdx-setup_latest.jar"
+    #- label: "Nightly Version"
+    #  url: "https://libgdx.badlogicgames.com/nightlies/dist/gdx-setup.jar"
 
 excerpt: "libGDX offers a setup tool, which automatically creates a project and downloads everything necessary."
 
@@ -26,7 +28,6 @@ To setup your first project and download the necessary dependencies, libGDX offe
 {% include setup_flowchart.html current='1' %}
 
 1. Download the libGDX [Project Setup Tool](/assets/downloads/legacy_setup/gdx-setup_latest.jar)
-<!-- https://libgdx.badlogicgames.com/nightlies/dist/gdx-setup.jar -->
 
 2. Open your command line tool, go to the download folder and run <br>`java -jar ./gdx-setup_latest.jar`
 

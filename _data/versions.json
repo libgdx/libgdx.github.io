@@ -1,10 +1,10 @@
 {
-  "libgdxRelease":"1.9.13",
+  "libgdxRelease":"1.10.0",
   "robovmVersion":"2.3.12",
   "robovmPluginVersion":"2.3.12",
-  "androidBuildtoolsVersion":"29.0.2",
+  "androidBuildtoolsVersion":"29.0.3",
   "androidSDKVersion":"29",
-  "androidGradleToolVersion":"3.4.3",
+  "androidGradleToolVersion":"3.5.4",
   "gwtVersion":"2.8.2",
   "gwtPluginVersion":"1.0.13"
 }

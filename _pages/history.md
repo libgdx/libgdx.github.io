@@ -228,7 +228,7 @@ p a:active {
   <div class="container right">
     <div class="content">
       <h2>2009 – When It All Began</h2>
-      <p>It all started in the middle of 2009, when Mario Zechner, the creator of libGDX, started developing a framework called AFX (Android Effects) to create Android Games. When he found that deploying the changes from desktop to Android device was cumbersome, he modified AFX to work on desktop as well, making it easier to test programs.</p>
+      <p>It all started in the middle of 2009, when <a href="https://twitter.com/badlogicgames">Mario Zechner</a>, the creator of libGDX, started developing a framework called AFX (Android Effects) to create Android Games. When he discovered that deploying the changes from desktop to an Android device was cumbersome, he modified AFX to work on desktop as well, making it easier to test programs.</p>
     </div>
   </div>
 </div>
