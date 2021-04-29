@@ -41,19 +41,21 @@ If you want to execute your freshly imported project, you have to follow differe
 2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
 3. Open up Run Configurations <br/>
   ![](/assets/images/dev/idea/0.png)
-4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `core/assets` folder <br/>
+4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `core/assets` folder  (or `android/assets` if you are using an Android subproject)<br/>
   ![](/assets/images/dev/idea/1.png)
 5. Run your application using the run button
 
 ### In Eclipse:
 1. Right click your desktop project -> Run as -> Run Configurations...
-2. In the top left click the icon to create a new run configuration
+2. On the right side, select Java Application: <br/>
+  ![](/assets/images/dev/eclipse/3.png)
+3. At the top left, click the icon to create a new run configuration:
   ![](/assets/images/dev/eclipse/0.png)
-3. As Main class select your `DesktopLauncher` class
-4. After that, click on the Arguments tag
-5. At the bottom, under Working directory select 'Other' -> Workspace...
+4. As Main class select your `DesktopLauncher` class
+5. After that, click on the Arguments tab
+6. At the bottom, under 'Working directory' select 'Other' -> Workspace...
   ![](/assets/images/dev/eclipse/1.png)
-6. Then select your asset folder (located in `core/assets`)
+7. Then select your asset folder located in `core/assets` (or `android/assets` if you are using an Android subproject)
 
 ### In Netbeans:
 Right click the desktop project -> Run
