@@ -79,20 +79,14 @@ Right click the desktop project -> Run
 3. Select the provisioning profile and simulator/device target
 4. Run the created run configuration
 
-For more information on using and configuring the RoboVM intellij plugin please see the [documentation](http://robovm.mobidevelop.com).
-
-**NOTE:** This documentation is for the 'Official' RoboVM plugin. We are currently using a forked version, which means some of the information (such as about licensing) may be redundant. Configuring and using the plugin should however be very similar.
-{: .notice--primary}
+For more information on using and configuring the RoboVM IntelliJ plugin please see the [documentation](http://robovm.mobidevelop.com).
 
 ### In Eclipse
 - Right click the iOS RoboVM project > Run As > RoboVM runner of your choice
 
 ![](/assets/images/dev/eclipse/2.png)
 
-For more information on using and configuring the RoboVM intellij plugin please see the [documentation](http://robovm.mobidevelop.com).
-
-**NOTE:** This documentation is for the 'Official' RoboVM plugin. We are currently using a forked version, which means some of the information (such as about licensing) may be redundant. Configuring and using the plugin should however be very similar.
-{: .notice--primary}
+For more information on using and configuring the RoboVM IntelliJ plugin please see the [documentation](http://robovm.mobidevelop.com).
 
 <br/>
 

@@ -25,8 +25,8 @@ First off, you need an IDE (Integrated Development Environment). It is basically
 The java world offers a lot of different IDEs. All of them will have minor advantages and disadvantages, but in the end they all do their job, so feel free to choose whichever you like most.
 
 ## (1.) Android Studio
-For newcomers wanting to not only target desktop, but mobile platforms as well, we recommend Android Studio.
-{: .notice--primary}
+For newcomers wanting to not only target desktop, but mobile platforms as well, **we recommend Android Studio**.
+{: .notice--info}
 
 - JDK: is provided by Android Studio
 - IDE itself: [Android Studio](https://developer.android.com/studio)
@@ -34,31 +34,43 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 - For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
 
 ## (2.) IDEA
-- JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
+- JDK 8+: there are different distributions, but [Adopt OpenJDK](https://adoptopenjdk.net) should fit your needs
+
+   At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
+   {: .notice}
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) (the "Community" edition is sufficient)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
 
 ## (3.) Eclipse
-- JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
+- JDK 8+: there are different distributions, but [Adopt OpenJDK](https://adoptopenjdk.net) should fit your needs
+
+   At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
+   {: .notice}
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
 - Android: not officially supported, but you may have success with [Andmore](https://projects.eclipse.org/projects/tools.andmore) or tinkering around with an older [ADT](https://marketplace.eclipse.org/content/android-development-tools-eclipse) version
 - For iOS: [RoboVM OSS Eclipse plugin](http://robovm.mobidevelop.com)
 
 ## (4.) Netbeans
 As Netbeans is not commonly used in the libGDX community, it may prove difficult to get any help if IDE-specific issues arise.
-{: .notice--primary}
+{: .notice--info}
 
-- JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
+- JDK 8+: there are different distributions, but [Adopt OpenJDK](https://adoptopenjdk.net) should fit your needs
+
+    At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
+   {: .notice}
 - IDE itself: [Netbeans](https://netbeans.apache.org/download/index.html) & the Netbeans Gradle Plugin
 - Android: not officially supported.
 - iOS: not officially supported.
 
 ## (5.) No IDE
-It is also possible to develop libGDX applications entirely without any IDE, just using a simple editor like Notepad or [Vim](https://www.vim.org). This is **not** recommended, because IDEs provide some very convenient features, such as code completion and error checking. However, if you insist on doing so: libGDX applications are Gradle applications, so they can be build and executed via the commandline.
-{: .notice--primary}
+It is also possible to develop libGDX applications entirely without any IDE, just using a simple editor like Notepad or [Vim](https://www.vim.org). This is **not** recommended, because IDEs provide some very convenient features, such as code completion and error checking. However, if you insist on doing so: libGDX applications are Gradle applications, so they can be built and executed via the commandline.
+{: .notice--info}
 
-- JDK 8+: [Adopt OpenJDK](https://adoptopenjdk.net) (this should fit your needs; see [here](https://github.com/libgdx/libgdx/wiki/Java-Development-Kit---Selection) for more information)
+- JDK 8+: there are different distributions, but [Adopt OpenJDK](https://adoptopenjdk.net) should fit your needs
+
+   At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
+   {: .notice}
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - Set the ANDROID_HOME environment variable, or use gradle.properties
 
