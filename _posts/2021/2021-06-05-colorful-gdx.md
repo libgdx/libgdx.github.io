@@ -32,8 +32,8 @@ multiple colors (without creating temporary objects), edit properties of a color
 String syntax, if you want.
 
 It doesn't feel right to start a showcase for a very visual library without some eye candy, so here's a visualization of
-different color spaces and their different shapes. It's here because it looks cool; in practice you don't need to know
-about this.
+different color spaces and their different shapes. It's here because it looks cool and was made with this library; in
+practice you don't need to know about this.
 
 ![](/assets/images/posts/2021-06-05/color_solids.png)
 
@@ -165,20 +165,27 @@ ColorfulBatch batch = new ColorfulBatch();
 Once you have your Batch, you can set a color on it right away with `setPackedColor(float)`. As mentioned earlier,
 colorful-gdx almost always stores colors as "packed" floats in colorful-gdx, and many are predefined in `Palette` and/or
 `SimplePalette` in your color space's package. There's no need to use the specific colors in Palette and SimplePalette
-in your game, and to be honest, some names in Palette are pretty bad. Give me a break, I had to name 256 of them! You
-can browse the colors on colorful-gdx's (bare-bones) web pages:
+in your game, and to be honest, some names in Palette are pretty bad. Give me a break, I had to name 256 of them! 
+SimplePalette has simpler names, as one might expect, all of them one word. You can browse the colors on colorful-gdx's
+(bare-bones) web pages:
 
- - [By name, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableOklab.html)
- - [By hue, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableHueOklab.html)
- - [By lightness, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableValueOklab.html)
- - [By name, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableRGB.html)
- - [By hue, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableHueRGB.html)
- - [By lightness, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableValueRGB.html)
+ - [Palette, by name, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableOklab.html)
+ - [Palette, by hue, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableHueOklab.html)
+ - [Palette, by lightness, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableValueOklab.html)
+ - [Palette, by name, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableRGB.html)
+ - [Palette, by hue, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableHueRGB.html)
+ - [Palette, by lightness, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableValueRGB.html)
+ - [SimplePalette, by name, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleOklab.html)
+ - [SimplePalette, by hue, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleHueOklab.html)
+ - [SimplePalette, by lightness, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleValueOklab.html)
+ - [SimplePalette, by name, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleRGB.html)
+ - [SimplePalette, by hue, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleHueRGB.html)
+ - [SimplePalette, by lightness, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleValueRGB.html)
 
 The Oklab pages show the `L`, `A`, and `B` channel values for each color, while the RGB pages already have their
 channels displayed in the RGBA8888 `hex code` column, and don't repeat that info. Both show `Hue` and `Saturation` as
 columns, but RGB also shows `Lightness`, while Oklab already showed that in its `L` column. Alternatively, you can do
-what I do:  look at the pretty colors, then copy a name when I've found one I like (I really like the "By hue" pages
+what I do:  look at the pretty colors, then copy a name when I've found one I like (I really like the "by hue" pages
 for this).
 
 Tinting with one of these predefined colors is easy:
@@ -194,13 +201,14 @@ change to the original colors in Textures you draw. In libGDX normally, the neut
 libGDX SpriteBatch, if you use a darker color than the neutral color, then the shown Textures get darker. Unlike in a
 normal libGDX SpriteBatch, there are colors that are lighter than the neutral color -- there are colors like
 `Palette.LIGHT_GRAY` here, but nothing can be lighter than white. If you set the batch color to a lighter color, then
-the shown textures will be lighter. There's a scale here of grayscale colors (the colors in the "By hue" pages above
-have them between Black and White), and all grayscale colors don't affect the hue or saturation of Textures. This is a
-key detail; colors that aren't exactly grayscale, but are still grayish, will have less effect on hue and saturation
-than very saturated, vivid colors. Using vibrant colors will mean very strong, possibly-overpowering tints, and all
-levels of saturation can be useful for something. If you want to take an already-saturated Texture and desaturate it,
-then you need something more than what SpriteBatch can provide; it will take ColorfulBatch and *one whole extra line* of
-code. It is time to master... the twerk. I mean, tweak. [It's an easy typo!](https://github.com/libgdx/libgdx/pull/6080)
+the shown textures will be lighter. There's a scale here of grayscale colors (the colors in the "Palette, by hue" pages
+above have them between Black and White), and all grayscale colors don't affect the hue or saturation of Textures. This
+is a key detail; colors that aren't exactly grayscale, but are still grayish, will have less effect on hue and
+saturation than very saturated, vivid colors. Using vibrant colors will mean very strong, possibly-overpowering tints,
+and all levels of saturation can be useful for something. If you want to take an already-saturated Texture and
+desaturate it, then you need something more than what SpriteBatch can provide; it will take ColorfulBatch and *one whole
+extra line* of code. It is time to master... the twerk. I mean, tweak.
+[It's an easy typo!](https://github.com/libgdx/libgdx/pull/6080)
 
 ### Tweaking
 Here, things get more advanced; the rabbit hole goes deeper, and your colorful talents become far more powerful.
@@ -253,7 +261,12 @@ a red color. If you instead go to the left, more green (well, cyan). If you go u
 blue. **When you use the tweak in Oklab**, the tweak can still magnify or shrink A and B, but it does so relative to the
 center (grayscale), rather than black like in RGB. This is what makes Oklab's tweak more useful; not only is lightness
 simple to adjust with just one channel (L), colorful-ness is simple to adjust by using the same change for the A and B
-channels. Before, I gave an example that desaturates colors and increases contrast. How about some other options?
+channels. Adjusting L isn't centered like A and B are; if you increase L on the tweak, it will make lightness range
+higher but no lower, and if you decrease it, the lightest colors become unavailable. The color can be useful with any
+kind of reduced range, moving L so a range like 0.0 through 0.4 is raised up to 0.3 to 0.7. That's possible with an L
+tweak value of 0.93, because 0.93 is higher than the neutral value for Oklab's lightness (0.63) by 0.3. 
+
+Before, I gave an example that desaturates colors and increases contrast. How about some other options?
 
 ```java
 // This lightens significantly and increases saturation slightly.
