@@ -39,7 +39,7 @@ This will open the following setup that will allow you to generate your project:
 {: .notice--primary}
 
 You are asked to provide the following parameters:
-* **Name**: the name of the application; lower-case with minuses is usually a good idea, e.g. `mygame`
+* **Name**: the name of the application; lower case with minuses is usually a good idea, e.g. `my-game`
 * **Package**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
 * **Game Class**: the name of the main game Java class of your app, e.g. `MyGame`
 * **Destination**: the folder where your app will be created
