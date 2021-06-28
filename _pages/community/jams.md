@@ -19,11 +19,6 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## [June 2021](/news/2021/06/jam-june-2021)
-- Jam Suggestions: 13th - 15th
-- Jam Voting: 16th - 18th
-- Jam: 20st - 26th
-
 ## September 2021
 - Jam Suggestions: 5th - 11th
 - Jam Voting: 12th - 18th
@@ -49,6 +44,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [BALLS](https://itch.io/jam/libgdx-jam-17) (June 2021)
 * [ALICE IN WONDERLAND](https://itch.io/jam/libgdx-jam-16) (March 2021)
 * [The player is asleep](https://itch.io/jam/libgdx-jam-15) (December 2020)
 * [Parallel Worlds](https://itch.io/jam/libgdx-jam-september-2020) (September 2020)
