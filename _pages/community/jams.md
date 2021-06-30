@@ -20,14 +20,14 @@ toc_sticky: false
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
 ## September 2021
-- Jam Suggestions: 5th - 11th
-- Jam Voting: 12th - 18th
+- Jam Suggestions: 12th - 14th
+- Jam Voting: 16th - 18th
 - Jam: 19th - 25th
 
 ## December 2021
-- Jam Suggestions: 5th - 11th
-- Jam Voting: 12th - 18th
-- Jam: 19th - 25th
+- Jam Suggestions: 5th - 7th
+- Jam Voting: 9th - 11th
+- Jam: 12th - 18th
 
 <br/>
 
