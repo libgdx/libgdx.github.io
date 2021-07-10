@@ -12,8 +12,8 @@ header:
   actions:
     - label: "Stable Release"
       url: "/assets/downloads/legacy_setup/gdx-setup_latest.jar"
-    #- label: "Nightly Version"
-    #  url: "https://libgdx.badlogicgames.com/nightlies/dist/gdx-setup.jar"
+    - label: "Nightly Version"
+      url: "http://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/gdx-setup.jar"
 
 excerpt: "libGDX offers a setup tool, which automatically creates a project and downloads everything necessary."
 
