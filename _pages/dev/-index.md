@@ -25,7 +25,7 @@ sidebar:
 libGDX offers a [setup tool](/dev/project_generation/), which automatically creates a project and downloads everything necessary.
 {: .notice--primary}
 
-Please take a look at our **[Setup Instructions](/dev/setup/)** to get started. These walk you through the process of creating your very first libGDX project using our setup tool. To get started with developing, take a look at our post **[A Simple Game](/dev/simple_game/)**, a short tutorial aiding your first steps.
+Please take a look at our **[Setup Instructions](/dev/setup/)** to get started. These walk you through the process of **creating your very first libGDX project** using our setup tool. To get started with developing, take a look at our post **[A Simple Game](/dev/simple_game/)**, a short tutorial aiding your first steps.
 
 <br/>
 
