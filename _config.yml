@@ -60,6 +60,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-avatar
   - jekyll-redirect-from
+  - jekyll-remote-theme
 
 footer:
   links:
