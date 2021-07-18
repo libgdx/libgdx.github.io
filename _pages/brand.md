@@ -12,7 +12,7 @@ We’ve had a lot of inquiries from developers wondering whether they can use ou
 The name "libGDX" always starts with a lower-case `l`, even at the beginning of a sentence. `GDX` is always written in upper-case letters.
 {: .notice--info}
 
-## Logo (<span class="pseudolink" onclick="location='/assets/brand/logo.png'">PNG</span> / <a href="/assets/brand/logo.svg" download>SVG</a> / <span class="pseudolink" onclick="location='/assets/brand/logo_dark.png'">PNG Dark</span>)
+## Logo (<span class="pseudolink" onclick="location='/assets/brand/logo.png'">PNG</span> / <span class="pseudolink" onclick="location='/assets/brand/logo_dark.png'">PNG Dark</span> / <a href="/assets/brand/logo.svg" download>SVG</a> / <a href="/assets/brand/logo_dark.svg" download>SVG Dark</a>)
 <img alt="libGDX Logo" src="/assets/brand/logo.png" style="max-width: 350px; margin-top:25px; padding: 20px;">
 <img alt="libGDX Logo Dark" src="/assets/brand/logo_dark.png" style="max-width: 350px; margin-top:25px; background-color:#353535; padding: 20px;">
 
