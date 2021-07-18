@@ -17,7 +17,6 @@ sidebar:
 <!-- THIS DATA IS AUTOMATICALLY FETCHED BY _plugins/libgdx_fetch_versions.rb -->
 
 # libGDX {{ site.data.versions.libgdxRelease }}
-
 Keep up to date with the latest versions of dependencies and dev tools!
 
 ### RoboVM
