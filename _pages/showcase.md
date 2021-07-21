@@ -152,10 +152,10 @@ PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
-## [Hair Dash](http://www.cleancutgames.com) by Clean Cut Games
-<img align="right" src="https://play-lh.googleusercontent.com/w1NLihd6eUGILQ1jPqizEesFAftBN3_MKTIZV_KVdMDHQLNj0TOcxo_BvTG3bh_C190=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
+## [Tap Wizard](https://www.ironhorsegames.org/games-2) by Iron Horse Games
+<img align="right" src="https://play-lh.googleusercontent.com/PVAdazFzDbNnvyq4nP6DdC6Lm3E1nCTP4iyTfywV0dw-I1w7LuNV9zftKladsI5UWg=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
 
-Become a fighting legend in this arcade beat 'em up in the vein of One Finger Death Punch with AAA-quality retro pixel art! Fight in intense battles against King Octopus’ pirate minions, customize your characters, compete with your friends! [[Android](https://play.google.com/store/apps/details?id=com.zplay.hairdash&hl=en_US) / [iOS](https://apps.apple.com/us/app/hair-dash-hero-battle/id1441517314)]
+Tap Wizard is an Idle Action-RPG like no other! Equip your Wizard with a loadout of Spells to decimate over 60 unique hordes of enemies! The best part? You can sit back and watch as the Wizard does all the hard work! [[Android](https://play.google.com/store/apps/details?id=com.topcog.tapwizardrpgarcanequest) / [iOS](https://apps.apple.com/us/app/tap-wizard-rpg-arcane-quest/id1369751082)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
