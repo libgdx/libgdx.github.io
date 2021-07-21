@@ -54,7 +54,7 @@ Halfway is a turn-based strategy RPG taking place a few hundred years into the f
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
 
-## [Space Grunts 2](https://store.steampowered.com/app/1125370/Space_Grunts_2/?curator_clanid=9856238) by Orangepixel
+## [Space Grunts 2](https://store.steampowered.com/app/1125370/Space_Grunts_2/) by Orangepixel
 <!-- ToDo: Residual -->
 <img align="left" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1125370/header.jpg?t=1590600930" style="margin-right: 25px; margin-top: 17px; margin-bottom:20px">
 
@@ -124,31 +124,17 @@ Epic Heroes War is a real-time strategy game, online side-scroller defense combi
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
-## [Unciv](https://github.com/yairm210/Unciv) by Yair Morgenstern <a href="https://github.com/yairm210/Unciv" style="margin-left 10px" class="btn btn--primary">On GitHub</a>
-<img align="right" src="https://play-lh.googleusercontent.com/l8fuQ2DnNjoD9pFnHLsli1xt8OClfr6O9GSBJJ9w7IIb2VHOyxqKZ9lNZXtMqOabCfyI=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
-
-An open-source reimplementation of the most famous civilization-building game ever - fast, small, no ads, free forever! Build your civilization, research technologies, expand your cities and defeat your foes! [[Android](https://play.google.com/store/apps/details?id=com.unciv.app) / [Desktop](https://yairm210.itch.io/unciv)]
-
-<div style="clear: both;with: 100%; height: 1px;"></div>
-
 ## [Shattered Pixel Dungeon](https://shatteredpixel.com) by Shattered Pixel <a href="https://github.com/00-Evan/shattered-pixel-dungeon" style="margin-left: 10px" class="btn btn--primary">On GitHub</a>
-<img align="left" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-right: 25px; margin-top: 17px; margin-bottom:25px; max-width: 460px; max-height: 215px;">
+<img align="right" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-left: 25px; margin-top: 17px; margin-bottom:25px; max-width: 460px; max-height: 215px;">
 
 Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels, and over 150 items to collect and use. [[Android](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon) / [Desktop](https://github.com/00-Evan/shattered-pixel-dungeon/blob/master/docs/getting-started-desktop.md#quick-setup)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
-## [Mirage Realms](http://www.miragerealms.co.uk/devblog/) by Liam Stewart
-<img align="right" src="https://lh3.googleusercontent.com/dE5E2CzrSoT_NLCgMGiG7oN_0XSuqUT3QPRCgT9_d0QzTXN4_Pa_FCAweFhNiyQoLYQ=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px; max-width: 460px; max-height: 240px;">
+## [Unciv](https://github.com/yairm210/Unciv) by Yair Morgenstern <a href="https://github.com/yairm210/Unciv" style="margin-left 10px" class="btn btn--primary">On GitHub</a>
+<img align="left" src="https://play-lh.googleusercontent.com/l8fuQ2DnNjoD9pFnHLsli1xt8OClfr6O9GSBJJ9w7IIb2VHOyxqKZ9lNZXtMqOabCfyI=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
 
-Mirage Realms is an ambitious solo project to produce a free to play MMORPG for different platforms. [[Android](https://play.google.com/store/apps/details?id=com.foxcake.mirage.android) / [Desktop](https://www.miragerealms.co.uk/devblog/play/)]
-
-<div style="clear: both;with: 100%; height: 1px;"></div>
-
-## [PokeMMO](https://pokemmo.eu/)
-<img align="left" src="https://pokemmo.eu/images/screenshot/c-t.jpg" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px">
-
-PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to a new era of online monster battles! [[Android](https://pokemmo.eu/downloads/android/) / [Desktop](https://pokemmo.eu/downloads/)]
+An open-source reimplementation of the most famous civilization-building game ever - fast, small, no ads, free forever! Build your civilization, research technologies, expand your cities and defeat your foes! [[Android](https://play.google.com/store/apps/details?id=com.unciv.app) / [Desktop](https://yairm210.itch.io/unciv)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
@@ -156,6 +142,20 @@ PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to
 <img align="right" src="https://play-lh.googleusercontent.com/PVAdazFzDbNnvyq4nP6DdC6Lm3E1nCTP4iyTfywV0dw-I1w7LuNV9zftKladsI5UWg=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
 
 Tap Wizard is an Idle Action-RPG like no other! Equip your Wizard with a loadout of Spells to decimate over 60 unique hordes of enemies! The best part? You can sit back and watch as the Wizard does all the hard work! [[Android](https://play.google.com/store/apps/details?id=com.topcog.tapwizardrpgarcanequest) / [iOS](https://apps.apple.com/us/app/tap-wizard-rpg-arcane-quest/id1369751082)]
+
+<div style="clear: both;with: 100%; height: 1px;"></div>
+
+## [Mirage Realms](http://www.miragerealms.co.uk/devblog/) by Liam Stewart
+<img align="left" src="https://lh3.googleusercontent.com/dE5E2CzrSoT_NLCgMGiG7oN_0XSuqUT3QPRCgT9_d0QzTXN4_Pa_FCAweFhNiyQoLYQ=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px; max-width: 460px; max-height: 240px;">
+
+Mirage Realms is an ambitious solo project to produce a free to play MMORPG for different platforms. [[Android](https://play.google.com/store/apps/details?id=com.foxcake.mirage.android) / [Desktop](https://www.miragerealms.co.uk/devblog/play/)]
+
+<div style="clear: both;with: 100%; height: 1px;"></div>
+
+## [PokeMMO](https://pokemmo.eu/)
+<img align="right" src="https://pokemmo.eu/images/screenshot/c-t.jpg" style="margin-left: 25px; margin-top: 17px; margin-bottom:10px">
+
+PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to a new era of online monster battles! [[Android](https://pokemmo.eu/downloads/android/) / [Desktop](https://pokemmo.eu/downloads/)]
 
 <div style="clear: both;with: 100%; height: 1px;"></div>
 
