@@ -222,6 +222,9 @@ For each of our assets we have a field in the `Drop` class so we can later refer
 
 Next we load the sound effect and the background music. libGDX differentiates between sound effects, which are stored in memory, and music, which is streamed from wherever it is stored. Music is usually too big to be kept in memory completely, hence the differentiation. As a rule of thumb, you should use a `Sound` instance if your sample is shorter than 10 seconds, and a `Music` instance for longer audio pieces.
 
+**Note:** libGDX supports MP3, OGG and WAV files. Which format you should use, depends on you specific needs, as each format has its own advantages and disadvantages. For example, WAV files are quite large compared to other formats, OGG files don’t work on RoboVM (iOS) nor with Safari (GWT), and MP3 files have issues with seemless looping.
+{: .notice--primary}
+
 Loading of a `Sound` or `Music` instance is done via `Gdx.audio.newSound()` and `Gdx.audio.newMusic()`. Both of these methods take a `FileHandle`, just like the `Texture` constructor.
 
 At the end of the `create()` method we also tell the `Music` instance to loop and start playback immediately. If you run the application you'll see a nice pink background and hear the rain fall.
@@ -335,7 +338,7 @@ First we ask the input module whether the screen is currently touched (or a mous
 
 `Gdx.input.getX()` and `Gdx.input.getY()` return the current touch/mouse position (libGDX also supports multi-touch, but that's a topic for a different article). To transform these coordinates to our camera's coordinate system, we need to call the `camera.unproject()` method, which requests a `Vector3`, a three dimensional vector. We create such a vector, set the current touch/mouse coordinates and call the method. The vector will now contain the touch/mouse coordinates in the coordinate system our bucket lives in. Finally we change the position of the bucket to be centered around the touch/mouse coordinates.
 
-**Note:** it is very, very bad to instantiate a lot of new objects, such as the Vector3 instance. The reason for this is the garbage collector has to kick in frequently to collect these short-lived objects. While on the desktop this not such a big deal (due to the resources available), on Android the GC can cause pauses of up to a few hundred milliseconds, which results in stuttering. To solve this issue in this particular case, we can simply make `touchPos` a field of the `Drop` class instead of instantiating it all the time.
+**Note:** it is very, very bad to instantiate a lot of new objects, such as the Vector3 instance. The reason for this is the garbage collector has to kick in frequently to collect these short-lived objects. While on the desktop this not such a big deal (due to the resources available), on Android the GC can cause pauses of up to a few hundred milliseconds, which results in stuttering. In this particular case, if you want to solve this issue, simply make `touchPos` a private final field of the `Drop` class instead of instantiating it all the time.
 {: .notice--primary}
 
 **Note:** `touchPos` is a three dimensional vector. You might wonder why that is if we only operate in 2D. `OrthographicCamera` is actually a 3D camera which takes into account z-coordinates as well. Think of CAD applications, they use 3D orthographic cameras as well. We simply abuse it to draw 2D graphics.
