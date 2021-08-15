@@ -40,14 +40,14 @@ feature_row3:
   - image_path: /assets/images/forum.jpeg
     alt: "Forum"
     title: "Forum"
-    excerpt: "Our forums have been archived due to spam issues, but are still used as reference."
+    excerpt: "Our forums have been archived due to spam issues, but can still be used as reference."
     url: "https://web.archive.org/web/20201028185002/https://www.badlogicgames.com/forum/"
     btn_label: "Read Archived Forums"
     btn_class: "btn--primary"
   - image_path: /assets/images/irc.jpeg
     alt: "IRC"
     title: "IRC"
-    excerpt: "libGDX has an official IRC channel on irc.freenode.net, channel #libgdx."
+    excerpt: "Our community used to be on IRC, but nowadays we are active on [Discord](/community/discord/)."
 ---
 
 {% include feature_row type="left" %}
