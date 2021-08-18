@@ -41,7 +41,7 @@ list3:
   - "[Intersection and overlap testing](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/math/Intersector.html)"
   - "[Steering Behaviours, Formation Motion, Pathfinding, Behaviour Trees and Finite State Machines](https://github.com/libgdx/gdx-ai)"
   - "Common [interpolators](https://github.com/libgdx/libgdx/wiki/Interpolation), different [spline implementations](https://github.com/libgdx/libgdx/wiki/Path-interface-and-Splines), concave polygon triangulators and more"
-  - "2D physics: JNI wrapper for the popular [Box2D physics](https://github.com/libgdx/libgdx/wiki/Box2d) (see also [Box2DLights](https://github.com/libgdx/box2dlights)). Alternatively, you can take a look at [jbump](https://github.com/tommyettinger/jbump) for a simpler physics implementation."
+  - "2D physics: JNI wrapper for the popular [Box2D physics](https://github.com/libgdx/libgdx/wiki/Box2d) (see also [Box2DLights](https://github.com/libgdx/box2dlights)). Alternatively, you can take a look at [jbump](https://github.com/implicit-invocation/jbump) for a simpler physics implementation."
   - "3D physics: JNI Wrapper for [Bullet physics](https://github.com/libgdx/libgdx/wiki/Bullet-physics)"
 list4:
   - "[File system abstraction](https://github.com/libgdx/libgdx/wiki/File-handling) for all platforms"
