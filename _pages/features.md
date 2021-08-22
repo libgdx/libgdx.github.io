@@ -99,12 +99,19 @@ list7:
   - "Common Java networking solutions: [KryoNet](https://github.com/EsotericSoftware/kryonet) & [Netty](https://github.com/netty/netty) (not supported on Web)"
 
 ---
+<link rel="stylesheet" href="/assets/css/aos.css" />
 
+<div data-aos="fade-right" data-aos-anchor-placement="top-bottom">
 {% include feature_row type="left" %}
+</div>
 
+<div data-aos="fade-left" data-aos-anchor-placement="top-bottom">
 {% include feature_row id="feature_row2" type="right" %}
+</div>
 
+<div data-aos="fade-right" data-aos-anchor-placement="top-bottom">
 {% include feature_row id="feature_row3" type="left" %}
+</div>
 
 # Do whatever you want
 _Unlike many popular editor-based platforms, libGDX is entirely code-centric, offering developers fine-grained control over every aspect of their game._
@@ -159,3 +166,8 @@ _libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry
   }
 }
 </style>
+
+<script src="/assets/js/aos.js"></script>
+<script>
+  AOS.init();
+</script>
