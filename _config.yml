@@ -33,7 +33,7 @@ og_image: /assets/images/logo.png # default open graph (=social media) image
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes@4.24.0 # 2021-07-05
+remote_theme: mmistakes/minimal-mistakes@4.24.0 # 2021-07-05; when updating this, the theme ovverides should be adapted accordingly!
 
 future: false # allow scheduling posts
 
