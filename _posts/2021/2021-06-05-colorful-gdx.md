@@ -176,11 +176,11 @@ SimplePalette has simpler names, as one might expect, all of them one word. You 
  - [Palette, by hue, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableHueRGB.html)
  - [Palette, by lightness, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableValueRGB.html)
  - [SimplePalette, by name, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleOklab.html)
- - [SimplePalette, by hue, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleHueOklab.html)
- - [SimplePalette, by lightness, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleValueOklab.html)
+ - [SimplePalette, by hue, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableHueSimpleOklab.html)
+ - [SimplePalette, by lightness, Oklab](https://tommyettinger.github.io/colorful-gdx/ColorTableValueSimpleOklab.html)
  - [SimplePalette, by name, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleRGB.html)
- - [SimplePalette, by hue, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleHueRGB.html)
- - [SimplePalette, by lightness, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleValueRGB.html)
+ - [SimplePalette, by hue, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableHueSimpleRGB.html)
+ - [SimplePalette, by lightness, RGB](https://tommyettinger.github.io/colorful-gdx/ColorTableValueSimpleRGB.html)
 
 The Oklab pages show the `L`, `A`, and `B` channel values for each color, while the RGB pages already have their
 channels displayed in the RGBA8888 `hex code` column, and don't repeat that info. Both show `Hue` and `Saturation` as
