@@ -31,11 +31,11 @@ First things first: be sure to bring the versions of gradle, any plugins and you
 
 ## Graphics
 - [1.9.11] DefaultTextureBinder `WEIGHTED` strategy was replaced by `LRU` strategy ([#5942](https://github.com/libgdx/libgdx/pull/5942)).
-- [1.9.11] ShaderProgram begin and end methods are deprecated in favour to bind method ([#5944](https://github.com/libgdx/libgdx/pull/5944)).
+- [1.9.11] ShaderProgram begin and end methods are deprecated in favour of the bind method ([#5944](https://github.com/libgdx/libgdx/pull/5944)).
 - [1.9.14] `AnimationDesc#update` now returns `-1` (instead of `0`) if an animation is not finished ([#6303](https://github.com/libgdx/libgdx/pull/6303))
 
 ## Headless
-- [1.9.14] `HeadlessApplicationConfiguration#renderInterval` was changed to `#updatesPerSecond`; so, for example, `16.6F` should become `60` ([#6306](https://github.com/libgdx/libgdx/pull/6306))
+- [1.9.14] `HeadlessApplicationConfiguration#renderInterval` was changed to `#updatesPerSecond`; so, for example, `16.6F` should become `1000 / 16.6 = 60` ([#6306](https://github.com/libgdx/libgdx/pull/6306))
 
 ## Input
 - [1.9.11] Removed `TextField#ENTER_ANDROID` and `ENTER_DESKTOP` in favour of `NEWLINE` and `CARRIAGE_RETURN`. Changed the visibility of `BULLET`, `DELETE`, `TAB` and `BACKSPACE` to protected.
@@ -46,7 +46,7 @@ First things first: be sure to bring the versions of gradle, any plugins and you
 
 ## iOS
 - **[1.9.12+] The handling of HDPI (or Retina, as Apple likes to call it) was adapted to match the implementations on the other platforms ([#3709](https://github.com/libgdx/libgdx/pull/3709)). This means that the iOS backend now reports logical (e.g., 414x 896) and hardware/physical resolutions (e.g., 1242x2688) in the same way the four other backends already do: the former via** `getWidth()`**/**`getHeight()` **and the latter via** `getBackBufferWidth()`**/**`getBackBufferHeight()`**. If you want to keep the old behaviour, just set** `IOSApplicationConfiguration#hdpiMode` **to** `HdpiMode.Pixels`**. Otherwise, use a viewport or replace any calls to** `getWidth()`**, etc. with** `getBackBufferWidth()`**.**
-- **[1.9.12] The iOS MOE backend was removed in favour of the RoboVM one.**
+- **[1.9.12] The iOS MOE backend was removed in favour of the [RoboVM](https://github.com/MobiVM/robovm) one.**
 - [1.9.14] `IOSUIViewController` has been moved to its own separate class ([#6336](https://github.com/libgdx/libgdx/pull/6336))
 
 ## LWJGL 3

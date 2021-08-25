@@ -51,24 +51,24 @@ There are also a lot of other improvements in the works, which may not be not bi
     <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
-    <td><h4>Gradle Build Migration</h4>
-    <br>We want to migrate our whole build process to Gradle. This migration has been long in the making and there is still a lot of work to be done, but we’re crossing our fingers it gets finished without any major hurdles.</td>
-    <td>{% include status.html is='wip' %}</td>
-  </tr>
-  <tr>
     <td><h4>Kotlin-Compatible Web Backend</h4>
-    <br>A Web backend that is compatible with other JVM languages has been talked about a few times now.<sup><a href="https://github.com/squins/gdx-backend-bytecoder">1</a>, <a href="https://github.com/Anuken/Arc/tree/master/backends/backend-teavm">2</a></sup></td>
+    <br>A Web backend that is compatible with other JVM languages has been talked about a few times now.<sup><a href="https://github.com/squins/gdx-backend-bytecoder">1</a>, <a href="https://github.com/Anuken/Arc/tree/6e9fd338866c05cd42ec20f26ec7fa7c3a25d6d5/backends/backend-teavm">2</a>, <a href="https://github.com/xpenatan/gdx-html5-tools">3</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
     <td><h4>Metal/Vulkan Support</h4>
-    <br>We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal/Vulkan support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a>, <a href="https://github.com/LWJGL/lwjgl3#khronos-apis">2</a></sup></td>
+    <br>We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal/Vulkan support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a>, <a href="https://github.com/LWJGL/lwjgl3#khronos-apis">2</a>, <a href="https://github.com/libgdx/libgdx/pull/6593">3</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
+  </tr>
+  <tr>
+    <td><h4>TiledMap Extension</h4>
+    <br>Our TiledMap implementation is not as up to date as we would like it to be. Therefore, we are considering to move it to its own repo to separate its release cycle from libGDX's and to assess its compatibility with other map editors than <a href="https://www.mapeditor.org">Tiled</a>.<sup><a href="https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Atilemap+">1</a>, <a href="https://github.com/libgdx/libgdx/pulls?q=is%3Apr+is%3Aopen+label%3Atilemap">2</a>, <a href="https://github.com/lyze237/gdx-TiledMap">3</a></sup></td>
+    <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
     <td><h4>Web-Based Setup Tool</h4>
     <br>We already have a working prototype of our new web-based setup tool and are now working on polishing it up to start public testing.<sup><a href="https://github.com/MrStahlfelge/gdx-setup">1</a>, <a href="https://raeleus.itch.io/libgdx-project-setup">2</a></sup></td>
-    <td>{% include status.html is='close' %}</td>
+    <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
     <td><h4>WebGL 2.0</h4>
@@ -78,4 +78,4 @@ There are also a lot of other improvements in the works, which may not be not bi
 </table>
 
 <br/>
-Last updated: January 2021
+Last updated: July 2021

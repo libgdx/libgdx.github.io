@@ -14,7 +14,7 @@ header:
 excerpt: "libGDX has a very active community on Discord, Stack Overflow and Reddit. If you want to join us, the best place to start is our official Discord server."
 
 feature_row:
-  - image_path: /assets/images/discord.png
+  - image_path: /assets/images/discord.svg
     alt: "Discord"
     title: "The Official Discord Server"
     excerpt: 'libGDX also has a friendly Discord community. There are a number of channels, including but not limited to: screenshot sharing, question & answers, and Kotlin discussions.'
@@ -40,14 +40,14 @@ feature_row3:
   - image_path: /assets/images/forum.jpeg
     alt: "Forum"
     title: "Forum"
-    excerpt: "Our forums have been archived due to spam issues, but are still used as reference."
+    excerpt: "Our forums have been archived due to spam issues, but can still be used as reference."
     url: "https://web.archive.org/web/20201028185002/https://www.badlogicgames.com/forum/"
     btn_label: "Read Archived Forums"
     btn_class: "btn--primary"
   - image_path: /assets/images/irc.jpeg
     alt: "IRC"
     title: "IRC"
-    excerpt: "libGDX has an official IRC channel on irc.freenode.net, channel #libgdx."
+    excerpt: "Our community used to be on IRC, but nowadays we are active on [Discord](/community/discord/)."
 ---
 
 {% include feature_row type="left" %}

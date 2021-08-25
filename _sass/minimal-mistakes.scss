@@ -1,7 +1,7 @@
 /* overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes.scss */
 
 /*!
- * Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+ * Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
  * Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
@@ -94,6 +94,11 @@
 }
 
 /* Theme overrides */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .grid__item {
   .archive__item-teaser {
       @include breakpoint($small) {
@@ -114,7 +119,7 @@
   .page {
     float: left;
     max-width: 940px;
-    width: auto;
+    width: 100%;
 
     @include breakpoint($large) {
       padding-left: 25px;

@@ -19,9 +19,6 @@ sidebar:
 # libGDX {{ site.data.versions.libgdxRelease }}
 Keep up to date with the latest versions of dependencies and dev tools!
 
-If you are using **Java 16**, be sure to update to Gradle 7.0 (`./gradlew wrapper --gradle-version 7.0`)! Please be aware, that as Gretty doesn't yet work with Gradle 7, you are advised to stay on Java 8-15 if you are using a Web subproject.
-{: .notice--success}
-
 ### RoboVM
 - RoboVM Version: {{ site.data.versions.robovmVersion }}
 - RoboVM Gradle Plugin Version: {{ site.data.versions.robovmPluginVersion }}
@@ -34,3 +31,6 @@ If you are using **Java 16**, be sure to update to Gradle 7.0 (`./gradlew wrappe
 ### GWT
 - GWT Version: {{ site.data.versions.gwtVersion }}
 - GWT Gradle Plugin Version: {{ site.data.versions.gwtPluginVersion }}
+
+### Extensions
+Our extensions use their own versioning schemes. You cand find their latest versions on the respective release pages: [Ashley](https://github.com/libgdx/ashley/releases), [Box2DLights](https://github.com/libgdx/box2dlights/releases), [gdx-ai](https://github.com/libgdx/gdx-ai/releases), [gdx-controllers](https://github.com/libgdx/gdx-controllers/releases), [gdx-pay](https://github.com/libgdx/gdx-pay/releases)
