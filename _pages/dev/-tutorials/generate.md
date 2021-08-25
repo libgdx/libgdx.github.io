@@ -33,7 +33,7 @@ To setup your first project and download the necessary dependencies, libGDX offe
 
 This will open the following setup that will allow you to generate your project:
 
-<img src="https://i.imgur.com/nI5lQKT.jpg" style="max-width: 500px;"/>
+![](https://i.imgur.com/nI5lQKT.jpg){: style="width: 700px;" }
 
 **Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](https://github.com/libgdx/libgdx/wiki/Project-Setup-via-Command-Line) to create your project.
 {: .notice--primary}
@@ -44,8 +44,9 @@ You are asked to provide the following parameters:
 * **Game Class**: the name of the main game Java class of your app, e.g. `MyGame`
 * **Destination**: the folder where your app will be created
 * **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" -> "SDK Manager". By default it is in `/Users/username/Library/Android/sdk` <br>
-<img src="https://i.imgur.com/re4m4ZW.png" style="max-width: 700px;"/> <br>
-<img src="https://i.imgur.com/Y4F3UsH.png" style="max-width: 700px;"/>
+
+![](https://i.imgur.com/re4m4ZW.png){: style="width: 700px;" }
+![](https://i.imgur.com/Y4F3UsH.png){: style="width: 700px;" }
 
 * **Sub Projects**: libGDX is cross-platform. By default, all the target platforms are included (Desktop; Android; iOS; HTML). There is no need to change the default value unless you are sure you will never compile for a specific target.
 

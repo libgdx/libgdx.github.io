@@ -22,17 +22,17 @@ Next up, you need to import your project into your IDE.
 
 
 # Importing the Project
-1. In **<u>IntelliJ IDEA or Android Studio</u>**, you can choose to open the `build.gradle` file and select "Open as Project" to get started.
+1. In **IntelliJ IDEA or Android Studio**, you can choose to open the `build.gradle` file and select "Open as Project" to get started.
 
-   In **<u>Eclipse</u>**, choose `File -> Import... -> Gradle -> Existing Gradle Project` (make sure that your freshly generated project is not located inside of your workspace).
+   In **Eclipse**, choose `File -> Import... -> Gradle -> Existing Gradle Project` (make sure that your freshly generated project is not located inside of your workspace).
 
-   In **<u>Netbeans</u>** it is `File -> Open Project`.
+   In **Netbeans** it is `File -> Open Project`.
 
 2. You may need to refresh the Gradle project after the initial import if some dependencies weren't downloaded yet.
 
-   In **<u>IntelliJ IDEA/Android Studio</u>**, the `Reimport all Gradle projects` button is a pair of circling arrows at the top left in the Gradle tool window, which can be opened with `View -> Tool Windows -> Gradle`.
+   In **IntelliJ IDEA/Android Studio**, the `Reimport all Gradle projects` button is a pair of circling arrows at the top left in the Gradle tool window, which can be opened with `View -> Tool Windows -> Gradle`.
 
-   In **<u>Eclipse</u>** right click on your project `Gradle -> Refresh Gradle Project`.
+   In **Eclipse** right click on your project `Gradle -> Refresh Gradle Project`.
 
 <br/>
 
@@ -44,7 +44,7 @@ If you want to execute your freshly imported project, you have to follow differe
   ![](/assets/images/dev/idea/3.png)
 2. Expand the tasks of your project and then select: desktop -> other -> run.
 
-<u><b>Alternatively</b></u>, you can create a run configuration:
+<b>Alternatively</b>, you can create a run configuration:
 1. Right click your DesktopLauncher class
 2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
 3. Open up Run Configurations <br/>
@@ -135,7 +135,7 @@ All the targets can be run and deployed to via the command line interface.
 ./gradlew android:installDebug android:run
 ```
 
-The `ANDROID_HOME` environment variable needs to be pointing to a valid android SDK before you can do any command line wizardry for Android. On Windows, use: `set ANDROID_HOME=C:/Path/To/Your/Android/Sdk`; on Linux and Mac OS X: `export ANDROID_HOME=/Path/To/Your/Android/Sdk`. Alternatively you can create a file called "local.properties" with the following content: `sdk.dir /Path/To/Your/Android/Sdk`.
+The `ANDROID_HOME` environment variable needs to be pointing to a valid android SDK before you can do any command line wizardry for Android. On Windows, use: `set ANDROID_HOME=​C:/Path/To/Your/Android/Sdk`; on Linux and macOS: `export ANDROID_HOME=​/Path/To/Your/Android/Sdk`. Alternatively you can create a file called "local.properties" with the following content: `sdk.dir /Path/To/Your/Android/Sdk`.
 
 **iOS:**
 ```
