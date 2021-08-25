@@ -246,13 +246,15 @@
         }
   }
   {% if include.duration %}
-  setInterval(function(){
-    var j=0;
-    var elements = document.querySelectorAll('.carousel__control--forward');
-    for(i=(elements.length - 1);i>-1;i--) {
-      if(isVisible(elements[i])) j=i;
-    }
-    elements[j].click();
-  },{{ include.duration }}000);
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(function(){
+      var j=0;
+      var elements = document.querySelectorAll('.carousel__control--forward');
+      for(i=(elements.length - 1);i>-1;i--) {
+        if(isVisible(elements[i])) j=i;
+      }
+      elements[j].click();
+    },{{ include.duration }}000);
+  }
   {% endif %}
 </script>
