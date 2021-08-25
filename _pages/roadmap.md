@@ -52,7 +52,7 @@ There are also a lot of other improvements in the works, which may not be not bi
   </tr>
   <tr>
     <td><h4>Kotlin-Compatible Web Backend</h4>
-    <br>A Web backend that is compatible with other JVM languages has been talked about a few times now.<sup><a href="https://github.com/squins/gdx-backend-bytecoder">1</a>, <a href="https://github.com/Anuken/Arc/tree/master/backends/backend-teavm">2</a>, <a href="https://github.com/xpenatan/gdx-html5-tools">3</a></sup></td>
+    <br>A Web backend that is compatible with other JVM languages has been talked about a few times now.<sup><a href="https://github.com/squins/gdx-backend-bytecoder">1</a>, <a href="https://github.com/Anuken/Arc/tree/6e9fd338866c05cd42ec20f26ec7fa7c3a25d6d5/backends/backend-teavm">2</a>, <a href="https://github.com/xpenatan/gdx-html5-tools">3</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
