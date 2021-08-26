@@ -94,6 +94,11 @@
 }
 
 /* Theme overrides */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .grid__item {
   .archive__item-teaser {
       @include breakpoint($small) {

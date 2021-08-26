@@ -11,6 +11,7 @@ excerpt: "The libGDX project was started over 10 years ago. Over the years, libG
 ---
 
 <style>
+/* https://www.w3schools.com/howto/howto_css_timeline.asp */
 * {
   box-sizing: border-box;
 }
@@ -163,13 +164,13 @@ p a:active {
   <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
     <div class="content">
       <h2>2020 - New Beginnings</h2>
-      <p>The year 2020 brought a plethora of fixes and improvements for libGDX. In August, our <a href="/2020/08/welcome_to_the_new_website/">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements <a href="/roadmap/">planned</a>.</p>
+      <p>The year 2020 brought a plethora of fixes and improvements for libGDX. In August, our <a href="/news/2020/08/welcome_to_the_new_website">new website</a> went online. Since then, the development pace has picked up again: the contributors team saw some major growth and we are excited for the features and improvements <a href="/roadmap/">planned</a>.</p>
     </div>
   </div>
   <div class="container right" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom">
     <div class="content">
       <h2>2019</h2>
-      <p>In 2019, libGDX kept moving forward: <a href="/news/2019/07/gdx_1_9_10/">version 1.9.10</a>, containing lots of fixes and improvements, was released. The majority of work done in the libGDX ecosystem is now done outside of the main repo: libGDX as a framework is mature enough to not require substantial changes, but the <a href="/dev/#tools--libraries">toolset and frameworks</a> surrounding libGDX are constantly improved upon by the community.</p>
+      <p>In 2019, libGDX kept moving forward: <a href="/news/2019/07/gdx_1_9_10">version 1.9.10</a>, containing lots of fixes and improvements, was released. The majority of work done in the libGDX ecosystem is now done outside of the main repo: libGDX as a framework is mature enough to not require substantial changes, but the <a href="/dev/#tools--libraries">toolset and frameworks</a> surrounding libGDX are constantly improved upon by the community.</p>
     </div>
   </div>
   <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
