@@ -123,8 +123,17 @@
 }
 
 @media (prefers-reduced-motion) {
-  * {
-    animation-duration: 0s !important;
-    transition-duration: 0s !important;
+  
+  @keyframes intro {
+    0% { opacity: 1; }
+    100% { opacity: 1; }
   }
+  
+  .greedy-nav .visible-links a:before,
+  .greedy-nav__toggle:before,
+  .greedy-nav__toggle.close:before,
+  .navicon, .navicon:before, .navicon:after {
+    transition: none;
+  }
+  
 }
