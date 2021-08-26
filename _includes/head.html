@@ -15,23 +15,15 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" id="light_theme">
+<!-- Light mode; for all browsers -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-<!-- Dark mode; inspired by https://github.com/mmistakes/minimal-mistakes/discussions/2033#discussioncomment-257421 -->
+<!-- Dark mode -->
 {% if site.minimal_mistakes_skin_dark %}
-  <link rel="stylesheet alternate" href="{{ '/assets/css/main2.css' | relative_url }}" id="dark_theme">
-  <script>
-    function set_theme() {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          node1 = document.getElementById('light_theme');
-          node2 = document.getElementById('dark_theme');
-          node1.setAttribute('rel', 'stylesheet alternate');
-          node2.setAttribute('rel', 'stylesheet');
-        }
-    }
-    window.onload = set_theme;
-  </script>
+  <meta name="color-scheme" content="dark light">
+  <style>
+    @import url("{{ '/assets/css/main2.css' | relative_url }}") (prefers-color-scheme: dark);
+  </style>
 {% endif %}
 
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
