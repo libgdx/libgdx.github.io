@@ -170,7 +170,7 @@ _libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry
 <script src="/assets/js/aos.js"></script>
 <script>
   AOS.init({
-    disable: window.matchMedia('(prefers-reduced-motion: reduce)'),
+    disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     once: true
   });
 </script>
