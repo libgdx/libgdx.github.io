@@ -126,19 +126,3 @@ html, body {
     }
   }
 }
-
-@media (prefers-reduced-motion) {
-  
-  @keyframes intro {
-    0% { opacity: 1; }
-    100% { opacity: 1; }
-  }
-  
-  .greedy-nav .visible-links a:before,
-  .greedy-nav__toggle:before,
-  .greedy-nav__toggle.close:before,
-  .navicon, .navicon:before, .navicon:after {
-    transition: none;
-  }
-  
-}
