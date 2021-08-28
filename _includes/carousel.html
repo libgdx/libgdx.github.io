@@ -77,6 +77,11 @@
   -webkit-transform: scale(1);
           transform: scale(1);
 }
+@media (prefers-reduced-motion) {
+  .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__slide:nth-of-type({{ forloop.index }}) {
+    transition: none;
+  }
+}
 .carousel__activator:nth-of-type({{ forloop.index }}):checked ~ .carousel__controls:nth-of-type({{ forloop.index }}) {
   display: block;
   opacity: 1;
@@ -98,8 +103,8 @@
 }
 
 .overlay-fade-content a {
-  	box-sizing: border-box;
-  	text-decoration: none;
+    box-sizing: border-box;
+    text-decoration: none;
     display: block;
     color: #eeeeee;
     background-color: #ff3b05;
@@ -246,13 +251,15 @@
         }
   }
   {% if include.duration %}
-  setInterval(function(){
-    var j=0;
-    var elements = document.querySelectorAll('.carousel__control--forward');
-    for(i=(elements.length - 1);i>-1;i--) {
-      if(isVisible(elements[i])) j=i;
-    }
-    elements[j].click();
-  },{{ include.duration }}000);
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(function(){
+      var j=0;
+      var elements = document.querySelectorAll('.carousel__control--forward');
+      for(i=(elements.length - 1);i>-1;i--) {
+        if(isVisible(elements[i])) j=i;
+      }
+      elements[j].click();
+    },{{ include.duration }}000);
+  }
   {% endif %}
 </script>

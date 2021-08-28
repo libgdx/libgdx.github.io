@@ -128,7 +128,7 @@ _libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry
   <div class="column">
     {% include list.html title="Audio" items=page.list1 %}
     {% include list.html title="Input Handling" items=page.list2 %}
-    {% include list.html title="Math & Physics" items=page.list3 %}  
+    {% include list.html title="Math & Physics" items=page.list3 %}
     {% include list.html title="Integration of Services" items=page.list5 %}
     {% include list.html title="File I/O & Storage" items=page.list4 %}
   </div>
@@ -169,5 +169,8 @@ _libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry
 
 <script src="/assets/js/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    once: true
+  });
 </script>

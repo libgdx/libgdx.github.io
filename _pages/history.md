@@ -238,5 +238,8 @@ p a:active {
 
 <script src="/assets/js/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    once: true
+  });
 </script>
