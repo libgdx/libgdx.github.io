@@ -99,6 +99,14 @@ html, body {
   overflow-x: hidden;
 }
 
+::-moz-selection {
+  background: #e74a45;
+}
+
+::selection {
+  background: #e74a45;
+}
+
 .grid__item {
   .archive__item-teaser {
       @include breakpoint($small) {
