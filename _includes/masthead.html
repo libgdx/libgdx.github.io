@@ -16,8 +16,9 @@
                   srcset="{{ logo_path_dark | relative_url }}"
                   media="(prefers-color-scheme: dark)">
               {% endunless %}
-              <img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+              <img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}">
             </picture>
+          </a>
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">
           {{ site.masthead_title | default: site.title }}
