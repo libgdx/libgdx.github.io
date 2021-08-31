@@ -14,7 +14,7 @@ sidebar:
 
 {% include breadcrumbs.html %}
 
-Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on the [Discord](/community/) and IRC, pledge to the [Patreon](/funding/) page, and submit [code](https://github.com/libgdx/libgdx/) and [documentation](https://github.com/libgdx/libgdx/wiki) back to the project on GitHub.
+Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on the [Discord](/community/), pledge to the [Patreon](/funding/) page, and submit [code](https://github.com/libgdx/libgdx/) and [documentation](https://github.com/libgdx/libgdx/wiki) back to the project on GitHub.
 
 If you want to submit code back to the project, please take a moment to review our guidelines below.
 
