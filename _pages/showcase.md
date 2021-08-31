@@ -65,7 +65,7 @@ Space Grunts 2 combines some of the fastest turn-based gameplay with card-battli
 <div style="clear: both;width: 100%; height: 1px;"></div>
 
 ## [Riiablo](https://github.com/collinsmith/riiablo) by collinsmith <a href="https://github.com/collinsmith/riiablo" style="margin-right: 10px" class="btn btn--primary">On GitHub</a> <span class="btn btn--success">3D</span>
-<img align="right" src="/assets/images/showcase/riiablo.jpg" style="margin-left: 25px; margin-top: 17px; margin-bottom:20px; max-width: 460px; max-height: 240px;" class="lazyload">
+<img align="right" src="/assets/images/showcase/riiablo.jpg" style="margin-left: 25px; margin-top: 17px; margin-bottom:20px; max-height: 240px;" class="lazyload">
 
 Riiablo is a Diablo II remake using Java and libGDX. As a hero of humanity, you must face the minions of Diablo's evil brothers and stop the Dark Wanderer before he fulfills his terrible destiny.
 
@@ -127,7 +127,7 @@ Epic Heroes War is a real-time strategy game, online side-scroller defense combi
 <div style="clear: both;width: 100%; height: 1px;"></div>
 
 ## [Shattered Pixel Dungeon](https://shatteredpixel.com) by Shattered Pixel <a href="https://github.com/00-Evan/shattered-pixel-dungeon" style="margin-left: 10px" class="btn btn--primary">On GitHub</a>
-<img align="right" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-left: 25px; margin-top: 17px; margin-bottom:25px; max-width: 460px; max-height: 215px" class="lazyload">
+<img align="right" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-left: 25px; margin-top: 17px; margin-bottom:25px; max-height: 215px" class="lazyload">
 
 Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels, and over 150 items to collect and use. [[Android](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon) / [Desktop](https://github.com/00-Evan/shattered-pixel-dungeon/blob/master/docs/getting-started-desktop.md#quick-setup)]
 
@@ -148,7 +148,7 @@ Tap Wizard is an Idle Action-RPG like no other! Equip your Wizard with a loadout
 <div style="clear: both;width: 100%; height: 1px;"></div>
 
 ## [Mirage Realms](http://www.miragerealms.co.uk/devblog/) by Liam Stewart
-<img align="left" src="https://lh3.googleusercontent.com/dE5E2CzrSoT_NLCgMGiG7oN_0XSuqUT3QPRCgT9_d0QzTXN4_Pa_FCAweFhNiyQoLYQ=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px; max-width: 460px; max-height: 240px" class="lazyload">
+<img align="left" src="https://lh3.googleusercontent.com/dE5E2CzrSoT_NLCgMGiG7oN_0XSuqUT3QPRCgT9_d0QzTXN4_Pa_FCAweFhNiyQoLYQ=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom:10px; max-height: 240px" class="lazyload">
 
 Mirage Realms is an ambitious solo project to produce a free to play MMORPG for different platforms. [[Android](https://play.google.com/store/apps/details?id=com.foxcake.mirage.android) / [Desktop](https://www.miragerealms.co.uk/devblog/play/)]
 
