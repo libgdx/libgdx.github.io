@@ -31,11 +31,11 @@ Signing the CLA will allow us to use and distribute your code. This is a non-exc
 {: .notice--info}
 
 ## Formatting
-If you are working on any of the libGDX code, we require you to use the formatter that we use. You can find it [here](https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml). Failure to use the formatter will most likely get your pull request rejected. The formatter provided can be imported into Intellij and Android Studio also, its not just for Eclipse. See [here](https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/) for official documentation on this.
+If you are working on any of the libGDX code, we require you to use our formatter. Failure to do so will get your pull request rejected. You can find the Eclipse formatter file [here](https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml), which can also be imported into IntelliJ and Android Studio. See [here](https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/) for official documentation on this.
 
-To make our life easier, we integrated the formatter with [spotless](https://github.com/diffplug/spotless) in our build system, so you don't have to take the hassle of importing it into your IDE. Just run `./gradlew spotlessApply` and your edited files are correct formatted.
+To make our life easier, we used [Spotless](https://github.com/diffplug/spotless) to integrate the formatter into our build system, so you don't have to put up with the hassle of importing it into your IDE. Just run `./gradlew spotlessApply` and your edited files are formatted correctly.
 
-It is required for a successful CI build that your changes are correct formatted.
+Please note that the CI build will fail, if the files are not formatted correctly!
 {: .notice--info}
 
 ## Code Style
