@@ -56,11 +56,10 @@ Halfway is a turn-based strategy RPG taking place a few hundred years into the f
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
 
-## [Space Grunts 2](https://store.steampowered.com/app/1125370/Space_Grunts_2/) by Orangepixel
-<!-- ToDo: Residual -->
-<img align="left" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1125370/header.jpg?t=1590600930" style="margin-right: 25px; margin-top: 17px; margin-bottom:20px" class="lazyload">
+## [Residual](https://store.steampowered.com/app/1290780/Residual/) by Orangepixel
+<img align="left" src="https://cdn.akamai.steamstatic.com/steam/apps/1290780/header.jpg?t=1631192116" style="margin-right: 25px; margin-top: 17px; margin-bottom:20px" class="lazyload">
 
-Space Grunts 2 combines some of the fastest turn-based gameplay with card-battling mechanics in a 1950's sci-fi roguelike setting.
+Survive and explore a procedurally generated planet and cave-system. Discover old remnants of an ancient, advanced, alien society. Their residuals made a mark on the planet. Their technology might help you survive it.
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
