@@ -60,8 +60,8 @@ As NetBeans is not commonly used in the libGDX community, it may prove difficult
     At the moment, libGDX projects do <u>not</u> work with JDK 16, as Gretty does not yet support Gradle 7. As a consequence, you are advised to use **JDK 8-15**!
    {: .notice}
 - IDE itself: [NetBeans](https://netbeans.apache.org/download/index.html) & the NetBeans Gradle Plugin
-- Android: not officially supported.
-- iOS: not officially supported.
+- Android: not officially supported
+- iOS: not officially supported
 
 ## (5.) No IDE
 It is also possible to develop libGDX applications entirely without any IDE, just using a simple editor like Notepad or [Vim](https://www.vim.org). This is **not** recommended, because IDEs provide some very convenient features, such as code completion and error checking. However, if you insist on doing so: libGDX applications are Gradle applications, so they can be built and executed via the commandline.
