@@ -26,8 +26,13 @@ There are also a lot of other improvements in the works, which may not be not bi
 
 <table>
   <tr>
+    <td><h4>AWT Support for LWJGL 3</h4>
+    <br>Currently, AWT and Swing are not working with the LWJGL 3 backend due to some restrictions of GLFW. We have some ideas on how to work around this.<sup><a href="https://github.com/libgdx/libgdx/pull/6247">1</a>, <a href="https://github.com/libgdx/libgdx/pull/6673">1</a></sup></td>
+    <td>{% include status.html is='wip' %}</td>
+  </tr>
+  <tr>
     <td><h4>Box2D Update</h4>
-    <br>In July, the original <a href="https://github.com/erincatto/box2d">Box2D</a> received its first update in over 6 years! Now we're working to include those changes in libGDX.<sup><a href="https://github.com/libgdx/libgdx/issues/5948#issuecomment-727643568">1</a></sup></td>
+    <br>In July 2020, the original <a href="https://github.com/erincatto/box2d">Box2D</a> received its first update in over 6 years! Now we're working to include those changes in libGDX.<sup><a href="https://github.com/libgdx/libgdx/issues/5948#issuecomment-727643568">1</a></sup></td>
     <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
@@ -57,8 +62,8 @@ There are also a lot of other improvements in the works, which may not be not bi
   </tr>
   <tr>
     <td><h4>Metal/Vulkan Support</h4>
-    <br>We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal/Vulkan support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a>, <a href="https://github.com/LWJGL/lwjgl3#khronos-apis">2</a>, <a href="https://github.com/libgdx/libgdx/pull/6593">3</a></sup></td>
-    <td>{% include status.html is='planned' %}</td>
+    <br>We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal/Vulkan support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a>, <a href="https://github.com/LWJGL/lwjgl3#khronos-apis">2</a>, <a href="https://github.com/libgdx/libgdx/pull/6593">3</a>, <a href="https://github.com/libgdx/libgdx/pull/6672">4</a></sup></td>
+    <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
     <td><h4>TiledMap Extension</h4>
@@ -78,4 +83,4 @@ There are also a lot of other improvements in the works, which may not be not bi
 </table>
 
 <br/>
-Last updated: July 2021
+Last updated: October 2021

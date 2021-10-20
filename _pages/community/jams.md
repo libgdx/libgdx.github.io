@@ -19,7 +19,7 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## September 2021
+## [September 2021](/news/2021/09/jam-september-2021)
 - Jam Suggestions: 12th - 14th
 - Jam Voting: 16th - 18th
 - Jam: 19th - 25th

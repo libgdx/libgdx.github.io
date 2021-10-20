@@ -1,0 +1,16 @@
+name: Build and deploy Jekyll site to GitHub Pages
+# see https://jekyllrb.com/docs/continuous-integration/github-actions/
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GHA_TOKEN }}
