@@ -63,7 +63,7 @@ You are asked to provide the following parameters:
     **[Ashley](https://github.com/libgdx/ashley)**: A tiny entity framework.<br>
     **[Ai](https://github.com/libgdx/gdx-ai)**: An artificial intelligence framework.<br>
 
-By clicking "Show Third Party Extensions" you can access the list of community-made libGDX extensions.
+By clicking "Show Third Party Extensions" you can access a list of community-made libGDX extensions. If you want to add extensions later on, please take a look at [this](https://github.com/libgdx/libgdx/wiki/Dependency-management-with-Gradle#libgdx-extensions) wiki page.
 
 When ready, click "Generate".
 
