@@ -1,0 +1,648 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The Ultimate Migration Guide (1.9.10 to 1.10.0) - libGDX</title>
+<meta name="description" content="This guide summarises what you need to do to update your game from libGDX 1.9.10 to 1.10.0.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="The Ultimate Migration Guide (1.9.10 to 1.10.0)">
+<meta property="og:url" content="/news/2021/04/the-ultimate-migration-guide">
+
+
+  <meta property="og:description" content="This guide summarises what you need to do to update your game from libGDX 1.9.10 to 1.10.0.">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/2021-04-18/header.jpeg">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-18T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="/news/2021/04/the-ultimate-migration-guide">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/assets/images/posts/2021-04-18/header.jpeg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          The Ultimate Migration Guide (1.9.10 to 1.10.0)
+
+        
+      </h1>
+      
+        <p class="page__lead">This guide summarises what you need to do to update your game from libGDX 1.9.10 to 1.10.0.
+</p>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-04-18T00:00:00+00:00">April 18, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/h5ZqVoCDgys"><strong>Jan-Niclas Aberle</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The Ultimate Migration Guide (1.9.10 to 1.10.0)">
+    <meta itemprop="description" content="This guide summarises what you need to do to update your game from libGDX 1.9.10 to 1.10.0.">
+    <meta itemprop="datePublished" content="2021-04-18T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>We know that a lot of you are still stuck on older versions of libGDX. The following post is intended to make porting your games easier by summarising all the breaking changes that happened in the last two years. If you are looking for the past changelogs themselves, check out <a href="/news/changelog/">this</a> page.</p>
+
+<p class="notice--warning">First things first: be sure to bring the versions of gradle, any plugins and your dependencies <a href="https://libgdx.com/dev/versions/">up to date</a>!</p>
+
+<h2 id="android">Android</h2>
+<ul>
+  <li><strong>[1.9.12]</strong> <code class="language-plaintext highlighter-rouge">Gdx.files.external</code> <strong>on Android now uses an app’s external storage directory. See this <a href="https://github.com/libgdx/libgdx/wiki/File-handling#android">wiki article</a> for more information.</strong></li>
+  <li><strong>[1.10.0] Android ARMv5 (armeabi) support has been dropped. Remove any dependency with the</strong> <code class="language-plaintext highlighter-rouge">natives-armeabi</code> <strong>qualifier (but not</strong> <code class="language-plaintext highlighter-rouge">natives-armeabi-v7a</code><strong>!) from your gradle build files. This applies to gdx-platform, gdx-bullet-platform, gdx-freetype-platform and gdx-box2d-platform.</strong></li>
+</ul>
+
+<h2 id="controllers">Controllers</h2>
+<ul>
+  <li><strong>Since version 1.9.13, <a href="https://github.com/libgdx/gdx-controllers">gdx-controllers</a> now uses its own versioning scheme, the latest version being</strong> <code class="language-plaintext highlighter-rouge">2.2.0</code><strong>. Find out more in the corresponding <a href="https://github.com/libgdx/gdx-controllers/wiki/Migrate-from-v1">migration guide</a>.</strong></li>
+</ul>
+
+<h2 id="graphics">Graphics</h2>
+<ul>
+  <li>[1.9.11] DefaultTextureBinder <code class="language-plaintext highlighter-rouge">WEIGHTED</code> strategy was replaced by <code class="language-plaintext highlighter-rouge">LRU</code> strategy (<a href="https://github.com/libgdx/libgdx/pull/5942">#5942</a>).</li>
+  <li>[1.9.11] ShaderProgram begin and end methods are deprecated in favour of the bind method (<a href="https://github.com/libgdx/libgdx/pull/5944">#5944</a>).</li>
+  <li>[1.9.14] <code class="language-plaintext highlighter-rouge">AnimationDesc#update</code> now returns <code class="language-plaintext highlighter-rouge">-1</code> (instead of <code class="language-plaintext highlighter-rouge">0</code>) if an animation is not finished (<a href="https://github.com/libgdx/libgdx/pull/6303">#6303</a>)</li>
+</ul>
+
+<h2 id="headless">Headless</h2>
+<ul>
+  <li>[1.9.14] <code class="language-plaintext highlighter-rouge">HeadlessApplicationConfiguration#renderInterval</code> was changed to <code class="language-plaintext highlighter-rouge">#updatesPerSecond</code>; so, for example, <code class="language-plaintext highlighter-rouge">16.6F</code> should become <code class="language-plaintext highlighter-rouge">1000 / 16.6 = 60</code> (<a href="https://github.com/libgdx/libgdx/pull/6306">#6306</a>)</li>
+</ul>
+
+<h2 id="input">Input</h2>
+<ul>
+  <li>[1.9.11] Removed <code class="language-plaintext highlighter-rouge">TextField#ENTER_ANDROID</code> and <code class="language-plaintext highlighter-rouge">ENTER_DESKTOP</code> in favour of <code class="language-plaintext highlighter-rouge">NEWLINE</code> and <code class="language-plaintext highlighter-rouge">CARRIAGE_RETURN</code>. Changed the visibility of <code class="language-plaintext highlighter-rouge">BULLET</code>, <code class="language-plaintext highlighter-rouge">DELETE</code>, <code class="language-plaintext highlighter-rouge">TAB</code> and <code class="language-plaintext highlighter-rouge">BACKSPACE</code> to protected.</li>
+  <li><strong>[1.9.12]</strong> <code class="language-plaintext highlighter-rouge">InputProcessor#scrolled</code> <strong>now receives two (!) float (!) values:</strong> <code class="language-plaintext highlighter-rouge">amountX</code><strong>, for left and right, and</strong> <code class="language-plaintext highlighter-rouge">amountY</code> <strong>, for up and down (<a href="https://github.com/libgdx/libgdx/pull/6154">#6154</a>).</strong> <code class="language-plaintext highlighter-rouge">InputEvent</code> <strong>was changed accordingly. To match the old behaviour use the</strong> <code class="language-plaintext highlighter-rouge">amountY</code> <strong>argument.</strong></li>
+  <li><strong>[1.9.13] The keycodes for</strong> <code class="language-plaintext highlighter-rouge">ESCAPE</code><strong>,</strong> <code class="language-plaintext highlighter-rouge">END</code><strong>,</strong> <code class="language-plaintext highlighter-rouge">INSERT</code> <strong>and</strong> <code class="language-plaintext highlighter-rouge">F1</code> <strong>to</strong> <code class="language-plaintext highlighter-rouge">F12</code> <strong>were changed. If you saved those values, for example in config files, you need to migrate (<a href="https://github.com/libgdx/libgdx/pull/6299#issuecomment-739154036">#6299</a>).</strong></li>
+  <li>[1.9.13] Input Keycodes added: CAPS_LOCK, PAUSE (aka Break), PRINT_SCREEN, SCROLL_LOCK, F13 to F24, NUMPAD_DIVIDE, NUMPAD_MULTIPLY, NUMPAD_SUBTRACT, NUMPAD_ADD, NUMPAD_DOT, NUMPAD_COMMA, NUMPAD_ENTER, NUMPAD_EQUALS, NUMPAD_LEFT_PAREN, NUMPAD_RIGHT_PAREN, NUM_LOCK. This means that there is now a difference between: Keys.STAR and Keys.NUMPAD_MULTIPLY, Keys.SLASH and Keys.NUMPAD_DIVIDE, Keys.NUM and Keys.NUM_LOCK, Keys.COMMA and Keys.NUMPAD_COMMA, Keys.PERIOD and Keys.NUMPAD_DOT, Keys.ENTER and Keys.NUMPAD_ENTER, Keys.PLUS and Keys.NUMPAD_ADD, Keys.MINUS and Keys.NUMPAD_SUBTRACT.</li>
+  <li>[1.9.14] <code class="language-plaintext highlighter-rouge">InputEventQueue</code> no longer implements <code class="language-plaintext highlighter-rouge">InputProcessor</code>. To preserve old behaviour pass an <code class="language-plaintext highlighter-rouge">InputProcessor</code> to <code class="language-plaintext highlighter-rouge">#drain</code>. (<a href="https://github.com/libgdx/libgdx/pull/6357">#6357</a>)</li>
+</ul>
+
+<h2 id="ios">iOS</h2>
+<ul>
+  <li><strong>[1.9.12+] The handling of HDPI (or Retina, as Apple likes to call it) was adapted to match the implementations on the other platforms (<a href="https://github.com/libgdx/libgdx/pull/3709">#3709</a>). This means that the iOS backend now reports logical (e.g., 414x 896) and hardware/physical resolutions (e.g., 1242x2688) in the same way the four other backends already do: the former via</strong> <code class="language-plaintext highlighter-rouge">getWidth()</code><strong>/</strong><code class="language-plaintext highlighter-rouge">getHeight()</code> <strong>and the latter via</strong> <code class="language-plaintext highlighter-rouge">getBackBufferWidth()</code><strong>/</strong><code class="language-plaintext highlighter-rouge">getBackBufferHeight()</code><strong>. If you want to keep the old behaviour, just set</strong> <code class="language-plaintext highlighter-rouge">IOSApplicationConfiguration#hdpiMode</code> <strong>to</strong> <code class="language-plaintext highlighter-rouge">HdpiMode.Pixels</code><strong>. Otherwise, use a viewport or replace any calls to</strong> <code class="language-plaintext highlighter-rouge">getWidth()</code><strong>, etc. with</strong> <code class="language-plaintext highlighter-rouge">getBackBufferWidth()</code><strong>.</strong></li>
+  <li><strong>[1.9.12] The iOS MOE backend was removed in favour of the <a href="https://github.com/MobiVM/robovm">RoboVM</a> one.</strong></li>
+  <li>[1.9.14] <code class="language-plaintext highlighter-rouge">IOSUIViewController</code> has been moved to its own separate class (<a href="https://github.com/libgdx/libgdx/pull/6336">#6336</a>)</li>
+</ul>
+
+<h2 id="lwjgl-3">LWJGL 3</h2>
+<ul>
+  <li>[1.10.0] <code class="language-plaintext highlighter-rouge">Lwjgl3WindowConfiguration#autoIconify</code> is enabled by default (<a href="https://github.com/libgdx/libgdx/pull/6422">#6422</a>).</li>
+</ul>
+
+<h2 id="math">Math</h2>
+<ul>
+  <li>[1.9.11] <code class="language-plaintext highlighter-rouge">Matrix3#setToRotation(Vector3, float float)</code> now rotates counter-clockwise about the axis provided. This also changes <code class="language-plaintext highlighter-rouge">Matrix3#setToRotation(Vector3, float)</code> and the 3D particles will rotate counter-clockwise as well.</li>
+  <li><strong>[1.9.12]</strong> <code class="language-plaintext highlighter-rouge">Vector2#angleRad(Vector2)</code> <strong>now correctly returns counter-clockwise angles (<a href="https://github.com/libgdx/libgdx/pull/5428">#5428</a>).</strong></li>
+</ul>
+
+<h2 id="miscellaneous">Miscellaneous</h2>
+<ul>
+  <li>[1.9.11] <code class="language-plaintext highlighter-rouge">Base64Coder#encodeString()</code> uses <code class="language-plaintext highlighter-rouge">UTF-8</code> instead of the platform default encoding (<a href="https://github.com/libgdx/libgdx/pull/6061">#6061</a>).</li>
+  <li>[1.9.11] Changed <code class="language-plaintext highlighter-rouge">TiledMapTileLayer#tileWidth</code> &amp; <code class="language-plaintext highlighter-rouge">#tileHeight</code> from float to int.</li>
+  <li>[1.9.13] <code class="language-plaintext highlighter-rouge">TextureAtlas.AtlasRegion</code> and <code class="language-plaintext highlighter-rouge">Region</code> <code class="language-plaintext highlighter-rouge">splits</code> and <code class="language-plaintext highlighter-rouge">pads</code> fields have been removed and moved to name/value pairs. Use <code class="language-plaintext highlighter-rouge">#findValue("split")</code> and <code class="language-plaintext highlighter-rouge">#findValue("pad")</code> instead (<a href="https://github.com/libgdx/libgdx/pull/6316">#6316</a>).</li>
+  <li><strong>[1.10.0] The JCenter repository is shutting down. To update your libGDX Gradle projects, open the main</strong> <code class="language-plaintext highlighter-rouge">build.gradle</code> <strong>file in your project and in both of the two</strong> <code class="language-plaintext highlighter-rouge">repositories {}</code> <strong>sections replace</strong> <code class="language-plaintext highlighter-rouge">jcenter()</code> <strong>with</strong> <code class="language-plaintext highlighter-rouge">gradlePluginPortal()</code><strong>.</strong></li>
+  <li>[1.10.0] <code class="language-plaintext highlighter-rouge">Scaling</code> is now an object instead of an enum. This may change behaviour when used with serialisation.</li>
+  <li>[1.10.0]<code class="language-plaintext highlighter-rouge">Group#clear()</code> and <code class="language-plaintext highlighter-rouge">#clearChildren()</code> now unfocus the children. Added <code class="language-plaintext highlighter-rouge">clear(boolean)</code> and <code class="language-plaintext highlighter-rouge">clearChildren(boolean)</code> for when this isn’t wanted. Code that overrides <code class="language-plaintext highlighter-rouge">clear()</code>/<code class="language-plaintext highlighter-rouge">clearChildren()</code> probably should change to override its counterpart taking a boolean parameter (<a href="https://github.com/libgdx/libgdx/pull/6423">#6423</a>).</li>
+</ul>
+
+<p><br /></p>
+
+<h1 id="common-issues">Common issues</h1>
+<p>The following are some of the more common issues when upgrading from previous versions of libGDX:</p>
+
+<h3 id="1-abstractmethoderror-regarding-glgetactiveattrib">1. AbstractMethodError regarding glGetActiveAttrib</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Exception in thread "main" com.badlogic.gdx.utils.GdxRuntimeException: java.lang.AbstractMethodError:
+com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20.glGetActiveAttrib(IILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)Ljava/lang/String;
+</code></pre></div></div>
+
+<p>The method signatures for <code class="language-plaintext highlighter-rouge">GL20#glGetActiveUniform</code> and <code class="language-plaintext highlighter-rouge">#glGetActiveAttrib</code> were changed in 1.9.11. This leads to issues if some of your libraries are pulling in older or later versions of libGDX as transitive dependencies. To fix this, you need to find the third-party dependency that is responsible for this. Use <code class="language-plaintext highlighter-rouge">./gradlew desktop:dependencies</code> on the command line to debug that.</p>
+
+<h3 id="2-ios-app-uses-only-a-quarter-of-the-screen">2. iOS app uses only a quarter of the screen</h3>
+<p>If you are wondering why your iOS app is displayed in the lower left corner and is using only half of the screen’s width and height, you should take a look at the <a href="#ios">iOS section above</a>.</p>
+
+<h3 id="3-could-not-resolve-gretty-dependency">3. Could not resolve Gretty dependency</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Task :html:beforeRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':html:beforeRun'.
+&gt; Could not resolve all files for configuration ':html:grettyRunnerJetty94'.
+   &gt; Could not find org.gretty:gretty-runner-jetty94:3.0.2.
+</code></pre></div></div>
+<p>The Gretty dependency could not be resolved, because the corresponding repository is missing. Open the main <code class="language-plaintext highlighter-rouge">build.gradle</code> file in your project and in both of the two <code class="language-plaintext highlighter-rouge">repositories {}</code> sections add <code class="language-plaintext highlighter-rouge">gradlePluginPortal()</code>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-18T00:00:00+00:00">April 18, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=The+Ultimate+Migration+Guide+%281.9.10+to+1.10.0%29%20%2Fnews%2F2021%2F04%2Fthe-ultimate-migration-guide" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fnews%2F2021%2F04%2Fthe-ultimate-migration-guide" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fnews%2F2021%2F04%2Fthe-ultimate-migration-guide" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/news/2021/04/gdx-1-10" class="pagination--pager" title="libGDX 1.10.0
+">Previous</a>
+    
+    
+      <a href="/news/2021/04/pie-menu" class="pagination--pager" title="Community Showcase: PieMenu
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-09-01/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/09/jam-september-2021" rel="permalink">libGDX Jam September 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-09-01T00:00:00+00:00">September 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 18th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-07-24/header.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/07/devlog-7-lwjgl3" rel="permalink">Status Report #7: LWJGL 3
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-07-24T00:00:00+00:00">July 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Find out everything about our LWJGL 3 desktop backend!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-05/logo.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/colorful-gdx" rel="permalink">Community Showcase: colorful-gdx
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-05T00:00:00+00:00">June 5, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Tommy Ettinger presents his colorful-gdx library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-02/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/jam-june-2021" rel="permalink">libGDX Jam June 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-02T00:00:00+00:00">June 2, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 17th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,78 @@
+table.jam-header {
+    width: 100%;
+
+    border-collapse: collapse;
+    border: none;
+}
+
+table.jam-header td {
+    width: 33%;
+}
+
+table.jam-header td.theme {
+    text-align: center;
+    color: #e84c3d;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table.jam-header a {
+    color: white;
+}
+
+form.status {
+    display: inline;
+}
+
+form.status select {
+    height: 26px;
+    padding-left: 3px;
+
+    border-collapse: collapse;
+    border: none;
+
+    font-size: 16px;
+}
+
+form.status input[type=submit],
+
+form.status input[type=submit]:hover,
+
+div.entry-list {
+    text-align: center;
+}
+
+table.entrylist {
+    width: 90%;
+    margin: 0 auto;
+
+    border-collapse: collapse;
+    border: none;
+
+    background-color: #444;
+}
+
+table.entrylist tr {
+    border-top: 2px solid #AAA;
+    border-bottom: 2px solid #AAA;
+}
+
+table.entrylist td {
+    padding: 10px;
+
+    width: 20%;
+
+    vertical-align: top;
+}
+
+table.entrylist td u {
+    font-size: 18px;
+}
+
+table.entrylist td img {
+}
+
+table.entrylist a {
+    color: #EF4854;
+}

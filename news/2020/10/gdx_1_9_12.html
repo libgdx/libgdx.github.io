@@ -1,0 +1,659 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>libGDX 1.9.12 - libGDX</title>
+<meta name="description" content="The latest version of libGDX brings some exciting changes in various areas. Linux ARM builds as well as various GWT &amp; iOS improvements are just some of the new features. Find out more below!">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="libGDX 1.9.12">
+<meta property="og:url" content="/news/2020/10/gdx_1_9_12">
+
+
+  <meta property="og:description" content="The latest version of libGDX brings some exciting changes in various areas. Linux ARM builds as well as various GWT &amp; iOS improvements are just some of the new features. Find out more below!">
+
+
+
+  <meta property="og:image" content="/assets/images/update.jpeg">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-10-31T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="/news/2020/10/gdx_1_9_12">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/update.jpeg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          libGDX 1.9.12
+
+        
+      </h1>
+      
+        <p class="page__lead">The latest version of libGDX brings some exciting changes in various areas. Linux ARM builds as well as various GWT &amp; iOS improvements are just some of the new features. Find out more below!
+</p>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-10-31T00:00:00+00:00">October 31, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/cxoR55-bels"><strong>Markus Winkler</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="libGDX 1.9.12">
+    <meta itemprop="description" content="The latest version of libGDX brings some exciting changes in various areas. Linux ARM builds as well as various GWT &amp; iOS improvements are just some of the new features. Find out more below!">
+    <meta itemprop="datePublished" content="2020-10-31T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p class="notice--primary no-top-margin">If you are looking for past changelogs, check out <a href="/news/changelog/">this</a> page.</p>
+
+<p>Today, we are releasing version 1.9.12 of libGDX – and with that a lot of exiting changes. As you may recall, initially, this release was supposed to be called 1.10, but we had some troubles with publishing on maven, so this release is named 1.9.12. However, don’t you worry, this changes nothing about the contents of this update!</p>
+
+<h3 id="linux-arm-builds">Linux ARM Builds</h3>
+<p>One of the major additions in libGDX 1.9.12 is the support for Linux ARM builds with our LWJGL 3 backend. We already talked about this in our past Status Reports, but <a href="https://www.raspberrypi.org">Raspberry Pi</a> here we are – and we are here to stay! If anyone of you has some cool pictures of libGDX games running on a Raspberry Pi, poke me on Discord - we would very much like to put together a small showcase of the <a href="https://retropie.org.uk">first console</a> supported by libGDX.</p>
+
+<p><img src="/assets/images/posts/2020-08-30/rpi.png" alt="" /></p>
+
+<h3 id="breaking-changes">Breaking changes</h3>
+<p>Version 1.9.12 contains a few breaking changes, which require the developers to take some steps to update their apps:</p>
+
+<ul>
+  <li>The handling of HDPI, ahem, Retina on iOS was adapted to match the implementations on the other platforms (<a href="https://github.com/libgdx/libgdx/pull/3709">#3709</a>). If you were using <code class="language-plaintext highlighter-rouge">getWidth()</code> until now, you have to replace those calls with <code class="language-plaintext highlighter-rouge">getBackBufferWidth()</code> (the same for height). If you rely on viewports, there is no need of changes, because sizes are virtual anyway. If you are using <code class="language-plaintext highlighter-rouge">getDensity()</code> to position your UI elements, take a look <a href="https://github.com/libgdx/libgdx/pull/6263">here</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">InputProcessor#scrolled</code> now receives two (!) float (!) values: <code class="language-plaintext highlighter-rouge">scrollX</code> and <code class="language-plaintext highlighter-rouge">scrollY</code> (<a href="https://github.com/libgdx/libgdx/pull/6154">#6154</a>). <code class="language-plaintext highlighter-rouge">InputEvent</code> was changed accordingly. To match the old behaviour use the <code class="language-plaintext highlighter-rouge">amountY</code> argument.</li>
+  <li><code class="language-plaintext highlighter-rouge">Vector2#angleRad(Vector2)</code> now correctly returns counter-clockwise angles (<a href="https://github.com/libgdx/libgdx/pull/5428">#5428</a>).</li>
+  <li>Android: <code class="language-plaintext highlighter-rouge">Gdx.graphics.getDeltaTime()</code> now returns the raw delta time instead of a smoothed one (<a href="https://github.com/libgdx/libgdx/pull/6228">#6228</a>).</li>
+  <li><code class="language-plaintext highlighter-rouge">Gdx.files.external</code> on Android now uses an app’s external storage directory. See this <a href="https://github.com/libgdx/libgdx/wiki/File-handling#android">wiki article</a> for more information.</li>
+</ul>
+
+<h3 id="other-notable-changes">Other notable changes:</h3>
+<ul>
+  <li>Updated to MobiVM 2.3.11 (which supports the latest Apple devices, but not yet the <a href="https://dkimitsa.github.io/2020/10/23/robovm-2-3-11-released/">iOS 14 bindings</a>)</li>
+  <li>As announced in Status Report #1, the iOS MOE backend was removed in favour of the RoboVM one.</li>
+  <li>The audio backend on GWT was changed to the WebAudio API (<a href="https://github.com/libgdx/libgdx/pull/5659">#5659</a>). This allows for better mobile support and implements pitch. The <code class="language-plaintext highlighter-rouge">preferFlash</code> config option was removed. When updating existing projects, you can remove the soundmanager JS files from your <em>webapp</em> folder and the references to it from <em>index.html</em>.</li>
+  <li>The GWT backend now supports resizable applications via the use of <code class="language-plaintext highlighter-rouge">GwtApplicationConfiguration</code>. The old resizing code from your HTMLLaunchers can be removed.</li>
+  <li>There is now also the possibility to lazy load assets via AssetManager instead of preloading them before game start. See <a href="https://github.com/libgdx/libgdx/wiki/HTML5-Backend-and-GWT-Specifics#speeding-up-preload-process">here</a> for more information.</li>
+  <li>We added a <code class="language-plaintext highlighter-rouge">Lwjgl3ApplicationConfiguration#foregroundFPS</code> option to the LWJGL3 backend to match the behaviour of the old LWJGL2 backend. This can be used to set a target framerate for games on desktop.</li>
+  <li>If you are having trouble playing several sounds simultaneously on Android, you can try the new <code class="language-plaintext highlighter-rouge">AsynchronousAndroidAudio</code> implementation (<a href="https://github.com/libgdx/libgdx/pull/6243">#6243</a>).</li>
+</ul>
+
+<p class="notice--warning"><strong>Known issues:</strong> At the moment, Box2D collision filtering is working unreliably with libGDX 1.9.12. This is <a href="https://github.com/libgdx/libgdx/pull/6261">fixed</a> in <a href="/news/2021/01/gdx_1_9_13">libGDX 1.9.13</a>.</p>
+
+<h3 id="future-plans">Future plans?</h3>
+<p>Just to give you all a quick outlook on what we’re planning for the next weeks:</p>
+<ul>
+  <li><strong>gdx-controller version 2.0.0</strong> is done and will be released shortly.</li>
+  <li><strong>Status Report #4</strong> will focus on our new web-based setup tool and will be published in the next couple of weeks, as soon as our setup tool is ready for public testing.</li>
+  <li>As mentioned in Status Report #3, our <strong>next libGDX release</strong> is set for the end of the year.</li>
+  <li><strong>gdx-video</strong> and the <strong>Box2D update</strong> are still being worked on.</li>
+</ul>
+
+<h3 id="full-changelog">Full changelog</h3>
+<p class="notice--primary">The latest version of dependencies can, as always, be found <a href="/dev/versions/">here</a>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [BREAKING CHANGE] iOS: Changed how Retina/hdpi handled on iOS. See #3709.
+- [BREAKING CHANGE] API Change: InputProcessor scrolled method now receives scroll amount for X and Y. Changed type to float to support devices which report fractional scroll amounts. Updated InputEvent in scene2d accordingly: added scrollAmountX, scrollAmountY attributes and corresponding setters and getters. See #6154.
+- [BREAKING CHANGE] API Change: Vector2 angleRad(Vector2) now correctly returns counter-clockwise angles. See #5428
+- [BREAKING CHANGE] Android: getDeltaTime() now returns the raw delta time instead of a smoothed one. See #6228.
+- [BREAKING CHANGE] Gdx.files.external on Android now uses app external storage - see wiki article File handling for more information
+- Update to MobiVM 2.3.11
+- Added support for Linux ARM builds.
+	- 32-bit: ARMv7/armhf
+	- 64-bit: ARMv8/AArch64
+- Fixed vertices returned by Decal.getVertices() not being updated
+- Fixes Issue #5048. The function Intersector.overlapConvexPolygons now should return the right minimum translation vector values.
+- API Change: Removed Pool constructor with preFill parameter in favor of using Pool#fill() method. See #6117
+- API Addition: Slider can now be configured to only trigger on certain mouse button clicks (Slider#setButton(int)).
+- Fixed GlyphLayout not laying out correctly with color markup.
+- Fixed TileDrawable not applying its scale correctly.
+- API Addition: Added epsilon methods to maps with float values.
+- API Addition: Added an insertRange method to array collections.
+- Fixed GestureDetector maxFlingDelay.
+- API Change: Changed default GestureDetector maxFlingDelay to Integer.MAX_VALUE (didn't work before, this matches that).
+- Improved text, cursor and selection rendering in TextArea.
+- API Addition: Added setProgrammaticChangeEvents, updateVisualValue, round methods to ProgressBar/Slider.
+- iOS: Keyboard events working on RoboVM on iOS 13.5 and up, uses same API as on other platforms
+- API Addition: Added AndroidLiveWallpaper.notifyColorsChanged() to communicate visually significant colors back to the wallpaper engine.
+- API Change: AssetManager invokes the loaded callback when an asset is unloaded from the load queue if the asset is already loaded.
+- GWT: changed audio backend to WebAudio API. Now working on mobiles, pitch implemented. Configuration change: preferFlash removed. When updating existing projects, you can remove the soundmanager js files from your webapp folder and the references to it from index.html
+- GWT: added possibility to lazy load assets via AssetManager instead of preload them before game start. See GWT specifics wiki article for more information.
+- GWT: New configuration setting usePhysicalPixels to use native resolution on mobile / Retina / HDPI screens. When using this option, make sure to update your code in index.html and HTMLLauncher from setup template.
+- GWT: GwtApplicationConfiguration and GWT backend now support an application to be resizable or fixed size. You can remove your own resizing code from your HTMLLaunchers.
+- GWT: Assets in distribute build are renamed with MD5 hash suffix to bypass browser cache on changes
+- GWT: Fixed GwtFileHandle that was only returning text assets when listing a directory, now returns all children
+- API Addition: Pixmap.downloadFromUrl() downloads an image from http(s) URLs and passes it back as a Pixmap on all platforms
+- API Change: Removed arm abi from SharedLibraryLoader
+- API Addition: Added a Lwjgl3ApplicationConfiguration#foregroundFPS option.
+- API Change: Utility classes are now final and have a private constructor to prevent instantiation.
+- API Change: ScrollPane now supports all combinations of scrollBarsOnTop and fadeScrollBars.
+- API Addition: Added new methods with a "deg" suffix in the method's name for all Vector2 degrees-based methods and deprecated the old ones.
+- API Addition: Added Slider#setVisualPercent.
+- API Change: Enabling fullscreen mode on the LWJGL3 backend now automatically sets the vsync setting again.
+- API Addition: Added put(key, value, defaultValue) for maps with primitive keys, so the old value can be returned.
+- API Addition: Added ObjectLongMap.
+- Added Intersector#intersectRayOrientedBoundsFast to detect if a ray intersects an oriented bounding box, see https://github.com/libgdx/libgdx/pull/6139
+- API Addition: Added Table#clip() and Container#clip() methods.
+- API Addition: Added getBackgroundDrawable() to Button.
+- API Addition: Added imageCheckedDown and getImageDrawable() to ImageButton and ImageTextButton.
+- API Addition: Added focusedFontColor, checkedFocusedFontColor, and getFontColor() to TextButton and ImageTextButton.
+- API Addition: Added wrapReverse setting to HorizontalGroup.
+- API Addition: Added Slider style drawables for over and down: background, knobBefore, and knobAfter.
+- Fixed LwjglFrame not hiding the canvas in some situations.
+- API Change: Table#round uses ceil/floor and is applied during layout, rather than afterward.
+- Fixed blurry NinePatch rendering when using a single center region.
+- API Change: Upon changing the window size with the LWJGL3 backend, the window is centered on the monitor.
+- Fixed DepthShaderProvider no longer creates one DepthShader per bones count. Now it creates only one skinned variant and one non-skinned variant based on DepthShader/Config numBones.
+- API Addition: Added Intersector#intersectPlanes to calculate the point intersected by three planes, see https://github.com/libgdx/libgdx/pull/6217
+- API Addition: Added alternative Android Audio implementation for performant sound. See https://github.com/libgdx/libgdx/pull/6243.
+- API Addition: Expose SpriteBatch and PolygonSpriteBatch setupMatrices() as protected.
+- API Addition: New parameter OnscreenKeyboardType for Input.setOnscreenKeyboardVisible and Input.getTextInput
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-31T00:00:00+00:00">October 31, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=libGDX+1.9.12%20%2Fnews%2F2020%2F10%2Fgdx_1_9_12" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fnews%2F2020%2F10%2Fgdx_1_9_12" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fnews%2F2020%2F10%2Fgdx_1_9_12" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/news/2020/10/devlog_3_roadmap" class="pagination--pager" title="Status Report #3: Plans for 1.10 and beyond
+">Previous</a>
+    
+    
+      <a href="/news/2020/11/devlog_4_roadmap" class="pagination--pager" title="Status Report #4: Roadmap
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-09-01/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/09/jam-september-2021" rel="permalink">libGDX Jam September 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-09-01T00:00:00+00:00">September 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 18th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-07-24/header.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/07/devlog-7-lwjgl3" rel="permalink">Status Report #7: LWJGL 3
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-07-24T00:00:00+00:00">July 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Find out everything about our LWJGL 3 desktop backend!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-05/logo.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/colorful-gdx" rel="permalink">Community Showcase: colorful-gdx
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-05T00:00:00+00:00">June 5, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Tommy Ettinger presents his colorful-gdx library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-02/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/jam-june-2021" rel="permalink">libGDX Jam June 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-02T00:00:00+00:00">June 2, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 17th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

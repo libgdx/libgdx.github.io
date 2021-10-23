@@ -1,0 +1,642 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Community Showcase: Shape Drawer - libGDX</title>
+<meta name="description" content="Early Grey presents their Shape Drawer library in our Community Showcase!">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Community Showcase: Shape Drawer">
+<meta property="og:url" content="/news/2021/05/shape-drawer">
+
+
+  <meta property="og:description" content="Early Grey presents their Shape Drawer library in our Community Showcase!">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/2021-05-17/teaser.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-05-17T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="/news/2021/05/shape-drawer">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Community Showcase: Shape Drawer">
+    <meta itemprop="description" content="Early Grey presents their Shape Drawer library in our Community Showcase!">
+    <meta itemprop="datePublished" content="2021-05-17T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Community Showcase: Shape Drawer
+</h1>
+          <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-05-17T00:00:00+00:00">May 17, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/earlygrey"><img class="avatar avatar-small" alt="earlygrey" width="20" height="20" data-proofer-ignore="true" src="https://avatars3.githubusercontent.com/earlygrey?v=3&s=20" srcset="https://avatars3.githubusercontent.com/earlygrey?v=3&s=20 1x, https://avatars3.githubusercontent.com/earlygrey?v=3&s=40 2x, https://avatars3.githubusercontent.com/earlygrey?v=3&s=60 3x, https://avatars3.githubusercontent.com/earlygrey?v=3&s=80 4x" /></a>
+        Early Grey
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="notice--primary">
+   <p>
+     Hey everybody! As announced a few months ago, we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. In this <b>Community Showcase</b>, Early Grey is going to present their <a href="https://github.com/earlygrey/shapedrawer">Shape Drawer library</a>!
+   </p>
+   <p>
+     If you are interested in other cool community projects, be sure to check out the <a href="https://github.com/rafaskb/awesome-libgdx#readme">libGDX Awesome List</a> as well. To participate in future showcases, take a look <a href="https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases">here</a>.
+   </p>
+ </div>
+
+<h1 id="shape-drawer">Shape Drawer</h1>
+
+<h2 id="what-does-it-do">What does it do?</h2>
+
+<p>Shape drawer draws 2D shapes, such as lines and polygons, using a Batch. It solves the age old problem of “how do I draw a line in libGDX?”. Well ok, actually you could use ShapeRenderer, but as we’ll see later that’s not really the best solution. It’s essentially a fancy wrapper around a Batch: you tell it what to draw (eg a hexagon) and it calculates the geometry required to stretch a texture region into various shapes, and uses the Batch to draw them.</p>
+
+<h2 id="how-does-it-work">How does it work?</h2>
+
+<p>Shape Drawer draws using a Batch, so let’s start at the beginning - how does a Batch work? There are already some pretty good explanations in the context of libGDX in the wiki (see <a href="https://github.com/libgdx/libgdx/wiki/Spritebatch%2C-Textureregions%2C-and-Sprites">here</a> and <a href="https://github.com/libgdx/libgdx/wiki/Shaders">here</a>), so we’ll just illustrate it with a quick example.</p>
+
+<p>Let’s say we want to draw a picture of a <a href="https://duckduckgo.com/?t=canonical&amp;q=pretty+flower&amp;iax=images&amp;ia=images">pretty flower</a> with a SpriteBatch. We tell the Batch where we want to draw it, how big, and give it the texture by calling <code class="language-plaintext highlighter-rouge">batch#draw</code>. The batch then splits that rectangular image into two triangles, and sends the triangle vertices to the graphics card, along with the texture you want to stretch over the triangles and some colours (eg the colour we set with <code class="language-plaintext highlighter-rouge">batch#setColor</code>). On the graphics card, a shader program figures out which pixels on the screen are contained in each triangle and what colour each should be based on the texture and the colours we gave it, and then outputs that to the screen.</p>
+
+<p>Since with Shape Drawer we want to use a Batch to draw our shapes, we need to give it something it can digest - triangles, a texture and some colours. This is really all that Shape Drawer does - you tell it what you want to draw (eg a bunch of lines), and it breaks the shape down into a bunch of triangles and gives it to a Batch with some colour information. And since we (usually) only care about having a single colour for each shape, we usually just give Shape Drawer a single white pixel TextureRegion to make things easier.</p>
+
+<h2 id="but-why-would-i-use-it">But why would I use it?</h2>
+<p>There are two main reasons: performance and quality. The performance benefit comes from reducing the frequency of sending batches of data to the graphics card (caching data so it can be “flushed” all at once is actually the raison d’être of a Batch, hence the name). Sending data to the graphics card actually has some pretty heavy overhead, so anything that allows us to reduce the frequency can usually give us some pretty good gains. Any time we do anything like change texture data or change the shader, we have to flush all stashed our vertex data to the graphics card, and this is what Shape Drawer tries to avoid. The quality part has to do with all the extra features Shape Drawer has, such as bevelling line corners and being able to draw paths without overlapping at the corners (important if you’re drawing a transparent colour), and consistency across different hardware.</p>
+
+<p>Actually since we already know we want to draw some shapes, maybe the real question is “why would I use Shape Drawer instead of Shape Renderer?”. Well ok then, how does Shape Renderer work? As we said before, Shape Drawer subdivides shapes into triangles and draws those using a batch. Shape Renderer does the same thing for filled shapes, but for lines and points it  directly uses the <code class="language-plaintext highlighter-rouge">lines</code> or <code class="language-plaintext highlighter-rouge">points</code> modes of openGL. This is actually easier (for Shape Renderer), but comes with some downsides. First, openGL lines and points are not consistently implemented by hardware - for example you can’t guarantee that your lines will be wider than 1px wide on every platform (imagine your game draws 4px lines on desktop but only 1px lines on HTML - embarrassing!). Second, every time you change shape type (eg from line to filled) you need to flush your data.   Third, using openGL lines gives you no ability to bevel corners or prevent line segments from drawing over each other where they join, resulting in layered colours when using blending. Last and most importantly, every time you use Shape Renderer you need to stop and flush any active Batch, then flush the Shape Renderer after using it.</p>
+
+<p>The last point is probably the most important. Since typically for a 2D game in libGDX you’ll be using a batch to do most of your drawing, if you start trying to mix in Shape Renderer calls, you’re going to increase the number of times you flush data to the graphics card, and this can result in considerable performance losses. Using a Batch to draw fits very naturally with Scene2D, since you can have you actors do whatever they want with shape drawer without having to worry about when and how often you’re stopping and starting the batch.</p>
+
+<h2 id="how-do-i-use-it">How do I use it?</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>For instructions on importing shape drawer into your project, <a href="https://github.com/earlygrey/shapedrawer#including-in-project">see here</a>.</p>
+
+<p>To create a ShapeDrawer instance you need to provide a Batch and a TextureRegion. I recommend putting a single white pixel region into your texture atlas to minimise batch flushes.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">ShapeDrawer</span> <span class="n">drawer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ShapeDrawer</span><span class="o">(</span><span class="n">batch</span><span class="o">,</span> <span class="n">region</span><span class="o">);</span>
+
+<span class="o">...</span>
+
+<span class="n">batch</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+<span class="n">drawer</span><span class="o">.</span><span class="na">line</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+<span class="n">batch</span><span class="o">.</span><span class="na">end</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>Internally, Shape Drawer keeps track of how large a screen pixel appears to be in world units, and uses this to do things like estimate how many sides are required to draw a smooth circle or decide when to automatically bevel path corners. You can set this manually via <code class="language-plaintext highlighter-rouge">ShapeDrawer#setPixelSize</code>, or you can call <code class="language-plaintext highlighter-rouge">ShapeDrawer#update</code> and it will calculate it from the batch projection matrix. Typically, your update method would look something like this:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">camera</span><span class="o">.</span><span class="na">update</span><span class="o">();</span>
+<span class="n">batch</span><span class="o">.</span><span class="na">setProjectionMatrix</span><span class="o">(</span><span class="n">camera</span><span class="o">.</span><span class="na">combined</span><span class="o">);</span>
+<span class="n">drawer</span><span class="o">.</span><span class="na">update</span><span class="o">();</span>
+</code></pre></div></div>
+
+<h3 id="drawing">Drawing</h3>
+<p>Drawing shapes is done much in the same way as with Shape Renderer, eg you just call <code class="language-plaintext highlighter-rouge">drawer.circle(...)</code> or <code class="language-plaintext highlighter-rouge">drawer.line(...)</code>, though there are a few small differences:</p>
+
+<ul>
+  <li>
+    <p>Instead of switching between filled or outlined shapes via <code class="language-plaintext highlighter-rouge">renderer.begin(ShapeType.Filled)</code>, you just call different methods, eg <code class="language-plaintext highlighter-rouge">drawer.filledCircle(...)</code>.</p>
+  </li>
+  <li>
+    <p>There is no <code class="language-plaintext highlighter-rouge">line</code> vs <code class="language-plaintext highlighter-rouge">rectLine</code> as with Shape Renderer - all Shape Drawer lines are the equivalent of rectLines.</p>
+  </li>
+  <li>
+    <p>Since circles are just polygons with enough sides to make it look smooth, you cannot specify the number of sides for a circle - use <code class="language-plaintext highlighter-rouge">ShapeDrawer#polygon</code> instead.</p>
+  </li>
+</ul>
+
+<h2 id="extra-features">Extra Features</h2>
+
+<h3 id="corner-bevelling">Corner Bevelling</h3>
+
+<p>When calling methods that draw multiple lines which share an endpoint, for example <code class="language-plaintext highlighter-rouge">path</code> or <code class="language-plaintext highlighter-rouge">polygon</code>, it’s possible to bevel the ends of the line so that thick lines fit together nicely and do not have any gaps at the joints, and transparent lines do not draw over each other.</p>
+
+<p>Shape Drawer gives two options for this - “pointy” and “smooth” - as well no join type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">No Join</th>
+      <th style="text-align: center">Pointy Join</th>
+      <th style="text-align: center">Smooth Join</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="/assets/images/posts/2021-05-17/none.png" alt="" /></td>
+      <td style="text-align: center"><img src="/assets/images/posts/2021-05-17/pointy.png" alt="" /></td>
+      <td style="text-align: center"><img src="/assets/images/posts/2021-05-17/smooth.png" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can specify the join type when calling the method, eg <code class="language-plaintext highlighter-rouge">path(points, JoinType.SMOOTH)</code>. If you don’t specify, Shape Drawer will guess if it’s needed using <code class="language-plaintext highlighter-rouge">isJoinNecessary()</code> (you can also override this method if it’s not working out for you), using smooth joins for paths and pointy joins for polygons.</p>
+
+<h3 id="pixel-snapping">Pixel Snapping</h3>
+
+<p>Sometimes when drawing lines, especially when individual pixels are noticeable (such as when drawing to a lower resolution frame buffer that will be upscaled later), it’s important that the centres of the pixels you want drawn are contained within the line, because openGL will only draw a pixel if the centre point of that pixel falls within a triangle.</p>
+
+<p>For example, if you’re trying to draw a 1px width horizontal line, the centres of pixels might lie exactly on the edges of your line. Since positions are represented with floating point numbers, you might get either a 2px width line, or no line at all. Shape Drawer has an option (default off) to snap the endpoints of lines to the nearest pixel centre points, which ensures you’ll always get the 1px line you want. It also lengthens the line a tiny bit, to make sure the pixels containing the endpoints are drawn. Since line endpoints tend to be given whole numbers, this problem is quite common.</p>
+
+<h2 id="future-directions">Future Directions</h2>
+
+<p>There’s currently a feature where you can record what you’re doing with shape drawer, and it will be saved into a Drawing object, which you can later draw via <code class="language-plaintext highlighter-rouge">drawing.draw()</code>. This has some performance benefit for complex shapes like long bevelled paths, but would be more useful if you could do things like copy it and apply linear transformations like translation, rotation and scaling. So for example you could create a drawing, then pass it around to different objects (like scene2D.ui elements), who could draw it with their own position/rotation/colour.</p>
+
+<p>Another idea that’s been floated a few times is the ability to draw textures over the shapes. So you could draw any arbitrary shape (or combinations) and repeat a texture over it.</p>
+
+<blockquote>
+  <p>For God’s sake, please give it up. Fear it no less than the sensual passion, because it, too, may take up all your time and deprive you of your health, peace of mind and happiness in life.
+— Farkas Bolyai</p>
+</blockquote>
+
+<p>Shape Drawer is an open source project and contributions and ideas are welcome!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-05-17T00:00:00+00:00">May 17, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Community+Showcase%3A+Shape+Drawer%20%2Fnews%2F2021%2F05%2Fshape-drawer" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fnews%2F2021%2F05%2Fshape-drawer" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fnews%2F2021%2F05%2Fshape-drawer" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/news/2021/04/pie-menu" class="pagination--pager" title="Community Showcase: PieMenu
+">Previous</a>
+    
+    
+      <a href="/news/2021/06/jam-june-2021" class="pagination--pager" title="libGDX Jam June 2021
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-09-01/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/09/jam-september-2021" rel="permalink">libGDX Jam September 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-09-01T00:00:00+00:00">September 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 18th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-07-24/header.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/07/devlog-7-lwjgl3" rel="permalink">Status Report #7: LWJGL 3
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-07-24T00:00:00+00:00">July 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Find out everything about our LWJGL 3 desktop backend!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-05/logo.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/colorful-gdx" rel="permalink">Community Showcase: colorful-gdx
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-05T00:00:00+00:00">June 5, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Tommy Ettinger presents his colorful-gdx library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-02/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/jam-june-2021" rel="permalink">libGDX Jam June 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-02T00:00:00+00:00">June 2, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 17th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

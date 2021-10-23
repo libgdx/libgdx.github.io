@@ -1,0 +1,845 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Community Showcase: colorful-gdx - libGDX</title>
+<meta name="description" content="Tommy Ettinger presents his colorful-gdx library in our Community Showcase!">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Community Showcase: colorful-gdx">
+<meta property="og:url" content="/news/2021/06/colorful-gdx">
+
+
+  <meta property="og:description" content="Tommy Ettinger presents his colorful-gdx library in our Community Showcase!">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/2021-06-05/logo.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-06-05T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="/news/2021/06/colorful-gdx">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Community Showcase: colorful-gdx">
+    <meta itemprop="description" content="Tommy Ettinger presents his colorful-gdx library in our Community Showcase!">
+    <meta itemprop="datePublished" content="2021-06-05T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Community Showcase: colorful-gdx
+</h1>
+          <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-05T00:00:00+00:00">June 5, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/tommyettinger"><img class="avatar avatar-small" alt="tommyettinger" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/tommyettinger?v=3&s=20" srcset="https://avatars1.githubusercontent.com/tommyettinger?v=3&s=20 1x, https://avatars1.githubusercontent.com/tommyettinger?v=3&s=40 2x, https://avatars1.githubusercontent.com/tommyettinger?v=3&s=60 3x, https://avatars1.githubusercontent.com/tommyettinger?v=3&s=80 4x" /></a>
+        Tommy Ettinger
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="notice--primary">
+   <p>
+     Hey everybody! As announced a few months ago, we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. In this <b>Community Showcase</b>, Tommy Ettinger is going to present his <a href="https://github.com/tommyettinger/colorful-gdx">colorful-gdx library</a>!
+   </p>
+   <p>
+     If you are interested in other cool community projects, be sure to check out the <a href="https://github.com/rafaskb/awesome-libgdx#readme">libGDX Awesome List</a> as well. To participate in future showcases, take a look <a href="https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases">here</a>.
+   </p>
+ </div>
+
+<h1 id="colorful-gdx">colorful-gdx</h1>
+
+<h2 id="what-does-it-do">What does it do?</h2>
+
+<p>With colorful-gdx, you can tint Sprites and other images with colors in different color spaces than what libGDX offers
+by default. Most importantly, this means you can use a batch color to lighten as well as darken an image, but there are
+many other features that come along with this. There’s a really wide range of operations you can do to blend or mix
+multiple colors (without creating temporary objects), edit properties of a color, and describe colors with a simple
+String syntax, if you want.</p>
+
+<p>It doesn’t feel right to start a showcase for a very visual library without some eye candy, so here’s a visualization of
+different color spaces and their different shapes. It’s here because it looks cool and was made with this library; in
+practice you don’t need to know about this.</p>
+
+<p><img src="/assets/images/posts/2021-06-05/color_solids.png" alt="" /></p>
+
+<h2 id="how-does-it-work">How does it work?</h2>
+
+<p>There’s a few ways you can use colorful-gdx. Technically, the repo is split into two subprojects, but if you’re working
+with libGDX, you almost always want <code class="language-plaintext highlighter-rouge">colorful</code>, which uses libGDX for its Color, Batch, ShaderProgram, and other
+classes. I’ll skip over installation details; the repo covers the Gradle dependency, or you could use gdx-liftoff’s
+third-party extensions to get a recent version of <code class="language-plaintext highlighter-rouge">colorful</code>.</p>
+
+<p>Your first choice is, “What color space should I use?” To answer this, you need to know what a color space is. You
+already know at least one, RGBA – Color in libGDX uses it, as does almost everything on a computer screen. The other
+options are less widely-known, and some are mostly in colorful-gdx for historical reasons. Generally, the choice is
+between <code class="language-plaintext highlighter-rouge">rgb</code> and <code class="language-plaintext highlighter-rouge">oklab</code>.</p>
+
+<p>With RGB, you have 3 channels, red/green/blue, plus alpha, and you can make a color lighter by raising the RGB channels
+or darker by lowering those channels. You can easily make a color more red by raising the red channel, and the same with
+green or blue. What if you want to make a color more orange? This is more of a challenge, and typically requires raising
+red and lowering blue, which can change lightness.</p>
+
+<p>A solution for that type of issue lies in
+<a href="https://bottosson.github.io/posts/oklab/">Oklab, a newer color space by Björn Ottosson</a>. Oklab also has 3 channels, but
+they are L, A, and B (plus alpha, which is the same as before). L is lightness, and you can change the lightness of a
+color smoothly just by increasing or decreasing L. A and B are what are called “chromatic axes,” and in our usage they
+range from 0.0 to 1.0. When A is near 0.0, the color is going to be close to green; when it is near 1.0, the color is
+going to be close to red. When B is near 0.0, the color is going to be close to blue; when it is near 1.0, the color is
+going to be close to yellow. When both A and B are close to 0.5, the color is likely to be either grayish or actually
+grayscale. As L gets closer to 0.0 or 1.0, the span of A and B shrinks, and all colors that are nearly black or nearly
+white have A and B that are close to 0.5 (meaning they’re close to grayscale colors like black and white). If you want
+to keep the lightness of a color constant while making it more orange, you would do so by raising both A (more red) and
+B (more yellow), and leaving L alone.</p>
+
+<p>Your choice between these two color spaces (or others, if you really want) mostly boils down to whether you want to edit
+colors based on their lightness, saturation, and other qualities as single numbers (which makes Oklab an excellent
+choice), or whether you just want a simple and compatible way to make a sprite extra-bright, extra-dark,
+extra-red/green/blue, etc. and don’t want to deal with these blasted newfangled color contraptions (which is why I
+provide the RGB color space).</p>
+
+<p>Once you have an idea of what you want, you’d either make a <code class="language-plaintext highlighter-rouge">SpriteBatch</code> with a different <code class="language-plaintext highlighter-rouge">ShaderProgram</code> drawn from
+colorful’s <code class="language-plaintext highlighter-rouge">Shaders.java</code>, or you’d skip that and just use the more-powerful but less-compatible <code class="language-plaintext highlighter-rouge">ColorfulBatch</code> for
+your chosen color space. Either way, you gain the ability to add to color channels as well as subtract, which lets you
+brighten and darken sprites by setting the batch color.</p>
+
+<h2 id="thats-all">That’s all?</h2>
+<p>Yes, almost all the library winds up as a glorified way to set and interpret the batch color. Also, no, there are lots
+of ways to get the batch color just right, or blend across frames, or analyze colors, or edit colors in different ways,
+and so on and so forth. <code class="language-plaintext highlighter-rouge">ColorfulBatch</code> in particular adds extra options because it effectively has two batch colors –
+one is called the “tweak,” and multiplies a channel, while the other is the normal batch color, which is added after the
+tweak is applied. There’s a potentially-interesting feature here, too – one of the components of the tweak allows
+configuring contrast, by making mid-range values either push even closer to the middle of the range, or pull even
+further apart to make somewhat-similar colors appear different in lightness.</p>
+
+<p>There are relatively large predefined palettes here. They store the colors as <code class="language-plaintext highlighter-rouge">float</code> (one <code class="language-plaintext highlighter-rouge">float</code> per color, which is
+also called a “packed float color”), and those can be set in a <code class="language-plaintext highlighter-rouge">SpriteBatch</code> or <code class="language-plaintext highlighter-rouge">ColorfulBatch</code> using the
+<code class="language-plaintext highlighter-rouge">setPackedFloat()</code> method. You can also edit colors with your chosen color space’s <code class="language-plaintext highlighter-rouge">ColorTools</code> class, or the shared
+<code class="language-plaintext highlighter-rouge">FloatColors</code> class. This last one handles mixing colors, which is a feature you don’t want to miss! You can also mix
+colors in the <code class="language-plaintext highlighter-rouge">SimplePalette</code> class by describing one or more colors from that palette in a String, along with
+adjustments like “light” or “richest” that change the resulting <code class="language-plaintext highlighter-rouge">float</code>. This uses Strings like “darker dull blue gray
+violet” to describe a grayish blue-purple.
+<a href="https://tommyettinger.github.io/colorful-gdx/description/">You can preview the descriptions here</a>; press the square
+bracket keys to change modes from RGB to Oklab or a comparison.</p>
+
+<p>There’s a lot of tricks you can uncover in colorful-gdx. Many effects are possible by doing things like reducing the
+range of lightness, or colorful-ness, and then applying a change. Other effects can be cycling hues (always a fun
+psychedelic effect), raising and lowering lightness to correspond to time of day in a game, using Oklab for smooth
+blends and then converting back to RGBA, and various other useful tools.</p>
+
+<p>Here’s an example of such a nice trick. <code class="language-plaintext highlighter-rouge">ColorfulBatch</code> is a decent option for RGB, but it’s a great option for Oklab.
+Because the tweak in Oklab works differently from the tweak in RGB, you can multiply by a small value for both A and B
+to make the color grayish, or a high value to make the color especially vivid. RGB doesn’t have an option like this
+other than using a low tweak value for R, G, and B, then moving the channels where you want them with the additive
+color. That works by reducing the color to essentially black or close to it, then adding a color of your choice. Oklab
+only reduces the color to grayish, keeping the lightness, so you can add values to L, A, and B that push the color to a
+more-whatever-hue direction while maintaining or changing lightness as you want and possibly some original A and B.</p>
+
+<p>If you’re worried about performance, this is not going to hurt anything. Using floats for colors avoids creating
+excessive garbage objects, and the shaders that handle color conversions are simple (for a GPU to execute) and
+branchless. If you’re going back and forth between a shader from colorful-gdx (or a ColorfulBatch) and some other
+shader, there will be a performance penalty based on the number of shader changes per frame, but 3D graphics in libGDX
+involves frequent shader changes, and those work just fine.</p>
+
+<h2 id="how-do-i-use-it">How do I use it?</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>For instructions on importing colorful into your project, <a href="https://github.com/tommyettinger/colorful-gdx#how-to-obtain">see here</a>.
+Version 0.6.0 just released and may be a little rough in places, but it includes several fixes to 0.5.1, so you’ll
+probably want the latest version. You can ignore colorful-pure unless you want to manipulate colors server-side.</p>
+
+<p>If you don’t want to use a <code class="language-plaintext highlighter-rouge">ColorfulBatch</code>, you’ll want to take a <code class="language-plaintext highlighter-rouge">SpriteBatch</code> (which you probably already have used)
+and set its shader to one from <code class="language-plaintext highlighter-rouge">Shaders</code>.</p>
+
+<p>For RGB, this could look like:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">SpriteBatch</span> <span class="n">batch</span> <span class="o">=</span> <span class="n">batch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SpriteBatch</span><span class="o">(</span><span class="mi">1000</span><span class="o">,</span> <span class="nc">Shaders</span><span class="o">.</span><span class="na">makeRGBAShader</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>Or, you could make the shader yourself, which is the only way for most of the shaders:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">SpriteBatch</span> <span class="n">batch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SpriteBatch</span><span class="o">();</span>
+<span class="nc">ShaderProgram</span> <span class="n">shader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ShaderProgram</span><span class="o">(</span><span class="n">vertexShader</span><span class="o">,</span> <span class="n">fragmentShaderRGBA</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(!</span><span class="n">shader</span><span class="o">.</span><span class="na">isCompiled</span><span class="o">())</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">GdxRuntimeException</span><span class="o">(</span><span class="s">"Couldn't compile shader: "</span> <span class="o">+</span> <span class="n">shader</span><span class="o">.</span><span class="na">getLog</span><span class="o">());</span>
+<span class="n">batch</span><span class="o">.</span><span class="na">setShader</span><span class="o">(</span><span class="n">shader</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>For Oklab, the second of those options is the only option if you aren’t using <code class="language-plaintext highlighter-rouge">ColorfulBatch</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">SpriteBatch</span> <span class="n">batch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SpriteBatch</span><span class="o">();</span>
+<span class="nc">ShaderProgram</span> <span class="n">shader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ShaderProgram</span><span class="o">(</span><span class="n">vertexShader</span><span class="o">,</span> <span class="n">fragmentShaderOklab</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(!</span><span class="n">shader</span><span class="o">.</span><span class="na">isCompiled</span><span class="o">())</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">GdxRuntimeException</span><span class="o">(</span><span class="s">"Couldn't compile shader: "</span> <span class="o">+</span> <span class="n">shader</span><span class="o">.</span><span class="na">getLog</span><span class="o">());</span>
+<span class="n">batch</span><span class="o">.</span><span class="na">setShader</span><span class="o">(</span><span class="n">shader</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>If you are using <code class="language-plaintext highlighter-rouge">ColorfulBatch</code>, then usage looks like a normal SpriteBatch for now:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Note, there are multiple ColorfulBatch classes in different packages.</span>
+<span class="c1">// You use the com.github.tommyettinger.colorful.rgb package for RGB.</span>
+<span class="c1">// You use the com.github.tommyettinger.colorful.oklab package for Oklab.</span>
+<span class="nc">ColorfulBatch</span> <span class="n">batch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ColorfulBatch</span><span class="o">();</span>
+</code></pre></div></div>
+
+<h3 id="tinting">Tinting</h3>
+<p>Once you have your Batch, you can set a color on it right away with <code class="language-plaintext highlighter-rouge">setPackedColor(float)</code>. As mentioned earlier,
+colorful-gdx almost always stores colors as “packed” floats in colorful-gdx, and many are predefined in <code class="language-plaintext highlighter-rouge">Palette</code> and/or
+<code class="language-plaintext highlighter-rouge">SimplePalette</code> in your color space’s package. There’s no need to use the specific colors in Palette and SimplePalette
+in your game, and to be honest, some names in Palette are pretty bad. Give me a break, I had to name 256 of them! 
+SimplePalette has simpler names, as one might expect, all of them one word. You can browse the colors on colorful-gdx’s
+(bare-bones) web pages:</p>
+
+<ul>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableOklab.html">Palette, by name, Oklab</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableHueOklab.html">Palette, by hue, Oklab</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableValueOklab.html">Palette, by lightness, Oklab</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableRGB.html">Palette, by name, RGB</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableHueRGB.html">Palette, by hue, RGB</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableValueRGB.html">Palette, by lightness, RGB</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleOklab.html">SimplePalette, by name, Oklab</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableHueSimpleOklab.html">SimplePalette, by hue, Oklab</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableValueSimpleOklab.html">SimplePalette, by lightness, Oklab</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleRGB.html">SimplePalette, by name, RGB</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableHueSimpleRGB.html">SimplePalette, by hue, RGB</a></li>
+  <li><a href="https://tommyettinger.github.io/colorful-gdx/ColorTableValueSimpleRGB.html">SimplePalette, by lightness, RGB</a></li>
+</ul>
+
+<p>The Oklab pages show the <code class="language-plaintext highlighter-rouge">L</code>, <code class="language-plaintext highlighter-rouge">A</code>, and <code class="language-plaintext highlighter-rouge">B</code> channel values for each color, while the RGB pages already have their
+channels displayed in the RGBA8888 <code class="language-plaintext highlighter-rouge">hex code</code> column, and don’t repeat that info. Both show <code class="language-plaintext highlighter-rouge">Hue</code> and <code class="language-plaintext highlighter-rouge">Saturation</code> as
+columns, but RGB also shows <code class="language-plaintext highlighter-rouge">Lightness</code>, while Oklab already showed that in its <code class="language-plaintext highlighter-rouge">L</code> column. Alternatively, you can do
+what I do:  look at the pretty colors, then copy a name when I’ve found one I like (I really like the “by hue” pages
+for this).</p>
+
+<p>Tinting with one of these predefined colors is easy:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">batch</span><span class="o">.</span><span class="na">setPackedColor</span><span class="o">(</span><span class="nc">Palette</span><span class="o">.</span><span class="na">DEEP_PURPLE</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>This sets the tint to a very dark, bold purple, which darkens the shown Textures and makes them much more purple in hue.</p>
+
+<p>If you didn’t specify a tint, that’s the same as using the neutral color
+for your color space, which is <code class="language-plaintext highlighter-rouge">Palette.GRAY</code> for both the <code class="language-plaintext highlighter-rouge">rgb</code> and <code class="language-plaintext highlighter-rouge">oklab</code> color spaces. The neutral color causes no
+change to the original colors in Textures you draw. In libGDX normally, the neutral color is white. Like in a normal
+libGDX SpriteBatch, if you use a darker color than the neutral color, then the shown Textures get darker. Unlike in a
+normal libGDX SpriteBatch, there are colors that are lighter than the neutral color – there are colors like
+<code class="language-plaintext highlighter-rouge">Palette.LIGHT_GRAY</code> here, but nothing can be lighter than white. If you set the batch color to a lighter color, then
+the shown textures will be lighter. There’s a scale here of grayscale colors (the colors in the “Palette, by hue” pages
+above have them between Black and White), and all grayscale colors don’t affect the hue or saturation of Textures. This
+is a key detail; colors that aren’t exactly grayscale, but are still grayish, will have less effect on hue and
+saturation than very saturated, vivid colors. Using vibrant colors will mean very strong, possibly-overpowering tints,
+and all levels of saturation can be useful for something. If you want to take an already-saturated Texture and
+desaturate it, then you need something more than what SpriteBatch can provide; it will take ColorfulBatch and <em>one whole
+extra line</em> of code. It is time to master… the twerk. I mean, tweak.
+<a href="https://github.com/libgdx/libgdx/pull/6080">It’s an easy typo!</a></p>
+
+<h3 id="tweaking">Tweaking</h3>
+<p>Here, things get more advanced; the rabbit hole goes deeper, and your colorful talents become far more powerful.
+It is true that setting the tweak on a ColorfulBatch is just one line:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colorfulBatch</span><span class="o">.</span><span class="na">setTweak</span><span class="o">(</span><span class="mf">0.5f</span><span class="o">,</span> <span class="mf">0.1f</span><span class="o">,</span> <span class="mf">0.1f</span><span class="o">,</span> <span class="mf">0.65f</span><span class="o">);</span>
+</code></pre></div></div>
+<p>In an Oklab ColorfulBatch, this has the effect of making colors much less saturated (but not fully black-and-white), and
+slightly increasing the lightness contrast between mid-lightness colors. If you ran that with an RGB ColorfulBatch…
+well, the contrast would still increase, but blue and green would be mostly removed, making an image in shades of red.
+You may want to avoid using the RGB ColorfulBatch tweak heavily, or only use it for its contrast (the last parameter).
+In both RGB and Oklab, 0.5 is the neutral value for all tweak channels. This is different from the neutral color, which
+is either <code class="language-plaintext highlighter-rouge">(0.5f, 0.5f, 0.5f, 1f)</code> for RGB or <code class="language-plaintext highlighter-rouge">(0.63f, 0.5f, 0.5f, 1f)</code> for Oklab (both are <code class="language-plaintext highlighter-rouge">Palette.GRAY</code>). The tweak
+channels are a little different from the color channels. Instead of <code class="language-plaintext highlighter-rouge">red, green, blue, alpha</code> or <code class="language-plaintext highlighter-rouge">L, A, B, alpha</code>,
+<code class="language-plaintext highlighter-rouge">alpha</code> is replaced with <code class="language-plaintext highlighter-rouge">contrast</code>, and instead of the other channels (RGB or LAB) adding to the Texture color, they
+are multiplied. Because RGB and Oklab are pretty different in several areas, I’ll go over them one at a time, but since
+contrast is the same for both, that comes first.</p>
+
+<h3 id="contrast">Contrast</h3>
+<p>In tweaks, you don’t really need extra changes to alpha, so the fourth parameter to a tweak value sets its contrast. The
+contrast is neutral at 0.5, sharpens lightness contrast above 0.5, and fades away lightness contrast below 0.5. Fading
+isn’t especially obvious, but sharpening can be a nice way to highlight specific elements. Because the neutral value for
+tweaks is different from the neutral value for colors, <code class="language-plaintext highlighter-rouge">ColorfulBatch</code> defines the constant <code class="language-plaintext highlighter-rouge">TWEAK_RESET</code> for the
+tweak’s neutral value. If you used a color for a tweak value, you’d see maximum contrast, because colors have 1.0 alpha
+and that would become the starkest contrast if used in the tweak.</p>
+
+<h3 id="rgb">RGB</h3>
+<p>Using a value larger than 0.5 for one of a tweak’s RGB channels (let’s call that value <code class="language-plaintext highlighter-rouge">tweak_channel</code>) will magnify
+that channel, effectively multiplying the channel in the texture by <code class="language-plaintext highlighter-rouge">2f * tweak_channel</code>. Using a value smaller than 0.5
+for one of a tweak’s RGB channels does the same thing, but because <code class="language-plaintext highlighter-rouge">2f * tweak_channel</code> is less than 1, it will shrink
+that channel, bringing all values in the Texture closer to 0 in that channel. You usually need to make use of the tweak
+and color together in an RGB ColorfulBatch if you use the tweak at all. For instance, you can bring all colors closer to
+medium-lightness by using a tweak of <code class="language-plaintext highlighter-rouge">(0.3f, 0.3f, 0.3f, 0.5f)</code> and a color of <code class="language-plaintext highlighter-rouge">(0.7f, 0.7f, 0.7f, 1f)</code>. In steps, the
+tweak first makes the RGB channels shrink in range from 0 through 1 to 0 through 0.6, because the tweak channels are
+multiplied by 2 and then by the Texture colors. Then, the color is added in; because <code class="language-plaintext highlighter-rouge">0.7f</code> is <code class="language-plaintext highlighter-rouge">0.2f</code> more than the
+neutral value for RGB, this adds <code class="language-plaintext highlighter-rouge">0.2f</code> to the RGB channels. This takes the range from 0 through 0.6, where we left off,
+to 0.2 through 0.8. This eliminates pure black and pure white, squishing all colors into a middle-lightness area.</p>
+
+<h3 id="oklab">Oklab</h3>
+<p>Oklab is a little different, and at this point, a visual aid is in order.</p>
+
+<p><img src="/assets/images/posts/2021-06-05/oklab.png" alt="" /></p>
+
+<p>This animation shows the Oklab “gamut,” or the range of colors that can be correctly represented without clipping.
+The first frame is at 0 lightness, and is a single point of black (that doesn’t render). As the animation goes on, the
+lightness goes up, and you can start to see that while the very center is still grayish, the edges are more colorful.
+As the animation ends, lightness approaches 1 (white), and all the colors are forced closer to grayscale again. The x
+axis is the A channel, and the y axis is the B channel. If you start in the center and go to the right, you get more of
+a red color. If you instead go to the left, more green (well, cyan). If you go up, more yellow, and if you go down, more
+blue. <strong>When you use the tweak in Oklab</strong>, the tweak can still magnify or shrink A and B, but it does so relative to the
+center (grayscale), rather than black like in RGB. This is what makes Oklab’s tweak more useful; not only is lightness
+simple to adjust with just one channel (L), colorful-ness is simple to adjust by using the same change for the A and B
+channels. Adjusting L isn’t centered like A and B are; if you increase L on the tweak, it will make lightness range
+higher but no lower, and if you decrease it, the lightest colors become unavailable. The color can be useful with any
+kind of reduced range, moving L so a range like 0.0 through 0.4 is raised up to 0.3 to 0.7. That’s possible with an L
+tweak value of 0.93, because 0.93 is higher than the neutral value for Oklab’s lightness (0.63) by 0.3.</p>
+
+<p>Before, I gave an example that desaturates colors and increases contrast. How about some other options?</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This lightens significantly and increases saturation slightly.</span>
+<span class="c1">// Colors that get too light lose colorful-ness, so the saturation boost helps keep things vibrant.</span>
+<span class="n">colorfulBatch</span><span class="o">.</span><span class="na">setTweak</span><span class="o">(</span><span class="mf">0.7f</span><span class="o">,</span> <span class="mf">0.6f</span><span class="o">,</span> <span class="mf">0.6f</span><span class="o">,</span> <span class="mf">0.5f</span><span class="o">);</span>
+
+<span class="c1">// This darkens slightly, increases saturation sharply, and also lowers contrast significantly.</span>
+<span class="c1">// This is somewhat of a dizzying-fog effect, and combined with changing batch colors, it can be a "bad trip" effect.</span>
+<span class="n">colorfulBatch</span><span class="o">.</span><span class="na">setTweak</span><span class="o">(</span><span class="mf">0.4f</span><span class="o">,</span> <span class="mf">0.8f</span><span class="o">,</span> <span class="mf">0.8f</span><span class="o">,</span> <span class="mf">0.3f</span><span class="o">);</span>
+
+<span class="c1">// This is a fire effect that changes over time.</span>
+<span class="c1">// First we set the tweak to reduce lightness range slightly and reduce the range of A (green-to-red) heavily.</span>
+<span class="n">colorfulBatch</span><span class="o">.</span><span class="na">setTweak</span><span class="o">(</span><span class="mf">0.45f</span><span class="o">,</span> <span class="mf">0.3f</span><span class="o">,</span> <span class="mf">0.5f</span><span class="o">,</span> <span class="mf">0.5f</span><span class="o">);</span>
+<span class="c1">// Then, we set the color to raise lightness back up a little (with the reduced range, this removes the darkest levels).</span>
+<span class="c1">// This also sharply pushes A over toward red, away from green or cyan. With its reduced range, cyan won't appear.</span>
+<span class="c1">// B changes over time, but I didn't actually test this code, and it isn't optimal even if it works. Use your favorite</span>
+<span class="c1">// 1D noise implementation here in place of the sin and cos and you'll get better results. B only changes between 0.5</span>
+<span class="c1">// and 0.9 here, but that can change the "fire" from red to orange to yellow. Alpha is the normal 1f.</span>
+<span class="n">colorfulBatch</span><span class="o">.</span><span class="na">setColor</span><span class="o">(</span><span class="mf">0.6f</span><span class="o">,</span> <span class="mf">0.8f</span><span class="o">,</span>
+        <span class="nc">MathUtils</span><span class="o">.</span><span class="na">sin</span><span class="o">(</span><span class="nc">MathUtils</span><span class="o">.</span><span class="na">cos</span><span class="o">(</span><span class="nc">TimeUtils</span><span class="o">.</span><span class="na">millis</span><span class="o">()</span> <span class="o">*</span> <span class="mf">0.002f</span><span class="o">)</span> <span class="o">*</span> <span class="nc">MathUtils</span><span class="o">.</span><span class="na">PI</span><span class="o">)</span> <span class="o">*</span> <span class="mf">0.2f</span> <span class="o">+</span> <span class="mf">0.7f</span><span class="o">,</span> <span class="mi">1</span><span class="n">f</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>The last example changes the tweaks for A and B separately, which helps refine the changes it makes to the result.</p>
+
+<h2 id="color-manipulation">Color Manipulation</h2>
+<p>There’s a lot to say here, and I’ll have to skip a fair amount. Poke around ColorTools and you’ll find some interesting
+methods, hopefully.</p>
+
+<h3 id="float-color-dissection">Float Color Dissection</h3>
+<p>The <code class="language-plaintext highlighter-rouge">ColorTools</code> class in each color space has a lot of methods for pulling apart float colors and getting specific
+information. This can be simple, like <code class="language-plaintext highlighter-rouge">ColorTools.red()</code> in the RGB or Oklab color spaces (it gets the red channel value
+or computes it for Oklab). This can also be less-simple, like <code class="language-plaintext highlighter-rouge">ColorTools.hue()</code>, which has to do a big conversion to
+get the HSL-format hue (but you can see those hues in the RGB palettes linked above). Most of these methods are
+straightforward to use. Some do require some explanation, like <code class="language-plaintext highlighter-rouge">ColorTools.chroma()</code> in Oklab, which gets how colorful
+a color is <em>absolutely</em>, rather than how saturation is <em>relative</em> to the highest possible saturation at that hue and
+lightness. Two colors with the same chroma should be pretty much equally far from gray.</p>
+
+<h3 id="editing-colors">Editing Colors</h3>
+<p>There are methods like <code class="language-plaintext highlighter-rouge">editRGB()</code> and <code class="language-plaintext highlighter-rouge">editOklab()</code> in the corresponding color space packages, which can be a good
+choice if you want to make many changes at once. Otherwise, straightforward single-purpose methods like <code class="language-plaintext highlighter-rouge">lighten()</code>,
+<code class="language-plaintext highlighter-rouge">darken()</code>, <code class="language-plaintext highlighter-rouge">enrich()</code> (which raises colorfulness), <code class="language-plaintext highlighter-rouge">dullen()</code> (which lowers colorfulness), and specific methods for
+the color space may do what you want. There are also options to request colors by HSL values, with two variants of those
+in Oklab plus another that uses “HCL” (using absolute chroma instead of relative saturation). Some editing methods
+mention <code class="language-plaintext highlighter-rouge">limitToGamut()</code> in their JavaDocs; this takes any colors that may have been edited out of a valid range, and
+brings them back into the valid range, typically keeping their lightness, but changing their saturation.</p>
+
+<h3 id="color-mixing">Color Mixing</h3>
+<p>The good stuff. <code class="language-plaintext highlighter-rouge">FloatColors</code> (not in a color space package) has the <code class="language-plaintext highlighter-rouge">lerpFloatColors()</code> and <code class="language-plaintext highlighter-rouge">mix()</code> methods, which
+combine two or more colors. <code class="language-plaintext highlighter-rouge">lerpFloatColors()</code> allows you to specify how much the second color should affect the first,
+such as 0.5 for an even mix, 0.25 to favor the first color, or 0.75 to favor the second color. While <code class="language-plaintext highlighter-rouge">mix()</code> doesn’t
+have a way to set the degree of bias toward one color or another, it can mix more than two colors, all as an even mix.
+Using <code class="language-plaintext highlighter-rouge">lerpFloatColors()</code> with changing values for its last parameter (<code class="language-plaintext highlighter-rouge">change</code>) leads to smooth blends, which can be
+used for gradients or changes over time. That’s what Beatrix used for this slick effect:</p>
+
+<p><img src="https://i.imgur.com/ojBUypw.gif" alt="Pretty Triangle!" /></p>
+
+<h2 id="future-directions">Future Directions</h2>
+
+<p>I’d like to have some more features for creating gradients. I’m also fairly sure something else will come up.</p>
+
+<blockquote>
+  <p>It was no longer shining out; it was pouring out; and as the shapeless stream of unplaceable colour left the well, it seemed to flow directly into the sky.
+— <em>The Colour Out of Space</em>, H.P. Lovecraft</p>
+</blockquote>
+
+<p>colorful-gdx is an open source project and contributions and ideas are welcome! …Also, bug reports are welcome.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-06-05T00:00:00+00:00">June 5, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Community+Showcase%3A+colorful-gdx%20%2Fnews%2F2021%2F06%2Fcolorful-gdx" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fnews%2F2021%2F06%2Fcolorful-gdx" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fnews%2F2021%2F06%2Fcolorful-gdx" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/news/2021/06/jam-june-2021" class="pagination--pager" title="libGDX Jam June 2021
+">Previous</a>
+    
+    
+      <a href="/news/2021/07/devlog-7-lwjgl3" class="pagination--pager" title="Status Report #7: LWJGL 3
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-09-01/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/09/jam-september-2021" rel="permalink">libGDX Jam September 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-09-01T00:00:00+00:00">September 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 18th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-07-24/header.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/07/devlog-7-lwjgl3" rel="permalink">Status Report #7: LWJGL 3
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-07-24T00:00:00+00:00">July 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Find out everything about our LWJGL 3 desktop backend!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-02/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/jam-june-2021" rel="permalink">libGDX Jam June 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-02T00:00:00+00:00">June 2, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 17th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-05-17/teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/05/shape-drawer" rel="permalink">Community Showcase: Shape Drawer
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-05-17T00:00:00+00:00">May 17, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Early Grey presents their Shape Drawer library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

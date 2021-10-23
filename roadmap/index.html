@@ -1,0 +1,479 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Roadmap - libGDX</title>
+<meta name="description" content="Here you can learn more about our plans for the future of libGDX and what to expect from upcoming updates.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Roadmap">
+<meta property="og:url" content="/roadmap/">
+
+
+  <meta property="og:description" content="Here you can learn more about our plans for the future of libGDX and what to expect from upcoming updates.">
+
+
+
+  <meta property="og:image" content="/assets/images/roadmap.jpg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/roadmap/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/assets/images/roadmap.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Roadmap
+
+        
+      </h1>
+      
+        <p class="page__lead">Here you can learn more about our plans for the future of libGDX and what to expect from upcoming updates.
+</p>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/iW9oP7Ljkbg"><strong>Slidebean</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Roadmap">
+    <meta itemprop="description" content="Here you can learn more about our plans for the future of libGDX and what to expect from upcoming updates.">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <!--
+Available status values:
+
+<span class="status status--planned">
+  Planned
+  
+  
+  
+</span>
+ // is planned for the future
+<span class="status status--wip">
+  
+  In Progress
+  
+  
+</span>
+ // work in progress
+<span class="status status--close">
+  
+  
+  Soon™
+  
+</span>
+ // nearly done
+<span class="status status--done">
+  
+  
+  
+  Scheduled for Release
+</span>
+ //in the next release
+ -->
+
+<p>This is a broad list of the <strong>major features and improvements</strong> we have currently planned for libGDX. As we’re all doing this in our spare time, we refrained from giving any concrete dates and deadlines – plans are always subject to change.</p>
+
+<p>There are also a lot of other improvements in the works, which may not be not big enough to be mentioned on here, but are no less noteworthy. If you want to keep up to date with what is going on with libGDX at the moment, be sure to read our <strong>regular <a href="/news/devlog/">Status Reports</a></strong>.</p>
+
+<table>
+  <tr>
+    <td><h4>AWT Support for LWJGL 3</h4>
+    <br />Currently, AWT and Swing are not working with the LWJGL 3 backend due to some restrictions of GLFW. We have some ideas on how to work around this.<sup><a href="https://github.com/libgdx/libgdx/pull/6247">1</a>, <a href="https://github.com/libgdx/libgdx/pull/6673">1</a></sup></td>
+    <td><span class="status status--wip">
+  
+  In Progress
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>Box2D Update</h4>
+    <br />In July 2020, the original <a href="https://github.com/erincatto/box2d">Box2D</a> received its first update in over 6 years! Now we're working to include those changes in libGDX.<sup><a href="https://github.com/libgdx/libgdx/issues/5948#issuecomment-727643568">1</a></sup></td>
+    <td><span class="status status--wip">
+  
+  In Progress
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>Geometry/Tesselation/Compute Shaders</h4>
+    <br />We really want to look into geometry, tesselation and compute shaders. However, we can't give any promises yet, as this is still just a far-off idea.<sup><a href="https://github.com/libgdx/libgdx/pull/4963">1</a>, <a href="https://github.com/mgsx-dev/libgdx/tree/modern-shaders/compute">2</a></sup></td>
+    <td><span class="status status--planned">
+  Planned
+  
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>gdx-video Resurrection</h4>
+    <br />We have some plans drawn up to revive the old <a href="https://github.com/libgdx/gdx-video">gdx-video</a> extension. The first snapshots are now available!</td>
+    <td><span class="status status--wip">
+  
+  In Progress
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>GL ES 3.1 Support</h4>
+    <br />Currently, the libGDX backends are aimed at offering support for OpenGL ES 2.0 and 3.0. This could be expanded to include the feature set of OpenGL ES 3.1.<sup><a href="https://github.com/libgdx/libgdx/pull/4628">1</a></sup></td>
+    <td><span class="status status--planned">
+  Planned
+  
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>GWT 2.9.0</h4>
+    <br />The Web backend of libGDX is currently based on GWT 2.8.2. An update to version 2.9.0 would offer support for Java 11 language features, like the 'var' keyword.<sup><a href="https://github.com/tommyettinger/gdx-backends#19120">1</a>, <a href="http://www.gwtproject.org/release-notes.html#Release_Notes_2_9_0">2</a></sup></td>
+    <td><span class="status status--wip">
+  
+  In Progress
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>Kotlin-Compatible Web Backend</h4>
+    <br />A Web backend that is compatible with other JVM languages has been talked about a few times now.<sup><a href="https://github.com/squins/gdx-backend-bytecoder">1</a>, <a href="https://github.com/Anuken/Arc/tree/6e9fd338866c05cd42ec20f26ec7fa7c3a25d6d5/backends/backend-teavm">2</a>, <a href="https://github.com/xpenatan/gdx-html5-tools">3</a></sup></td>
+    <td><span class="status status--planned">
+  Planned
+  
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>Metal/Vulkan Support</h4>
+    <br />We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal/Vulkan support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a>, <a href="https://github.com/LWJGL/lwjgl3#khronos-apis">2</a>, <a href="https://github.com/libgdx/libgdx/pull/6593">3</a>, <a href="https://github.com/libgdx/libgdx/pull/6672">4</a></sup></td>
+    <td><span class="status status--wip">
+  
+  In Progress
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>TiledMap Extension</h4>
+    <br />Our TiledMap implementation is not as up to date as we would like it to be. Therefore, we are considering to move it to its own repo to separate its release cycle from libGDX's and to assess its compatibility with other map editors than <a href="https://www.mapeditor.org">Tiled</a>.<sup><a href="https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Atilemap+">1</a>, <a href="https://github.com/libgdx/libgdx/pulls?q=is%3Apr+is%3Aopen+label%3Atilemap">2</a>, <a href="https://github.com/lyze237/gdx-TiledMap">3</a></sup></td>
+    <td><span class="status status--wip">
+  
+  In Progress
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>Web-Based Setup Tool</h4>
+    <br />We already have a working prototype of our new web-based setup tool and are now working on polishing it up to start public testing.<sup><a href="https://github.com/MrStahlfelge/gdx-setup">1</a>, <a href="https://raeleus.itch.io/libgdx-project-setup">2</a></sup></td>
+    <td><span class="status status--planned">
+  Planned
+  
+  
+  
+</span>
+</td>
+  </tr>
+  <tr>
+    <td><h4>WebGL 2.0</h4>
+    <br />Our web backend is the last one, where support for OpenGL ES 3.0 (~ WebGL 2.0) is still lacking. We have plans to change that!<sup><a href="https://github.com/libgdx/libgdx/pull/5763">1</a></sup></td>
+    <td><span class="status status--planned">
+  Planned
+  
+  
+  
+</span>
+</td>
+  </tr>
+</table>
+
+<p><br />
+Last updated: October 2021</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

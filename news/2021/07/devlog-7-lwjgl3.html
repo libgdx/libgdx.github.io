@@ -1,0 +1,634 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Status Report #7: LWJGL 3 - libGDX</title>
+<meta name="description" content="Find out everything about our LWJGL 3 desktop backend!">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Status Report #7: LWJGL 3">
+<meta property="og:url" content="/news/2021/07/devlog-7-lwjgl3">
+
+
+  <meta property="og:description" content="Find out everything about our LWJGL 3 desktop backend!">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/2021-07-24/header.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-07-24T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="/news/2021/07/devlog-7-lwjgl3">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/images/posts/2021-07-24/header.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Status Report #7: LWJGL 3
+
+        
+      </h1>
+      
+        <p class="page__lead">Find out everything about our LWJGL 3 desktop backend!
+</p>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-07-24T00:00:00+00:00">July 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://www.lwjgl.org"><strong>LWJGL Project</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Status Report #7: LWJGL 3">
+    <meta itemprop="description" content="Find out everything about our LWJGL 3 desktop backend!">
+    <meta itemprop="datePublished" content="2021-07-24T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In the next release of libGDX we are switching our default desktop backend from LWJGL 2 to LWJGL 3. This Status Report is meant to provide some background information on this change.</p>
+
+<h3 id="what-is-lwjgl">What is LWJGL?</h3>
+<p>The <a href="https://www.lwjgl.org/">Lightweight Java Game Library</a> (LWJGL) is an <a href="https://github.com/LWJGL/lwjgl3">open-source</a> Java library that provides bindings to a number of C and C++ libraries used for game development, in particular OpenGL, OpenAL and Vulkan. The desktop backends of libGDX build upon LWJGL and wrap its low-level bindings in our cross-platform compatible API to provide graphics and audio.</p>
+
+<h3 id="why-version-3">Why version 3?</h3>
+<p>Version 3 of LWJGL 3 was announced at the end of 2014 and had its first release on 4 June 2016. It is a complete rewrite of LWJGL, with the biggest change being the move from LWJGL2’s own windowing system to <a href="https://www.glfw.org">GLFW</a>. The first version of libGDX’s LWJGL 3 backend was made public back <a href="https://github.com/libgdx/libgdx/issues/3673">in 2015</a> together with a call for testing. Since then we have continually improved upon this initial release.</p>
+
+<p>There were a couple of reasons for us to start working on a LWJGL 3 backend, the most obvious being the discontinuation of LWJGL 2, which had its last release in January of 2015. In addition, LWJGL 3 provides considerably better support for <a href="https://github.com/libgdx/libgdx/issues/6426">current JREs, macOS, Linux</a> (including <a href="/news/2020/08/devlog_1_road_ahead#linux-arm-builds">Raspberry Pis</a>), and <a href="https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests-lwjgl3/src/com/badlogic/gdx/tests/lwjgl3/MultiWindowTest.java">multi-window environments</a>.</p>
+
+<h3 id="how-can-i-migrate">How can I migrate?</h3>
+<p>To switch your existing libGDX projects to the LWJGL 3 desktop backend you need to follow two steps:</p>
+
+<ol>
+  <li>
+    <p>Open your root <code class="language-plaintext highlighter-rouge">build.gradle</code> file and replace the LWJGL backend dependency:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+</code></pre></div>    </div>
+
+    <p>with the LWJGL 3 backend dependency:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+</code></pre></div>    </div>
+
+    <p>Make sure to refresh your Gradle dependencies in your IDE.</p>
+  </li>
+  <li>
+    <p>Next up, you need to fix your <code class="language-plaintext highlighter-rouge">DesktopLauncher</code> class. It is located in your desktop project and should look something like this:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DesktopLauncher</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">arg</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">LwjglApplicationConfiguration</span> <span class="n">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LwjglApplicationConfiguration</span><span class="o">();</span>
+      <span class="k">new</span> <span class="nf">LwjglApplication</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyGdxGame</span><span class="o">(),</span> <span class="n">config</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>Change it to this:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DesktopLauncher</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">arg</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">Lwjgl3ApplicationConfiguration</span> <span class="n">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lwjgl3ApplicationConfiguration</span><span class="o">();</span>
+      <span class="k">new</span> <span class="nf">Lwjgl3Application</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyGdxGame</span><span class="o">(),</span> <span class="n">config</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+    <p><br /></p>
+  </li>
+</ol>
+
+<h3 id="do-i-need-to-do-anything-else">Do I need to do anything else?</h3>
+<p>If you are on Windows or Linux, you are all set!</p>
+
+<p>However, if you are on <strong>macOS</strong>, the LWJGL 3 backend is only working when the JVM is run with the <a href="https://github.com/LWJGL/lwjgl3/blob/572f69802cb2d4930777403c73999c3e01de9d56/modules/lwjgl/glfw/src/main/java/org/lwjgl/glfw/EventLoop.java#L14-L23"><code class="language-plaintext highlighter-rouge">-XstartOnFirstThread</code></a> argument. This ensures that your application’s <code class="language-plaintext highlighter-rouge">main()</code> method runs on the first (i.e., the AppKit) thread and will be familiar to those of you with experiences with SWT.</p>
+
+<p>Typically, the argument can be set in the Launch/Run Configurations of your IDE, as is described <a href="/dev/import-and-running/">here</a>. Alternatively, if you’re starting your project via Gradle, add this line to the <code class="language-plaintext highlighter-rouge">run</code> task of the desktop Gradle file:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    jvmArgs = ['-XstartOnFirstThread']
+</code></pre></div></div>
+<p>A viable approach for <em>outside of your development environment</em> is to just programatically restart the JVM if the argument is not present (see <a href="https://github.com/crykn/guacamole/blob/master/gdx-desktop/src/main/java/de/damios/guacamole/gdx/StartOnFirstThreadHelper.java#L69">here</a> for a simple example). Alternatively, if you want to deploy your game by packaging a JRE with it (which is the recommended way to distribute your game), jpackage or packr allow you to set the JVM arguments.</p>
+
+<h3 id="are-there-any-other-things-i-need-to-be-aware-of">Are there any other things I need to be aware of?</h3>
+<ul>
+  <li>Whenever your <strong>application is minimised</strong>, the LWJGL 3 backend calls <code class="language-plaintext highlighter-rouge">ApplicationListener#resize(0, 0)</code>. This can lead to unexpected issues, in particular if you are (re)building framebuffers whenever the application is resized.</li>
+  <li>The LWJGL 3 backend does <a href="https://github.com/libgdx/libgdx/pull/6247">not yet</a> work with <strong>Swing or AWT</strong>.</li>
+  <li>As the graphical tools in <strong>gdx-tools</strong> require AWT, the library has a hard dependency on LWJGL 2. If you are using one of the non-graphical tools of the gdx-tools project (in particular <a href="https://github.com/libgdx/libgdx/wiki/Texture-packer#from-source">TexturePacker</a>) and the LWJGL 3 backend <em>in the same (!) project</em>, you need to modify your gdx-tools dependency like this:
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">compile</span> <span class="o">(</span><span class="s2">"com.badlogicgames.gdx:gdx-tools:$gdxVersion"</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">exclude</span> <span class="nl">group:</span> <span class="s1">'com.badlogicgames.gdx'</span><span class="o">,</span> <span class="nl">module:</span> <span class="s1">'gdx-backend-lwjgl'</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<p>And that was it for today’s Status Report – see you all in #8!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-07-24T00:00:00+00:00">July 24, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Status+Report+%237%3A+LWJGL+3%20%2Fnews%2F2021%2F07%2Fdevlog-7-lwjgl3" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fnews%2F2021%2F07%2Fdevlog-7-lwjgl3" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fnews%2F2021%2F07%2Fdevlog-7-lwjgl3" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/news/2021/06/colorful-gdx" class="pagination--pager" title="Community Showcase: colorful-gdx
+">Previous</a>
+    
+    
+      <a href="/news/2021/09/jam-september-2021" class="pagination--pager" title="libGDX Jam September 2021
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-09-01/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/09/jam-september-2021" rel="permalink">libGDX Jam September 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-09-01T00:00:00+00:00">September 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 18th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-05/logo.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/colorful-gdx" rel="permalink">Community Showcase: colorful-gdx
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-05T00:00:00+00:00">June 5, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Tommy Ettinger presents his colorful-gdx library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-02/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/jam-june-2021" rel="permalink">libGDX Jam June 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-02T00:00:00+00:00">June 2, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 17th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-05-17/teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/05/shape-drawer" rel="permalink">Community Showcase: Shape Drawer
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-05-17T00:00:00+00:00">May 17, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Early Grey presents their Shape Drawer library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

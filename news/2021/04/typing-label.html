@@ -1,0 +1,744 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Community Showcase: Typing Label - libGDX</title>
+<meta name="description" content="Rafa Skoberg presents his Typing Label library in our Community Showcase!">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Community Showcase: Typing Label">
+<meta property="og:url" content="/news/2021/04/typing-label">
+
+
+  <meta property="og:description" content="Rafa Skoberg presents his Typing Label library in our Community Showcase!">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/2021-04-03/logo.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-04-03T00:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="/news/2021/04/typing-label">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Community Showcase: Typing Label">
+    <meta itemprop="description" content="Rafa Skoberg presents his Typing Label library in our Community Showcase!">
+    <meta itemprop="datePublished" content="2021-04-03T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Community Showcase: Typing Label
+</h1>
+          <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-04-03T00:00:00+00:00">April 3, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/RafaSKB"><img class="avatar avatar-small" alt="RafaSKB" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/RafaSKB?v=3&s=20" srcset="https://avatars2.githubusercontent.com/RafaSKB?v=3&s=20 1x, https://avatars2.githubusercontent.com/RafaSKB?v=3&s=40 2x, https://avatars2.githubusercontent.com/RafaSKB?v=3&s=60 3x, https://avatars2.githubusercontent.com/RafaSKB?v=3&s=80 4x" /></a>
+        Rafa Skoberg
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="notice--primary">
+   <p>
+     Hey everybody! As announced a few months ago, we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. In this <b>Community Showcase</b>, Rafa Skoberg is going to present his <a href="https://github.com/rafaskb/typing-label#readme">Typing Label library</a>!
+   </p>
+   <p>
+     If you are interested in other cool community projects, be sure to check out the <a href="https://github.com/rafaskb/awesome-libgdx#readme">libGDX Awesome List</a> as well. To participate in future showcases, take a look <a href="https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases">here</a>.
+   </p>
+ </div>
+
+<p><img src="/assets/images/posts/2021-04-03/logo.png" alt="" class="align-center" /></p>
+
+<p>Have you ever wanted to create RPG-like dialogues where the text appears letter by letter? Perhaps play sounds as glyphs are rendered? How about injecting variables inside your dialogues, such as the character’s name chosen by the player? Or even fire and listen to events placed in the middle of sentences, and shake the screen when that happens?</p>
+
+<p>Enter <a href="https://github.com/rafaskb/typing-label#readme">Typing Label</a>, a Scene2D Label that appears as if it was being typed in real time. 😁</p>
+
+<p><img src="/assets/images/posts/2021-04-03/sample.gif" alt="" class="align-center" /></p>
+
+<h3 id="magic-tricks">Magic Tricks</h3>
+
+<p><a href="https://github.com/rafaskb/typing-label/wiki/Tokens">Tokens</a> are the heart of Typing Label, and they define how your text will behave. Here are some examples of tokens that modify the appearance of a label:</p>
+
+<figure class="half ">
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-ease.gif" title="Ease Token">
+          <img src="/assets/images/posts/2021-04-03/effect-ease.gif" alt="Ease Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-hang.gif" title="Hang Token">
+          <img src="/assets/images/posts/2021-04-03/effect-hang.gif" alt="Hang Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-jump.gif" title="Jump Token">
+          <img src="/assets/images/posts/2021-04-03/effect-jump.gif" alt="Jump Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-shake.gif" title="Shake Token">
+          <img src="/assets/images/posts/2021-04-03/effect-shake.gif" alt="Shake Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-sick.gif" title="Sick Token">
+          <img src="/assets/images/posts/2021-04-03/effect-sick.gif" alt="Sick Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-slide.gif" title="Slide Token">
+          <img src="/assets/images/posts/2021-04-03/effect-slide.gif" alt="Slide Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-wave.gif" title="Wave Token">
+          <img src="/assets/images/posts/2021-04-03/effect-wave.gif" alt="Wave Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-wind.gif" title="Wind Token">
+          <img src="/assets/images/posts/2021-04-03/effect-wind.gif" alt="Wind Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-fade.gif" title="Fade Token">
+          <img src="/assets/images/posts/2021-04-03/effect-fade.gif" alt="Fade Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-blink.gif" title="Blink Token">
+          <img src="/assets/images/posts/2021-04-03/effect-blink.gif" alt="Blink Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-gradient.gif" title="Gradient Token">
+          <img src="/assets/images/posts/2021-04-03/effect-gradient.gif" alt="Gradient Token" />
+      </a>
+    
+  
+    
+      <a href="/assets/images/posts/2021-04-03/effect-rainbow.gif" title="Rainbow Token">
+          <img src="/assets/images/posts/2021-04-03/effect-rainbow.gif" alt="Rainbow Token" />
+      </a>
+    
+  
+  
+</figure>
+
+<p>It’s really simple to apply tokens to your text, check it out:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create some text with tokens</span>
+<span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">"{JUMP}{COLOR=GREEN}Hello,{WAIT} world!{ENDJUMP}"</span> <span class="o">+</span>
+    <span class="s">"\n{COLOR=ORANGE}{SLOWER} Did you know {WAVE}orange{ENDWAVE}"</span> <span class="o">+</span>
+    <span class="s">" is my {SLIDE}favorite{ENDSLIDE} color?"</span><span class="o">;</span>
+
+<span class="c1">// Create a TypingLabel instance with your custom text</span>
+<span class="nc">TypingLabel</span> <span class="n">label</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TypingLabel</span><span class="o">(</span><span class="n">text</span><span class="o">,</span> <span class="n">skin</span><span class="o">);</span>
+
+<span class="c1">// Add the actor to any widget like you normally would</span>
+<span class="n">stage</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">label</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>You can also use variable and event tokens for some pretty advanced stuff. Lets say the player can name their cat in your game, and in a certain dialogue you want to say its name and play a meow sound. Here’s how that would work:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Create some text with tokens</span>
+<span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">"Every time {COLOR=IMPORTANT}{VAR=CatName}{RESET} wants some milk "</span> <span class="o">+</span>
+    <span class="s">"{VAR=CatPronoum1} meows uncontrollably.{EVENT=Meow}{WAIT=1}"</span> <span class="o">+</span> 
+    <span class="s">"{SLOWER} Yep, just like that... 😻"</span><span class="o">;</span>
+
+<span class="c1">// Create a TypingLabel instance with your custom text</span>
+<span class="nc">TypingLabel</span> <span class="n">label</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TypingLabel</span><span class="o">(</span><span class="n">text</span><span class="o">,</span> <span class="n">skin</span><span class="o">);</span>
+
+<span class="c1">// Assign variables to replace {VAR} tokens</span>
+<span class="n">label</span><span class="o">.</span><span class="na">setVariable</span><span class="o">(</span><span class="s">"CatName"</span><span class="o">,</span> <span class="s">"Daisy Purrington"</span><span class="o">);</span>
+<span class="n">label</span><span class="o">.</span><span class="na">setVariable</span><span class="o">(</span><span class="s">"CatPronoum1"</span><span class="o">,</span> <span class="s">"she"</span><span class="o">);</span>
+
+<span class="c1">// Add the actor to any widget like you normally would</span>
+<span class="n">stage</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">label</span><span class="o">);</span>
+
+<span class="c1">// Create a TypingListener or TypingAdapter to listen to events as they're fired</span>
+<span class="n">label</span><span class="o">.</span><span class="na">setTypingListener</span><span class="o">(</span><span class="k">new</span> <span class="nc">TypingAdapter</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">event</span> <span class="o">(</span><span class="nc">String</span> <span class="n">event</span><span class="o">)</span>  <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="s">"Meow"</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="n">event</span><span class="o">))</span> <span class="o">{</span>
+            <span class="nc">Sound</span> <span class="n">meowSound</span> <span class="o">=</span> <span class="n">getMeowSoundSomehow</span><span class="o">();</span>
+            <span class="n">meowSound</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</code></pre></div></div>
+
+<p class="notice--info"><em>More examples and the complete token list can be found in the <a href="https://github.com/rafaskb/typing-label/wiki/Examples#using-tokens">Typing Label’s wiki</a>.</em></p>
+
+<h3 id="real-life-example">Real Life Example</h3>
+
+<p>Typing Label was originally created in 2016 for a libGDX game called <a href="http://grashers.com/">Grashers</a>, and then transformed into an open source library so other developers could use its features in their games.</p>
+
+<p>Here’s an example of the library being used in the game while using several tokens, variables, and listeners:</p>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/UafQrXP_tE8" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>To achieve this sort of effect, I use a code similar to this one:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * Constants
+ */</span>
+<span class="cm">/** Default TypingLabel token used in all dialogue labels. */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">DIALOGUE_DEFAULT_TOKEN</span> <span class="o">=</span> <span class="s">"{EASE=1;1}{FADE=0;1;0.1}"</span><span class="o">;</span>
+
+<span class="cm">/** Character's name. This would be defined by the player in a real scenario. */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">CHAR_NAME</span> <span class="o">=</span> <span class="s">"Stella"</span><span class="o">;</span>
+
+<span class="cm">/*
+ * Label
+ */</span>
+<span class="c1">// Create dialogue label</span>
+<span class="nc">TypingLabel</span> <span class="n">dialogLabel</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TypingLabel</span><span class="o">(</span><span class="s">""</span><span class="o">,</span> <span class="n">skin</span><span class="o">);</span>
+<span class="n">dialogLabel</span><span class="o">.</span><span class="na">setDefaultToken</span><span class="o">(</span><span class="no">DIALOGUE_DEFAULT_TOKEN</span><span class="o">);</span>
+<span class="n">dialogLabel</span><span class="o">.</span><span class="na">setVariable</span><span class="o">(</span><span class="s">"PLAYER"</span><span class="o">,</span> <span class="no">CHAR_NAME</span><span class="o">);</span>
+
+<span class="c1">// Play mumble sound every time a character is typed</span>
+<span class="n">dialogLabel</span><span class="o">.</span><span class="na">setTypingListener</span><span class="o">(</span><span class="k">new</span> <span class="nc">TypingAdapter</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onChar</span><span class="o">(</span><span class="nc">Character</span> <span class="n">ch</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Each character has their own sounds here</span>
+        <span class="nc">Sound</span> <span class="n">reallyShortMumbleSound</span> <span class="o">=</span> <span class="n">getRandomMumbleSound</span><span class="o">();</span>
+        <span class="n">reallyShortMumbleSound</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+
+<span class="cm">/*
+ * Dialogue Texts
+ */</span>
+<span class="nc">String</span><span class="o">[]</span> <span class="n">dialogueTexts</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="s">"Thanks for coming, uh... {VAR=PLAYER}. {SHAKE}{COLOR=WHISPER}*cough* *cough*"</span><span class="o">,</span>
+
+    <span class="s">"{SICK}Sorry, don't get too close."</span><span class="o">,</span>
+
+    <span class="s">"There's a {COLOR=IMPORTANT}really weird stink{CLEARCOLOR} comin' from somewhere in here. And sometimes there's these, like {JUMP}\"bum-BUMP\"{ENDJUMP} noises."</span><span class="o">,</span>
+
+    <span class="s">"{SLOWER}It's the {COLOR=IMPORTANT}physical manifestation of the darkness within men's hearts."</span><span class="o">,</span>
+
+    <span class="s">"{COLOR=WHISPER}*bleep*"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="installing">Installing</h3>
+<p>Typing Label works as a drop-in replacement for normal Scene2D Labels, so getting it to work is really simple. All you have to do is add Typing Label to your Gradle dependencies and that’s it! You can find the instructions in the <a href="https://github.com/rafaskb/typing-label#installation">repository’s README</a>.</p>
+
+<h3 id="development-status">Development Status</h3>
+<p>I consider Typing Label to be in a mature state. It’s been tested by many developers over the years, and thankfully it has proven to be very stable. The library is compatible with the most recent libGDX version, and should continue to be as future updates are released as well.</p>
+
+<p>That being said, there are no major changes or additions planned for Typing Label right now, however improvements and additions are always welcome! 💜</p>
+
+<h3 id="external-references">External References</h3>
+<ul>
+  <li><a href="https://github.com/rafaskb/typing-label#readme">GitHub page and readme</a></li>
+  <li><a href="https://github.com/rafaskb/typing-label/wiki/Tokens">Tokens</a></li>
+  <li><a href="https://github.com/rafaskb/typing-label/wiki/Tokens#combining-effects">Combining effects</a></li>
+  <li><a href="https://github.com/rafaskb/typing-label/wiki/Tokens#custom-effects">Create your own effects!</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-03T00:00:00+00:00">April 3, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Community+Showcase%3A+Typing+Label%20%2Fnews%2F2021%2F04%2Ftyping-label" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fnews%2F2021%2F04%2Ftyping-label" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fnews%2F2021%2F04%2Ftyping-label" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/news/2021/03/gdx-ga" class="pagination--pager" title="Community Showcase: GDX Gameanalytics
+">Previous</a>
+    
+    
+      <a href="/news/2021/04/gdx-1-10" class="pagination--pager" title="libGDX 1.10.0
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-09-01/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/09/jam-september-2021" rel="permalink">libGDX Jam September 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-09-01T00:00:00+00:00">September 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 18th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-07-24/header.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/07/devlog-7-lwjgl3" rel="permalink">Status Report #7: LWJGL 3
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-07-24T00:00:00+00:00">July 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Find out everything about our LWJGL 3 desktop backend!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-05/logo.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/colorful-gdx" rel="permalink">Community Showcase: colorful-gdx
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-05T00:00:00+00:00">June 5, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Tommy Ettinger presents his colorful-gdx library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/posts/2021-06-02/header.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/jam-june-2021" rel="permalink">libGDX Jam June 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-02T00:00:00+00:00">June 2, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 17th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

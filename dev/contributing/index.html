@@ -1,0 +1,549 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Contributing Guidelines - libGDX</title>
+<meta name="description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Contributing Guidelines">
+<meta property="og:url" content="/dev/contributing/">
+
+
+  <meta property="og:description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+  <meta property="og:image" content="/assets/images/dev/dev.jpeg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/dev/contributing/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/images/dev/dev.jpeg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Contributing Guidelines
+
+        
+      </h1>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/Ek9Znm8lQ1U"><strong>Florian Olivo</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev/setup/">Set Up a Dev Env</a></li>
+          
+            <li><a href="/dev/project-generation/">Generate a Project</a></li>
+          
+            <li><a href="/dev/import-and-running/">Importing & Running</a></li>
+          
+            <li><a href="/dev/simple-game/">A Simple Game</a></li>
+          
+            <li><a href="/dev/simple-game-extended/">Extending the Simple Game</a></li>
+          
+            <li><a href="/dev/tutorials/">Demos & Tutorials</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Documentation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="https://github.com/libgdx/libgdx/wiki">Wiki</a></li>
+          
+            <li><a href="https://libgdx.badlogicgames.com/ci/nightlies/docs/api/">Javadocs</a></li>
+          
+            <li><a href="/dev/versions/">Versions</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Tools & Frameworks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="https://github.com/rafaskb/awesome-libgdx#readme">Awesome-libGDX</a></li>
+          
+            <li><a href="/dev/tools/">Tools</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Contributing to libGDX</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev/contributing/" class="active">Contributing Guidelines</a></li>
+          
+            <li><a href="/dev/issues/">Reporting an Issue</a></li>
+          
+            <li><a href="/roadmap/">Roadmap</a></li>
+          
+            <li><a href="/dev/from-source/">Working from Source</a></li>
+          
+            <li><a href="/dev/natives/">Building the Natives</a></li>
+          
+            <li><a href="/funding/">Funding</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Contributing Guidelines">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <!-- https://jekyllcodex.org/without-plugin/breadcrumbs/ -->
+<div id="breadcrumbs" style="margin-top: -25px; margin-bottom: 30px;font-size:17px">
+
+<a href="/">Home</a>
+
+  
+    / <a href="/dev/">Dev</a>
+  
+
+  
+    / <b>Contributing Guidelines</b>
+  
+
+</div>
+
+<p>Contributing to libGDX can come in a few different forms: you can <a href="/dev/issues/">report issues</a>, help out on the <a href="/community/">Discord</a>, pledge to the <a href="/funding/">Patreon</a> page, and submit <a href="https://github.com/libgdx/libgdx/">code</a> and <a href="https://github.com/libgdx/libgdx/wiki">documentation</a> back to the project on GitHub.</p>
+
+<p>If you want to submit code back to the project, please take a moment to review our guidelines below.</p>
+
+<h1 id="guidelines">Guidelines</h1>
+<h2 id="api-changes--additions">API Changes &amp; Additions</h2>
+<p>If you modify a public API, or add a new one, make sure to add these changes to the <a href="https://github.com/libgdx/libgdx/blob/master/CHANGES">CHANGES</a> file in the root of the repository.</p>
+
+<p>If you want to poll the brains of other devs, either open an issue on our issue tracker, send a pull request and start a conversation on Github, or join our official <a href="/community/discord/">Discord server</a>.</p>
+
+<h2 id="contributor-license-agreement">Contributor License Agreement</h2>
+<p>libGDX is licensed under the <a href="http://en.wikipedia.org/wiki/Apache_License">Apache 2.0 license</a>. Before we can accept (major) code contributions, we need you to sign our <a href="https://github.com/libgdx/libgdx/blob/master/CLA.txt">Contributor License Agreement</a>. Just print it out, fill in the blanks and send a copy to contact@badlogicgames.com, with the subject <code class="language-plaintext highlighter-rouge">[libGDX] CLA</code>.</p>
+
+<p class="notice--info">Signing the CLA will allow us to use and distribute your code. This is a non-exclusive license, so you retain all rights to your code. It’s a fail-safe for us should someone contribute essential code and later decide to take it back.</p>
+
+<h2 id="formatting">Formatting</h2>
+<p>If you are working on any of the libGDX code, we require you to use our formatter. Failure to do so will get your pull request rejected. You can find the Eclipse formatter file <a href="https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml">here</a>, which can also be imported into IntelliJ and Android Studio. See <a href="https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/">here</a> for official documentation on this.</p>
+
+<p>To make our life easier, we used <a href="https://github.com/diffplug/spotless">Spotless</a> to integrate the formatter into our build system, so you don’t have to put up with the hassle of importing it into your IDE. Just run <code class="language-plaintext highlighter-rouge">./gradlew spotlessApply</code> and your edited files are formatted correctly.</p>
+
+<p class="notice--info">Please note that the CI build will fail, if the files are not formatted correctly!</p>
+
+<h2 id="code-style">Code Style</h2>
+<p>libGDX doesn’t have an official coding standard, but we stand by the usual Java style, as should you.</p>
+
+<div class="notice--warning" style="padding-left: 10px">
+<b>Please do <u>not</u> do any of the following:</b>
+<ul>
+  <li>Underscores in identifiers</li>
+  <li><a href="https://en.wikipedia.org/wiki/Hungarian_notation">Hungarian notation</a></li>
+  <li>Prefixes for fields or arguments</li>
+  <li>Curly braces on new lines</li>
+</ul>
+</div>
+
+<p>A few additional notes to keep in mind:</p>
+
+<ul>
+  <li>When creating a new file, make sure to add the Apache file header, as you can see <a href="https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/Application.java#L1-L15">here</a></li>
+  <li>Follow the style of the code in the file you are changing</li>
+  <li>If you create a new class, please add documentation that explains the usage and scope of the class. You don’t have to add javadocs for methods that are self explanatory.</li>
+  <li>If your class is thread safe, mention it in the documentation. Its assumed that libGDX classes are not thread safe by default, so please mention it.</li>
+</ul>
+
+<h2 id="compatibility">Compatibility</h2>
+<p>Due to the cross platform nature of libGDX, there are some things you have to avoid when contributing code. For example. GWT <a href="http://www.gwtproject.org/doc/latest/RefJreEmulation.html">does not support all java features</a>, and Android <a href="https://developer.android.com/studio/write/java8-support">does not support all desktop JVM features</a>.</p>
+
+<h3 id="considerations-for-gwt-compatibility">Considerations for GWT compatibility</h3>
+<p>If some java features are not supported on GWT they must either be emulated or avoided. Emulation is also required for native code (<code class="language-plaintext highlighter-rouge">Matrix4</code>). An example of emulation is shown <a href="https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/com/badlogic/gdx/math/Matrix4.java">here</a>.</p>
+
+<div class="notice--info" style="padding-left: 10px">
+<b>Common limitations on GWT include:</b>
+<ul>
+  <li>Formatting: String.format() is not supported.</li>
+  <li>Regular expressions. However, a basic emulation of <a href="https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Pattern.java">Pattern</a> <a href="https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Matcher.java">Matcher</a> is provided.</li>
+  <li>Reflection. Use <a href="https://github.com/libgdx/libgdx/wiki/Reflection">libGDX reflection</a> instead.</li>
+  <li>Multithreading: <a href="https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/utils/Timer.java">Timers</a> are supported on GWT, but threads are strictly not.</li>
+</ul>
+</div>
+
+<p>Determine if any new classes are compatible with GWT, and either <strong>include</strong> or <strong>exclude</strong> elements to the <a href="https://github.com/libgdx/libgdx/blob/master/gdx/res/com/badlogic/gdx.gwt.xml">GWT module</a>. See for example <a href="https://github.com/libgdx/libgdx/pull/5018/files#diff-13b547f0d1b0872d60d67db4ca0b266d">this PR</a>.
+If the new file isn’t added to <code class="language-plaintext highlighter-rouge">gdx/src/com/badlogic/gdx.gwt.xml</code>, an error similar to</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ERROR] Errors in 'jar:file:&lt;...&gt;'
+[ERROR] Line &lt;line num&gt;: No source code is available for type com.badlogic.gdx.graphics.g3d.environment.PointShadowLight; did you forget to inherit a required module?
+[ERROR] Aborting compile due to errors in some input files
+</code></pre></div></div>
+
+<p>may be seen.</p>
+
+<h2 id="performance-considerations">Performance considerations</h2>
+<p>Due to some of the targets of the framework being mobile and the web, along with it being a game development focused framework, its important to keep performance as tight as possible. On mobile platforms especially, memory management is very important, so we don’t create any garbage in the core of libGDX.</p>
+
+<div class="notice--info" style="padding-left: 10px">
+<b>A couple of guidelines regarding performance:</b>
+<ul>
+  <li>Avoid any temporary object allocation</li>
+  <li>Do not make defensive copies</li>
+  <li>Avoid locking, libGDX is not thread safe, unless explicitly specified.</li>
+  <li>Use the Collection classes libGDX provides in the <a href="https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/utils">com.badlogic.gdx.utils</a> package, do not use java collections</li>
+  <li>Do not perform argument checks for methods that may be called thousands of times per frame</li>
+  <li>Use pooling if necessary, if possible avoid exposing the internal pooling to the user</li>
+</ul>
+</div>
+
+<h2 id="size-of-code-changes">Size of code changes</h2>
+<p>To reduce the chances of introducing errant behavior and to increase the chance that your pull request gets merged, we ask you to keep the requests small and focused.</p>
+
+<ul>
+  <li>Submit a pull request dedicated to solving <em>one</em> issue or feature. Pull requests confusing multiple things are much harder to review and will be denied.</li>
+  <li>Keep the code changes as small as possible.</li>
+</ul>
+
+<p><br /></p>
+
+<h1 id="how-to-contribute-code">How to contribute code</h1>
+<p>libGDX uses git, with our codebase situated on GitHub. In order to submit changes back to the official libGDX project, you will need to fork the project, clone your fork, <a href="/dev/from-source/">work on its source</a>, push changes back to your fork, and then submit a pull request based on your changes.</p>
+
+<p>Pull requests will then be checked by automation tools as well as the core contributors before merging. Please do not leave it up to the core contributors to test your code, make sure it compiles, and test on every platform you can. State in your pull request what you have tested on.</p>
+
+<p>To sum it up, this is the general workflow:</p>
+<ul>
+  <li><a href="https://docs.github.com/en/github/getting-started-with-github/fork-a-repo">Fork</a> the libGDX repository on GitHub.</li>
+  <li>Clone the forked repository either via the command line or your IDE.</li>
+  <li>Add the libGDX repository as a remote (to sync latest changes).</li>
+  <li>Make your changes to your locally cloned (of your fork), repository, ideally on a new branch. See <a href="/dev/from-source/">here</a> for a guide on how to get the libGDX code running locally.</li>
+  <li>Commit your changes, and push the changes back to your forked repository on GitHub.</li>
+  <li>Go to GitHub, view your forked repository, select your branch and create a pull request.</li>
+  <li>Write a detailed description of what your pull request does, how it has been tested, what platforms it has been tested on, and why it belongs in libGDX.</li>
+</ul>
+
+<p>For a very extensive explanation of how the pull request system on GitHub is supposed to work, check out <a href="https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#Forked-Public-Project">this guide</a>.</p>
+
+<p>Pull requests may be denied for not being ready, or not fitting the scope of the project. Please do not take any offense to having a pull request rejected. We appreciate every contribution, but some code submissions are just not a good fit for the project.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1082 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>A Simple Game - libGDX</title>
+<meta name="description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="A Simple Game">
+<meta property="og:url" content="/dev/simple-game/">
+
+
+  <meta property="og:description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+  <meta property="og:image" content="/assets/images/dev/dev.jpeg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/dev/simple-game/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/images/dev/dev.jpeg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          A Simple Game
+
+        
+      </h1>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/Ek9Znm8lQ1U"><strong>Florian Olivo</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev/setup/">Set Up a Dev Env</a></li>
+          
+            <li><a href="/dev/project-generation/">Generate a Project</a></li>
+          
+            <li><a href="/dev/import-and-running/">Importing & Running</a></li>
+          
+            <li><a href="/dev/simple-game/" class="active">A Simple Game</a></li>
+          
+            <li><a href="/dev/simple-game-extended/">Extending the Simple Game</a></li>
+          
+            <li><a href="/dev/tutorials/">Demos & Tutorials</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Documentation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="https://github.com/libgdx/libgdx/wiki">Wiki</a></li>
+          
+            <li><a href="https://libgdx.badlogicgames.com/ci/nightlies/docs/api/">Javadocs</a></li>
+          
+            <li><a href="/dev/versions/">Versions</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Tools & Frameworks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="https://github.com/rafaskb/awesome-libgdx#readme">Awesome-libGDX</a></li>
+          
+            <li><a href="/dev/tools/">Tools</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Contributing to libGDX</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev/contributing/">Contributing Guidelines</a></li>
+          
+            <li><a href="/dev/issues/">Reporting an Issue</a></li>
+          
+            <li><a href="/roadmap/">Roadmap</a></li>
+          
+            <li><a href="/dev/from-source/">Working from Source</a></li>
+          
+            <li><a href="/dev/natives/">Building the Natives</a></li>
+          
+            <li><a href="/funding/">Funding</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="A Simple Game">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <!-- https://jekyllcodex.org/without-plugin/breadcrumbs/ -->
+<div id="breadcrumbs" style="margin-top: -25px; margin-bottom: 30px;font-size:17px">
+
+<a href="/">Home</a>
+
+  
+    / <a href="/dev/">Dev</a>
+  
+
+  
+    / <b>A Simple Game</b>
+  
+
+</div>
+
+<p>Before diving into the APIs provided by libGDX, let’s create <strong>a very simple “game”</strong>, that touches each module provided by the framework, to get a feeling for things. We’ll introduce a few different concepts without going into unnecessary detail.</p>
+
+<style>
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.svg-text {
+  color: white;
+  font-size: 12px !important;
+}
+
+.svg-link {
+  text-decoration: none !important;
+}
+</style>
+
+<div class="svg-container">
+  <svg version="1.1" viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet" class="svg-content">
+    <defs>
+      <marker id="arrow" markerWidth="4" markerHeight="10" viewBox="-2 -4 4 4" refX="0" refY="0" markerUnits="strokeWidth" orient="auto">
+        <polyline points="2,-2 0,0 2,2" stroke="#443c3d" stroke-width="0.75px" fill="none" />
+      </marker>
+    </defs>
+
+    <g class="box-group">
+      <a xlink:href="/dev/setup/" class="svg-link"> <!-- Dev Env -->
+        <g transform="translate(4)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Set Up a Dev Environment</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="100" x2="136" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/project-generation/" class="svg-link">   <!-- Generate Project -->
+        <g transform="translate(136)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Generate a Project</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="230" x2="268" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/import-and-running/" class="svg-link"> <!-- Import & Run Configs -->
+        <g transform="translate(268)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Importing &amp; Running</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="362" x2="400" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/simple-game/" class="svg-link"> <!-- Simple Game -->
+        <g transform="translate(400)">
+          <rect fill="#66cc00" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">A Simple Game</p>
+          </foreignObject>
+        </g>
+      </a>
+    </g>
+  </svg>
+</div>
+
+<p>In the following, we’ll look at:</p>
+
+<ul>
+  <li>Basic file access</li>
+  <li>Clearing the screen</li>
+  <li>Drawing images</li>
+  <li>Using a camera</li>
+  <li>Basic input processing</li>
+  <li>Playing sound effects</li>
+</ul>
+
+<h2 id="project-setup">Project Setup</h2>
+<p>Follow the steps in the <a href="/dev/project_generation/">Generating a Project</a> guide. In the following, we will use these settings:</p>
+
+<ul>
+  <li>Application name: <code class="language-plaintext highlighter-rouge">drop</code></li>
+  <li>Package name: <code class="language-plaintext highlighter-rouge">com.badlogic.drop</code></li>
+  <li>Game class: <code class="language-plaintext highlighter-rouge">Drop</code></li>
+</ul>
+
+<p>Now fill in the destination. If you are interested in Android development, be sure to check that option an provide the Android SDK folder. For the purpose of this tutorial, we will uncheck the iOS sub project (as you would need OS X to run it) and all extensions (extensions are a more advanced topic).</p>
+
+<p>Once imported into your IDE, you should have 5 projects or modules: the main one <code class="language-plaintext highlighter-rouge">drop</code>, and the sub projects <code class="language-plaintext highlighter-rouge">android</code> (or <code class="language-plaintext highlighter-rouge">drop-android</code> under Eclipse), <code class="language-plaintext highlighter-rouge">core</code> / <code class="language-plaintext highlighter-rouge">drop-core</code>, <code class="language-plaintext highlighter-rouge">desktop</code> / <code class="language-plaintext highlighter-rouge">drop-desktop</code>, and <code class="language-plaintext highlighter-rouge">html</code> / <code class="language-plaintext highlighter-rouge">drop-html</code>.</p>
+
+<p>To launch or debug the game, see the page <a href="/dev/import-and-running/">Importing &amp; Running a Project</a>.</p>
+
+<p>If we just run the project, we will get an error: <code class="language-plaintext highlighter-rouge">Couldn't load file: badlogic.jpg</code>. Your Run Configuration has to be properly configured first: Select as working directory <code class="language-plaintext highlighter-rouge">PATH_TO_YOUR_PROJECT/​drop/android/assets</code>. If we run it now, we will get the default ‘game’ generated by the startup app: a Badlogic Games image on a red background. Not too exciting, but that’s about to change.</p>
+
+<h2 id="the-game">The Game</h2>
+<p>The game idea is very simple:</p>
+
+<ul>
+  <li>Catch raindrops with a bucket.</li>
+  <li>The bucket is located in the lower part of the screen.</li>
+  <li>Raindrops spawn randomly at the top of the screen every second and accelerate downwards.</li>
+  <li>Player can drag the bucket horizontally via the mouse/touch or move it via the left and right cursor keys.</li>
+  <li>The game has no end - think of it as a zen-like experience :)</li>
+</ul>
+
+<h2 id="the-assets">The Assets</h2>
+<p>We need a few images and sound effects to make the game look somewhat pretty. For the graphics we need to define a target resolution of 800x480 pixels (landscape mode on Android). If the device the game is run on does not have that resolution, we simply scale everything to fit on the screen.</p>
+
+<p class="notice--primary"><strong>Note:</strong> for high profile games you might want to consider using different assets for different screen densities. This is a big topic on its own and won’t be covered here.</p>
+
+<p>The raindrop and the bucket should take up a small(ish) portion of the screen vertically, so we’ll let them have a size of 64x64 pixels.</p>
+
+<p>The following sources provide some sample assets:</p>
+
+<ul>
+  <li>water drop sound by <em>junggle</em>, see <a href="http://www.freesound.org/people/junggle/sounds/30341/">here</a></li>
+  <li>rain sounds by <em>acclivity</em>, see <a href="http://www.freesound.org/people/acclivity/sounds/28283/">here</a></li>
+  <li>droplet sprite by <em>mvdv</em>, see <a href="https://github.com/Quillraven/SimpleKtxGame/blob/01-app/android/assets/images/drop.png?raw=true">here</a></li>
+  <li>bucket sprite by <em>mvdv</em>, see <a href="https://github.com/Quillraven/SimpleKtxGame/blob/01-app/android/assets/images/bucket.png?raw=true">here</a></li>
+</ul>
+
+<p>To make the assets available to the game, we have to place them in the Android <code class="language-plaintext highlighter-rouge">assets</code> folder. I named the 4 files: <em>drop.wav</em>, <em>rain.mp3</em>, <em>droplet.png</em> and <em>bucket.png</em> and put them in <code class="language-plaintext highlighter-rouge">android/assets/</code>. We only need to store the assets once, as both the desktop and HTML5 projects are configured to ‘see’ this folder through different means. After that, depending on your IDE you may have to refresh the project tree to make the new files known (in Eclipse, right click -&gt; Refresh), otherwise you may get a ‘file not found’ runtime exception.</p>
+
+<h2 id="configuring-the-starter-classes">Configuring the Starter Classes</h2>
+<p>Given our requirements we can now configure our different starter classes. We’ll start with the <strong>desktop project</strong>. Open the <code class="language-plaintext highlighter-rouge">DesktopLauncher.java</code> class in <code class="language-plaintext highlighter-rouge">desktop/src/…</code> (or <code class="language-plaintext highlighter-rouge">drop-desktop</code> under Eclipse). We want a 800x480 window and set the title to “Drop”. The code should look like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.badlogic.drop.desktop</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.backends.lwjgl.LwjglApplication</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.drop.Drop</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DesktopLauncher</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">arg</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">LwjglApplicationConfiguration</span> <span class="n">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LwjglApplicationConfiguration</span><span class="o">();</span>
+      <span class="n">config</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="s">"Drop"</span><span class="o">;</span>
+      <span class="n">config</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">800</span><span class="o">;</span>
+      <span class="n">config</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">480</span><span class="o">;</span>
+      <span class="k">new</span> <span class="nf">LwjglApplication</span><span class="o">(</span><span class="k">new</span> <span class="nc">Drop</span><span class="o">(),</span> <span class="n">config</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p class="notice--info">If you are only interested in desktop development, you can skip the rest of this section.</p>
+
+<p>Moving on to the <strong>Android project</strong>, we want the application to be run in landscape mode. For this we need to modify <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code> in the <code class="language-plaintext highlighter-rouge">android</code> (or <code class="language-plaintext highlighter-rouge">drop-android</code>) root directory, which looks like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">package=</span><span class="s">"com.badlogic.drop.android"</span>
+    <span class="na">android:versionCode=</span><span class="s">"1"</span>
+    <span class="na">android:versionName=</span><span class="s">"1.0"</span> <span class="nt">&gt;</span>
+
+    <span class="nt">&lt;uses-sdk</span> <span class="na">android:minSdkVersion=</span><span class="s">"8"</span> <span class="na">android:targetSdkVersion=</span><span class="s">"20"</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;application</span>
+        <span class="na">android:allowBackup=</span><span class="s">"true"</span>
+        <span class="na">android:icon=</span><span class="s">"@drawable/ic_launcher"</span>
+        <span class="na">android:label=</span><span class="s">"@string/app_name"</span>
+        <span class="na">android:theme=</span><span class="s">"@style/GdxTheme"</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;activity</span>
+            <span class="na">android:name=</span><span class="s">"com.badlogic.drop.android.AndroidLauncher"</span>
+            <span class="na">android:label=</span><span class="s">"@string/app_name"</span>
+            <span class="na">android:screenOrientation=</span><span class="s">"landscape"</span>
+            <span class="na">android:configChanges=</span><span class="s">"keyboard|keyboardHidden|orientation|screenSize"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;intent-filter&gt;</span>
+                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">"android.intent.category.LAUNCHER"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/intent-filter&gt;</span>
+        <span class="nt">&lt;/activity&gt;</span>
+    <span class="nt">&lt;/application&gt;</span>
+
+<span class="nt">&lt;/manifest&gt;</span>
+</code></pre></div></div>
+
+<p>The setup tool already filled in the correct values for us, <code class="language-plaintext highlighter-rouge">android:screenOrientation</code> is set to “landscape”. If we wanted to run the game in portrait mode we would have set that attribute to “portrait”.</p>
+
+<p>We also want to conserve battery and disable the accelerometer and compass. We do this in the <code class="language-plaintext highlighter-rouge">AndroidLauncher.java</code> file in <code class="language-plaintext highlighter-rouge">android/src/…</code> (or <code class="language-plaintext highlighter-rouge">drop-android</code>), which should look something like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.badlogic.drop.android</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.backends.android.AndroidApplication</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.backends.android.AndroidApplicationConfiguration</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.drop.Drop</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AndroidLauncher</span> <span class="kd">extends</span> <span class="nc">AndroidApplication</span> <span class="o">{</span>
+   <span class="nd">@Override</span>
+   <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+      <span class="nc">AndroidApplicationConfiguration</span> <span class="n">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AndroidApplicationConfiguration</span><span class="o">();</span>
+      <span class="n">config</span><span class="o">.</span><span class="na">useAccelerometer</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+      <span class="n">config</span><span class="o">.</span><span class="na">useCompass</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+      <span class="n">initialize</span><span class="o">(</span><span class="k">new</span> <span class="nc">Drop</span><span class="o">(),</span> <span class="n">config</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>We cannot define the resolution of the <code class="language-plaintext highlighter-rouge">Activity</code>, as it is set by the Android operating system. As we defined earlier, we’ll simply scale the 800x480 target resolution to whatever the resolution of the device is.</p>
+
+<p>Finally we want to make sure the <strong>HTML5 project</strong> also uses a 800x480 drawing area. For this we modify the <code class="language-plaintext highlighter-rouge">HtmlLauncher.java</code> file in <code class="language-plaintext highlighter-rouge">html/src/…</code> (or <code class="language-plaintext highlighter-rouge">drop-html</code>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.badlogic.drop.client</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.ApplicationListener</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.backends.gwt.GwtApplication</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.drop.Drop</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HtmlLauncher</span> <span class="kd">extends</span> <span class="nc">GwtApplication</span> <span class="o">{</span>
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="nc">GwtApplicationConfiguration</span> <span class="nf">getConfig</span> <span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nf">GwtApplicationConfiguration</span><span class="o">(</span><span class="mi">800</span><span class="o">,</span> <span class="mi">480</span><span class="o">);</span>
+   <span class="o">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="nc">ApplicationListener</span> <span class="nf">createApplicationListener</span> <span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nf">Drop</span><span class="o">();</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>All our starter classes are now correctly configured, let’s move on to implementing our fabulous game.</p>
+
+<h2 id="the-code">The Code</h2>
+<p>We want to split up our code into a few sections. For the sake of simplicity we keep everything in the <code class="language-plaintext highlighter-rouge">Drop.java</code> file of the Core project, located in <code class="language-plaintext highlighter-rouge">core/src/…</code> (or <code class="language-plaintext highlighter-rouge">drop-core</code> in Eclipse).</p>
+
+<h2 id="loading-the-assets">Loading the Assets</h2>
+<p>Our first task is to load the assets and store references to them. Assets are usually loaded in the <code class="language-plaintext highlighter-rouge">ApplicationAdapter.create()</code> method, so let’s do that:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.badlogic.drop</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.ApplicationAdapter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.Gdx</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.audio.Music</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.audio.Sound</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.graphics.Texture</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Drop</span> <span class="kd">extends</span> <span class="nc">ApplicationAdapter</span> <span class="o">{</span>
+   <span class="kd">private</span> <span class="nc">Texture</span> <span class="n">dropImage</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Texture</span> <span class="n">bucketImage</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Sound</span> <span class="n">dropSound</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Music</span> <span class="n">rainMusic</span><span class="o">;</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">create</span><span class="o">()</span> <span class="o">{</span>
+      <span class="c1">// load the images for the droplet and the bucket, 64x64 pixels each</span>
+      <span class="n">dropImage</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Texture</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">files</span><span class="o">.</span><span class="na">internal</span><span class="o">(</span><span class="s">"droplet.png"</span><span class="o">));</span>
+      <span class="n">bucketImage</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Texture</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">files</span><span class="o">.</span><span class="na">internal</span><span class="o">(</span><span class="s">"bucket.png"</span><span class="o">));</span>
+
+      <span class="c1">// load the drop sound effect and the rain background "music"</span>
+      <span class="n">dropSound</span> <span class="o">=</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">audio</span><span class="o">.</span><span class="na">newSound</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">files</span><span class="o">.</span><span class="na">internal</span><span class="o">(</span><span class="s">"drop.wav"</span><span class="o">));</span>
+      <span class="n">rainMusic</span> <span class="o">=</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">audio</span><span class="o">.</span><span class="na">newMusic</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">files</span><span class="o">.</span><span class="na">internal</span><span class="o">(</span><span class="s">"rain.mp3"</span><span class="o">));</span>
+
+      <span class="c1">// start the playback of the background music immediately</span>
+      <span class="n">rainMusic</span><span class="o">.</span><span class="na">setLooping</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+      <span class="n">rainMusic</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+
+      <span class="c1">// ... more to come ...</span>
+   <span class="o">}</span>
+
+   <span class="c1">// rest of class omitted for clarity</span>
+</code></pre></div></div>
+
+<p>For each of our assets we have a field in the <code class="language-plaintext highlighter-rouge">Drop</code> class so we can later refer to it. The first two lines in the <code class="language-plaintext highlighter-rouge">create()</code> method load the images for the raindrop and the bucket. A <code class="language-plaintext highlighter-rouge">Texture</code> represents a loaded image that is stored in video ram. One can usually not draw to a Texture. A <code class="language-plaintext highlighter-rouge">Texture</code> is loaded by passing a <code class="language-plaintext highlighter-rouge">FileHandle</code> to an asset file to its constructor. Such <code class="language-plaintext highlighter-rouge">FileHandle</code> instances are obtained through one of the methods provided by <code class="language-plaintext highlighter-rouge">Gdx.files</code>. There are different types of files, we use the “internal” file type here to refer to our assets. Internal files are located in the <code class="language-plaintext highlighter-rouge">assets</code> directory of the Android project. As seen before, the desktop and HTML5 projects reference the same directory.</p>
+
+<p>Next we load the sound effect and the background music. libGDX differentiates between sound effects, which are stored in memory, and music, which is streamed from wherever it is stored. Music is usually too big to be kept in memory completely, hence the differentiation. As a rule of thumb, you should use a <code class="language-plaintext highlighter-rouge">Sound</code> instance if your sample is shorter than 10 seconds, and a <code class="language-plaintext highlighter-rouge">Music</code> instance for longer audio pieces.</p>
+
+<p class="notice--primary"><strong>Note:</strong> libGDX supports MP3, OGG and WAV files. Which format you should use, depends on you specific needs, as each format has its own advantages and disadvantages. For example, WAV files are quite large compared to other formats, OGG files don’t work on RoboVM (iOS) nor with Safari (GWT), and MP3 files have issues with seemless looping.</p>
+
+<p>Loading of a <code class="language-plaintext highlighter-rouge">Sound</code> or <code class="language-plaintext highlighter-rouge">Music</code> instance is done via <code class="language-plaintext highlighter-rouge">Gdx.audio.newSound()</code> and <code class="language-plaintext highlighter-rouge">Gdx.audio.newMusic()</code>. Both of these methods take a <code class="language-plaintext highlighter-rouge">FileHandle</code>, just like the <code class="language-plaintext highlighter-rouge">Texture</code> constructor.</p>
+
+<p>At the end of the <code class="language-plaintext highlighter-rouge">create()</code> method we also tell the <code class="language-plaintext highlighter-rouge">Music</code> instance to loop and start playback immediately. If you run the application you’ll see a nice pink background and hear the rain fall.</p>
+
+<h2 id="a-camera-and-a-spritebatch">A Camera and a SpriteBatch</h2>
+<p>Next up, we want to create a camera and a <code class="language-plaintext highlighter-rouge">SpriteBatch</code>. We’ll use the former to ensure we can render using our target resolution of 800x480 pixels no matter what the actual screen resolution is. The <code class="language-plaintext highlighter-rouge">SpriteBatch</code> is a special class that is used to draw 2D images, like the textures we loaded.</p>
+
+<p>We add two new fields to the class, let’s call them camera and batch:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">private</span> <span class="nc">OrthographicCamera</span> <span class="n">camera</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">SpriteBatch</span> <span class="n">batch</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>In the <code class="language-plaintext highlighter-rouge">create()</code> method we first create the camera like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">camera</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OrthographicCamera</span><span class="o">();</span>
+   <span class="n">camera</span><span class="o">.</span><span class="na">setToOrtho</span><span class="o">(</span><span class="kc">false</span><span class="o">,</span> <span class="mi">800</span><span class="o">,</span> <span class="mi">480</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>This will make sure the camera always shows us an area of our game world that is 800x480 units wide. Think of it as a virtual window into our world. We currently interpret the units as pixels to make our life a little easier. There’s nothing preventing us from using other units though, e.g. meters or whatever you have. Cameras are very powerful and allow you to do a lot of things we won’t cover in this basic tutorial. Check out the rest of the developer guide for more information.</p>
+
+<p>Next we create the <code class="language-plaintext highlighter-rouge">SpriteBatch</code> (we are still in the <code class="language-plaintext highlighter-rouge">create()</code> method):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">batch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SpriteBatch</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>We are almost done with creating all the things we need to run this simple game.</p>
+
+<h2 id="adding-the-bucket">Adding the Bucket</h2>
+<p>The last bits that are missing are representations of our bucket and the raindrop. Let’s think about what we need to represent those in code:</p>
+
+<ul>
+  <li>A bucket/raindrop has an x/y position in our 800x480 units world.</li>
+  <li>A bucket/raindrop has a width and height, expressed in the units of our world.</li>
+  <li>A bucket/raindrop has a graphical representation, we already have those in form of the <code class="language-plaintext highlighter-rouge">Texture</code> instances we loaded.</li>
+</ul>
+
+<p>So, to describe both the bucket and raindrops we need to store their position and size. libGDX provides a <code class="language-plaintext highlighter-rouge">Rectangle</code> class which we can use for this purpose. Let’s start by creating a <code class="language-plaintext highlighter-rouge">Rectangle</code> that represents our bucket. We add a new field:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c1">// add this import and NOT the one in the standard library</span>
+   <span class="kn">import</span> <span class="nn">com.badlogic.gdx.math.Rectangle</span><span class="o">;</span>
+
+   <span class="kd">private</span> <span class="nc">Rectangle</span> <span class="n">bucket</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>In the <code class="language-plaintext highlighter-rouge">create()</code> method we instantiate the Rectangle and specify its initial values. We want the bucket to be 20 pixels above the bottom edge of the screen, and centered horizontally.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">bucket</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Rectangle</span><span class="o">();</span>
+   <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">800</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">64</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+   <span class="n">bucket</span><span class="o">.</span><span class="na">y</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
+   <span class="n">bucket</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">64</span><span class="o">;</span>
+   <span class="n">bucket</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">64</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>We center the bucket horizontally and place it 20 pixels above the bottom edge of the screen. Wait, why is <code class="language-plaintext highlighter-rouge">bucket.y</code> set to 20, shouldn’t it be 480 - 20? By default, all rendering in libGDX (and OpenGL) is performed with the y-axis pointing upwards. The x/y coordinates of the bucket define the bottom left corner of the bucket, the origin for drawing is located in the bottom left corner of the screen. The width and height of the rectangle are set to 64x64, our small-ish portion of our target resolutions height.</p>
+
+<p class="notice--primary"><strong>Note:</strong> it is possible to <a href="https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/YDownTest.java">change this setup</a> so the y-axis points down and the origin is in the upper left corner of the screen. OpenGL and the camera class are so flexible that you use have pretty much any kind of viewing angle you want, in 2D and 3D. However, this is not recommended.</p>
+
+<h3 id="rendering-the-bucket">Rendering the Bucket</h3>
+<p>Time to render our bucket. The first thing we want to do is to clear the screen with a dark blue color. Simply change the <code class="language-plaintext highlighter-rouge">render()</code> method to look like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">ScreenUtils</span><span class="o">.</span><span class="na">clear</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mf">0.2f</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+
+      <span class="o">...</span> <span class="n">more</span> <span class="n">to</span> <span class="n">come</span> <span class="n">here</span> <span class="o">...</span>
+   <span class="o">}</span>
+</code></pre></div></div>
+
+<p>The arguments for <code class="language-plaintext highlighter-rouge">ScreenUtils.clear(r, g, b, a)</code> are the red, green, blue and alpha component of that color, each within the range [0, 1].</p>
+
+<p>Next we need to tell our camera to make sure it is updated. Cameras use a mathematical entity called a matrix that is responsible for setting up the coordinate system for rendering. These matrices need to be recomputed every time we change a property of the camera, like its position. We don’t do this in our simple example, but it is generally a good practice to update the camera once per frame:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">camera</span><span class="o">.</span><span class="na">update</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>Now we can render our bucket:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">batch</span><span class="o">.</span><span class="na">setProjectionMatrix</span><span class="o">(</span><span class="n">camera</span><span class="o">.</span><span class="na">combined</span><span class="o">);</span>
+   <span class="n">batch</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+   <span class="n">batch</span><span class="o">.</span><span class="na">draw</span><span class="o">(</span><span class="n">bucketImage</span><span class="o">,</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span><span class="o">,</span> <span class="n">bucket</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
+   <span class="n">batch</span><span class="o">.</span><span class="na">end</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>The first line tells the <code class="language-plaintext highlighter-rouge">SpriteBatch</code> to use the coordinate system specified by the camera. As stated earlier, this is done with something called a matrix, to be more specific, a projection matrix. The <code class="language-plaintext highlighter-rouge">camera.combined</code> field is such a matrix. From there on the <code class="language-plaintext highlighter-rouge">SpriteBatch</code> will render everything in the coordinate system described earlier.</p>
+
+<p>Next we tell the <code class="language-plaintext highlighter-rouge">SpriteBatch</code> to start a new batch. Why do we need this and what is a batch? OpenGL hates nothing more than telling it about individual images. It wants to be told about as many images to render as possible at once.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">SpriteBatch</code> class helps make OpenGL happy. It will record all drawing commands in between <code class="language-plaintext highlighter-rouge">SpriteBatch.begin()</code> and <code class="language-plaintext highlighter-rouge">SpriteBatch.end()</code>. Once we call <code class="language-plaintext highlighter-rouge">SpriteBatch.end()</code> it will submit all drawing requests we made at once, speeding up rendering quite a bit. This all might look cumbersome in the beginning, but it is what makes the difference between rendering 500 sprites at 60 frames per second and rendering 100 sprites at 20 frames per second.</p>
+
+<h3 id="making-the-bucket-move-touchmouse">Making the Bucket Move (Touch/Mouse)</h3>
+<p>Time to let the user control the bucket. Earlier we said we’d allow the user to drag the bucket. Let’s make things a little bit easier. If the user touches the screen (or presses a mouse button), we want the bucket to center around that position horizontally. Adding the following code to the bottom of the <code class="language-plaintext highlighter-rouge">render()</code> method will do this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">if</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">isTouched</span><span class="o">())</span> <span class="o">{</span>
+      <span class="nc">Vector3</span> <span class="n">touchPos</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vector3</span><span class="o">();</span>
+      <span class="n">touchPos</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">getX</span><span class="o">(),</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">getY</span><span class="o">(),</span> <span class="mi">0</span><span class="o">);</span>
+      <span class="n">camera</span><span class="o">.</span><span class="na">unproject</span><span class="o">(</span><span class="n">touchPos</span><span class="o">);</span>
+      <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="n">touchPos</span><span class="o">.</span><span class="na">x</span> <span class="o">-</span> <span class="mi">64</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+   <span class="o">}</span>
+</code></pre></div></div>
+
+<p>First we ask the input module whether the screen is currently touched (or a mouse button is pressed) by calling <code class="language-plaintext highlighter-rouge">Gdx.input.isTouched()</code>. Next we want to transform the touch/mouse coordinates to our camera’s coordinate system. This is necessary because the coordinate system in which touch/mouse coordinates are reported might be different than the coordinate system we use to represent objects in our world.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Gdx.input.getX()</code> and <code class="language-plaintext highlighter-rouge">Gdx.input.getY()</code> return the current touch/mouse position (libGDX also supports multi-touch, but that’s a topic for a different article). To transform these coordinates to our camera’s coordinate system, we need to call the <code class="language-plaintext highlighter-rouge">camera.unproject()</code> method, which requests a <code class="language-plaintext highlighter-rouge">Vector3</code>, a three dimensional vector. We create such a vector, set the current touch/mouse coordinates and call the method. The vector will now contain the touch/mouse coordinates in the coordinate system our bucket lives in. Finally we change the position of the bucket to be centered around the touch/mouse coordinates.</p>
+
+<p class="notice--primary"><strong>Note:</strong> it is very, very bad to instantiate a lot of new objects, such as the Vector3 instance. The reason for this is the garbage collector has to kick in frequently to collect these short-lived objects. While on the desktop this not such a big deal (due to the resources available), on Android the GC can cause pauses of up to a few hundred milliseconds, which results in stuttering. In this particular case, if you want to solve this issue, simply make <code class="language-plaintext highlighter-rouge">touchPos</code> a private final field of the <code class="language-plaintext highlighter-rouge">Drop</code> class instead of instantiating it all the time.</p>
+
+<p class="notice--primary"><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">touchPos</code> is a three dimensional vector. You might wonder why that is if we only operate in 2D. <code class="language-plaintext highlighter-rouge">OrthographicCamera</code> is actually a 3D camera which takes into account z-coordinates as well. Think of CAD applications, they use 3D orthographic cameras as well. We simply abuse it to draw 2D graphics.</p>
+
+<h3 id="making-the-bucket-move-keyboard">Making the Bucket Move (Keyboard)</h3>
+<p>On the desktop and in the browser we can also receive keyboard input. Let’s make the bucket move when the left or right cursor key is pressed.</p>
+
+<p>We want the bucket to move without acceleration, at two hundred pixels/units per second, either to the left or the right. To implement such time-based movement we need to know the time that passed in between the last and the current rendering frame. Here’s how we can do all this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">if</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">isKeyPressed</span><span class="o">(</span><span class="nc">Input</span><span class="o">.</span><span class="na">Keys</span><span class="o">.</span><span class="na">LEFT</span><span class="o">))</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">-=</span> <span class="mi">200</span> <span class="o">*</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">graphics</span><span class="o">.</span><span class="na">getDeltaTime</span><span class="o">();</span>
+   <span class="k">if</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">isKeyPressed</span><span class="o">(</span><span class="nc">Input</span><span class="o">.</span><span class="na">Keys</span><span class="o">.</span><span class="na">RIGHT</span><span class="o">))</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">+=</span> <span class="mi">200</span> <span class="o">*</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">graphics</span><span class="o">.</span><span class="na">getDeltaTime</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>The method <code class="language-plaintext highlighter-rouge">Gdx.input.isKeyPressed()</code> tells us whether a specific key is pressed. The <code class="language-plaintext highlighter-rouge">Keys</code> enumeration contains all the keycodes that libGDX supports. The method <code class="language-plaintext highlighter-rouge">Gdx.graphics.getDeltaTime()</code> returns the time passed between the last and the current frame in seconds. All we need to do is modify the bucket’s x-coordinate by adding/subtracting 200 units times the delta time in seconds.</p>
+
+<p>We also need to make sure our bucket stays within the screen limits:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">if</span><span class="o">(</span><span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+   <span class="k">if</span><span class="o">(</span><span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="mi">800</span> <span class="o">-</span> <span class="mi">64</span><span class="o">)</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">800</span> <span class="o">-</span> <span class="mi">64</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h2 id="adding-the-raindrops">Adding the Raindrops</h2>
+<p>For the raindrops we keep a list of <code class="language-plaintext highlighter-rouge">Rectangle</code> instances, each keeping track of the position and size of a raindrop. Let’s add that list as a field:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">private</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">Rectangle</span><span class="o">&gt;</span> <span class="n">raindrops</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">Array</code> class is a libGDX utility class to be used instead of standard Java collections like <code class="language-plaintext highlighter-rouge">ArrayList</code>. The problem with the latter is that they produce garbage in various ways. The <code class="language-plaintext highlighter-rouge">Array</code> class tries to minimize garbage as much as possible. libGDX offers other garbage collector aware collections such as hash-maps or sets as well.</p>
+
+<p>We also need to keep track of the last time we spawned a raindrop, so we add another field:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">private</span> <span class="kt">long</span> <span class="n">lastDropTime</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>We’ll store the time in nanoseconds, that’s why we use a long.</p>
+
+<p>To facilitate the creation of raindrops we’ll write a method called <code class="language-plaintext highlighter-rouge">spawnRaindrop()</code> which instantiates a new <code class="language-plaintext highlighter-rouge">Rectangle</code>, sets it to a random position at the top edge of the screen and adds it to the <code class="language-plaintext highlighter-rouge">raindrops</code> array.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">spawnRaindrop</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">Rectangle</span> <span class="n">raindrop</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Rectangle</span><span class="o">();</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="nc">MathUtils</span><span class="o">.</span><span class="na">random</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">800</span><span class="o">-</span><span class="mi">64</span><span class="o">);</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">y</span> <span class="o">=</span> <span class="mi">480</span><span class="o">;</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">64</span><span class="o">;</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">64</span><span class="o">;</span>
+      <span class="n">raindrops</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">raindrop</span><span class="o">);</span>
+      <span class="n">lastDropTime</span> <span class="o">=</span> <span class="nc">TimeUtils</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+   <span class="o">}</span>
+</code></pre></div></div>
+
+<p>The method should be pretty self-explanatory. The <code class="language-plaintext highlighter-rouge">MathUtils</code> class is a libGDX class offering various math related static methods. In this case it will return a random value between zero and 800 - 64. The <code class="language-plaintext highlighter-rouge">TimeUtils</code> is another libGDX class that provides some very basic time related static methods. In this case we record the current time in nano seconds based on which we’ll later decide whether to spawn a new drop or not.</p>
+
+<p>In the <code class="language-plaintext highlighter-rouge">create()</code> method we now instantiate the raindrops array and spawn our first raindrop:</p>
+
+<p>We need to instantiate that array in the <code class="language-plaintext highlighter-rouge">create()</code> method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">raindrops</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">Rectangle</span><span class="o">&gt;();</span>
+   <span class="n">spawnRaindrop</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>Next we add a few lines to the <code class="language-plaintext highlighter-rouge">render()</code> method that will check how much time has passed since we spawned a new raindrop, and creates a new one if necessary:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">if</span><span class="o">(</span><span class="nc">TimeUtils</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">lastDropTime</span> <span class="o">&gt;</span> <span class="mi">1000000000</span><span class="o">)</span> <span class="n">spawnRaindrop</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>We also need to make our raindrops move, let’s take the easy route and have them move at a constant speed of 200 pixels/units per second. If the raindrop is beneath the bottom edge of the screen, we remove it from the array.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="k">for</span> <span class="o">(</span><span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Rectangle</span><span class="o">&gt;</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">raindrops</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span> <span class="n">iter</span><span class="o">.</span><span class="na">hasNext</span><span class="o">();</span> <span class="o">)</span> <span class="o">{</span>
+      <span class="nc">Rectangle</span> <span class="n">raindrop</span> <span class="o">=</span> <span class="n">iter</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">y</span> <span class="o">-=</span> <span class="mi">200</span> <span class="o">*</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">graphics</span><span class="o">.</span><span class="na">getDeltaTime</span><span class="o">();</span>
+      <span class="k">if</span><span class="o">(</span><span class="n">raindrop</span><span class="o">.</span><span class="na">y</span> <span class="o">+</span> <span class="mi">64</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">iter</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+   <span class="o">}</span>
+</code></pre></div></div>
+
+<p>The raindrops need to be rendered. We’ll add that to the <code class="language-plaintext highlighter-rouge">SpriteBatch</code> rendering code which looks like this now:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">batch</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+   <span class="n">batch</span><span class="o">.</span><span class="na">draw</span><span class="o">(</span><span class="n">bucketImage</span><span class="o">,</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span><span class="o">,</span> <span class="n">bucket</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
+   <span class="k">for</span><span class="o">(</span><span class="nc">Rectangle</span> <span class="nl">raindrop:</span> <span class="n">raindrops</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">batch</span><span class="o">.</span><span class="na">draw</span><span class="o">(</span><span class="n">dropImage</span><span class="o">,</span> <span class="n">raindrop</span><span class="o">.</span><span class="na">x</span><span class="o">,</span> <span class="n">raindrop</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
+   <span class="o">}</span>
+   <span class="n">batch</span><span class="o">.</span><span class="na">end</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>One final adjustment: if a raindrop hits the bucket, we want to playback our drop sound and remove the raindrop from the array. We simply add the following lines to the raindrop update loop:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="k">if</span><span class="o">(</span><span class="n">raindrop</span><span class="o">.</span><span class="na">overlaps</span><span class="o">(</span><span class="n">bucket</span><span class="o">))</span> <span class="o">{</span>
+         <span class="n">dropSound</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+         <span class="n">iter</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+      <span class="o">}</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">Rectangle.overlaps()</code> method checks if this rectangle overlaps with another rectangle. In our case, we tell the drop sound effect to play itself and remove the raindrop from the array.</p>
+
+<h2 id="cleaning-up">Cleaning Up</h2>
+<p>A user can close the application at any time. For this simple example there’s nothing that needs to be done. However, it is in general a good idea to help out the operating system a little and clean up the mess we created.</p>
+
+<p>Any libGDX class that implements the <code class="language-plaintext highlighter-rouge">Disposable</code> interface and thus has a <code class="language-plaintext highlighter-rouge">dispose()</code> method needs to be cleaned up manually once it is no longer used. In our example that’s true for the textures, the sound and music and the <code class="language-plaintext highlighter-rouge">SpriteBatch</code>. Being good citizens, we override the <code class="language-plaintext highlighter-rouge">ApplicationAdapter.dispose()</code> method as follows:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">dispose</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">dropImage</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+      <span class="n">bucketImage</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+      <span class="n">dropSound</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+      <span class="n">rainMusic</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+      <span class="n">batch</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+   <span class="o">}</span>
+</code></pre></div></div>
+
+<p>Once you dispose of a resource, you should not access it in any way.</p>
+
+<p>Disposables are usually native resources which are not handled by the Java garbage collector. This is the reason why we need to manually dispose of them. libGDX provides various ways to help with asset management. Read the rest of the development guide to discover them.</p>
+
+<h2 id="handling-pausingresuming">Handling Pausing/Resuming</h2>
+<p>Android has the notation of pausing and resuming your application every time the user gets a phone call or presses the home button. libGDX will do many things automatically for you in that case, e.g. reload images that might have gotten lost (OpenGL context loss, a terrible topic on its own), pause and resume music streams and so on.</p>
+
+<p>In our game there’s no real need to handle pausing/resuming. As soon as the user comes back to the application, the game continues where it left. Usually one would implement a pause screen and ask the user to touch the screen to continue. This is left as an exercise for the reader - check out the <code class="language-plaintext highlighter-rouge">ApplicationAdapter.pause()</code> and <code class="language-plaintext highlighter-rouge">ApplicationAdapter.resume()</code> methods.</p>
+
+<h2 id="the-full-source">The Full Source</h2>
+<p>Here’s the tiny source for our simple game:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.badlogic.drop</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Iterator</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.ApplicationAdapter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.Gdx</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.Input.Keys</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.audio.Music</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.audio.Sound</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.graphics.OrthographicCamera</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.graphics.Texture</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.graphics.g2d.SpriteBatch</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.math.MathUtils</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.math.Rectangle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.math.Vector3</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.utils.Array</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.utils.ScreenUtils</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.badlogic.gdx.utils.TimeUtils</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Drop</span> <span class="kd">extends</span> <span class="nc">ApplicationAdapter</span> <span class="o">{</span>
+   <span class="kd">private</span> <span class="nc">Texture</span> <span class="n">dropImage</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Texture</span> <span class="n">bucketImage</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Sound</span> <span class="n">dropSound</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Music</span> <span class="n">rainMusic</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">SpriteBatch</span> <span class="n">batch</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">OrthographicCamera</span> <span class="n">camera</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Rectangle</span> <span class="n">bucket</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">Rectangle</span><span class="o">&gt;</span> <span class="n">raindrops</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="kt">long</span> <span class="n">lastDropTime</span><span class="o">;</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">create</span><span class="o">()</span> <span class="o">{</span>
+      <span class="c1">// load the images for the droplet and the bucket, 64x64 pixels each</span>
+      <span class="n">dropImage</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Texture</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">files</span><span class="o">.</span><span class="na">internal</span><span class="o">(</span><span class="s">"droplet.png"</span><span class="o">));</span>
+      <span class="n">bucketImage</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Texture</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">files</span><span class="o">.</span><span class="na">internal</span><span class="o">(</span><span class="s">"bucket.png"</span><span class="o">));</span>
+
+      <span class="c1">// load the drop sound effect and the rain background "music"</span>
+      <span class="n">dropSound</span> <span class="o">=</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">audio</span><span class="o">.</span><span class="na">newSound</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">files</span><span class="o">.</span><span class="na">internal</span><span class="o">(</span><span class="s">"drop.wav"</span><span class="o">));</span>
+      <span class="n">rainMusic</span> <span class="o">=</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">audio</span><span class="o">.</span><span class="na">newMusic</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">files</span><span class="o">.</span><span class="na">internal</span><span class="o">(</span><span class="s">"rain.mp3"</span><span class="o">));</span>
+
+      <span class="c1">// start the playback of the background music immediately</span>
+      <span class="n">rainMusic</span><span class="o">.</span><span class="na">setLooping</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+      <span class="n">rainMusic</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+
+      <span class="c1">// create the camera and the SpriteBatch</span>
+      <span class="n">camera</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OrthographicCamera</span><span class="o">();</span>
+      <span class="n">camera</span><span class="o">.</span><span class="na">setToOrtho</span><span class="o">(</span><span class="kc">false</span><span class="o">,</span> <span class="mi">800</span><span class="o">,</span> <span class="mi">480</span><span class="o">);</span>
+      <span class="n">batch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SpriteBatch</span><span class="o">();</span>
+
+      <span class="c1">// create a Rectangle to logically represent the bucket</span>
+      <span class="n">bucket</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Rectangle</span><span class="o">();</span>
+      <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">800</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">64</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">// center the bucket horizontally</span>
+      <span class="n">bucket</span><span class="o">.</span><span class="na">y</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span> <span class="c1">// bottom left corner of the bucket is 20 pixels above the bottom screen edge</span>
+      <span class="n">bucket</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">64</span><span class="o">;</span>
+      <span class="n">bucket</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">64</span><span class="o">;</span>
+
+      <span class="c1">// create the raindrops array and spawn the first raindrop</span>
+      <span class="n">raindrops</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">Rectangle</span><span class="o">&gt;();</span>
+      <span class="n">spawnRaindrop</span><span class="o">();</span>
+   <span class="o">}</span>
+
+   <span class="kd">private</span> <span class="kt">void</span> <span class="nf">spawnRaindrop</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">Rectangle</span> <span class="n">raindrop</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Rectangle</span><span class="o">();</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="nc">MathUtils</span><span class="o">.</span><span class="na">random</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">800</span><span class="o">-</span><span class="mi">64</span><span class="o">);</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">y</span> <span class="o">=</span> <span class="mi">480</span><span class="o">;</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">64</span><span class="o">;</span>
+      <span class="n">raindrop</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">64</span><span class="o">;</span>
+      <span class="n">raindrops</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">raindrop</span><span class="o">);</span>
+      <span class="n">lastDropTime</span> <span class="o">=</span> <span class="nc">TimeUtils</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+   <span class="o">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">render</span><span class="o">()</span> <span class="o">{</span>
+      <span class="c1">// clear the screen with a dark blue color. The</span>
+      <span class="c1">// arguments to clear are the red, green</span>
+      <span class="c1">// blue and alpha component in the range [0,1]</span>
+      <span class="c1">// of the color to be used to clear the screen.</span>
+      <span class="nc">ScreenUtils</span><span class="o">.</span><span class="na">clear</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mf">0.2f</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+
+      <span class="c1">// tell the camera to update its matrices.</span>
+      <span class="n">camera</span><span class="o">.</span><span class="na">update</span><span class="o">();</span>
+
+      <span class="c1">// tell the SpriteBatch to render in the</span>
+      <span class="c1">// coordinate system specified by the camera.</span>
+      <span class="n">batch</span><span class="o">.</span><span class="na">setProjectionMatrix</span><span class="o">(</span><span class="n">camera</span><span class="o">.</span><span class="na">combined</span><span class="o">);</span>
+
+      <span class="c1">// begin a new batch and draw the bucket and</span>
+      <span class="c1">// all drops</span>
+      <span class="n">batch</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+      <span class="n">batch</span><span class="o">.</span><span class="na">draw</span><span class="o">(</span><span class="n">bucketImage</span><span class="o">,</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span><span class="o">,</span> <span class="n">bucket</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
+      <span class="k">for</span><span class="o">(</span><span class="nc">Rectangle</span> <span class="nl">raindrop:</span> <span class="n">raindrops</span><span class="o">)</span> <span class="o">{</span>
+         <span class="n">batch</span><span class="o">.</span><span class="na">draw</span><span class="o">(</span><span class="n">dropImage</span><span class="o">,</span> <span class="n">raindrop</span><span class="o">.</span><span class="na">x</span><span class="o">,</span> <span class="n">raindrop</span><span class="o">.</span><span class="na">y</span><span class="o">);</span>
+      <span class="o">}</span>
+      <span class="n">batch</span><span class="o">.</span><span class="na">end</span><span class="o">();</span>
+
+      <span class="c1">// process user input</span>
+      <span class="k">if</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">isTouched</span><span class="o">())</span> <span class="o">{</span>
+         <span class="nc">Vector3</span> <span class="n">touchPos</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vector3</span><span class="o">();</span>
+         <span class="n">touchPos</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">getX</span><span class="o">(),</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">getY</span><span class="o">(),</span> <span class="mi">0</span><span class="o">);</span>
+         <span class="n">camera</span><span class="o">.</span><span class="na">unproject</span><span class="o">(</span><span class="n">touchPos</span><span class="o">);</span>
+         <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="n">touchPos</span><span class="o">.</span><span class="na">x</span> <span class="o">-</span> <span class="mi">64</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+      <span class="o">}</span>
+      <span class="k">if</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">isKeyPressed</span><span class="o">(</span><span class="nc">Keys</span><span class="o">.</span><span class="na">LEFT</span><span class="o">))</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">-=</span> <span class="mi">200</span> <span class="o">*</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">graphics</span><span class="o">.</span><span class="na">getDeltaTime</span><span class="o">();</span>
+      <span class="k">if</span><span class="o">(</span><span class="nc">Gdx</span><span class="o">.</span><span class="na">input</span><span class="o">.</span><span class="na">isKeyPressed</span><span class="o">(</span><span class="nc">Keys</span><span class="o">.</span><span class="na">RIGHT</span><span class="o">))</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">+=</span> <span class="mi">200</span> <span class="o">*</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">graphics</span><span class="o">.</span><span class="na">getDeltaTime</span><span class="o">();</span>
+
+      <span class="c1">// make sure the bucket stays within the screen bounds</span>
+      <span class="k">if</span><span class="o">(</span><span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+      <span class="k">if</span><span class="o">(</span><span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="mi">800</span> <span class="o">-</span> <span class="mi">64</span><span class="o">)</span> <span class="n">bucket</span><span class="o">.</span><span class="na">x</span> <span class="o">=</span> <span class="mi">800</span> <span class="o">-</span> <span class="mi">64</span><span class="o">;</span>
+
+      <span class="c1">// check if we need to create a new raindrop</span>
+      <span class="k">if</span><span class="o">(</span><span class="nc">TimeUtils</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">lastDropTime</span> <span class="o">&gt;</span> <span class="mi">1000000000</span><span class="o">)</span> <span class="n">spawnRaindrop</span><span class="o">();</span>
+
+      <span class="c1">// move the raindrops, remove any that are beneath the bottom edge of</span>
+      <span class="c1">// the screen or that hit the bucket. In the latter case we play back</span>
+      <span class="c1">// a sound effect as well.</span>
+      <span class="k">for</span> <span class="o">(</span><span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Rectangle</span><span class="o">&gt;</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">raindrops</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span> <span class="n">iter</span><span class="o">.</span><span class="na">hasNext</span><span class="o">();</span> <span class="o">)</span> <span class="o">{</span>
+         <span class="nc">Rectangle</span> <span class="n">raindrop</span> <span class="o">=</span> <span class="n">iter</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+         <span class="n">raindrop</span><span class="o">.</span><span class="na">y</span> <span class="o">-=</span> <span class="mi">200</span> <span class="o">*</span> <span class="nc">Gdx</span><span class="o">.</span><span class="na">graphics</span><span class="o">.</span><span class="na">getDeltaTime</span><span class="o">();</span>
+         <span class="k">if</span><span class="o">(</span><span class="n">raindrop</span><span class="o">.</span><span class="na">y</span> <span class="o">+</span> <span class="mi">64</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">iter</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+         <span class="k">if</span><span class="o">(</span><span class="n">raindrop</span><span class="o">.</span><span class="na">overlaps</span><span class="o">(</span><span class="n">bucket</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">dropSound</span><span class="o">.</span><span class="na">play</span><span class="o">();</span>
+            <span class="n">iter</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+         <span class="o">}</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">dispose</span><span class="o">()</span> <span class="o">{</span>
+      <span class="c1">// dispose of all the native resources</span>
+      <span class="n">dropImage</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+      <span class="n">bucketImage</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+      <span class="n">dropSound</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+      <span class="n">rainMusic</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+      <span class="n">batch</span><span class="o">.</span><span class="na">dispose</span><span class="o">();</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="where-to-go-from-here">Where to go from here</h2>
+<p>This was a very basic example of how to use libGDX to create a minimalistic game. There are quite a few things that can be improved from here on. Your next steps should most certainly entail looking at <code class="language-plaintext highlighter-rouge">Screen</code>s and <code class="language-plaintext highlighter-rouge">Game</code>s. To learn about these, there is a <strong><a href="/dev/simple-game-extended/">second tutorial</a></strong> following on from this one.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

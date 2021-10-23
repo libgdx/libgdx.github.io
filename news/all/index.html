@@ -1,0 +1,2046 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>News - libGDX</title>
+<meta name="description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="News">
+<meta property="og:url" content="/news/all/">
+
+
+  <meta property="og:description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+  <meta property="og:image" content="/assets/images/news/news.jpeg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/news/all/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--posts wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/images/news/news.jpeg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          News
+
+        
+      </h1>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/ieic5Tq8YMk"><strong>Chris Ried</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="archive">
+    
+    
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2021">
+        <strong>2021</strong> <span class="taxonomy__count">20</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2020">
+        <strong>2020</strong> <span class="taxonomy__count">12</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2019">
+        <strong>2019</strong> <span class="taxonomy__count">4</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+
+  <section id="2021" class="taxonomy__section">
+    <h2 class="archive__subtitle">2021</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/09/jam-september-2021" rel="permalink">libGDX Jam September 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-09-01T00:00:00+00:00">September 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 18th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/07/devlog-7-lwjgl3" rel="permalink">Status Report #7: LWJGL 3
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-07-24T00:00:00+00:00">July 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Find out everything about our LWJGL 3 desktop backend!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/colorful-gdx" rel="permalink">Community Showcase: colorful-gdx
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-05T00:00:00+00:00">June 5, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/tommyettinger"><img class="avatar avatar-small" alt="tommyettinger" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/tommyettinger?v=3&s=20" srcset="https://avatars1.githubusercontent.com/tommyettinger?v=3&s=20 1x, https://avatars1.githubusercontent.com/tommyettinger?v=3&s=40 2x, https://avatars1.githubusercontent.com/tommyettinger?v=3&s=60 3x, https://avatars1.githubusercontent.com/tommyettinger?v=3&s=80 4x" /></a>
+        Tommy Ettinger
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Tommy Ettinger presents his colorful-gdx library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/06/jam-june-2021" rel="permalink">libGDX Jam June 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-06-02T00:00:00+00:00">June 2, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 17th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/05/shape-drawer" rel="permalink">Community Showcase: Shape Drawer
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-05-17T00:00:00+00:00">May 17, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/earlygrey"><img class="avatar avatar-small" alt="earlygrey" width="20" height="20" data-proofer-ignore="true" src="https://avatars3.githubusercontent.com/earlygrey?v=3&s=20" srcset="https://avatars3.githubusercontent.com/earlygrey?v=3&s=20 1x, https://avatars3.githubusercontent.com/earlygrey?v=3&s=40 2x, https://avatars3.githubusercontent.com/earlygrey?v=3&s=60 3x, https://avatars3.githubusercontent.com/earlygrey?v=3&s=80 4x" /></a>
+        Early Grey
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Early Grey presents their Shape Drawer library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/04/pie-menu" rel="permalink">Community Showcase: PieMenu
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-04-24T00:00:00+00:00">April 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/payne911"><img class="avatar avatar-small" alt="payne911" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/payne911?v=3&s=20" srcset="https://avatars1.githubusercontent.com/payne911?v=3&s=20 1x, https://avatars1.githubusercontent.com/payne911?v=3&s=40 2x, https://avatars1.githubusercontent.com/payne911?v=3&s=60 3x, https://avatars1.githubusercontent.com/payne911?v=3&s=80 4x" /></a>
+        payne
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">payne presents his PieMenu library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/04/the-ultimate-migration-guide" rel="permalink">The Ultimate Migration Guide (1.9.10 to 1.10.0)
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-04-18T00:00:00+00:00">April 18, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This guide summarises what you need to do to update your game from libGDX 1.9.10 to 1.10.0.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/04/gdx-1-10" rel="permalink">libGDX 1.10.0
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-04-18T00:00:00+00:00">April 18, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">After over five years, we are proud to present a new major release of libGDX: version 1.10.0!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/04/typing-label" rel="permalink">Community Showcase: Typing Label
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-04-03T00:00:00+00:00">April 3, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/RafaSKB"><img class="avatar avatar-small" alt="RafaSKB" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/RafaSKB?v=3&s=20" srcset="https://avatars2.githubusercontent.com/RafaSKB?v=3&s=20 1x, https://avatars2.githubusercontent.com/RafaSKB?v=3&s=40 2x, https://avatars2.githubusercontent.com/RafaSKB?v=3&s=60 3x, https://avatars2.githubusercontent.com/RafaSKB?v=3&s=80 4x" /></a>
+        Rafa Skoberg
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Rafa Skoberg presents his Typing Label library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/03/gdx-ga" rel="permalink">Community Showcase: GDX Gameanalytics
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-03-15T00:00:00+00:00">March 15, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/MrStahlfelge"><img class="avatar avatar-small" alt="MrStahlfelge" width="20" height="20" data-proofer-ignore="true" src="https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=20" srcset="https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=20 1x, https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=40 2x, https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=60 3x, https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=80 4x" /></a>
+        MrStahlfelge
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">MrStahlfelge presents his gdx-gameanalytics library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/03/hyperlap2d" rel="permalink">Community Showcase: HyperLap2D
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-03-05T00:00:00+00:00">March 5, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/fgnm"><img class="avatar avatar-small" alt="fgnm" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/fgnm?v=3&s=20" srcset="https://avatars1.githubusercontent.com/fgnm?v=3&s=20 1x, https://avatars1.githubusercontent.com/fgnm?v=3&s=40 2x, https://avatars1.githubusercontent.com/fgnm?v=3&s=60 3x, https://avatars1.githubusercontent.com/fgnm?v=3&s=80 4x" /></a>
+        fgnm
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">fgnm presents HyperLap2D Editor and libGDX runtime
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/02/gdx-gltf" rel="permalink">Community Showcase: GDX glTF
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-02-26T00:00:00+00:00">February 26, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/mgsx-dev"><img class="avatar avatar-small" alt="mgsx-dev" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/mgsx-dev?v=3&s=20" srcset="https://avatars1.githubusercontent.com/mgsx-dev?v=3&s=20 1x, https://avatars1.githubusercontent.com/mgsx-dev?v=3&s=40 2x, https://avatars1.githubusercontent.com/mgsx-dev?v=3&s=60 3x, https://avatars1.githubusercontent.com/mgsx-dev?v=3&s=80 4x" /></a>
+        mgsx-dev
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">MGSX presents his gdx-gltf library in our Community Showcase!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/02/jam-march-2021" rel="permalink">libGDX Jam March 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-02-18T00:00:00+00:00">February 18, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 16th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/02/libgdx-graph" rel="permalink">Community Showcase: libGDX-graph
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-02-06T00:00:00+00:00">February 6, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/marcinsc"><img class="avatar avatar-small" alt="marcinsc" width="20" height="20" data-proofer-ignore="true" src="https://avatars0.githubusercontent.com/marcinsc?v=3&s=20" srcset="https://avatars0.githubusercontent.com/marcinsc?v=3&s=20 1x, https://avatars0.githubusercontent.com/marcinsc?v=3&s=40 2x, https://avatars0.githubusercontent.com/marcinsc?v=3&s=60 3x, https://avatars0.githubusercontent.com/marcinsc?v=3&s=80 4x" /></a>
+        Gempukku Studio
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Gempukku Studio  presents libGDX-graph tool
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/02/gdx-1-9-14" rel="permalink">libGDX 1.9.14
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-02-01T00:00:00+00:00">February 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Version 1.9.14 of libGDX brings various improvements and fixes. Find out more below!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/01/devlog-6-gdx-1-9-14-snapshots" rel="permalink">Status Report #6: 1.9.14 Code Freeze
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-01-26T00:00:00+00:00">January 26, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Try out the latest snapshots for 1.9.14 and find out more about some of our other projects.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/01/2021-jam-dates" rel="permalink">Jam Schedule 2021
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-01-15T00:00:00+00:00">January 15, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">It’s time to announce our game jam schedule for 2021!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/01/skin-composer" rel="permalink">Community Showcase: Skin Composer
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-01-10T00:00:00+00:00">January 10, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Raeleus presents his Skin Composer tool in our first ever Community Showcase!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/01/devlog_5_community_showcases" rel="permalink">Status Report #5: Community Showcases
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-01-08T00:00:00+00:00">January 8, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Community Showcases? Come and find out, what this is all about!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2021/01/gdx_1_9_13" rel="permalink">libGDX 1.9.13
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2021-01-01T00:00:00+00:00">January 1, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Version 1.9.13 of libGDX brings various improvements and fixes. Find out more below!
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2020" class="taxonomy__section">
+    <h2 class="archive__subtitle">2020</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/12/2020_in_review" rel="permalink">2020 in Review
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-12-31T00:00:00+00:00">December 31, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/MrStahlfelge"><img class="avatar avatar-small" alt="MrStahlfelge" width="20" height="20" data-proofer-ignore="true" src="https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=20" srcset="https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=20 1x, https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=40 2x, https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=60 3x, https://avatars3.githubusercontent.com/MrStahlfelge?v=3&s=80 4x" /></a>
+        MrStahlfelge
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The year 2020 is nearly over and we are here to thank you!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/12/jam_december_2020" rel="permalink">libGDX Jam December 2020
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-12-01T00:00:00+00:00">December 1, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 15th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage ca...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/11/devlog_4_roadmap" rel="permalink">Status Report #4: Roadmap
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-11-14T00:00:00+00:00">November 14, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Find out everything about our roadmap for the future of libGDX.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/10/gdx_1_9_12" rel="permalink">libGDX 1.9.12
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-10-31T00:00:00+00:00">October 31, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The latest version of libGDX brings some exciting changes in various areas. Linux ARM builds as well as various GWT &amp; iOS improvements are just some of t...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/10/devlog_3_roadmap" rel="permalink">Status Report #3: Plans for 1.10 and beyond
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-10-05T00:00:00+00:00">October 5, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">libGDX 1.10 - where, when, what, why? This post tells you everything you need to know about our plans for the next versions of libGDX.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/09/devlog_2_release_schedule" rel="permalink">Status Report #2: Release Schedule
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-09-07T00:00:00+00:00">September 7, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When can we expect the next libGDX version? Find out everything about our new release schedule.
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/09/jam_september_2020" rel="permalink">libGDX Jam September 2020
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-09-01T00:00:00+00:00">September 1, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We are proud to present the 14th instalment of our regular libGDX Jam, which allows all of you to create awesome games using the best framework out there. We...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/08/devlog_1_road_ahead" rel="permalink">Status Report #1: The Road Ahead
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-08-30T00:00:00+00:00">August 30, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">What is currently happening behind the scenes?
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/08/welcome_to_the_new_website" rel="permalink">Welcome to the new libGDX homepage!
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-08-26T00:00:00+00:00">August 26, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In the last few days, we have been hard at work to polish our web presence and show you all what libGDX is really capable of. We are particularly proud of ou...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/07/gdx_1_9_11" rel="permalink">libGDX 1.9.11
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-07-22T00:00:00+00:00">July 22, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/crykn"><img class="avatar avatar-small" alt="crykn" width="20" height="20" data-proofer-ignore="true" src="https://avatars1.githubusercontent.com/crykn?v=3&s=20" srcset="https://avatars1.githubusercontent.com/crykn?v=3&s=20 1x, https://avatars1.githubusercontent.com/crykn?v=3&s=40 2x, https://avatars1.githubusercontent.com/crykn?v=3&s=60 3x, https://avatars1.githubusercontent.com/crykn?v=3&s=80 4x" /></a>
+        damios
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The time has come - libGDX 1.9.11 has been released!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/06/jam_june_2020" rel="permalink">libGDX Jam June 2020
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-06-19T00:00:00+00:00">June 19, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">With our 13th collaboration, the libGDX Jam continues the time-honored tradition of making awesome games using the best framework out there. We encourage cam...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2020/03/jam_march_2020" rel="permalink">libGDX Jam March 2020
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2020-03-14T00:00:00+00:00">March 14, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The libGDX Jam goes in its twelfth round and continues the tradition of creating outstanding games using the best game dev framework out there. We encourage ...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2019" class="taxonomy__section">
+    <h2 class="archive__subtitle">2019</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2019/12/jam_december_2019" rel="permalink">libGDX Jam December 2019
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2019-12-14T00:00:00+00:00">December 14, 2019</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In its eleventh installation, the libGDX Jam continues the tradition of making awesome games using the best framework out there. We encourage camaraderie, te...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2019/10/jam_october_2019" rel="permalink">libGDX Jam October 2019
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2019-10-13T00:00:00+00:00">October 13, 2019</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/raeleus"><img class="avatar avatar-small" alt="raeleus" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/raeleus?v=3&s=20" srcset="https://avatars2.githubusercontent.com/raeleus?v=3&s=20 1x, https://avatars2.githubusercontent.com/raeleus?v=3&s=40 2x, https://avatars2.githubusercontent.com/raeleus?v=3&s=60 3x, https://avatars2.githubusercontent.com/raeleus?v=3&s=80 4x" /></a>
+        raeleus
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In a delightful turn of events, our regular libGDX Jam schedule coincides with Halloween. In the spirit of the holiday, we have determined that we will annou...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2019/07/gdx_1_9_10" rel="permalink">libGDX 1.9.10
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2019-07-19T00:00:00+00:00">July 19, 2019</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+        
+        
+        <a href="https://github.com/Tom-Ski"><img class="avatar avatar-small" alt="Tom-Ski" width="20" height="20" data-proofer-ignore="true" src="https://avatars2.githubusercontent.com/Tom-Ski?v=3&s=20" srcset="https://avatars2.githubusercontent.com/Tom-Ski?v=3&s=20 1x, https://avatars2.githubusercontent.com/Tom-Ski?v=3&s=40 2x, https://avatars2.githubusercontent.com/Tom-Ski?v=3&s=60 3x, https://avatars2.githubusercontent.com/Tom-Ski?v=3&s=80 4x" /></a>
+        Tomski
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">New Release Out Now!
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/news/2019/07/older-posts" rel="permalink">Where are the older posts?
+</a>
+      
+    </h2>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2019-07-01T00:00:00+00:00">July 1, 2019</time>
+      </span>
+    
+
+    
+
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">What happened to the old blog?
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,784 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Features - libGDX</title>
+<meta name="description" content="libGDX is a Java game development framework that provides a unified API that works across all supported platforms.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Features">
+<meta property="og:url" content="/features/">
+
+
+  <meta property="og:description" content="libGDX is a Java game development framework that provides a unified API that works across all supported platforms.">
+
+
+
+  <meta property="og:image" content="/assets/images/features.jpg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/features/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide2">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/features.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Features
+
+        
+      </h1>
+      
+        <p class="page__lead">libGDX is a Java game development framework that provides a unified API that works across all supported platforms.
+</p>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://store.steampowered.com/app/1290780/Residual/"><strong>Residual by Orangepixel</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Features">
+    <meta itemprop="description" content="libGDX is a Java game development framework that provides a unified API that works across all supported platforms.">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <link rel="stylesheet" href="/assets/css/aos.css" />
+
+<div data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item--left">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/features/crossplatform.jpeg" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Cross-Platform</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>libGDX offers a single API to target: <strong>Windows, Linux (including the Raspberry Pi), macOS, Android, iOS and Web</strong>. Developers can use various backends to access the capabilities of the host platform, <strong>without having to write platform-specific code</strong>. Rendering is handled on all platforms through Open GL ES 2.0/3.0.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+</div>
+
+<div data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item--right">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/features/reliable.png" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Well proven</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>The libGDX project was started <a href="/history/">over 10 years ago</a>. Over the years, libGDX and its community matured: nowadays, libGDX is a <strong><a href="/showcase/">well proven</a> and reliable framework</strong> with a sound base and documentation. Furthermore, there are plenty of games built on top of libGDX, many of which are open source.</p>
+
+            </div>
+          
+
+          
+            <p><a href="/showcase/" class="btn btn--primary">See some projects</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+</div>
+
+<div data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item--left">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/assets/images/features/ecosystem.png" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Extensive third-party ecosystem</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>libGDX offers a very extensive third-party ecosystem. There are numerous <a href="/dev/tools/">tools</a> and libraries that take a lot of work off the hands of developers. <a href="https://github.com/rafaskb/awesome-libgdx#readme">Awesome-libGDX</a> is a curated list of libGDX-centered <strong>libraries</strong> and a good starting point for anyone new in the libGDX world.</p>
+
+            </div>
+          
+
+          
+            <p><a href="https://github.com/rafaskb/awesome-libgdx" class="btn btn--primary">Check out Awesome-libGDX</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+</div>
+
+<h1 id="do-whatever-you-want">Do whatever you want</h1>
+<p><em>Unlike many popular editor-based platforms, libGDX is entirely code-centric, offering developers fine-grained control over every aspect of their game.</em></p>
+
+<ul>
+  <li><strong>Freedom:</strong> While libGDX gives you access to various different tools and abstractions, you can still access the underlying base. libGDX acknowledges that there is no one-size-fits-all solution, so it doesn’t force you to use certain tools or coding styles: you are free to do whatever you want!</li>
+  <li><strong>Open Source:</strong> libGDX is licensed under Apache 2.0 and maintained by the community, so you can take a look <a href="https://github.com/libgdx/libgdx">under the hood</a> and see how everything works.</li>
+  <li><strong>Java:</strong> Since libGDX uses Java, you can profit from the wide Java ecosystem – Powerful IDEs, out-of-the-box support for Git, fined-tuned debuggers, performance profilers, and an abundance of well-tried libraries and frameworks, as well as many resources and extensive documentation.</li>
+</ul>
+
+<p><br /></p>
+
+<h1 id="feature-packed">Feature Packed</h1>
+<p><em>libGDX comes with batteries included. Write 2D or 3D games and let libGDX worry about low-level details.</em></p>
+<div class="row">
+  <div class="column">
+    <div class="">
+  
+  <h2 class="archive__item-title" style="line-height: 1.25">Audio</h2>
+  <ul style="font-size: 0.75em; line-height: 1.25">
+    
+      
+        <li><a href="https://github.com/libgdx/libgdx/wiki/Streaming-music">Streaming music</a> and <a href="https://github.com/libgdx/libgdx/wiki/Sound-effects">sound effect playback</a> for WAV, MP3 and OGG
+</li>
+      
+    
+      
+        <li>Direct access to audio device for <a href="https://github.com/libgdx/libgdx/wiki/Playing-pcm-audio">PCM sample playback</a> and <a href="https://github.com/libgdx/libgdx/wiki/Recording-pcm-audio">recording</a>
+</li>
+      
+    
+  </ul>
+</div>
+
+    <div class="">
+  
+  <h2 class="archive__item-title" style="line-height: 1.25">Input Handling</h2>
+  <ul style="font-size: 0.75em; line-height: 1.25">
+    
+      
+        <li>Abstractions for <a href="https://github.com/libgdx/libgdx/wiki/Mouse%2C-Touch-and-Keyboard">mouse, keyboard, touchscreen</a>, <a href="https://github.com/libgdx/gdx-controllers">controllers</a>, <a href="https://github.com/libgdx/libgdx/wiki/Accelerometer">accelerometer</a>, <a href="https://github.com/libgdx/libgdx/wiki/Gyroscope">gyroscope</a> and <a href="https://github.com/libgdx/libgdx/wiki/Compass">compass</a>
+</li>
+      
+    
+      
+        <li><a href="https://github.com/libgdx/libgdx/wiki/Gesture-detection">Gesture detection</a> (recognising taps, panning, flinging and pinch zooming)
+</li>
+      
+    
+  </ul>
+</div>
+
+    <div class="">
+  
+  <h2 class="archive__item-title" style="line-height: 1.25">Math &amp; Physics</h2>
+  <ul style="font-size: 0.75em; line-height: 1.25">
+    
+      
+        <li><a href="https://github.com/libgdx/libgdx/wiki/Vectors%2C-matrices%2C-quaternions">Matrix, vector and quaternion</a> classes; accelerated via native C code where possible (if you are interested in that, also note our <a href="https://github.com/libgdx/libgdx/wiki/jnigen">gdx-jnigen</a> project)
+</li>
+      
+    
+      
+        <li><a href="https://github.com/libgdx/libgdx/wiki/Circles%2C-planes%2C-rays%2C-etc.">Bounding shapes and volumes as well as a Frustum class for picking and culling</a>
+</li>
+      
+    
+      
+        <li><a href="https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/math/Intersector.html">Intersection and overlap testing</a>
+</li>
+      
+    
+      
+        <li><a href="https://github.com/libgdx/gdx-ai">Steering Behaviours, Formation Motion, Pathfinding, Behaviour Trees and Finite State Machines</a>
+</li>
+      
+    
+      
+        <li>Common <a href="https://github.com/libgdx/libgdx/wiki/Interpolation">interpolators</a>, different <a href="https://github.com/libgdx/libgdx/wiki/Path-interface-and-Splines">spline implementations</a>, concave polygon triangulators and more
+</li>
+      
+    
+      
+        <li>2D physics: JNI wrapper for the popular <a href="https://github.com/libgdx/libgdx/wiki/Box2d">Box2D physics</a> (see also <a href="https://github.com/libgdx/box2dlights">Box2DLights</a>). Alternatively, you can take a look at <a href="https://github.com/implicit-invocation/jbump">jbump</a> for a simpler physics implementation.
+</li>
+      
+    
+      
+        <li>3D physics: JNI Wrapper for <a href="https://github.com/libgdx/libgdx/wiki/Bullet-physics">Bullet physics</a>
+</li>
+      
+    
+  </ul>
+</div>
+
+    <div class="">
+  
+  <h2 class="archive__item-title" style="line-height: 1.25">Integration of Services</h2>
+  <ul style="font-size: 0.75em; line-height: 1.25">
+    
+      
+        <li>Easy integration of <a href="https://github.com/MrStahlfelge/gdx-gamesvcs">game services</a>, such as Google Play Games, Apple Game Center, and more.
+</li>
+      
+    
+      
+        <li>Cross-platform API for <a href="https://github.com/libgdx/gdx-pay">in-app purchases</a>.
+</li>
+      
+    
+      
+        <li>Third-party support for Google’s <a href="https://github.com/mk-5/gdx-fireapp">Firebase</a>, the <a href="https://github.com/code-disaster/steamworks4j">Steamworks API</a>, <a href="https://github.com/MrStahlfelge/gdx-gameanalytics">gameanalytics.com</a> and Facebook’s <a href="https://github.com/TomGrill/gdx-facebook">Graph API</a>.
+</li>
+      
+    
+      
+        <li>Easy integration of <a href="https://github.com/libgdx/libgdx/wiki/Admob-in-libgdx">AdMob</a>
+</li>
+      
+    
+  </ul>
+</div>
+
+    <div class="">
+  
+  <h2 class="archive__item-title" style="line-height: 1.25">File I/O &amp; Storage</h2>
+  <ul style="font-size: 0.75em; line-height: 1.25">
+    
+      
+        <li><a href="https://github.com/libgdx/libgdx/wiki/File-handling">File system abstraction</a> for all platforms
+</li>
+      
+    
+      
+        <li>Straight-forward <a href="https://github.com/libgdx/libgdx/wiki/Managing-your-assets">asset management</a>
+</li>
+      
+    
+      
+        <li><a href="https://github.com/libgdx/libgdx/wiki/Preferences">Preferences</a> for lightweight settings storage
+</li>
+      
+    
+      
+        <li><a href="https://github.com/libgdx/libgdx/wiki/Reading-and-writing-JSON">JSON</a> and <a href="https://github.com/libgdx/libgdx/wiki/Reading-and-writing-XML">XML</a> serialisation
+</li>
+      
+    
+      
+        <li>Custom, <a href="https://github.com/libgdx/libgdx/wiki/Collections">optimised collections</a>, with primitive support
+</li>
+      
+    
+  </ul>
+</div>
+
+  </div>
+  <div class="column">
+    <div class="">
+  
+  <h2 class="archive__item-title" style="line-height: 1.25">Graphics</h2>
+  <ul style="font-size: 0.75em; line-height: 1.25">
+    
+      
+        <li>Rendering through <a href="https://github.com/libgdx/libgdx/wiki/OpenGL-%28ES%29-Support">OpenGL ES 2.0/3.0</a> on all platforms
+</li>
+      
+    
+      
+        <li>
+          <strong>Low-Level OpenGL helpers:</strong>
+
+          <ul>
+            
+              <li>Vertex arrays and vertex buffer objects
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Meshes">Meshes</a>
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Textures-and-TextureRegions">Textures</a>
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Frame-buffer-objects">Framebuffer objects</a>
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Shaders">Shaders</a>, integrating easily with meshes
+</li>
+            
+              <li><a href="https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ImmediateModeRenderer.html">Immediate mode rendering</a> emulation
+</li>
+            
+              <li>Simple <a href="https://github.com/libgdx/libgdx/wiki/Rendering-shapes">shape rendering</a>
+</li>
+            
+              <li>Automatic software or hardware mipmap generation
+</li>
+            
+              <li>Automatic handling of OpenGL ES context loss
+</li>
+            
+          </ul>
+        </li>
+      
+    
+      
+        <li>
+          <strong>High-level 2D APIs:</strong>
+
+          <ul>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Orthographic-camera">Orthographic camera</a>
+</li>
+            
+              <li>High-performance <a href="https://github.com/libgdx/libgdx/wiki/Spritebatch%2C-Textureregions%2C-and-Sprites">sprite</a> batching and caching
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Using-textureatlases">Texture atlases</a>, with whitespace stripping support. Either generated <a href="https://github.com/libgdx/libgdx/wiki/Packing-atlases-offline">offline</a> or <a href="https://github.com/libgdx/libgdx/wiki/Packing-atlases-at-runtime">at runtime</a>
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Bitmap-fonts">Bitmap fonts</a>. Either generated offline or <a href="https://github.com/libgdx/libgdx/wiki/Gdx-freetype">loaded from TTF files</a>
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/2D-ParticleEffects">2D Particle system</a>
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Tile-maps">TMX tile map support</a>
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Scene2d">2D scene-graph API</a>
+</li>
+            
+          </ul>
+        </li>
+      
+    
+      
+        <li>
+          <strong>A Powerful UI Solution:</strong>
+
+          <ul>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/Scene2d.ui">2D UI library</a>, based on scene-graph API
+</li>
+            
+              <li>A plethora of <a href="https://github.com/libgdx/libgdx/wiki/Scene2d.ui#widgets">official</a> and third-party widgets
+</li>
+            
+              <li>Fully <a href="https://github.com/libgdx/libgdx/wiki/Skin">skinnable</a>; <a href="https://github.com/raeleus/skin-composer">Composer</a> for creating UI skins
+</li>
+            
+          </ul>
+        </li>
+      
+    
+      
+        <li>
+          <strong>High-Level 3D APIs:</strong>
+
+          <ul>
+            
+              <li>Decal batching, for 3D billboards or <a href="https://github.com/libgdx/libgdx/wiki/3D-Particle-Effects">particle systems</a>
+</li>
+            
+              <li>Basic loaders for Wavefront OBJ and MD5
+</li>
+            
+              <li><a href="https://github.com/libgdx/libgdx/wiki/3D-Graphics">3D rendering API</a> with materials, animation and lighting system and support for loading FBX models via fbx-conv
+</li>
+            
+              <li>Third-party support for <a href="https://github.com/mgsx-dev/gdx-gltf">GLTF 2.0</a>
+</li>
+            
+              <li>Rudimentary <a href="https://github.com/libgdx/libgdx/wiki/Virtual-Reality-%28VR%29">VR support</a>
+</li>
+            
+          </ul>
+        </li>
+      
+    
+      
+        <li>Third-party <a href="https://github.com/crashinvaders/gdx-vfx">post-processing</a> shader effects
+</li>
+      
+    
+  </ul>
+</div>
+
+    <div class="">
+  
+  <h2 class="archive__item-title" style="line-height: 1.25">Networking</h2>
+  <ul style="font-size: 0.75em; line-height: 1.25">
+    
+      
+        <li><a href="https://github.com/libgdx/libgdx/wiki/Networking">Gdx.net</a> for simple networking (TCP sockets and HTTP requests)
+</li>
+      
+    
+      
+        <li>Cross-platform <a href="https://github.com/MrStahlfelge/gdx-websockets">WebSocket support</a>
+</li>
+      
+    
+      
+        <li>Common Java networking solutions: <a href="https://github.com/EsotericSoftware/kryonet">KryoNet</a> &amp; <a href="https://github.com/netty/netty">Netty</a> (not supported on Web)
+</li>
+      
+    
+  </ul>
+</div>
+
+  </div>
+</div>
+
+<p><br /></p>
+
+<h1 id="and">And…</h1>
+<p><strong>…a Great Community!</strong> Get support from a very friendly <a href="/community/">community</a> of game and application developers or use any of the libraries and tools created by members of our community. Join us today and get started with your very first libGDX game!</p>
+
+<center><a href="/dev/setup/" class="btn btn--primary btn--large">Get Started!</a></center>
+
+<style>
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+
+<script src="/assets/js/aos.js"></script>
+
+<script>
+  AOS.init({
+    disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    once: true
+  });
+</script>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

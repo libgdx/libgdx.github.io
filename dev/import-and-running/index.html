@@ -1,0 +1,669 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Importing &amp; Running a Project - libGDX</title>
+<meta name="description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Importing &amp; Running a Project">
+<meta property="og:url" content="/dev/import-and-running/">
+
+
+  <meta property="og:description" content="libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.">
+
+
+
+  <meta property="og:image" content="/assets/images/dev/dev.jpeg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/dev/import-and-running/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/images/dev/dev.jpeg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Importing &amp; Running a Project
+
+        
+      </h1>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/Ek9Znm8lQ1U"><strong>Florian Olivo</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev/setup/">Set Up a Dev Env</a></li>
+          
+            <li><a href="/dev/project-generation/">Generate a Project</a></li>
+          
+            <li><a href="/dev/import-and-running/" class="active">Importing & Running</a></li>
+          
+            <li><a href="/dev/simple-game/">A Simple Game</a></li>
+          
+            <li><a href="/dev/simple-game-extended/">Extending the Simple Game</a></li>
+          
+            <li><a href="/dev/tutorials/">Demos & Tutorials</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Documentation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="https://github.com/libgdx/libgdx/wiki">Wiki</a></li>
+          
+            <li><a href="https://libgdx.badlogicgames.com/ci/nightlies/docs/api/">Javadocs</a></li>
+          
+            <li><a href="/dev/versions/">Versions</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Tools & Frameworks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="https://github.com/rafaskb/awesome-libgdx#readme">Awesome-libGDX</a></li>
+          
+            <li><a href="/dev/tools/">Tools</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Contributing to libGDX</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev/contributing/">Contributing Guidelines</a></li>
+          
+            <li><a href="/dev/issues/">Reporting an Issue</a></li>
+          
+            <li><a href="/roadmap/">Roadmap</a></li>
+          
+            <li><a href="/dev/from-source/">Working from Source</a></li>
+          
+            <li><a href="/dev/natives/">Building the Natives</a></li>
+          
+            <li><a href="/funding/">Funding</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Importing &amp; Running a Project">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <!-- https://jekyllcodex.org/without-plugin/breadcrumbs/ -->
+<div id="breadcrumbs" style="margin-top: -25px; margin-bottom: 30px;font-size:17px">
+
+<a href="/">Home</a>
+
+  
+    / <a href="/dev/">Dev</a>
+  
+
+  
+    / <b>Importing &amp; Running a Project</b>
+  
+
+</div>
+
+<p>Next up, you need to import your project into your IDE.</p>
+
+<style>
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.svg-text {
+  color: white;
+  font-size: 12px !important;
+}
+
+.svg-link {
+  text-decoration: none !important;
+}
+</style>
+
+<div class="svg-container">
+  <svg version="1.1" viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet" class="svg-content">
+    <defs>
+      <marker id="arrow" markerWidth="4" markerHeight="10" viewBox="-2 -4 4 4" refX="0" refY="0" markerUnits="strokeWidth" orient="auto">
+        <polyline points="2,-2 0,0 2,2" stroke="#443c3d" stroke-width="0.75px" fill="none" />
+      </marker>
+    </defs>
+
+    <g class="box-group">
+      <a xlink:href="/dev/setup/" class="svg-link"> <!-- Dev Env -->
+        <g transform="translate(4)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Set Up a Dev Environment</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="100" x2="136" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/project-generation/" class="svg-link">   <!-- Generate Project -->
+        <g transform="translate(136)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Generate a Project</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="230" x2="268" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/import-and-running/" class="svg-link"> <!-- Import & Run Configs -->
+        <g transform="translate(268)">
+          <rect fill="#66cc00" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Importing &amp; Running</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="362" x2="400" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/simple-game/" class="svg-link"> <!-- Simple Game -->
+        <g transform="translate(400)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">A Simple Game</p>
+          </foreignObject>
+        </g>
+      </a>
+    </g>
+  </svg>
+</div>
+
+<h1 id="importing-the-project">Importing the Project</h1>
+<ol>
+  <li>
+    <p>In <strong>IntelliJ IDEA or Android Studio</strong>, you can choose to open the <code class="language-plaintext highlighter-rouge">build.gradle</code> file and select “Open as Project” to get started.</p>
+
+    <p>In <strong>Eclipse</strong>, choose <code class="language-plaintext highlighter-rouge">File -&gt; Import... -&gt; Gradle -&gt; Existing Gradle Project</code> (make sure that your freshly generated project is not located inside of your workspace).</p>
+
+    <p>In <strong>NetBeans</strong> it is <code class="language-plaintext highlighter-rouge">File -&gt; Open Project</code>.</p>
+  </li>
+  <li>
+    <p>You may need to refresh the Gradle project after the initial import if some dependencies weren’t downloaded yet.</p>
+
+    <p>In <strong>IntelliJ IDEA/Android Studio</strong>, the <code class="language-plaintext highlighter-rouge">Reimport all Gradle projects</code> button is a pair of circling arrows at the top left in the Gradle tool window, which can be opened with <code class="language-plaintext highlighter-rouge">View -&gt; Tool Windows -&gt; Gradle</code>.</p>
+
+    <p>In <strong>Eclipse</strong> right click on your project <code class="language-plaintext highlighter-rouge">Gradle -&gt; Refresh Gradle Project</code>.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h1 id="getting-it-running">Getting it Running</h1>
+<p>If you want to execute your freshly imported project, you have to follow different steps, depending on your IDE and the platform you are targeting.</p>
+<h2 id="desktop">Desktop</h2>
+<h3 id="in-ideaandroid-studio">In IDEA/Android Studio:</h3>
+<ol>
+  <li>Extend the Gradle tab on the right sight of your window: <br />
+  <img src="/assets/images/dev/idea/3.png" alt="" /></li>
+  <li>
+    <p>Expand the tasks of your project and then select: desktop -&gt; other -&gt; run.</p>
+
+    <p class="notice--primary"><strong>In Android Studio 4.2</strong>, tasks are no longer shown by default. Go to <code class="language-plaintext highlighter-rouge">Settings -&gt; Experimental</code> and uncheck <code class="language-plaintext highlighter-rouge">Do not build Gradle task list during Gradle sync</code>. Then sync the project via <code class="language-plaintext highlighter-rouge">File -&gt; Sync Project with Gradle Files</code></p>
+  </li>
+</ol>
+
+<p><b>Alternatively</b>, you can create a run configuration:</p>
+<ol>
+  <li>Right click your DesktopLauncher class</li>
+  <li>Select ‘Run DesktopLauncher.main()’. This should fail with missing assets, because we need to hook up the assets folder first.</li>
+  <li>Open up Run Configurations <br />
+  <img src="/assets/images/dev/idea/0.png" alt="" /></li>
+  <li>Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your <code class="language-plaintext highlighter-rouge">core/assets</code> folder  (or <code class="language-plaintext highlighter-rouge">android/assets</code> if you are using an Android subproject)<br />
+  <img src="/assets/images/dev/idea/1.png" alt="" /></li>
+  <li>Run your application using the run button</li>
+</ol>
+
+<h3 id="in-eclipse">In Eclipse:</h3>
+<ol>
+  <li>Right click your desktop project -&gt; Run as -&gt; Run Configurations…</li>
+  <li>On the right side, select Java Application: <br />
+  <img src="/assets/images/dev/eclipse/3.png" alt="" /></li>
+  <li>At the top left, click the icon to create a new run configuration:
+  <img src="/assets/images/dev/eclipse/0.png" alt="" /></li>
+  <li>As Main class select your <code class="language-plaintext highlighter-rouge">DesktopLauncher</code> class</li>
+  <li>After that, click on the Arguments tab</li>
+  <li>At the bottom, under ‘Working directory’ select ‘Other’ -&gt; Workspace…
+  <img src="/assets/images/dev/eclipse/1.png" alt="" /></li>
+  <li>Then select your asset folder located in <code class="language-plaintext highlighter-rouge">core/assets</code> (or <code class="language-plaintext highlighter-rouge">android/assets</code> if you are using an Android subproject)</li>
+</ol>
+
+<h3 id="in-netbeans">In NetBeans:</h3>
+<p>Right click the desktop project -&gt; Run</p>
+
+<p><br /></p>
+
+<h2 id="android">Android</h2>
+<ul>
+  <li><strong>IDEA/Android Studio:</strong> Right click AndroidLauncher -&gt; Run AndroidLauncher</li>
+  <li><strong>Eclipse:</strong> Right click Android project -&gt; Run As -&gt; AndroidApplication</li>
+  <li><strong>NetBeans:</strong> Right click Android project -&gt; Run As -&gt; AndroidApplication</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="ios">iOS</h2>
+<h3 id="in-ideaandroid-studio-1">In IDEA/Android Studio</h3>
+<ol>
+  <li>Open Run/Debug Configurations</li>
+  <li>Create a new run configuration for a RoboVM iOS application</li>
+</ol>
+
+<p><img src="/assets/images/dev/idea/2.png" alt="" /></p>
+
+<ol>
+  <li>Select the provisioning profile and simulator/device target</li>
+  <li>Run the created run configuration</li>
+</ol>
+
+<p>For more information on using and configuring the RoboVM IntelliJ plugin please see the <a href="http://robovm.mobidevelop.com">documentation</a>.</p>
+
+<h3 id="in-eclipse-1">In Eclipse</h3>
+<ul>
+  <li>Right click the iOS RoboVM project &gt; Run As &gt; RoboVM runner of your choice</li>
+</ul>
+
+<p><img src="/assets/images/dev/eclipse/2.png" alt="" /></p>
+
+<p>For more information on using and configuring the RoboVM IntelliJ plugin please see the <a href="http://robovm.mobidevelop.com">documentation</a>.</p>
+
+<p><br /></p>
+
+<h2 id="html">HTML</h2>
+<p>HTML is best suited to be run on command line. You are welcome to manually setup GWT in the IDE of your choice if you are familiar with it, but the recommended way is to drop down to terminal or command prompt.</p>
+
+<p>The HTML target can be run in <strong>Super Dev</strong> mode, which allows you to recompile on the fly, and debug your application in browser.</p>
+
+<p>To do so, open up your favourite shell or terminal, change directory to the project directory and invoke the respective gradle task:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew html:superDev
+</code></pre></div></div>
+
+<p class="notice--primary"><strong>On Unix:</strong> If you get a permission denied error, set the execution flag on the gradlew file: <code class="language-plaintext highlighter-rouge">chmod +x gradlew</code></p>
+
+<p>You should see lots of text wizzing by, and if all goes well you should see the following line at the end:</p>
+
+<p><img src="/assets/images/dev/html/0.png" alt="" /></p>
+
+<p>You can then go to <a href="http://localhost:8080/index.html"><code class="language-plaintext highlighter-rouge">http://localhost:8080/index.html</code></a>, to see your application running, with a recompile button.</p>
+
+<p>For further info on configuring and debugging with SuperDev check the <a href="http://www.gwtproject.org/articles/superdevmode.html">GWT documentation</a>.</p>
+
+<p><br /></p>
+
+<h2 id="command-line">Command Line</h2>
+<p>All the targets can be run and deployed to via the command line interface.</p>
+
+<p><strong>Desktop:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew desktop:run
+</code></pre></div></div>
+
+<p><strong>Android:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew android:installDebug android:run
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">ANDROID_HOME</code> environment variable needs to be pointing to a valid android SDK before you can do any command line wizardry for Android. On Windows, use: <code class="language-plaintext highlighter-rouge">set ANDROID_HOME=​C:/Path/To/Your/Android/Sdk</code>; on Linux and macOS: <code class="language-plaintext highlighter-rouge">export ANDROID_HOME=​/Path/To/Your/Android/Sdk</code>. Alternatively you can create a file called “local.properties” with the following content: <code class="language-plaintext highlighter-rouge">sdk.dir /Path/To/Your/Android/Sdk</code>.</p>
+
+<p><strong>iOS:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew ios:launchIPhoneSimulator
+</code></pre></div></div>
+
+<p><strong>HTML:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew html:superDev
+</code></pre></div></div>
+
+<p>Then go to <a href="http://localhost:8080/index.html"><code class="language-plaintext highlighter-rouge">http://localhost:8080/index.html</code></a>.</p>
+
+<h3 id="gradle-tasks-are-failing">Gradle tasks are failing?</h3>
+<p>If whenever you invoke Gradle, the build or refresh fails to get more information, run the same command again and add the <code class="language-plaintext highlighter-rouge">--debug</code> parameter to the command, e.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew desktop:run --debug
+</code></pre></div></div>
+
+<p>This will provide you with a stacktrace and give you a better idea of why gradle is failing.</p>
+
+<p><br /></p>
+
+<h1 id="what-to-do-next">What to do next?</h1>
+<p>Now that you’re done with the set up, you can get to do some real coding. Take a look at our post <a href="/dev/simple-game/">A Simple Game</a> for a step-by-step guide.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

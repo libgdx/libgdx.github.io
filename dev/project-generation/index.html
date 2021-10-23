@@ -1,0 +1,616 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+
+<meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Creating a Project - libGDX</title>
+<meta name="description" content="libGDX offers a setup tool, which automatically creates a project and downloads everything necessary.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="libGDX">
+<meta property="og:title" content="Creating a Project">
+<meta property="og:url" content="/dev/project-generation/">
+
+
+  <meta property="og:description" content="libGDX offers a setup tool, which automatically creates a project and downloads everything necessary.">
+
+
+
+  <meta property="og:image" content="/assets/images/dev/dev.jpeg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/dev/project-generation/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="libGDX Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Light mode -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Dark mode -->
+
+  <meta name="color-scheme" content="light dark">
+  <style>
+    @import url("/assets/css/main2.css") (prefers-color-scheme: dark);
+  </style>
+
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/">
+            <picture>
+              
+                <!-- dark mode logo -->
+                <source
+                  srcset="/assets/brand/logo_dark.svg"
+                  media="(prefers-color-scheme: dark)">
+              
+              <img src="/assets/brand/logo.svg" alt=" ">
+            </picture>
+          </a>
+        
+        <a class="site-title" href="/">
+           
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/features/">Features</a>
+            </li><li class="masthead__menu-item">
+              <a href="/showcase/">Showcase</a>
+            </li><li class="masthead__menu-item">
+              <a href="/dev/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/community/">Community</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/images/dev/dev.jpeg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Creating a Project
+
+        
+      </h1>
+      
+        <p class="page__lead">libGDX offers a setup tool, which automatically creates a project and downloads everything necessary.
+</p>
+      
+      <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/page__meta.html -->
+
+
+
+
+      
+      
+        <p>
+        
+          <a href="/assets/downloads/legacy_setup/gdx-setup_latest.jar" class="btn btn--light-outline btn--large">Stable Release</a>
+        
+          <a href="https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--light-outline btn--large">Nightly Version</a>
+        
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com/photos/Ek9Znm8lQ1U"><strong>Florian Olivo</strong></a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev/setup/">Set Up a Dev Env</a></li>
+          
+            <li><a href="/dev/project-generation/" class="active">Generate a Project</a></li>
+          
+            <li><a href="/dev/import-and-running/">Importing & Running</a></li>
+          
+            <li><a href="/dev/simple-game/">A Simple Game</a></li>
+          
+            <li><a href="/dev/simple-game-extended/">Extending the Simple Game</a></li>
+          
+            <li><a href="/dev/tutorials/">Demos & Tutorials</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Documentation</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="https://github.com/libgdx/libgdx/wiki">Wiki</a></li>
+          
+            <li><a href="https://libgdx.badlogicgames.com/ci/nightlies/docs/api/">Javadocs</a></li>
+          
+            <li><a href="/dev/versions/">Versions</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Tools & Frameworks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="https://github.com/rafaskb/awesome-libgdx#readme">Awesome-libGDX</a></li>
+          
+            <li><a href="/dev/tools/">Tools</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Contributing to libGDX</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/dev/contributing/">Contributing Guidelines</a></li>
+          
+            <li><a href="/dev/issues/">Reporting an Issue</a></li>
+          
+            <li><a href="/roadmap/">Roadmap</a></li>
+          
+            <li><a href="/dev/from-source/">Working from Source</a></li>
+          
+            <li><a href="/dev/natives/">Building the Natives</a></li>
+          
+            <li><a href="/funding/">Funding</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Creating a Project">
+    <meta itemprop="description" content="libGDX offers a setup tool, which automatically creates a project and downloads everything necessary.">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <!-- https://jekyllcodex.org/without-plugin/breadcrumbs/ -->
+<div id="breadcrumbs" style="margin-top: -25px; margin-bottom: 30px;font-size:17px">
+
+<a href="/">Home</a>
+
+  
+    / <a href="/dev/">Dev</a>
+  
+
+  
+    / <b>Creating a Project</b>
+  
+
+</div>
+
+<p>To setup your first project and download the necessary dependencies, libGDX offers a setup tool.</p>
+
+<style>
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.svg-text {
+  color: white;
+  font-size: 12px !important;
+}
+
+.svg-link {
+  text-decoration: none !important;
+}
+</style>
+
+<div class="svg-container">
+  <svg version="1.1" viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet" class="svg-content">
+    <defs>
+      <marker id="arrow" markerWidth="4" markerHeight="10" viewBox="-2 -4 4 4" refX="0" refY="0" markerUnits="strokeWidth" orient="auto">
+        <polyline points="2,-2 0,0 2,2" stroke="#443c3d" stroke-width="0.75px" fill="none" />
+      </marker>
+    </defs>
+
+    <g class="box-group">
+      <a xlink:href="/dev/setup/" class="svg-link"> <!-- Dev Env -->
+        <g transform="translate(4)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Set Up a Dev Environment</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="100" x2="136" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/project-generation/" class="svg-link">   <!-- Generate Project -->
+        <g transform="translate(136)">
+          <rect fill="#66cc00" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Generate a Project</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="230" x2="268" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/import-and-running/" class="svg-link"> <!-- Import & Run Configs -->
+        <g transform="translate(268)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">Importing &amp; Running</p>
+          </foreignObject>
+        </g>
+      </a>
+
+      <line x1="362" x2="400" y1="27" y2="27" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <a xlink:href="/dev/simple-game/" class="svg-link"> <!-- Simple Game -->
+        <g transform="translate(400)">
+          <rect fill="#747871" x="2" y="2" rx="3" ry="3" width="90" height="45" />
+          <foreignObject x="8" y="6" width="78" height="45">
+            <p xmlns="http://www.w3.org/1999/xhtml" class="svg-text">A Simple Game</p>
+          </foreignObject>
+        </g>
+      </a>
+    </g>
+  </svg>
+</div>
+
+<ol>
+  <li>
+    <p>Download the libGDX <a href="/assets/downloads/legacy_setup/gdx-setup_latest.jar">Project Setup Tool</a></p>
+  </li>
+  <li>
+    <p>Open your command line tool, go to the download folder and run <br /><code class="language-plaintext highlighter-rouge">java -jar ./gdx-setup_latest.jar</code></p>
+  </li>
+</ol>
+
+<p>This will open the following setup that will allow you to generate your project:</p>
+
+<p><img src="https://i.imgur.com/nI5lQKT.jpg" alt="" style="width: 700px;" /></p>
+
+<p class="notice--primary"><strong>Note:</strong> Instead of the User Interface of the Setup Tool you can also use the <a href="https://github.com/libgdx/libgdx/wiki/Project-Setup-via-Command-Line">command-line</a> to create your project.</p>
+
+<p>You are asked to provide the following parameters:</p>
+<ul>
+  <li><strong>Name</strong>: the name of the application; lower case with minuses is usually a good idea, e.g. <code class="language-plaintext highlighter-rouge">my-game</code></li>
+  <li><strong>Package</strong>: the Java package under which your code will reside, e.g. <code class="language-plaintext highlighter-rouge">com.badlogic.mygame</code></li>
+  <li><strong>Game Class</strong>: the name of the main game Java class of your app, e.g. <code class="language-plaintext highlighter-rouge">MyGame</code></li>
+  <li><strong>Destination</strong>: the folder where your app will be created</li>
+  <li><strong>Android SDK</strong>: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click “Configure” -&gt; “SDK Manager”. By default it is in <code class="language-plaintext highlighter-rouge">/Users/username/Library/Android/sdk</code> <br /></li>
+</ul>
+
+<p><img src="https://i.imgur.com/re4m4ZW.png" alt="" style="width: 700px;" />
+<img src="https://i.imgur.com/Y4F3UsH.png" alt="" style="width: 700px;" /></p>
+
+<ul>
+  <li><strong>Sub Projects</strong>: libGDX is cross-platform. By default, all the target platforms are included (Desktop; Android; iOS; HTML). There is no need to change the default value unless you are sure you will never compile for a specific target.</li>
+</ul>
+
+<p class="notice--info"><strong>Note:</strong> iOS projects can only be compiled on macOS.</p>
+
+<ul>
+  <li><strong>extensions</strong>: the extensions offered are:<br />
+  <strong><a href="https://github.com/libgdx/libgdx/wiki/Bullet-physics">Bullet</a></strong>: 3D Collision Detection and Rigid Body Dynamics Library.<br />
+  <strong><a href="https://github.com/libgdx/libgdx/wiki/Gdx-freetype">FreeType</a></strong>: Scalable font. Great to manipulate font size dynamically. However be aware that it does not work with HTML target if you cross compile for that target.<br />
+  <strong>Tools</strong>: Set of tools including: particle editor (2d/3d), bitmap font and image texture packers.<br />
+  <strong><a href="https://github.com/libgdx/libgdx/wiki/Controllers">Controller</a></strong> Library to handle controllers (e.g.: XBox 360 controller).<br />
+  <strong><a href="https://github.com/libgdx/libgdx/wiki/Box2d">Box2d</a></strong>: Box2D is a 2D physics library.<br />
+  <strong><a href="https://github.com/libgdx/box2dlights">Box2dlights</a></strong>: 2D lighting framework that uses box2d for raycasting and OpenGL ES 2.0 for rendering.<br />
+  <strong><a href="https://github.com/libgdx/ashley">Ashley</a></strong>: A tiny entity framework.<br />
+  <strong><a href="https://github.com/libgdx/gdx-ai">Ai</a></strong>: An artificial intelligence framework.<br /></li>
+</ul>
+
+<p>By clicking “Show Third Party Extensions” you can access a list of community-made libGDX extensions. If you want to add extensions later on, please take a look at <a href="https://github.com/libgdx/libgdx/wiki/Dependency-management-with-Gradle#libgdx-extensions">this</a> wiki page.</p>
+
+<p>When ready, click “Generate”.</p>
+
+<p class="notice--info"><strong>Note:</strong> You may get a message indicating that you have a more recent version of Android build tools or Android API than the recommended. This is not a blocking message and you may continue.</p>
+
+<h2 id="project-layout">Project Layout</h2>
+<p>This will create a directory called <code class="language-plaintext highlighter-rouge">mygame</code> with the following layout:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>settings.gradle            &lt;- definition of sub-modules. By default core, desktop, android, html, ios
+build.gradle               &lt;- main Gradle build file, defines dependencies and plugins
+gradlew                    &lt;- local Gradle wrapper
+gradlew.bat                &lt;- script that will run Gradle on Windows
+gradle                     &lt;- script that will run Gradle on Unix systems
+local.properties           &lt;- IntelliJ only file, defines Android SDK location
+
+core/
+    build.gradle           &lt;- Gradle build file for core project*
+    src/                   &lt;- Source folder for all your game's code
+
+desktop/
+    build.gradle           &lt;- Gradle build file for desktop project*
+    src/                   &lt;- Source folder for your desktop project, contains LWJGL launcher class
+
+android/
+    build.gradle           &lt;- Gradle build file for android project*
+    AndroidManifest.xml    &lt;- Android specific config
+    assets/                &lt;- contains for your graphics, audio, etc.  Shared with other projects.
+    res/                   &lt;- contains icons for your app and other resources
+    src/                   &lt;- Source folder for your Android project, contains android launcher class
+
+html/
+    build.gradle           &lt;- Gradle build file for the html project*
+    src/                   &lt;- Source folder for your html project, contains launcher and html definition
+    webapp/                &lt;- War template, on generation the contents are copied to war. Contains startup url index page and web.xml
+
+ios/
+    build.gradle           &lt;- Gradle build file for the iOS project*
+    src/                   &lt;- Source folder for your iOS project, contains launcher
+</code></pre></div></div>
+
+<h2 id="what-is-gradle">What is Gradle?</h2>
+<p>libGDX projects are <a href="http://www.gradle.org/">Gradle</a> projects, which makes managing dependencies and building considerably easier.</p>
+
+<p class="notice--info">Gradle is a <strong>dependency management</strong> system and thus provides an easy way to pull in third-party libraries into your project, without having to manually download them. Instead, Gradle just needs you to provide it with the names and versions of the libraries you want to include in your application. This is all done in the Gradle configuration files. Adding, removing and changing the version of a third-party library is as easy as changing a few lines in that configuration file. The dependency management system will pull in the libraries you specified from a central repository (in our case <a href="http://search.maven.org/">Maven Central</a>) and store them in a directory outside of your project. Find out more in our <a href="https://github.com/libgdx/libgdx/wiki/Dependency-management-with-Gradle">wiki</a>.</p>
+
+<p class="notice--info">In addition, Gradle is also a <strong>build system</strong> helping with building and packaging your application, without being tied to a specific IDE. This is especially useful if you use a build or continuous integration server, where IDEs aren’t readily available. Instead, the build server can call the build system, providing it with a build configuration so it knows how to build your application for different platforms. If you want to know more about deploying your application, take a look <a href="https://github.com/libgdx/libgdx/wiki/Deploying-your-application">here</a>.</p>
+
+<p><strong>Now you are ready to <a href="/dev/import-and-running/">import the project into your IDE and run it</a>.</strong></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="/community/discord/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-discord" aria-hidden="true"></i> Discord</a></li>
+        
+      
+        
+          <li><a href="https://github.com/libgdx/libgdx/wiki" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Wiki</a></li>
+        
+      
+        
+          <li><a href="https://www.patreon.com/libgdx" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-patreon" aria-hidden="true"></i> Patreon</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 libGDX &#8226; <a href="/legal/">Legal</a> &#8226; <a href="/history/">History</a> &#8226; <a href="/brand/">Branding Guidelines</a>
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

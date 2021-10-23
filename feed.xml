@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-10-23T07:52:54+00:00</updated><id>/feed.xml</id><title type="html">libGDX</title><subtitle>libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS.</subtitle><entry><title type="html">libGDX Jam September 2021</title><link href="/news/2021/09/jam-september-2021" rel="alternate" type="text/html" title="libGDX Jam September 2021" /><published>2021-09-01T00:00:00+00:00</published><updated>2021-09-01T00:00:00+00:00</updated><id>/news/2021/09/jam-september-2021</id><content type="html" xml:base="/news/2021/09/jam-september-2021">&lt;p&gt;With our 18th collaboration, the &lt;a href=&quot;/community/jams/&quot;&gt;libGDX Jam&lt;/a&gt; continues the time honoured tradition of making awesome games using the best framework out there. We encourage camaraderie, teamwork, and good sportsmanship with a side of well-intentioned buffoonery. The general jam rules can as always be found &lt;a href=&quot;/community/jams/#rules&quot;&gt;here&lt;/a&gt;. &lt;strong&gt;To participate take a look at the official &lt;a href=&quot;https://itch.io/jam/libgdx-jam-18&quot;&gt;itch.io page of the jam&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Be sure to get involved with the community by joining the libGDX Discord server!&lt;/p&gt;
+
+&lt;!-- Courtesy of embedresponsively.com //--&gt;
+
+&lt;div class=&quot;responsive-video-container&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube-nocookie.com/embed/4P3oQdkflSw&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&quot;schedule&quot;&gt;Schedule&lt;/h2&gt;
+&lt;!--_The theme is yet to be determined._--&gt;
+&lt;p&gt;The theme is &lt;strong&gt;Zero Gravity!&lt;/strong&gt;. Good luck everybody!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Theme Submission:&lt;/strong&gt; 12th - 14th of September. Everyone will be allowed to submit a theme for the jam.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Voting:&lt;/strong&gt; 16th - 18th of September.  Everyone will vote on their favourite theme. May the best win!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Jam:&lt;/strong&gt; 19th - 25th of September. Participants will create their games and rejoice!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submissions&quot;&gt;Submissions&lt;/h2&gt;
+&lt;p&gt;The libGDX Jam September 2021 is now over! We hope everyone had a lot of fun and are proud to present the &lt;a href=&quot;https://itch.io/jam/libgdx-jam-18/entries&quot;&gt;18 submissions&lt;/a&gt;.  Don’t forget to check out our &lt;a href=&quot;https://youtu.be/pWZM0y5wsDI&quot;&gt;live-stream playthrough&lt;/a&gt; of all the games. Developer Doge has also recorded an excellent (and hilarious) video of him playing the games, which can be found &lt;a href=&quot;https://youtu.be/Al_QDQccLFM&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We’ll see you again in December!&lt;/p&gt;</content><author><name></name></author><category term="news" /><summary type="html">With our 18th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage camaraderie, teamwork, and good sportsmanship with a side of well-intentioned buffoonery. The general jam rules can as always be found here. To participate take a look at the official itch.io page of the jam.</summary></entry><entry><title type="html">Status Report #7: LWJGL 3</title><link href="/news/2021/07/devlog-7-lwjgl3" rel="alternate" type="text/html" title="Status Report #7: LWJGL 3" /><published>2021-07-24T00:00:00+00:00</published><updated>2021-07-24T00:00:00+00:00</updated><id>/news/2021/07/devlog-7-lwjgl3</id><content type="html" xml:base="/news/2021/07/devlog-7-lwjgl3">&lt;p&gt;In the next release of libGDX we are switching our default desktop backend from LWJGL 2 to LWJGL 3. This Status Report is meant to provide some background information on this change.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-lwjgl&quot;&gt;What is LWJGL?&lt;/h3&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.lwjgl.org/&quot;&gt;Lightweight Java Game Library&lt;/a&gt; (LWJGL) is an &lt;a href=&quot;https://github.com/LWJGL/lwjgl3&quot;&gt;open-source&lt;/a&gt; Java library that provides bindings to a number of C and C++ libraries used for game development, in particular OpenGL, OpenAL and Vulkan. The desktop backends of libGDX build upon LWJGL and wrap its low-level bindings in our cross-platform compatible API to provide graphics and audio.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-version-3&quot;&gt;Why version 3?&lt;/h3&gt;
+&lt;p&gt;Version 3 of LWJGL 3 was announced at the end of 2014 and had its first release on 4 June 2016. It is a complete rewrite of LWJGL, with the biggest change being the move from LWJGL2’s own windowing system to &lt;a href=&quot;https://www.glfw.org&quot;&gt;GLFW&lt;/a&gt;. The first version of libGDX’s LWJGL 3 backend was made public back &lt;a href=&quot;https://github.com/libgdx/libgdx/issues/3673&quot;&gt;in 2015&lt;/a&gt; together with a call for testing. Since then we have continually improved upon this initial release.&lt;/p&gt;
+
+&lt;p&gt;There were a couple of reasons for us to start working on a LWJGL 3 backend, the most obvious being the discontinuation of LWJGL 2, which had its last release in January of 2015. In addition, LWJGL 3 provides considerably better support for &lt;a href=&quot;https://github.com/libgdx/libgdx/issues/6426&quot;&gt;current JREs, macOS, Linux&lt;/a&gt; (including &lt;a href=&quot;/news/2020/08/devlog_1_road_ahead#linux-arm-builds&quot;&gt;Raspberry Pis&lt;/a&gt;), and &lt;a href=&quot;https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests-lwjgl3/src/com/badlogic/gdx/tests/lwjgl3/MultiWindowTest.java&quot;&gt;multi-window environments&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-can-i-migrate&quot;&gt;How can I migrate?&lt;/h3&gt;
+&lt;p&gt;To switch your existing libGDX projects to the LWJGL 3 desktop backend you need to follow two steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open your root &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; file and replace the LWJGL backend dependency:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;api &quot;com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;with the LWJGL 3 backend dependency:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;api &quot;com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;Make sure to refresh your Gradle dependencies in your IDE.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Next up, you need to fix your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DesktopLauncher&lt;/code&gt; class. It is located in your desktop project and should look something like this:&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DesktopLauncher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nc&quot;&gt;LwjglApplicationConfiguration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LwjglApplicationConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;LwjglApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyGdxGame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;Change it to this:&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DesktopLauncher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nc&quot;&gt;Lwjgl3ApplicationConfiguration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Lwjgl3ApplicationConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Lwjgl3Application&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyGdxGame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;do-i-need-to-do-anything-else&quot;&gt;Do I need to do anything else?&lt;/h3&gt;
+&lt;p&gt;If you are on Windows or Linux, you are all set!&lt;/p&gt;
+
+&lt;p&gt;However, if you are on &lt;strong&gt;macOS&lt;/strong&gt;, the LWJGL 3 backend is only working when the JVM is run with the &lt;a href=&quot;https://github.com/LWJGL/lwjgl3/blob/572f69802cb2d4930777403c73999c3e01de9d56/modules/lwjgl/glfw/src/main/java/org/lwjgl/glfw/EventLoop.java#L14-L23&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-XstartOnFirstThread&lt;/code&gt;&lt;/a&gt; argument. This ensures that your application’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main()&lt;/code&gt; method runs on the first (i.e., the AppKit) thread and will be familiar to those of you with experiences with SWT.&lt;/p&gt;
+
+&lt;p&gt;Typically, the argument can be set in the Launch/Run Configurations of your IDE, as is described &lt;a href=&quot;/dev/import-and-running/&quot;&gt;here&lt;/a&gt;. Alternatively, if you’re starting your project via Gradle, add this line to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt; task of the desktop Gradle file:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    jvmArgs = ['-XstartOnFirstThread']
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;A viable approach for &lt;em&gt;outside of your development environment&lt;/em&gt; is to just programatically restart the JVM if the argument is not present (see &lt;a href=&quot;https://github.com/crykn/guacamole/blob/master/gdx-desktop/src/main/java/de/damios/guacamole/gdx/StartOnFirstThreadHelper.java#L69&quot;&gt;here&lt;/a&gt; for a simple example). Alternatively, if you want to deploy your game by packaging a JRE with it (which is the recommended way to distribute your game), jpackage or packr allow you to set the JVM arguments.&lt;/p&gt;
+
+&lt;h3 id=&quot;are-there-any-other-things-i-need-to-be-aware-of&quot;&gt;Are there any other things I need to be aware of?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Whenever your &lt;strong&gt;application is minimised&lt;/strong&gt;, the LWJGL 3 backend calls &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ApplicationListener#resize(0, 0)&lt;/code&gt;. This can lead to unexpected issues, in particular if you are (re)building framebuffers whenever the application is resized.&lt;/li&gt;
+  &lt;li&gt;The LWJGL 3 backend does &lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6247&quot;&gt;not yet&lt;/a&gt; work with &lt;strong&gt;Swing or AWT&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;As the graphical tools in &lt;strong&gt;gdx-tools&lt;/strong&gt; require AWT, the library has a hard dependency on LWJGL 2. If you are using one of the non-graphical tools of the gdx-tools project (in particular &lt;a href=&quot;https://github.com/libgdx/libgdx/wiki/Texture-packer#from-source&quot;&gt;TexturePacker&lt;/a&gt;) and the LWJGL 3 backend &lt;em&gt;in the same (!) project&lt;/em&gt;, you need to modify your gdx-tools dependency like this:
+    &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.badlogicgames.gdx:gdx-tools:$gdxVersion&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;exclude&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;group:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.badlogicgames.gdx'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;module:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'gdx-backend-lwjgl'&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;And that was it for today’s Status Report – see you all in #8!&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="devlog" /><summary type="html">Find out everything about our LWJGL 3 desktop backend!</summary></entry><entry><title type="html">Community Showcase: colorful-gdx</title><link href="/news/2021/06/colorful-gdx" rel="alternate" type="text/html" title="Community Showcase: colorful-gdx" /><published>2021-06-05T00:00:00+00:00</published><updated>2021-06-05T00:00:00+00:00</updated><id>/news/2021/06/colorful-gdx</id><content type="html" xml:base="/news/2021/06/colorful-gdx">&lt;div class=&quot;notice--primary&quot;&gt;
+   &lt;p&gt;
+     Hey everybody! As announced a few months ago, we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. In this &lt;b&gt;Community Showcase&lt;/b&gt;, Tommy Ettinger is going to present his &lt;a href=&quot;https://github.com/tommyettinger/colorful-gdx&quot;&gt;colorful-gdx library&lt;/a&gt;!
+   &lt;/p&gt;
+   &lt;p&gt;
+     If you are interested in other cool community projects, be sure to check out the &lt;a href=&quot;https://github.com/rafaskb/awesome-libgdx#readme&quot;&gt;libGDX Awesome List&lt;/a&gt; as well. To participate in future showcases, take a look &lt;a href=&quot;https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases&quot;&gt;here&lt;/a&gt;.
+   &lt;/p&gt;
+ &lt;/div&gt;
+
+&lt;h1 id=&quot;colorful-gdx&quot;&gt;colorful-gdx&lt;/h1&gt;
+
+&lt;h2 id=&quot;what-does-it-do&quot;&gt;What does it do?&lt;/h2&gt;
+
+&lt;p&gt;With colorful-gdx, you can tint Sprites and other images with colors in different color spaces than what libGDX offers
+by default. Most importantly, this means you can use a batch color to lighten as well as darken an image, but there are
+many other features that come along with this. There’s a really wide range of operations you can do to blend or mix
+multiple colors (without creating temporary objects), edit properties of a color, and describe colors with a simple
+String syntax, if you want.&lt;/p&gt;
+
+&lt;p&gt;It doesn’t feel right to start a showcase for a very visual library without some eye candy, so here’s a visualization of
+different color spaces and their different shapes. It’s here because it looks cool and was made with this library; in
+practice you don’t need to know about this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-06-05/color_solids.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h2&gt;
+
+&lt;p&gt;There’s a few ways you can use colorful-gdx. Technically, the repo is split into two subprojects, but if you’re working
+with libGDX, you almost always want &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;colorful&lt;/code&gt;, which uses libGDX for its Color, Batch, ShaderProgram, and other
+classes. I’ll skip over installation details; the repo covers the Gradle dependency, or you could use gdx-liftoff’s
+third-party extensions to get a recent version of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;colorful&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Your first choice is, “What color space should I use?” To answer this, you need to know what a color space is. You
+already know at least one, RGBA – Color in libGDX uses it, as does almost everything on a computer screen. The other
+options are less widely-known, and some are mostly in colorful-gdx for historical reasons. Generally, the choice is
+between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rgb&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;oklab&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;With RGB, you have 3 channels, red/green/blue, plus alpha, and you can make a color lighter by raising the RGB channels
+or darker by lowering those channels. You can easily make a color more red by raising the red channel, and the same with
+green or blue. What if you want to make a color more orange? This is more of a challenge, and typically requires raising
+red and lowering blue, which can change lightness.&lt;/p&gt;
+
+&lt;p&gt;A solution for that type of issue lies in
+&lt;a href=&quot;https://bottosson.github.io/posts/oklab/&quot;&gt;Oklab, a newer color space by Björn Ottosson&lt;/a&gt;. Oklab also has 3 channels, but
+they are L, A, and B (plus alpha, which is the same as before). L is lightness, and you can change the lightness of a
+color smoothly just by increasing or decreasing L. A and B are what are called “chromatic axes,” and in our usage they
+range from 0.0 to 1.0. When A is near 0.0, the color is going to be close to green; when it is near 1.0, the color is
+going to be close to red. When B is near 0.0, the color is going to be close to blue; when it is near 1.0, the color is
+going to be close to yellow. When both A and B are close to 0.5, the color is likely to be either grayish or actually
+grayscale. As L gets closer to 0.0 or 1.0, the span of A and B shrinks, and all colors that are nearly black or nearly
+white have A and B that are close to 0.5 (meaning they’re close to grayscale colors like black and white). If you want
+to keep the lightness of a color constant while making it more orange, you would do so by raising both A (more red) and
+B (more yellow), and leaving L alone.&lt;/p&gt;
+
+&lt;p&gt;Your choice between these two color spaces (or others, if you really want) mostly boils down to whether you want to edit
+colors based on their lightness, saturation, and other qualities as single numbers (which makes Oklab an excellent
+choice), or whether you just want a simple and compatible way to make a sprite extra-bright, extra-dark,
+extra-red/green/blue, etc. and don’t want to deal with these blasted newfangled color contraptions (which is why I
+provide the RGB color space).&lt;/p&gt;
+
+&lt;p&gt;Once you have an idea of what you want, you’d either make a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SpriteBatch&lt;/code&gt; with a different &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ShaderProgram&lt;/code&gt; drawn from
+colorful’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shaders.java&lt;/code&gt;, or you’d skip that and just use the more-powerful but less-compatible &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorfulBatch&lt;/code&gt; for
+your chosen color space. Either way, you gain the ability to add to color channels as well as subtract, which lets you
+brighten and darken sprites by setting the batch color.&lt;/p&gt;
+
+&lt;h2 id=&quot;thats-all&quot;&gt;That’s all?&lt;/h2&gt;
+&lt;p&gt;Yes, almost all the library winds up as a glorified way to set and interpret the batch color. Also, no, there are lots
+of ways to get the batch color just right, or blend across frames, or analyze colors, or edit colors in different ways,
+and so on and so forth. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorfulBatch&lt;/code&gt; in particular adds extra options because it effectively has two batch colors –
+one is called the “tweak,” and multiplies a channel, while the other is the normal batch color, which is added after the
+tweak is applied. There’s a potentially-interesting feature here, too – one of the components of the tweak allows
+configuring contrast, by making mid-range values either push even closer to the middle of the range, or pull even
+further apart to make somewhat-similar colors appear different in lightness.&lt;/p&gt;
+
+&lt;p&gt;There are relatively large predefined palettes here. They store the colors as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt; (one &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt; per color, which is
+also called a “packed float color”), and those can be set in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SpriteBatch&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorfulBatch&lt;/code&gt; using the
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setPackedFloat()&lt;/code&gt; method. You can also edit colors with your chosen color space’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorTools&lt;/code&gt; class, or the shared
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FloatColors&lt;/code&gt; class. This last one handles mixing colors, which is a feature you don’t want to miss! You can also mix
+colors in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SimplePalette&lt;/code&gt; class by describing one or more colors from that palette in a String, along with
+adjustments like “light” or “richest” that change the resulting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt;. This uses Strings like “darker dull blue gray
+violet” to describe a grayish blue-purple.
+&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/description/&quot;&gt;You can preview the descriptions here&lt;/a&gt;; press the square
+bracket keys to change modes from RGB to Oklab or a comparison.&lt;/p&gt;
+
+&lt;p&gt;There’s a lot of tricks you can uncover in colorful-gdx. Many effects are possible by doing things like reducing the
+range of lightness, or colorful-ness, and then applying a change. Other effects can be cycling hues (always a fun
+psychedelic effect), raising and lowering lightness to correspond to time of day in a game, using Oklab for smooth
+blends and then converting back to RGBA, and various other useful tools.&lt;/p&gt;
+
+&lt;p&gt;Here’s an example of such a nice trick. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorfulBatch&lt;/code&gt; is a decent option for RGB, but it’s a great option for Oklab.
+Because the tweak in Oklab works differently from the tweak in RGB, you can multiply by a small value for both A and B
+to make the color grayish, or a high value to make the color especially vivid. RGB doesn’t have an option like this
+other than using a low tweak value for R, G, and B, then moving the channels where you want them with the additive
+color. That works by reducing the color to essentially black or close to it, then adding a color of your choice. Oklab
+only reduces the color to grayish, keeping the lightness, so you can add values to L, A, and B that push the color to a
+more-whatever-hue direction while maintaining or changing lightness as you want and possibly some original A and B.&lt;/p&gt;
+
+&lt;p&gt;If you’re worried about performance, this is not going to hurt anything. Using floats for colors avoids creating
+excessive garbage objects, and the shaders that handle color conversions are simple (for a GPU to execute) and
+branchless. If you’re going back and forth between a shader from colorful-gdx (or a ColorfulBatch) and some other
+shader, there will be a performance penalty based on the number of shader changes per frame, but 3D graphics in libGDX
+involves frequent shader changes, and those work just fine.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-do-i-use-it&quot;&gt;How do I use it?&lt;/h2&gt;
+
+&lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;For instructions on importing colorful into your project, &lt;a href=&quot;https://github.com/tommyettinger/colorful-gdx#how-to-obtain&quot;&gt;see here&lt;/a&gt;.
+Version 0.6.0 just released and may be a little rough in places, but it includes several fixes to 0.5.1, so you’ll
+probably want the latest version. You can ignore colorful-pure unless you want to manipulate colors server-side.&lt;/p&gt;
+
+&lt;p&gt;If you don’t want to use a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorfulBatch&lt;/code&gt;, you’ll want to take a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SpriteBatch&lt;/code&gt; (which you probably already have used)
+and set its shader to one from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shaders&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For RGB, this could look like:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;SpriteBatch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SpriteBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Shaders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;makeRGBAShader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, you could make the shader yourself, which is the only way for most of the shaders:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;SpriteBatch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SpriteBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ShaderProgram&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShaderProgram&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vertexShader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fragmentShaderRGBA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isCompiled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GdxRuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Couldn't compile shader: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setShader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For Oklab, the second of those options is the only option if you aren’t using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorfulBatch&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;SpriteBatch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SpriteBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ShaderProgram&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShaderProgram&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vertexShader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fragmentShaderOklab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isCompiled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GdxRuntimeException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Couldn't compile shader: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setShader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you are using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorfulBatch&lt;/code&gt;, then usage looks like a normal SpriteBatch for now:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Note, there are multiple ColorfulBatch classes in different packages.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// You use the com.github.tommyettinger.colorful.rgb package for RGB.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// You use the com.github.tommyettinger.colorful.oklab package for Oklab.&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ColorfulBatch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ColorfulBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;tinting&quot;&gt;Tinting&lt;/h3&gt;
+&lt;p&gt;Once you have your Batch, you can set a color on it right away with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setPackedColor(float)&lt;/code&gt;. As mentioned earlier,
+colorful-gdx almost always stores colors as “packed” floats in colorful-gdx, and many are predefined in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Palette&lt;/code&gt; and/or
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SimplePalette&lt;/code&gt; in your color space’s package. There’s no need to use the specific colors in Palette and SimplePalette
+in your game, and to be honest, some names in Palette are pretty bad. Give me a break, I had to name 256 of them! 
+SimplePalette has simpler names, as one might expect, all of them one word. You can browse the colors on colorful-gdx’s
+(bare-bones) web pages:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableOklab.html&quot;&gt;Palette, by name, Oklab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableHueOklab.html&quot;&gt;Palette, by hue, Oklab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableValueOklab.html&quot;&gt;Palette, by lightness, Oklab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableRGB.html&quot;&gt;Palette, by name, RGB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableHueRGB.html&quot;&gt;Palette, by hue, RGB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableValueRGB.html&quot;&gt;Palette, by lightness, RGB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleOklab.html&quot;&gt;SimplePalette, by name, Oklab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableHueSimpleOklab.html&quot;&gt;SimplePalette, by hue, Oklab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableValueSimpleOklab.html&quot;&gt;SimplePalette, by lightness, Oklab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableSimpleRGB.html&quot;&gt;SimplePalette, by name, RGB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableHueSimpleRGB.html&quot;&gt;SimplePalette, by hue, RGB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tommyettinger.github.io/colorful-gdx/ColorTableValueSimpleRGB.html&quot;&gt;SimplePalette, by lightness, RGB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Oklab pages show the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;L&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; channel values for each color, while the RGB pages already have their
+channels displayed in the RGBA8888 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hex code&lt;/code&gt; column, and don’t repeat that info. Both show &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hue&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Saturation&lt;/code&gt; as
+columns, but RGB also shows &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lightness&lt;/code&gt;, while Oklab already showed that in its &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;L&lt;/code&gt; column. Alternatively, you can do
+what I do:  look at the pretty colors, then copy a name when I’ve found one I like (I really like the “by hue” pages
+for this).&lt;/p&gt;
+
+&lt;p&gt;Tinting with one of these predefined colors is easy:&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setPackedColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Palette&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;DEEP_PURPLE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This sets the tint to a very dark, bold purple, which darkens the shown Textures and makes them much more purple in hue.&lt;/p&gt;
+
+&lt;p&gt;If you didn’t specify a tint, that’s the same as using the neutral color
+for your color space, which is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Palette.GRAY&lt;/code&gt; for both the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rgb&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;oklab&lt;/code&gt; color spaces. The neutral color causes no
+change to the original colors in Textures you draw. In libGDX normally, the neutral color is white. Like in a normal
+libGDX SpriteBatch, if you use a darker color than the neutral color, then the shown Textures get darker. Unlike in a
+normal libGDX SpriteBatch, there are colors that are lighter than the neutral color – there are colors like
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Palette.LIGHT_GRAY&lt;/code&gt; here, but nothing can be lighter than white. If you set the batch color to a lighter color, then
+the shown textures will be lighter. There’s a scale here of grayscale colors (the colors in the “Palette, by hue” pages
+above have them between Black and White), and all grayscale colors don’t affect the hue or saturation of Textures. This
+is a key detail; colors that aren’t exactly grayscale, but are still grayish, will have less effect on hue and
+saturation than very saturated, vivid colors. Using vibrant colors will mean very strong, possibly-overpowering tints,
+and all levels of saturation can be useful for something. If you want to take an already-saturated Texture and
+desaturate it, then you need something more than what SpriteBatch can provide; it will take ColorfulBatch and &lt;em&gt;one whole
+extra line&lt;/em&gt; of code. It is time to master… the twerk. I mean, tweak.
+&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6080&quot;&gt;It’s an easy typo!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tweaking&quot;&gt;Tweaking&lt;/h3&gt;
+&lt;p&gt;Here, things get more advanced; the rabbit hole goes deeper, and your colorful talents become far more powerful.
+It is true that setting the tweak on a ColorfulBatch is just one line:&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;colorfulBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTweak&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.65f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;In an Oklab ColorfulBatch, this has the effect of making colors much less saturated (but not fully black-and-white), and
+slightly increasing the lightness contrast between mid-lightness colors. If you ran that with an RGB ColorfulBatch…
+well, the contrast would still increase, but blue and green would be mostly removed, making an image in shades of red.
+You may want to avoid using the RGB ColorfulBatch tweak heavily, or only use it for its contrast (the last parameter).
+In both RGB and Oklab, 0.5 is the neutral value for all tweak channels. This is different from the neutral color, which
+is either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(0.5f, 0.5f, 0.5f, 1f)&lt;/code&gt; for RGB or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(0.63f, 0.5f, 0.5f, 1f)&lt;/code&gt; for Oklab (both are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Palette.GRAY&lt;/code&gt;). The tweak
+channels are a little different from the color channels. Instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;red, green, blue, alpha&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;L, A, B, alpha&lt;/code&gt;,
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alpha&lt;/code&gt; is replaced with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contrast&lt;/code&gt;, and instead of the other channels (RGB or LAB) adding to the Texture color, they
+are multiplied. Because RGB and Oklab are pretty different in several areas, I’ll go over them one at a time, but since
+contrast is the same for both, that comes first.&lt;/p&gt;
+
+&lt;h3 id=&quot;contrast&quot;&gt;Contrast&lt;/h3&gt;
+&lt;p&gt;In tweaks, you don’t really need extra changes to alpha, so the fourth parameter to a tweak value sets its contrast. The
+contrast is neutral at 0.5, sharpens lightness contrast above 0.5, and fades away lightness contrast below 0.5. Fading
+isn’t especially obvious, but sharpening can be a nice way to highlight specific elements. Because the neutral value for
+tweaks is different from the neutral value for colors, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorfulBatch&lt;/code&gt; defines the constant &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TWEAK_RESET&lt;/code&gt; for the
+tweak’s neutral value. If you used a color for a tweak value, you’d see maximum contrast, because colors have 1.0 alpha
+and that would become the starkest contrast if used in the tweak.&lt;/p&gt;
+
+&lt;h3 id=&quot;rgb&quot;&gt;RGB&lt;/h3&gt;
+&lt;p&gt;Using a value larger than 0.5 for one of a tweak’s RGB channels (let’s call that value &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tweak_channel&lt;/code&gt;) will magnify
+that channel, effectively multiplying the channel in the texture by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2f * tweak_channel&lt;/code&gt;. Using a value smaller than 0.5
+for one of a tweak’s RGB channels does the same thing, but because &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2f * tweak_channel&lt;/code&gt; is less than 1, it will shrink
+that channel, bringing all values in the Texture closer to 0 in that channel. You usually need to make use of the tweak
+and color together in an RGB ColorfulBatch if you use the tweak at all. For instance, you can bring all colors closer to
+medium-lightness by using a tweak of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(0.3f, 0.3f, 0.3f, 0.5f)&lt;/code&gt; and a color of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(0.7f, 0.7f, 0.7f, 1f)&lt;/code&gt;. In steps, the
+tweak first makes the RGB channels shrink in range from 0 through 1 to 0 through 0.6, because the tweak channels are
+multiplied by 2 and then by the Texture colors. Then, the color is added in; because &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.7f&lt;/code&gt; is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.2f&lt;/code&gt; more than the
+neutral value for RGB, this adds &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.2f&lt;/code&gt; to the RGB channels. This takes the range from 0 through 0.6, where we left off,
+to 0.2 through 0.8. This eliminates pure black and pure white, squishing all colors into a middle-lightness area.&lt;/p&gt;
+
+&lt;h3 id=&quot;oklab&quot;&gt;Oklab&lt;/h3&gt;
+&lt;p&gt;Oklab is a little different, and at this point, a visual aid is in order.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-06-05/oklab.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This animation shows the Oklab “gamut,” or the range of colors that can be correctly represented without clipping.
+The first frame is at 0 lightness, and is a single point of black (that doesn’t render). As the animation goes on, the
+lightness goes up, and you can start to see that while the very center is still grayish, the edges are more colorful.
+As the animation ends, lightness approaches 1 (white), and all the colors are forced closer to grayscale again. The x
+axis is the A channel, and the y axis is the B channel. If you start in the center and go to the right, you get more of
+a red color. If you instead go to the left, more green (well, cyan). If you go up, more yellow, and if you go down, more
+blue. &lt;strong&gt;When you use the tweak in Oklab&lt;/strong&gt;, the tweak can still magnify or shrink A and B, but it does so relative to the
+center (grayscale), rather than black like in RGB. This is what makes Oklab’s tweak more useful; not only is lightness
+simple to adjust with just one channel (L), colorful-ness is simple to adjust by using the same change for the A and B
+channels. Adjusting L isn’t centered like A and B are; if you increase L on the tweak, it will make lightness range
+higher but no lower, and if you decrease it, the lightest colors become unavailable. The color can be useful with any
+kind of reduced range, moving L so a range like 0.0 through 0.4 is raised up to 0.3 to 0.7. That’s possible with an L
+tweak value of 0.93, because 0.93 is higher than the neutral value for Oklab’s lightness (0.63) by 0.3.&lt;/p&gt;
+
+&lt;p&gt;Before, I gave an example that desaturates colors and increases contrast. How about some other options?&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// This lightens significantly and increases saturation slightly.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Colors that get too light lose colorful-ness, so the saturation boost helps keep things vibrant.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;colorfulBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTweak&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.7f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.6f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.6f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// This darkens slightly, increases saturation sharply, and also lowers contrast significantly.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// This is somewhat of a dizzying-fog effect, and combined with changing batch colors, it can be a &quot;bad trip&quot; effect.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;colorfulBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTweak&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.4f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.8f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.8f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.3f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// This is a fire effect that changes over time.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// First we set the tweak to reduce lightness range slightly and reduce the range of A (green-to-red) heavily.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;colorfulBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTweak&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.45f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.3f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Then, we set the color to raise lightness back up a little (with the reduced range, this removes the darkest levels).&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// This also sharply pushes A over toward red, away from green or cyan. With its reduced range, cyan won't appear.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// B changes over time, but I didn't actually test this code, and it isn't optimal even if it works. Use your favorite&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 1D noise implementation here in place of the sin and cos and you'll get better results. B only changes between 0.5&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// and 0.9 here, but that can change the &quot;fire&quot; from red to orange to yellow. Alpha is the normal 1f.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;colorfulBatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.6f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.8f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;MathUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MathUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;TimeUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;millis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.002f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MathUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;PI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.7f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The last example changes the tweaks for A and B separately, which helps refine the changes it makes to the result.&lt;/p&gt;
+
+&lt;h2 id=&quot;color-manipulation&quot;&gt;Color Manipulation&lt;/h2&gt;
+&lt;p&gt;There’s a lot to say here, and I’ll have to skip a fair amount. Poke around ColorTools and you’ll find some interesting
+methods, hopefully.&lt;/p&gt;
+
+&lt;h3 id=&quot;float-color-dissection&quot;&gt;Float Color Dissection&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorTools&lt;/code&gt; class in each color space has a lot of methods for pulling apart float colors and getting specific
+information. This can be simple, like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorTools.red()&lt;/code&gt; in the RGB or Oklab color spaces (it gets the red channel value
+or computes it for Oklab). This can also be less-simple, like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorTools.hue()&lt;/code&gt;, which has to do a big conversion to
+get the HSL-format hue (but you can see those hues in the RGB palettes linked above). Most of these methods are
+straightforward to use. Some do require some explanation, like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ColorTools.chroma()&lt;/code&gt; in Oklab, which gets how colorful
+a color is &lt;em&gt;absolutely&lt;/em&gt;, rather than how saturation is &lt;em&gt;relative&lt;/em&gt; to the highest possible saturation at that hue and
+lightness. Two colors with the same chroma should be pretty much equally far from gray.&lt;/p&gt;
+
+&lt;h3 id=&quot;editing-colors&quot;&gt;Editing Colors&lt;/h3&gt;
+&lt;p&gt;There are methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editRGB()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editOklab()&lt;/code&gt; in the corresponding color space packages, which can be a good
+choice if you want to make many changes at once. Otherwise, straightforward single-purpose methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lighten()&lt;/code&gt;,
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darken()&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enrich()&lt;/code&gt; (which raises colorfulness), &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dullen()&lt;/code&gt; (which lowers colorfulness), and specific methods for
+the color space may do what you want. There are also options to request colors by HSL values, with two variants of those
+in Oklab plus another that uses “HCL” (using absolute chroma instead of relative saturation). Some editing methods
+mention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;limitToGamut()&lt;/code&gt; in their JavaDocs; this takes any colors that may have been edited out of a valid range, and
+brings them back into the valid range, typically keeping their lightness, but changing their saturation.&lt;/p&gt;
+
+&lt;h3 id=&quot;color-mixing&quot;&gt;Color Mixing&lt;/h3&gt;
+&lt;p&gt;The good stuff. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FloatColors&lt;/code&gt; (not in a color space package) has the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lerpFloatColors()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mix()&lt;/code&gt; methods, which
+combine two or more colors. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lerpFloatColors()&lt;/code&gt; allows you to specify how much the second color should affect the first,
+such as 0.5 for an even mix, 0.25 to favor the first color, or 0.75 to favor the second color. While &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mix()&lt;/code&gt; doesn’t
+have a way to set the degree of bias toward one color or another, it can mix more than two colors, all as an even mix.
+Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lerpFloatColors()&lt;/code&gt; with changing values for its last parameter (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;change&lt;/code&gt;) leads to smooth blends, which can be
+used for gradients or changes over time. That’s what Beatrix used for this slick effect:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ojBUypw.gif&quot; alt=&quot;Pretty Triangle!&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;future-directions&quot;&gt;Future Directions&lt;/h2&gt;
+
+&lt;p&gt;I’d like to have some more features for creating gradients. I’m also fairly sure something else will come up.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It was no longer shining out; it was pouring out; and as the shapeless stream of unplaceable colour left the well, it seemed to flow directly into the sky.
+— &lt;em&gt;The Colour Out of Space&lt;/em&gt;, H.P. Lovecraft&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;colorful-gdx is an open source project and contributions and ideas are welcome! …Also, bug reports are welcome.&lt;/p&gt;</content><author><name></name></author><category term="news" /><summary type="html">Tommy Ettinger presents his colorful-gdx library in our Community Showcase!</summary></entry><entry><title type="html">libGDX Jam June 2021</title><link href="/news/2021/06/jam-june-2021" rel="alternate" type="text/html" title="libGDX Jam June 2021" /><published>2021-06-02T00:00:00+00:00</published><updated>2021-06-02T00:00:00+00:00</updated><id>/news/2021/06/jam-june-2021</id><content type="html" xml:base="/news/2021/06/jam-june-2021">&lt;p&gt;With our 17th collaboration, the &lt;a href=&quot;/community/jams/&quot;&gt;libGDX Jam&lt;/a&gt; continues the time honoured tradition of making awesome games using the best framework out there. We encourage camaraderie, teamwork, and good sportsmanship with a side of well-intentioned buffoonery. The general jam rules can as always be found &lt;a href=&quot;/community/jams/#rules&quot;&gt;here&lt;/a&gt;. &lt;strong&gt;To participate take a look at the official &lt;a href=&quot;https://itch.io/jam/libgdx-jam-17&quot;&gt;itch.io page of the jam&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Be sure to get involved with the community by joining the libGDX Discord server!&lt;/p&gt;
+
+&lt;!-- Courtesy of embedresponsively.com //--&gt;
+
+&lt;div class=&quot;responsive-video-container&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube-nocookie.com/embed/cCFxSFZEud0&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&quot;schedule&quot;&gt;Schedule&lt;/h2&gt;
+&lt;!-- _The theme is yet to be determined._ --&gt;
+&lt;p&gt;The theme is &lt;strong&gt;Balls&lt;/strong&gt;. Good luck everybody!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Theme Submission:&lt;/strong&gt; 13th - 15th of June. Everyone will be allowed to submit a theme for the jam.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Voting:&lt;/strong&gt; 16th - 18st of June.  Everyone will vote on their favourite theme. May the best win!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Jam:&lt;/strong&gt; 20nd - 26th of June. Participants will create their games and rejoice!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submissions&quot;&gt;Submissions&lt;/h2&gt;
+&lt;p&gt;The libGDX Jam June 2021 is now over! We hope everyone had a lot of fun and are proud to present the &lt;a href=&quot;https://itch.io/jam/libgdx-jam-17/entries&quot;&gt;14 submissions&lt;/a&gt;. &lt;!-- Don't forget to check out our [video review](https://www.youtube.com/watch?v=YjhCCyCywNQ) as well. --&gt;&lt;/p&gt;</content><author><name></name></author><category term="news" /><summary type="html">With our 17th collaboration, the libGDX Jam continues the time honoured tradition of making awesome games using the best framework out there. We encourage camaraderie, teamwork, and good sportsmanship with a side of well-intentioned buffoonery. The general jam rules can as always be found here. To participate take a look at the official itch.io page of the jam.</summary></entry><entry><title type="html">Community Showcase: Shape Drawer</title><link href="/news/2021/05/shape-drawer" rel="alternate" type="text/html" title="Community Showcase: Shape Drawer" /><published>2021-05-17T00:00:00+00:00</published><updated>2021-05-17T00:00:00+00:00</updated><id>/news/2021/05/shape-drawer</id><content type="html" xml:base="/news/2021/05/shape-drawer">&lt;div class=&quot;notice--primary&quot;&gt;
+   &lt;p&gt;
+     Hey everybody! As announced a few months ago, we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. In this &lt;b&gt;Community Showcase&lt;/b&gt;, Early Grey is going to present their &lt;a href=&quot;https://github.com/earlygrey/shapedrawer&quot;&gt;Shape Drawer library&lt;/a&gt;!
+   &lt;/p&gt;
+   &lt;p&gt;
+     If you are interested in other cool community projects, be sure to check out the &lt;a href=&quot;https://github.com/rafaskb/awesome-libgdx#readme&quot;&gt;libGDX Awesome List&lt;/a&gt; as well. To participate in future showcases, take a look &lt;a href=&quot;https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases&quot;&gt;here&lt;/a&gt;.
+   &lt;/p&gt;
+ &lt;/div&gt;
+
+&lt;h1 id=&quot;shape-drawer&quot;&gt;Shape Drawer&lt;/h1&gt;
+
+&lt;h2 id=&quot;what-does-it-do&quot;&gt;What does it do?&lt;/h2&gt;
+
+&lt;p&gt;Shape drawer draws 2D shapes, such as lines and polygons, using a Batch. It solves the age old problem of “how do I draw a line in libGDX?”. Well ok, actually you could use ShapeRenderer, but as we’ll see later that’s not really the best solution. It’s essentially a fancy wrapper around a Batch: you tell it what to draw (eg a hexagon) and it calculates the geometry required to stretch a texture region into various shapes, and uses the Batch to draw them.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h2&gt;
+
+&lt;p&gt;Shape Drawer draws using a Batch, so let’s start at the beginning - how does a Batch work? There are already some pretty good explanations in the context of libGDX in the wiki (see &lt;a href=&quot;https://github.com/libgdx/libgdx/wiki/Spritebatch%2C-Textureregions%2C-and-Sprites&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/libgdx/libgdx/wiki/Shaders&quot;&gt;here&lt;/a&gt;), so we’ll just illustrate it with a quick example.&lt;/p&gt;
+
+&lt;p&gt;Let’s say we want to draw a picture of a &lt;a href=&quot;https://duckduckgo.com/?t=canonical&amp;amp;q=pretty+flower&amp;amp;iax=images&amp;amp;ia=images&quot;&gt;pretty flower&lt;/a&gt; with a SpriteBatch. We tell the Batch where we want to draw it, how big, and give it the texture by calling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;batch#draw&lt;/code&gt;. The batch then splits that rectangular image into two triangles, and sends the triangle vertices to the graphics card, along with the texture you want to stretch over the triangles and some colours (eg the colour we set with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;batch#setColor&lt;/code&gt;). On the graphics card, a shader program figures out which pixels on the screen are contained in each triangle and what colour each should be based on the texture and the colours we gave it, and then outputs that to the screen.&lt;/p&gt;
+
+&lt;p&gt;Since with Shape Drawer we want to use a Batch to draw our shapes, we need to give it something it can digest - triangles, a texture and some colours. This is really all that Shape Drawer does - you tell it what you want to draw (eg a bunch of lines), and it breaks the shape down into a bunch of triangles and gives it to a Batch with some colour information. And since we (usually) only care about having a single colour for each shape, we usually just give Shape Drawer a single white pixel TextureRegion to make things easier.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-why-would-i-use-it&quot;&gt;But why would I use it?&lt;/h2&gt;
+&lt;p&gt;There are two main reasons: performance and quality. The performance benefit comes from reducing the frequency of sending batches of data to the graphics card (caching data so it can be “flushed” all at once is actually the raison d’être of a Batch, hence the name). Sending data to the graphics card actually has some pretty heavy overhead, so anything that allows us to reduce the frequency can usually give us some pretty good gains. Any time we do anything like change texture data or change the shader, we have to flush all stashed our vertex data to the graphics card, and this is what Shape Drawer tries to avoid. The quality part has to do with all the extra features Shape Drawer has, such as bevelling line corners and being able to draw paths without overlapping at the corners (important if you’re drawing a transparent colour), and consistency across different hardware.&lt;/p&gt;
+
+&lt;p&gt;Actually since we already know we want to draw some shapes, maybe the real question is “why would I use Shape Drawer instead of Shape Renderer?”. Well ok then, how does Shape Renderer work? As we said before, Shape Drawer subdivides shapes into triangles and draws those using a batch. Shape Renderer does the same thing for filled shapes, but for lines and points it  directly uses the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lines&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;points&lt;/code&gt; modes of openGL. This is actually easier (for Shape Renderer), but comes with some downsides. First, openGL lines and points are not consistently implemented by hardware - for example you can’t guarantee that your lines will be wider than 1px wide on every platform (imagine your game draws 4px lines on desktop but only 1px lines on HTML - embarrassing!). Second, every time you change shape type (eg from line to filled) you need to flush your data.   Third, using openGL lines gives you no ability to bevel corners or prevent line segments from drawing over each other where they join, resulting in layered colours when using blending. Last and most importantly, every time you use Shape Renderer you need to stop and flush any active Batch, then flush the Shape Renderer after using it.&lt;/p&gt;
+
+&lt;p&gt;The last point is probably the most important. Since typically for a 2D game in libGDX you’ll be using a batch to do most of your drawing, if you start trying to mix in Shape Renderer calls, you’re going to increase the number of times you flush data to the graphics card, and this can result in considerable performance losses. Using a Batch to draw fits very naturally with Scene2D, since you can have you actors do whatever they want with shape drawer without having to worry about when and how often you’re stopping and starting the batch.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-do-i-use-it&quot;&gt;How do I use it?&lt;/h2&gt;
+
+&lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;For instructions on importing shape drawer into your project, &lt;a href=&quot;https://github.com/earlygrey/shapedrawer#including-in-project&quot;&gt;see here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To create a ShapeDrawer instance you need to provide a Batch and a TextureRegion. I recommend putting a single white pixel region into your texture atlas to minimise batch flushes.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;ShapeDrawer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;drawer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShapeDrawer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;region&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;drawer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Internally, Shape Drawer keeps track of how large a screen pixel appears to be in world units, and uses this to do things like estimate how many sides are required to draw a smooth circle or decide when to automatically bevel path corners. You can set this manually via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ShapeDrawer#setPixelSize&lt;/code&gt;, or you can call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ShapeDrawer#update&lt;/code&gt; and it will calculate it from the batch projection matrix. Typically, your update method would look something like this:&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setProjectionMatrix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;combined&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;drawer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;drawing&quot;&gt;Drawing&lt;/h3&gt;
+&lt;p&gt;Drawing shapes is done much in the same way as with Shape Renderer, eg you just call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drawer.circle(...)&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drawer.line(...)&lt;/code&gt;, though there are a few small differences:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Instead of switching between filled or outlined shapes via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;renderer.begin(ShapeType.Filled)&lt;/code&gt;, you just call different methods, eg &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drawer.filledCircle(...)&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There is no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;line&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rectLine&lt;/code&gt; as with Shape Renderer - all Shape Drawer lines are the equivalent of rectLines.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Since circles are just polygons with enough sides to make it look smooth, you cannot specify the number of sides for a circle - use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ShapeDrawer#polygon&lt;/code&gt; instead.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;extra-features&quot;&gt;Extra Features&lt;/h2&gt;
+
+&lt;h3 id=&quot;corner-bevelling&quot;&gt;Corner Bevelling&lt;/h3&gt;
+
+&lt;p&gt;When calling methods that draw multiple lines which share an endpoint, for example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;polygon&lt;/code&gt;, it’s possible to bevel the ends of the line so that thick lines fit together nicely and do not have any gaps at the joints, and transparent lines do not draw over each other.&lt;/p&gt;
+
+&lt;p&gt;Shape Drawer gives two options for this - “pointy” and “smooth” - as well no join type.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;No Join&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Pointy Join&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Smooth Join&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-17/none.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-17/pointy.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-17/smooth.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;You can specify the join type when calling the method, eg &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path(points, JoinType.SMOOTH)&lt;/code&gt;. If you don’t specify, Shape Drawer will guess if it’s needed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isJoinNecessary()&lt;/code&gt; (you can also override this method if it’s not working out for you), using smooth joins for paths and pointy joins for polygons.&lt;/p&gt;
+
+&lt;h3 id=&quot;pixel-snapping&quot;&gt;Pixel Snapping&lt;/h3&gt;
+
+&lt;p&gt;Sometimes when drawing lines, especially when individual pixels are noticeable (such as when drawing to a lower resolution frame buffer that will be upscaled later), it’s important that the centres of the pixels you want drawn are contained within the line, because openGL will only draw a pixel if the centre point of that pixel falls within a triangle.&lt;/p&gt;
+
+&lt;p&gt;For example, if you’re trying to draw a 1px width horizontal line, the centres of pixels might lie exactly on the edges of your line. Since positions are represented with floating point numbers, you might get either a 2px width line, or no line at all. Shape Drawer has an option (default off) to snap the endpoints of lines to the nearest pixel centre points, which ensures you’ll always get the 1px line you want. It also lengthens the line a tiny bit, to make sure the pixels containing the endpoints are drawn. Since line endpoints tend to be given whole numbers, this problem is quite common.&lt;/p&gt;
+
+&lt;h2 id=&quot;future-directions&quot;&gt;Future Directions&lt;/h2&gt;
+
+&lt;p&gt;There’s currently a feature where you can record what you’re doing with shape drawer, and it will be saved into a Drawing object, which you can later draw via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drawing.draw()&lt;/code&gt;. This has some performance benefit for complex shapes like long bevelled paths, but would be more useful if you could do things like copy it and apply linear transformations like translation, rotation and scaling. So for example you could create a drawing, then pass it around to different objects (like scene2D.ui elements), who could draw it with their own position/rotation/colour.&lt;/p&gt;
+
+&lt;p&gt;Another idea that’s been floated a few times is the ability to draw textures over the shapes. So you could draw any arbitrary shape (or combinations) and repeat a texture over it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For God’s sake, please give it up. Fear it no less than the sensual passion, because it, too, may take up all your time and deprive you of your health, peace of mind and happiness in life.
+— Farkas Bolyai&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Shape Drawer is an open source project and contributions and ideas are welcome!&lt;/p&gt;</content><author><name></name></author><category term="news" /><summary type="html">Early Grey presents their Shape Drawer library in our Community Showcase!</summary></entry><entry><title type="html">Community Showcase: PieMenu</title><link href="/news/2021/04/pie-menu" rel="alternate" type="text/html" title="Community Showcase: PieMenu" /><published>2021-04-24T00:00:00+00:00</published><updated>2021-04-24T00:00:00+00:00</updated><id>/news/2021/04/pie-menu</id><content type="html" xml:base="/news/2021/04/pie-menu">&lt;div class=&quot;notice--primary&quot;&gt;
+   &lt;p&gt;
+     Hey everybody! As announced a few months ago, we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. In this &lt;b&gt;Community Showcase&lt;/b&gt;, payne is going to present his &lt;a href=&quot;https://github.com/payne911/PieMenu#readme&quot;&gt;PieMenu library&lt;/a&gt;!
+   &lt;/p&gt;
+   &lt;p&gt;
+     If you are interested in other cool community projects, be sure to check out the &lt;a href=&quot;https://github.com/rafaskb/awesome-libgdx#readme&quot;&gt;libGDX Awesome List&lt;/a&gt; as well. To participate in future showcases, take a look &lt;a href=&quot;https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases&quot;&gt;here&lt;/a&gt;.
+   &lt;/p&gt;
+ &lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-24/logo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/payne911/PieMenu/&quot;&gt;PieMenu&lt;/a&gt; is a library which aims at providing Scene2D users with a circular &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WidgetGroup&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RadialGroup&lt;/code&gt; class is a simple container that places its children &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actors&lt;/code&gt; in a circular fashion.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PieMenu&lt;/code&gt; class wraps a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RadialGroup&lt;/code&gt; with a bunch of functionalities that allow assigning callback functions to listeners on the highlight and selection of items within the Group.&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;em&gt;In terms of User Interface and User Experience, circular context menus “are faster and more reliable to select from than linear menus, because selection depends on direction instead of distance” (&lt;a href=&quot;https://en.wikipedia.org/wiki/Pie_menu#Comparison_with_other_interaction_techniques&quot;&gt;Wikipedia source&lt;/a&gt;). If you enjoy nerdy stuff, you might be interested in reading a bit about &lt;a href=&quot;https://en.wikipedia.org/wiki/Fitts%27s_law#Implications_for_UI_design&quot;&gt;Fitts’s Law&lt;/a&gt; since it is what backs up this claim.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;online-demo&quot;&gt;Online demo&lt;/h3&gt;
+&lt;p&gt;If you are not entirely sold on the idea just yet, you can sweeten your teeth on the online demo I’ve set up just for you. It should allow you to quickly get a taste of what you’d be getting yourself into.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://payne911.github.io/PieMenu/&quot;&gt;Click here&lt;/a&gt;: it’s fresh out of the oven! 😍&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-24/website_demo.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
+&lt;p&gt;Essentially, the basic recipe to cook your own PieMenu looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* Setting up and creating the widget. */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;PieMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;PieMenuStyle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PieMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;PieMenuStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sliceColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &quot;style&quot; variables affect the way the widget looks&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;PieMenu&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PieMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;skin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRegion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &quot;white&quot; would be a 1x1 white pixel&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* Adding a listener. */&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;changed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ChangeEvent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Actor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The selected index is: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSelectedIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* Populating the widget. */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;PIE_SLICES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;PIE_SLICES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Label&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addActor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* Including the widget in the Stage. */&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addActor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;menu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;documentation&quot;&gt;Documentation&lt;/h4&gt;
+&lt;p&gt;The library is very well documented: it provides extensive JavaDoc, along with a detailed &lt;a href=&quot;https://github.com/payne911/PieMenu/wiki#table-of-contents&quot;&gt;Wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some of the key articles you might be interested in reading are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/payne911/PieMenu/wiki/Integrating-this-library&quot;&gt;How to import the library&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/payne911/PieMenu/wiki/Examples&quot;&gt;Complete recipes&lt;/a&gt;: many use-cases and examples (each with a GIF, description, and associated code).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/payne911/PieMenu/wiki/Customizing-the-widget&quot;&gt;Understanding how to customize&lt;/a&gt; your widget’s look and behavior.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-24/documentation_infographic.png&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+&lt;p&gt;Time to show off some GIFs!&lt;/p&gt;
+
+&lt;h4 id=&quot;games&quot;&gt;Games&lt;/h4&gt;
+&lt;p&gt;Here are some recordings that were kindly provided by the developers of some games which are using PieMenu:&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;em&gt;&lt;a href=&quot;https://store.steampowered.com/app/1290750/Transfinite_Dungeon/&quot;&gt;Transfinite Dungeon&lt;/a&gt;, by icefill&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-24/games/TransfiniteDungeon_icefill.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;em&gt;&lt;a href=&quot;https://donpommelo.itch.io/hadal-calm&quot;&gt;Hadal Calm&lt;/a&gt;, by donpommelo&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-24/games/HadalCalm_donpommelo.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;em&gt;&lt;a href=&quot;https://lurkers.io/&quot;&gt;lurkers.io&lt;/a&gt;, by bergice&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-24/games/Lurkers_bergice.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;animated-menus&quot;&gt;Animated menus&lt;/h4&gt;
+&lt;p&gt;When it comes to animated menus, you can get some pretty spicy stuff going on:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-24/custom_animation.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is &lt;a href=&quot;https://github.com/payne911/PieMenu/wiki/Animated-widget&quot;&gt;a whole section of the Wiki&lt;/a&gt; dedicated to those.&lt;/p&gt;
+
+&lt;h3 id=&quot;development-status&quot;&gt;Development Status&lt;/h3&gt;
+&lt;p&gt;PieMenu is mature enough to be considered a production-ready library.&lt;/p&gt;
+
+&lt;p&gt;I do not actively work toward supporting more features anymore, but I will keep maintaining it so if you ever find a bug please do create an &lt;a href=&quot;https://github.com/payne911/PieMenu/issues&quot;&gt;issue&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in contributing to the project, feel free to visit &lt;a href=&quot;https://github.com/payne911/PieMenu/wiki/Contributing&quot;&gt;the corresponding Wiki page&lt;/a&gt;. I would love to see new chefs in the cuisine!&lt;/p&gt;
+
+&lt;h3 id=&quot;final-words&quot;&gt;Final words&lt;/h3&gt;
+&lt;p&gt;I baked this project with a lot of love. 💖&lt;/p&gt;
+
+&lt;p&gt;Feel free to give &lt;a href=&quot;https://github.com/payne911/PieMenu/&quot;&gt;the repository&lt;/a&gt; a star ⭐ : it’s one of the special ingredients that keeps grandma happy and helps with the project’s visibility!&lt;/p&gt;
+
+&lt;p&gt;… but above all: don’t forget to brush your teeth before going to bed!&lt;/p&gt;</content><author><name></name></author><category term="news" /><summary type="html">payne presents his PieMenu library in our Community Showcase!</summary></entry><entry><title type="html">The Ultimate Migration Guide (1.9.10 to 1.10.0)</title><link href="/news/2021/04/the-ultimate-migration-guide" rel="alternate" type="text/html" title="The Ultimate Migration Guide (1.9.10 to 1.10.0)" /><published>2021-04-18T00:00:00+00:00</published><updated>2021-04-18T00:00:00+00:00</updated><id>/news/2021/04/the-ultimate-migration-guide</id><content type="html" xml:base="/news/2021/04/the-ultimate-migration-guide">&lt;p&gt;We know that a lot of you are still stuck on older versions of libGDX. The following post is intended to make porting your games easier by summarising all the breaking changes that happened in the last two years. If you are looking for the past changelogs themselves, check out &lt;a href=&quot;/news/changelog/&quot;&gt;this&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p class=&quot;notice--warning&quot;&gt;First things first: be sure to bring the versions of gradle, any plugins and your dependencies &lt;a href=&quot;https://libgdx.com/dev/versions/&quot;&gt;up to date&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;android&quot;&gt;Android&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;[1.9.12]&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gdx.files.external&lt;/code&gt; &lt;strong&gt;on Android now uses an app’s external storage directory. See this &lt;a href=&quot;https://github.com/libgdx/libgdx/wiki/File-handling#android&quot;&gt;wiki article&lt;/a&gt; for more information.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[1.10.0] Android ARMv5 (armeabi) support has been dropped. Remove any dependency with the&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;natives-armeabi&lt;/code&gt; &lt;strong&gt;qualifier (but not&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;natives-armeabi-v7a&lt;/code&gt;&lt;strong&gt;!) from your gradle build files. This applies to gdx-platform, gdx-bullet-platform, gdx-freetype-platform and gdx-box2d-platform.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;controllers&quot;&gt;Controllers&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Since version 1.9.13, &lt;a href=&quot;https://github.com/libgdx/gdx-controllers&quot;&gt;gdx-controllers&lt;/a&gt; now uses its own versioning scheme, the latest version being&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.2.0&lt;/code&gt;&lt;strong&gt;. Find out more in the corresponding &lt;a href=&quot;https://github.com/libgdx/gdx-controllers/wiki/Migrate-from-v1&quot;&gt;migration guide&lt;/a&gt;.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;graphics&quot;&gt;Graphics&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[1.9.11] DefaultTextureBinder &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WEIGHTED&lt;/code&gt; strategy was replaced by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LRU&lt;/code&gt; strategy (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/5942&quot;&gt;#5942&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;[1.9.11] ShaderProgram begin and end methods are deprecated in favour of the bind method (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/5944&quot;&gt;#5944&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;[1.9.14] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AnimationDesc#update&lt;/code&gt; now returns &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code&gt; (instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;) if an animation is not finished (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6303&quot;&gt;#6303&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;headless&quot;&gt;Headless&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[1.9.14] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HeadlessApplicationConfiguration#renderInterval&lt;/code&gt; was changed to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#updatesPerSecond&lt;/code&gt;; so, for example, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;16.6F&lt;/code&gt; should become &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1000 / 16.6 = 60&lt;/code&gt; (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6306&quot;&gt;#6306&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;input&quot;&gt;Input&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[1.9.11] Removed &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TextField#ENTER_ANDROID&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENTER_DESKTOP&lt;/code&gt; in favour of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NEWLINE&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CARRIAGE_RETURN&lt;/code&gt;. Changed the visibility of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BULLET&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DELETE&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TAB&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BACKSPACE&lt;/code&gt; to protected.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[1.9.12]&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputProcessor#scrolled&lt;/code&gt; &lt;strong&gt;now receives two (!) float (!) values:&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amountX&lt;/code&gt;&lt;strong&gt;, for left and right, and&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amountY&lt;/code&gt; &lt;strong&gt;, for up and down (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6154&quot;&gt;#6154&lt;/a&gt;).&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputEvent&lt;/code&gt; &lt;strong&gt;was changed accordingly. To match the old behaviour use the&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amountY&lt;/code&gt; &lt;strong&gt;argument.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[1.9.13] The keycodes for&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESCAPE&lt;/code&gt;&lt;strong&gt;,&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;END&lt;/code&gt;&lt;strong&gt;,&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INSERT&lt;/code&gt; &lt;strong&gt;and&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;F1&lt;/code&gt; &lt;strong&gt;to&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;F12&lt;/code&gt; &lt;strong&gt;were changed. If you saved those values, for example in config files, you need to migrate (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6299#issuecomment-739154036&quot;&gt;#6299&lt;/a&gt;).&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;[1.9.13] Input Keycodes added: CAPS_LOCK, PAUSE (aka Break), PRINT_SCREEN, SCROLL_LOCK, F13 to F24, NUMPAD_DIVIDE, NUMPAD_MULTIPLY, NUMPAD_SUBTRACT, NUMPAD_ADD, NUMPAD_DOT, NUMPAD_COMMA, NUMPAD_ENTER, NUMPAD_EQUALS, NUMPAD_LEFT_PAREN, NUMPAD_RIGHT_PAREN, NUM_LOCK. This means that there is now a difference between: Keys.STAR and Keys.NUMPAD_MULTIPLY, Keys.SLASH and Keys.NUMPAD_DIVIDE, Keys.NUM and Keys.NUM_LOCK, Keys.COMMA and Keys.NUMPAD_COMMA, Keys.PERIOD and Keys.NUMPAD_DOT, Keys.ENTER and Keys.NUMPAD_ENTER, Keys.PLUS and Keys.NUMPAD_ADD, Keys.MINUS and Keys.NUMPAD_SUBTRACT.&lt;/li&gt;
+  &lt;li&gt;[1.9.14] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputEventQueue&lt;/code&gt; no longer implements &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputProcessor&lt;/code&gt;. To preserve old behaviour pass an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputProcessor&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#drain&lt;/code&gt;. (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6357&quot;&gt;#6357&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ios&quot;&gt;iOS&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;[1.9.12+] The handling of HDPI (or Retina, as Apple likes to call it) was adapted to match the implementations on the other platforms (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/3709&quot;&gt;#3709&lt;/a&gt;). This means that the iOS backend now reports logical (e.g., 414x 896) and hardware/physical resolutions (e.g., 1242x2688) in the same way the four other backends already do: the former via&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getWidth()&lt;/code&gt;&lt;strong&gt;/&lt;/strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getHeight()&lt;/code&gt; &lt;strong&gt;and the latter via&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getBackBufferWidth()&lt;/code&gt;&lt;strong&gt;/&lt;/strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getBackBufferHeight()&lt;/code&gt;&lt;strong&gt;. If you want to keep the old behaviour, just set&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IOSApplicationConfiguration#hdpiMode&lt;/code&gt; &lt;strong&gt;to&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HdpiMode.Pixels&lt;/code&gt;&lt;strong&gt;. Otherwise, use a viewport or replace any calls to&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getWidth()&lt;/code&gt;&lt;strong&gt;, etc. with&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getBackBufferWidth()&lt;/code&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[1.9.12] The iOS MOE backend was removed in favour of the &lt;a href=&quot;https://github.com/MobiVM/robovm&quot;&gt;RoboVM&lt;/a&gt; one.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;[1.9.14] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IOSUIViewController&lt;/code&gt; has been moved to its own separate class (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6336&quot;&gt;#6336&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lwjgl-3&quot;&gt;LWJGL 3&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[1.10.0] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lwjgl3WindowConfiguration#autoIconify&lt;/code&gt; is enabled by default (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6422&quot;&gt;#6422&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;math&quot;&gt;Math&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[1.9.11] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Matrix3#setToRotation(Vector3, float float)&lt;/code&gt; now rotates counter-clockwise about the axis provided. This also changes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Matrix3#setToRotation(Vector3, float)&lt;/code&gt; and the 3D particles will rotate counter-clockwise as well.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[1.9.12]&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vector2#angleRad(Vector2)&lt;/code&gt; &lt;strong&gt;now correctly returns counter-clockwise angles (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/5428&quot;&gt;#5428&lt;/a&gt;).&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;miscellaneous&quot;&gt;Miscellaneous&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[1.9.11] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Base64Coder#encodeString()&lt;/code&gt; uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UTF-8&lt;/code&gt; instead of the platform default encoding (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6061&quot;&gt;#6061&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;[1.9.11] Changed &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TiledMapTileLayer#tileWidth&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#tileHeight&lt;/code&gt; from float to int.&lt;/li&gt;
+  &lt;li&gt;[1.9.13] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TextureAtlas.AtlasRegion&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Region&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;splits&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pads&lt;/code&gt; fields have been removed and moved to name/value pairs. Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#findValue(&quot;split&quot;)&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#findValue(&quot;pad&quot;)&lt;/code&gt; instead (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6316&quot;&gt;#6316&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[1.10.0] The JCenter repository is shutting down. To update your libGDX Gradle projects, open the main&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; &lt;strong&gt;file in your project and in both of the two&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repositories {}&lt;/code&gt; &lt;strong&gt;sections replace&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcenter()&lt;/code&gt; &lt;strong&gt;with&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gradlePluginPortal()&lt;/code&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;[1.10.0] &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scaling&lt;/code&gt; is now an object instead of an enum. This may change behaviour when used with serialisation.&lt;/li&gt;
+  &lt;li&gt;[1.10.0]&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Group#clear()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#clearChildren()&lt;/code&gt; now unfocus the children. Added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clear(boolean)&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clearChildren(boolean)&lt;/code&gt; for when this isn’t wanted. Code that overrides &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clear()&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clearChildren()&lt;/code&gt; probably should change to override its counterpart taking a boolean parameter (&lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6423&quot;&gt;#6423&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;common-issues&quot;&gt;Common issues&lt;/h1&gt;
+&lt;p&gt;The following are some of the more common issues when upgrading from previous versions of libGDX:&lt;/p&gt;
+
+&lt;h3 id=&quot;1-abstractmethoderror-regarding-glgetactiveattrib&quot;&gt;1. AbstractMethodError regarding glGetActiveAttrib&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Exception in thread &quot;main&quot; com.badlogic.gdx.utils.GdxRuntimeException: java.lang.AbstractMethodError:
+com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20.glGetActiveAttrib(IILjava/nio/IntBuffer;Ljava/nio/IntBuffer;)Ljava/lang/String;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The method signatures for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GL20#glGetActiveUniform&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#glGetActiveAttrib&lt;/code&gt; were changed in 1.9.11. This leads to issues if some of your libraries are pulling in older or later versions of libGDX as transitive dependencies. To fix this, you need to find the third-party dependency that is responsible for this. Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./gradlew desktop:dependencies&lt;/code&gt; on the command line to debug that.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-ios-app-uses-only-a-quarter-of-the-screen&quot;&gt;2. iOS app uses only a quarter of the screen&lt;/h3&gt;
+&lt;p&gt;If you are wondering why your iOS app is displayed in the lower left corner and is using only half of the screen’s width and height, you should take a look at the &lt;a href=&quot;#ios&quot;&gt;iOS section above&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-could-not-resolve-gretty-dependency&quot;&gt;3. Could not resolve Gretty dependency&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; Task :html:beforeRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':html:beforeRun'.
+&amp;gt; Could not resolve all files for configuration ':html:grettyRunnerJetty94'.
+   &amp;gt; Could not find org.gretty:gretty-runner-jetty94:3.0.2.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The Gretty dependency could not be resolved, because the corresponding repository is missing. Open the main &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; file in your project and in both of the two &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repositories {}&lt;/code&gt; sections add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gradlePluginPortal()&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><category term="news" /><summary type="html">This guide summarises what you need to do to update your game from libGDX 1.9.10 to 1.10.0.</summary></entry><entry><title type="html">libGDX 1.10.0</title><link href="/news/2021/04/gdx-1-10" rel="alternate" type="text/html" title="libGDX 1.10.0" /><published>2021-04-18T00:00:00+00:00</published><updated>2021-04-18T00:00:00+00:00</updated><id>/news/2021/04/gdx-1-10</id><content type="html" xml:base="/news/2021/04/gdx-1-10">&lt;p class=&quot;notice--primary no-top-margin&quot;&gt;If you are looking for past changelogs, check out &lt;a href=&quot;/news/changelog/&quot;&gt;this&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;It has been over five years since the release of 1.9.0, the last major version of libGDX. That doesn’t mean that libGDX did not change over the last years – in fact, it has quite a lot – but we weren’t always as strict about our versioning as we should have been. We already promised to improve on that, but today we want to fulfill our promise and are proud to present to you version 1.10.0 of libGDX!&lt;/p&gt;
+
+&lt;p&gt;By and large, version 1.10.0 doesn’t include any shining new features, but it provides a clean cut from the past 1.9.x releases and contains a few &lt;strong&gt;breaking changes&lt;/strong&gt;. So let’s dive right in and take a look at those.&lt;/p&gt;
+
+&lt;h3 id=&quot;natives&quot;&gt;Natives&lt;/h3&gt;
+&lt;p&gt;A few weeks ago, &lt;a href=&quot;https://twitter.com/badlogicgames&quot;&gt;Mario&lt;/a&gt; (our benevolent ex-dictator) briefly came back from his retirement to migrate our whole build setup to GitHub Actions. While we have already been using GitHub Actions as our CI service, up until now the natives as well as the snapshot releases were built via a self-hosted Jenkins instance. This was prone to failures and hard to maintain. As a result of this migration, building is now a lot more convenient and reproducible, which will help us keep everything up to date and allows others to take a look &lt;a href=&quot;https://github.com/libgdx/libgdx/blob/master/.github/workflows/build-snapshot.yml&quot;&gt;behind the scenes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the course of this update, we also changed some of the platforms, for which our natives are built:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Android ARMv5 (armeabi)&lt;/strong&gt; support has been removed, as it hasn’t been compatible with the Android NDK since June 2018. To migrate your projects remove any dependency with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;natives-armeabi&lt;/code&gt; qualifier (but not &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;natives-armeabi-v7a&lt;/code&gt;!) from your gradle build file. This applies to gdx-platform, gdx-bullet-platform, gdx-freetype-platform and gdx-box2d-platform.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;tvOS&lt;/strong&gt; libraries have been removed, since at the moment you &lt;a href=&quot;https://github.com/MobiVM/robovm/issues/181&quot;&gt;can’t target it with MobiVM&lt;/a&gt; anyway. No migration steps required.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Linux x86 (32-bit)&lt;/strong&gt; support has been removed. No migration steps required.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Linux ARM and AARCH64&lt;/strong&gt; support has been added. No migration steps required.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;java-7&quot;&gt;Java 7&lt;/h3&gt;
+&lt;p&gt;libGDX now requires Java 7. The only exception is the LWJGL 3 subproject, which requires Java 8. See &lt;a href=&quot;https://github.com/libgdx/libgdx/pull/5839&quot;&gt;#5839&lt;/a&gt; for more information. Please note that this has no effect on the &lt;em&gt;maximum&lt;/em&gt; Java version that is supported by a platform!&lt;/p&gt;
+
+&lt;h3 id=&quot;jcenter-is-shutting-down&quot;&gt;JCenter is shutting down&lt;/h3&gt;
+&lt;p&gt;At the end of last month, the JCenter repository stopped accepting new submissions. This is the first step of &lt;a href=&quot;https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/&quot;&gt;sunsetting the repository&lt;/a&gt; and in February 2022 JCenter will stop serving any packages. This means that projects depending on this repo need to migrate. To update your libGDX Gradle projects, open the main &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; file in your project and in both of the two &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repositories {}&lt;/code&gt; sections replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcenter()&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gradlePluginPortal()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-breaking-changes&quot;&gt;Other breaking changes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scaling&lt;/code&gt; is now an object instead of an enum. This may change behaviour when used with serialisation.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Group#clear()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#clearChildren()&lt;/code&gt; now unfocus the children. Added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clear(boolean)&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clearChildren(boolean)&lt;/code&gt; for when this isn’t wanted. Code that overrides &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clear()&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clearChildren()&lt;/code&gt; probably should change to override its counterpart taking a boolean parameter. See &lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6423&quot;&gt;#6423&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lwjgl3WindowConfiguration#autoIconify&lt;/code&gt; is enabled by default. See &lt;a href=&quot;https://github.com/libgdx/libgdx/pull/6422&quot;&gt;#6422&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For those of you that are still stuck on older versions of libGDX, we have compiled a list of &lt;a href=&quot;/news/2021/04/the-ultimate-migration-guide&quot;&gt;all breaking changes from 1.9.10 to 1.10.0&lt;/a&gt;. This should make it easier to upgrade all in one go.&lt;/p&gt;
+
+&lt;h3 id=&quot;full-changelog&quot;&gt;Full changelog&lt;/h3&gt;
+&lt;p class=&quot;notice--info&quot;&gt;The latest version of dependencies can, as always, be found &lt;a href=&quot;/dev/versions/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- [BREAKING CHANGE] Android armeabi support has been removed.
+- [BREAKING CHANGE] tvOS libraries have been removed. No migration steps required.
+- [BREAKING CHANGE] Linux x86 (32-bit) support has been removed. No migration steps required.
+- [BREAKING CHANGE] Requires Java 7 or above.
+- [BREAKING CHANGE] API Change: Scaling is now an object instead of an enum. This may change behavior when used with serialization.
+- [BREAKING CHANGE] Group#clear() and #clearChildren() now unfocus the children. Added clear(boolean) and clearChildren(boolean) for when this isn't wanted. Code that overrides clear()/clearChildren() probably should change to override the (boolean) method. #6423
+- [BREAKING CHANGE] Lwjgl3WindowConfiguration#autoIconify is enabled by default.
+- Architecture support: Linux ARM and AARCH64 support has been added. The gdx-xxx-natives.jar files now contain native libraries of these architectures as well.
+- Scene2d.ui: Added new ParticleEffectActor to use particle effects on Stage
+- API addition: iOS: Added HdpiMode option to IOSApplicationConfiguration to allow users to set whether they want to work in logical or raw pixels (default logical).
+- Fix for #6377 Gdx.net.openURI not working with targetSdk 30
+- API Addition: Added a Pool#discard(T) method.
+- API Addition: Desktop Sound now returns number of channels and sample rate.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="news" /><category term="changelog" /><summary type="html">After over five years, we are proud to present a new major release of libGDX: version 1.10.0!</summary></entry><entry><title type="html">Community Showcase: Typing Label</title><link href="/news/2021/04/typing-label" rel="alternate" type="text/html" title="Community Showcase: Typing Label" /><published>2021-04-03T00:00:00+00:00</published><updated>2021-04-03T00:00:00+00:00</updated><id>/news/2021/04/typing-label</id><content type="html" xml:base="/news/2021/04/typing-label">&lt;div class=&quot;notice--primary&quot;&gt;
+   &lt;p&gt;
+     Hey everybody! As announced a few months ago, we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. In this &lt;b&gt;Community Showcase&lt;/b&gt;, Rafa Skoberg is going to present his &lt;a href=&quot;https://github.com/rafaskb/typing-label#readme&quot;&gt;Typing Label library&lt;/a&gt;!
+   &lt;/p&gt;
+   &lt;p&gt;
+     If you are interested in other cool community projects, be sure to check out the &lt;a href=&quot;https://github.com/rafaskb/awesome-libgdx#readme&quot;&gt;libGDX Awesome List&lt;/a&gt; as well. To participate in future showcases, take a look &lt;a href=&quot;https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases&quot;&gt;here&lt;/a&gt;.
+   &lt;/p&gt;
+ &lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-03/logo.png&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Have you ever wanted to create RPG-like dialogues where the text appears letter by letter? Perhaps play sounds as glyphs are rendered? How about injecting variables inside your dialogues, such as the character’s name chosen by the player? Or even fire and listen to events placed in the middle of sentences, and shake the screen when that happens?&lt;/p&gt;
+
+&lt;p&gt;Enter &lt;a href=&quot;https://github.com/rafaskb/typing-label#readme&quot;&gt;Typing Label&lt;/a&gt;, a Scene2D Label that appears as if it was being typed in real time. 😁&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-03/sample.gif&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;magic-tricks&quot;&gt;Magic Tricks&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rafaskb/typing-label/wiki/Tokens&quot;&gt;Tokens&lt;/a&gt; are the heart of Typing Label, and they define how your text will behave. Here are some examples of tokens that modify the appearance of a label:&lt;/p&gt;
+
+&lt;figure class=&quot;half &quot;&gt;
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-ease.gif&quot; title=&quot;Ease Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-ease.gif&quot; alt=&quot;Ease Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-hang.gif&quot; title=&quot;Hang Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-hang.gif&quot; alt=&quot;Hang Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-jump.gif&quot; title=&quot;Jump Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-jump.gif&quot; alt=&quot;Jump Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-shake.gif&quot; title=&quot;Shake Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-shake.gif&quot; alt=&quot;Shake Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-sick.gif&quot; title=&quot;Sick Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-sick.gif&quot; alt=&quot;Sick Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-slide.gif&quot; title=&quot;Slide Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-slide.gif&quot; alt=&quot;Slide Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-wave.gif&quot; title=&quot;Wave Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-wave.gif&quot; alt=&quot;Wave Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-wind.gif&quot; title=&quot;Wind Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-wind.gif&quot; alt=&quot;Wind Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-fade.gif&quot; title=&quot;Fade Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-fade.gif&quot; alt=&quot;Fade Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-blink.gif&quot; title=&quot;Blink Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-blink.gif&quot; alt=&quot;Blink Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-gradient.gif&quot; title=&quot;Gradient Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-gradient.gif&quot; alt=&quot;Gradient Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+    
+      &lt;a href=&quot;/assets/images/posts/2021-04-03/effect-rainbow.gif&quot; title=&quot;Rainbow Token&quot;&gt;
+          &lt;img src=&quot;/assets/images/posts/2021-04-03/effect-rainbow.gif&quot; alt=&quot;Rainbow Token&quot; /&gt;
+      &lt;/a&gt;
+    
+  
+  
+&lt;/figure&gt;
+
+&lt;p&gt;It’s really simple to apply tokens to your text, check it out:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Create some text with tokens&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;{JUMP}{COLOR=GREEN}Hello,{WAIT} world!{ENDJUMP}&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;\n{COLOR=ORANGE}{SLOWER} Did you know {WAVE}orange{ENDWAVE}&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot; is my {SLIDE}favorite{ENDSLIDE} color?&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a TypingLabel instance with your custom text&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;TypingLabel&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TypingLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Add the actor to any widget like you normally would&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can also use variable and event tokens for some pretty advanced stuff. Lets say the player can name their cat in your game, and in a certain dialogue you want to say its name and play a meow sound. Here’s how that would work:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Create some text with tokens&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Every time {COLOR=IMPORTANT}{VAR=CatName}{RESET} wants some milk &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;{VAR=CatPronoum1} meows uncontrollably.{EVENT=Meow}{WAIT=1}&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+    &lt;span class=&quot;s&quot;&gt;&quot;{SLOWER} Yep, just like that... 😻&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a TypingLabel instance with your custom text&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;TypingLabel&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TypingLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Assign variables to replace {VAR} tokens&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setVariable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;CatName&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Daisy Purrington&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setVariable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;CatPronoum1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;she&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Add the actor to any widget like you normally would&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a TypingListener or TypingAdapter to listen to events as they're fired&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTypingListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TypingAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;event&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Meow&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equalsIgnoreCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;Sound&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;meowSound&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getMeowSoundSomehow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;meowSound&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;em&gt;More examples and the complete token list can be found in the &lt;a href=&quot;https://github.com/rafaskb/typing-label/wiki/Examples#using-tokens&quot;&gt;Typing Label’s wiki&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;real-life-example&quot;&gt;Real Life Example&lt;/h3&gt;
+
+&lt;p&gt;Typing Label was originally created in 2016 for a libGDX game called &lt;a href=&quot;http://grashers.com/&quot;&gt;Grashers&lt;/a&gt;, and then transformed into an open source library so other developers could use its features in their games.&lt;/p&gt;
+
+&lt;p&gt;Here’s an example of the library being used in the game while using several tokens, variables, and listeners:&lt;/p&gt;
+
+&lt;!-- Courtesy of embedresponsively.com //--&gt;
+
+&lt;div class=&quot;responsive-video-container&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube-nocookie.com/embed/UafQrXP_tE8&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;p&gt;To achieve this sort of effect, I use a code similar to this one:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
+ * Constants
+ */&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/** Default TypingLabel token used in all dialogue labels. */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;DIALOGUE_DEFAULT_TOKEN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;{EASE=1;1}{FADE=0;1;0.1}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/** Character's name. This would be defined by the player in a real scenario. */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CHAR_NAME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Stella&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/*
+ * Label
+ */&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Create dialogue label&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;TypingLabel&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dialogLabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TypingLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dialogLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDefaultToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;DIALOGUE_DEFAULT_TOKEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dialogLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setVariable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PLAYER&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CHAR_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Play mumble sound every time a character is typed&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dialogLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTypingListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TypingAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onChar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Character&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Each character has their own sounds here&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Sound&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reallyShortMumbleSound&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getRandomMumbleSound&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;reallyShortMumbleSound&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/*
+ * Dialogue Texts
+ */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dialogueTexts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;Thanks for coming, uh... {VAR=PLAYER}. {SHAKE}{COLOR=WHISPER}*cough* *cough*&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;s&quot;&gt;&quot;{SICK}Sorry, don't get too close.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;s&quot;&gt;&quot;There's a {COLOR=IMPORTANT}really weird stink{CLEARCOLOR} comin' from somewhere in here. And sometimes there's these, like {JUMP}\&quot;bum-BUMP\&quot;{ENDJUMP} noises.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;s&quot;&gt;&quot;{SLOWER}It's the {COLOR=IMPORTANT}physical manifestation of the darkness within men's hearts.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;s&quot;&gt;&quot;{COLOR=WHISPER}*bleep*&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;installing&quot;&gt;Installing&lt;/h3&gt;
+&lt;p&gt;Typing Label works as a drop-in replacement for normal Scene2D Labels, so getting it to work is really simple. All you have to do is add Typing Label to your Gradle dependencies and that’s it! You can find the instructions in the &lt;a href=&quot;https://github.com/rafaskb/typing-label#installation&quot;&gt;repository’s README&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;development-status&quot;&gt;Development Status&lt;/h3&gt;
+&lt;p&gt;I consider Typing Label to be in a mature state. It’s been tested by many developers over the years, and thankfully it has proven to be very stable. The library is compatible with the most recent libGDX version, and should continue to be as future updates are released as well.&lt;/p&gt;
+
+&lt;p&gt;That being said, there are no major changes or additions planned for Typing Label right now, however improvements and additions are always welcome! 💜&lt;/p&gt;
+
+&lt;h3 id=&quot;external-references&quot;&gt;External References&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rafaskb/typing-label#readme&quot;&gt;GitHub page and readme&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rafaskb/typing-label/wiki/Tokens&quot;&gt;Tokens&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rafaskb/typing-label/wiki/Tokens#combining-effects&quot;&gt;Combining effects&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rafaskb/typing-label/wiki/Tokens#custom-effects&quot;&gt;Create your own effects!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="news" /><summary type="html">Rafa Skoberg presents his Typing Label library in our Community Showcase!</summary></entry><entry><title type="html">Community Showcase: GDX Gameanalytics</title><link href="/news/2021/03/gdx-ga" rel="alternate" type="text/html" title="Community Showcase: GDX Gameanalytics" /><published>2021-03-15T00:00:00+00:00</published><updated>2021-03-15T00:00:00+00:00</updated><id>/news/2021/03/gdx-ga</id><content type="html" xml:base="/news/2021/03/gdx-ga">&lt;div class=&quot;notice--primary&quot;&gt;
+  &lt;p&gt;
+    Hey everybody! As announced a few weeks ago we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. In this &lt;b&gt;Community Showcase&lt;/b&gt;, MrStahlfelge is going to present his &lt;a href=&quot;https://github.com/MrStahlfelge/gdx-gameanalytics&quot;&gt;gdx-gameanalytics library&lt;/a&gt;!
+  &lt;/p&gt;
+  &lt;p&gt;
+    If you are interested in other cool community projects, be sure to check out the &lt;a href=&quot;https://github.com/rafaskb/awesome-libgdx#readme&quot;&gt;libGDX Awesome List&lt;/a&gt; as well. To participate in future showcases, take a look &lt;a href=&quot;https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases&quot;&gt;here&lt;/a&gt;.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-03-15/header.png&quot; alt=&quot;&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;gdx-gameanalytics is a library that enables you to see metrics and crash reports with a single service for all platforms covered by libgdx.
+It is GDPR-compliant and respects your player’s privacy, but will give you important insights how your game is doing. See here what it can do and why you should integrate it.&lt;/p&gt;
+
+&lt;p&gt;When my game first launched on Google Play, I was able to see the installation count and crash reports. But what I missed were some more insights: How long do the players play my game? Which setting options and input types do they use? How is the overall retention, how many of the users that played the game for the first time play it again the next day and the day after?&lt;/p&gt;
+
+&lt;p&gt;It was even worse on the other platforms: On iOS, crash reporting does not give you any information about the Java stack you need. On Amazon App Store, there isn’t even a crash reporting available. HTML5 versions published on itch or GameJolt don’t have an installation count, so you really don’t have an idea if players keep on playing the game or just try it for a single time.&lt;/p&gt;
+
+&lt;p&gt;An analytics service was needed, but I discarded the well-known Firebase Analytics powered by Google for many reasons: You need to integrate their SDK for every platform, which makes a lot of hassle on HTML5 and iOS due to the way libGDX works on these platforms. Moreover, their SDK is closed source and will leverage every information it can get its hands on about your users. In my opinion, Google already knows enough about all of us, and to be GDPR-conform you have to ask your users for consent to use Firebase Analytics.&lt;/p&gt;
+
+&lt;p&gt;Searching for an analytics service that can get fed without using an SDK, but only with some REST requests (which are easy to do cross-platform with libGDX), I came across &lt;a href=&quot;https://gameanalytics.com/docs/s/learning-path-overview&quot;&gt;Game Analytics&lt;/a&gt; and had a match. Although they really want to sell you to use their platform SDKs (which I am sure will send them all information they can get), the service also provides a well-hidden REST API to use and I implemented gdx-gameanalytics so every libGDX game can use this API!&lt;/p&gt;
+
+&lt;p&gt;While compared to Firebase, the analytics dashboards are not as sophisticated, they fulfill the task. Some of the missing information is due to the fact that your users really are anonymous: There is no gender or age information available from the information that is sent, and in my opinion that is a good thing.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-whats-to-do-to-get-your-analytics-running&quot;&gt;So what’s to do to get your analytics running?&lt;/h3&gt;
+
+&lt;p&gt;First, best is to watch the introduction video and read the &lt;a href=&quot;https://gameanalytics.com/docs/s/learning-path-overview&quot;&gt;GA documentation&lt;/a&gt; about the core concepts of analytics.&lt;/p&gt;
+
+&lt;!-- Courtesy of embedresponsively.com //--&gt;
+
+&lt;div class=&quot;responsive-video-container&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube-nocookie.com/embed/3kPK_O6Q4wA&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;p&gt;Second, set up a free account on gameanalytics and your game. GameAnalytics recommends to set up an own game entry for every platform. This is not needed, just use a single entry and use their filter feature if you need platform-dependant analysis.&lt;/p&gt;
+
+&lt;p&gt;Third, integrate gdx-gameanalytics into your game according to the readme. It is only a bunch of lines to add to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create()&lt;/code&gt; method, and you’ll have your core metrics up and running. If you are in need of crash reporting, activate it by adding another single line for the JVM platforms.&lt;/p&gt;
+
+&lt;p&gt;When that is done, you should think about sending some custom metrics. The most important metrics to add are progression events and design events.&lt;/p&gt;
+
+&lt;p&gt;You should sent progression events when a player started, completed or failed a level (or chapter or game mode, depending on your type of game). This way, you can see which ones were played the most, and which ones are not completed.&lt;/p&gt;
+
+&lt;p&gt;Design events are completely free to define. I use the design events to see what option settings my players are using, or if the device they are using is touch-capable or not.&lt;/p&gt;
+
+&lt;div style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;
+      &lt;!-- https://jekyllcodex.org/without-plugin/slider/ --&gt;
+
+
+
+&lt;div class=&quot;carousel__holder&quot;&gt;
+    &lt;div class=&quot;carousel&quot;&gt;
+        
+          &lt;input class=&quot;carousel__activator&quot; type=&quot;radio&quot; name=&quot;carousel&quot; id=&quot;a&quot; checked=&quot;checked&quot; /&gt;
+        
+          &lt;input class=&quot;carousel__activator&quot; type=&quot;radio&quot; name=&quot;carousel&quot; id=&quot;b&quot; /&gt;
+        
+          &lt;input class=&quot;carousel__activator&quot; type=&quot;radio&quot; name=&quot;carousel&quot; id=&quot;c&quot; /&gt;
+        
+          &lt;input class=&quot;carousel__activator&quot; type=&quot;radio&quot; name=&quot;carousel&quot; id=&quot;d&quot; /&gt;
+        
+        
+          
+          
+          
+          
+          &lt;div class=&quot;carousel__controls&quot;&gt;
+              &lt;label class=&quot;carousel__control carousel__control--backward&quot; for=&quot;d&quot;&gt;&lt;/label&gt;
+              &lt;label class=&quot;carousel__control carousel__control--forward&quot; for=&quot;b&quot;&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        
+          
+          
+          
+          
+          &lt;div class=&quot;carousel__controls&quot;&gt;
+              &lt;label class=&quot;carousel__control carousel__control--backward&quot; for=&quot;a&quot;&gt;&lt;/label&gt;
+              &lt;label class=&quot;carousel__control carousel__control--forward&quot; for=&quot;c&quot;&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        
+          
+          
+          
+          
+          &lt;div class=&quot;carousel__controls&quot;&gt;
+              &lt;label class=&quot;carousel__control carousel__control--backward&quot; for=&quot;b&quot;&gt;&lt;/label&gt;
+              &lt;label class=&quot;carousel__control carousel__control--forward&quot; for=&quot;d&quot;&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        
+          
+          
+          
+          
+          &lt;div class=&quot;carousel__controls&quot;&gt;
+              &lt;label class=&quot;carousel__control carousel__control--backward&quot; for=&quot;c&quot;&gt;&lt;/label&gt;
+              &lt;label class=&quot;carousel__control carousel__control--forward&quot; for=&quot;a&quot;&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        
+        &lt;div class=&quot;carousel__track&quot;&gt;
+          &lt;ul&gt;
+            
+             &lt;li class=&quot;carousel__slide&quot; style=&quot;background-image: url('/assets/images/posts/2021-03-15/retention.png');&quot;&gt;
+               
+             &lt;/li&gt;
+
+            
+             &lt;li class=&quot;carousel__slide&quot; style=&quot;background-image: url('/assets/images/posts/2021-03-15/progression.png');&quot;&gt;
+               
+             &lt;/li&gt;
+
+            
+             &lt;li class=&quot;carousel__slide&quot; style=&quot;background-image: url('/assets/images/posts/2021-03-15/designevent.png');&quot;&gt;
+               
+             &lt;/li&gt;
+
+            
+             &lt;li class=&quot;carousel__slide&quot; style=&quot;background-image: url('/assets/images/posts/2021-03-15/crash.png');&quot;&gt;
+               
+             &lt;/li&gt;
+
+            
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;carousel__indicators&quot;&gt;
+            
+              &lt;label class=&quot;carousel__indicator&quot; for=&quot;a&quot;&gt;&lt;/label&gt;
+            
+              &lt;label class=&quot;carousel__indicator&quot; for=&quot;b&quot;&gt;&lt;/label&gt;
+            
+              &lt;label class=&quot;carousel__indicator&quot; for=&quot;c&quot;&gt;&lt;/label&gt;
+            
+              &lt;label class=&quot;carousel__indicator&quot; for=&quot;d&quot;&gt;&lt;/label&gt;
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.carousel__holder {width: 100%; position: relative; padding-bottom: 50%; margin: 1rem 0 1rem;}
+.carousel {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  padding: 0;
+}
+.carousel__controls,
+.carousel__activator {
+  display: none;
+}
+
+.carousel__activator:nth-of-type(1):checked ~ .carousel__track {
+  -webkit-transform: translateX(-000%);
+          transform: translateX(-000%);
+}
+.carousel__activator:nth-of-type(1):checked ~ .carousel__slide:nth-of-type(1) {
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+@media (prefers-reduced-motion) {
+  .carousel__activator:nth-of-type(1):checked ~ .carousel__slide:nth-of-type(1) {
+    transition: none;
+  }
+}
+.carousel__activator:nth-of-type(1):checked ~ .carousel__controls:nth-of-type(1) {
+  display: block;
+  opacity: 1;
+}
+.carousel__activator:nth-of-type(1):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(1) {
+  opacity: 1;
+}
+
+.carousel__activator:nth-of-type(2):checked ~ .carousel__track {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.carousel__activator:nth-of-type(2):checked ~ .carousel__slide:nth-of-type(2) {
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+@media (prefers-reduced-motion) {
+  .carousel__activator:nth-of-type(2):checked ~ .carousel__slide:nth-of-type(2) {
+    transition: none;
+  }
+}
+.carousel__activator:nth-of-type(2):checked ~ .carousel__controls:nth-of-type(2) {
+  display: block;
+  opacity: 1;
+}
+.carousel__activator:nth-of-type(2):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(2) {
+  opacity: 1;
+}
+
+.carousel__activator:nth-of-type(3):checked ~ .carousel__track {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+.carousel__activator:nth-of-type(3):checked ~ .carousel__slide:nth-of-type(3) {
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+@media (prefers-reduced-motion) {
+  .carousel__activator:nth-of-type(3):checked ~ .carousel__slide:nth-of-type(3) {
+    transition: none;
+  }
+}
+.carousel__activator:nth-of-type(3):checked ~ .carousel__controls:nth-of-type(3) {
+  display: block;
+  opacity: 1;
+}
+.carousel__activator:nth-of-type(3):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(3) {
+  opacity: 1;
+}
+
+.carousel__activator:nth-of-type(4):checked ~ .carousel__track {
+  -webkit-transform: translateX(-300%);
+          transform: translateX(-300%);
+}
+.carousel__activator:nth-of-type(4):checked ~ .carousel__slide:nth-of-type(4) {
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+@media (prefers-reduced-motion) {
+  .carousel__activator:nth-of-type(4):checked ~ .carousel__slide:nth-of-type(4) {
+    transition: none;
+  }
+}
+.carousel__activator:nth-of-type(4):checked ~ .carousel__controls:nth-of-type(4) {
+  display: block;
+  opacity: 1;
+}
+.carousel__activator:nth-of-type(4):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(4) {
+  opacity: 1;
+}
+
+
+.overlay-fade-content:hover {
+  opacity: 1;
+  background-color: rgba(255,255,255,0.4);
+  transition: all 0.25s ease-in;
+}
+
+.overlay-fade-content {
+  opacity: 0;
+  background-color: rgba(255,255,255,0);
+}
+
+.overlay-fade-content a {
+    box-sizing: border-box;
+    text-decoration: none;
+    display: block;
+    color: #eeeeee;
+    background-color: #ff3b05;
+    border-radius: 3px;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    height: 60px;
+    line-height: 25px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.carousel__control {
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  top: 50%;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color:  #373737 ;
+  opacity: 0.35;
+  opacity: 1;
+  outline: 0;
+  z-index: 3;
+}
+.carousel__control:hover {
+  opacity: 1;
+}
+.carousel__control--backward {
+  left: 20px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+.carousel__control--forward {
+  right: 20px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.carousel__indicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.carousel__indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  display: inline-block;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.35;
+  margin: 0 2.5px 0 2.5px;
+}
+.carousel__indicator:hover {
+  opacity: 0.75;
+}
+.carousel__track {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+.carousel__track .carousel__slide {
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.carousel__track .carousel__slide:nth-of-type(1) {
+  -webkit-transform: translateX(000%);
+          transform: translateX(000%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(2) {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(3) {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(4) {
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
+}
+
+
+.carousel__slide {
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+}
+.carousel__slide .overlay {height: 100%;}
+.carousel--thumb .carousel__indicator {
+  height: 30px;
+  width: 30px;
+}
+.carousel__indicator {
+  background-color:  #373737 ;
+}
+
+.carousel__slide:nth-of-type(1),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(1) {
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__slide:nth-of-type(2),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(2) {
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__slide:nth-of-type(3),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(3) {
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__slide:nth-of-type(4),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(4) {
+  background-size: cover;
+  background-position: center;
+}
+
+&lt;/style&gt;
+
+&lt;script&gt;
+  function isVisible(el) {
+        while (el) {
+            if (el === document) {
+                return true;
+            }
+
+            var $style = window.getComputedStyle(el, null);
+
+            if (!el) {
+                return false;
+            } else if (!$style) {
+                return false;
+            } else if ($style.display === 'none') {
+                return false;
+            } else if ($style.visibility === 'hidden') {
+                return false;
+            } else if (+$style.opacity === 0) {
+                return false;
+            } else if (($style.display === 'block' || $style.display === 'inline-block') &amp;&amp;
+                $style.height === '0px' &amp;&amp; $style.overflow === 'hidden') {
+                return false;
+            } else {
+                return $style.position === 'fixed' || isVisible(el.parentNode);
+            }
+        }
+  }
+  
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(function(){
+      var j=0;
+      var elements = document.querySelectorAll('.carousel__control--forward');
+      for(i=(elements.length - 1);i&gt;-1;i--) {
+        if(isVisible(elements[i])) j=i;
+      }
+      elements[j].click();
+    },7000);
+  }
+  
+&lt;/script&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;While this is some effort, you absolutely should add progression and design events to your game. They can give you valuable - and sometimes surprising - insights on how people are playing your game. Two examples: 20% of my Android players do not have a touch screen. Players fail in my most difficult “endboss” level in 95% of the tries, but the level is played the most frequently of all levels, even by players that already completed it before.&lt;/p&gt;
+
+&lt;p&gt;And now have fun integrating analytics and tweaking your game based on the insights it gives you!&lt;/p&gt;
+
+&lt;h3 id=&quot;get-started&quot;&gt;Get started&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/MrStahlfelge/gdx-gameanalytics&quot;&gt;GitHub page and readme&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gameanalytics.com/docs/s/learning-path-overview&quot;&gt;GameAnalytics Learning Path&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="news" /><summary type="html">MrStahlfelge presents his gdx-gameanalytics library in our Community Showcase!</summary></entry></feed>
