@@ -44,6 +44,9 @@ If you want to execute your freshly imported project, you have to follow differe
   ![](/assets/images/dev/idea/3.png)
 2. Expand the tasks of your project and then select: desktop -> other -> run.
 
+   **In Android Studio 4.2**, tasks are no longer shown by default. Go to `Settings -> Experimental` and uncheck `Do not build Gradle task list during Gradle sync`. Then sync the project via `File -> Sync Project with Gradle Files`
+   {: .notice--primary}
+
 <b>Alternatively</b>, you can create a run configuration:
 1. Right click your DesktopLauncher class
 2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
