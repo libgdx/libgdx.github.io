@@ -13,7 +13,7 @@ class Drop : Game() {
     batch = SpriteBatch()
     // use LibGDX's default Arial font
     font = BitmapFont()
-    this.setScreen(MainMenuScreen(this))
+    this.screen = MainMenuScreen(this)
   }
 
   override fun render() {
@@ -23,7 +23,7 @@ class Drop : Game() {
   override fun dispose() {
     // per @rohansuri's suggestion here:
     //    https://gist.github.com/sinistersnare/6367829#gistcomment-1661438
-    this.getScreen().dispose()
+    this.screen.dispose()
 
     batch.dispose()
     font.dispose()
