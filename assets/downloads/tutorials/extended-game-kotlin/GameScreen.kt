@@ -16,15 +16,29 @@ import com.badlogic.gdx.utils.TimeUtils
 
 class GameScreen(val game: Drop) : Screen {
 
-  private var dropImage: Texture
-  private var bucketImage: Texture
-  private var dropSound: Sound
-  private var rainMusic: Music
+  // load the images for the droplet & bucket, 64x64 pixels each
+  private var dropImage = Texture(Gdx.files.internal("droplet.png"))
+  private var bucketImage = Texture(Gdx.files.internal("bucket.png"))
+  
+  // load the drop sound effect and the rain background music
+  private var dropSound = Gdx.audio.newSound(Gdx.files.internal("drop.wav"))
+  private var rainMusic = Gdx.audio.newMusic(Gdx.files.internal("rain.mp3")).apply {
+    setLooping(true)
+  }
+  
   // The camera ensures we can render using our target resolution of 800x480
   //    pixels no matter what the screen resolution is.
-  private var camera: OrthographicCamera
-  private var bucket: Rectangle
-  private var touchPos: Vector3
+  private var camera = OrthographicCamera().apply {
+    setToOrtho(false, 800f, 480f)
+  }
+  
+  // create a Rectangle to logically represent the bucket
+  private var bucket = Rectangle(
+    800f/2f - 64f/2f, // center the bucket horizontally
+    20f,              // bottom left bucket corner is 20px above
+    64f, 64f
+  )
+  private var touchPos = Vector3()
   private var raindrops: Array<Rectangle> // gdx, not Kotlin Array
   private var lastDropTime: Long = 0L
   private var dropsGathered: Int = 0
@@ -41,32 +55,6 @@ class GameScreen(val game: Drop) : Screen {
 
   // initializer block
   init {
-    // load the images for the droplet & bucket, 64x64 pixels each
-    dropImage = Texture(Gdx.files.internal("droplet.png"))
-    bucketImage = Texture(Gdx.files.internal("bucket.png"))
-
-    // load the drop sound effect and the rain background music
-    dropSound = Gdx.audio.newSound(Gdx.files.internal("drop.wav"))
-    rainMusic = Gdx.audio.newMusic(Gdx.files.internal("rain.mp3"))
-    rainMusic.setLooping(true)
-
-    // create the camera and the SpriteBatch
-    camera = OrthographicCamera()
-    camera.setToOrtho(false, 800f, 480f)
-
-    // create a Rectangle to logically represent the bucket
-    bucket = Rectangle()
-    bucket.x = 800f/2f - 64f/2f  // center the bucket horizontally
-    bucket.y = 20f               // bottom left bucket corner is 20px above
-                                 //    bottom screen edge
-    bucket.width = 64f
-    bucket.height = 64f
-
-    // create the touchPos to store mouse click position
-    touchPos = Vector3()
-
-    // create the raindrops array and spawn the first raindrop
-    raindrops = Array<Rectangle>()
     spawnRaindrop()
   }
 
@@ -79,19 +67,21 @@ class GameScreen(val game: Drop) : Screen {
     // generally good practice to update the camera's matrices once per frame
     camera.update()
 
-    // tell the SpriteBatch to render in the coordinate system specified by the
-    //    camera.
-    game.batch.setProjectionMatrix(camera.combined)
+    with(game.batch) {
+      // tell the SpriteBatch to render in the coordinate system specified by the
+      //    camera.
+      setProjectionMatrix(camera.combined)
 
-    // begin a new batch and draw the bucket and all drops
-    game.batch.begin()
-    game.font.draw(game.batch, "Drops Collected: " + dropsGathered, 0f, 480f)
-    game.batch.draw(bucketImage, bucket.x, bucket.y,
-                    bucket.width, bucket.height)
-    for (raindrop in raindrops) {
-      game.batch.draw(dropImage, raindrop.x, raindrop.y)
+      // begin a new batch and draw the bucket and all drops
+      begin()
+      game.font.draw(this, "Drops Collected: " + dropsGathered, 0f, 480f)
+      game.batch.draw(bucketImage, bucket.x, bucket.y,
+                      bucket.width, bucket.height)
+      for (raindrop in raindrops) {
+        draw(dropImage, raindrop.x, raindrop.y)
+      }
+      end()
     }
-    game.batch.end()
 
     // process user input
     if (Gdx.input.isTouched()) {
@@ -99,7 +89,7 @@ class GameScreen(val game: Drop) : Screen {
                    Gdx.input.getY().toFloat(),
                    0f)
       camera.unproject(touchPos)
-      bucket.x = touchPos.x - 64f/2f
+      bucket.x = touchPos.x - 64f / 2f
     }
     if (Gdx.input.isKeyPressed(Keys.LEFT)) {
       // getDeltaTime returns the time passed between the last and the current
@@ -113,8 +103,8 @@ class GameScreen(val game: Drop) : Screen {
     // make sure the bucket stays within the screen bounds
     if (bucket.x < 0f)
       bucket.x = 0f
-    if (bucket.x > 800f-64f)
-      bucket.x = 800f-64f
+    if (bucket.x > 800f - 64f)
+      bucket.x = 800f - 64f
 
     // check if we need to create a new raindrop
     if (TimeUtils.nanoTime() - lastDropTime > 1_000_000_000L)
