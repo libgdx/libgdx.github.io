@@ -19,7 +19,7 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## December 2021
+## [December 2021](/news/2021/12/jam-december-2021)
 - Jam Suggestions: 5th - 7th
 - Jam Voting: 9th - 11th
 - Jam: 12th - 18th
