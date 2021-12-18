@@ -76,10 +76,10 @@ You can directly run individual tests and/or configure the test starter by setti
 # Building
 To use your local changes in another project, you can install libGDX to your local maven repository by running the following command:
 ```
-mvn install
+./gradlew publishToMavenLocal
 ```
 
-This will build and install libGDX and all core components to your local maven repository with the current version declared in the pom.xml files.
+This will build and install libGDX and all core components to your local maven repository with the current version declared in the gradle.properties file.
 
 <br/>
 
