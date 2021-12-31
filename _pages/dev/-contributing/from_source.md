@@ -79,7 +79,7 @@ To use your local changes in another project, you can install libGDX to your loc
 ./gradlew publishToMavenLocal
 ```
 
-This will build and install libGDX and all core components to your local maven repository with the current version declared in the gradle.properties file.
+This will build and install libGDX and all core components to your local maven repository with the current version declared in the gradle.properties file. If you are working with an older branch of libGDX, try `mvn install` instead.
 
 <br/>
 
