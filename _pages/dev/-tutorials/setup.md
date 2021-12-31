@@ -16,7 +16,7 @@ sidebar:
 
 {% include breadcrumbs.html %}
 
-If this is your first time using libGDX, you're at the right place. The following steps detail how you can get your fist libGDX project up and running.
+If this is your first time using libGDX, you're at the right place. The following steps detail how you can get your first libGDX project up and running.
 
 {% include setup_flowchart.html current='0' %}
 
