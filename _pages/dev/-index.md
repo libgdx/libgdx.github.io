@@ -1,5 +1,7 @@
 ---
 permalink: /dev/
+redirect_from:
+  - /dev/tutorials/
 title: "Source & Documentation"
 classes: wide
 header:
@@ -9,11 +11,11 @@ header:
   caption: "Photo credit: [**Fotis Fotopoulos**](https://unsplash.com/photos/DuHKoV44prg)"
   actions:
     - label: "Setup a Project"
-      url: "/dev/setup/"
+      url: "/wiki/start/setup"
     - label: "GitHub"
       url: "https://github.com/libgdx/libgdx"
     - label: "Wiki"
-      url: "https://github.com/libgdx/libgdx/wiki"
+      url: "/wiki/"
 
 excerpt: "libGDX is hosted on GitHub, where all team members collaborate. Fork, star and contribute to our project!"
 
@@ -22,16 +24,20 @@ sidebar:
 ---
 
 # How to get started with libGDX?
-libGDX offers a [setup tool](/dev/project_generation/), which automatically creates a project and downloads everything necessary.
+libGDX offers a [setup tool](/wiki/start/project-generation/), which automatically creates a project and downloads everything necessary.
 {: .notice--primary}
 
-Please take a look at our **[Setup Instructions](/dev/setup/)** to get started. These walk you through the process of creating your very first libGDX project using our setup tool. To get started with developing, take a look at our post **[A Simple Game](/dev/simple_game/)**, a short tutorial aiding your first steps.
+To get started, please take a look at our **[Setup Instructions](/wiki/start/setup/)** page, which walks you through the process of creating your very first libGDX project using our setup tool. After that, we highly recommend our **[A Simple Game](/wiki/start/a-simple-game/)** and [Extending the Simple Game](/wiki/start/simple-game-extended/) pages. If you're completely new to game dev and have never developed a game before, this (even more straight-forward) [tutorial](https://colourtann.github.io/HelloLibgdx/) by tann is also worth a look as an alternative.
+
+From then on, our [wiki](/wiki/) is your best companion: it provides extensive documentation on nearly every feature offered by libGDX. For any further questions, our official [Discord server](/community/) is good starting point.
+
+If you want to explore some other (third-party) tutorials or inspect some demos/other open source libGDX games for reference, this [wiki article](/wiki/start/demos-and-tutorials) is the right place to start looking.
 
 <br/>
 
 # Documentation
 The libGDX codebase is documented in two ways:
-- In our [Wiki](https://github.com/libgdx/libgdx/wiki)
+- In our [Wiki](/wiki/)
 - And via [Javadocs](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/)
 
 <br/>

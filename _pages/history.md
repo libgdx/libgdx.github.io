@@ -194,7 +194,7 @@ p a:active {
   <div class="container right" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom">
     <div class="content">
       <h2>2015</h2>
-      <p>2015 was another year of improvements: the versions 1.6 and 1.7 saw the light. From 18 December 2015 to 18 January 2016 the big <a href="https://github.com/libgdx/libgdx/wiki/Getting-ready-for-%23libGDXJAM">libGDX game jam</a> was organized together with RoboVM, itch.io and Robotality. From initially 180 theme suggestions "Life in space" was chosen and 83 games were created over the course of the competition.</p>
+      <p>2015 was another year of improvements: the versions 1.6 and 1.7 saw the light. From 18 December 2015 to 18 January 2016 the big <a href="/wiki/misc/getting-ready-for-libgdxjam">libGDX game jam</a> was organized together with RoboVM, itch.io and Robotality. From initially 180 theme suggestions "Life in space" was chosen and 83 games were created over the course of the competition.</p>
     </div>
   </div>
   <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">

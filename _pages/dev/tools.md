@@ -46,7 +46,7 @@ feature_row2:
   - image_path: /assets/images/dev/tools/particle_editor.png
     title: "Particle Editor"
     excerpt: 'A powerful tool for making 2D particle effects'
-    url: "https://github.com/libgdx/libgdx/wiki/2D-Particle-Editor"
+    url: "/wiki/tools/2d-particle-editor"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
 
@@ -54,13 +54,13 @@ feature_row3:
   - image_path: /assets/images/dev/tools/flame.gif
     title: "Flame"
     excerpt: 'A powerful 3D particle editor'
-    url: "https://github.com/libgdx/libgdx/wiki/3D-Particle-Effects"
+    url: "/wiki/graphics/3d/3d-particle-effects"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/hiero.png
     title: "Hiero"
     excerpt: 'A bitmap font packing tool'
-    url: "https://github.com/libgdx/libgdx/wiki/Hiero"
+    url: "/wiki/tools/hiero"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/fbx_conv.gif
@@ -80,7 +80,7 @@ feature_row4:
   - image_path: /assets/images/dev/tools/texture_packer.jpeg
     title: "Texture Packer"
     excerpt: 'A tool for packing images into atlases'
-    url: "https://github.com/libgdx/libgdx/wiki/Texture-packer"
+    url: "/wiki/tools/texture-packer"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
 

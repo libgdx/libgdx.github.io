@@ -14,7 +14,7 @@ sidebar:
 
 {% include breadcrumbs.html %}
 
-Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on the [Discord](/community/), pledge to the [Patreon](/funding/) page, and submit [code](https://github.com/libgdx/libgdx/) and [documentation](https://github.com/libgdx/libgdx/wiki) back to the project on GitHub.
+Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on the [Discord](/community/), pledge to the [Patreon](/funding/) page, and submit [code](https://github.com/libgdx/libgdx/) and [documentation](/wiki/) back to the project on GitHub.
 
 If you want to submit code back to the project, please take a moment to review our guidelines below.
 
@@ -69,7 +69,7 @@ If some java features are not supported on GWT they must either be emulated or a
 <ul>
   <li>Formatting: String.format() is not supported.</li>
   <li>Regular expressions. However, a basic emulation of <a href="https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Pattern.java">Pattern</a> <a href="https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/java/util/regex/Matcher.java">Matcher</a> is provided.</li>
-  <li>Reflection. Use <a href="https://github.com/libgdx/libgdx/wiki/Reflection">libGDX reflection</a> instead.</li>
+  <li>Reflection. Use <a href="/wiki/utils/reflection">libGDX reflection</a> instead.</li>
   <li>Multithreading: <a href="https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/utils/Timer.java">Timers</a> are supported on GWT, but threads are strictly not.</li>
 </ul>
 </div>
