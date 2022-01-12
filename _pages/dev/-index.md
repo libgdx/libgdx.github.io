@@ -27,7 +27,7 @@ sidebar:
 libGDX offers a [setup tool](/wiki/start/project-generation/), which automatically creates a project and downloads everything necessary.
 {: .notice--primary}
 
-To get started, please take a look at our **[Setup Instructions](/wiki/start/setup/)** page, which walks you through the process of creating your very first libGDX project using our setup tool. After that, we highly recommend our **[A Simple Game](/wiki/start/a-simple-game/)** and [Extending the Simple Game](/wiki/start/simple-game-extended/) pages. If you're completely new to game dev and have never developed a game before, this (even more straight-forward) [tutorial](https://colourtann.github.io/HelloLibgdx/) by tann is also worth a look as an alternative.
+To get started, please take a look at our **[Setup Instructions](/wiki/start/setup/)** page, which walks you through the process of **creating your very first libGDX project** using our setup tool. After that, we highly recommend our **[A Simple Game](/wiki/start/a-simple-game/)** and [Extending the Simple Game](/wiki/start/simple-game-extended/) pages. If you're completely new to game dev and have never developed a game before, this (even more straight-forward) [tutorial](https://colourtann.github.io/HelloLibgdx/) by tann is also worth a look as an alternative.
 
 From then on, our [wiki](/wiki/) is your best companion: it provides extensive documentation on nearly every feature offered by libGDX. For any further questions, our official [Discord server](/community/) is good starting point.
 
