@@ -34,19 +34,15 @@ them when cloning Wiki as Git repository (for example, Windows doesn't support "
 {% capture docs-notice %}
 - Please note that there should be a space in between `ClassName (Code)` style formatting, in order to differentiate the two.
 - Please make the format `ClassName (Code)` with the word `Code`, not `Source` or any derivative of that. Consistency is key!
-- If a link to documentation ends in a right parenthesis `)`, it will mess up the markdown. take this as an example:
-
-```
-http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth()
-```
-
-when using the markdown formatting of `[]()` the end parenthesis will mess up the link, so please remember to escape the ending parenthesis (`)`) so for example, it should be :
-
-```markdown
-[Link to Texture#getWidth](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth(\))
-```
-
-without the escaped parenthesis, a 404 is imminent!
+- If a link to documentation ends in a right parenthesis `)`, it will mess up the markdown. Take this example:
+   ```
+   http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth()
+   ```
+   When using the markdown formatting of `[]()` the end parenthesis will mess up the link, so please remember to escape the ending parenthesis (`)`). In the example, it should be:
+   ```markdown
+   [Link to Texture#getWidth](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth(\))
+   ```
+   Without the escaped parenthesis, a 404 is imminent!
 {% endcapture %}
 
 <div class="notice notice--primary">{{ docs-notice | markdownify }}</div>
@@ -56,24 +52,20 @@ without the escaped parenthesis, a 404 is imminent!
 Videos can be included like this:
 
 ```markdown
-{% raw %}
-{% include video id="3kPK_O6Q4wA" provider="youtube" %}
-{% endraw %}
+{% raw %}{% include video id="3kPK_O6Q4wA" provider="youtube" %}{% endraw %}
 ```
 
 ## The main table of contents ##
 
 If you make a page, you will most likely want it to be displayed on the main libGDX wiki [Table of contents](https://github.com/libgdx/libgdx.github.io/blob/dev/_includes/wiki_index.md) and the [sidebar Table of Contents](https://github.com/libgdx/libgdx.github.io/blob/dev/_includes/wiki_sidebar.md). When you create an article, please include the changes to the Home page with the appropriate positioning of your article. Mirror this change in the sidebar ToC, as to maintain likeness between the two!
 
-Some pages are not listed in the sidebar, in particular the ones located in the `/wiki/misc` folder. Those pages should contain a comment in the frontmatter, clarifying this: `# Not listed in ToC`.
+Some pages are not listed in the ToC, in particular the ones located in the `/wiki/misc` folder. Those pages should contain a comment in the frontmatter, clarifying this: `# Not listed in ToC`.
 
 ## Tables of contents per page ##
 
 Tables of contents have to be manually created on a per-page basis. For an example of how to do so outside of this section, please refer to our [Box2d](/wiki/extensions/physics/box2d) article.
 
-When creating headers in markdown, we specify using a number of octothorpes (`#`) that define the header level. When we create a header `## Comments and Questions/Concerns` in an article entitled `Help Me` the corresponding link would be `help-me#comments-and-questionsconcerns`
-
-so when we go to make our table of contents, it would be in an unordered list, and using these qualified page fragment links. Please see the [Box2d](/wiki/extensions/physics/box2d) article for more information.
+When creating headers in markdown, we specify using a number of octothorpes (`#`) that define the header level. When we create a header `## Comments and Questions/Concerns` in an article entitled `Help Me` the corresponding link would be `help-me#comments-and-questionsconcerns`. So when we go to make our table of contents, those page fragment links would be placed in an unordered list.
 
 ## Adding images ##
 
