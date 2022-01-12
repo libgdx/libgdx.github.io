@@ -15,10 +15,10 @@ logo: "/assets/brand/logo.svg"
 logo_dark: "/assets/brand/logo_dark.svg"
 masthead_title: " " # disable the written title in the header
 description: "libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS."
-github_username: crykn # TODO
+github_username: libgdx
 
-repository: crykn/crykn.github.io # TODO
-url: https://crykn.github.io # TODO
+repository: libgdx/libgdx.github.io
+url: https://libgdx.com
 
 # Search, Google
 google_site_verification: "qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8"
