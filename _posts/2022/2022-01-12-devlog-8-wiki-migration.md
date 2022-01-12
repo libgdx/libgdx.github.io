@@ -27,7 +27,9 @@ Our old wiki was basically a bunch of markdown files located in a GitHub wiki re
 ## And now?
 The wiki can now be accessed via [https://libgdx.com/wiki/](https://libgdx.com/wiki/). To **edit a page**, use the "Edit on GitHub" link on top of each page. This will redirect you to GitHub, where you can submit a PR with your changes. We know that that makes contributing a bit of a hassle, but hope that it isn't too much of an inconvenience.
 
-Our new **wiki style guide** can be found [here](/wiki/misc/wiki-style-guide). Please give it a read before contributing. In addition, the migration allows us to use normal HTML, JS and CSS code in the wiki, which offers a few interesting possibilities:
+Our new **wiki style guide** can be found [here](/wiki/misc/wiki-style-guide). Please give it a read before contributing.
+
+As an added bonus, the migration allows us to use normal HTML, JS and CSS code in the wiki, which offers a few interesting possibilities:
 
 <style>
 .example {
