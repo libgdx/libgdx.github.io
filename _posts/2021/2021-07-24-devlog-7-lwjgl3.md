@@ -84,7 +84,7 @@ A viable approach for _outside of your development environment_ is to just progr
 ### Are there any other things I need to be aware of?
 - Whenever your **application is minimised**, the LWJGL 3 backend calls `ApplicationListener#resize(0, 0)`. This can lead to unexpected issues, in particular if you are (re)building framebuffers whenever the application is resized.
 - The LWJGL 3 backend does [not yet](https://github.com/libgdx/libgdx/pull/6247) work with **Swing or AWT**.
-- As the graphical tools in **gdx-tools** require AWT, the library has a hard dependency on LWJGL 2. If you are using one of the non-graphical tools of the gdx-tools project (in particular [TexturePacker](https://github.com/libgdx/libgdx/wiki/Texture-packer#from-source)) and the LWJGL 3 backend _in the same (!) project_, you need to modify your gdx-tools dependency like this:
+- As the graphical tools in **gdx-tools** require AWT, the library has a hard dependency on LWJGL 2. If you are using one of the non-graphical tools of the gdx-tools project (in particular [TexturePacker](/wiki/tools/texture-packer#from-source)) and the LWJGL 3 backend _in the same (!) project_, you need to modify your gdx-tools dependency like this:
    ```groovy
    compile ("com.badlogicgames.gdx:gdx-tools:$gdxVersion") {
       exclude group: 'com.badlogicgames.gdx', module: 'gdx-backend-lwjgl'

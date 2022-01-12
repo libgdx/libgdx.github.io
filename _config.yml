@@ -1,18 +1,12 @@
-# Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+# This is the config file for this Jekyll blog.
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+#
+# The variables herein can be accessed via {{ site.title }}, {{ site.email }},
+# and so on.
+#
 title: "libGDX"
 minimal_mistakes_skin: "default"
 minimal_mistakes_skin_dark: "dark"
@@ -23,17 +17,19 @@ masthead_title: " " # disable the written title in the header
 description: "libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS."
 github_username: libgdx
 
+repository: libgdx/libgdx.github.io
+url: https://libgdx.com
+
 # Search, Google
 google_site_verification: "qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8"
 search: false
 
 # Open Graph
-og_image: /assets/images/logo.png # default open graph (=social media) image
-
+og_image: /assets/images/logo.png # default open graph (= social media) image
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes@4.24.0 # 2021-07-05; when updating this, the theme ovverides should be adapted accordingly!
+remote_theme: mmistakes/minimal-mistakes@4.24.0 # 2021-07-05; when updating this, the theme overrides should be adapted accordingly!
 
 future: false # allow scheduling posts
 
@@ -41,10 +37,7 @@ future: false # allow scheduling posts
 permalink: /:categories/:year/:month/:title
 #timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-include:
-  - _pages
-
-# Plugins:
+# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -55,7 +48,10 @@ plugins:
   - jekyll-avatar
   - jekyll-redirect-from
   - jekyll-remote-theme
+  - jekyll-github-metadata
+  - jekyll-last-modified-at
 
+# Footer
 footer:
   links:
     - label: "GitHub"
@@ -66,10 +62,14 @@ footer:
       url: "/community/discord/"
     - label: "Wiki"
       icon: "fas fa-fw fa-link"
-      url: "https://github.com/libgdx/libgdx/wiki"
+      url: "/wiki/"
     - label: "Patreon"
       icon: "fab fa-fw fa-patreon"
       url: "https://www.patreon.com/libgdx"
+
+# Content
+include:
+  - _pages
 
 defaults:
   # _posts
@@ -92,3 +92,9 @@ defaults:
     values:
       layout: single
       author_profile: false
+  # wiki
+  - scope:
+      path: "wiki"
+      type: pages
+    values:
+      layout: wiki

@@ -29,7 +29,7 @@ Shape drawer draws 2D shapes, such as lines and polygons, using a Batch. It solv
 
 ## How does it work?
 
-Shape Drawer draws using a Batch, so let's start at the beginning - how does a Batch work? There are already some pretty good explanations in the context of libGDX in the wiki (see [here](https://github.com/libgdx/libgdx/wiki/Spritebatch%2C-Textureregions%2C-and-Sprites) and [here](https://github.com/libgdx/libgdx/wiki/Shaders)), so we'll just illustrate it with a quick example.
+Shape Drawer draws using a Batch, so let's start at the beginning - how does a Batch work? There are already some pretty good explanations in the context of libGDX in the wiki (see [here](/wiki/graphics/2d/spritebatch-textureregions-and-sprites) and [here](/wiki/graphics/opengl-utils/shaders)), so we'll just illustrate it with a quick example.
 
 Let's say we want to draw a picture of a [pretty flower](https://duckduckgo.com/?t=canonical&q=pretty+flower&iax=images&ia=images) with a SpriteBatch. We tell the Batch where we want to draw it, how big, and give it the texture by calling `batch#draw`. The batch then splits that rectangular image into two triangles, and sends the triangle vertices to the graphics card, along with the texture you want to stretch over the triangles and some colours (eg the colour we set with `batch#setColor`). On the graphics card, a shader program figures out which pixels on the screen are contained in each triangle and what colour each should be based on the texture and the colours we gave it, and then outputs that to the screen.
 

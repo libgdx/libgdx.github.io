@@ -9,25 +9,18 @@ main:
     url: /dev/
   - title: "Community"
     url: /community/
+wiki:
+  - title: "Back to Main Site"
+    url: /
+  - title: "Wiki Home"
+    url: /wiki/
 dev:
-  - title: "Getting Started"
-    children:
-      - title: "Set Up a Dev Env"
-        url: /dev/setup/
-      - title: "Generate a Project"
-        url: /dev/project-generation/
-      - title: "Importing & Running"
-        url: /dev/import-and-running/
-      - title: "A Simple Game"
-        url: /dev/simple-game/
-      - title: "Extending the Simple Game"
-        url: /dev/simple-game-extended/
-      - title: "Demos & Tutorials"
-        url: /dev/tutorials/
   - title: "Documentation"
     children:
+      - title: "Getting Started"
+        url: /wiki/start/setup
       - title: "Wiki"
-        url: https://github.com/libgdx/libgdx/wiki
+        url: /wiki/
       - title: "Javadocs"
         url: https://libgdx.badlogicgames.com/ci/nightlies/docs/api/
       - title: "Versions"

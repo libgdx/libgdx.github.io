@@ -1,0 +1,387 @@
+@import "minimal-mistakes/variables";
+@import "minimal-mistakes/vendor/breakpoint/breakpoint";
+
+// WHOLE PAGE
+article.page {
+    float: left;
+    width: 100%;
+}
+
+@media (min-width: 64em) {
+    .page {
+        padding-right: 300px !important;
+    }
+}
+
+// WIKI PAGE TITLE; META INFORMATION
+.page__title {
+    font-size: 32px;
+    margin-right: 150px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.125;
+    word-wrap: break-word;
+}
+
+@media (prefers-color-scheme: light) {
+  .header-meta {
+      padding-bottom: 8px;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #57606a;
+      border-bottom: 1px solid #d0d7de;
+      margin-bottom: 10px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .header-meta {
+      padding-bottom: 8px;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #8b949e;
+      border-bottom: 1px solid #30363d;
+      margin-bottom: 10px;
+  }
+}
+
+.header-meta .ico-ext {
+    display: none;
+}
+
+// PAGE FOOTER; legal links, etc.
+.page__footer {
+    background-color:transparent;
+}
+
+// NAVBAR AT THE TOP
+@media (prefers-color-scheme: light) {
+  .greedy-nav a {
+      color: #6f777d !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .greedy-nav a {
+      color: #eaeaea !important;
+  }
+}
+
+// WIKI NAVBAR AT THE SIDE
+@media (prefers-color-scheme: light) {
+  .toc {
+      padding: 8px 16px;
+      border-color: #d0d7de;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 6px;
+      color: #24292f;
+  }
+
+  .wiki_toc__menu a {
+      color: #0969da;
+      text-decoration: none;
+  }
+  .wiki_toc__menu a:hover {
+      text-decoration: underline;
+  }
+  .wiki_toc__menu a:visited {
+      color: #0969da;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .toc {
+      padding: 8px 16px;
+      border-color: #30363d;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 6px;
+      color: #c9d1d9;
+  }
+
+  .wiki_toc__menu a {
+      color: #2f7d95;
+      text-decoration: none;
+  }
+  .wiki_toc__menu a:hover {
+      text-decoration: underline;
+  }
+  .wiki_toc__menu a:visited {
+      color: #2f7d95;
+  }
+}
+
+.toc .header-link {
+    display: none;
+}
+
+.wiki_toc__menu {
+  font-size: 13px;
+  font-weight: bold;
+
+  details {
+    margin-bottom: 1.3em;
+  }
+
+  summary {
+    font-weight: bold;
+  }
+
+  li {
+    font-weight: normal;
+  }
+
+  input[type="checkbox"],
+  label {
+    display: none;
+  }
+
+  @include breakpoint(max-width $large - 1px) {
+    @media (prefers-color-scheme: light) {
+      label {
+        color: #7a8288;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      label {
+        color: #c9d1d9;
+      }
+    }
+
+    label {
+      position: relative;
+      display: inline-block;
+      padding: 0.5em 2.5em 0.5em 1em;
+      font-size: 0.75em;
+      font-weight: bold;
+      border: 1px solid mix(#fff, #7a8288, 50%);
+      border-radius: 4px;
+      z-index: 20;
+      -webkit-transition: 0.2s ease-out;
+      transition: 0.2s ease-out;
+      cursor: pointer;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        right: 1em;
+        top: 1.25em;
+        width: 0.75em;
+        height: 0.125em;
+        line-height: 1;
+        background-color: #7a8288;
+        -webkit-transition: 0.2s ease-out;
+        transition: 0.2s ease-out;
+      }
+
+      &:after {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+
+      &:hover {
+        color: #fff;
+        border-color: #7a8288;
+        background-color: mix(white, #000, 20%);
+
+        &:before,
+        &:after {
+          background-color: #fff;
+        }
+      }
+    }
+
+    /* selected*/
+    input:checked + label {
+      color: white;
+      background-color: mix(white, #000, 20%);
+
+      &:before,
+      &:after {
+        background-color: #fff;
+      }
+    }
+
+    /* on hover show expand*/
+    label:hover:after {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+
+    input:checked + label:hover:after {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+  }
+}
+
+.wiki_toc__menu .wiki_nav__items {
+  margin: 0;
+
+  @include breakpoint(max-width $large - 1px) {
+    position: relative;
+    max-height: 0;
+    opacity: 0%;
+    overflow: hidden;
+    z-index: 10;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -webkit-transform: translate(0, 10%);
+    -ms-transform: translate(0, 10%);
+    transform: translate(0, 10%);
+  }
+}
+
+@include breakpoint(max-width $large - 1px) {
+  .wiki_toc__menu input:checked ~ .wiki_nav__items {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    max-height: 9999px; /* exaggerate max-height to accommodate tall lists*/
+    overflow: visible;
+    opacity: 1;
+    margin-top: 1em;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+.sidebar__right {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 64em) {
+    .sidebar__right {
+        width: 300px;
+        margin-right: -300px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      font-size: 16px;
+      line-height: 1.5;
+      color: #24292f;
+      word-wrap: break-word;
+  }
+
+  a {
+      color: #0969da;
+      text-decoration: none;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
+  a:visited {
+      color: #0969da;
+  }
+}
+
+// ACTUAL CONTENT
+@media (prefers-color-scheme: light) {
+  body {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      font-size: 16px;
+      line-height: 1.5;
+      color: #24292f;
+      word-wrap: break-word;
+  }
+
+  a {
+      color: #0969da;
+      text-decoration: none;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
+  a:visited {
+      color: #0969da;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      font-size: 16px;
+      line-height: 1.5;
+      color: #c9d1d9;
+      word-wrap: break-word;
+  }
+
+  a {
+      color: #2f7d95;
+      text-decoration: none;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
+  a:visited {
+      color: #2f7d95;
+  }
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.markdown-body li+li {
+    margin-top: .25em;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+// WIKI COPYRIGHT FOOTER
+@media (prefers-color-scheme: light) {
+  .copyright_footer {
+      border-color: #d0d7de;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 6px;
+      box-shadow: 0 1px 0 rgba(27,31,36,0.04) !important;
+      background-color: #f6f8fa !important;
+      padding: 8px 16px;
+      margin-bottom: 20px;
+      margin-top: 15px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .copyright_footer {
+      border-color: #30363d;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 6px;
+      box-shadow: 0 1px 0 rgba(27,31,36,0.04) !important; //TODO
+      background-color: #21262d !important; //TODO
+      padding: 8px 16px;
+      margin-bottom: 20px;
+      margin-top: 15px;
+  }
+}

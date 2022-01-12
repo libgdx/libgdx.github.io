@@ -18,4 +18,6 @@ group :jekyll_plugins do
   gem "jekyll-redirect-from"
   gem "kramdown-parser-gfm" 
   gem "jekyll-remote-theme"
+  gem "jekyll-github-metadata"
+  gem "jekyll-last-modified-at"
 end

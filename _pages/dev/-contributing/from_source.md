@@ -42,7 +42,7 @@ cd libgdx
      - Go into preferences and turn off configure on demand
 
     b) **Via Eclipse:** File -> Import -> Gradle -> Gradle project
-     
+
      If you don't want to use Gradle in Eclipse, executing `./gradlew cleanEclipse eclipse` will generate the necessary project files.
 
 If you encounter any issues while setting up your development environment for libGDX, please join our community on [Discord](/community/discord/) to ask for help.
