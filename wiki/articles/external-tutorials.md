@@ -30,7 +30,7 @@ These are webpages where individuals or companies write about their experience w
 * [norakomi.com](http://norakomi.com/tutorial_admob_introduction.php)
 
 ### Lighting ###
- * [Normal Mapping](http://www.java-gaming.org/topics/glsl-using-normal-maps-to-illuminate-a-2d-texture-libgdx/27516/view.html)
+ * [Normal Mapping](https://web.archive.org/web/20200508234246/http://www.java-gaming.org/topics/glsl-using-normal-maps-to-illuminate-a-2d-texture-libgdx/27516/view.html)
  * [Shadow Mapping](https://www.microbasic.net/tutorials/shadow-mapping/Full.html)
 
 ### UI with Scene2D ###

@@ -49,7 +49,7 @@ imgui.sliderFloat("float", f, 0f, 1f);
 
 ![screenshot of sample code alongside its output with ImGui](http://i.imgur.com/KOhZQTu.png)
 
-ImGui supports also other languages, such as japanese, initiliazed [here](https://github.com/kotlin-graphics/imgui/blob/master/src/test/kotlin/imgui/test_lwjgl.kt#L67) as:
+ImGui supports also other languages, such as japanese, initiliazed [here](https://github.com/pakoito/imgui/blob/master/src/test/kotlin/imgui/gl/test%20lwjgl.kt#L79) as:
 
 ```kotlin
 IO.fonts.addFontFromFileTTF("extraFonts/ArialUni.ttf", 18f, glyphRanges = IO.fonts.glyphRangesJapanese)!!

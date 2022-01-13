@@ -30,7 +30,7 @@ feature_row3:
     btn_label: "Check out Awesome-libGDX"
     btn_class: "btn--primary"
 list1:
-  - "[Streaming music](/wiki/streaming-music) and [sound effect playback](/wiki/audio/sound-effects) for WAV, MP3 and OGG"
+  - "[Streaming music](/wiki/audio/streaming-music) and [sound effect playback](/wiki/audio/sound-effects) for WAV, MP3 and OGG"
   - "Direct access to audio device for [PCM sample playback](/wiki/audio/playing-pcm-audio) and [recording](/wiki/audio/recording-pcm-audio)"
 list2:
   - "Abstractions for [mouse, keyboard, touchscreen](/wiki/input/mouse-touch-and-keyboard), [controllers](https://github.com/libgdx/gdx-controllers), [accelerometer](/wiki/input/accelerometer), [gyroscope](/wiki/input/gyroscope) and [compass](/wiki/input/compass)"
@@ -83,7 +83,7 @@ list6:
     items:
       - "[2D UI library](/wiki/graphics/2d/scene2d/scene2d-ui), based on scene-graph API"
       - "A plethora of [official](/wiki/graphics/2d/scene2d/scene2d-ui#widgets) and third-party widgets"
-      - "Fully [skinnable](/wiki/skin); [Composer](https://github.com/raeleus/skin-composer) for creating UI skins"
+      - "Fully [skinnable](/wiki/graphics/2d/scene2d/skin); [Composer](https://github.com/raeleus/skin-composer) for creating UI skins"
   - d:
     title: "**High-Level 3D APIs:**"
     items:
