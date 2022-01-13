@@ -464,7 +464,7 @@ Both the gdx-backend-gwt jar and the core project have a similar module file, sp
 For more information on modules and dependencies refer to the [GWT Developer Guide](https://developers.google.com/web-toolkit/doc/1.6/DevGuide).
 
 ### Reflection Support ###
-GWT does not support Java reflection for various reasons. libGDX has an internal emulation layer that will generate reflection information for a select few internal classes. This means that if you use the [Json serialization](/wiki/utils/reading-and-writing-JSON) capabilities of libgdx, you'll run into issues. You can fix this by specifying for which packages and classes reflection information should be generated for. To do so, you can put configuration properties in your GWT project's gwt.xml file like so:
+GWT does not support Java reflection for various reasons. libGDX has an internal emulation layer that will generate reflection information for a select few internal classes. This means that if you use the [Json serialization](/wiki/utils/reading-and-writing-json) capabilities of libgdx, you'll run into issues. You can fix this by specifying for which packages and classes reflection information should be generated for. To do so, you can put configuration properties in your GWT project's gwt.xml file like so:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>

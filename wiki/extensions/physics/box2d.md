@@ -1,13 +1,13 @@
 ---
 title: Box2d
 ---
-# Setting up Box2D with libGDX #
+# Setting up Box2D with libGDX
 
 Box2D is a 2D physics library. It is one of the most popular physics libraries for 2D games and has been ported to many languages and many different engines, including libGDX. The Box2D implementation in libGDX is a thin Java wrapper around the C++ engine. Therefore, their [documentation](https://box2d.org/documentation/) may come in handy.
 
 Box2D is an extension and not included with libGDX by default. Thus a manual installation is required.
 
-## Table of Contents ##
+## Table of Contents
 
   * [Initialization](/wiki/extensions/physics/box2d#initialization)
   * [Creating a World](/wiki/extensions/physics/box2d#creating-a-world)
@@ -27,11 +27,11 @@ Box2D is an extension and not included with libGDX by default. Thus a manual ins
   * [Resources](/wiki/extensions/physics/box2d#resources)
   * [Tools](/wiki/extensions/physics/box2d#tools)
 
-## Initialization ##
+## Initialization
 
 To initialize Box2D it is necessary to call `Box2D.init()`. For backwards compatibility, creating a `World` for the first time will have the same effect, but using the `Box2D` class should be preferred.
 
-## Creating a World ##
+## Creating a World
 
 When setting up Box2D the first thing we need is a world. The world object is basically what holds all your physics objects/bodies and simulates the reactions between them. It does not however render the objects for you; for that you will use libGDX graphics functions. That said, libGDX does come with a Box2D debug renderer which is extremely handy for debugging your physics simulations, or even for testing your game-play before writing any rendering code.
 
@@ -49,7 +49,7 @@ It is advised to use the same scale you use for Box2D to draw graphics. This mea
 
 **A common mistake** is measuring your world in pixels instead of meters. Box2D objects can only travel so fast. If pixels are used (such as 640 by 480) instead of meters (such as 12 by 9), objects will always move slowly no matter what you do.
 
-## Debug Renderer ##
+## Debug Renderer
 
 The next thing we are going to do is setup our debug renderer. You generally will not use this in a released version of your game, but for testing purposes we will set it up now like so:
 
@@ -59,7 +59,7 @@ Box2DDebugRenderer debugRenderer = new Box2DDebugRenderer();
 
 
 
-## Stepping the simulation ##
+## Stepping the simulation
 
 To update our simulation we need to tell our world to step. Stepping basically updates the world objects through time. The best place to call our step function is at the end of our `render()` loop. In a perfect world everyone's frame rate is the same
 
@@ -102,7 +102,7 @@ The first argument is our Box2D world and the second argument is our libGDX came
 
 
 
-## Objects/Bodies ##
+## Objects/Bodies
 
 Now if you run your game it will be pretty boring as nothing happens. The world steps but we don’t see anything as we don’t have anything to interact with it. So now we’re going to add some objects.
 
@@ -113,7 +113,7 @@ A fixture has a shape, density, friction and restitution attached to it. Shape i
 Bodies come in three different types: dynamic, kinematic and static. Each type is described below.
 
 
-### Dynamic Bodies ###
+### Dynamic Bodies
 
 Dynamic bodies are objects which move around and are affected by forces and other dynamic, kinematic and static objects. Dynamic bodies are suitable for any object which needs to move and be affected by forces.
 
@@ -153,7 +153,7 @@ Now we have created a ball like object and added it to our world. If you run the
 
 
 
-### Static Bodies ###
+### Static Bodies
 
 Static bodies are objects which do not move and are not affected by forces. Dynamic bodies are affected by static bodies. Static bodies are perfect for ground, walls, and any object which does not need to move. Static bodies require less computing power.
 
@@ -185,7 +185,7 @@ Now if you run the game you should see a ball fall and then bounce on our newly 
 
 
 
-### Kinematic Bodies ###
+### Kinematic Bodies
 
 Kinematic bodies are somewhat in between static and dynamic bodies. Like static bodies, they do not react to forces, but like dynamic bodies, they do have the ability to move. Kinematic bodies are great for things where you, the programmer, want to be in full control of a body's motion, such as a moving platform in a platform game.
 
@@ -198,7 +198,7 @@ You can create a kinematic body in much the same way as the dynamic and static b
 kinematicBody.setLinearVelocity(0.0f, 1.0f);
 ```
 
-## Impulses/Forces ##
+## Impulses/Forces
 
 Impulses and Forces are used to move a body in addition to gravity and collision.
 
@@ -255,7 +255,7 @@ if (Gdx.input.isKeyPressed(Keys.D) && vel.x < MAX_VELOCITY) {
 }
 ```
 
-## <a id="joints_and_gears"></a>Joints and Gears ##
+## Joints and Gears
 
 Every joint requires to have definition set up before creating it by box2d world. Using *initialize* helps with ensuring that all joint parameters are set.
 
@@ -505,7 +505,7 @@ fixtureDef.isSensor = true;
 
 In order to listen to this sensor contact, we need to implement the ContactListener interface methods.
 
-## Contact Listeners ##
+## Contact Listeners
 The Contact Listeners listen for collisions events on a specific fixture. The methods are passed a Contact object, which contain information about the two bodies involved.
 The beginContact method is called when the object overlaps another. When the objects are no longer colliding, the endContact method is called.
 
@@ -532,7 +532,7 @@ world.setContactListener(ListenerClass);
 We might get information about the bodies from the contact fixtures.
 Depending on the application design, the Entity class should be referenced in the Body or Fixture user data, so we can use it from the Contact and make some changes (e.g. change the player health).
 
-## Resources ##
+## Resources
 
 There are a lot of really good Box2D resources out there and most of the code can be easily converted to libgdx.
 
@@ -546,11 +546,11 @@ The following is a list of tools for use with box2d and libgdx:
 
 ### Free Open Source
 
-   * <a href="https://github.com/julienvillegas/box2d-editor">Physics Body Editor</a>
+  * <a href="https://github.com/julienvillegas/box2d-editor">Physics Body Editor</a>
 
 Code Sample available on [LibGDX.info](https://libgdx.info/box2d-importing-complex-bodies/)
 
 ### Commercial
 
-   * <a href="https://www.iforce2d.net/rube">RUBE</a> editor for creating box2d worlds.  Use <a href="https://github.com/tescott/RubeLoader">RubeLoader</a> for loading RUBE data into libgdx.
-   * <a href="https://www.codeandweb.com/physicseditor">PhysicsEditor</a>
+  * [RUBE](http://www.iforce2d.net/rube) editor for creating box2d worlds. Use[RubeLoader](https://github.com/indiumindeed/RubeLoader) for loading RUBE data into libgdx.
+  * [PhysicsEditor](https://www.codeandweb.com/physicseditor)

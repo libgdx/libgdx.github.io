@@ -143,7 +143,7 @@ JNIEXPORT void JNICALL Java_com_badlogic_gdx_utils_BufferUtils_copyJni___3FLjava
 }
 ```
 
-As you can see, the marshalling is inserted at the top and bottom of the method automatically in `copyJni()`. If you return from your JNI method in place other than the end of your method, jnigen will wrap your function with a second function that does all the marshalling, like here: [Java source](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-freetype/src/com/badlogic/gdx/graphics/g2d/freetype/FreeType.java#L584) and the [C++ translation](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-freetype/jni/com.badlogic.gdx.graphics.g2d.freetype.FreeType.cpp#L472).
+As you can see, the marshalling is inserted at the top and bottom of the method automatically in `copyJni()`. If you return from your JNI method in place other than the end of your method, jnigen will wrap your function with a second function that does all the marshalling, like here: [Java source](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-freetype/src/com/badlogic/gdx/graphics/g2d/freetype/FreeType.java#L584) and the [C++ translation](https://web.archive.org/web/*/https://github.com/libgdx/libgdx/blob/master/extensions/gdx-freetype/jni/com.badlogic.gdx.graphics.g2d.freetype.FreeType.cpp).
 
 jnigen outputs the Java line numbers in the generated native code, telling us where in the original Java source file the C++ appeared. This is helpful when building jnigen generated C++ code, as the Ant script will spit out errors with Java line numbers to which we can jump to by clicking on the line in the console.
 

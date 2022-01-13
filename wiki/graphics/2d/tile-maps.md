@@ -264,7 +264,7 @@ Once loaded you can treat the map just like an other TiledMap.
 ### Loading Tide maps ###
 ![images/tile-maps3.png](/assets/wiki/images/tile-maps3.png)
 
-[Tide](http://tide.codeplex.com/) is another general purpose tile map editor, available for Windows only. libGDX provides a loader for the format output by Tide.
+[Tide](https://colinvella.github.io/tIDE/) is another general purpose tile map editor, available for Windows only. libGDX provides a loader for the format output by Tide.
 
 As with TMX files, you can either load a Tide map directly or through the asset manager:
 
