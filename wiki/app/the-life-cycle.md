@@ -14,16 +14,16 @@ public class MyGame implements ApplicationListener {
    public void render () {        
    }
 
-   public void resize (int width, int height) { 
+   public void resize (int width, int height) {
    }
 
-   public void pause () { 
+   public void pause () {
    }
 
    public void resume () {
    }
 
-   public void dispose () { 
+   public void dispose () {
    }
 }
 ```

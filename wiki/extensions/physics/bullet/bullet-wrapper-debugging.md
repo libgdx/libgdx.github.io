@@ -45,13 +45,13 @@ Furthermore we need an IDE for the debugging as well as the compiler to build th
 ### Building the debug .dll ###
 This is really easy as you will find a Visual Studio Project (.sln "Solution") in the sources which should be able to work out of the box. You can find it in the libGDX repository at `libgdx\extensions\gdx-bullet\jni\vs\gdxBullet\gdxBullet.sln`.
 
-![images/Iqyi9kf.png](/assets/wiki/images/iqyi9kf.png)
+![images/Iqyi9kf.png](/assets/wiki/images/Iqyi9kf.png)
 
 After opening the solution with Visual Studio there should 6 projects visible. The most important one is `gdxBullet`. In the toolbar at the top you need to select the correct build configurations. Make sure to select `Debug` and either `Win32` or `x64`. The platform does not depend on your Windows version, but on the version of the JVM which you are going to use to run your application. On a 64bit Windows system it is still possible (and quite common) to run a 32bit Java version.
 
 Now right-click the `gdxBullet` project in the solution exporer and hit "Build". This will build the `gdxBullet.dll`, which might take a few minutes.
 
-![images/jdxPRUJ.png](/assets/wiki/images/jdxpruj.png)
+![images/jdxPRUJ.png](/assets/wiki/images/jdxPRUJ.png)
 
 ### Loading the correct DLL ###
 Usually to load the natives to run bullet it is necessary to call `Bullet.init()`, which will do exactly that. Since we do not want to load the default natives without debug information included, we have to manually load our newly created `gdxBullet.dll` ourselves. You can use the following code snippet to do so. Just replace the `customDesktopLib` string with the actual path. Then call the `initBullet()` method where you'd normally call the `Bullet.init()` method (e.g. in the `create` method).
@@ -73,7 +73,7 @@ Usually to load the natives to run bullet it is necessary to call `Bullet.init()
 ### Attaching the debugger ###
 Now it's time to start your app and attach the C++ debugger. First, we need to start the Java app. It is a nice way to set a breakpoint at the startup of your app and then run it in debug mode. That way we'll have a lot of time to attach the C++ debugger. To do that, we switch to Visual Studio and Select `Debug -> Attach to Process...`.
 
-![images/MrB0AYF.png](/assets/wiki/images/mrb0ayf.png)
+![images/MrB0AYF.png](/assets/wiki/images/MrB0AYF.png)
 
 Then select the correct `javaw.exe` process of your app in the list of available processes and attach the debugger with the "Attach" button.
 
@@ -82,10 +82,10 @@ Then select the correct `javaw.exe` process of your app in the list of available
 ### Debugging ###
 For testing if this setup works one might add a breakpoint to `btDiscreteDynamicsWorld.stepSimulation`. The file containing this code is in `gdxBullet -> Source Files -> BulletDynamics -> Dynamics -> btDiscreteDynamicsWorld.cpp`.
 
-![images/Z5sAvDh.png](/assets/wiki/images/z5savdh.png)
+![images/Z5sAvDh.png](/assets/wiki/images/Z5sAvDh.png)
 
 Search for `int btDiscreteDynamicsWorld::stepSimulation( btScalar timeStep,int maxSubSteps, btScalar fixedTimeStep)` and add a breakpoint via a doubleclick left of any code within this method.
 
-![images/uzMOe53.png](/assets/wiki/images/uzmoe53.png)
+![images/uzMOe53.png](/assets/wiki/images/uzMOe53.png)
 
 In case you stopped in a breakpoint on the Java side of the application, it is now time to remove that and resume the process. As soon as your Java code will call `btDiscreteDynamicsWorld.stepSimulation` you should now be able to switch to Visual Studio and see that the debugger kicked in and you are able to step through the code.

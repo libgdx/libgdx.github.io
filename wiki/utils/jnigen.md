@@ -45,7 +45,7 @@ public class Example {
 	static public native int add (int a, int b); /*
 		return a + b;
 	*/
-	
+
 	public static void main (String[] args) throws Exception {
 		new SharedLibraryLoader().load("my-native-lib");
 		System.out.println(add(1, 2));
@@ -192,7 +192,7 @@ BuildExecutor.executeAnt("jni/build.xml", "-v", "pack-natives");
 
 A video of Mario showing off jnigen:
 
-[![images/lxCnueL.png](/assets/wiki/images/lxcnuel.png)](http://www.youtube.com/watch?v=N2EE_jlDfrM)
+[![images/lxCnueL.png](/assets/wiki/images/lxCnueL.png)](http://www.youtube.com/watch?v=N2EE_jlDfrM)
 
 [Jglfw](https://github.com/badlogic/jglfw/blob/master/jglfw/src/com/badlogic/jglfw/Glfw.java#L268) makes extensive use of jnigen and shows how easy it can be to wrap a native API for use in Java. Note the `/*JNI` comment is used to define includes, statics, and functions.
 

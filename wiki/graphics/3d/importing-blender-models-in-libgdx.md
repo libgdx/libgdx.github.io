@@ -1,7 +1,7 @@
 ---
 title: Importing Blender models in LibGDX
 ---
-LibGDX provides its own 3D format out of the box called **G3D** (g3dj and g3db files), this article describes steps from Blender to your game using this format. **OBJ** format is partially supported and not recommended for production. Alternatively, you can use **glTF** format via third party library [gdx-gltf](https://github.com/mgsx-dev/gdx-gltf) which also provides advanced features like PBR rendering. 
+LibGDX provides its own 3D format out of the box called **G3D** (g3dj and g3db files), this article describes steps from Blender to your game using this format. **OBJ** format is partially supported and not recommended for production. Alternatively, you can use **glTF** format via third party library [gdx-gltf](https://github.com/mgsx-dev/gdx-gltf) which also provides advanced features like PBR rendering.
 
 **Note:** _while this page uses Blender for practical examples, most of it applies to **other modeling applications** as well._
 
@@ -14,7 +14,7 @@ Another size consideration may be (depending on type and amount of animations) t
 
 ### Blender Animation
 Make sure to use the Action Editor for you animation of your models. The name you provide for the animation dropsheet in blender is the animation ID you can use in your code. In the below snapshot, CubeAction would be the name. Don't forget to hit that little F to ensure the action is saved!
-![images/800px-Doc26-actionEditor.png](/assets/wiki/images/800px-doc26-actioneditor.png)
+![images/800px-Doc26-actionEditor.png](/assets/wiki/images/800px-Doc26-actionEditor.png)
 
 ### Exporting to FBX and converting to G3DB
 **Note:** _see this project [here](https://github.com/Dancovich/libgdx_blender_g3d_exporter) which converts directly from .blend files. *For Blender versions 2.8 and 2.9 this plugin appears to no longer work._
@@ -24,12 +24,12 @@ The default (preferred) method is to export to FBX. Make sure you select all and
 
 Optionally, you may also convert your file to the G3DJ format, which is a JSON format which is readily viewable with a simple text editor. `fbx-conv -f -o G3DJ file.fbx` Please note that G3DJ will take longer to load when you run your application, as it is not a binary format.
 
-Please note that there is a known limitation to using the FBX export in Blender. The current exporter only supports texface textures (i.e. textures assigned to an UV map). 
+Please note that there is a known limitation to using the FBX export in Blender. The current exporter only supports texface textures (i.e. textures assigned to an UV map).
 
 Also note that Blender exports at 1 unit = 1 meter, while libGDX imports at a scale of 1 unit = 1 cm, making imported models 100x bigger. Change the export options from the default 1.00 to 0.01 to fix. ![Changing Blender fbx export options.](https://i.imgur.com/h2Pw7HA.png)
 
 ### Setting the coordinate system (up-axis)
-The coordinate system Blender uses (z-up) is different compared to the most common system used for games (y-up). The Blender FBX exporter contains the option to change the coordinate system to y-up (which might be even the default in the FBX exporter), do not use this option, instead set it to Blender's default (z-up). 
+The coordinate system Blender uses (z-up) is different compared to the most common system used for games (y-up). The Blender FBX exporter contains the option to change the coordinate system to y-up (which might be even the default in the FBX exporter), do not use this option, instead set it to Blender's default (z-up).
 
 Fbx-conv will compensate the coordinate system by rotating the model (to y-up). However it will only be able to do this, if the fbx file itself contains the correct information. The Blender FBX exporter option will not modify the model, instead it will simply act like its y-up (causing fbx-conv unable to compensate).
 
@@ -146,7 +146,7 @@ public class ImportG3DJ implements ApplicationListener {
     @Override
     public void render() {
         cameraController.update();
-        
+
         // Clear the stuff that is left over from the previous render cycle
         Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
