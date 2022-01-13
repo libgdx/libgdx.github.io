@@ -169,7 +169,6 @@
 <details><summary>Third Party Services</summary>
 <div markdown="1">
   * [Admob in libgdx](/wiki/third-party/admob-in-libgdx)
-  * [Airpush in Libgdx](/wiki/third-party/airpush-in-libgdx)
   * [Firebase in libGDX](/wiki/third-party/firebase-in-libgdx)
   * [Google Mobile Ads in Libgdx (replaces deprecated AdMob)](/wiki/third-party/google-mobile-ads-in-libgdx)
   * [Google Play Games Services in LibGDX](/wiki/third-party/google-play-games-services-in-libgdx)
