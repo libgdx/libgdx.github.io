@@ -23,8 +23,8 @@ Building the natives is slightly more involved. The natives are built for every 
 
 To do this we use [GitHub Actions](https://github.com/libgdx/libgdx/actions), which compiles the Windows, Linux and Android natives on a Linux host and the macOS and iOS natives on a mac host. If you are interested in the behind-the-scenes stuff, you should take a look at the [gdx-jnigen project](https://github.com/libgdx/gdx-jnigen).
 
-Please note that the information below may be outdated. If you are interested in building libGDX's natives yourself, be sure to check out our actual [build configuration](https://github.com/libgdx/libgdx/blob/master/.github/workflows/build-publish.yml) on GitHub.
-{: .notice--danger}
+Please note that the information below may not be up to date. If you are interested in building libGDX's natives yourself, be sure to check out our actual [build configuration](https://github.com/libgdx/libgdx/blob/master/.github/workflows/build-publish.yml) on GitHub.
+{: .notice--info}
 
 # Linux host
 What you need:
@@ -52,15 +52,15 @@ What you need:
 - ccache (optional, use homebrew)
 
 # Compiling
-Compiling the natives is handled through gradle.
+Compiling the natives is handled through Gradle.
 
-To compile the macOS and iOS natives, run:
+To compile the **macOS and iOS** natives, run:
 
 ```
 ./gradlew jnigen jnigenBuildMacOsX64 jnigenBuildMacOsXARM64 jnigenBuildIOS
 ```
 
-To compile the Windows, Linux and Android natives, run:
+To compile the **Windows, Linux and Android** natives, run:
 
 ```
 ./gradlew jnigen jnigenBuild
