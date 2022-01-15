@@ -29,14 +29,14 @@ Please note that the information below may be outdated. If you are interested in
 # Linux host
 What you need:
 
-- 64 bit Linux distro (we use Ubuntu 13.10)
+- 64 bit Linux distro (we use Ubuntu 18.04)
 - openjdk-7-jdk
 - Ant 1.9.3+ (must be on path)
 - Maven 3+ (must be on path)
 - Android NDK r13b (ANDROID_NDK and NDK_HOME variables set)
 - Android SDK with latest targets (ANDROID_SDK variable set)
 - Compilers
-- gcc, g++, gcc-multilib, g++-multilib, (32 bit and 64 bit Linux compilers)
+- gcc, g++, gcc-multilib, g++-multilib, (64 bit Linux compilers)
 - mesa-common-dev, libxxf86vm-dev, libxrandr-dev, libx11-dev:i386, jglfw only
 - mingw-w64 (Windows compiler 32 bit and 64 bit)
 - ccache (optional)
@@ -52,18 +52,18 @@ What you need:
 - ccache (optional, use homebrew)
 
 # Compiling
-Compiling the natives is handled through **Ant** scripts.
+Compiling the natives is handled through gradle.
 
 To compile the macOS and iOS natives, run:
 
 ```
-./ant -f build-mac-ios.xml
+./gradlew jnigen jnigenBuildMacOsX64 jnigenBuildMacOsXARM64 jnigenBuildIOS
 ```
 
 To compile the Windows, Linux and Android natives, run:
 
 ```
-./ant -f build.xml -Dbuild-natives=true -Dversion=nightly
+./gradlew jnigen jnigenBuild
 ```
 
-You can also run each individual platforms script to build natives for just that platform, for example just the Android natives, just run that particular script itself, (you may have to set some extra command line properties yourself, so check out each script to see what it expects).
+You can also run each individual platforms tasks to build natives for just that platform, for example just the Android natives, just run `./gradlew jnigen jnigenBuildAndroid`. You can get the list of available tasks by running `./gradlew tasks`.
