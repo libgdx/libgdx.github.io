@@ -6,7 +6,6 @@
 # This is basically a Ruby port of https://github.com/libgdx/libgdx-site/blob/master/src/main/java/com/badlogicgames/libgdx/site/GameService.java
 # and https://github.com/libgdx/libgdx-site/blob/master/src/main/java/com/badlogicgames/libgdx/site/Versions.java
 
-=begin # doesn't work with GH Pages
 require "jekyll"
 require 'json'
 require 'open-uri'
@@ -53,5 +52,3 @@ module LibGDXFetchVersions
 
   end
 end
-
-=end
