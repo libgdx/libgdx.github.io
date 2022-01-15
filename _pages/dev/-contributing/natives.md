@@ -32,7 +32,6 @@ What you need:
 - 64 bit Linux distro (we use Ubuntu 18.04)
 - openjdk-7-jdk
 - Ant 1.9.3+ (must be on path)
-- Maven 3+ (must be on path)
 - Android NDK r13b (ANDROID_NDK and NDK_HOME variables set)
 - Android SDK with latest targets (ANDROID_SDK variable set)
 - Compilers
