@@ -1,7 +1,7 @@
 ---
 title: Bullet physics
 ---
-Bullet is a 3D Collision Detection and Rigid Body Dynamics Library. The Library is Open Source and free for commercial use, under the zlib license ([more info](http://bulletphysics.org/mediawiki-1.5.8/index.php/LICENSE)).
+Bullet is a 3D Collision Detection and Rigid Body Dynamics Library. The Library is Open Source and free for commercial use, under the zlib license ([more info](https://web.archive.org/web/20180908135816/http://bulletphysics.org/mediawiki-1.5.8/index.php/LICENSE)).
 
 The Bullet physics extension is a Java wrapper for the C++ engine. This page provides information about using that wrapper. For more documentation related to the Bullet engine, please visit [bulletphysics.org](http://bulletphysics.org). Any Bullet questions not related to libGDX specifically can best be asked on [their forum](http://www.bulletphysics.org/Bullet/phpBB3/).
 

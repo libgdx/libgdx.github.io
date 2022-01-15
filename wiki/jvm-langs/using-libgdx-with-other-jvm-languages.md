@@ -13,7 +13,7 @@ Some target platforms can’t run Java bytecodes directly, and so have more spec
     * [Using libGDX with Kotlin](/wiki/jvm-langs/using-libgdx-with-kotlin)
 * [Scala](http://www.scala-lang.org/old/faq/4)
     * [Using libGDX with Scala](/wiki/jvm-langs/using-libgdx-with-scala)
-* [Python](http://www.jython.org/jythonbook/en/1.0/JythonAndJavaIntegration.html) (Jython)
+* [Python](https://jython.readthedocs.io/en/latest/JythonAndJavaIntegration/) (Jython)
     * [Using libGDX with Python](/wiki/jvm-langs/using-libgdx-with-python)
 * [Ruby](https://github.com/jruby/jruby/wiki/CallingJavaFromJRuby) (JRuby)
 
@@ -30,7 +30,7 @@ This works for many languages, but it is sometimes unavailable. For best results
 Some examples:
 
 * [Lein-droid for Clojure](https://github.com/clojure-android/lein-droid/wiki/Tutorial)
-* [SBT-Android for Scala](http://fxthomas.github.io/android-plugin/)
+* [SBT-Android for Scala](https://github.com/scala-android/sbt-android)
 * [Kotlin on Android using the Kotlin plugin of IntelliJ IDEA](http://blog.jetbrains.com/kotlin/2013/08/working-with-kotlin-in-android-studio/) Kotlin has full support for Android and Java 6, with the same codebase/featureset.
 
 ### iOS-ROBOVM

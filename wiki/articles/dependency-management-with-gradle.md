@@ -3,7 +3,7 @@ title: Dependency management with Gradle
 ---
 ## Contents
 
-* [**Useful links**](#useful-links)
+* [**Useful Links**](#useful-links)
 * [**Guide to build.gradle**](#guide-to-buildgradle)
 * [**libGDX Dependencies**](#libgdx-dependencies)
  * [Available libGDX extensions](#libgdx-extensions)
@@ -12,11 +12,9 @@ title: Dependency management with Gradle
  * [Mavenizing Local Dependencies](#mavenizing-local-dependencies)
  * [File Dependencies](#file-dependencies)
    * [Android pitfall](#android-pitfall)
- * [Examples](#external-dependencies-examples)
-   * [Jar example](#universal-tween-engine-by-jar)
 * [**Declaring Dependencies with HTML**](#gwt-inheritance)
  * [libGDX Extension Inherits](#libgdx-extension-inherits)
-* [**Step by Step Universal Tween Engine guide**](#step-by-step-universal-tween-engine-guide)
+* [**Dependency Management for Libraries**](#dependency-management-for-libraries)
 
 ### Useful links
 Dependency management with Gradle is easy to understand, and has many different approaches.  If you are familiar with Maven or Ivy, Gradle is fully compatible with both approaches, as well as being able to support custom approaches.  If you aren't familiar with Gradle, there are great resources on their site to learn, it is recommended you give them a read to get comfortable with Gradle.
@@ -534,63 +532,6 @@ project(":android") {
 
 This is only required for the android project, all other projects inherit `flat file` dependencies OK.
 
-
-### External Dependencies Examples
-#### Universal-Tween-Engine by jar
-1. Download the jars
-2. Place jars in the directory core/libs (You can change this if you wish)
-3. Alter your **build.gradle** script in the root directory as follows:
- * Locate the :core stub where the core project's dependencies are declared
-  * Add the line in dependencies
- ```grooovy
-implementation fileTree(dir: 'libs', include: '*.jar')
-```
-   * Your script should now look a little like this:
-```groovy
-project(":core") {
-   ...
-
-    dependencies {
-        ...
-        implementation fileTree(dir: 'libs', include: '*.jar')
-    }
-}
-```
-
-**Finally** Refresh your Gradle project, either on command line or using your IDE plugin.
-
-#### Universal-Tween-Engine by locally mavenizing maven
-First, download and extract the tween-engine-api from its repository \(https://code.google.com/p/java-universal-tween-engine/). To install this dependency and its source files into your local maven repo, use these commands:
-```bash
-mvn install:install-file -Dfile=tween-engine-api.jar -DgroupId=aurelienribon -DartifactId=tweenengine -Dversion=6.3.3 -Dpackaging=jar
-
-mvn install:install-file -Dfile=tween-engine-api-sources.jar -DgroupId=aurelienribon -DartifactId=tweenengine -Dversion=6.3.3 -Dpackaging=jar -Dclassifier=sources
-```
-
-With the tween engine jars in your local maven repo, add a dependency to them in your build.gradle in the root project file.
-
-```groovy
-project(":core") {
-   ...
-
-    dependencies {
-        ...
-        implementation "aurelienribon:tweenengine:6.3.3"
-        implementation "aurelienribon:tweenengine:6.3.3:sources"
-    }
-}
-```
-
-Add the inheritance to GdxDefinition.gwt.xml and GdxDefinitionSuperdev.gwt.xml
-```xml
-<inherits name='aurelienribon.tweenengine'/>
-```
-
-Then just refresh your dependencies.
-```bash
-$ ./gradlew --refresh-dependencies
-```
-
 ### Gwt Inheritance
 Gwt is special, so in order to let the GWT compiler know what modules the project depends on, and _inherits_ from, you need to let it know.
 
@@ -619,26 +560,6 @@ These are the libGDX extensions that are supported in gwt
 * Controllers - `<inherits name='com.badlogic.gdx.controllers.controllers-gwt' />`
 * Ashley      - `<inherits name='com.badlogic.ashley_gwt' />`
 * AI          - `<inherits name='com.badlogic.gdx.ai' />`
-
-**An example: The Universal Tween Engine**
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit trunk//EN" "http://google-web-toolkit.googlecode.com/svn/trunk/distro-source/core/src/gwt-module.dtd">
-<module rename-to="html">
-	<inherits name='com.badlogic.gdx.backends.gdx_backends_gwt' />
-	<inherits name='com.badlogic.mygame.MyGame' />
-	//Let's inherit tween
-	<inherits name='aurelienribon.tweenengine'/>
-	<entry-point class='com.badlogic.mygame.client.GwtLauncher' />
-
-	<set-configuration-property name="gdx.assetpath" value="../android/assets" />
-</module>
-```
-
-#### Step by step Universal Tween Engine guide
-This guide uses everything that is explained in this article to add the Universal Tween Engine to your project as a dependency.
-
-[Click me](/wiki/articles/universal-tween-engine)
 
 ### Dependency management for libraries
 If you're creating a library that people can include in their projects via gradle, you might need to replace the _implementation_ keyword by _api_.

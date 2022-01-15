@@ -1,11 +1,11 @@
 ---
 title: Bullet Wrapper Contact callbacks
 ---
-Contact callbacks allow you to be notified when a contact/collision on two objects occur ([more info and a performance related warning](http://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers#Contact_Callbacks)).
+Contact callbacks allow you to be notified when a contact/collision on two objects occur ([more info and a performance related warning](https://web.archive.org/web/20180906172418/http://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers)).
 
-By default there are three callbacks: [`onContactAdded`](http://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers#gContactAddedCallback), [`onContactProcessed`](http://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers#gContactProcessedCallback) and [`onContactDestroyed`](http://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers#gContactDestroyedCallback)) . The wrapper adds two additional callbacks: `onContactStarted` and `onContactEnded` ([more info](http://www.bulletphysics.org/Bullet/phpBB3/viewtopic.php?t=7739&p=32470)). The callbacks are global (independent of e.g. the collision world), there can be only one implementation per callback active at any given time.
+By default there are three callbacks: [`onContactAdded`](https://web.archive.org/web/20180906172418/http://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers#gContactAddedCallback), [`onContactProcessed`](https://web.archive.org/web/20180906172418/http://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers#gContactProcessedCallback) and [`onContactDestroyed`](https://web.archive.org/web/20180906172418/http://bulletphysics.org/mediawiki-1.5.8/index.php/Collision_Callbacks_and_Triggers#gContactDestroyedCallback)) . The wrapper adds two additional callbacks: `onContactStarted` and `onContactEnded` ([more info](https://pybullet.org/Bullet/phpBB3/viewtopic.php?t=7739&p=32470)). The callbacks are global (independent of e.g. the collision world), there can be only one implementation per callback active at any given time.
 
-### <a id="Contact_Listeners"></a>Contact Listeners ###
+### Contact Listeners
 You can extend the ContactListener class to implement one or more callbacks:
 ```java
 public class MyContactListener extends ContactListener {

@@ -3,9 +3,9 @@ title: Hiero
 ---
 Hiero is a bitmap font packing tool. It saves in the [Angel Code font](http://www.angelcode.com/products/bmfont/) format, which can be used by [BitmapFont](/wiki/graphics/2d/fonts/bitmap-fonts) in libGDX applications.
 
-![](https://i.imgur.com/uLOncZF.png)
+![](/assets/wiki/images/hiero01.png)
 
-## Running Hiero ##
+## Running Hiero
 
 You can download the .jar file [here](https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/runnable-hiero.jar). Make it executable (if you are on a UNIX-like operating system) and then run it.
 
@@ -13,7 +13,7 @@ If you are using Gradle and you added "Tools" extension to your project, you can
 
 Example for IntelliJ IDEA: Go to the Hiero class, right click and select `Run Hiero.main()`. On the `Run configurations` popup that will appear, select the `Desktop` module, and click `Run`.
 
-## Rasterization ##
+## Rasterization
 
 Hiero has multiple options for rasterizing fonts:
 
@@ -23,7 +23,7 @@ Hiero has multiple options for rasterizing fonts:
 
 Hiero will output kerning information for fonts with kerning entries.
 
-## Command line arguments ##
+## Command line arguments
 
 Hiero supports 4 command line arguments:
 
@@ -32,9 +32,9 @@ Hiero supports 4 command line arguments:
 * `--batch` or `-b` makes hiero  automatically generate it's output and close to be used without human intervention.
 * `--scale <scale>` or `-s <scale>` scales the font by the specified amount.
 
-## Alternatives ##
+## Alternatives
 
-### BitmapFontWriter ###
+### BitmapFontWriter
 
 BitmapFontWriter is a class in gdx-tools which can write BMFont files from a BitmapFontData instance. This allows a font to be generated using FreeTypeFontGenerator, then written to a font file and PNG files. BitmapFontWriter has the benefit that it can be more easily run from scripts and can make use of FreeTypeFontGenerator's shadows and borders. Otherwise, the output is very similar to Hiero, though Hiero avoids writing a glyph image multiple times if different character codes render the same glyph.
 
@@ -67,44 +67,44 @@ new LwjglApplication(new ApplicationAdapter() {
 });
 ```
 
-### Glyph Designer ###
+### Glyph Designer
 
-[Glyph Designer](http://www.71squared.com/glyphdesigner) is a commercial bitmap font tool designed specifically for Mac. It allows you to create beautifully styled text with custom backgrounds, gradient fills, gradient strokes & shadows. The command line interface allows you to export multi-lingual character sets and target multiple device profiles. At time of writing Glyph Designer is priced at $39.99.
+[Glyph Designer](https://www.71squared.com/glyphdesigner) is a commercial bitmap font tool designed specifically for Mac. It allows you to create beautifully styled text with custom backgrounds, gradient fills, gradient strokes & shadows. The command line interface allows you to export multi-lingual character sets and target multiple device profiles. At time of writing Glyph Designer is priced at $39.99.
 
-### BMFont ###
+### BMFont
 
 The [BMFont](http://www.angelcode.com/products/bmfont/) tool uses FreeType. It has additional supersampling features for smoother glyphs. BMFont does not support effects like drop-shadows or outlines, but glyphs can be output with padding and effects applied with Paint.NET, Photoshop, etc. Typical export settings are [here](http://wiki.libgdx.googlecode.com/git/img/bmfont-export.png).
 
-BMFont is Windows only but can be run using [Wine](http://www.winehq.org/). There are reports that it hangs if the space character is exported. The space character can be added manually, eg:
+BMFont is Windows only but can be run using [Wine](https://www.winehq.org/). There are reports that it hangs if the space character is exported. The space character can be added manually, eg:
 ```
 char id=32   x=0   y=0    width=0     height=0     xoffset=0    yoffset=0    xadvance=3     page=0  chnl=15
 ```
 Change the xadvance as needed, this is the number of pixels for a space character.
 
-### TWL Theme Editor ###
+### TWL Theme Editor
 
-The [TWL](http://twl.l33tlabs.org/) Theme Editor has a font tool that also uses FreeType. It doesn't support the supersampling. [Theme Editor JWS](http://twl.l33tlabs.org/themer/themer.jnlp).
+The [TWL](http://twl.l33tlabs.org/) Theme Editor has a font tool that also uses FreeType. It doesn't support the supersampling. [Theme Editor JWS](https://web.archive.org/web/20180113081423/http://twl.l33tlabs.org/themer/themer.jnlp).
 
-### gdx-fontpack ###
+### gdx-fontpack
 
 The [gdx-fontpack](https://github.com/mattdesl/gdx-fontpack) tool also uses FreeType. It doesn't yet support supersampling.
 
-### FontPacker ###
+### FontPacker
 
-The [FontPacker](http://www.java-gaming.org/topics/fontpacker-pack-truetype-fonts-into-your-game/30219/view.html) tool is written in C# and uses .NET's TextRenderer, FontFamily, and Graphics classes to render.
+The [FontPacker](https://web.archive.org/web/20190910225125/http://www.java-gaming.org/topics/fontpacker-pack-truetype-fonts-into-your-game/30219/view.html) tool is written in C# and uses .NET's TextRenderer, FontFamily, and Graphics classes to render.
 
-### ShoeBox ###
+### ShoeBox
 
 [ShoeBox](http://renderhjs.net/shoebox/) has a tool for creating Angel Code fonts.
 
-### JME ###
+### JME
 
-jMonkeyEngine has an Angel Code [font tool](http://jmonkeyengine.org/groups/jmonkeyplatform/forum/topic/font-creator-for-jmp/), though it looks simplistic and most likely uses Java's font rendering.
+jMonkeyEngine has an Angel Code [font tool](https://web.archive.org/web/20120104011845/http://jmonkeyengine.org/groups/jmonkeyplatform/forum/topic/font-creator-for-jmp/), though it looks simplistic and most likely uses Java's font rendering.
 
-### bmglyph ###
+### bmglyph
 
-The [bmglyph](http://www.bmglyph.com//) tool is for OS X only and hasn't been evaluated.
+The [bmglyph](http://www.bmglyph.com/) tool is for OS X only and hasn't been evaluated.
 
-### Littera ###
+### Littera
 
-http://kvazars.com/littera/
+[https://kvazars.com/littera/littera.swf](https://kvazars.com/littera/littera.swf) (requires [Adobe Flash Player](https://www.adobe.com/support/flashplayer/debug_downloads.html))
