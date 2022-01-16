@@ -19,7 +19,7 @@ github_username: libgdx
 
 repository: libgdx/libgdx.github.io
 url: https://libgdx.com
-baseurl: ""
+baseurl: "" # prevent jekyll-github-metadata from setting an unwanted default value
 
 # Search, Google
 google_site_verification: "qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8"
@@ -50,7 +50,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-remote-theme
   - jekyll-github-metadata
-  - jekyll-last-modified-at
+#  - jekyll-last-modified-at
 
 # Footer
 footer:
