@@ -8,7 +8,7 @@ layout: default_wiki
     {% if page.title %}<h1 id="page-title" class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
 
     <div class="header-meta">
-      {% if page.last_modified_at %}Last edited on {{ page.last_modified_at | date: '%d %B %Y' }} • {% endif %}<a href="{{ site.github.repository_url }}/commits/dev/{{ page.path }}">View revision history</a> • <a href="{{ site.github.repository_url }}/edit/dev/{{ page.path }}">Edit on GitHub</a>
+      {% comment %}{% if page.last_modified_at %}Last edited on {{ page.last_modified_at | date: '%d %B %Y' }} • {% endif %}{% endcomment %}<a href="{{ site.github.repository_url }}/commits/dev/{{ page.path }}">View revision history</a> • <a href="{{ site.github.repository_url }}/edit/dev/{{ page.path }}">Edit on GitHub</a>
     </div>
   </header>
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">

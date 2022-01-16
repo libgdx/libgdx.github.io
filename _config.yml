@@ -19,6 +19,7 @@ github_username: libgdx
 
 repository: libgdx/libgdx.github.io
 url: https://libgdx.com
+baseurl: ""
 
 # Search, Google
 google_site_verification: "qc0iys9Aweas1z8EhICO-0Ohwh6Iq1GDV6K75e0ToO8"
