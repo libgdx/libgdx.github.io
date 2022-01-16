@@ -1,6 +1,7 @@
 ---
 title: "Discord"
 permalink: community/discord/
+sitemap: false
 ---
 <meta http-equiv="refresh" content="0; https://discord.gg/6pgDK9F">
 <link rel="canonical" href="https://discord.gg/6pgDK9F" />
