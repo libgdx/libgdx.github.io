@@ -30,6 +30,9 @@ The next step is dependent on your IDE:
 
 You need to replace additional files for some releases. They are listed here:
 
+#### Update to release 1.9.13+
+Since version 1.9.13, breaking changes and corresponding migration steps are explicitly mentioned in our changelogs. Take a look at them [here](https://libgdx.com/news/changelog/).
+
 #### Update to release 1.9.12
 
 * HTML: You can delete the soundmanager files for HTML Project and the references in index.html
