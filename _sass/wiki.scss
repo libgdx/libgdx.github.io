@@ -10,6 +10,7 @@ article.page {
 @media (min-width: 64em) {
     .page {
         padding-right: 300px !important;
+        min-height: 1400px; // = sidebar height
     }
 }
 
