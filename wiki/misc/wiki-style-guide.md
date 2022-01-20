@@ -77,7 +77,7 @@ Images are stored in the [`assets/wiki/` directory](https://github.com/libgdx/li
 
 Actual libGDX examples can be embedded via GWT as iframes. To do this, use the `embed-gwt` element on a wiki page:
 ```yml
-{% include embed-gwt.html dir='viewport-example' %}
+{% raw %}{% include embed-gwt.html dir='viewport-example' %}{% endraw %}
 ```
 
 `dir` refers to the directory in the [libgdx-wiki-examples](https://github.com/libgdx/libgdx-wiki-examples) repo, where the source code of the examples is located. In particular, it denotes the path to the root folder of the example's Gradle project (without leading and trailing slashes; in this case, `viewport-example` refers to the  `/viewport-example/` folder which contains `/html/build.gradle`). The examples are automatically built via GH Actions (by calling `./gradlew html:dist`) and then deployed through GH Pages.
