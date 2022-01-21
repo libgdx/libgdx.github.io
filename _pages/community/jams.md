@@ -20,24 +20,24 @@ toc_sticky: false
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
 ## March 2022
-Jam Suggestions: 13th-15th 
-Jam Voting: 17th-19th 
-Jam: 20th-26th 
+Jam Suggestions: 13th-15th  
+Jam Voting: 17th-19th  
+Jam: 20th-26th
 
 ## June
-Jam Suggestions: 12th-14th 
-Jam Voting: 16th-18th 
-Jam: 19th-25th 
+Jam Suggestions: 12th-14th  
+Jam Voting: 16th-18th  
+Jam: 19th-25th
 
 ## September 2022
-Jam Suggestions: 11th-13th 
-Jam Voting: 15th-17th 
-Jam: 18th-24th 
+Jam Suggestions: 11th-13th  
+Jam Voting: 15th-17th  
+Jam: 18th-24th
 
 ## December 2022
-Jam Suggestions: 4th-6th 
-Jam Voting: 8th-10th 
-Jam: 11th-17th 
+Jam Suggestions: 4th-6th  
+Jam Voting: 8th-10th  
+Jam: 11th-17th
 
 <br/>
 
