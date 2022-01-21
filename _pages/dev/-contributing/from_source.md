@@ -58,6 +58,7 @@ If you set everything up correctly, you can try to give the libGDX tests a go.
 
 You can directly run individual tests and/or configure the test starter by setting its program arguments: `[options] [Test class name]`, possible options being:
 
+- `--angle` enables the Angle emulation (default is disabled)
 - `--gl30` enable GLES 3 with core profile 3.2 (default is GLES 2.0)
 - `--glErrors` enable GLProfiler and log any GL errors (default is disabled)
 
