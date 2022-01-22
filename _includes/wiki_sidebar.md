@@ -206,6 +206,7 @@
 * [Coordinate systems](/wiki/articles/coordinate-systems)
 * [Memory management](/wiki/articles/memory-management)
 * [Updating Your libGDX Version](/wiki/articles/updating-libgdx)
+* [Dependency management with Gradle](/wiki/articles/dependency-management-with-gradle)
 * [Adding Extensions and 3rd Party Libraries](/wiki/articles/dependency-management-with-gradle)
 * [Improving Your Gradle Workflow](/wiki/articles/improving-workflow-with-gradle)
 * [Creating Asset Project in Eclipse](/wiki/articles/creating-a-separate-assets-project-in-eclipse)

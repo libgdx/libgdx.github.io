@@ -58,6 +58,7 @@ If you set everything up correctly, you can try to give the libGDX tests a go.
 
 You can directly run individual tests and/or configure the test starter by setting its program arguments: `[options] [Test class name]`, possible options being:
 
+- `--angle` enables the Angle emulation (default is disabled)
 - `--gl30` enable GLES 3 with core profile 3.2 (default is GLES 2.0)
 - `--glErrors` enable GLProfiler and log any GL errors (default is disabled)
 
@@ -79,7 +80,7 @@ To use your local changes in another project, you can install libGDX to your loc
 ./gradlew publishToMavenLocal
 ```
 
-This will build and install libGDX and all core components to your local maven repository with the current version declared in the gradle.properties file. If you are working with an older branch of libGDX, try `mvn install` instead.
+This will build and install libGDX and all core components to your local maven repository with the current version declared in the gradle.properties file. If you are working with an older branch of libGDX, try `mvn install` instead. If you want to include a local libGDX project as dependency without having to publish it after every change, add `includeBuild "<path-to-libgdx-repo>"` to a `settings.gradle` file in your other project.
 
 <br/>
 

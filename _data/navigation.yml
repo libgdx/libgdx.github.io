@@ -1,3 +1,4 @@
+# Main Top Nav Bar
 main:
   - title: "News"
     url: /news/
@@ -9,11 +10,13 @@ main:
     url: /dev/
   - title: "Community"
     url: /community/
+# /wiki/ Top Nav Bar
 wiki:
   - title: "Back to Main Site"
     url: /
   - title: "Wiki Home"
     url: /wiki/
+# /dev/ Sidebar
 dev:
   - title: "Documentation"
     children:
