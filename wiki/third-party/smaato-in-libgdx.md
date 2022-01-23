@@ -362,8 +362,9 @@ One more time, let me walk you through this code snippet:
 * `showRewarded` is supposed to be called whenever a user initiates a rewarded ad flow in your game
 
 # Test Ads #
+
 | Adspace ID    | Type               |
-| ------------- |--------------------|
+| ------------- | ------------------ |
 | 130626424     | Rich Media         |
 | 130635694     | Static Image       |
 | 130635706     | MRAID              |
