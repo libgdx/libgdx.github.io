@@ -364,7 +364,7 @@ One more time, let me walk you through this code snippet:
 # Test Ads #
 
 | Adspace ID    | Type               |
-| ------------- | -------------------- |
+| ------------- | ------------------ |
 | 130626424     | Rich Media         |
 | 130635694     | Static Image       |
 | 130635706     | MRAID              |
