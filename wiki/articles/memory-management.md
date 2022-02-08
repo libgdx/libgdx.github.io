@@ -3,7 +3,7 @@ title: Memory management
 ---
 Games are resource heavy applications. Images and sound effects can take up a considerable amount of RAM. Also, most of these resources are not managed by the Java garbage collector. Instead they are managed by native drivers. Having the garbage collector decide when to release a 5 megabyte texture from video ram wouldn't be a too bright idea either.
 
-We want fine grained control over the life-time of our resources. There are multiple classes in libGDX which represent such resources. They all implement a common [Disposable](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Disposable.html) interface which indicates that instances of this class need to be disposed of manually at the end of the life-time. **Failure to dispose resources will lead to severe memory leaks!**.
+We want fine grained control over the life-time of our resources. There are multiple classes in libGDX which represent such resources. They all implement a common [Disposable](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Disposable.html) interface which indicates that instances of this class need to be disposed of manually at the end of the life-time. **Failure to dispose resources will lead to severe memory leaks!**
 
 The following classes need to be disposed of manually (might not be complete, [click here](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/utils/Disposable.html) instead for the full list):
 
