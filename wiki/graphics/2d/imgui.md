@@ -16,7 +16,7 @@ This is an example demonstrating what ImGui is capable of:
 
 <br/>
 
-# First steps using [kotlin-graphics' binding](https://github.com/kotlin-graphics/imgui)
+# Option 1: [kotlin-graphics' binding](https://github.com/kotlin-graphics/imgui)
 
 There is an elaborate wiki entry over in the Kotlin-graphics's repo, detailing how ImGui can be used together with libGDX: https://github.com/kotlin-graphics/imgui/wiki/Using-libGDX
 
@@ -57,7 +57,7 @@ IO.fonts.addFontFromFileTTF("extraFonts/ArialUni.ttf", 18f, glyphRanges = IO.fon
 
 # First steps using [SpaiR's bindings](https://github.com/SpaiR/imgui-java)
 ### Required Dependencies
-```
+```groovy
 "io.github.spair:imgui-java-binding:<version>"
 "io.github.spair:imgui-java-lwjgl3:<version>"
 "io.github.spair:imgui-java-natives-linux:<version>"
