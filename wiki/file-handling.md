@@ -14,9 +14,7 @@ title: File handling
 
 
 ## Introduction ##
-libGDX applications run on four different platforms: desktop systems (Windows, Linux, Mac OS X, headless), Android, iOS, and JavaScript/WebGL capable browsers. Each of these platforms handles file I/O a little differently.
-
-Libgdx's [Files](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Files.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/Files.java) module provides the ability to:
+libGDX applications run on four different platforms: desktop systems (Windows, Linux, macOS, headless), Android, iOS, and JavaScript/WebGL capable browsers. Each of these platforms handles file I/O a little differently. libGDX's [Files](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Files.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/Files.java) module provides a common interface for all these platforms with the ability to:
 
   * Read from a file
   * Write to a file
@@ -26,18 +24,16 @@ Libgdx's [Files](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic
   * List files and directories
   * Check whether a file/directory exists
 
-Before we can dive into that aspect of Libgdx, we have to first review the different notions of filesystems for all supported platforms.
+Before diving into the specifics of libGDX's file handling, users should be aware of certain differences between the filesystems for all supported platforms:
 
 ## Platform Filesystems ##
-Here we review the filesystem paradigms of the platforms libGDX supports
-
 ### Desktop (Windows, Linux, Mac OS X, Headless) ###
 On a desktop OS, the filesystem is one big chunk of memory. Files can be referenced with paths relative to the current working directory (the directory the application was executed in) or absolute paths. Ignoring file permissions, files and directories are usually readable and writable by all applications.
 
 ### Android
 On Android the situation is a little bit more complex. Files can be stored inside the application's [APK](http://en.wikipedia.org/wiki/APK_(file_format)) either as resources or as assets. These files are read-only. libGDX only uses the [assets mechanism](http://developer.android.com/reference/android/content/res/AssetManager.html), as it provides raw access to the byte streams and more closely resembles a traditional filesystem. [Resources](http://developer.android.com/guide/topics/resources/index.html) better lend themselves to normal Android applications but introduce problems when used in games. Android manipulates them at load time, e.g. it automatically resizes images.
 
-Assets are stored in your Android project's `assets` directory and will be packaged with your APK automatically when you deploy your application and are accessible via `Gdx.files.internal`, a read-only directory not to be confused with what the Android documentation refers to as "internal". No other application on the Android system can access these files.
+Assets are stored in your project's `assets` directory and will be packaged with your APK automatically when you deploy your application. They are accessible via `Gdx.files.internal`, a read-only directory not to be confused with what the Android documentation refers to as "internal". No other application on the Android system can access these files.
 
 Files can also be stored on what the Android documentation refers to as [internal storage](http://developer.android.com/guide/topics/data/data-storage.html#filesInternal) (accessible via `Gdx.files.local` in LibGDX), where they are readable and writable. Each installed application has a dedicated internal storage directory. This directory is again only accessible by that application. One can think of this storage as a private working area for the application.
 
@@ -48,10 +44,12 @@ Finally, files can be stored on the external storage, accessible via `Gdx.files.
 
 The App external storage is initialized at game start for you to use, therefore Android creates an empty directory. If you don't use external files and want to suppress this behaviour, you can do so by overriding the instantiation of `AndroidFiles` in `AndroidApplication#createFiles` (1.9.14 and up):
 
+```java
 	protected AndroidFiles createFiles() {
 		this.getFilesDir(); // workaround for Android bug #10515463
 		return new DefaultAndroidFiles(this.getAssets(), this, false);
 	}
+```
 
 ### iOS ###
 On iOS all file types are available.
@@ -96,31 +94,31 @@ String locRoot = Gdx.files.getLocalStoragePath();
 
 ## Obtaining FileHandles ##
 A `FileHandle` is obtained by using one of the aforementioned types directly from the *Files* module.
-The following code obtains a handle for the internal myfile.txt file.
+The following code obtains a handle for the internal `myfile.txt file`.
 
 ```java
 FileHandle handle = Gdx.files.internal("data/myfile.txt");
 ```
 
-If you used the [libGDX Setup application](/wiki/start/project-generation), this file will be contained in your Android project's `assets` folder, `$ANDROID_PROJECT/assets/data` to be exact. Your desktop and html projects link to this folder in Eclipse, and will pick it up automatically when executed from within Eclipse.
+If you used the [gdx-setup tool](/wiki/start/project-generation), this file will be contained in your project's `assets` folder, `/assets/data` to be specific. Your desktop and html projects link to this folder in Eclipse, and will pick it up automatically when executed from within Eclipse.
 
 ```java
 FileHandle handle = Gdx.files.classpath("myfile.txt");
 ```
 
-The “myfile.txt” file is located in the directory where the compiled classes reside or the included jar files.
+The `myfile.txt` file is located in the directory where the compiled classes reside or the included jar files.
 
 ```java
 FileHandle handle = Gdx.files.external("myfile.txt");
 ```
 
-In this case, “`myfile.txt`” needs to be in the users’ [home directory](http://wikipedia.org/wiki/Home_directory) (`/home/<user>/myfile.txt` on Linux, `/Users/<user>/myfile.txt` on OSX and `C:\Users\<user>\myfile.txt` on Windows) on desktop, and in the root of the SD card on Android.
+In this case, `myfile.txt` needs to be in the users’ [home directory](http://wikipedia.org/wiki/Home_directory) (`/home/<user>/myfile.txt` on Linux, `/Users/<user>/myfile.txt` on macOS and `C:\Users\<user>\myfile.txt` on Windows) on desktop, and in the root of the SD card on Android.
 
 ```java
 FileHandle handle = Gdx.files.absolute("/some_dir/subdir/myfile.txt");
 ```
 
-In the case of absolute file handle, the file has to be exactly where the full path points. In `/some_dir/subdir/` of the current drive on Windows or the exact path on linux, MacOS and Android.
+In the case of absolute file handle, the file has to be exactly where the full path points. In `/some_dir/subdir/` of the current drive on Windows or the exact path on linux, macOS and Android.
 
 FileHandle instances are passed to methods of classes they are responsible for reading and writing data. E.g. a FileHandle needs to be specified when loading an image via the Texture class, or when loading an audio file via the Audio module.
 
@@ -145,7 +143,7 @@ for(FileHandle file: files) {
 
 **WARNING**: If you don't specify a folder the list will be empty.
 
-**Note**: Listing of internal directories is not supported on Desktop.
+**Note**: Listing of internal directories is not supported on Desktop. To work around this problem, you can [generate a list of files before deployment](https://lyze.dev/2021/04/29/libGDX-Internal-Assets-List/).
 
 We can also ask for the parent directory of a file or create a FileHandle for a file in a directory (aka "child").
 
