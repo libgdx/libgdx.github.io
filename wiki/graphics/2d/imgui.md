@@ -55,7 +55,7 @@ ImGui supports also other languages, such as japanese, initiliazed [here](https:
 IO.fonts.addFontFromFileTTF("extraFonts/ArialUni.ttf", 18f, glyphRanges = IO.fonts.glyphRangesJapanese)!!
 ```
 
-# First steps using [SpaiR's bindings](https://github.com/SpaiR/imgui-java)
+# Option 2: [SpaiR's bindings](https://github.com/SpaiR/imgui-java)
 ### Required Dependencies
 ```groovy
 "io.github.spair:imgui-java-binding:<version>"
