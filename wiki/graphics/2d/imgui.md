@@ -69,13 +69,13 @@ IO.fonts.addFontFromFileTTF("extraFonts/ArialUni.ttf", 18f, glyphRanges = IO.fon
 The following instructions detail how ImGui can be used on top of a 3D scene in libGDX.
 
 1. Initialize ImGui at the beginning of the program:
-```
+```java
 ImGuiImplGlfw imGuiGlfw = new ImGuiImplGlfw();
 ImGuiImplGl3 imGuiGl3 = new ImGuiImplGl3();
 ```
 
 2. In `create()`:
-```
+```java
 // create 3D scene
 GLFWErrorCallback.createPrint(System.err).set();
 if (!glfwInit())
@@ -94,7 +94,7 @@ imGuiGl3.init(glslVersion);
 ```
 
 3. In `render()`:
-```
+```java
 // render 3D scene
 imGuiGlfw.newFrame();
 ImGui.newFrame();
@@ -106,7 +106,7 @@ glfwPollEvents();
 ```
 
 4. In `dispose()`:
-```
+```java
 imGuiGl3.dispose();
 imGuiGlfw.dispose();
 ImGui.destroyContext();
