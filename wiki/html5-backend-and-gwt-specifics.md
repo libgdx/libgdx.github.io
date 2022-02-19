@@ -93,6 +93,9 @@ protected void adjustMeterPanel(Panel meterPanel, Style meterStyle) {
 
 "preloadlogo.png" is an image you place in the "webapp" folder in the HTML project for DIST builds. Place the image in your "war" folder as well for your SUPERDEV builds. Adjust your color to fit the theme of your game. Enjoy yourself.
 
+Please note that you can only use pure GWT facilities to display the loading screen. libGDX APIs will only be available after the preloading is complete.
+{: .notice--primary}
+
 ## Speeding up preload process
 
 Speaking of the preloader: The HTML5 preloader is necessary, because usual gdx games rely on all assets being ready to access when needed. It prefetches every file in your asset directory. This may take some time and is not necessary if your game is a game that does not need all assets for presenting the startup screen. Think of all the people out there not having high speed internet connections.

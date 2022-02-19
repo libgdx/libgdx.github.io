@@ -13,13 +13,14 @@ title: Starter classes and configuration
 * [HTML5/GWT](#html5gwt)
 
 
-For each target platform, a starter class has to be written. This class instantiates a back-end specific `Application` implementation and the `ApplicationListener` that implements the application logic. The starter classes are platform dependent, let's have a look at how to instantiate and configure these for each back-end.
+For each target platform, a starter class has to be written. This class instantiates a back-end specific `Application` implementation and the `ApplicationListener` that implements the application logic. The starter classes are platform-dependent, so let's have a look at how to instantiate and configure these for each backend.
 
-This article assumes you have followed the instruction in [Project Setup](https://libgdx.com/dev/project-generation/), [Importing & Running a Project](https://libgdx.com/dev/import-and-running/) and therefore have imported the generated core, desktop, Android and HTML5 projects into Eclipse.
+This article assumes you have followed the instructions in [Project Setup](https://libgdx.com/dev/project-generation/) as well as [Importing & Running a Project](https://libgdx.com/dev/import-and-running/) and you therefore have already set up the project in your IDE.
+{: .notice--info}
 
 # Desktop (LWJGL3) #
 
-Since libGDX version 1.10.1, this has been the default desktop backend. You can find more information [here](https://libgdx.com/news/2021/07/devlog-7-lwjgl3).
+Since libGDX version 1.10.1, this has been the default desktop backend. You can find more information [here](/news/2021/07/devlog-7-lwjgl3).
 {: .notice--info}
 
 Opening the `DesktopLauncher.java` class in `my-gdx-game` shows the following:
@@ -61,11 +62,10 @@ From there on a window is created and the ApplicationListener is invoked as desc
       exclude group: 'com.badlogicgames.gdx', module: 'gdx-backend-lwjgl'
    }
    ```
-   The cause of this is described [here](https://github.com/libgdx/libgdx/issues/3726#issuecomment-266227745).
 
 # Desktop (LWJGL) #
 
-In version 1.10.1, libGDX switched its default desktop backend to LWJGL 3. If you want to upgrade, please take a look [here](https://libgdx.com/news/2021/07/devlog-7-lwjgl3#how-can-i-migrate).
+In version 1.10.1, libGDX switched its default desktop backend to LWJGL 3. If you want to upgrade, please take a look [here](/news/2021/07/devlog-7-lwjgl3#how-can-i-migrate).
 {: .notice--warning}
 
 Opening the `DesktopLauncher.java` class in `my-gdx-game` shows the following:
@@ -89,7 +89,7 @@ public class DesktopLauncher {
 }
 ```
 
-First an [LwjglApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-lwjgl/src/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.java) is instantiated. This class lets one specify various configuration settings, such as the initial screen resolution, whether to use OpenGL ES 2.0 or 3.0 (Experimental) and so on. Refer to the [Javadocs](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.html) of this class for more information.
+First an [LwjglApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-lwjgl/src/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.java) is instantiated. This class lets one specify various configuration settings, such as the initial screen resolution, whether to use OpenGL ES 2.0 or 3.0 and so on. Refer to the [Javadocs](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.html) of this class for more information.
 
 Once the configuration object is set, an `LwjglApplication` is instantiated. The `MyGdxGame()` class is the ApplicationListener implementing the game logic.
 
@@ -127,9 +127,9 @@ public class MainActivity extends AndroidApplication {
 }
 ```
 
-The main entry-point method is the Activity's `onCreate()` method. Note that `MainActivity` derives from `AndroidApplication`, which itself derives from `Activity`. As in the desktop starter class, a configuration instance is created ([AndroidApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-android/src/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.java)). Once configured, the `AndroidApplication.initialize()` method is called, passing in the `ApplicationListener`, `MyGdxGame`)\ as well as the configuration. Refer to the [AndroidApplicationConfiguration Javadocs](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.html) for more information on what configuration settings are available.
+The main entry-point method is the Activity's `onCreate()` method. Note that `MainActivity` derives from `AndroidApplication`, which itself derives from `Activity`. As in the desktop starter class, a configuration instance is created ([AndroidApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-android/src/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.java)). Once configured, the `AndroidApplication.initialize()` method is called, passing in the `ApplicationListener` (`MyGdxGame`) as well as the configuration. Refer to the [AndroidApplicationConfiguration Javadocs](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.html) for more information on what configuration settings are available.
 
-Android applications can have multiple activities. libGDX games should usually only consist of a single activity. Different screens of the game are implemented within libgdx, not as separate activities. The reason for this is that creating a new `Activity` also implies creating a new OpenGL context, which is time consuming and also means that all graphical resources have to be reloaded.
+Android applications can have multiple activities. libGDX games should usually only consist of a single activity. Different screens of the game are implemented within libGDX, not as separate activities. The reason for this is that creating a new `Activity` also implies creating a new OpenGL context, which is time consuming and also means that all graphical resources have to be reloaded.
 
 ## Game Fragment ##
 
@@ -292,7 +292,7 @@ public class MyLiveWallpaper extends AndroidLiveWallpaperService {
 }
 ```
 
-Coming in libGDX 1.9.12, or available from -SNAPSHOT now, you can also report the dominant colors of the wallpaper to
+Since libGDX 1.9.12, you can also report the dominant colors of the wallpaper to
 the OS. Starting with Android 8.1, this is used by some Android launchers and lock screens for styling, such as changing
 the text color of the clock. You can create a method like this to report the colors, and access it from the core module
 using the strategy from [Interfacing With Platform-Specific Code](/wiki/app/interfacing-with-platform-specific-code):
@@ -413,7 +413,9 @@ and the Screen Saver service must both be set with `exported` true so they can b
 ```
 
 # iOS/Robovm #
-To come..
+
+[ToDo]
+
 # HTML5/GWT #
 The main entry-point for an HTML5/GWT application is a `GwtApplication`. Open `GwtLauncher.java` in the my-gdx-game-html5 project:
 
@@ -459,49 +461,15 @@ In the example project setup, the module file of the html5 project looks like th
 
 This specifies two other modules to inherit from (gdx-backends-gwt and the core project) as well as the entry-point class (`GwtLauncher` above) and a path relative to the html5 project's root directory, pointing to the assets directory.
 
-Both the gdx-backend-gwt jar and the core project have a similar module file, specifying other dependencies. *You can not use jars/projects which do not contain a module file and source!*
+Both the gdx-backend-gwt jar and the core project have a similar module file, specifying other dependencies. *You cannot use jars/projects which do not contain a module file and source!*
 
 For more information on modules and dependencies refer to the [GWT Developer Guide](https://developers.google.com/web-toolkit/doc/1.6/DevGuide).
 
-### Reflection Support ###
-GWT does not support Java reflection for various reasons. libGDX has an internal emulation layer that will generate reflection information for a select few internal classes. This means that if you use the [Json serialization](/wiki/utils/reading-and-writing-json) capabilities of libgdx, you'll run into issues. You can fix this by specifying for which packages and classes reflection information should be generated for. To do so, you can put configuration properties in your GWT project's gwt.xml file like so:
+### GWT Specifics ###
 
-```xml
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<module>
-    ... other elements ...
-    <extend-configuration-property name="gdx.reflect.include" value="org.softmotion.explorers.model" />
-    <extend-configuration-property name="gdx.reflect.exclude" value="org.softmotion.explorers.model.HexMap" />
-</module>
-```
+The HTML backend has a number of caveats. Be sure to check out the  comprehensive [HTML Backend Guide](/wiki/html5-backend-and-gwt-specifics#differences-between-gwt-and-desktop-java)!
+{: .notice--warning}
 
-You can add multiple packages and classes by adding more extend-configuration-property elements.
+GWT does not support Java **reflection** for various reasons. libGDX has an internal emulation layer that will generate reflection information for a select few internal classes. This means that if you use the [Json serialization](/wiki/utils/reading-and-writing-json) capabilities of libGDX, you'll run into issues. You can fix this by specifying for which packages and classes reflection information should be generated for. To do so, take a look at the [Reflection Guide](/wiki/utils/reflection#gwt).
 
-This feature is experimental, use at your own risk.
-
-### Loading Screen ###
-
-A libGDX HTML5 application preloads all assets found in the `gdx.assetpath`. During this loading process, a loading screen is displayed which is implemented via GWT widget. If you want to customize this loading screen, you can simply overwrite the `GwtApplication.getPreloaderCallback()` method (`GwtLauncher` in the above example).
-
-From 1.9.10 on, the following code changes the colors of the progress bar and the displayed logo to a file placed within your webapp folder:
-
-```java
-@Override
-public Preloader.PreloaderCallback getPreloaderCallback() {
-    return createPreloaderPanel(GWT.getHostPageBaseURL() + "preloadlogo.png");
-}
-
-@Override
-protected void adjustMeterPanel(Panel meterPanel, Style meterStyle) {
-    meterPanel.setStyleName("gdx-meter");
-    meterPanel.addStyleName("nostripes");
-    meterStyle.setProperty("backgroundColor", "#ffffff");
-    meterStyle.setProperty("backgroundImage", "none");
-}
-```
-
-Prior to 1.9.10, it is best to copy all `getPreloaderCallback()` content from libGDX' sources and adjust it to your needs.
-
-Note that you can only use pure GWT facilities to display the loading screen, libGDX APIs will only be available after the preloading is complete.
-
-[Prev](/wiki/app/modules-overview) | [Next](/wiki/app/querying)
+A libGDX HTML5 application preloads all assets found in the `gdx.assetpath`. During this loading process, a **loading screen** is displayed which is implemented via GWT widget. If you want to customize this loading screen, you can simply overwrite the `GwtApplication.getPreloaderCallback()` method (in `GwtLauncher` in the above example). An example can be found [here](/wiki/html5-backend-and-gwt-specifics#changing-the-load-screen-progress-bar).

@@ -28,7 +28,7 @@ public class MyGame implements ApplicationListener {
 }
 ```
 
-One can also derive from the [ApplicationAdapter](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/ApplicationAdapter.html) class if not all interface methods are of relevance.
+One can also derive from the [ApplicationAdapter](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/ApplicationAdapter.html) class, which provides empty default implementations for those methods.
 
 Once passed to the `Application`, the `ApplicationListener` methods will be called as follows:
 
@@ -50,5 +50,3 @@ libGDX is event driven by nature, mostly due to the way Android and Javascript w
 
 ## See also
 [libGDX and Android lifecycle](http://bitiotic.com/blog/2013/05/23/libgdx-and-android-application-lifecycle/) if you are aiming for Android. The article also explains why you should not use static variables.
-
-[Prev](/wiki/app/the-application-framework) | [Next](/wiki/app/modules-overview)

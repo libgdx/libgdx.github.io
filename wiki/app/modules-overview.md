@@ -15,9 +15,10 @@ The following diagram shows the modules in a simple game architecture:
 
 ![images/modules-overview.png](/assets/wiki/images/modules-overview.png)
 
-The following part briefly describes each module providing the most common use cases for each.
-
 ## Modules ##
+
+The following part briefly describes each module providing the most common use cases for each. For more in-depth information, be sure to check out the individual wiki sections for the respective modules!
+{: .notice--primary}
 
 ### Input ###
 The _Input_ module enables the polling of different input states on every platform.
@@ -120,6 +121,3 @@ HttpRequest httpRequest = requestBuilder.newRequest()
    .build();
 Gdx.net.sendHttpRequest(httpRequest, httpResponseListener);
 ```
-
-
-[Prev](/wiki/app/the-life-cycle) | [Starter classes and configuration](/wiki/app/starter-classes-and-configuration)
