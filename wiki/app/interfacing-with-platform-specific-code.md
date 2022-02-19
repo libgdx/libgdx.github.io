@@ -1,13 +1,9 @@
 ---
 title: Interfacing with platform specific code
 ---
-Here's a [forum discussion](https://web.archive.org/web/20200427014652/https://www.badlogicgames.com/forum/viewtopic.php?f=11&t=9072&p=41323#p41323) on the matter, also mentioning iOS specific things.
+Oftentimes it can become necessary to access platform specific APIs, e.g., adding advertisement services or a leaderboard functionality. This can be achieved by allowing specific implementation to be defined through a common API interface.
 
-Sometimes it is necessary to access platform specific APIs, e.g., adding advertisement services or leaderboard functionality provided by frameworks such as [Swarm](http://swarmconnect.com/).
-
-This can be achieved by allowing specific implementation to be defined through a common API interface; so called interface class.
-
-The following example is pure fiction and assumes we want to use a very simple leaderboard API that is only available on Android. For other targets we simply want to log invocations or provide mock return values.
+Take the following example, which tries to use a very simple leaderboard API that is only available on Android. For other targets we simply want to log invocations or provide mock return values.
 
 The Android API looks like this:
 
@@ -20,7 +16,7 @@ public class LeaderboardServiceApi {
 
 The first step is to create an abstraction of the API in form of an interface.
 
-The interface is put into the core project:
+The interface is put into the **core project**:
 
 ```java
 public interface Leaderboard {
@@ -28,9 +24,9 @@ public interface Leaderboard {
 }
 ```
 
-Next we create concrete implementations for each platform and put these into their respective projects.
+Next we create specific implementations for each platform and put these into their respective projects.
 
-The following would go into the Android project:
+The following would go into the **Android project**:
 
 ```java
 /** Android implementation, can access LeaderboardServiceApi directly **/
@@ -48,7 +44,7 @@ public class AndroidLeaderboard implements Leaderboard {
 }
 ```
 
-The following would go into the desktop project:
+The following would go into the **desktop project**:
 
 ```java
 /** Desktop implementation, we simply log invocations **/
@@ -59,7 +55,7 @@ public class DesktopLeaderboard implements Leaderboard {
 }
 ```
 
-The following would go into the HTML5 project:
+The following would go into the **HTML5 project**:
 
 ```java
 /** Html5 implementation, same as DesktopLeaderboard **/
@@ -92,3 +88,7 @@ public static void main(String[] argv) {
    new LwjglApplication(new MyGame(new DesktopLeaderboard()), config);
 }
 ```
+
+## Further threading
+
+[A forum discussion on this matter, also mentioning iOS specific things.](https://web.archive.org/web/20200427014652/https://www.badlogicgames.com/forum/viewtopic.php?f=11&t=9072&p=41323#p41323)

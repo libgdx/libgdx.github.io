@@ -32,7 +32,7 @@ feature_row:
 
 feature_row2:
   - image_path: /assets/images/dev/tools/setup_tool.jpg
-    title: "Setup Tool"
+    title: "gdx-setup"
     excerpt: 'A simple wizard tool for libGDX projects'
     url: "/assets/downloads/legacy_setup/gdx-setup_latest.jar"
     btn_label: "Download"

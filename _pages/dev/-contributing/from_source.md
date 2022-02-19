@@ -45,6 +45,10 @@ cd libgdx
 
      If you don't want to use Gradle in Eclipse, executing `./gradlew cleanEclipse eclipse` will generate the necessary project files.
 
+You can optionally change the IntelliJ IDEA Gradle configuration to `Build and run` using IntelliJ IDEA instead of Gradle. This significantly reduces the time needed to start a test.
+
+![](/assets/images/dev/source/1.png)
+
 If you encounter any issues while setting up your development environment for libGDX, please join our community on [Discord](/community/discord/) to ask for help.
 
 <br/>

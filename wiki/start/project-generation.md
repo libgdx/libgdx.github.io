@@ -9,7 +9,7 @@ To setup your first project and download the necessary dependencies, libGDX offe
 
 {% include setup_flowchart.html current='1' %}
 
-1. Download the libGDX Project Setup Tool:
+1. Download the libGDX Project Setup Tool (gdx-setup):
 
     <a href="/assets/downloads/legacy_setup/gdx-setup_latest.jar" class="btn btn--success" style="margin-right: 10px">Stable Release</a>
     <a href="https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Nightly Version</a>
