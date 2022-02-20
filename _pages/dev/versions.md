@@ -8,6 +8,8 @@ header:
   overlay_image: /assets/images/dev/dev.jpeg
   caption: "Photo credit: [**Florian Olivo**](https://unsplash.com/photos/Ek9Znm8lQ1U)"
 
+description: "Keep up to date with the latest versions of dependencies and dev tools! Each libGDX version supports certain RoboVM, Android SDK, Gradle and GWT releases."
+
 sidebar:
   nav: "dev"
 ---

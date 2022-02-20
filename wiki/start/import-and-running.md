@@ -1,5 +1,6 @@
 ---
 title: "Importing & Running a Project"
+description: "There are a number of steps involved in importing your libGDX project into the IDE of your choice."
 redirect_from:
   - /dev/import-and-running/
   - /dev/import_and_running/

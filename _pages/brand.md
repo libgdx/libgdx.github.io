@@ -2,6 +2,7 @@
 permalink: /brand/
 title: "Brand Guidelines"
 classes: wide2
+description: "These guidelines are here to help you to make fair use of our name and logo. Any use of our brand and visual identity must adhere to the requirements and restrictions set out hereinafter."
 ---
 
 We’ve had a lot of inquiries from developers wondering whether they can use our logo in their games. We love to get credit for the great games you produce using libGDX, so we created these guidelines to help you to make fair use of our name and logo.

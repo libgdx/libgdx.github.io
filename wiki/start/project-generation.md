@@ -1,5 +1,6 @@
 ---
 title: "Creating a Project"
+description: "The libGDX setup tool takes care of all the steps involved in setting up a libGDX Gradle project."
 redirect_from:
   - /dev/project_generation/
   - /dev/project-generation/
