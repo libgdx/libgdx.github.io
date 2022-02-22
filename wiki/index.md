@@ -1,6 +1,7 @@
 ---
 title: Wiki
 excluded: true
+search: false
 ---
 
 **Welcome to our Wiki, a place for comprehensive documentation on the libGDX API and features.** This wiki is community driven, and can be edited by anyone. If you find information out of date or want to add some more in-depth explanations, you are very welcome to do the necessary changes after having had a look at our [Wiki Style Guide](/wiki/misc/wiki-style-guide).  

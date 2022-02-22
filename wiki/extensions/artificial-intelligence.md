@@ -7,4 +7,4 @@ Since libGDX 1.4.1 the [gdx-ai](https://github.com/libgdx/gdx-ai) extension has 
 
 Please, refer to the [official gdx-ai wiki](https://github.com/libgdx/gdx-ai/wiki).
 
-Have fun designing intelligent agents!!! :video_game:
+Have fun designing intelligent agents!!! 
