@@ -30,7 +30,7 @@ sitemap: false
             </div>
           </aside>
 
-          <input type="text" id="search" class="search-input " placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" style="border: 1px solid #d4d8e3;border-radius: 4px;box-shadow: 0 1px 1px 0 rgba(85,95,110,.2); padding: 14px; font-size: 16px;" />
+          <input type="text" id="search" class="search-input" autofocus placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" style="border: 1px solid #d4d8e3;border-radius: 4px;box-shadow: 0 1px 1px 0 rgba(85,95,110,.2); padding: 14px; font-size: 16px;" />
           <div id="results" class="results">
           </div>
 
