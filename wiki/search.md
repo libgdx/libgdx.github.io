@@ -2,6 +2,7 @@
 title: "Wiki Search"
 
 layout: default_wiki # This page is a modified version of _layouts/wiki.html
+description: "Ask, and it shall be given to you; seek, and you shall find!"
 sitemap: false
 ---
 
