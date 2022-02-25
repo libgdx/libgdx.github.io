@@ -78,4 +78,4 @@ We can set the pool size in the constructor:
 
 You can see a working example that shows off the correct usage of Decals here:
 
-https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/SimpleDecalTest.java
+[https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/SimpleDecalTest.java](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/SimpleDecalTest.java)
