@@ -1,4 +1,4 @@
-<!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->
+{% comment %}<!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/masthead.html -->{% endcomment %}
 
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 {% capture logo_path_dark %}{{ site.logo_dark }}{% endcapture %}
@@ -11,7 +11,7 @@
           <a class="site-logo" href="{{ '/' | relative_url }}">
             <picture>
               {% unless logo_path_dark == empty %}
-                <!-- dark mode logo -->
+                {% comment %}<!-- dark mode logo -->{% endcomment %}
                 <source
                   srcset="{{ logo_path_dark | relative_url }}"
                   media="(prefers-color-scheme: dark)">

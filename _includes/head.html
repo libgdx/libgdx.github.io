@@ -1,4 +1,4 @@
-<!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->
+{% comment %}<!-- overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html -->{% endcomment %}
 
 <meta charset="utf-8">
 
@@ -15,10 +15,10 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<!-- Light mode -->
+{% comment %}<!-- Light mode -->{% endcomment %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-<!-- Dark mode -->
+{% comment %}<!-- Dark mode -->{% endcomment %}
 {% if site.minimal_mistakes_skin_dark %}
   <meta name="color-scheme" content="light dark">
   <style>
