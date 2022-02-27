@@ -40,9 +40,10 @@ sitemap: false
   </article>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <!-- mmistakes jQuery isn't loaded yet -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> {% comment %}<!-- mmistakes jQuery isn't loaded yet -->{% endcomment %}
 <script src="{{ '/assets/js/lunr/lunr.min.js' | relative_url }}"></script>
 
+<pre>{% comment %}<!-- The <pre> element prevents Jemoji parsing -->{% endcomment %}
 <script>
 // STORE
 var store = [
@@ -120,3 +121,4 @@ $(document).ready(function() {
   });
 });
 </script>
+</pre>

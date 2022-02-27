@@ -2,8 +2,6 @@
 title: Project Setup via Command Line
 # Not listed in ToC
 ---
-## Creating a libGDX project using the command line
-
 This section describes how you can create a libGDX project from the command line. This is not required if you use the setup tool's wizard. The following arguments are to be specified:
 
 * **dir**: the directory to write the project to, relative or absolute

@@ -1,6 +1,6 @@
 ---
 title: "Set Up a Dev Env"
-description: "Before you can get your first libGDX project up and running, you need to set up your development environment. The first step in doing this is choosing an IDE."
+description: "Before you can get your first libGDX project up and running, you need to set up your development environment. The first step in doing this is choosing an IDE: Android Studio, IntelliJ IDEA or Eclipse are among the most common choices for this."
 redirect_from:
   - /dev/setup/
 ---
