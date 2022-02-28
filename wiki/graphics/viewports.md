@@ -1,9 +1,13 @@
 ---
 title: Viewports
 ---
-When dealing with different screens it is often necessary to decide for a certain strategy how those different screen sizes and aspect ratios should be handled. Camera and Stage support different viewport strategies, for example when doing picking via `Camera.project(vec, viewportX, viewportY, viewportWidth, viewportHeight)`.
+When dealing with different screens it is often necessary to decide for a certain strategy how those different screen sizes and aspect ratios should be handled. libGDX's [`Viewport`s](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/viewport/Viewport.html) ([source](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/viewport/Viewport.java)) are the solution to deal with this. Camera and Stage support different viewport strategies, for example when doing picking via `Camera.project(vec, viewportX, viewportY, viewportWidth, viewportHeight)`.
 
-libGDX provides a more convenient way of dealing with this problem: [`Viewport`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/viewport/Viewport.html) ([source](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/viewport/Viewport.java)).
+If you have never worked with viewports before, **be sure to check out this comprehensive introduction:**
+
+{% include video id="8N2vw_3h9HU" provider="youtube" %}
+
+There is also a transcript of this video available [here](https://github.com/raeleus/viewports-sample-project#libgdx-viewports). If you are having trouble picking the right viewport for your situation, the **interactive examples** [here](https://raeleus.github.io/viewports-sample-project/) and [here](https://crykn.github.io/viewports-showcase/) will most certainly prove useful.
 
 ### Usage ###
 A viewport always manages a Camera's viewportWidth and viewportHeight. Thus a camera needs to be supplied to the constructors.
@@ -61,7 +65,7 @@ When using multiple Stages:
 
 ### Examples
 
-**To see the viewports in action, have a look at [this interactive example](https://crykn.github.io/viewports-showcase/)**. There are also some tests concerning viewports: [ViewportTest1](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/ViewportTest1.java), [ViewportTest2](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/ViewportTest2.java) and [ViewportTest3](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/ViewportTest3.java).
+**To see the viewports in action, have a look at the interactive examples [here](https://raeleus.github.io/viewports-sample-project/) and [here](https://crykn.github.io/viewports-showcase/)**. There are also some tests concerning viewports: [ViewportTest1](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/ViewportTest1.java), [ViewportTest2](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/ViewportTest2.java) and [ViewportTest3](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/ViewportTest3.java).
 
 ### StretchViewport ###
 The [`StretchViewport`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/viewport/StretchViewport.html) ([source](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/utils/viewport/StretchViewport.java))  supports working with a virtual screen size. That means one can assume that a screen is always of the size `virtualWidth x virtualHeight`. This virtual viewport will then always be stretched to fit the screen. There are no black bars, but the aspect ratio may not be the same after the scaling took place.
