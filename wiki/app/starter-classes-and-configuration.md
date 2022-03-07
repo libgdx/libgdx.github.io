@@ -15,7 +15,7 @@ title: Starter classes and configuration
 
 For each target platform, a starter class has to be written. This class instantiates a back-end specific `Application` implementation and the `ApplicationListener` that implements the application logic. The starter classes are platform-dependent, so let's have a look at how to instantiate and configure these for each backend.
 
-This article assumes you have followed the instructions in [Project Setup](https://libgdx.com/dev/project-generation/) as well as [Importing & Running a Project](https://libgdx.com/dev/import-and-running/) and you therefore have already set up the project in your IDE.
+This article assumes you have followed the instructions in [Project Setup](/wiki/start/project-generation) as well as [Importing & Running a Project](/wiki/start/import-and-running) and you therefore have already set up the project in your IDE.
 {: .notice--info}
 
 # Desktop (LWJGL3) #

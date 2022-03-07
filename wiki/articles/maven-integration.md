@@ -1,6 +1,13 @@
 ---
 title: Maven integration
 ---
+Instead of using Gradle to setup your libGDX project, you can also use Maven. However, **this is _not_ recommended!** When issues arise, getting support will most certainly prove very difficult!
+
+The article below may be outdated. Use it at your own risk!
+{: .notice--warning}
+
+## Introduction
+
 libGDX is currently published to the SonaType snapshot repository. This will continue to happen until the Maven integration is complete. The repository only contains the latest snapshot release for now. Eventually we will publish release builds to SonaType as well.
 
 Add the following to your settings.xml or your project's pom.xml:
@@ -30,7 +37,7 @@ To handle these issues, libGDX relies on the following Maven plugins:
 
 To ease all of this, we supply a Maven archetype that will generate a multi-module Maven project.
 
-## Maven Archetype ##
+## Maven Archetype
 The Maven archetype is currently not found in any repository. You can get it at https://github.com/libgdx/libgdx-maven-archetype and compile and install it yourself to your local Maven repository like this from your shell:
 
 ```
@@ -61,17 +68,17 @@ For the parameters given above, you will end up with the following project struc
 test/       <-- the base directory
    core/    <-- contains the apps core
    desktop/ <-- desktop starter & assets
-   android/ <-- android starter 
+   android/ <-- android starter
    html/    <-- HTML starter
    ios/     <- stub, not working at the moment
 ```
 
 The core project contains your application code. The desktop project contains the assets folder which is shared across all other projects and the desktop starter class. The Android project contains the start-up code for Android and depends on the core project. The same is true for the HTML project. The iOS project is currently a stub and does not work yet.
 
-## Building & Deploying ##
+## Building & Deploying
 Using Maven to build and deploy your application for the various backends is simple.
 
-### Desktop ###
+### Desktop
 To create a runnable jar file for the desktop, run:
 
 ```
@@ -84,7 +91,7 @@ This will create a file called test-desktop-1.0-SNAPSHOT-jar-with-dependencies.j
 java -jar test-desktop-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-### Android ###
+### Android
 To create an unsigned APK for Android, run:
 
 ```
@@ -97,9 +104,9 @@ This will create a file called test-android-1.0-SNAPSHOT.apk in the test/android
 mvn -Pandroid install
 ```
 
-For more information on Android goals, see the [Maven Android plugin](http://code.google.com/p/maven-android-plugin/) 
+For more information on Android goals, see the [Maven Android plugin](http://code.google.com/p/maven-android-plugin/)
 
-### HTML5/GWT ###
+### HTML5/GWT
 To compile the HTML5 project to JavaScript, run:
 
 ```
@@ -115,12 +122,12 @@ mvn -Phtml install
 
 And browse to http://127.0.0.1:8080/index.html
 
-## IDE Integration ##
+## IDE Integration
 Eclipse, Intellij Idea and NetBeans all support Maven projects in some form. The archetype goes to great lengths to make your libGDX project usable within Eclipse and Intellij Idea. NetBeans is unsupported at the time of writing.
 
 While Maven is IDE agnostic, the plugins for GWT and Android are not. Plugins for Eclipse differ in how the interpret the Maven configuration for GWT and Android projects from those in Intellij. The following sections describe how to import a project into both IDE's after creating it using the libGDX archetype.
 
-### Eclipse ###
+### Eclipse
 Before you can import your project, you need to install the following Eclipse plugins:
 
   * [m2e](http://eclipse.org/m2e/), this should already available in a clean Eclipse installation (Java and Java EE editions). It provides the basic Maven support within Eclipse.
@@ -131,16 +138,16 @@ Once the plugins are installed, you can import your Maven libGDX projects by goi
 
 *Note* that the HTML project might not be recognized as a GWT project by Eclipse. To fix this, right click the project, go to *Properties -> Google -> Web Toolkit*. Check "Use Google Web Toolkit". Then go to *Properties -> Google -> Web Application*, check "This project has a WAR directory", specify `target/webapp` and finally check "Launch and deploy from this directory".
 
-From there on you can run & debug just as you'd do if you setup your projects via the gdx-setup-ui. 
+From there on you can run & debug just as you'd do if you setup your projects via the gdx-setup-ui.
 
 If you change anything in the assets, you need to run "mvn -Phtml package" again and refresh the html project in Eclipse.
 
-### IntelliJ Idea ###
+### IntelliJ Idea
 Before you start, you should make sure IntelliJ Idea knows where your Maven installation is located. Go to *File -> Settings*, and in the tree in the dialog chose Maven. Specify the directory where your Maven installation lives.
 
 Once you created your project via the archetype you can import it into IntelliJ Idea. Go to *File -> Open Project*, then navigate to the root directory of the project.
 
-Once the project is loaded, you have to enable the profiles. Open the Maven Project view and check the three profiles, desktop, android and HTML. 
+Once the project is loaded, you have to enable the profiles. Open the Maven Project view and check the three profiles, desktop, android and HTML.
 
 ![images/maven1.png](/assets/wiki/images/maven1.png)
 
