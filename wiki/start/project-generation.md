@@ -20,7 +20,7 @@ To setup your first project and download the necessary dependencies, libGDX offe
 
 This will open the following setup that will allow you to generate your project:
 
-![Setup UI](https://i.imgur.com/nI5lQKT.jpg){: style="width: 601px;" }
+![Setup UI](/assets/images/dev/setup/0.png){: style="width: 500px;" }
 
 **Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](/wiki/start/project-setup-via-command-line) to create your project.
 {: .notice--primary}
@@ -32,25 +32,26 @@ You are asked to provide the following parameters:
 * **Destination**: the folder where your app will be created
 * **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" -> "SDK Manager". By default it is in `/Users/username/Library/Android/sdk` <br>
 
-![Android Studio welcome screen](/assets/wiki/images/project-generation2.png){: style="width: 873px;" }
-![Android Studio SDK manager](/assets/wiki/images/project-generation3.png){: style="width: 1159px;" }
 
-* **Sub Projects**: libGDX is cross-platform. By default, all the target platforms are included (Desktop; Android; iOS; HTML). There is no need to change the default value unless you are sure you will never compile for a specific target.
+![Android Studio welcome screen](/assets/images/dev/setup/1.png){: style="width: 700px;" }
+![Android Studio SDK manager](/assets/images/dev/setup/2.png){: style="width: 700px;" }
 
-**Note:** iOS projects can only be compiled on macOS.
+* **Supported Platforms**: libGDX is cross-platform. By default, all the target platforms are included as sub projects (Desktop; Android; iOS; HTML). There is no need to change the default value unless you are sure you will never compile for a specific target.
+
+**Note:** To compile your game for iOS you need Xcode, which is only available on macOS!
 {: .notice--info}
 
-* **extensions**: the extensions offered are:<br>
+* **Official Extensions**: the extensions offered are:<br>
   * **[Bullet](/wiki/extensions/physics/bullet/bullet-physics)**: 3D Collision Detection and Rigid Body Dynamics Library.<br>
   * **[FreeType](/wiki/extensions/gdx-freetype)**: Scalable font. Great to manipulate font size dynamically. However be aware that it does not work with HTML target if you cross compile for that target.<br>
   * **Tools**: Set of tools including: particle editor (2d/3d), bitmap font and image texture packers.<br>
-  * **[Controllers](https://github.com/libgdx/gdx-controllers)**: Library to handle controllers (e.g. Xbox 360 controller).<br>
+  * **[Controller](/wiki/input/controllers)** Library to handle controllers (e.g.: XBox 360 controller).<br>
   * **[Box2d](/wiki/extensions/physics/box2d)**: Box2D is a 2D physics library.<br>
   * **[Box2dlights](https://github.com/libgdx/box2dlights)**: 2D lighting framework that uses box2d for raycasting and OpenGL ES 2.0 for rendering.<br>
   * **[Ashley](https://github.com/libgdx/ashley)**: A tiny entity framework.<br>
   * **[Ai](https://github.com/libgdx/gdx-ai)**: An artificial intelligence framework.<br>
 
-By clicking "Show Third Party Extensions" you can access a list of community-made libGDX extensions. If you want to add extensions later on, please take a look at [this](/wiki/articles/dependency-management-with-gradle#libgdx-extensions) wiki page.
+By clicking "Show Third-Party Extensions" you can access a list of community-made libGDX extensions. If you want to add extensions later on, please take a look at [this](/wiki/articles/dependency-management-with-gradle#libgdx-extensions) wiki page.
 
 When ready, click "Generate".
 
@@ -68,28 +69,29 @@ gradlew.bat                <- script that will run Gradle on Windows
 gradle                     <- script that will run Gradle on Unix systems
 local.properties           <- IntelliJ only file, defines Android SDK location
 
+assets/                    <- contains your graphics, audio, etc.
+
 core/
-    build.gradle           <- Gradle build file for core project*
+    build.gradle           <- Gradle build file for core project
     src/                   <- Source folder for all your game's code
 
 desktop/
-    build.gradle           <- Gradle build file for desktop project*
+    build.gradle           <- Gradle build file for desktop project
     src/                   <- Source folder for your desktop project, contains LWJGL launcher class
 
 android/
-    build.gradle           <- Gradle build file for android project*
+    build.gradle           <- Gradle build file for android project
     AndroidManifest.xml    <- Android specific config
-    assets/                <- contains for your graphics, audio, etc.  Shared with other projects.
     res/                   <- contains icons for your app and other resources
     src/                   <- Source folder for your Android project, contains android launcher class
 
 html/
-    build.gradle           <- Gradle build file for the html project*
+    build.gradle           <- Gradle build file for the html project
     src/                   <- Source folder for your html project, contains launcher and html definition
     webapp/                <- War template, on generation the contents are copied to war. Contains startup url index page and web.xml
 
 ios/
-    build.gradle           <- Gradle build file for the iOS project*
+    build.gradle           <- Gradle build file for the iOS project
     src/                   <- Source folder for your iOS project, contains launcher
 ```
 

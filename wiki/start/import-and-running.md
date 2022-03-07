@@ -42,8 +42,11 @@ If you want to execute your freshly imported project, you have to follow differe
 2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
 3. Open up Run Configurations <br/>
   ![](/assets/images/dev/idea/0.png)
-4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `core/assets` folder  (or `android/assets` if you are using an Android subproject)<br/>
+4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `assets` folder <br/>
   ![](/assets/images/dev/idea/1.png)
+
+    On **macOS**, LWJGL3 projects require one extra step: In your Run Configuration you need to set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
+    {: .notice--warning}
 5. Run your application using the run button
 
 ### In Eclipse:
@@ -56,7 +59,10 @@ If you want to execute your freshly imported project, you have to follow differe
 5. After that, click on the Arguments tab
 6. At the bottom, under 'Working directory' select 'Other' -> Workspace...
   ![](/assets/images/dev/eclipse/1.png)
-7. Then select your asset folder located in `core/assets` (or `android/assets` if you are using an Android subproject)
+
+    On **macOS**, LWJGL3 projects require one extra step: In your Run Configuration you need to set the VM arguments to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
+    {: .notice--warning}
+7. Then select your asset folder located in `assets`
 
 ### In NetBeans:
 Right click the desktop project -> Run
