@@ -3,7 +3,7 @@ title: Memory management
 ---
 Games are resource heavy applications. Images and sound effects can take up a considerable amount of RAM. Also, most of these resources are not managed by the Java garbage collector. Instead they are managed by native drivers. Having the garbage collector decide when to release a 5 megabyte texture from video ram wouldn't be a too bright idea either.
 
-We want fine grained control over the life-time of our resources. There are multiple classes in libGDX which represent such resources. They all implement a common [Disposable](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Disposable.html) interface which indicates that instances of this class need to be disposed of manually at the end of the life-time. **Failure to dispose resources will lead to severe memory leaks!**
+We want fine grained control over the life-time of our resources. There are multiple classes in libGDX which represent such resources. They all implement a common [Disposable](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Disposable.html) interface which indicates that instances of this class need to be disposed of manually at the end of the life-time. **Failure to dispose resources will lead to severe memory leaks!**
 
 The following classes need to be disposed of manually (might not be complete, [click here](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/utils/Disposable.html) instead for the full list):
 
@@ -50,9 +50,9 @@ This is vital for memory management in games that have frequent object spawning,
 
 libGDX offers a couple tools for easy pooling.
 
-  * [Poolable](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pool.Poolable.html) interface
-  * [Pool](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pool.html)
-  * [Pools](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pools.html)
+  * [Poolable](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pool.Poolable.html) interface
+  * [Pool](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pool.html)
+  * [Pools](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pools.html)
 
 Implementing the `Poolable` interface means you will have a `reset()` method in your object, which will be automatically called when you free the object.
 
@@ -140,14 +140,14 @@ public class World {
 }
 ```
 
-The [Pools](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pools.html) class provides static methods for dynamically creating pools of any objects (using [ReflectionPool](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/ReflectionPool.html) and black magic). In the above example, it could be used like this.
+The [Pools](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pools.html) class provides static methods for dynamically creating pools of any objects (using [ReflectionPool](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/ReflectionPool.html) and black magic). In the above example, it could be used like this.
 ```java
 private final Pool<Bullet> bulletPool = Pools.get(Bullet.class);
 ```
 
 ### How to Use Pool
 
-A `Pool<>` manages a single type of object, so it is parameterized by that type. Objects are taken from a specific `Pool` instance by invoking `obtain` and then should be returned to the Pool by invoking `free`.   The objects in the pool may optionally implement the [`Pool.Poolable`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pool.Poolable.html) interface (which just requires a `reset()` method be present), in which case the `Pool` will automatically reset the objects when they are returned to the pool.  By default, objects are initially allocated on demand (so if you never invoke `obtain`, the Pool will contain no objects). It is possible to force the `Pool` to allocate a number of objects by calling `fill()` after instantiation. Initial allocation is useful to have control over when these first time allocations occur.
+A `Pool<>` manages a single type of object, so it is parameterized by that type. Objects are taken from a specific `Pool` instance by invoking `obtain` and then should be returned to the Pool by invoking `free`.   The objects in the pool may optionally implement the [`Pool.Poolable`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pool.Poolable.html) interface (which just requires a `reset()` method be present), in which case the `Pool` will automatically reset the objects when they are returned to the pool.  By default, objects are initially allocated on demand (so if you never invoke `obtain`, the Pool will contain no objects). It is possible to force the `Pool` to allocate a number of objects by calling `fill()` after instantiation. Initial allocation is useful to have control over when these first time allocations occur.
 
 You must implement your own subclass of `Pool<>` because the `newObject` method is abstract.
 

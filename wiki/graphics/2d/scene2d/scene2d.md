@@ -189,7 +189,7 @@ For example, imagine a group (a button) which has a child (a label). When the la
 
 ### InputListener ###
 
-EventListeners are added to actors to be notified about events. EventListener is an interface with a `handle(Event)` method. Classes that implement the EventListener interface use `instanceof` to determine whether they should handle the event. For most types of events, specific listener classes are provided for convenience. For example, [InputListener](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/InputListener.html) is provided for receiving and handling InputEvents. An actor just needs to add an InputListener to start receiving input events. InputListener has several methods that may be overridden, and two are shown below:
+EventListeners are added to actors to be notified about events. EventListener is an interface with a `handle(Event)` method. Classes that implement the EventListener interface use `instanceof` to determine whether they should handle the event. For most types of events, specific listener classes are provided for convenience. For example, [InputListener](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/InputListener.html) is provided for receiving and handling InputEvents. An actor just needs to add an InputListener to start receiving input events. InputListener has several methods that may be overridden, and two are shown below:
 
 ```java
 actor.setBounds(0, 0, texture.getWidth(), texture.getHeight());

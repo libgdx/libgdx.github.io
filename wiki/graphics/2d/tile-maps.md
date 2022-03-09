@@ -3,7 +3,7 @@ title: Tile maps
 ---
 # Maps #
 
-libGDX features a generic maps API. All map related classes can be found in the [com.badlogic.gdx.maps](http://libgdx.badlogicgames.com/nightlies/docs/api/index.html?com/badlogic/gdx/maps/package-use.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps) package. The root package contains the base classes, sub-packages contain specialized implementations for tile maps and other forms of maps.
+libGDX features a generic maps API. All map related classes can be found in the [com.badlogic.gdx.maps](https://libgdx.badlogicgames.com/nightlies/docs/api/index.html?com/badlogic/gdx/maps/package-use.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps) package. The root package contains the base classes, sub-packages contain specialized implementations for tile maps and other forms of maps.
 
 ## Base Classes ##
 The set of base classes is meant to be generic so we can support not only tiled maps, but any 2D map format.
@@ -15,7 +15,7 @@ A map is a set of layers. A layer contains a set of objects. Maps, layers and ob
 ### Properties ###
 
 Properties of maps, layers or objects are represented by 
-[MapProperties](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapProperties.html)
+[MapProperties](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapProperties.html)
 [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/MapProperties.java). This class is essentially a hash map, with string keys and arbitrary values.
 
 Which key/value pairs are available for a map, layer or object depends on the format from which it was loaded. To access properties, you can simply do the following:
@@ -66,17 +66,17 @@ To get the objects within the layer, simply call the following:
 MapObjects objects = layer.getObjects();
 ```
 
-The [MapObjects](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapObjects.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/MapObjects.java) instance allows you to retrieve objects by name, index or type. You can also insert and remove objects on the fly.
+The [MapObjects](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapObjects.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/MapObjects.java) instance allows you to retrieve objects by name, index or type. You can also insert and remove objects on the fly.
 
 ### Map Objects ###
 
 The API already provides a handful of specialized map objects, such as 
-[CircleMapObject](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/objects/CircleMapObject.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/objects/CircleMapObject.java),
-[PolygonMapObject](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/objects/PolygonMapObject.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/objects/PolygonMapObject.java) 
+[CircleMapObject](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/objects/CircleMapObject.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/objects/CircleMapObject.java),
+[PolygonMapObject](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/objects/PolygonMapObject.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/objects/PolygonMapObject.java) 
  and so on.
 
 The loader of a map format will parse these objects and put them in their respective 
-[MapLayer](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapLayer.html)
+[MapLayer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapLayer.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/MapLayer.java).
 
 For all supported formats, we try to extract the following normalized attributes for every object:
@@ -102,7 +102,7 @@ As in the case of maps and layers, you can also access the more generic properti
 
 ### Map Renderer ###
 
-The [MapRenderer](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapRenderer.html)
+The [MapRenderer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapRenderer.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/MapRenderer.java) interface defines methods that allow you to render the layers and objects of a map.
 
 Before you can start rendering, you have to set the view on your map. Think of the view as window through which you look. The easiest way to achieve this, is to tell the map renderer about an OrthographicCamera it should use:
@@ -141,12 +141,12 @@ By rendering each layer separately and modifying the view for every layer, you c
 Maps that contain layers with tiles are handled by the classes in the [com.badlogic.gdx.maps.tiled](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps/tiled) package. The package contains loaders for different formats.
 
 Tile maps are loaded into 
-[TiledMap](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMap.html)
+[TiledMap](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMap.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMap.java) instances. TiledMap is a subclass of the generic Map class, with additional methods and attributes. 
 
 ### Tiled Map Layers ###
 Layers with tiles in them are stored in 
-[TiledMapTileLayer](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.html)
+[TiledMapTileLayer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.java) instances. In order to get access to the tiles, you will have to cast:
 
 ```java
@@ -156,7 +156,7 @@ TiledMapTileLayer layer = (TiledMapTileLayer)tiledMap.getLayers().get(0); // ass
 
 A TiledMapTileLayer has all the same attributes as the generic MapLayer, e.g. properties, objects and so on. 
 
-In addition to those, the TiledMapTileLayer also has a two dimensional array of [TiledMapTileLayer.Cell](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.Cell.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.java#L89) instances. 
+In addition to those, the TiledMapTileLayer also has a two dimensional array of [TiledMapTileLayer.Cell](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.Cell.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.java#L89) instances. 
 
 To access a cell, you can ask the tile layer to hand it out like this:
 
@@ -177,24 +177,24 @@ int rows = tileLayer.getHeight();
 
 ### Cells ###
 A cell is a container for a 
-[TiledMapTile](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTile.html)
+[TiledMapTile](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTile.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTile.java). The cell itself stores a reference to a tile in addition to attributes that specify if the tile should be rotated or flipped when rendering it.
 
 Tiles are usually shared by multiple cells.
 
 ### Tilesets & Tiles ###
 A TiledMap contains one or more 
-[TiledMapTileSet](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileSet.html)
-[(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileSet.java) instances. A tile set contains a number of [TiledMapTile](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTile.html)
+[TiledMapTileSet](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileSet.html)
+[(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileSet.java) instances. A tile set contains a number of [TiledMapTile](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTile.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTile.java) instances. There are [multiple implementations](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps/tiled/tiles) of tiles, e.g. static tiles, animated tiles etc. You can also create your own implementation for special purposes.
 
 Cells in a tile layer reference these tiles. Cells within a layer can reference tiles of multiple tile sets. It is however recommended to stick to a single tile set per layer to reduce texture switches.
 
 ### Rendering Tiled Maps ###
 To render a TiledMap and its layers, you will need one of the [specialized MapRenderer implementations](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps/tiled/renderers). For orthogonal or top down maps, use 
-[OrthogonalTiledMapRenderer](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/renderers/OrthogonalTiledMapRenderer.html)
+[OrthogonalTiledMapRenderer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/renderers/OrthogonalTiledMapRenderer.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/renderers/OrthogonalTiledMapRenderer.java), for isometric maps use 
-[IsometricTiledMapRenderer](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/renderers/IsometricTiledMapRenderer.html)
+[IsometricTiledMapRenderer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/renderers/IsometricTiledMapRenderer.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/renderers/IsometricTiledMapRenderer.java). Other renderers in this package are experimental, we do not advise to use them at this point.
 
 Creating such a renderer works like this:

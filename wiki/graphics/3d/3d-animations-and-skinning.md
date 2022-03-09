@@ -89,7 +89,7 @@ The `-b` command allows you to specify the total amount of bones allowed before 
 fbx-conv -b 16 inputfile.fbx
 ```
 
-If you do use the `-b` command line option to change the maximum number of bones, you should also change the shader to use that same amount. This can be done using the [`Config#numBones`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.Config.html#numBones) member when creating the [ShaderProvider](/wiki/graphics/3d/modelbatch#shaderprovider) for ModelBatch. For example:
+If you do use the `-b` command line option to change the maximum number of bones, you should also change the shader to use that same amount. This can be done using the [`Config#numBones`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.Config.html#numBones) member when creating the [ShaderProvider](/wiki/graphics/3d/modelbatch#shaderprovider) for ModelBatch. For example:
 ```java
 DefaultShader.Config config = new DefaultShader.Config();
 config.numBones = 16;

@@ -1,7 +1,7 @@
 ---
 title: Rendering shapes
 ---
-[ShapeRenderer API](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ShapeRenderer.html) (Javadoc provides an example in the top level!)
+[ShapeRenderer API](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ShapeRenderer.html) (Javadoc provides an example in the top level!)
 
 ### What can the ShapeRenderer do? ###
 

@@ -3,7 +3,7 @@ title: Managing your assets
 ---
 ### Why would I want to use the AssetManager
 
-[AssetManager](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/AssetManager.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/AssetManager.java) helps you load and manage your assets. It is the recommended way to load your assets, due to the following nice behaviors:
+[AssetManager](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/AssetManager.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/AssetManager.java) helps you load and manage your assets. It is the recommended way to load your assets, due to the following nice behaviors:
 
   * Loading of most resources is done asynchronously, so you can display a reactive loading screen while things load
   * Assets are reference counted. If two assets A and B both depend on another asset C, C won't be disposed until A and B have been disposed. This also means that if you load an asset multiple times, it will actually be shared and only take up memory once!
@@ -37,16 +37,16 @@ On Android, it is even possible for multiple instances of your Activity to be ac
 To load assets, the AssetManager needs to know how to load a specific type of asset. This functionality is implemented via AssetLoaders. There are two variants, SynchronousAssetLoader and AsynchronousAssetLoader. The former loads everything on the rendering thread, the latter loads parts of the asset on another thread, e.g., the Pixmap needed for a Texture, and then loads the OpenGL dependent part on the rendering thread. The following resources can be loaded out of the box with the AssetManager as constructed above.
 
 
-  * Pixmaps via [PixmapLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/PixmapLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/PixmapLoader.java)
-  * Textures via [TextureLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/TextureLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/TextureLoader.java)
-  * BitmapFonts via [BitmapFontLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/BitmapFontLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/BitmapFontLoader.java)
+  * Pixmaps via [PixmapLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/PixmapLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/PixmapLoader.java)
+  * Textures via [TextureLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/TextureLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/TextureLoader.java)
+  * BitmapFonts via [BitmapFontLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/BitmapFontLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/BitmapFontLoader.java)
   * FreeTypeFonts via [FreeTypeFontLoader](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/extensions/FreeTypeFontLoaderTest.java)
-  * TextureAtlases via [TextureAtlasLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/TextureAtlasLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/TextureAtlasLoader.java)
-  * Music instances via [MusicLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/MusicLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/MusicLoader.java)
-  * Sound instances via [SoundLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/SoundLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/SoundLoader.java)
-  * Skins via [SkinLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/SkinLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/SkinLoader.java)
-  * Particle Effects via [ParticleEffectLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/ParticleEffectLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/ParticleEffectLoader.java)
-  * I18NBundles via [I18NBundleLoader](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/I18NBundleLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/I18NBundleLoader.java)
+  * TextureAtlases via [TextureAtlasLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/TextureAtlasLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/TextureAtlasLoader.java)
+  * Music instances via [MusicLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/MusicLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/MusicLoader.java)
+  * Sound instances via [SoundLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/SoundLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/SoundLoader.java)
+  * Skins via [SkinLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/SkinLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/SkinLoader.java)
+  * Particle Effects via [ParticleEffectLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/ParticleEffectLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/ParticleEffectLoader.java)
+  * I18NBundles via [I18NBundleLoader](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/I18NBundleLoader.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/assets/loaders/I18NBundleLoader.java)
   * FreeTypeFontGenerator via FreeTypeFontGeneratorLoader [(code)](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-freetype/src/com/badlogic/gdx/graphics/g2d/freetype/FreeTypeFontGeneratorLoader.java)
 
 Loading a specific asset is simple:
@@ -57,7 +57,7 @@ manager.load("data/myfont.fnt", BitmapFont.class);
 manager.load("data/mymusic.ogg", Music.class);
 ```
 
-These calls will enqueue those assets for loading. The assets will be loaded in the order we called the [AssetManager.load()](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/AssetManager.html#load-java.lang.String-java.lang.Class-) method. Some loaders allow you to also pass parameters to them via AssetManager.load(). Say we want to specify a non-default filter and mipmapping setting for loading a texture:
+These calls will enqueue those assets for loading. The assets will be loaded in the order we called the [AssetManager.load()](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/AssetManager.html#load-java.lang.String-java.lang.Class-) method. Some loaders allow you to also pass parameters to them via AssetManager.load(). Say we want to specify a non-default filter and mipmapping setting for loading a texture:
 
 ```java
 TextureParameter param = new TextureParameter();

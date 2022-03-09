@@ -3,7 +3,7 @@ title: Path interface and Splines
 ---
 # Introduction
 
-The [Path interface](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Path.html) [(code)](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Path.html) have implementations that allows you to traverse smoothly through a set of defined points (in some cases, tangents too).
+The [Path interface](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Path.html) [(code)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Path.html) have implementations that allows you to traverse smoothly through a set of defined points (in some cases, tangents too).
 
 Paths can be defined to be bi-dimensional or tri-dimensional, because it is a template that takes a derived of the Vector class, thus you can either use it with a set of Vector2's or Vector3's.
 
@@ -12,9 +12,9 @@ Mathematically, it is defined as F(t) where t is [0, 1], where 0 is the start of
 # Types
 
 As of v0.9.9, we have 3 implementations of the Path interface (the splines), these are:
-* [Bezier](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Bezier.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/math/Bezier.java)
-* [BSpline](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/BSpline.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/math/BSpline.java)
-* [CatmullRomSpline](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/CatmullRomSpline.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/math/CatmullRomSpline.java)
+* [Bezier](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Bezier.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/math/Bezier.java)
+* [BSpline](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/BSpline.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/math/BSpline.java)
+* [CatmullRomSpline](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/CatmullRomSpline.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/math/CatmullRomSpline.java)
 
 # Use
 

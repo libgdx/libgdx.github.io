@@ -14,7 +14,7 @@ title: File handling
 
 
 ## Introduction ##
-libGDX applications run on four different platforms: desktop systems (Windows, Linux, macOS, headless), Android, iOS, and JavaScript/WebGL capable browsers. Each of these platforms handles file I/O a little differently. libGDX's [Files](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Files.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/Files.java) module provides a common interface for all these platforms with the ability to:
+libGDX applications run on four different platforms: desktop systems (Windows, Linux, macOS, headless), Android, iOS, and JavaScript/WebGL capable browsers. Each of these platforms handles file I/O a little differently. libGDX's [Files](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Files.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/Files.java) module provides a common interface for all these platforms with the ability to:
 
   * Read from a file
   * Write to a file
@@ -176,7 +176,7 @@ FileHandle file = Gdx.files.internal("myblob.bin");
 byte[] bytes = file.readBytes();
 ```
 
-The FileHandle class has many more read methods. Check the [Javadocs](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/files/FileHandle.html) for more information.
+The FileHandle class has many more read methods. Check the [Javadocs](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/files/FileHandle.html) for more information.
 
 ## Writing to a File ##
 Similarly to reading files, FileHandle also provides methods to write to a file. Note that only the local, external and absolute file types support writing to a file. Writing a string to a file works as follows:
@@ -212,4 +212,4 @@ Gdx.files.local("mylocalcopy.txt").delete();
 
 Note that source and target can be files or directories.
 
-For more information on available methods, check the [FileHandle Javadocs](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/files/FileHandle.html).
+For more information on available methods, check the [FileHandle Javadocs](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/files/FileHandle.html).

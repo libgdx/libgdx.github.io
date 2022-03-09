@@ -13,7 +13,7 @@ Polling for input from a Keyboard is done with just one simple line of code, lik
 boolean isAPressed = Gdx.input.isKeyPressed(Keys.A);
 ```
 
-The parameter passed to that method is a Key Code. Rather than having to memorize these codes there is a static class within the `Input` interface that contains the codes which you can use. They can be seen  [here](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Input.Keys.html).
+The parameter passed to that method is a Key Code. Rather than having to memorize these codes there is a static class within the `Input` interface that contains the codes which you can use. They can be seen  [here](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Input.Keys.html).
 
 ## Polling the Touch Screen / Mouse ##
 

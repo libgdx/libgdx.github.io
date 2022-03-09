@@ -5,15 +5,15 @@ This article describes the little helpers and utilities that might come in handy
 
 # FPSLogger
 
-The [`FPSLogger`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/FPSLogger.html) is a simple helper class to log the frames per seconds achieved. Just invoke the `log()` method in your rendering method. The output will be logged once per second.
+The [`FPSLogger`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/FPSLogger.html) is a simple helper class to log the frames per seconds achieved. Just invoke the `log()` method in your rendering method. The output will be logged once per second.
 
 # PerformanceCounter
 
-The [`PerformanceCounter`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/PerformanceCounter.html) keeps track of the time and load (percentage of total time) a specific task takes. Call `start()` just before starting the task and `stop()` right after. You can do this multiple times if required. Every render or update call `tick()` to update the values. The `time` FloatCounter provides access to the minimum, maximum, average, total and current time the task takes. Likewise for the `load` value, which is the percentage of the total time.
+The [`PerformanceCounter`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/PerformanceCounter.html) keeps track of the time and load (percentage of total time) a specific task takes. Call `start()` just before starting the task and `stop()` right after. You can do this multiple times if required. Every render or update call `tick()` to update the values. The `time` FloatCounter provides access to the minimum, maximum, average, total and current time the task takes. Likewise for the `load` value, which is the percentage of the total time.
 
 # OpenGL
 ## Profiling
-Profiling the actual OpenGL calls that happen while your game is running is often not very easy to do, since libGDX tries to abstract all those low-level things away. In order to enable the collection of these information, there is the [`GLProfiler`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/profiling/GLProfiler.html).
+Profiling the actual OpenGL calls that happen while your game is running is often not very easy to do, since libGDX tries to abstract all those low-level things away. In order to enable the collection of these information, there is the [`GLProfiler`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/profiling/GLProfiler.html).
 
 To enable it you have to call the static method `GLProfiler.enable()`. Behind the scenes this will replace the original `GL20` and `GL30` instances (`Gdx.gl` etc.) with the profilers.
 
@@ -28,7 +28,7 @@ Currently the following informations are provided by the profiler:
 - Amount of shader switches
 - Amount of used vertices
 
-`GLProfiler.vertexCount` is actually a [`FloatCounter`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/FloatCounter.html). Besides `GLProfiler.vertexCount.total` it has more information like `GLProfiler.vertexCount.min`, `GLProfiler.vertexCount.max` or `GLProfiler.vertexCount.average`, which are the values based on individual drawcalls.
+`GLProfiler.vertexCount` is actually a [`FloatCounter`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/FloatCounter.html). Besides `GLProfiler.vertexCount.total` it has more information like `GLProfiler.vertexCount.min`, `GLProfiler.vertexCount.max` or `GLProfiler.vertexCount.average`, which are the values based on individual drawcalls.
 
 In order to reset all these numbers once you have read and displayed them (probably once per frame), you have to call the `GLProfiler.reset()` method. To completely disable the profiling and replace the profilers with the original `GL20` and `GL30` instances, use `GLProfiler.disable()`.
 
