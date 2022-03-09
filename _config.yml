@@ -99,3 +99,6 @@ defaults:
       type: pages
     values:
       layout: wiki
+
+after_footer_scripts:
+  - assets/js/clipboard.js
