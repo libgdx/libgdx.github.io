@@ -421,7 +421,7 @@ However using third party tools you can simply define your shapes and import the
 ### Importing Complex Shapes using box2d-editor ###
 
 [box2d-editor](https://github.com/julienvillegas/box2d-editor) is a free open source tool to define complex shapes and load them into your game.
-An example of how to import a shape into your game using box2d-editor is available on [Libgdx.info](https://libgdx.info/box2d-importing-complex-bodies/).
+An example of how to import a shape into your game using box2d-editor is available on [Libgdx.info](https://libgdxinfo.wordpress.com/box2d-importing-complex-bodies/).
 
 Check out the [Tools section](/wiki/extensions/physics/box2d#Tools) for more tools.
 
@@ -536,9 +536,9 @@ Depending on the application design, the Entity class should be referenced in th
 
 There are a lot of really good Box2D resources out there and most of the code can be easily converted to libgdx.
 
-  * A basic implementation and code sample for Box2D with Scene2D is also avalaible on [LibGDX.info](https://libgdx.info/box2d-basic/)
-  * http://box2d.org Documentation and forums are a great place to find help.
-  * http://www.iforce2d.net/b2dtut/ A really good tutorial series on Box2D. Covers a lot of different problems which you will more than likely run across in your game development
+  * A basic implementation and code sample for Box2D with Scene2D is also available on [LibGDX.info](https://libgdxinfo.wordpress.com/box2d-basic/).
+  * [Box2D documentation](https://box2d.org/documentation/) and [Discord](https://discord.com/invite/NKYgCBP) are a great place to find help.
+  * A really good [tutorial series on Box2D](https://www.iforce2d.net/b2dtut/). Covers a lot of different problems which you will more than likely run across in your game development.
 
 ## Tools ##
 
@@ -546,9 +546,9 @@ The following is a list of tools for use with box2d and libgdx:
 
 ### Free Open Source
 
-  * <a href="https://github.com/julienvillegas/box2d-editor">Physics Body Editor</a>
+  * [Physics Body Editor](https://github.com/julienvillegas/box2d-editor)
 
-Code Sample available on [LibGDX.info](https://libgdx.info/box2d-importing-complex-bodies/)
+Code sample available on [LibGDX.info](https://libgdxinfo.wordpress.com/box2d-importing-complex-bodies//)
 
 ### Commercial
 

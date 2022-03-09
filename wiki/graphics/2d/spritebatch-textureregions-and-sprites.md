@@ -17,7 +17,7 @@ Changing textures every few rectangles that are drawn prevents `SpriteBatch` fro
 
 ## SpriteBatch ##
 
-Using [`SpriteBatch`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/SpriteBatch.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/SpriteBatch.java) in an application looks like this:
+Using [`SpriteBatch`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/SpriteBatch.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/SpriteBatch.java) in an application looks like this:
 
 ```java
 
@@ -72,7 +72,7 @@ Here a texture is created and passed to a `SpriteBatch` to be drawn. The texture
 
 ## TextureRegion ##
 
-The [`TextureRegion` class](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/TextureRegion.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/TextureRegion.java) describes a rectangle inside a texture and is useful for drawing only a portion of the texture.
+The [`TextureRegion` class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/TextureRegion.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/TextureRegion.java) describes a rectangle inside a texture and is useful for drawing only a portion of the texture.
 
 ```java
 private TextureRegion region;
@@ -97,7 +97,7 @@ Here the `20, 20, 50, 50` describes the portion of the texture, which is then dr
 
 ## Sprite ##
 
-The [`Sprite` class](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/Sprite.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/Sprite.java) describes both a texture region, the geometry where it will be drawn, and the color it will be drawn.
+The [`Sprite` class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/Sprite.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/Sprite.java) describes both a texture region, the geometry where it will be drawn, and the color it will be drawn.
 
 ```java
 private Sprite sprite;

@@ -19,9 +19,9 @@ The Environment class extends the Attributes class, see below for more informati
 
 ### Lights ###
 
-Since version 1.5.7 lights are moved to attributes, which means that you can attach a light to either an environment or a material. Adding a light to an environment can still be done using the [`environment.add(light)`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/Environment.html#add-com.badlogic.gdx.graphics.g3d.environment.BaseLight-) method. However, you can also use the `DirectionalLightsAttribute`, `PointLightsAttribute` and `SpotLightsAttribute` attributes (see below). Each of these attributes has an array which you can use to attach one or more lights to it. Note however that you typically can only use one of both. If you add a light to the `PointLightsAttribute` of the environment and then add another light to the `PointLightsAttribute` of the material, then the `DefaultShader` will ignore the point light(s) added to the environment. Lights are always used by reference.
+Since version 1.5.7 lights are moved to attributes, which means that you can attach a light to either an environment or a material. Adding a light to an environment can still be done using the [`environment.add(light)`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/Environment.html#add-com.badlogic.gdx.graphics.g3d.environment.BaseLight-) method. However, you can also use the `DirectionalLightsAttribute`, `PointLightsAttribute` and `SpotLightsAttribute` attributes (see below). Each of these attributes has an array which you can use to attach one or more lights to it. Note however that you typically can only use one of both. If you add a light to the `PointLightsAttribute` of the environment and then add another light to the `PointLightsAttribute` of the material, then the `DefaultShader` will ignore the point light(s) added to the environment. Lights are always used by reference.
 
-Lights should be sorted by importance. Usually this means that lights should be sorted on distance. The `DefaultShader` for example by default [(configurable)](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.Config.html#numPointLights) only uses the first five point lights for shader lighting. Any remaining lights will be added to an ambient cubemap which is much less accurate.
+Lights should be sorted by importance. Usually this means that lights should be sorted on distance. The `DefaultShader` for example by default [(configurable)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.Config.html#numPointLights) only uses the first five point lights for shader lighting. Any remaining lights will be added to an ambient cubemap which is much less accurate.
 
 ## Attributes ##
 
@@ -187,7 +187,7 @@ Just like the `BlendingAttribute`, does the `DepthTestAttribute` not require an 
 * `depthMask` Whether or not to write to the depth buffer, enabled by default.
 
 ### DirectionalLightsAttribute ###
-The DirectionalLightsAttribute does not require an attribute type. It is always `DirectionalLightsAttribute.Type`. The ` DirectionalLightsAttribute` can be used to specify an array of [`DirectionalLight`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/DirectionalLight.html) instances, using the following property:
+The DirectionalLightsAttribute does not require an attribute type. It is always `DirectionalLightsAttribute.Type`. The ` DirectionalLightsAttribute` can be used to specify an array of [`DirectionalLight`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/DirectionalLight.html) instances, using the following property:
 * `lights` The array of lights, should be sorted on importance.
 
 ### FloatAttribute ###
@@ -200,11 +200,11 @@ Similar to the `FloatAttribute` class, the `IntAttribute` allows you to pass an 
 * `IntAttribute.CullFace` OpenGL enum to specify face culling, either GL_NONE (no culling), GL_FRONT (only render back faces) or GL_BACK (only render front faces). The default depends on the shader, the default shader uses GL_BACK by default.
 
 ### PointLightsAttribute ###
-The PointLightsAttribute does not require an attribute type. It is always `PointLightsAttribute.Type`. The `PointLightsAttribute` can be used to specify an array of [`PointLight`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/PointLight.html) instances, using the following property:
+The PointLightsAttribute does not require an attribute type. It is always `PointLightsAttribute.Type`. The `PointLightsAttribute` can be used to specify an array of [`PointLight`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/PointLight.html) instances, using the following property:
 * `lights` The array of lights, should be sorted on importance.
 
 ### SpotLightsAttribute ###
-Not supported by the default shader. The SpotLightsAttribute does not require an attribute type. It is always `SpotLightsAttribute.Type`. The `SpotLightsAttribute` can be used to specify an array of [`SpotLight`](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/SpotLight.html) instances, using the following property:
+Not supported by the default shader. The SpotLightsAttribute does not require an attribute type. It is always `SpotLightsAttribute.Type`. The `SpotLightsAttribute` can be used to specify an array of [`SpotLight`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/SpotLight.html) instances, using the following property:
 * `lights` The array of lights, should be sorted on importance.
 
 ### TextureAttribute ###

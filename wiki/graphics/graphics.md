@@ -6,7 +6,7 @@ This page needs to be rewritten.
 
 # Introduction #
 
-The [Graphics](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Graphics.html) module provides information about the current device display and application window as well as information about and access to the current OpenGL context. Specifically, information regarding screen size, pixel density, and frame-buffer properties such as color-depth, depth/stencil buffers, and anti-aliasing capabilities can all be found within this class. As with other common modules, access is provided via static fields of the [Gdx class](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Gdx.html).
+The [Graphics](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Graphics.html) module provides information about the current device display and application window as well as information about and access to the current OpenGL context. Specifically, information regarding screen size, pixel density, and frame-buffer properties such as color-depth, depth/stencil buffers, and anti-aliasing capabilities can all be found within this class. As with other common modules, access is provided via static fields of the [Gdx class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Gdx.html).
 
 # OpenGL Context #
 
@@ -22,7 +22,7 @@ Gdx.gl20.glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
 
 Note the use of `getWidth()` / `getHeight()` to access the current application window dimensions in setting the viewport as well as the use of constants from the `GL20` class just as one would do in a regular OpenGL program. A key advantage in libGDX is the ability to access low level functionality whenever higher level abstraction does not suffice.
 
-Each version of OpenGL ES is available through its own respective interface as well as a GLCommon ( **that doesn't exist, this article needs to be rewritten!** ) interface for version agnostic commands. Note that use of [GL20](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/GL20.html) requires instructing the application to use OpenGL ES2 upon start-up.
+Each version of OpenGL ES is available through its own respective interface as well as a GLCommon ( **that doesn't exist, this article needs to be rewritten!** ) interface for version agnostic commands. Note that use of [GL20](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/GL20.html) requires instructing the application to use OpenGL ES2 upon start-up.
 
 Access to the OpenGL Utility class ( **that doesn't exist, this article needs to be rewritten!** ) is also provided, although this functionality may be better handled through Libgdx's own [Orthographic](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/OrthographicCamera.java) and [Perspective](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/PerspectiveCamera.java) camera classes. There is also a simple method for querying support for named extensions in `supportsExtension()`. Just supply the name of the extension to determine support on the current device.
 
