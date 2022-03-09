@@ -1,7 +1,7 @@
 ---
 title: Gdx freetype
 ---
-# Introduction #
+## Introduction
 
 If you want to draw text in your game, you usually use a [BitmapFont](/wiki/graphics/2d/fonts/bitmap-fonts).
 However, there is a downside:
@@ -9,8 +9,10 @@ However, there is a downside:
 * **BitmapFonts rely on an image, so you have to scale them if you want a different size, which may look ugly.**
 
 You could just save a BitmapFont of the biggest size needed in your game then and you never have to scale up, just down, right?
-Well, that's true, but such a BitmapFont can easily take up two times as much space on your hard drive as the corresponding TrueType Font (.ttf).
-Now imagine you have to ship all your big BitmapFonts with your game and your game uses ten different fonts... on an Android device. Bye bye, free storage!
+Well, that's true, but downscaling by large amounts can either look aliased or slightly blurry, depending if mipmapping is used.
+[Distance field fonts](https://libgdx.com/wiki/graphics/2d/fonts/distance-field-fonts) aim to solve this, but that's not what this page is about!
+
+A BitmapFont can also take up more storage space than the corresponding TrueType Font (.ttf), though whether these fonts would require more space than gdx-freetype itself depends on your game and target platform.
 
 The solution to your problem is the `gdx-freetype` extension:
   * ship only lightweight .ttf files with your game
@@ -19,25 +21,23 @@ The solution to your problem is the `gdx-freetype` extension:
 
 Tutorial available on [LibGDX.info](https://libgdxinfo.wordpress.com/basic-label/)
 
-# Details #
+## Details
 
 Since this is an extension, it is not included in your libGDX project by default. How you add the extension differs based on the setup of your project.
 
-## How to put gdx-freetype in your project ##
+### How to put gdx-freetype in your project
 
-**For Projects Using Gradle**
+#### For projects using Gradle
 
 For new projects, simply select the Freetype option under extensions in the [setup UI](https://libgdx.com/dev/project-generation/).
 
 To add to an existing Gradle project, see [Dependency management with Gradle](/wiki/articles/dependency-management-with-gradle#freetypefont-gradle).
 
-**HTML5**
+#### HTML5
 
-GDX Freetype is not compatible with HTML5. However, you may use the gdx-freetype-gwt lib by Intrigus to enable HTML5 functionality. Please follow the instructions here: https://github.com/intrigus/gdx-freetype-gwt
+gdx-freetype is not compatible with HTML5. However, you may use the [gdx-freetype-gwt](https://github.com/intrigus/gdx-freetype-gwt) library by Intrigus to enable HTML5 functionality. Version 1.9.10.1 remains compatible with never versions of libGDX, including 1.10.0.
 
-You're ready to go.
-
-## How to use gdx-freetype in code ##
+### How to use gdx-freetype in code
 
 Using the gdx-freetype extension in your code is really simple.
 
@@ -86,7 +86,10 @@ public TextureFilter magFilter = TextureFilter.Nearest;
 
 If rendering large fonts, the default PixmapPacker page size may be too small. You can provide your own PixmapPacker or use `FreeTypeFontGenerator.setMaxTextureSize` to set the default page size.
 
-Examples:
+You may want to generate your font in your game's `resize ()` event to handle different window resolutions without scaling, being sure to dispose of old BitmapFonts. Your font size should be limited to what your page size can handle, especially on gdx-freetype-gwt, to avoid glitched fonts and crashes.
+
+### Examples
+
 ```java
 parameter.borderColor = Color.BLACK;
 parameter.borderWidth = 3;
@@ -102,9 +105,9 @@ parameter.shadowOffsetY = 3;
 
 You can also load `BitmapFont`s generated via the FreeType extension using AssetManager. See [FreeTypeFontLoaderTest](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/extensions/FreeTypeFontLoaderTest.java)
 
-### latest info about caveats ###
+### Caveats
 
-Quoting from https://web.archive.org/web/20201128081723/https://www.badlogicgames.com/wordpress/?p=2300:
+Quoting from [https://web.archive.org/web/20201128081723/https://www.badlogicgames.com/wordpress/?p=2300](https://web.archive.org/web/20201128081723/https://www.badlogicgames.com/wordpress/?p=2300):
   * Asian scripts “might” work, see caveat above though. They contain just too many glyphs. I’m thinking about ways to fix this.
   * Right-to-left scripts like Arabic are a no-go. The layout “algorithms” in BitmapFont and BitmapFontCache have no idea how to handle that.
   * Throwing just any font at FreeType is not a super awesome idea. Some fonts in the wild are just terrible, with bad or no hinting information and will look like poopoo.
