@@ -23,7 +23,7 @@ Resources in a skin typically come from a [texture atlas](/wiki/tools/texture-pa
 Useful resources:
 * [Ready to use skins.](https://github.com/czyzby/gdx-skins)
 * [Skin Composer](https://ray3k.wordpress.com/software/skin-composer-for-libgdx/) is a UI tool for creating and editing skins.
-* [Basic skin Label tutorial ](https://libgdx.info/basic-label/)
+* [Basic skin Label tutorial ](https://libgdxinfo.wordpress.com/basic-label/)
 
 ## <a id="Resources"></a>Resources ##
 

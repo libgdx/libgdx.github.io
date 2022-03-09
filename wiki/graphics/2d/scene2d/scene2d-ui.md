@@ -7,7 +7,7 @@ scene2d is libGDX's 2D scene graph. At its core, it provides basic 2D scene grap
 
 It is highly recommended to read or least skim the [scene2d documentation](/wiki/graphics/2d/scene2d/scene2d) before continuing.
 
-Check out [libGDX.info](https://libgdx.info/) for examples showcasing Scene2d actors, scenes, Stages Images etc..
+Check out [libGDX.info](https://libgdxinfo.wordpress.com/) for examples showcasing Scene2d actors, scenes, Stages Images etc..
 
  * [Widget and WidgetGroup](#widget-and-widgetgroup)
  * [Layout](#layout)
@@ -240,7 +240,7 @@ To create a label which contain text with different colors, the [BitmapFont](htt
 
 [Image](http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Image.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Image.java)) simply displays a drawable. The drawable can be a texture, texture region, ninepatch, sprite, etc. The drawable may be scaled and aligned within the image widget bounds in various ways.
 
-For a tutorial on using Image (Create, rotate, resize and creating images with repeating texture [see this Image tutorial](https://libgdx.info/basic_image/))
+For a tutorial on using Image (Create, rotate, resize and creating images with repeating texture [see this Image tutorial](https://libgdxinfo.wordpress.com/basic_image/))
 
 ### <a id="Button"></a>Button ###
 
