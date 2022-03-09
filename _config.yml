@@ -101,5 +101,4 @@ defaults:
       layout: wiki
 
 after_footer_scripts:
-  - https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js
-  - assets/js/clipboardrougev2.js
+  - assets/js/clipboard.js
