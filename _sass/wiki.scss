@@ -67,6 +67,10 @@ article.page {
   }
 }
 
+.visible-links a:hover {
+  text-decoration: none;
+}
+
 // WIKI NAVBAR AT THE SIDE
 @media (prefers-color-scheme: light) {
   .toc {
