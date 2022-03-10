@@ -1,11 +1,12 @@
 ---
 title: External tutorials
 ---
-This page gives a list of some **external tutorials**, if our wiki here isn't enough for you. If you're looking for some **representative games** made with libGDX, have a look at our collection [here](/showcase/). If you're interested in some **tools and frameworks to use with libGDX**, [this curated list](https://github.com/rafaskb/awesome-libgdx) may be of help. We also have a list of useful resources on our discord server.
+This page gives a list of some **external tutorials**, if our wiki here isn't enough for you. If you're looking for some **representative games** made with libGDX, have a look at our collection [here](/showcase/). If you're interested in some **tools and frameworks to use with libGDX**, [this curated list](https://github.com/rafaskb/awesome-libgdx) may be of help. We also have a list of useful resources on our [Discord server](/community/discord/).
 
-*Preliminary note:* Given the nature of this page's content it is likely that some of the links displayed here might become offline or even change. If you spot some broken link or wrong information please feel free to edit this page so we can keep our wiki as up-to-date as possible. Thank you.
+*Preliminary note:* Given the nature of this page's content, it is likely that some of the links displayed here might become offline or even change. If you spot some broken link or wrong information please feel free to edit this page so we can keep our wiki as up-to-date as possible. Thank you.
+{: .notice--info}
 
-## General tutorial websites
+# General tutorial websites
 These are webpages where individuals or companies write about their experience with libGDX from a technical perspective. Some of the tutorials present in these pages are also referenced below in more topic specific sections but if you're just looking to some websites where people talk about their general experiences with libGDX you should start here.
 
 ### Some one-page tutorials for beginners
@@ -25,7 +26,7 @@ These are webpages where individuals or companies write about their experience w
 - [Asteroid game – by ForeignGuyMike](https://www.youtube.com/playlist?list=PL-2t7SM0vDfeZUKeM7Jm4U9utHwFS1N-C) (2014)
 - [By dermetfan – 25 parts](https://www.youtube.com/playlist?list=PLXY8okVWvwZ0JOwHiH1TntAdq-UDPnC2L) (2013)
 
-## Topic-specific tutorials
+# Topic-specific tutorials
 ### AdMob integration for libGDX Android projects ###
 * [norakomi.com](https://web.archive.org/web/20200807000743/http://norakomi.com/tutorial_admob_introduction.php)
 
@@ -54,7 +55,7 @@ These are webpages where individuals or companies write about their experience w
 * [Video tutorial series by dermetfan](https://www.youtube.com/playlist?list=PLXY8okVWvwZ0qmqSBhOtqYRjzWtUCWylb)
    * [gdx-tiled-preprocessor video tutorial](https://www.youtube.com/watch?v=q5D-TzlCRPM) (Warning: the gdx-tiled-preprocessor was merged into gdx-tools)
 
-## Some simple open-source projects for reference
+# Some simple open-source projects for reference
 These are some open-source projects found on the web that use libGDX and can be used as reference. This list is intentionally kept as clean and interesting as possible (you won't see repeated projects nor _Hello-World kind-of-games_ here).
 * [Fire and Ice](https://github.com/lyze237/FireAndIce) (uses tile maps)
 * [On Guard](https://github.com/lyze237/On-Guard) (uses tile maps)

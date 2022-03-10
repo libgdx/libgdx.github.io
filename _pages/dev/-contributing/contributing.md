@@ -74,13 +74,13 @@ If some java features are not supported on GWT they must either be emulated or a
 </ul>
 </div>
 
-Determine if any new classes are compatible with GWT, and either **include** or **exclude** elements to the [GWT module](https://github.com/libgdx/libgdx/blob/master/gdx/res/com/badlogic/gdx.gwt.xml). See for example [this PR](https://github.com/libgdx/libgdx/pull/5018/files#diff-13b547f0d1b0872d60d67db4ca0b266d).
+For each new file added to LibGDX, you need to determine whether it is compatible with GWT, and either **include** or **exclude** it in the [GWT module](https://github.com/libgdx/libgdx/blob/master/gdx/res/com/badlogic/gdx.gwt.xml). To include a class file, add a new entry to the `gdx/src/com/badlogic/gdx.gwt.xml` file. See for example [this PR](https://github.com/libgdx/libgdx/pull/5018/files#diff-13b547f0d1b0872d60d67db4ca0b266d).
 If the new file isn't added to `gdx/src/com/badlogic/gdx.gwt.xml`, an error similar to
 
 ```
-[ERROR] Errors in 'jar:file:<...>'
-[ERROR] Line <line num>: No source code is available for type com.badlogic.gdx.graphics.g3d.environment.PointShadowLight; did you forget to inherit a required module?
-[ERROR] Aborting compile due to errors in some input files
+    [ERROR] Errors in 'jar:file:<...>'
+          [ERROR] Line <line num>: No source code is available for type com.badlogic.gdx.graphics.g3d.environment.PointShadowLight; did you forget to inherit a required module?
+    [ERROR] Aborting compile due to errors in some input files
 ```
 
 may be seen.
@@ -125,3 +125,10 @@ To sum it up, this is the general workflow:
 For a very extensive explanation of how the pull request system on GitHub is supposed to work, check out [this guide](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#Forked-Public-Project).
 
 Pull requests may be denied for not being ready, or not fitting the scope of the project. Please do not take any offense to having a pull request rejected. We appreciate every contribution, but some code submissions are just not a good fit for the project.
+
+## Other development resources
+There are a few wiki articles concerned with contributing to libGDX:
+
+- [Adding new keycodes](/wiki/misc/adding-new-keycodes)
+- [Building the bullet wrapper](/wiki/misc/building-the-bullet-wrapper)
+- [Release process](/wiki/misc/release-process)

@@ -407,16 +407,10 @@ Under the `allprojects` stub, you can see how repositories are defined. Here is 
 ```groovy
 allprojects {    
     repositories {
-        // Remote Maven repo
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-        // Maven Central Repo
-        mavenCentral()
-        // Local Maven repo
-        mavenLocal()
-        // Remote Ivy dir
-        ivy { url "http://some.ivy.com/repo" }
-        // Local Ivy dir
-        ivy { url "../local-repo" }
+        mavenCentral() // Maven Central repo
+        mavenLocal() // local Maven repo
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" } // remote Maven repo: Sonatype snapshots
+        maven { url "https://jitpack.io" } // remote Maven repo: Jitpack
     }
 }
 ```

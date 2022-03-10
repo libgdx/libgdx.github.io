@@ -13,11 +13,11 @@ libGDX's Gradle based projects make it very easy to switch between libGDX versio
 
 Your Gradle based project makes it very easy to switch between releases and nightly builds. Open up the `build.gradle` file in the root of your project, and locate the following line:
 
-```Groovy
+```groovy
  gdxVersion = "1.5.2"
 ```
 
-The version you see will most certainly be higher than `1.5.2`. Once you've located that string, you can simply change it to the latest release (or an older release) or to the current SNAPSHOT version. You may also have to update other modules in that same section of the `build.gradle` file, based on the [versions listing](https://libgdx.com/dev/versions/). Once edited, save the `build.gradle` file. For a much easier way to update your dependencies (automatically find the newest version of each), see [Gradle versions plugin](#gradle-versions-plugin-and-updating-your-dependencies).
+The version you see will most certainly be higher than `1.5.2`. Once you've located that string, you can simply change it to the latest release (or an older release) or to the current SNAPSHOT version. You may also have to update other modules in that same section of the `build.gradle` file, based on the [versions listing](/dev/versions/). Once edited, save the `build.gradle` file. For a much easier way to update your dependencies (automatically find the newest version of each), see [Gradle versions plugin](#gradle-versions-plugin-and-updating-your-dependencies).
 
 The next step is dependent on your IDE:
 
@@ -46,11 +46,15 @@ Essentially, the gradle wrapper (`./gradlew`) is pretty standard for Gradle proj
 
 Though, gradle releases new versions quite steadily, so over the months/years, the version that is embedded (and stored in your repository), is old. You can just run following command line:
 
-    `./gradlew wrapper --gradle-version #{GRADLE_VERSION}`
+```
+./gradlew wrapper --gradle-version #{GRADLE_VERSION}
+```
 
 Or if you want to specify a Gradle distribution by URL(find official distributions [here](https://services.gradle.org)):
 
-     `./gradlew wrapper --gradle-distribution-url #{GRADLE_DISTRIBUTION_URL}`
+```
+./gradlew wrapper --gradle-distribution-url #{GRADLE_DISTRIBUTION_URL}
+```
 
 To upgrade your Gradle wrapper.
 

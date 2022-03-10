@@ -2,7 +2,7 @@
 title: Release Process
 # Not listed in ToC
 ---
-**Note:** This page is outdated and needs to be updated.
+**Note:** This page is outdated and needs to be updated!
 {: .notice--danger}
 
 2. Setup pgp keys and settings.xml for Maven release, ask Mario
