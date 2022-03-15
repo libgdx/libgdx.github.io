@@ -54,6 +54,8 @@ As an added bonus, the migration allows us to use normal HTML, JS and CSS code i
 - Text <span style="color:blue">can</span> be <span class="example">formatted</span> in <span class="example2">various</span> new ways
 - Videos can easily be included: `{% raw %}{% include video id="3kPK_O6Q4wA" provider="youtube" %}{% endraw %}`
 - Jekyll elements like, for example, [carousels](https://github.com/libgdx/libgdx.github.io/wiki/Custom-Additions#carousel) can be used
-- libGDX GWT apps can be embedded on wiki pages, allowing us to showcase live libGDX examples
+- libGDX [GWT apps can be embedded](/wiki/misc/wiki-style-guide#adding-gwt-examples) on wiki pages, allowing us to showcase live libGDX examples
+- We have also recently added a [search feature](/wiki/search) to the wiki
+- Every code example now features a "Copy to clipboard" button
 
 Feedback on this migration is very much welcome – just join our [Discord](/community/discord/) and let us know what you think!
