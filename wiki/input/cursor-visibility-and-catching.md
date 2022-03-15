@@ -16,8 +16,6 @@ Cursor positioning is only available on the desktop backend.
 
 ## Custom cursor
 
-<!--<img alt="Example custom cursor image" src="/assets/wiki/images/cursor-visibility-and-catching1.png" style="float: right">-->
-
 Changing the cursor to a custom image can be done like so. The following example turns this 32×32 image into a cursor: <a href="/assets/wiki/images/cursor-visibility-and-catching1.png?nomagnify" download="badcursor">![Example custom cursor image](/assets/wiki/images/cursor-visibility-and-catching1.png)</a>
 
 ```java
