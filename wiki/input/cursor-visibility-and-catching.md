@@ -31,7 +31,7 @@ Gdx.graphics.setCursor(cursor);
 
 Only cursors of power-of-two resolutions are supported. For example, if your cursor is 24×24, you must pad it to 32×32. Remember that your cursor may appear small on HDPI monitors if you don't account for them.
 
-### Visiblity
+### Visibility
 
 You might have the idea to use a transparent pixmap for transparency, but it comes with a caveat: Windows has issues with fully transparent cursors, as well as ones of unusual resolution. We can work around this by creating a 32×32 cursor that contains a very-nearly-totally-transparent gray pixel. While not technically completely hidden, the cursor becomes impossible to see.
 
