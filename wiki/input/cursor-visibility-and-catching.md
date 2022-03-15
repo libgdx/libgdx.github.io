@@ -53,7 +53,7 @@ Gdx.graphics.setSystemCursor(SystemCursor.Crosshair);
 
 ### Supported system cursors
 
-Cursor appearance can varies by operating system and user preferences. These images below are from Ubuntu. Windows and macOS cursors are not displayed out of respect for copyright, but they look similar.
+Cursor appearance varies depending on operating system and user preferences. The images below are from Ubuntu. Windows and macOS cursors are not displayed out of respect for copyright, but they look similar.
 
 You can hover over each row in the table with your mouse to see what the cursors look like on your own system.
 
