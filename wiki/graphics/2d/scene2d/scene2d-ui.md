@@ -303,7 +303,7 @@ A slider with touches disabled, a drawable before the knob, and without the knob
 
 ### <a id="Touchpad"></a>Touchpad ###
 
-[Touchpad](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Touchpad.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Touchpad.java)) is an onscreen joystick that moves in a circular area. It has a background drawable and a drawable for the knob that the user drags around.
+[Touchpad](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Touchpad.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Touchpad.java)) is an onscreen joystick that moves in a circular area. It has a background drawable and a drawable for the knob that the user drags around. If you want to implement a "follow mode" for your joystick element, check out the example [here](https://github.com/libgdx/libgdx/issues/6688#issuecomment-962640273).
 
 ### <a id="Dialog"></a>Dialog ###
 
