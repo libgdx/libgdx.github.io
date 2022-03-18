@@ -117,7 +117,7 @@ Alternatively you can also specify a projection matrix and the view boundaries m
 mapRenderer.setView(projectionMatrix, startX, startY, endx, endY);
 ```
 
-The view boundaries are give in the x/y plane, with the y-axis pointing upwards. The units used are specific to the map and format it was loaded from.
+The view boundaries are given in the x/y plane, with the y-axis pointing upwards. The units used are specific to the map and format it was loaded from.
 
 To render all layers of the map you can then simply call:
 
