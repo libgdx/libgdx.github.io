@@ -5,31 +5,31 @@ In practice, when rendering, you are specifying what (the shape) to render and h
 
 Uniforms can be grouped into model specific (e.g. the texture applied or whether or not to use blending) and environmental uniforms (e.g. the lights being applied or an environment cubemap). Likewise the 3D api allows you to specify a material and environment.
 
-## Materials ##
+## Materials
 
 Materials are model (or modelinstance) specific. You can access them by index `model.materials.get(0)`, by name `model.getMaterial("material3")` or by nodepart `model.nodes.get(0).parts(0).material`. Materials are copied when creating a ModelInstance, meaning that changing the material of a ModelInstance will not affect the original Model or other ModelInstances.
 
 The Material class extends the Attributes class, see below for more information about Attributes.
 
-## Environment ##
+## Environment
 
 An Environment contains the uniform values specific for a location. For example, the lights are part of the Environment. Simple applications might use only Environment, while more complex applications might use multiple environments depending on the location of a ModelInstance. A ModelInstance (or Renderable) can only contain one Environment though.
 
 The Environment class extends the Attributes class, see below for more information about Attributes.
 
-### Lights ###
+### Lights
 
 Since version 1.5.7 lights are moved to attributes, which means that you can attach a light to either an environment or a material. Adding a light to an environment can still be done using the [`environment.add(light)`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/Environment.html#add-com.badlogic.gdx.graphics.g3d.environment.BaseLight-) method. However, you can also use the `DirectionalLightsAttribute`, `PointLightsAttribute` and `SpotLightsAttribute` attributes (see below). Each of these attributes has an array which you can use to attach one or more lights to it. Note however that you typically can only use one of both. If you add a light to the `PointLightsAttribute` of the environment and then add another light to the `PointLightsAttribute` of the material, then the `DefaultShader` will ignore the point light(s) added to the environment. Lights are always used by reference.
 
 Lights should be sorted by importance. Usually this means that lights should be sorted on distance. The `DefaultShader` for example by default [(configurable)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.Config.html#numPointLights) only uses the first five point lights for shader lighting. Any remaining lights will be added to an ambient cubemap which is much less accurate.
 
-## Attributes ##
+## Attributes
 
 Both the Environment and Material classes extend the Attributes the class. Most commonly, the Attributes class is used to specify uniform values. For example a TextureAttribute can be used to specify an uniform to bound for a shader. However, attributes don't have to be uniforms, for example DepthTestAttribute is used to alter the opengl state and doesn't set an uniform.
 
 The Attributes class is most comparable with a Set. It can contain at most one value for each attribute, just like an uniform can only be set to one value. Theoretically both the Material and Environment can contain the same attribute, the actual behavior in this scenario depends on the shader used, but in most cases the Materials attribute will be used instead of the Environment attribute.
 
-### Attribute type ###
+### Attribute type
 
 Every attribute has a `type` long value, which is a bitmask used to identify the attribute. Therefor a complete material or environment can be represented with a single long, where each bit represents an attribute. Some attribute classes are dedicated to a single type value (bit). Others can be used for multiple type values (bits), in which case you must specify the type on construction. For example:
 
@@ -43,7 +43,7 @@ note that the ColorAttribute class contains a convenience method to do the same:
 Attribute attribute = ColorAttribute.createDiffuse(Color.RED);
 ```
 
-### Using attributes ###
+### Using attributes
 
 The most common actions for attributes are `set`, `has`, `remove`, and `get`.
 
@@ -58,7 +58,7 @@ The `get` method can be used to fetch an attribute of a specific type. For examp
 
 Besides that you can also `clear` (to remove all attributes), iterate (it implements `Iterable<Attribute>`) and compare (it implements `Comparator<Attribute>`, however the `same` method provides additional options) attributes. The `getMask()` method provides access to the mask containing all attributes, for example `material.getMask() & FloatAttribute.AlphaTest == FloatAttribute.AlphaTest` is the same as `material.has(FloatAttribute.AlphaTest)`.
 
-### Custom attribute types ###
+### Custom attribute types
 
 It is possible to use a standard attribute class for a new custom type. For example when you want to use the ColorAttribute class to specify a custom type of color. There are three things you must consider in that case:
 
@@ -155,7 +155,7 @@ The `compareTo(Attribute)` method must be implemented for sorting render calls b
 ## Available attributes
 Like stated above its possible to create custom attributes. However, there are a few attributes already included, which are listed below.
 
-### BlendingAttribute ###
+### BlendingAttribute
 
 By default the 3D api assumes everything is opaque. The `BlendingAttribute` is most commonly used for materials (in case of environment it will change the default behavior) and can be used to specify that the material is or is not blended. The `BlendingAttribute` doesn't require you to specify a type on construction, its type is always `BlendingAttribute.Type`, unless it's extended. It contains four properties which can be specified:
 * `blended` indicates whether or not the material should be treated as blended. This is primarily used for sorting, for example opaque objects are drawn prior to transparent objects.
@@ -163,7 +163,7 @@ By default the 3D api assumes everything is opaque. The `BlendingAttribute` is m
 * `destFunction` OpenGL enum which specifies how the (existing) red, green, blue, and alpha destination blending factors are computed, by default it is set to GL_ONE_MINUS_SRC_ALPHA. For additive blending you might want to set it to GL_ONE.
 * `opacity` The amount of opacity (the source alpha value), ranging from 0 (fully transparent) to 1 (fully opaque).
 
-### ColorAttribute ###
+### ColorAttribute
 
 The `ColorAttribute` allows you to pass a color to the shader. For that it only contains one property: `.color`. You can set the color during construction (it will be set by value) or using the `.color.set(...)` method. The `ColorAttribute` requires an attribute type to be specified, by default the following types are available:
 * `ColorAttribute.Diffuse`
@@ -176,38 +176,38 @@ The `ColorAttribute` allows you to pass a color to the shader. For that it only 
 
 Where the latter two are most commonly used for Environment, while the others or commonly used for Material.
 
-### CubemapAttribute ###
+### CubemapAttribute
 To pass a `Cubemap` to the shader the `CubemapAttribute` can be used. It's value is the `textureDescription` member which can be used to specify the cubemap along with other texture related values. The `CubemapAttribute` requires an attribute type to be specified, by default the `CubemapAttribute.EnvironmentMap` is the only valid type.
 
-### DepthTestAttribute ###
+### DepthTestAttribute
 Just like the `BlendingAttribute`, does the `DepthTestAttribute` not require an attribute type. It is always `DepthTestAttribute.Type`. The `DepthTestAttribute` can be used to specify depth testing and writing, using the following properties:
 * `depthFunc` The depth test function, or 0 (or GL_NONE) to disable depth test, by default it is GL20.GL_LEQUAL.
 * `depthRangeNear` Mapping of near clipping plane to window coordinates, by default 0.0
 * `depthRangeFar` Mapping of far clipping plane to window coordinates, by default 1.0
 * `depthMask` Whether or not to write to the depth buffer, enabled by default.
 
-### DirectionalLightsAttribute ###
+### DirectionalLightsAttribute
 The DirectionalLightsAttribute does not require an attribute type. It is always `DirectionalLightsAttribute.Type`. The ` DirectionalLightsAttribute` can be used to specify an array of [`DirectionalLight`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/DirectionalLight.html) instances, using the following property:
 * `lights` The array of lights, should be sorted on importance.
 
-### FloatAttribute ###
+### FloatAttribute
 To pass a single floating point value to the shader, the `FloatAttribute` can be used. The value can be specified on construction or using the `.value` member. The `FloatAttribute` requires an attribute type, which by default can be:
 * `FloatAttribute.Shininess` Used for specular lighting.
 * `FloatAttribute.AlphaTest` Used to discard pixels when the alpha value is equal or below the specified value.
 
-### IntAttribute ###
+### IntAttribute
 Similar to the `FloatAttribute` class, the `IntAttribute` allows you to pass an integer value to the shader. Likewise the `.value` member can be used or the value can be set on construction. The `IntAttribute` requires an attribute type, which by default can be:
 * `IntAttribute.CullFace` OpenGL enum to specify face culling, either GL_NONE (no culling), GL_FRONT (only render back faces) or GL_BACK (only render front faces). The default depends on the shader, the default shader uses GL_BACK by default.
 
-### PointLightsAttribute ###
+### PointLightsAttribute
 The PointLightsAttribute does not require an attribute type. It is always `PointLightsAttribute.Type`. The `PointLightsAttribute` can be used to specify an array of [`PointLight`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/PointLight.html) instances, using the following property:
 * `lights` The array of lights, should be sorted on importance.
 
-### SpotLightsAttribute ###
+### SpotLightsAttribute
 Not supported by the default shader. The SpotLightsAttribute does not require an attribute type. It is always `SpotLightsAttribute.Type`. The `SpotLightsAttribute` can be used to specify an array of [`SpotLight`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/environment/SpotLight.html) instances, using the following property:
 * `lights` The array of lights, should be sorted on importance.
 
-### TextureAttribute ###
+### TextureAttribute
 `TextureAttribute` can be used to pass a `Texture` to the shader. Just like the `CubemapAttribute` it has a `textureDescription` member which allows you to set the `Texture` amongst some texture related values like repeat and filter. Additionally it contains the `offsetU`, `offsetV`, `scaleU` and `scaleY` members, which can be used to specify the region (texture coordinates transformation) of the texture to use. It also has an `uvIndex` member (defaults to 0) which can be used to specify which texture coordinates should be used. Note that the default shader currently ignores this uvIndex member and always uses the first texture coordinates.
 
 The `TextureAttribute` requires an attribute type, which by default can be one of the following:

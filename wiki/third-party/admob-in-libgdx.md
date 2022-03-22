@@ -10,7 +10,7 @@ title: Admob in libgdx
  * [iOS Setup (RoboVM)](#ios-setup-robovm)
 
 
-# Introduction #
+# Introduction
 
 This article shows you how to set up AdMob with a libGDX app. This is current roughly with AdMob 4.0.4 and libGDX 0.9.1. The same instructions will work with Mobclix as well (and probably others), the only changes being the differences between the AdMob and Mobclix APIs. In the code snippets, I'm going to leave out the package and import lines for brevity. If you're working in Eclipse, Ctrl-1 on any line showing an error will auto-fill-in the required imports.
 
@@ -19,7 +19,7 @@ I should note that this isn't the only way to make this work. But it's one appro
 Please note that Google have deprecated 6.4.1 and earlier SDKs. For notes on how to use the new Google Mobile Ads approach, please see [Google Mobile Ads](/wiki/third-party/google-mobile-ads-in-libgdx). Thankfully the changes are very minimal from a developer/implementation point of view.
 
 
-# Background #
+# Background
 
 Let's look at the libGDX HelloWorld example and understand what it's doing. There's a HelloWorld class (in HelloWorld.java) that does all the libGDX stuff. There's a HelloWorldDesktop class that creates and runs a HelloWorld on the desktop. And finally, there's a HelloWorldAndroid class that creates and runs a HelloWorld on Android. Here's what they look like:
 
@@ -88,11 +88,11 @@ The last step hooks everything together, and sets up the Activity to use the lib
 
 With that background, let's look at what needs to be changed to add AdMob to the application.
 
-# Setup #
+# Setup
 
 To start out, follow the AdMob setup instructions as normal. Sign up, get your application key, configure your ad colors and refresh rate on the website, add the stuff needed to the AndroidManifest.xml file for permissions, activities, etc.
 
-# Initialization #
+# Initialization
 
 The main thing to understand is that AdMob uses its own View. And we know that libGDX creates a View. If we call `setContentView()` with the libGDX View, then that's what gets hooked up to the application, and there's no place to add the AdMob view. So here's what we need to do:
 
@@ -227,7 +227,7 @@ public class HelloWorldAndroid extends AndroidApplication {
 
 And that's it. Now you should have ads showing on top of your libGDX app. If you want the ads to be visible all the time, this should be all you need to do. If you want to control when the ads are visible from within your libGDX app, then there's a little more work left.
 
-# Control #
+# Control
 
 This example will show you how to turn the AdMob View's visibility on and off from within your libGDX app. Note that this is probably not the best way to control AdMob. If your ad View is invisible, but still fetching ads in the background, then you're wasting ad impressions, and that will negatively impact your ad revenue. I'm not going to talk about the best way to control the AdMob view - that varies from application to application. Also, there are things you can do on the website, and things you can do in your app. So look through the AdMob documentation for more information on that.
 
@@ -355,7 +355,7 @@ public class HelloWorldDesktop implements IActivityRequestHandler {
 
 That's it. Now you can show and hide AdMob ads from within your libGDX app.
 
-# Code #
+# Code
 
 Here's the full code for the various classes, for completeness:
 
@@ -628,7 +628,7 @@ public class HelloWorld implements ApplicationListener {
 }
 ```
 
-# iOS Setup (RoboVM) #
+# iOS Setup (RoboVM)
 
 For admob to work on IOS it's best to make sure you are doing the following things:
 
@@ -638,12 +638,12 @@ For admob to work on IOS it's best to make sure you are doing the following thin
 
 * Make sure you are using the latest admob bindings found here [robovm-ios-bindings - admob](https://github.com/MobiVM/robovm-robopods/tree/master/google-mobile-ads)
 
-* Admob needs a separate ad unit for iOS, so make sure you create a new app the key will be different than the one used for Android. 
+* Admob needs a separate ad unit for iOS, so make sure you create a new app the key will be different than the one used for Android.
 
 
 ***
 
-1. Follow the AdMob RoboPod installation instructions https://github.com/MobiVM/robovm-robopods/tree/master/google-mobile-ads/ios.
+1. Follow the [AdMob RoboPod installation instructions](https://github.com/MobiVM/robovm-robopods/tree/master/google-mobile-ads/ios).
 
 2. Now with the configuration complete you can make calls to the AdMob API from Java and configure ads as desired. The following is an example on how to integrate a Banners ad at the top of the screen:
 

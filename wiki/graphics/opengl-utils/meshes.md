@@ -5,7 +5,7 @@ A [mesh](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/gr
 
 Meshes are used by many core graphics classes in Libgdx, such as [SpriteBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/SpriteBatch.html) and [DecalBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/decals/DecalBatch.html) as well as the various 3D format loaders. A key design principle of libGDX is in storing geometry in a mesh in order to upload all vertex information in one batch for rendering. Especially on mobile platforms, there are significant performance gains in batching by reducing the overhead of individual draw calls.
 
-## Creating a Mesh ##
+## Creating a Mesh
 
 Sometimes a procedural mesh is preferred over the use of an imported model from a 3D modeling application. The following code creates a simple full screen quad often useful for frame-based shader effects:
 
@@ -53,7 +53,7 @@ Notice the use of a simple `float` array to build the basic vertex information. 
 
 Notice also the use of ShaderProgram constants to name the attributes. While not mandatory, it can be useful to maintain the same name for shader attributes for common properties such as vertex positions, normals, or texture coordinates as these are the names used across common libGDX shaders. This naming uniformity can help when one wants to swap shaders on the same meshes. See [Shaders](/wiki/graphics/opengl-utils/shaders) for more information.
 
-## Rendering ##
+## Rendering
 
 To render a mesh, simply set up the environment and call render with the desired primitive type. To render the above full-screen quad, we use a triangle fan (because that was how we structured the vertex positions):
 

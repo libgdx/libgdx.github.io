@@ -3,9 +3,9 @@ title: Rendering shapes
 ---
 [ShapeRenderer API](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ShapeRenderer.html) (Javadoc provides an example in the top level!)
 
-### What can the ShapeRenderer do? ###
+### What can the ShapeRenderer do?
 
-You can use ShapeRenderer to draw simple shapes. Types of shapes include rectangle and ellipse.  The shapes can be outlined or filled.  You can also set the color to use for each shape draw. It is very similar to use like sprite batch.
+You can use ShapeRenderer to draw simple shapes. Types of shapes include rectangle and ellipse. The shapes can be outlined or filled. You can also set the color to use for each shape draw. It is very similar to use like sprite batch.
 
 Example code that is taken from an actual project:
 

@@ -7,11 +7,11 @@ Some target platforms can’t run Java bytecodes directly, and so have more spec
 
 ## Language interoperability guides
 
-* [Clojure](http://clojure.org/java_interop)
+* [Clojure](https://clojure.org/reference/java_interop)
     * [Using libGDX with Clojure](/wiki/jvm-langs/using-libgdx-with-clojure)
-* [Kotlin](http://confluence.jetbrains.com/display/Kotlin/Java+interoperability)
+* [Kotlin](https://kotlinlang.org/docs/java-interop.html)
     * [Using libGDX with Kotlin](/wiki/jvm-langs/using-libgdx-with-kotlin)
-* [Scala](http://www.scala-lang.org/old/faq/4)
+* [Scala](https://www.scala-lang.org/old/faq/4)
     * [Using libGDX with Scala](/wiki/jvm-langs/using-libgdx-with-scala)
 * [Python](https://jython.readthedocs.io/en/latest/JythonAndJavaIntegration/) (Jython)
     * [Using libGDX with Python](/wiki/jvm-langs/using-libgdx-with-python)
@@ -39,7 +39,7 @@ The ROBOVM backend is a JVM on iOS which executes Java bytecode. This should wor
 
 ### HTML/GWT
 
-Because libGDX uses GWT, JVM languages other than Java **cannot use the HTML5 target** of libGDX. GWT [transpiles](http://en.wikipedia.org/wiki/Source-to-source_compiler) Java to JavaScript, as opposed to Java bytecode (`.class` files) to JavaScript code. There are a few reasons for this, quickly outlined by a Google employee [here](https://groups.google.com/d/msg/google-web-toolkit/SIUZRZyvEPg/OaCGAfNAzzEJ).
+Because libGDX uses GWT, JVM languages other than Java **cannot use the HTML5 target** of libGDX. GWT [transpiles](https://en.wikipedia.org/wiki/Source-to-source_compiler) Java to JavaScript, as opposed to Java bytecode (`.class` files) to JavaScript code. There are a few reasons for this, quickly outlined by a Google employee [here](https://groups.google.com/d/msg/google-web-toolkit/SIUZRZyvEPg/OaCGAfNAzzEJ).
 
 This could theoretically be fixed for JVM languages that have their own JavaScript back-ends, such as [Scala](https://www.scala-js.org/) and [Kotlin](https://kotlinlang.org/docs/tutorials/create-library-js.html). Your libGDX project’s build system would have to be changed to integrate with those back-ends instead of with GWT.
 

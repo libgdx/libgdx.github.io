@@ -1,7 +1,7 @@
 ---
 title: Bitmap fonts
 ---
-libGDX makes use of bitmap files (pngs) to render fonts.  Each glyph in the font has a corresponding TextureRegion.
+libGDX makes use of bitmap files (pngs) to render fonts. Each glyph in the font has a corresponding TextureRegion.
 
 [BitmapFont class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/BitmapFont.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/BitmapFont.java)
 
@@ -11,22 +11,22 @@ A tutorial on using BitmapFont is available on [LibGDX.info](https://libgdxinfo.
 
 ## File format specifications for the font file
 
-References point to bmFont being originally created by Andreas Jönsson over at [AngelCode](http://www.angelcode.com/)
+References point to bmFont being originally created by Andreas Jönsson over at [AngelCode](https://www.angelcode.com/)
 
-[BMFont](http://www.angelcode.com/products/bmfont/doc/file_format.html) - the original specification for the file format.
+[BMFont](https://www.angelcode.com/products/bmfont/doc/file_format.html) - the original specification for the file format.
 
-[Glyph Designer](http://web.archive.org/web/20160830115758/https://71squared.com/blog/bitmap-font-file-format) - Details about output, include a binary format.
+[Glyph Designer](https://web.archive.org/web/20160830115758/https://71squared.com/blog/bitmap-font-file-format) - Details about output, include a binary format.
 
 
 ## Tools for Creating Bitmaps
 
 [Hiero](/wiki/tools/hiero) - a utility for converting a system font to a bitmap
 
-[ShoeBox](http://renderhjs.net/shoebox/)  - lets you load customized glyphs from an image, and then create a bitmap font from them. [There's a great tutorial for using it with libgdx](https://www.youtube.com/watch?v=dxPf1M7YORU&feature=youtu.be).
+[ShoeBox](https://renderhjs.net/shoebox/)  - lets you load customized glyphs from an image, and then create a bitmap font from them. [There's a great tutorial for using it with libgdx](https://www.youtube.com/watch?v=dxPf1M7YORU).
 
-[Glyph Designer](http://71squared.com/en/glyphdesigner) - a commercial bitmap font tool with a wide variety of options for shadows, gradients, stroke, etc.
+[Glyph Designer](https://www.71squared.com/en/glyphdesigner) - a commercial bitmap font tool with a wide variety of options for shadows, gradients, stroke, etc.
 
-[Littera](http://kvazars.com/littera) - online bitmap font generator, with a great amount of customizations (needs Adobe Flash).
+[Littera](https://kvazars.com/littera) - online bitmap font generator, with a great amount of customizations (needs Adobe Flash).
 
 ## Other Tools
 

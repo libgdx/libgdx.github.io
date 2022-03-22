@@ -41,7 +41,7 @@ When in doubt about whether a specific class needs to be disposed of, check if i
 
 > An idea to list all of such classes is to clone libGDX to your system, then use text editor such as Sublime Text or others to open its root directory, search for `implements Disposable`. It will show you result of all source files (thus class) you need to call `dispose()` when you're done with it. Note that all other classes that extend from such result classes are also applicable. List above is already complete. Note that a few classes from result come from test class of libGDX itself which are not relevant to your interest.
 
-### Object pooling ###
+### Object pooling
 
 Object pooling is the principle of reusing inactive or "dead" objects, instead of creating new objects every time. This is achieved by creating an object pool, and when you need a new object, you obtain it from that pool. If the pool has an available (free) object, it is returned. If the pool is empty, or does not contain free objects, a new instance of the object is created and returned. When you no longer need an object, you "free" it, which means it is returned to the pool.
 This way, object allocation memory is reused, and garbage collector is happy.
@@ -147,13 +147,13 @@ private final Pool<Bullet> bulletPool = Pools.get(Bullet.class);
 
 ### How to Use Pool
 
-A `Pool<>` manages a single type of object, so it is parameterized by that type. Objects are taken from a specific `Pool` instance by invoking `obtain` and then should be returned to the Pool by invoking `free`.   The objects in the pool may optionally implement the [`Pool.Poolable`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pool.Poolable.html) interface (which just requires a `reset()` method be present), in which case the `Pool` will automatically reset the objects when they are returned to the pool.  By default, objects are initially allocated on demand (so if you never invoke `obtain`, the Pool will contain no objects). It is possible to force the `Pool` to allocate a number of objects by calling `fill()` after instantiation. Initial allocation is useful to have control over when these first time allocations occur.
+A `Pool<>` manages a single type of object, so it is parameterized by that type. Objects are taken from a specific `Pool` instance by invoking `obtain` and then should be returned to the Pool by invoking `free`. The objects in the pool may optionally implement the [`Pool.Poolable`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/Pool.Poolable.html) interface (which just requires a `reset()` method be present), in which case the `Pool` will automatically reset the objects when they are returned to the pool. By default, objects are initially allocated on demand (so if you never invoke `obtain`, the Pool will contain no objects). It is possible to force the `Pool` to allocate a number of objects by calling `fill()` after instantiation. Initial allocation is useful to have control over when these first time allocations occur.
 
 You must implement your own subclass of `Pool<>` because the `newObject` method is abstract.
 
 ### Pool Caveats
 
-Beware of leaking references to Pooled objects.  Just because you invoke "free" on the Pool does not invalidate any outstanding references.  This can lead to subtle bugs if you're not careful.  You can also create subtle bugs if the state of your objects is not fully reset when the object is put in the pool.
+Beware of leaking references to Pooled objects. Just because you invoke "free" on the Pool does not invalidate any outstanding references. This can lead to subtle bugs if you're not careful. You can also create subtle bugs if the state of your objects is not fully reset when the object is put in the pool.
 
 ### Profiling Memory leaks
 

@@ -3,7 +3,7 @@ title: 2D Animation
 ---
 2D Animation is a technique used to create the illusion of movement using static images. This article describes how to create animations with libGDX using its [Animation Class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/Animation.html).
 
-## Background ##
+## Background
 
 An animation consists of multiple frames which are shown in a sequence at set intervals. An animation of a running man can be achieved by taking pictures of him while running and playing those images back sequentially in a loop.
 
@@ -23,7 +23,7 @@ libGDX's [Animation](https://libgdx.badlogicgames.com/nightlies/docs/api/com/bad
 
 Animation has a generic type parameter for the type of class that represents the image. The type would typically be a TextureRegion or PolygonRegion, but any renderable object can be used. The type is declared by specifying the animation type in the Animation declaration, for example `Animation<TextureRegion> myAnimation = new Animation<TextureRegion>(/*...*/)`. Note that it would usually be inadvisable to use the Sprite class to represent frames of an animation, because the Sprite class contains positional data that would not carry from frame to frame.
 
-## TextureAtlas example ##
+## TextureAtlas example
 
 libGDX's [TextureAtlas](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/TextureAtlas.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/TextureAtlas.java) class is typically used for combining many separate TextureRegions into a smaller set of Textures to reduce expensive draw calls. ([details here](/wiki/tools/texture-packer#textureatlas)).
 
@@ -40,7 +40,7 @@ runningAnimation =
     new Animation<TextureRegion>(0.033f, atlas.findRegions("running"), PlayMode.LOOP);
 ```
 
-## Sprite sheet example ##
+## Sprite sheet example
 
 The following code snippet will create an Animation using the animation_sheet.png sprite-sheet and renders the animation to the screen.
 
@@ -118,10 +118,10 @@ Creating an animation is extremely simple by using the following constructor.
 |:-------------------|:--------------|
 | `Animation (float frameDuration, TextureRegion... keyFrames)` | The first parameter is the frame time and the second is an array of regions (frames) making up the animation|
 
-## Best practices ##
+## Best practices
  * Pack frames into one texture along with other sprites to optimize rendering. This is easily done with TexturePacker.
  * Settle for a reasonable number of frames depending on the game type. For a retro arcade style, 10 fps may suffice, while more realistic looking movements require more frames.
 
-## Assets ##
+## Assets
 
 Get the sprite sheet [here](/assets/wiki/images/sprite-animation4.png).

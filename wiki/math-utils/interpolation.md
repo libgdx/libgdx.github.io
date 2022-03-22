@@ -1,11 +1,11 @@
 ---
 title: Interpolation
 ---
-# Interpolation #
+# Interpolation
 
-Commonly known as _tweening_, [interpolation](http://en.wikipedia.org/wiki/Interpolation) is useful for generating values between two discrete end points using various curve functions. Often used with key-framed animation, interpolation allows an animator to specify a sparse collection of explicit frames for an animation and then generate a smooth transition between these frames computationally. The simplest form of interpolation is linear interpolation such as that available directly in the [Vector2](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Vector2.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Vector2.java) and [Vector3](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Vector3.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Vector3.java) classes. The [Interpolation](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Interpolation.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Interpolation.java) class provides more interesting results by using non-linear curve functions to interpolate values.
+Commonly known as _tweening_, [interpolation](https://en.wikipedia.org/wiki/Interpolation) is useful for generating values between two discrete end points using various curve functions. Often used with key-framed animation, interpolation allows an animator to specify a sparse collection of explicit frames for an animation and then generate a smooth transition between these frames computationally. The simplest form of interpolation is linear interpolation such as that available directly in the [Vector2](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Vector2.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Vector2.java) and [Vector3](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Vector3.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Vector3.java) classes. The [Interpolation](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Interpolation.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Interpolation.java) class provides more interesting results by using non-linear curve functions to interpolate values.
 
-## Types of Interpolation ##
+## Types of Interpolation
 
 These are the basic built-in types of interpolation:
 
@@ -18,7 +18,7 @@ These are the basic built-in types of interpolation:
   * Sine
   * Swing
 
-## Code Example ##
+## Code Example
 
 ```kotlin
 // Written in Kotlin
@@ -43,7 +43,7 @@ Most types offer three varieties which bias towards one or the other or both end
 See [InterpolationTest](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/InterpolationTest.java) for a visual display of each interpolation.
 
 
-## Visual display of interpolations ##
+## Visual display of interpolations
 
 | bounce | bounceIn | bounceOut | circle |
 | ------ | -------- | --------- | ------ |

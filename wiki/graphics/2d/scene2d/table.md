@@ -332,4 +332,4 @@ If inserting or removing cells is needed, [VerticalGroup](/wiki/graphics/2d/scen
 # Notes
 
 * By default, positions and sizes are rounded to integers. This may cause problems when using small values.
-  Use [Table#setRound(false)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Table.java#L669) to change it.  
+  Use [Table#setRound(false)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Table.java#L669) to change it. 

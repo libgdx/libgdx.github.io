@@ -5,7 +5,7 @@ Polling refers to checking the current state of an input device, e.g. is a speci
 
 *Caution:* If you rely on polling, you might miss events, e.g. a fast paced key down/key up. If you need to make sure a specific sequence of input action was completed, use [event handling](/wiki/input/event-handling) instead.
 
-## Polling the Keyboard ##
+## Polling the Keyboard
 
 Polling for input from a Keyboard is done with just one simple line of code, like below.
 
@@ -15,7 +15,7 @@ boolean isAPressed = Gdx.input.isKeyPressed(Keys.A);
 
 The parameter passed to that method is a Key Code. Rather than having to memorize these codes there is a static class within the `Input` interface that contains the codes which you can use. They can be seen  [here](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Input.Keys.html).
 
-## Polling the Touch Screen / Mouse ##
+## Polling the Touch Screen / Mouse
 
 There are a number of methods concerning polling the touch screen/mouse. To check whether one or more fingers are currently on the screen (which is equivalent to a mouse button being pressed) you can do the following:
 
@@ -75,7 +75,7 @@ You can get the Pressure applied on a pointer using
 
 This returns a value between 0 and 1
 
-## Mouse Buttons ##
+## Mouse Buttons
 On the desktop you can also check which mouse buttons are currently pressed:
 
 ```java

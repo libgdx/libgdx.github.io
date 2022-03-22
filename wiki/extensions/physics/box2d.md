@@ -71,7 +71,7 @@ The first argument is the time-step, or the amount of time you want your world t
 
 The other two arguments are `velocityIterations` and `positionIterations`. For now we will leave these at `6` and `2`, but you can read more about them in the Box2D documentation.
 
-Stepping your simulation is a topic unto itself. See [this article](http://gafferongames.com/game-physics/fix-your-timestep/) for an excellent discussion on the use of variable time steps.
+Stepping your simulation is a topic unto itself. See [this article](https://gafferongames.com/post/fix_your_timestep/) for an excellent discussion on the use of variable time steps.
 
 The result might look similar to this:
 
@@ -90,7 +90,7 @@ private void doPhysicsStep(float deltaTime) {
 }
 ```
 
-## Rendering ##
+## Rendering
 
 It is recommended that you render all your graphics before you do your physics step, otherwise it will be out of sync. To do this with our debug renderer we do the following:
 
@@ -406,7 +406,7 @@ WheelJoint joint = (WheelJoint) physics.createJoint(jointDef);
 joint.setMotorSpeed(1f);
 ```
 
-## Fixture Shapes ##
+## Fixture Shapes
 
 As mentioned previously, a fixture has a shape, density, friction and restitution attached to it.
 Out of the box you can easily create boxes (as seen in the section [Static Bodies](/wiki/extensions/physics/box2d#static-bodies) section) and circle shapes (as seen in the [Dynamic Bodies](/wiki/extensions/physics/box2d#dynamic-bodies) section).
@@ -418,7 +418,7 @@ You can programatically define more complex shapes using the following classes
 
 However using third party tools you can simply define your shapes and import them into your game.
 
-### Importing Complex Shapes using box2d-editor ###
+### Importing Complex Shapes using box2d-editor
 
 [box2d-editor](https://github.com/julienvillegas/box2d-editor) is a free open source tool to define complex shapes and load them into your game.
 An example of how to import a shape into your game using box2d-editor is available on [Libgdx.info](https://libgdxinfo.wordpress.com/box2d-importing-complex-bodies/).
@@ -449,7 +449,7 @@ fd.restitution = 0.3f;
 loader.attachFixture(body, "gear", fd, scale);
 ```
 
-## Sprites and Bodies ##
+## Sprites and Bodies
 
 The easiest way to manage a link between your sprites or game objects and Box2D is with Box2D’s User Data. You can set the user data to your game object and then update the object's position based on the Box2D body.
 
@@ -492,7 +492,7 @@ for (Body b : bodies) {
 
 Then render your sprites using a libGDX `SpriteBatch` as usual.
 
-## Sensors ##
+## Sensors
 Sensors are Bodies that do not produce automatic responses during a collision (such as applying force). This is useful when one needs to be in complete control of what happens when two shapes collide.
 For example, think of a drone that has some kind of circular distance of sight. This body should follow the drone but shouldn't have a physical reaction to it, or any other bodies. It should detect when some target is inside it's shape.
 
@@ -540,7 +540,7 @@ There are a lot of really good Box2D resources out there and most of the code ca
   * [Box2D documentation](https://box2d.org/documentation/) and [Discord](https://discord.com/invite/NKYgCBP) are a great place to find help.
   * A really good [tutorial series on Box2D](https://www.iforce2d.net/b2dtut/). Covers a lot of different problems which you will more than likely run across in your game development.
 
-## Tools ##
+## Tools
 
 The following is a list of tools for use with box2d and libgdx:
 
@@ -552,5 +552,5 @@ Code sample available on [LibGDX.info](https://libgdxinfo.wordpress.com/box2d-im
 
 ### Commercial
 
-  * [RUBE](http://www.iforce2d.net/rube) editor for creating box2d worlds. Use[RubeLoader](https://github.com/indiumindeed/RubeLoader) for loading RUBE data into libgdx.
+  * [RUBE](https://www.iforce2d.net/rube/) editor for creating box2d worlds. Use[RubeLoader](https://github.com/indiumindeed/RubeLoader) for loading RUBE data into libgdx.
   * [PhysicsEditor](https://www.codeandweb.com/physicseditor)

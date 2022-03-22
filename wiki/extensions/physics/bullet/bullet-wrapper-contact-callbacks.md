@@ -38,7 +38,7 @@ boolean onContactAdded(btCollisionObject colObj0, int partId0, int index0, btCol
 boolean onContactAdded(int userValue0, int partId0, int index0, int userValue1, int partId1, int index1);
 ```
 
-As you can see it has three methods which provide the `btManifoldPoint` and three which don’t.  To provide the actual collision objects, you can choose between either the `btCollisionObjectWrapper`, `btCollisionObject` or the `userValue`.
+As you can see it has three methods which provide the `btManifoldPoint` and three which don’t. To provide the actual collision objects, you can choose between either the `btCollisionObjectWrapper`, `btCollisionObject` or the `userValue`.
 
 Make sure to override the method that only provides the arguments you are actually going to use. For example, if you are not going to use the `btManifoldPoint` then it wouldn’t make sense to create an object for that argument each time the callback is called. Likewise using `btCollisionObject` is more performant than using `btCollisionObjectWrapper`, because the `btCollisionObject` is reused. The `userValue` is even more performant, because the object isn’t mapped at all  (see [#btCollisionObject btCollisionObject] on how to use the useValue).
 
@@ -49,7 +49,7 @@ body.setCollisionFlags(e.body.getCollisionFlags() | btCollisionObject.CollisionF
 
 To identify a contact along the added, processed and destroyed callbacks, you can use the `setUserValue(int);` and `getUserValue();` of the `btManifoldPoint` instance that the callback provides. This is also the value supplied to the `onContactDestroyed(int)` method of the `ContactListener` class. Note that the `onContactDestroyed` callback is only triggered if the user value is non-zero.
 
-### <a id="Contact_Filtering"></a>Contact Filtering ###
+### Contact Filtering
 
 Contact callbacks are invoked a lot. JNI bridging between C++ and Java on every call adds quite an overhead, which decreases performance. Therefor the bullet wrapper allows you to specify for which objects you would like to receive contacts. This is done by contact filtering.
 

@@ -5,15 +5,15 @@ Python is a dynamic and strongly typed language that supports many programming p
 
 Python has been implemented in several different ways; the standard interpreter in C (CPython), in python itself (PyPy), in the .Net Dynamic Language Runtime (C#) (IronPython), and in Java on the Java Virtual Machine (Jython). Jython comes with java interoperability; allowing it to leverage powerful java libraries, such as Libgdx, while keeping the succinctness and readability of Python.
 
-This article uses the latest Jython beta (Jython 2.7b1 available [here](http://tinyurl.com/d4s8qvd)), this release aims to bring compatilibity with CPython 2.7, so we will be programming with Python 2.7 syntax in this article.
+This article uses the latest Jython beta (Jython 2.7b1 available [here](https://repo1.maven.org/maven2/org/python/jython-installer/2.7-b1/jython-installer-2.7-b1.jar)), this release aims to bring compatibility with CPython 2.7, so we will be programming with Python 2.7 syntax in this article.
 
 **Note:** at the time of writting, you can only use Jython with libGDX on the desktop.
 
-## Setup ##
+## Setup
 
 Jython can be worked on with any text editor, including Vim or Emacs. [PyDev](http://pydev.org/) is an option for eclipse users. Once the environment is setup, create a new Jython project, and all of the libGDX dependencies to the PYTHONPATH. for using the desktop LWJGL backend, this includes `gdx.jar`, `gdx-backend-lwjgl.jar`, `gdx-backend-lwjgl-natives.jar`, `gdx-natives.jar`, and `gdx-sources.jar`.
 
-## Coding With Python ##
+## Coding With Python
 
 The entirety of the [Drop Tutorial](https://libgdx.com/dev/simple_game/) can be contained into a single python file.
 
@@ -139,6 +139,6 @@ if __name__ == '__main__':
 
 **note that during asset creation we need to specifiy the `assets/` folder. When not using android, we must specify the folder structure that we use, whereas on android all internal assets are assumed to be in the `assets/` directory.**
 
-## Games written in Python using libGDX ##
+## Games written in Python using libGDX
 
 * none (yet! if you have made a game using python in libgdx, please let me know and edit this article!)

@@ -8,7 +8,7 @@ title: Updating LibGDX
 # Switching libGDX Versions
 libGDX's Gradle based projects make it very easy to switch between libGDX versions. In general you'll be interested in two types of libGDX builds:
 
-* Release builds: these are considered stable. You can see the available release versions on [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.badlogicgames.gdx%22%20AND%20a%3A%22gdx%22).
+* Release builds: these are considered stable. You can see the available release versions on [Maven Central](https://search.maven.org/search?q=g:com.badlogicgames.gdx%20AND%20a:gdx).
 * Nightly builds: also known as SNAPSHOT builds in Maven lingo. These are cutting edge versions of libGDX that are built on every change to the source repository. Snapshot builds also have a version number of the form `x.y.z-SNAPSHOT`, e.g. `1.9.10-SNAPSHOT`. You can find the latest SNAPSHOT version string [here](https://github.com/libgdx/libgdx/blob/master/gradle.properties#L8).
 
 Your Gradle based project makes it very easy to switch between releases and nightly builds. Open up the `build.gradle` file in the root of your project, and locate the following line:
@@ -23,7 +23,7 @@ The next step is dependent on your IDE:
 
 * **Eclipse**: Select all your projects in the package explorer, right click, then click `Gradle -> Refresh All`. This will download the libGDX version you specified in `build.gradle` and wire up the JAR files with your projects correctly.
 * **Intellij IDEA**: will usually detect that your `build.gradle` has been updated and show a refresh button. Just click it and IDEA will update libGDX to the version you specified in `build.gradle`. Go into the gradle tasks panel/tool view and click the refresh button. Running a task like 'builddependents' also tends to do this.
-* **Netbeans**: in the "Projects" view, right-click the top-most project node and select "Reload Project".  All sub-projects will also be reloaded with the new files.
+* **Netbeans**: in the "Projects" view, right-click the top-most project node and select "Reload Project". All sub-projects will also be reloaded with the new files.
 * **Command Line**: invoking any of the tasks will usually check for changes in dependency versions and redownload anything that changed.
 
 ### Replacing additional files
@@ -63,4 +63,4 @@ To upgrade your Gradle wrapper.
 
 If you're used to Maven, you are probably familiar with this already. The Gradle versions plugin allows one to run `gradle dependencyUpdates` and it will return a list of dependencies you are using that need updating, and what the newest version is (configurable). The output can either be text/stdout, json, xml, etc.
 
-For more info, see: https://github.com/ben-manes/gradle-versions-plugin
+For more info, see: [https://github.com/ben-manes/gradle-versions-plugin](https://github.com/ben-manes/gradle-versions-plugin)

@@ -1,7 +1,7 @@
 ---
 title: Clipping, with the use of scissorstack
 ---
-# Clipping #
+# Clipping
 
 ```java
 Rectangle scissors = new Rectangle();

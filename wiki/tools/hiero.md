@@ -1,7 +1,7 @@
 ---
 title: Hiero
 ---
-Hiero is a bitmap font packing tool. It saves in the [Angel Code font](http://www.angelcode.com/products/bmfont/) format, which can be used by [BitmapFont](/wiki/graphics/2d/fonts/bitmap-fonts) in libGDX applications.
+Hiero is a bitmap font packing tool. It saves in the [Angel Code font](https://www.angelcode.com/products/bmfont/) format, which can be used by [BitmapFont](/wiki/graphics/2d/fonts/bitmap-fonts) in libGDX applications.
 
 ![](/assets/wiki/images/hiero01.png)
 
@@ -30,7 +30,7 @@ Hiero will output kerning information for fonts with kerning entries.
 
 Hiero supports 4 command line arguments:
 
-* `--input <file>` or `-i <file>` loads the specified `.hiero` configuration file when launching. 
+* `--input <file>` or `-i <file>` loads the specified `.hiero` configuration file when launching.
 * `--output <file>` or `-o <file>` sets the output `.fnt` file to the specified value.
 * `--batch` or `-b` makes hiero  automatically generate it's output and close to be used without human intervention.
 * `--scale <scale>` or `-s <scale>` scales the font by the specified amount.
@@ -76,7 +76,7 @@ new LwjglApplication(new ApplicationAdapter() {
 
 ### BMFont
 
-The [BMFont](http://www.angelcode.com/products/bmfont/) tool uses FreeType. It has additional supersampling features for smoother glyphs. BMFont does not support effects like drop-shadows or outlines, but glyphs can be output with padding and effects applied with Paint.NET, Photoshop, etc. Typical export settings are [here](http://wiki.libgdx.googlecode.com/git/img/bmfont-export.png).
+The [BMFont](https://www.angelcode.com/products/bmfont/) tool uses FreeType. It has additional supersampling features for smoother glyphs. BMFont does not support effects like drop-shadows or outlines, but glyphs can be output with padding and effects applied with Paint.NET, Photoshop, etc.
 
 BMFont is Windows only but can be run using [Wine](https://www.winehq.org/). There are reports that it hangs if the space character is exported. The space character can be added manually, eg:
 ```
@@ -86,7 +86,7 @@ Change the xadvance as needed, this is the number of pixels for a space characte
 
 ### TWL Theme Editor
 
-The [TWL](http://twl.l33tlabs.org/) Theme Editor has a font tool that also uses FreeType. It doesn't support the supersampling. [Theme Editor JWS](https://web.archive.org/web/20180113081423/http://twl.l33tlabs.org/themer/themer.jnlp).
+The [TWL](https://web.archive.org/web/20181029091157/http://twl.l33tlabs.org/) Theme Editor has a font tool that also uses FreeType. It doesn't support the supersampling. [Theme Editor JWS](https://web.archive.org/web/20180113081423/http://twl.l33tlabs.org/themer/themer.jnlp).
 
 ### gdx-fontpack
 

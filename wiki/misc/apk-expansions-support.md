@@ -2,7 +2,7 @@
 title: APK Expansions support
 # Not listed in ToC
 ---
-Whenever the assets of a game exceed a certain size, in order to release the game on Google Play, the assets have to be placed into a separate file, to keep the APK size under 100MB. For more information about this you can read [here](http://developer.android.com/google/play/expansion-files.html).
+Whenever the assets of a game exceed a certain size, in order to release the game on Google Play, the assets have to be placed into a separate file, to keep the APK size under 100MB. For more information about this you can read [here](https://developer.android.com/google/play/expansion-files).
 
 ## How to use the feature
 libGDX now has built-in support for detecting and reading assets from expansion files. The expansion file format accepted by libGDX is uncompressed (stored) zip file. Don't use the _jobb_ tool provided with the android SDK. Simply move some or all of your assets from android/assets into the zip file. Usually the file will be automatically downloaded from Google Play, however if you want to test it you will have to copy the file on the device manually.

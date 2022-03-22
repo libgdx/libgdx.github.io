@@ -3,14 +3,14 @@ title: Bundling a JRE
 ---
 Java apps need a Java Runtime Environment to run. Typically this is installed by the user and hopefully already available when they go to run your app. Unfortunately users may not have Java installed and there are differences between JREs that can cause problems with your app. These can be difficult for users to explain and worse, difficult for them to fix themselves. Also, you may require, as a minimum, a certain JRE version.
 
-The solution is to bundle a JRE with your app. This way you know exactly what users will be running and users will have fewer problems and they will not have to install a JVM. 
+The solution is to bundle a JRE with your app. This way you know exactly what users will be running and users will have fewer problems and they will not have to install a JVM.
 
-## Packaging ##
+## Packaging
 There are a number of tools available for bundling a JRE:
 
 ### [jpackage](https://docs.oracle.com/en/java/javase/14/jpackage/packaging-overview.html#GUID-C1027043-587D-418D-8188-EF8F44A4C06A)
 
-Jpackage is a modern solution for providing native packaging options on Windows, MacOS and Linux introduced with [JEP-343](https://openjdk.java.net/jeps/343). It can be used to create an EXE that starts your bundled application via an embedded JRE. 
+Jpackage is a modern solution for providing native packaging options on Windows, MacOS and Linux introduced with [JEP-343](https://openjdk.java.net/jeps/343). It can be used to create an EXE that starts your bundled application via an embedded JRE.
 
 See [this guide](https://github.com/raeleus/skin-composer/wiki/libGDX-and-JPackage) for more information on how to use it. A video version can be found [here](https://www.youtube.com/watch?v=R7CMXeQ11GM).
 
@@ -27,7 +27,7 @@ _-- seems to be no longer maintained --_
 
 If you're planning to deploy to MacOS as well, [notarization](https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution) (MacOS 10.15+) can be an issue. See [here](https://www.joelotter.com/2020/08/14/macos-java-notarization.html) on how to notarize your libGDX app.
 
-## Reducing Size ##
+## Reducing Size
 
 There are a number of files and classes that can be removed from the JRE to reduce the size. Below is a list of files to delete from the Windows JRE. Other platforms are very similar, though you may need classes on some platforms but not others (eg, xml classes are needed on Linux to use java.util.preferences). This list leaves Swing intact, if you don't need Swing the size could be reduced further.
 

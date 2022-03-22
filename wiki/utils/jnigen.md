@@ -1,20 +1,20 @@
 ---
 title: jnigen
 ---
-jnigen is a small library that can be used with or without libGDX which allows C/C++ code to be written inline with Java source code. This increases the locality of code that conceptually belongs together (the Java native class methods and the actual implementation) and makes refactoring a lot easier compared to the usual [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) workflow. Arrays and direct buffers are converted for you, further reducing boilerplate. Building the natives for Windows, Linux, OS X, and Android is handled for you. jnigen also provides a mechanism for loading native libraries from a JAR at runtime, which avoids "java.library.path" troubles.
+jnigen is a small library that can be used with or without libGDX which allows C/C++ code to be written inline with Java source code. This increases the locality of code that conceptually belongs together (the Java native class methods and the actual implementation) and makes refactoring a lot easier compared to the usual [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) workflow. Arrays and direct buffers are converted for you, further reducing boilerplate. Building the natives for Windows, Linux, OS X, and Android is handled for you. jnigen also provides a mechanism for loading native libraries from a JAR at runtime, which avoids "java.library.path" troubles.
 
-## Setup ##
+## Setup
 
 You will need MinGW for both 32 and 64 bit. After installation, be sure the `bin` directory is on your path.
 
 Note that gdx-jnigen is a Java project. It has a blank AndroidManifest.xml because the Android NDK requires it, but it is not an Android project.
 
-### Windows ###
+### Windows
 
   * **MinGW 32 bit** Run [mingw-get-setup.exe](https://sourceforge.net/projects/mingw/files/Installer/), install with the GUI, choose `mingw32-base` and `mingw32-gcc-g++` under "Basic Setup", then Installation -> Apply Changes.
-  * **MinGW 64 bit** Download the [MinGW 64 bit](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/4.8.2/threads-win32/seh/x86_64-4.8.2-release-win32-seh-rt_v3-rev1.7z/download) binaries and unzip.
+  * **MinGW 64 bit** Download the [MinGW 64 bit](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/4.8.2/threads-win32/seh/x86_64-4.8.2-release-win32-seh-rt_v3-rev1.7z/download) binaries and unzip.
 
-### Linux ###
+### Linux
 
   * Ubuntu and other Debian-based systems (unverified)
 
@@ -34,7 +34,7 @@ sudo pacman -S mingw-w64-gcc
 sudo dnf install mingw32-gcc-c++ mingw64-gcc-c++ mingw32-winpthreads-static mingw64-winpthreads-static
 ```
 
-## Quickstart ##
+## Quickstart
 
 Here is a barebones example, first the Java source with inline native code:
 
@@ -55,7 +55,7 @@ public class Example {
 
 The `@off` comment turns off the Eclipse source formatter for the rest of the file. This prevents it from ruining the formatting of our native code in the comments. This feature has to be turned "on" in Eclipse preferences: Java > Code Style > Formatter. Click on "Edit" button, "Off/On Tags", check off "Enable Off/On tags".
 
-Next, a native method is defined. Normally for JNI you would need to run [javah](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javah.html) to generate stub source files which you would edit and need to keep up to date with the Java source. With jnigen, you just use a multi-line comment immediately after the native method which contains your native code. The parameters for the native method are available to your native code.
+Next, a native method is defined. Normally for JNI you would need to run [javah](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javah.html) to generate stub source files which you would edit and need to keep up to date with the Java source. With jnigen, you just use a multi-line comment immediately after the native method which contains your native code. The parameters for the native method are available to your native code.
 
 Lastly, a main method is defined. The `SharedLibraryLoader` extracts the appropriate native library from the classpath and loads it. This allows you to distribute your native libraries inside your JARs and you will never have problems with `java.library.path`. If using jnigen without libgdx, you can use `JniGenSharedLibraryLoader` instead which does the same thing. `JniGenSharedLibraryLoader` is the only class from jnigen that is needed at runtime, if you choose to use it.
 
@@ -94,14 +94,14 @@ Next, `AntScriptGenerator` is used to output the Ant build scripts. The `BuildCo
 
 Lastly, the Ant scripts are run to build the actual native libraries and pack them into a JAR. To run the main method from the example above, the JAR just needs to be on the classpath.
 
-## How it works ##
+## How it works
 
 jnigen has two parts:
 
   * Inspect Java source files in a specific folder, detect native methods and the attached C++ implementation, and spit out a C++ source file and header, similar to what you'd create manually with JNI.
   * Provide a generator for Ant build scripts that build the native source for every platform.
 
-### Native code generation ###
+### Native code generation
 
 Here's an example of Java/C++ mixed in a single Java source file as understood by jnigen (taken from [BufferUtils](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/com/badlogic/gdx/utils/BufferUtils.java)):
 
@@ -155,7 +155,7 @@ new NativeCodeGenerator().generate("src", "bin", "jni", new String[] {"**/*"}, n
 
 You specify the source folder, the folder containing the compiled .class files of your Java classes, the Java files to include (using Ant path patterns) and the files you want to exclude. See the source of [NativeCodeGenerator](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-jnigen/src/com/badlogic/gdx/jnigen/NativeCodeGenerator.java) for more info.
 
-#### Build script generation ####
+#### Build script generation
 
 Once the native code files have been generated, we also want to create build scripts for all supported platforms. This currently includes Windows (32-/64-bit), Linux (32-/64-bit), Mac OS X (x86, 32-/64-bit), Android (arm6/arm7) and iOS (i386, arm7). The build script generator of jnigen has template Ant script files that can be parametrized for each platform. The parameters are specified via a [BuildTarget](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-jnigen/src/com/badlogic/gdx/jnigen/BuildTarget.java). You can create a BuildTarget for a specific platform like this:
 
@@ -188,11 +188,11 @@ BuildExecutor.executeAnt("jni/build-windows64.xml", "-v", "-Drelease=true", "cle
 BuildExecutor.executeAnt("jni/build.xml", "-v", "pack-natives");
 ```
 
-### More ###
+### More
 
 A video of Mario showing off jnigen:
 
-[![images/lxCnueL.png](/assets/wiki/images/lxCnueL.png)](http://www.youtube.com/watch?v=N2EE_jlDfrM)
+[![images/lxCnueL.png](/assets/wiki/images/lxCnueL.png)](https://www.youtube.com/watch?v=N2EE_jlDfrM)
 
 [Jglfw](https://github.com/badlogic/jglfw/blob/master/jglfw/src/com/badlogic/jglfw/Glfw.java#L268) makes extensive use of jnigen and shows how easy it can be to wrap a native API for use in Java. Note the `/*JNI` comment is used to define includes, statics, and functions.
 
@@ -206,7 +206,7 @@ Here are a number of jnigen builds that can serve as examples of varying complex
   * [ImageBuild](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-image/src/com/badlogic/gdx/graphics/g2d/ImageBuild.java#L26)
 
 ### ccache
-Using [ccache](http://ccache.samba.org/) is highly recommended if you build for all platforms (Linux, Windows, Mac OS X, Android, iOS, arm arm-v7, x86, x64 and all permutations). For libgdx, we use a very simple setup. On our build server, we have an `/opt/ccache` directory that houses a bunch of shell scripts, one for each compiler binary:
+Using [ccache](https://ccache.dev/) is highly recommended if you build for all platforms (Linux, Windows, Mac OS X, Android, iOS, arm arm-v7, x86, x64 and all permutations). For libgdx, we use a very simple setup. On our build server, we have an `/opt/ccache` directory that houses a bunch of shell scripts, one for each compiler binary:
 
 ```
 jenkins@badlogic:~/workspace/libgdx/gdx/jni$ ls -lah /opt/ccache/

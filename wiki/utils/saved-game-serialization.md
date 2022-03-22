@@ -1,17 +1,17 @@
 ---
 title: Saved game serialization
 ---
-# JSON serialization #
+# JSON serialization
 
 The [JSON](/wiki/utils/reading-and-writing-json) class can automatically convert Java objects to and from JSON.
 
-# Binary serialization #
+# Binary serialization
 
 [Kryo](https://github.com/EsotericSoftware/kryo) can be used to automatically and [efficiently](https://github.com/eishay/jvm-serializers/wiki) serialize game state.
 
-## libGDX Kryo Serializers ##
+## libGDX Kryo Serializers
 
-Kryo can handle most POJOs and other classes, but some classes need special handling. Below are a few serializers for libGDX classes. 
+Kryo can handle most POJOs and other classes, but some classes need special handling. Below are a few serializers for libGDX classes.
 
 Note that classes like Texture should not be serialized in most cases. It would be better to have a String instead of a Texture object in your object graph. After serializing you would process the objects and look up the texture using the string path.
 

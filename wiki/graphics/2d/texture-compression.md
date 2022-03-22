@@ -15,11 +15,11 @@ OpenGL ES 2.0 has only one mandatory texture compression format on Android: ETC1
 
 The video memory savings will then drops from 6x to 4x, but are still worth the effort. An example is given in [KTXTest](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/KTXTest.java).
 
-## ETC1 File Format ##
+## ETC1 File Format
 
 ETC1 file format is a very simple format specific to libGDX (see [this blog post](https://web.archive.org/web/20200924172136/https://www.badlogicgames.com/wordpress/?p=2104)). It gives a straight forward way to support 2D texture ETC1 compressed. The drawback is that it won't give you the ability to use mipmaps or cubemaps.
 
-### Compression ###
+### Compression
 Compressing a Pixmap loaded from a file and writing it to our custom ETC1 file format is pretty simple:
 ```java
 Pixmap pixmap = new Pixmap(Gdx.files.absolute("image.png"));
@@ -27,19 +27,19 @@ ETC1.encodeImagePKM(pixmap).write(Gdx.files.absolute("image.etc1"));
 ```    
 You can also use the ETC1Compressor tool in the gdx-tools project which can convert entire directory hierarchies.
 
-### Loading ###
+### Loading
 Once you have your ETC1 compressed image in a file, you can easily load it like any other image file:
 ```java
 Texture texture = new Texture(Gdx.files.internal("image.etc1"));
 ```    
 
-## KTX/ZKTX Format ##
+## KTX/ZKTX Format
 
 KTX file format is a [standard](https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/) dedicated to storing OpenGL textures. Its main advantage is that it supports most features of OpenGL Textures (all compression formats, with or without mipmaps, cubemaps, texture arrays,...).
 
 The ZKTX format is just a zipped KTX to limit the size of the file on disk.
 
-### Preparing your file ###
+### Preparing your file
 The KTXProcessor tool in the gdx-tools project provides a simple way to prepare your textures:
 ```
 usage : KTXProcessor input_file output_file [-etc1|-etc1a] [-mipmaps]
@@ -64,7 +64,7 @@ There are also lots of third party tools to prepare KTX texture files:
 - [The OpenGL SDK](https://www.khronos.org/opengles/sdk/tools/KTX/) provides tools to create KTX file,
 - [The Mali SDK](https://developer.arm.com/products/software-development-tools/graphics-development-tools/mali-texture-compression-tool) provides tools to create KTX file including alpha channel processing.
 
-### Loading ###
+### Loading
 Once you have your KTX or ZKTX compressed image in a file, you can easily load it like any other image file:
 
 ```java

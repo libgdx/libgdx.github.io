@@ -47,7 +47,7 @@ third-party extensions to get a recent version of `colorful`.
 Your first choice is, "What color space should I use?" To answer this, you need to know what a color space is. You
 already know at least one, RGBA -- Color in libGDX uses it, as does almost everything on a computer screen. The other
 options are less widely-known, and some are mostly in colorful-gdx for historical reasons. Generally, the choice is
-between `rgb` and `oklab`. 
+between `rgb` and `oklab`.
 
 With RGB, you have 3 channels, red/green/blue, plus alpha, and you can make a color lighter by raising the RGB channels
 or darker by lowering those channels. You can easily make a color more red by raising the red channel, and the same with
@@ -264,7 +264,7 @@ simple to adjust with just one channel (L), colorful-ness is simple to adjust by
 channels. Adjusting L isn't centered like A and B are; if you increase L on the tweak, it will make lightness range
 higher but no lower, and if you decrease it, the lightest colors become unavailable. The color can be useful with any
 kind of reduced range, moving L so a range like 0.0 through 0.4 is raised up to 0.3 to 0.7. That's possible with an L
-tweak value of 0.93, because 0.93 is higher than the neutral value for Oklab's lightness (0.63) by 0.3. 
+tweak value of 0.93, because 0.93 is higher than the neutral value for Oklab's lightness (0.63) by 0.3.
 
 Before, I gave an example that desaturates colors and increases contrast. How about some other options?
 

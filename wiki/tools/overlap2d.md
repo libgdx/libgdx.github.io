@@ -14,6 +14,6 @@ The project is [hosted on github](https://github.com/UnderwaterApps/overlap2d), 
 [HyperLap2D](https://github.com/rednblackgames/HyperLap2D) strives to be a modern replacement for Overlap2D. It is made to be a powerful, platform-independent, visual editor for complex 2D worlds and scenes.
 
 ## VisEditor (discontinued)
-VisRuntime is no longer maintained. It was is an open source 2D game level editor with a libGDX runtime.
+VisRuntime is no longer maintained. It was an open source 2D game level editor with a libGDX runtime.
 
-You can find more information and documentation on the [VisEditor website](http://vis.kotcrab.com/) and [wiki](https://github.com/kotcrab/VisEditor/wiki/LibGDX-Runtime-Introduction).
+You can find more information at [https://kotcrab.com/blog/2017/03/26/visui-130-released-viseditor-deprecated/](https://kotcrab.com/blog/2017/03/26/visui-130-released-viseditor-deprecated/).

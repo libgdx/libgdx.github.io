@@ -11,7 +11,7 @@ Dear ImGui is designed to enable fast iteration and empower programmers to creat
 
 _A common misunderstanding is to think that immediate mode gui == immediate mode rendering, which usually implies hammering your driver/GPU with a bunch of inefficient draw calls and state changes, as the gui functions are called by the user. This is NOT what Dear ImGui does. Dear ImGui outputs vertex buffers and a small list of draw calls batches. It never touches your GPU directly. The draw call batches are decently optimal and you can render them later, in your app or even remotely._
 
-Dear ImGui is particularly suited to integration in realtime 3D applications, fullscreen applications, embedded applications, games, or any applications on consoles platforms where operating system features are non-standard. 
+Dear ImGui is particularly suited to integration in realtime 3D applications, fullscreen applications, embedded applications, games, or any applications on consoles platforms where operating system features are non-standard.
 
 This is an example demonstrating what ImGui is capable of:
 ![Sample](https://cloud.githubusercontent.com/assets/8225057/20628927/33e14cac-b329-11e6-80f6-9524e93b048a.png)
@@ -20,7 +20,7 @@ This is an example demonstrating what ImGui is capable of:
 
 # Option 1: [kotlin-graphics' Bindings](https://github.com/kotlin-graphics/imgui)
 
-There is an elaborate wiki entry over in the Kotlin-graphics's repo, detailing how ImGui can be used together with libGDX: https://github.com/kotlin-graphics/imgui/wiki/Using-libGDX
+There is an elaborate wiki entry over in the Kotlin-graphics's repo, detailing how ImGui can be used together with libGDX: [https://github.com/kotlin-graphics/imgui/wiki/Using-libGDX](https://github.com/kotlin-graphics/imgui/wiki/Using-libGDX)
 
 These are some very simple examples, how its usage may look like: 
 
@@ -49,7 +49,7 @@ imgui.inputText("string", buf);
 imgui.sliderFloat("float", f, 0f, 1f);
 ```
 
-![screenshot of sample code alongside its output with ImGui](http://i.imgur.com/KOhZQTu.png)
+![screenshot of sample code alongside its output with ImGui](https://i.imgur.com/KOhZQTu.png)
 
 ImGui supports also other languages, such as Japanese, initiliazed [here](https://github.com/pakoito/imgui/blob/master/src/test/kotlin/imgui/gl/test%20lwjgl.kt#L79) as:
 

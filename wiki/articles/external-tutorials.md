@@ -27,7 +27,7 @@ These are webpages where individuals or companies write about their experience w
 - [By dermetfan – 25 parts](https://www.youtube.com/playlist?list=PLXY8okVWvwZ0JOwHiH1TntAdq-UDPnC2L) (2013)
 
 # Topic-specific tutorials
-### AdMob integration for libGDX Android projects ###
+### AdMob integration for libGDX Android projects
 * [norakomi.com](https://web.archive.org/web/20200807000743/http://norakomi.com/tutorial_admob_introduction.php)
 
 ### Lighting
@@ -48,8 +48,8 @@ These are webpages where individuals or companies write about their experience w
 * [Matt DesLauriers has a very nice introduction to GLSL shaders](https://github.com/mattdesl/lwjgl-basics/wiki/Shaders) (both libGDX specific and in general)
 * [Video series by dermetfan](https://www.youtube.com/playlist?list=PLXY8okVWvwZ1_aaMnBU5HF4UP3hHL60Vy)
 * Online Shader Tools, which let you play with WebGL (provided your browser supports it) and see the code behind it:
-   * https://www.shadertoy.com/
-   * https://glslsandbox.com
+   * [https://www.shadertoy.com](https://glslsandbox.com/)
+   * [https://glslsandbox.com](https://glslsandbox.com/)
 
 ### Tile-based games
 * [Video tutorial series by dermetfan](https://www.youtube.com/playlist?list=PLXY8okVWvwZ0qmqSBhOtqYRjzWtUCWylb)

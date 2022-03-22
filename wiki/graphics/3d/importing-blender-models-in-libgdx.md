@@ -5,7 +5,7 @@ LibGDX provides its own 3D format out of the box called **G3D** (g3dj and g3db f
 
 **Note:** _while this page uses Blender for practical examples, most of it applies to **other modeling applications** as well._
 
-Blender is an open-source modeling application you can use to create 3D models, scenes and animations. You can get Blender at [blender.org](http://www.blender.org/). If you are new to creating 3D models using Blender, you can checkout the [blender tutorials](http://www.blender.org/education-help/tutorials/). This page provides practical tips on preparing and converting your Blender model for use in libGDX.
+Blender is an open-source modeling application you can use to create 3D models, scenes and animations. You can get Blender at [blender.org](https://www.blender.org/). If you are new to creating 3D models using Blender, you can checkout the [blender tutorials](https://www.blender.org/support/tutorials/). This page provides practical tips on preparing and converting your Blender model for use in libGDX.
 
 ### Blender considerations
 As Blender is a multi-purpose tool, there are certain pitfalls you can stumble into that will make your model ill suited for game development. One such mistake is using the Rigify plugin to animate your model: it will add so much stuff that your model will grow in size to at the very least 3mb (per animated model), and possibly even more, so use that with great care.
@@ -56,7 +56,7 @@ When using the Blender FBX exporter, you might receive a RrSs warning when conve
 ### Maximum vertices
 A model (g3dj or g3db file) can contain multiple meshes. These meshes are indexed. The indices used by libGDX are `short` values. Java's maximum `short` value is 32,767. In other words: you practically can't use more than 32767 vertices within a single mesh. Therefore you should make sure that your meshes never exceeds this limitation.
 
-By default, `fbx-conv` warns you when you try to convert a mesh that contains more than 32767 _indices_. While this doesn't have to mean that it will also result in more than 32767 _vertices_, it is a good indication that your mesh it is too ["high-poly"](http://en.wikipedia.org/wiki/Low_poly) and might cause issues. In this case you should consider lowering the polygon count or splitting the mesh into multiple parts.
+By default, `fbx-conv` warns you when you try to convert a mesh that contains more than 32767 _indices_. While this doesn't have to mean that it will also result in more than 32767 _vertices_, it is a good indication that your mesh it is too ["high-poly"](https://en.wikipedia.org/wiki/Low_poly) and might cause issues. In this case you should consider lowering the polygon count or splitting the mesh into multiple parts.
 
 If your model contains multiple similar meshes with less than 32767 vertices, then `fbx-conv` will try to combine these into a single mesh. When it combines meshes it will never exceed the maximum number of vertices of 32767. You can change this maximum using the `-m` command line option.
 
@@ -68,7 +68,7 @@ If your model contains multiple similar meshes with less than 32767 vertices, th
 
 ### Using the Model Preview Utility
 
-There is a model preview utility at https://github.com/ASneakyFox/libgdx-fbxconv-gui which you can use to preview your models. Download a precompiled release from [the releases section](https://github.com/ASneakyFox/libgdx-fbxconv-gui/releases).
+There is a model preview utility at [https://github.com/ASneakyFox/libgdx-fbxconv-gui](https://github.com/ASneakyFox/libgdx-fbxconv-gui) which you can use to preview your models. Download a precompiled release from [the releases section](https://github.com/ASneakyFox/libgdx-fbxconv-gui/releases).
 
 ![](https://user-images.githubusercontent.com/7131566/35468742-9a5dd6ac-02f2-11e8-8988-d32ba45b03a2.PNG)
 

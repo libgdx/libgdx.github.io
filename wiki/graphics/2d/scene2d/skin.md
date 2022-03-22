@@ -12,7 +12,7 @@ title: Skin
    * [BitmapFont](#bitmapfont)
    * [TintedDrawable](#tinteddrawable)
 
-## <a id="Overview"></a>Overview ##
+## Overview
 
 The Skin class stores resources for UI widgets to use. It is a convenient container for texture regions, ninepatches, fonts, colors, etc. Skin also provides convenient conversions, such as retrieving a texture region as a ninepatch, sprite, or drawable.
 
@@ -25,7 +25,7 @@ Useful resources:
 * [Skin Composer](https://ray3k.wordpress.com/software/skin-composer-for-libgdx/) is a UI tool for creating and editing skins.
 * [Basic skin Label tutorial ](https://libgdxinfo.wordpress.com/basic-label/)
 
-## <a id="Resources"></a>Resources ##
+## Resources
 
 Each resource in the skin has a name and type. The regions from a [texture atlas](/wiki/tools/texture-packer#textureatlas) can be made available as resources in the skin. Texture regions can be retrieved as a ninepatch, sprite, tiled drawable, or drawable.
 
@@ -46,7 +46,7 @@ skin.add("logo", new Texture("logo.png"));
 Texture logo = skin.get("logo", Texture.class);
 ```
 
-## <a id="Convenience_Methods"></a>Convenience Methods ##
+## Convenience Methods
 
 There are convenience methods to retrieve resources for commons types.
 
@@ -63,7 +63,7 @@ Drawable drawable = skin.getDrawable("enemy");
 
 These methods are identical to passing in the appropriate class, but allow for slightly more concise code.
 
-## <a id="Conversions"></a>Conversions ##
+## Conversions
 
 All styles for UI widgets use a [Drawable](https://github.com/sinistersnare/libgdx/wiki/Scene2d.ui#drawable) when they need an image. This allows a texture region, ninepatch, sprite, etc to be used anywhere in the UI. Skin makes it easy to convert textures and texture regions to drawables and other types:
 
@@ -83,7 +83,7 @@ A texture region can be retrieved as a ninepatch, sprite, tiled drawable, or dra
 
 When converting a texture region to a drawable, the skin will choose the most appropriate drawable for that region. If the region is an AtlasRegion with ninepatch split information, then a NinePatchDrawable is returned. If the region is an AtlasRegion that has been rotated or whitespace stripped, then a SpriteDrawable is returned so the region will be drawn correctly. Otherwise, a TextureRegionDrawable is returned.
 
-## <a id="Modifying_resources"></a>Modifying resources ##
+## Modifying resources
 
 Resources obtained from the skin are not new instances, the same object is returned each time. If the object is modified, the changes will be reflected throughout the application. If this is not desired, a copy of the object should be made.
 
@@ -97,7 +97,7 @@ Drawable redDrawable = skin.newDrawable("whiteRegion", Color.RED);
 
 Note the new drawable is not stored in the skin. To store it in the skin it must be explicitly added with a name like any other resource.
 
-## <a id="Widget_styles"></a>Widget styles ##
+## Widget styles
 
 Skin is a useful container for providing texture regions and other resources that UI widgets need. It can also store the UI widget styles that define how widgets look.
 
@@ -118,7 +118,7 @@ If the style name is omitted, the name "default" is used:
 TextButton button = new TextButton("Click me!", skin);
 ```
 
-## <a id="Skin_JSON"></a>Skin JSON ##
+## Skin JSON
 
 A skin can be [populated programmatically](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/UISimpleTest.java#L37). Alternatively, JSON can be used to describe named objects in the skin. This makes it convenient to define the UI widget styles. Note the JSON does not describe texture regions, ninepatche splits, or other information which comes from the [texture atlas](/wiki/tools/texture-packer). However, the JSON may reference the regions, ninepatches, and other resources in the skin by name. The JSON looks like this:
 
@@ -173,7 +173,7 @@ Skin files from the [libGDX tests](https://github.com/libgdx/libgdx/tree/master/
 
 Loading and configuring a freetype font via the skin json file requires some additional steps. Either use [Scene Composer](https://github.com/raeleus/skin-composer/wiki/Creating-FreeType-Fonts#using-a-custom-serializer) or a library like [freetype-skin](https://github.com/acanthite/freetype-skin).
 
-### <a id="Color"></a>Color ###
+### Color
 
 Colors are defined in JSON as shown above. If the `r`, `g`, or `b` properties are omitted, 0 is used. If `a` is omitted, 1 is used.
 
@@ -184,7 +184,7 @@ com.badlogic.gdx.graphics.Color: {
 }
 ```
 
-### <a id="BitmapFont"></a>BitmapFont ###
+### BitmapFont
 
 A bitmap font is declared in the JSON like this:
 
@@ -203,7 +203,7 @@ To find the font's BMFont file, first the skin looks in the directory containing
 
 To find the font's image file, first the skin looks for a texture region with the same name as the font file, without the file extension. If not found, it will look in the directory containing the font file for an image with the same name as the font file, but with a "png" file extension.
 
-### <a id="TintedDrawable"></a>TintedDrawable ###
+### TintedDrawable
 
 It is very useful to tint regions various colors. For example, the regions for a white button can be tinted to have a button of any color. Drawables can be tinted in code using the `newDrawable` method. The Skin.TintedDrawable class provides a way to tint drawables in JSON:
 
