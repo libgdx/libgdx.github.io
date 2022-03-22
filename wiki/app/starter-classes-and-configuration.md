@@ -133,7 +133,7 @@ Android applications can have multiple activities. libGDX games should usually o
 
 ## Game Fragment
 
-A libGDX game can be hosted in an Android [Fragment](http://developer.android.com/guide/components/fragments.html) instead of using a complete Activity. This allows it to take up a portion of the screen in an Activity or be moved between layouts. To create a libGDX fragment, subclass `AndroidFragmentApplication` and implement the `onCreateView()` with the following initialization:
+A libGDX game can be hosted in an Android [Fragment](https://developer.android.com/guide/fragments) instead of using a complete Activity. This allows it to take up a portion of the screen in an Activity or be moved between layouts. To create a libGDX fragment, subclass `AndroidFragmentApplication` and implement the `onCreateView()` with the following initialization:
 ```java
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -232,10 +232,10 @@ If a game doesn't need accelerometer or compass access, it is advised to disable
 
 If your game needs the gyroscope sensor, you have to set `useGyroscope` to true in `AndroidApplicationConfiguration` (It's disabled by default, to save energy).
 
-Please refer to the [Android Developer's Guide](http://developer.android.com/guide/index.html) for more information on how to set other attributes like icons for your application.
+Please refer to the [Android Developer's Guide](https://developer.android.com/guide) for more information on how to set other attributes like icons for your application.
 
 ## Live Wallpapers
-A libGDX core application can also be used as an Android [Live Wallpaper](http://android-developers.blogspot.co.at/2010/02/live-wallpapers.html).
+A libGDX core application can also be used as an Android [Live Wallpaper](https://android-developers.googleblog.com/2010/02/live-wallpapers.html).
 The project setup is very similar to an Android game, but `AndroidLiveWallpaperService` is used in
 place of `AndroidApplication`. Live Wallpapers are Android [Services](https://developer.android.com/guide/components/services),
 not Activities.
@@ -352,7 +352,7 @@ Live Wallpapers have some limitations concerning touch input. In general only on
 full multi-touch events you can set the `AndroidApplicationConfiguration.getTouchEventsForLiveWallpaper` field to true.
 
 ## Screen Savers (aka Daydreams)
-A libGDX core application can also be used as an Android [Screen Saver](http://developer.android.com/about/versions/android-4.2.html#Daydream).
+A libGDX core application can also be used as an Android [Screen Saver](https://developer.android.com/about/versions/android-4.2#Daydream).
 Screen Savers were once known as Daydreams, so many of the related classes have the term "Daydream" in their names. Screen
 Savers have no relation to Google's Daydream VR platform.
 

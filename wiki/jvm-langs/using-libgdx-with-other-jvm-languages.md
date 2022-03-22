@@ -7,11 +7,11 @@ Some target platforms can’t run Java bytecodes directly, and so have more spec
 
 ## Language interoperability guides
 
-* [Clojure](http://clojure.org/java_interop)
+* [Clojure](https://clojure.org/reference/java_interop)
     * [Using libGDX with Clojure](/wiki/jvm-langs/using-libgdx-with-clojure)
-* [Kotlin](http://confluence.jetbrains.com/display/Kotlin/Java+interoperability)
+* [Kotlin](https://kotlinlang.org/docs/java-interop.html)
     * [Using libGDX with Kotlin](/wiki/jvm-langs/using-libgdx-with-kotlin)
-* [Scala](http://www.scala-lang.org/old/faq/4)
+* [Scala](https://www.scala-lang.org/old/faq/4)
     * [Using libGDX with Scala](/wiki/jvm-langs/using-libgdx-with-scala)
 * [Python](https://jython.readthedocs.io/en/latest/JythonAndJavaIntegration/) (Jython)
     * [Using libGDX with Python](/wiki/jvm-langs/using-libgdx-with-python)

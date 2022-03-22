@@ -94,8 +94,8 @@ precision mediump float;
 This will define the LOWP, MED, and HIGH macros to equivalent OpenGL ES precision modifiers and sets the default precision for float to medium. This will only happen on platforms actually running OpenGL ES, on the desktop, the macros are defined to be empty.
 
 ## OpenGL ES 2.0 Documentation
-* [OpenGL ES 2.0 Reference Pages](http://www.khronos.org/opengles/sdk/docs/man/ "OpenGL ES 2.0 Reference Pages")
-* [OpenGL ES 2.0 Reference Card](http://www.khronos.org/opengles/sdk/docs/reference_cards/OpenGL-ES-2_0-Reference-card.pdf "OpenGL ES 2.0 Reference Card")
-* [OpenGL ES 2.0 Specification](http://www.khronos.org/registry/gles/#specs2 "OpenGL ES 2.0 Specification")
-* [OpenGL ES Programming Guide for iOS](https://developer.apple.com/library/ios/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/Introduction/Introduction.html "OpenGL ES Programming Guide for iOS"): the core concepts are valid for other platforms as well
-* [OpenGL ES 2.0 Pipeline Structure](http://en.wikibooks.org/wiki/OpenGL_Programming/OpenGL_ES_Overview#OpenGL_ES_2.0_Pipeline_Structure "OpenGL ES 2.0 Pipeline Structure")
+* [OpenGL ES 2.0 Reference Pages](https://www.khronos.org/registry/OpenGL-Refpages/es2.0/)
+* [OpenGL ES 2.0 Reference Card](https://www.khronos.org/opengles/sdk/docs/reference_cards/OpenGL-ES-2_0-Reference-card.pdf)
+* [OpenGL ES 2.0 Specification](https://www.khronos.org/registry/OpenGL/index_es.php#specs2)
+* [OpenGL ES Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/Introduction/Introduction.html): the core concepts are valid for other platforms as well
+* [OpenGL ES 2.0 Pipeline Structure](https://en.wikibooks.org/wiki/OpenGL_Programming/OpenGL_ES_Overview#OpenGL_ES_2.0_Pipeline_Structure)

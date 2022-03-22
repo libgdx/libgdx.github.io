@@ -18,9 +18,9 @@ title: Dependency management with Gradle
 
 ### Useful links
 Dependency management with Gradle is easy to understand, and has many different approaches. If you are familiar with Maven or Ivy, Gradle is fully compatible with both approaches, as well as being able to support custom approaches. If you aren't familiar with Gradle, there are great resources on their site to learn, it is recommended you give them a read to get comfortable with Gradle.
-* [Gradle's User Guide](http://www.gradle.org/docs/current/userguide/userguide.html)
-* [Gradle's Dependency Management Guide](http://www.gradle.org/docs/current/userguide/dependency_management.html)
-* [Declare your dependencies](http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies)
+* [Gradle's User Guide](https://docs.gradle.org/current/userguide/userguide.html)
+* [Gradle's Dependency Management Guide](https://docs.gradle.org/current/userguide/dependency_management.html)
+* [Declare your dependencies](https://docs.gradle.org/current/userguide/dependency_management.html#declaring-dependencies)
 
 ### Guide to build.gradle
 Gradle projects are managed by `build.gradle` files in their root directory. If you have used the gdx-setup.jar to build your libGDX project you will notice the structure: [Structure Example](/wiki/start/project-generation#project-layout)

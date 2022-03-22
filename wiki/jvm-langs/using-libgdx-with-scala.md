@@ -120,4 +120,4 @@ In most cases you will be able to open and edit each sub-project (like common, a
 See [here](https://github.com/ajhager/libgdx-sbt-project.g8/wiki/IDE-Plugins) for details about sbt plugins for each editor.
 
 ## Other resources
-[Develop Games in Scala with libgdx](http://raintomorrow.cc/post/70000607238/develop-games-in-scala-with-libgdx-getting-started)
+[Develop Games in Scala with libgdx](https://web.archive.org/web/20140401024419/http://raintomorrow.cc/post/70000607238/develop-games-in-scala-with-libgdx-getting-started)

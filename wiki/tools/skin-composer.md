@@ -5,7 +5,7 @@ title: Skin Composer
 
 ### Video series:
 
-[![](https://i.ytimg.com/vi/78amAV0_e24/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBV44KmCMrW8Ocu8fOwYV8ZLV61ag)](https://youtu.be/78amAV0_e24)
+[![](https://i.ytimg.com/vi/78amAV0_e24/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBV44KmCMrW8Ocu8fOwYV8ZLV61ag)](https://www.youtube.com/watch?v=78amAV0_e24)
 
 
 ### Features:

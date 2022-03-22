@@ -15,7 +15,7 @@ Thirdly, if you are using Gradle and you added "Tools" extension to your project
 
 Video:
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=w8xkf3O4nho
+<a href="https://www.youtube.com/watch?feature=player_embedded&v=w8xkf3O4nho
 " target="_blank"><img src="http://img.youtube.com/vi/w8xkf3O4nho/0.jpg"
 alt="Particle Editor Usage" width="480" height="360" border="10" /></a>
 

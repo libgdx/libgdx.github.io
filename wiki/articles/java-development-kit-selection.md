@@ -50,7 +50,7 @@ may not have much of a choice on which Java versions. As a developer you may als
 JDKs to support the features and/or debugging capabilities required by the project. Most of the versions listed 
 will be Long Term Supported (LTS). Hot swapping code is a feature that allows one to compile and swap code
 during runtime debugging. This feature enhanced by using Dynamic Code Execution Virtual Machine (DCEVM). This is 
-technically a separate distribution [DCEVM](http://dcevm.github.io/). Some developers will use JDK 8 for language
+technically a separate distribution [DCEVM](https://dcevm.github.io/). Some developers will use JDK 8 for language
 compatibility, JDK 11 for DCEVM and JDK 14 for packaging.
 
 Note: LTS (Long Term Support)

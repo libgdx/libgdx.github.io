@@ -79,15 +79,15 @@ Make sure you have decided on:
 
 #### Audio
 
-[BFXR](http://www.bfxr.net/): web based sound effect generator.
+[BFXR](https://www.bfxr.net/): web based sound effect generator.
 
 ![images/bfxr.png](/assets/wiki/images/bfxr.png)
 
-[Audiotool](http://www.audiotool.com/): web based music synthesizer.
+[Audiotool](https://www.audiotool.com/): web based music synthesizer.
 
 ![images/audiotool.png](/assets/wiki/images/audiotool.png)
 
-[Audacity](http://audacity.sourceforge.net/): open source audio editor.
+[Audacity](https://www.audacityteam.org/): open source audio editor.
 
 ![images/audacity.png](/assets/wiki/images/audacity.png)
 
@@ -97,15 +97,14 @@ Free sound effects and music:
 * [SoundCloud](https://soundcloud.com/)
 * [Open Music Archive](http://openmusicarchive.org/)
 * [CC Mixter](http://dig.ccmixter.org/)
-* [Indie Game Music](http://www.indiegamemusic.com/)
 
 #### Graphics
 
-[Gimp](http://www.gimp.org/): open source image editor.
+[Gimp](https://www.gimp.org/): open source image editor.
 
 ![images/gimp.png](/assets/wiki/images/gimp.png)
 
-[Paint.NET](http://www.getpaint.net/index.html): open source image editor.
+[Paint.NET](https://www.getpaint.net/index.html): open source image editor.
 
 ![images/paint.net.jpg](/assets/wiki/images/paint.net.jpg)
 
@@ -117,16 +116,16 @@ Free sound effects and music:
 
 ![images/spine.png](/assets/wiki/images/spine.png)
 
-[Blender](http://www.blender3d.org/): open source 3D editor.
+[Blender](https://www.blender.org/): open source 3D editor.
 
 ![images/blender.jpg](/assets/wiki/images/blender.jpg)
 
 Free game art:
 
-* [Open Game Art](http://opengameart.org/)
-* [Kenney](http://kenney.nl/)
-* [Lost Garden](http://www.lostgarden.com/)
-* [Game Art 2D](http://www.gameart2d.com/)
+* [Open Game Art](https://opengameart.org/)
+* [Kenney](https://kenney.nl/)
+* [Pixabay](https://pixabay.com/)
+* [Game Art 2D](https://www.gameart2d.com/)
 
 #### Map editors
 

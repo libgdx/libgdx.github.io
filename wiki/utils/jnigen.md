@@ -12,7 +12,7 @@ Note that gdx-jnigen is a Java project. It has a blank AndroidManifest.xml becau
 ### Windows
 
   * **MinGW 32 bit** Run [mingw-get-setup.exe](https://sourceforge.net/projects/mingw/files/Installer/), install with the GUI, choose `mingw32-base` and `mingw32-gcc-g++` under "Basic Setup", then Installation -> Apply Changes.
-  * **MinGW 64 bit** Download the [MinGW 64 bit](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/4.8.2/threads-win32/seh/x86_64-4.8.2-release-win32-seh-rt_v3-rev1.7z/download) binaries and unzip.
+  * **MinGW 64 bit** Download the [MinGW 64 bit](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/4.8.2/threads-win32/seh/x86_64-4.8.2-release-win32-seh-rt_v3-rev1.7z/download) binaries and unzip.
 
 ### Linux
 
@@ -55,7 +55,7 @@ public class Example {
 
 The `@off` comment turns off the Eclipse source formatter for the rest of the file. This prevents it from ruining the formatting of our native code in the comments. This feature has to be turned "on" in Eclipse preferences: Java > Code Style > Formatter. Click on "Edit" button, "Off/On Tags", check off "Enable Off/On tags".
 
-Next, a native method is defined. Normally for JNI you would need to run [javah](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javah.html) to generate stub source files which you would edit and need to keep up to date with the Java source. With jnigen, you just use a multi-line comment immediately after the native method which contains your native code. The parameters for the native method are available to your native code.
+Next, a native method is defined. Normally for JNI you would need to run [javah](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javah.html) to generate stub source files which you would edit and need to keep up to date with the Java source. With jnigen, you just use a multi-line comment immediately after the native method which contains your native code. The parameters for the native method are available to your native code.
 
 Lastly, a main method is defined. The `SharedLibraryLoader` extracts the appropriate native library from the classpath and loads it. This allows you to distribute your native libraries inside your JARs and you will never have problems with `java.library.path`. If using jnigen without libgdx, you can use `JniGenSharedLibraryLoader` instead which does the same thing. `JniGenSharedLibraryLoader` is the only class from jnigen that is needed at runtime, if you choose to use it.
 
@@ -192,7 +192,7 @@ BuildExecutor.executeAnt("jni/build.xml", "-v", "pack-natives");
 
 A video of Mario showing off jnigen:
 
-[![images/lxCnueL.png](/assets/wiki/images/lxCnueL.png)](http://www.youtube.com/watch?v=N2EE_jlDfrM)
+[![images/lxCnueL.png](/assets/wiki/images/lxCnueL.png)](https://www.youtube.com/watch?v=N2EE_jlDfrM)
 
 [Jglfw](https://github.com/badlogic/jglfw/blob/master/jglfw/src/com/badlogic/jglfw/Glfw.java#L268) makes extensive use of jnigen and shows how easy it can be to wrap a native API for use in Java. Note the `/*JNI` comment is used to define includes, statics, and functions.
 
@@ -206,7 +206,7 @@ Here are a number of jnigen builds that can serve as examples of varying complex
   * [ImageBuild](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-image/src/com/badlogic/gdx/graphics/g2d/ImageBuild.java#L26)
 
 ### ccache
-Using [ccache](http://ccache.samba.org/) is highly recommended if you build for all platforms (Linux, Windows, Mac OS X, Android, iOS, arm arm-v7, x86, x64 and all permutations). For libgdx, we use a very simple setup. On our build server, we have an `/opt/ccache` directory that houses a bunch of shell scripts, one for each compiler binary:
+Using [ccache](https://ccache.dev/) is highly recommended if you build for all platforms (Linux, Windows, Mac OS X, Android, iOS, arm arm-v7, x86, x64 and all permutations). For libgdx, we use a very simple setup. On our build server, we have an `/opt/ccache` directory that houses a bunch of shell scripts, one for each compiler binary:
 
 ```
 jenkins@badlogic:~/workspace/libgdx/gdx/jni$ ls -lah /opt/ccache/

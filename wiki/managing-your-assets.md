@@ -30,7 +30,7 @@ public static AssetManager assets = new AssetManager();
 
 This will cause problems on Android because the life-cycle of the static variable is not necessarily the same as the life-cycle of your application. Therefore the `AssetManager` instance of a previous instance of your application might be used for the next instance, while the resources are no longer valid. This typically would cause black/missing textures or incorrect assets.
 
-On Android, it is even possible for multiple instances of your Activity to be active at the same time, so do not think you're safe even if you handle life-cycle methods properly! (See [this StackOverflow question](http://stackoverflow.com/q/4341600/14637) for details.)
+On Android, it is even possible for multiple instances of your Activity to be active at the same time, so do not think you're safe even if you handle life-cycle methods properly! (See [this StackOverflow question](https://stackoverflow.com/questions/4341600/how-to-prevent-multiple-instances-of-an-activity-when-it-is-launched-with-differ) for details.)
 
 ### Adding Assets to the queue
 

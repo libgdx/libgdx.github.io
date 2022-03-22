@@ -5,7 +5,7 @@ Python is a dynamic and strongly typed language that supports many programming p
 
 Python has been implemented in several different ways; the standard interpreter in C (CPython), in python itself (PyPy), in the .Net Dynamic Language Runtime (C#) (IronPython), and in Java on the Java Virtual Machine (Jython). Jython comes with java interoperability; allowing it to leverage powerful java libraries, such as Libgdx, while keeping the succinctness and readability of Python.
 
-This article uses the latest Jython beta (Jython 2.7b1 available [here](http://tinyurl.com/d4s8qvd)), this release aims to bring compatilibity with CPython 2.7, so we will be programming with Python 2.7 syntax in this article.
+This article uses the latest Jython beta (Jython 2.7b1 available [here](https://repo1.maven.org/maven2/org/python/jython-installer/2.7-b1/jython-installer-2.7-b1.jar)), this release aims to bring compatibility with CPython 2.7, so we will be programming with Python 2.7 syntax in this article.
 
 **Note:** at the time of writting, you can only use Jython with libGDX on the desktop.
 

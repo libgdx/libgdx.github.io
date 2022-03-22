@@ -49,7 +49,7 @@ imgui.inputText("string", buf);
 imgui.sliderFloat("float", f, 0f, 1f);
 ```
 
-![screenshot of sample code alongside its output with ImGui](http://i.imgur.com/KOhZQTu.png)
+![screenshot of sample code alongside its output with ImGui](https://i.imgur.com/KOhZQTu.png)
 
 ImGui supports also other languages, such as Japanese, initiliazed [here](https://github.com/pakoito/imgui/blob/master/src/test/kotlin/imgui/gl/test%20lwjgl.kt#L79) as:
 

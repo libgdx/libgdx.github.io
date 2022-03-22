@@ -159,6 +159,6 @@ batch.end();
   * [source](https://bitbucket.org/dermetfan/somelibgdxtests/src/207cfc0a6123b48200d5cf721df222cbe7faf1be/src/net/dermetfan/someLibgdxTests/screens/ParticleEffectsTutorial.java?at=default) of the video
   * [source](https://bitbucket.org/dermetfan/somelibgdxtests/src/4582a1bf94bded4f30df47b9195d1ae14728b847/src/net/dermetfan/someLibgdxTests/screens/ParticleEffectsTutorial.java?at=default) of the video using [pooling](https://www.youtube.com/watch?v=3OwIiELYa70)
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=LCLa-rgR_MA
+<a href="https://www.youtube.com/watch?feature=player_embedded&v=LCLa-rgR_MA
 " target="_blank"><img src="http://img.youtube.com/vi/LCLa-rgR_MA/0.jpg"
 alt="libgdx 2D Particle Effects" width="480" height="360" border="10" /></a>

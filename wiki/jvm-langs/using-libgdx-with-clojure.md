@@ -1,11 +1,11 @@
 ---
 title: Using libgdx with Clojure
 ---
-Clojure is a dialect of Lisp, written for the JVM and with functional programming in mind. Clojure comes with native Java interoperability, making it able to leverage the powerful existing libraries in the Java ecosystem. [ClojureTV on YouTube](http://www.youtube.com/user/ClojureTV) has a lot of good videos, specifically [Clojure for Java Programmers](http://www.youtube.com/watch?v=P76Vbsk_3J0) [(Part 2)](http://www.youtube.com/watch?v=hb3rurFxrZ8).
+Clojure is a dialect of Lisp, written for the JVM and with functional programming in mind. Clojure comes with native Java interoperability, making it able to leverage the powerful existing libraries in the Java ecosystem. [ClojureTV on YouTube](https://www.youtube.com/user/ClojureTV) has a lot of good videos, specifically [Clojure for Java Programmers](https://www.youtube.com/watch?v=P76Vbsk_3J0) [(Part 2)](https://www.youtube.com/watch?v=hb3rurFxrZ8).
 
-## project setup
+## Project setup
 
-Your project's directory structure should look something like
+Your project's directory structure should look something like:
 ```
 demo
 - android
@@ -92,7 +92,7 @@ demo
   (.setScreen this main-screen))
 ```
 
-you can launch the window with `lein run` in the `project.clj` directory, or the repl of your choice by calling `(demo.core.desktop-launcher/-main)`.
+You can launch the window with `lein run` in the `project.clj` directory, or the repl of your choice by calling `(demo.core.desktop-launcher/-main)`.
 
 For repl based dev have your `main-screen` call `fn`s for each lifecycle method you wish to re-evaluate.
 

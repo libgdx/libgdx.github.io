@@ -182,4 +182,4 @@ The implementation the official HTML5 backend uses has some other restrictions, 
 
 [Building libGDX from source and adding new files to gdx.gwt.xml](/wiki/misc/local-libgdx-package-use-with-gwt)
 
-[HTML5 - GWT Explained on YouTube](https://youtu.be/I_85usDvJvQ)
+[HTML5 - GWT Explained on YouTube](https://www.youtube.com/watch?v=I_85usDvJvQ)

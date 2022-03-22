@@ -52,8 +52,8 @@ The raindrop and the bucket should take up a small(ish) portion of the screen ve
 
 The following sources provide some sample assets:
 
-  * water drop sound by _junggle_, see [here](http://www.freesound.org/people/junggle/sounds/30341/)
-  * rain sounds by _acclivity_, see [here](http://www.freesound.org/people/acclivity/sounds/28283/)
+  * water drop sound by _junggle_, see [here](https://freesound.org/people/junggle/sounds/30341/)
+  * rain sounds by _acclivity_, see [here](https://freesound.org/people/acclivity/sounds/28283/)
   * droplet sprite by _mvdv_, see [here](https://github.com/Quillraven/SimpleKtxGame/blob/01-app/android/assets/images/drop.png?raw=true)
   * bucket sprite by _mvdv_, see [here](https://github.com/Quillraven/SimpleKtxGame/blob/01-app/android/assets/images/bucket.png?raw=true)
 

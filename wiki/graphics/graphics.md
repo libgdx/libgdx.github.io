@@ -34,7 +34,7 @@ One particularly useful method in the Graphics class is `getDeltaTime()`, which 
 stage.act( Math.min( Gdx.graphics.getDeltaTime(), 1/30 ) );
 ```
 
-Notice the use of a maximum time step of 1/30 seconds. This is to avoid potentially large jerks in the resulting animation. This illustrates the fact that while `getDeltaTime()` can be useful for simple animations, it is still frame dependent and more sensitive actions such as game logic or physics simulation may benefit from [other timing strategies](http://gafferongames.com/game-physics/fix-your-timestep/).
+Notice the use of a maximum time step of 1/30 seconds. This is to avoid potentially large jerks in the resulting animation. This illustrates the fact that while `getDeltaTime()` can be useful for simple animations, it is still frame dependent and more sensitive actions such as game logic or physics simulation may benefit from [other timing strategies](https://gafferongames.com/post/fix_your_timestep/).
 
 Another useful method is `getFramesPerSecond()`, which returns a running average of the current frame-rate for simple diagnostic purposes. However for more serious profiling efforts, the use of [FPSLogger](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/FPSLogger.java) is recommended.
 

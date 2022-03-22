@@ -31,9 +31,9 @@ Setting up libGDX with Maven is non trivial as it
 
 To handle these issues, libGDX relies on the following Maven plugins:
 
-  * [GWT Maven plugin, version 2.5.0](http://mojo.codehaus.org/gwt-maven-plugin/), to compile and package the GWT project.
-  * [Maven native dependencies plugin](http://code.google.com/p/mavennatives/), to copy the native libraries to the appropriate place
-  * [Maven Android plugin](http://code.google.com/p/maven-android-plugin/), to compile and package the Android project.
+  * [GWT Maven plugin, version 2.5.0](https://gwt-maven-plugin.github.io/gwt-maven-plugin/), to compile and package the GWT project.
+  * [Maven native dependencies plugin](https://code.google.com/p/mavennatives/), to copy the native libraries to the appropriate place
+  * [Maven Android plugin](https://code.google.com/p/maven-android-plugin/), to compile and package the Android project.
 
 To ease all of this, we supply a Maven archetype that will generate a multi-module Maven project.
 
@@ -104,7 +104,7 @@ This will create a file called test-android-1.0-SNAPSHOT.apk in the test/android
 mvn -Pandroid install
 ```
 
-For more information on Android goals, see the [Maven Android plugin](http://code.google.com/p/maven-android-plugin/)
+For more information on Android goals, see the [Maven Android plugin](https://code.google.com/p/maven-android-plugin/)
 
 ### HTML5/GWT
 To compile the HTML5 project to JavaScript, run:
@@ -130,8 +130,8 @@ While Maven is IDE agnostic, the plugins for GWT and Android are not. Plugins fo
 ### Eclipse
 Before you can import your project, you need to install the following Eclipse plugins:
 
-  * [m2e](http://eclipse.org/m2e/), this should already available in a clean Eclipse installation (Java and Java EE editions). It provides the basic Maven support within Eclipse.
-  * [m2e-android](http://rgladwell.github.com/m2e-android/) provides Maven integration for Android projects in Eclipse.
+  * [m2e](https://www.eclipse.org/m2e/), this should already available in a clean Eclipse installation (Java and Java EE editions). It provides the basic Maven support within Eclipse.
+  * [m2e-android](https://rgladwell.github.io/m2e-android/) provides Maven integration for Android projects in Eclipse.
   * [Google Web Toolkit](https://developers.google.com/web-toolkit/), the Eclipse plugin that allows you to develop GWT projects.
 
 Once the plugins are installed, you can import your Maven libGDX projects by going to *File -> Import... -> Maven -> Existing Maven Projects*. This will import the parent pom as project along with the core, desktop, android and html project.

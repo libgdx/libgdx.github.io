@@ -17,7 +17,7 @@ title: Texture packer
 
 In OpenGL, a texture is bound, some drawing is done, another texture is bound, more drawing is done, etc. Binding the texture is relatively expensive, so it is ideal to store many smaller images on a larger image, bind the larger texture once, then draw portions of it many times. libGDX has a `TexturePacker` class which is a command line application that packs many smaller images on to larger images. It stores the locations of the smaller images so they are easily referenced by name in your application using the `TextureAtlas` class.
 
-TexturePacker uses multiple packing algorithms but the most important is based on [the maximal rectangles algorithm](http://clb.demon.fi/projects/even-more-rectangle-bin-packing). It also uses brute force, packing with numerous heuristics at various sizes and then choosing the most efficient result.
+TexturePacker uses multiple packing algorithms but the most important is based on [the maximal rectangles algorithm](https://web.archive.org/web/20180913014826/http://clb.demon.fi/projects/even-more-rectangle-bin-packing). It also uses brute force, packing with numerous heuristics at various sizes and then choosing the most efficient result.
 
 ## Running TexturePacker
 

@@ -31,11 +31,11 @@ Before diving into the specifics of libGDX's file handling, users should be awar
 On a desktop OS, the filesystem is one big chunk of memory. Files can be referenced with paths relative to the current working directory (the directory the application was executed in) or absolute paths. Ignoring file permissions, files and directories are usually readable and writable by all applications.
 
 ### Android
-On Android the situation is a little bit more complex. Files can be stored inside the application's [APK](https://en.wikipedia.org/wiki/APK_(file_format)) either as resources or as assets. These files are read-only. libGDX only uses the [assets mechanism](http://developer.android.com/reference/android/content/res/AssetManager.html), as it provides raw access to the byte streams and more closely resembles a traditional filesystem. [Resources](http://developer.android.com/guide/topics/resources/index.html) better lend themselves to normal Android applications but introduce problems when used in games. Android manipulates them at load time, e.g. it automatically resizes images.
+On Android the situation is a little bit more complex. Files can be stored inside the application's [APK](https://en.wikipedia.org/wiki/APK_(file_format)) either as resources or as assets. These files are read-only. libGDX only uses the [assets mechanism](https://developer.android.com/reference/android/content/res/AssetManager), as it provides raw access to the byte streams and more closely resembles a traditional filesystem. [Resources](https://developer.android.com/guide/topics/resources/providing-resources) better lend themselves to normal Android applications but introduce problems when used in games. Android manipulates them at load time, e.g. it automatically resizes images.
 
 Assets are stored in your project's `assets` directory and will be packaged with your APK automatically when you deploy your application. They are accessible via `Gdx.files.internal`, a read-only directory not to be confused with what the Android documentation refers to as "internal". No other application on the Android system can access these files.
 
-Files can also be stored on what the Android documentation refers to as [internal storage](http://developer.android.com/guide/topics/data/data-storage.html#filesInternal) (accessible via `Gdx.files.local` in LibGDX), where they are readable and writable. Each installed application has a dedicated internal storage directory. This directory is again only accessible by that application. One can think of this storage as a private working area for the application.
+Files can also be stored on what the Android documentation refers to as [internal storage](https://developer.android.com/training/data-storage) (accessible via `Gdx.files.local` in LibGDX), where they are readable and writable. Each installed application has a dedicated internal storage directory. This directory is again only accessible by that application. One can think of this storage as a private working area for the application.
 
 Finally, files can be stored on the external storage, accessible via `Gdx.files.external` in LibGDX. The behaviour regarding external files was changed in Android over the times, hence in LibGDX:
 
@@ -67,7 +67,7 @@ A file in libGDX is represented by an instance of the [FileHandle](https://githu
 | Classpath | Classpath files are directly stored in your source folders. These get packaged with your jars and are always *read-only*. They have their purpose, but should be avoided if possible. | Yes | Yes | No | Yes |
 | Internal | Internal files are relative to the application’s *root* or *working* directory on desktops, relative to the *assets* directory on Android, and relative to the `core/assets/` directory of your GWT project. These files are *read-only*. If a file can't be found on the internal storage, the file module falls back to searching the file on the classpath. This is necessary if one uses the asset folder linking mechanism of Eclipse, see [Project Setup](/wiki/start/project-generation) | Yes | Yes | Yes | Yes |
 | Local | Local files are stored relative to the application's *root* or *working* directory on desktops and relative to the internal (private) storage of the application on Android. Note that Local and internal are mostly the same on the desktop. | Yes | Yes | No | Yes |
-| External| External files paths are relative to the [home directory](http://www.roseindia.net/java/beginners/UserHomeExample.shtml) of the current user on desktop systems. On Android, the app-specific external storage is used. | Yes | Yes | No | Yes |
+| External| External files paths are relative to the [home directory](https://www.roseindia.net/java/beginners/UserHomeExample.shtml) of the current user on desktop systems. On Android, the app-specific external storage is used. | Yes | Yes | No | Yes |
 | Absolute | Absolute files need to have their fully qualified paths specified. <br/>*Note*: For the sake of portability, this option must be used only when absolutely necessary | Yes | Yes | No | Yes |
 
 Absolute and classpath files are mostly used for tools such as desktop editors, that have more complex file i/o requirements. For games these can be safely ignored. The order in which you should use the types is as follows:
@@ -112,7 +112,7 @@ The `myfile.txt` file is located in the directory where the compiled classes res
 FileHandle handle = Gdx.files.external("myfile.txt");
 ```
 
-In this case, `myfile.txt` needs to be in the users’ [home directory](http://wikipedia.org/wiki/Home_directory) (`/home/<user>/myfile.txt` on Linux, `/Users/<user>/myfile.txt` on macOS and `C:\Users\<user>\myfile.txt` on Windows) on desktop, and in the root of the SD card on Android.
+In this case, `myfile.txt` needs to be in the users’ [home directory](https://en.wikipedia.org/wiki/Home_directory) (`/home/<user>/myfile.txt` on Linux, `/Users/<user>/myfile.txt` on macOS and `C:\Users\<user>\myfile.txt` on Windows) on desktop, and in the root of the SD card on Android.
 
 ```java
 FileHandle handle = Gdx.files.absolute("/some_dir/subdir/myfile.txt");

@@ -27,7 +27,7 @@ Distributing java applications as JAR file can be very unhandy and prone to issu
 # Deploy to Android
 `gradlew android:assembleRelease`
 
-This will create an unsigned APK file in the `android/build/outputs/apk` folder. Before you can install or publish this APK, you must [sign it](http://developer.android.com/tools/publishing/app-signing.html). The APK build by the above command is already in release mode, you only need to follow the steps for keytool and jarsigner. You can install this APK file on any Android device that allows [installation from unknown sources](http://developer.android.com/distribute/open.html#unknown-sources).
+This will create an unsigned APK file in the `android/build/outputs/apk` folder. Before you can install or publish this APK, you must [sign it](https://developer.android.com/studio/publish/app-signing). The APK build by the above command is already in release mode, you only need to follow the steps for keytool and jarsigner. You can install this APK file on any Android device that allows [installation from unknown sources](https://developer.android.com/distribute/marketing-tools/alternative-distribution#unknown-sources).
 
 # Deploy to iOS
 *This section assumes you're familiar with the basic deployment steps for iOS apps.*

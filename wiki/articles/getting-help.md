@@ -103,7 +103,7 @@ Creating executable example code does take some time. You need to take apart you
 
 Example code should be contained entirely in a single class (use static member classes if needed) and executable, meaning it has a main method and can simply be copied, pasted, and run. Do not use a GdxTest, as that cannot be copy, pasted, and run.
 
-For more about how to make executable example code, please see [SSCCE](http://sscce.org/) and [MCVE](http://stackoverflow.com/help/mcve).
+For more about how to make executable example code, please see [SSCCE](http://sscce.org/) and [MCVE](https://stackoverflow.com/help/minimal-reproducible-example).
 
 ### Example Resources
 

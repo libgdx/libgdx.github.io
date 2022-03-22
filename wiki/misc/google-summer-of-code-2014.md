@@ -7,7 +7,7 @@ This page was a [RFC](https://en.wikipedia.org/wiki/Request_for_Comments) for th
 {: .notice--info}
 
 ## Introduction
-We assume you already know what Google Summer of Code is, if not, please check out the [Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2013) site for general information.
+We assume you already know what Google Summer of Code is, if not, please check out the [Google Summer of Code](https://www.google-melange.com/archive/gsoc/2013) site for general information.
 
 For **students**, we recommend to read up on what libGDX is, then proceed to the [Information For Students](/wiki/misc/google-summer-of-code-2014#Information_for_Students) section.
 
@@ -15,11 +15,11 @@ For **students**, we recommend to read up on what libGDX is, then proceed to the
 
 ## What is libGDX?
 
-[libGDX](https://libgdx.badlogicgames.com) is a cross-platform game development framework. You write your game in Java, and have it working instantly on Windows, Linux, Mac, [Steam](http://store.steampowered.com/app/207710), [Android](https://play.google.com/store/apps/details?id=com.moistrue.zombiesmasher), [iOS](https://itunes.apple.com/ph/app/clash-of-the-olympians/id590049663?mt=8), [Facebook](https://www.facebook.com/stargazergame) and HTML/WebGL. The entire Java code base is shared across all these platforms. You can find more information on libGDX's feature set [here](https://libgdx.badlogicgames.com/features.html).
+[libGDX](https://libgdx.com) is a cross-platform game development framework. You write your game in Java, and have it working instantly on Windows, Linux, Mac, [Steam](https://store.steampowered.com/app/207710), [Android](https://play.google.com/store/apps/details?id=com.moistrue.zombiesmasher), [iOS](https://itunes.apple.com/ph/app/clash-of-the-olympians/id590049663?mt=8), [Facebook](https://www.facebook.com/stargazergame) and HTML/WebGL. The entire Java code base is shared across all these platforms. You can find more information on libGDX's feature set [here](https://libgdx.com/features/).
 
 libGDX was born 3 years ago, out of a desire to target multiple platforms with a single code base. It has since grown into a big OSS project with over [100 professional and amateur contributors](http://www.ohloh.net/p/libgdx), and is used by thousands of developers to create the games of their dreams. From [entries](http://www.ludumdare.com/compo/author/bompo/) for the 48 hour [Ludum Dare](http://www.ludumdare.com/) challenge, to [top grossing mobile games](https://play.google.com/store/apps/details?id=com.bithack.apparatus&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5iaXRoYWNrLmFwcGFyYXR1cyJd) to augmented reality experiments like [Google's Ingress](https://play.google.com/store/apps/details?id=com.nianticproject.ingress&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5uaWFudGljcHJvamVjdC5pbmdyZXNzIl0).
 
-libGDX has achieved wide adoption, especially on Android where it is powering [3.2% of all installed applications](http://www.appbrain.com/stats/libraries/details/libgdx/libgdx), with numerous top-grossing games. On that platform it can already compete with Unity3D.
+libGDX has achieved wide adoption, especially on Android where it is powering [3.2% of all installed applications](https://www.appbrain.com/stats/libraries/details/libgdx/libgdx), with numerous top-grossing games. On that platform it can already compete with Unity3D.
 
 Our [Community](https://libgdx.com/community/) as well as the entire libGDX development team are looking forward to welcome you among us. Contribute to powering thousands of applications and bringing joy to millions of users!
 
@@ -138,7 +138,7 @@ Please add `----` after each idea as a separator.
 
 **Required Skills**: Java, C/C++, 3D programming, including GLSL shaders, linear algebra
 
-**Links**: [Oculus Rift first reactions, just because it's funny :)](http://www.youtube.com/watch?v=KJo12Hz_BVI)
+**Links**: [Oculus Rift first reactions, just because it's funny :)](https://www.youtube.com/watch?v=KJo12Hz_BVI)
 
 **Mentors**: [xoppa](https://code.google.com/p/libgdx/wiki/GoogleSummerOfCode2013Mentors, [bach](https://code.google.com/p/libgdx/wiki/GoogleSummerOfCode2013Mentors, [badlogic](https://code.google.com/p/libgdx/wiki/GoogleSummerOfCode2013Mentors
 
@@ -167,7 +167,7 @@ This idea was orginally submitted by Fisherman on the forums.
 **Required Skills**: Java, game programming, potentially a scripting language like Lua, JavaScript, Squirrel etc.
 
 **Links**:
-[Block54 Leap Motion demo](http://www.youtube.com/watch?v=1x-eAvASIFc)
+[Block54 Leap Motion demo](https://www.youtube.com/watch?v=1x-eAvASIFc)
 [Information for Leap Motion developers](https://www.leapmotion.com/developers)
 
 *Mentors*: [badlogic](https://code.google.com/p/libgdx/wiki/GoogleSummerOfCode2013Mentors,
@@ -240,7 +240,7 @@ This project could be done in collaboration with the High-Level Game Engine proj
 
 ### Project: High-level Game Engine
 
-**Goals**: libGDX is a framework which can be overwhelming for people who do not have previous experience with game programming. A high-level game engine on top of libGDX could lower the barrier of entry. We propose to build a high-level 2D game engine on top of libGDX. Good API design, documentation and examples are part of the challenge. Inspiration can be found in projects such as [Corona](http://www.coronalabs.com/products/corona-sdk/), [Flixel](http://flixel.org/), [HaxePunk](http://haxepunk.com/) or [Cocos2D](http://www.cocos2d-iphone.org/). We do not rule out a 3D engine either, but think 2D would have more chances of success given the time frame of Google Summer of Code. Ideally, the engine would be based on the [component/entity system pattern](http://gamadu.com/artemis/).
+**Goals**: libGDX is a framework which can be overwhelming for people who do not have previous experience with game programming. A high-level game engine on top of libGDX could lower the barrier of entry. We propose to build a high-level 2D game engine on top of libGDX. Good API design, documentation and examples are part of the challenge. Inspiration can be found in projects such as [Corona](https://coronalabs.com/product/), [Flixel](http://flixel.org/), [HaxePunk](https://github.com/HaxePunk/HaxePunk) or [Cocos2D](https://web.archive.org/web/20180818232745/http://www.cocos2d-iphone.org/). We do not rule out a 3D engine either, but think 2D would have more chances of success given the time frame of Google Summer of Code. Ideally, the engine would be based on the [component/entity system pattern](https://gamadu.com/artemis/).
 
 This project could be done in collaboration with the Scripting Support project above.
 
