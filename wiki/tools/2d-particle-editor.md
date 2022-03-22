@@ -31,15 +31,15 @@ When you are configuring properties, you are actually configuring the particle e
 
 There are some common elements that appear in several of the properties panels.
 
-#### Active button#
+#### Active button
 
 Properties with an "Active" toggle button can be turned off, which can minimize some of the work that needs to be done at run-time.
 
-#### Number / number range#
+#### Number / number range
 
 Some of the number fields have a `>` button beside them. Clicking this button changes the number into a number range, where at runtime, a random value is selected from between the two specified values, every time the number is referenced. For example, if a range of 1-2 is selected for the Life property, each new particle will have some random length life between 1 and 2 seconds.
 
-#### Chart#
+#### Chart
 
 A chart is used to control the value of a property over time. The word "Duration" or "Life" in the middle of the chart indicates whether the horizontal timeline of the chart is relative to the duration of the emitter, or the lifetime of each single particle.
 

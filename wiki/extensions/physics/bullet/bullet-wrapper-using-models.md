@@ -1,10 +1,10 @@
 ---
 title: Bullet Wrapper Using models
 ---
-## <a id="Using_models"></a>Using models
+## Using models
 [`Model`](/wiki/graphics/3d/models) and `ModelInstance` are typically used for the visual representation of objects. `btCollisionObject` or `btRigidBody` are used for the physical representation of these objects.
 
-### <a id="Using_motion_states"></a>Using motion states
+### Using motion states
 To synchronize the location and orientation between a `ModelInstance` and `btRigidBody`, Bullet provides the `btMotionState` class that you can extend. A very basic example of such synchronization is:
 ```java
 static class MyMotionState extends btMotionState {
@@ -53,7 +53,7 @@ Note that the transformation (location and rotation) of a `btRigidBody` is typic
 
 The motion state has to be disposed when no longer needed: `motionState.dispose();`.
 
-### <a id="Create_a_collision_object_from_a_model"></a>Create a collision object from a model
+### Create a collision object from a model
 A Model boils down to a bunch of triangles with some properties which are rendered with a specific transformation. It is optimized for rendering, not for physics. Therefore a Model is rarely useful for an efficient representation of a physics shape.
 
 To understand why this is, consider a simple box model. The physics shape of a box would contain eight corners. The visual model however, will contain 24 corners (vertices). This is because the vertices are specified for each face of the box, where each vertex contains the "normal" of the face. Otherwise visual effects, like lighting, would not be possible. So, instead of a solid box, the visual model is actually made up of six independent rectangles. Theses rectangles (or the triangles it is made up) are infinitely thin, they have no volume. This makes it unsuitable for dynamic physics.

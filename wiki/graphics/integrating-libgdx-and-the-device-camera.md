@@ -409,13 +409,13 @@ Other way to do it is to call the setFixedSize() function only during the taking
 
 ## Some Notes
 
-### Note#
+### Note
 This code is Android specific, and will not work with the generic cross platform code, but I guess one can provide similar functionality, at least for the desktop application.
 
-### Another note#
+### Another note
 The process of merging and writing the merge image to the storage, takes quite a lot of time due to the format mismatch between libGDX color scheme (RGBA) and the Bitmap class used here (ARGB), if someone find a quicker way, I'd be happy to hear about it.
 
-### Last note#
+### Last note
 I tested this only with a handful of Android devices, and experienced different behaviors probably due to the different GPU implementations. The Samsung GSIII even managed to XOR white elements with the camera image instead of simply overlaying them (Other colors didn't showed this effects). So your mileage may vary depending on the actual phone used.
 
 # The Code

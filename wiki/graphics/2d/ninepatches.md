@@ -94,11 +94,11 @@ Now we need to alter the image, and add black borders where we want to
 allow the image to stretch. This can be done in any image editor. But
 there are editors to ease the process.
 
-#### github AndroidAssetStudio generator#
+#### GitHub AndroidAssetStudio generator
 This is my personal favorite. No need for anything, just go to the site, specify your image, it automatically guestimates it (and gets it right in my experience) and hit the download button, it'll even put it in a nice zip for you for android (if you're not on android you can ignore it and go for the smallest one, since it is a ninepatch and scaleable as high as you want)
 https://romannurik.github.io/AndroidAssetStudio/nine-patches.html
 
-#### weblaf ninepatch-editor
+#### WebLaF ninepatch-editor
 A more up-to-date and functional tool than the below Android SDK one, it was actually created because of the shortcomings of the draw9patch tool, can be found in the [weblaf project](https://github.com/mgarin/weblaf). Scroll down and find the ninepatch-editor tool standalone jar release available for download.
 
 #### Android SDK draw9patch

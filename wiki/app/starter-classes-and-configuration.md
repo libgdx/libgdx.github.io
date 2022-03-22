@@ -207,14 +207,14 @@ Besides the `AndroidApplicationConfiguration`, an Android application is also co
 </manifest>
 ```
 
-#### Screen Orientation & Configuration Changes#
+#### Screen Orientation & Configuration Changes
 In addition to the targetSdkVersion, the `screenOrientation` and `configChanges` attributes of the activity element should always be set.
 
 The `screenOrientation` attribute specifies a fixed orientation for the application. One may omit this if the application can work with both landscape and portrait mode.
 
 The `configChanges` attribute is *crucial* and should always have the values shown above. Omitting this attribute means that the application will be restarted every time a physical keyboard is slid out/in or if the orientation of the device changes. If the `screenOrientation` attribute is omitted, a libGDX application will receive calls to `ApplicationListener.resize()` to indicate the orientation change. API clients can then re-layout the application accordingly.
 
-#### Permissions#
+#### Permissions
 If an application needs to be able to write to the external storage of a device (e.g. SD-card), needs internet access, uses the vibrator or wants to record audio, the following permissions need to be added to the `AndroidManifest.xml` file:
 
 ```xml

@@ -8,7 +8,7 @@ The mechanism to deploy your game differs between platforms. This article aims t
 * [Deploy to iOS](#deploy-to-ios)
 * [Deploy Web](#deploy-web)
 
-# <a id="Deploy_to_Windows/Linux/Mac"></a>Deploy to Windows/Linux/Mac OS X
+# Deploy to Windows/Linux/Mac OS X
 ### As JAR file
 The easiest way to deploy to Windows/Linux/Mac is to create a runnable JAR file. This can be done via the following console command:
 `./gradlew desktop:dist`
@@ -24,12 +24,12 @@ Distributing java applications as JAR file can be very unhandy and prone to issu
 * Via electron, HTML5 applications can be deployed to desktop. See [here](https://medium.com/@bschulte19e/how-to-deploy-a-libgdx-game-with-electron-3f1b37f0c26e).
 * GWT applications can also be bundled as UWP Apps, see [here](https://web.archive.org/web/20200428040905/https://www.badlogicgames.com/forum/viewtopic.php?f=17&t=14766).
 
-# <a id="Deploy_to_Android"></a>Deploy to Android
+# Deploy to Android
 `gradlew android:assembleRelease`
 
 This will create an unsigned APK file in the `android/build/outputs/apk` folder. Before you can install or publish this APK, you must [sign it](http://developer.android.com/tools/publishing/app-signing.html). The APK build by the above command is already in release mode, you only need to follow the steps for keytool and jarsigner. You can install this APK file on any Android device that allows [installation from unknown sources](http://developer.android.com/distribute/open.html#unknown-sources).
 
-# <a id="Deploy_to_iOS"></a>Deploy to iOS
+# Deploy to iOS
 *This section assumes you're familiar with the basic deployment steps for iOS apps.*
 
 ### Prerequisites:
@@ -73,7 +73,7 @@ If you do not include one, you can still submit your app but later you receive a
 
 Deploying to iOS is relatively straight forward, see [here](https://medium.com/@bschulte19e/deploying-your-libgdx-game-to-ios-in-2020-4ddce8fff26c) if you're having difficulties. Take a look at [this post](https://medium.com/dev-genius/deploying-your-libgdx-game-to-ios-testflight-163cada0696b), if you want to deploy your iOS application to TestFlight.
 
-# <a id="Deploy_web"></a>Deploy Web
+# Deploy Web
 `gradlew html:dist`
 
 This will compile your app to Javascript and place the resulting Javascript, HTML and asset files in the `html/build/dist/` folder. The contents of this folder have to be served up by a web server, e.g. Apache or Nginx. Just treat the contents like you'd treat any other static HTML/Javascript site. There is no Java or Java Applets involved!

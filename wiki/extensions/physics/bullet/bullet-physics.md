@@ -11,7 +11,7 @@ These tutorials provide an introduction in using the Bullet wrapper:
 * [Part1: collision detection](https://xoppa.github.io/blog/using-the-libgdx-3d-physics-bullet-wrapper-part1/)
 * [Part2: rigid body dynamics](https://xoppa.github.io/blog/using-the-libgdx-3d-physics-bullet-wrapper-part2/)
 
-# <a id="Using_Bullet_in_your_project"></a>Using Bullet in your project
+# Using Bullet in your project
 * [Setup](/wiki/extensions/physics/bullet/bullet-wrapper-setup)
 * [Using the wrapper](/wiki/extensions/physics/bullet/bullet-wrapper-using-the-wrapper)
 * [Using models](/wiki/extensions/physics/bullet/bullet-wrapper-using-models)
