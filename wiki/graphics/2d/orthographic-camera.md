@@ -19,7 +19,7 @@ Using the camera is the easy way to move around a game world without having to m
 The position field referes to the position of the center of the camera.
 The camera extends the selected viewport of the world so this matches the screen size of the device.
 
-The following little app demonstrates the use of a simple `OrthographicCamera` to move around a flat world. 
+The following little app demonstrates the use of a simple `OrthographicCamera` to move around a flat world.
 
 
 ```java
@@ -142,7 +142,7 @@ public class OrthographicCameraExample implements ApplicationListener {
 
 ```
 
-The above class is the libGDX application that will use the orthographic camera to move around the world. Our world size is in arbitrary units that we can define however we want to. In this specific case, our world is 100x100 units. 
+The above class is the libGDX application that will use the orthographic camera to move around the world. Our world size is in arbitrary units that we can define however we want to. In this specific case, our world is 100x100 units.
 
 ```java
     static final int WORLD_WIDTH = 100;
@@ -327,7 +327,7 @@ Let’s take a deeper look at controlling our camera, which is all handled in ou
 	}
 ```
 
-So we can see that this method polls Keys, if a certain key is pressed, we do something to the camera. 
+So we can see that this method polls Keys, if a certain key is pressed, we do something to the camera.
 
 The last 5 lines are responsible for keeping the camera within the bounds of our world.
 

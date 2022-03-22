@@ -28,7 +28,7 @@ effect.draw(batch, delta);
 # Efficiency
 Rendering particles is great, rendering lots of particles is even better, here is how you do it without melting your users devices.
 
-ParticleEffects are no different than Sprites, in fact they [ARE](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/ParticleEmitter.java#L98) sprites. Take everything you know already about efficiently rendering sprites and carry them across. 
+ParticleEffects are no different than Sprites, in fact they [ARE](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/ParticleEmitter.java#L98) sprites. Take everything you know already about efficiently rendering sprites and carry them across.
 
  * Use an atlas!
 

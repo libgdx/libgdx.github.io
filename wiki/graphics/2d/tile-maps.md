@@ -142,7 +142,7 @@ Maps that contain layers with tiles are handled by the classes in the [com.badlo
 
 Tile maps are loaded into 
 [TiledMap](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMap.html)
-[(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMap.java) instances. TiledMap is a subclass of the generic Map class, with additional methods and attributes. 
+[(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMap.java) instances. TiledMap is a subclass of the generic Map class, with additional methods and attributes.
 
 ### Tiled Map Layers
 Layers with tiles in them are stored in 
@@ -154,9 +154,9 @@ TiledMap tiledMap = loadMap(); // see below for this
 TiledMapTileLayer layer = (TiledMapTileLayer)tiledMap.getLayers().get(0); // assuming the layer at index on contains tiles
 ```
 
-A TiledMapTileLayer has all the same attributes as the generic MapLayer, e.g. properties, objects and so on. 
+A TiledMapTileLayer has all the same attributes as the generic MapLayer, e.g. properties, objects and so on.
 
-In addition to those, the TiledMapTileLayer also has a two dimensional array of [TiledMapTileLayer.Cell](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.Cell.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.java#L89) instances. 
+In addition to those, the TiledMapTileLayer also has a two dimensional array of [TiledMapTileLayer.Cell](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.Cell.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.java#L89) instances.
 
 To access a cell, you can ask the tile layer to hand it out like this:
 
@@ -225,7 +225,7 @@ renderer = new IsometricTiledMapRenderer(isoMap, 1 / 32f);
 
 Again, you have to specify the map (which should be an isometric tiled map) and a unit scale.
 
-*Note:* the isometric renderer is experimental, use at your own risk and please report any issues you find. From a performance perspective, rendering isometric maps on mobile devices is very costly, as every tile must have blending on. 
+*Note:* the isometric renderer is experimental, use at your own risk and please report any issues you find. From a performance perspective, rendering isometric maps on mobile devices is very costly, as every tile must have blending on.
 
 ### Loading TMX/Tiled maps
 ![images/tile-maps2.png](/assets/wiki/images/tile-maps2.png)

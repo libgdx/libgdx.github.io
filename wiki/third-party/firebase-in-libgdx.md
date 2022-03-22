@@ -5,7 +5,7 @@ If you are interested in using [Firebase](https://firebase.google.com) with libG
 
 
 ## Setup
-Add the following dependencies to the corresponding places in your `build.gradle` files. For further information check out the project's extensive wiki: [Android guide](https://github.com/mk-5/gdx-fireapp/wiki/Android-guide), [iOS guide](https://github.com/mk-5/gdx-fireapp/wiki/iOS-Guide), [GWT guide](https://github.com/mk-5/gdx-fireapp/wiki/GWT-guide). 
+Add the following dependencies to the corresponding places in your `build.gradle` files. For further information check out the project's extensive wiki: [Android guide](https://github.com/mk-5/gdx-fireapp/wiki/Android-guide), [iOS guide](https://github.com/mk-5/gdx-fireapp/wiki/iOS-Guide), [GWT guide](https://github.com/mk-5/gdx-fireapp/wiki/GWT-guide).
 
 **Core:**
 ```

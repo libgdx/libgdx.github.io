@@ -210,7 +210,7 @@ Note that the actor must specify its bounds in order to receive input events wit
 
 To handle touch and mouse events, override `touchDown`, `touchDragged`, and `touchUp`. The touchDragged and touchUp events will only be received if touchDown returns true. Also, the touchDragged and touchUp events will be received even if they do not occur over the actor. This simplifies the most common touch event use cases.
 
-To handle enter and exit events when a touch and or the mouse enters or exits an actor, override `enter` or `exit`. 
+To handle enter and exit events when a touch and or the mouse enters or exits an actor, override `enter` or `exit`.
 
 To handle mouse movement when no mouse button is down (which only occurs on the desktop), override the `mouseMoved` method.
 

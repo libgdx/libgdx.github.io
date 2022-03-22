@@ -132,7 +132,7 @@ public class AndroidLauncher extends AndroidApplication {
 The only missing piece here is the `createAdView` method that will be created in the next section.
 
 # Banner
-In order to add Banner ads we will use `com.smaato.sdk.banner.widget.BannerView`. As mentioned previously, the Banner view will reside in the same Relative Layout as the Game view. 
+In order to add Banner ads we will use `com.smaato.sdk.banner.widget.BannerView`. As mentioned previously, the Banner view will reside in the same Relative Layout as the Game view.
 ```java
 public class AndroidLauncher extends AndroidApplication {
     private static final String PUBLISHER_ID = "1100042525";
@@ -280,7 +280,7 @@ Let me walk you through this code snippet:
 * `showInterstitial` is supposed to be called as per the game lifecycle
 
 # Rewarded
-Rewarded ads are visually similar to Interstitial ads as they typically occupy the whole screen. 
+Rewarded ads are visually similar to Interstitial ads as they typically occupy the whole screen.
 But workflow-wise they are completely different - such ads encourage users to interact with the ad content in exchange for in-app rewards, like extra lives, free coins or energy.
 
 ```java

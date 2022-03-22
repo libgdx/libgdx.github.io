@@ -6,7 +6,7 @@ are used in a libGDX context.
 
 ## Before you start
 
-This guide was intended for the old scene2d and the skinpacker (the versions before 0.9.6). If you are running of the nightlies, this guide can give some hints, but won't work as a step-by-step guide. The main differences are that skinpacker and texturepacker has been unified in the texturepacker2 and that skins gets loaded in a different way. 
+This guide was intended for the old scene2d and the skinpacker (the versions before 0.9.6). If you are running of the nightlies, this guide can give some hints, but won't work as a step-by-step guide. The main differences are that skinpacker and texturepacker has been unified in the texturepacker2 and that skins gets loaded in a different way.
 
 ## Introduction
 

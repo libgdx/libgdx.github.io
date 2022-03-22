@@ -55,7 +55,7 @@ The App external storage is initialized at game start for you to use, therefore 
 On iOS all file types are available.
 
 ### Javascript/WebGL
-A raw Javascript/WebGL application doesn't have a traditional filesystem concept. Instead, assets like images are referenced by URLs pointing to files on one or more servers. Modern browsers also support [Local Storage](http://diveintohtml5.info/storage.html) which comes close to a traditional read/write filesystem. The problem with local storage is that the storage amount available by default is fairly small, not standardized, and there no (good) way to accurately query the quota. For this reason, the preferences API is currently the only way to write local data persistently on the JS platform. 
+A raw Javascript/WebGL application doesn't have a traditional filesystem concept. Instead, assets like images are referenced by URLs pointing to files on one or more servers. Modern browsers also support [Local Storage](http://diveintohtml5.info/storage.html) which comes close to a traditional read/write filesystem. The problem with local storage is that the storage amount available by default is fairly small, not standardized, and there no (good) way to accurately query the quota. For this reason, the preferences API is currently the only way to write local data persistently on the JS platform.
 
 libGDX does some magic under the hood to provide you with a read-only filesystem abstraction.
 

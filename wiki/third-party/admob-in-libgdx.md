@@ -638,7 +638,7 @@ For admob to work on IOS it's best to make sure you are doing the following thin
 
 * Make sure you are using the latest admob bindings found here [robovm-ios-bindings - admob](https://github.com/MobiVM/robovm-robopods/tree/master/google-mobile-ads)
 
-* Admob needs a separate ad unit for iOS, so make sure you create a new app the key will be different than the one used for Android. 
+* Admob needs a separate ad unit for iOS, so make sure you create a new app the key will be different than the one used for Android.
 
 
 ***

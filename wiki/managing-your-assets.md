@@ -109,7 +109,7 @@ manager.setLoader(FreeTypeFontGenerator.class, new FreeTypeFontGeneratorLoader(r
 manager.setLoader(BitmapFont.class, ".ttf", new FreetypeFontLoader(resolver));
 ```
 
-Next, we'll want to create a `FreeTypeFontLoaderParameter` that defines 1) our actual font file, and 2) our font size. There are other parameters we can define here, too, when you have time to dig more. 
+Next, we'll want to create a `FreeTypeFontLoaderParameter` that defines 1) our actual font file, and 2) our font size. There are other parameters we can define here, too, when you have time to dig more.
 
 Let's say we want to create two different fonts: a smaller, sans-serif font that will be used for one type of writing text, and a larger, serif font for titles and other fun things. I've decided to use Arial and Georgia for these two fonts, respectively. Here's how I can load them using the AssetManager:
 
@@ -182,7 +182,7 @@ Easy again, and here you can see the real power of the AssetManager:
 manager.unload("data/myfont.fnt");
 ```
 
-If that font references a Texture that you loaded manually before, the texture won't get destroyed! It will be reference counted, getting one reference from the bitmap font and another from itself. As long as this count is not zero, the texture won't be disposed. 
+If that font references a Texture that you loaded manually before, the texture won't get destroyed! It will be reference counted, getting one reference from the bitmap font and another from itself. As long as this count is not zero, the texture won't be disposed.
 
 * Assets managed via the AssetManager shouldn't be disposed manually, instead, call AssetManager.unload()!
 
@@ -192,7 +192,7 @@ If you want to get rid of all assets at once you can call:
 manager.clear();
 ```
 
-or 
+or
 
 ```java
 manager.dispose();
@@ -224,7 +224,7 @@ This will make sure all default loaders listed above will use that loader.
 ### Writing your own Loaders
 I can't anticipate which other types of resources you want to load, so at some point you might want to write your own loaders. There are two interfaces called SynchronousAssetLoader and AsynchronousAssetLoader you can implement. Use the former if your asset type is fast to load, use the latter if you want your loading screen to be responsive. I suggest basing your loader on the code of one of the loaders listed above. Look into MusicLoader for a simple SynchronousAssetLoader, look into PixmapLoader for a simple AsynchronousAssetLoader. BitmapFontLoader is a good example of an asynchronous loader that also has dependencies that need to be loaded before the actual asset can be loaded (in that case it's the texture storing the glyphs). Again, you can do pretty much anything with this.
 
-Additionally, the `loadAsync` function _can_ be used to load parts of the assets where the loading can be delegated to another thread (this is a requirement for responsive loading screen). The `loadSync` function _must_ be used if some parts of the asset needs to be loaded on the main rendering thread. For example, OpenGL API function calls must be invoked on the main rendering thread, therefore any parts of the asset and its loading involving calls to OpenGL must be called in `loadSync`. 
+Additionally, the `loadAsync` function _can_ be used to load parts of the assets where the loading can be delegated to another thread (this is a requirement for responsive loading screen). The `loadSync` function _must_ be used if some parts of the asset needs to be loaded on the main rendering thread. For example, OpenGL API function calls must be invoked on the main rendering thread, therefore any parts of the asset and its loading involving calls to OpenGL must be called in `loadSync`.
 
 `loadAsync` will be called first and `loadSync` afterwards. You can pass information from `loadASync` to `loadSync` with the aid of your custom asset loader class' attributes. **Care must be taken to initialize these temporary variables to null between the loading of each separate asset or you might end up loading the same asset multiple times!** Easiest way to achieve this is by setting your temporary variables to null at the beginning of `loadASync` implementation. `PixmapLoader` class demonstrates a simple way of using the temporary variables correctly, whereas `TextureLoader` shows a more complex way to pass information between `loadAsync` and `loadSync`.
 

@@ -273,7 +273,7 @@ Person person2 = json.fromJson(Person.class, text);
 
 ## Serialization Methods
 
-`Json` has many methods to read and write data to the JSON. Write methods without a name string are used to write a value that is not a JSON object field (eg, a string or an object in a JSON array). Write methods that take a name string are used to write a field name and value for a JSON object. 
+`Json` has many methods to read and write data to the JSON. Write methods without a name string are used to write a value that is not a JSON object field (eg, a string or an object in a JSON array). Write methods that take a name string are used to write a field name and value for a JSON object.
 
 `writeObjectStart` is used to start writing a JSON object, then values can be written using the write methods that take a name string. When the object is finished, `writeObjectEnd` must be called:
 

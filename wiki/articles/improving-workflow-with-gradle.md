@@ -24,7 +24,7 @@ Having a multi-project, multi-flavour project, where you want to be running your
 You can try a few things to get running more efficiently:
 
 ### Gradle daemon
-The Gradle daemon aims to lower execution time and startup time of tasks especially where tasks are executed frequently. 
+The Gradle daemon aims to lower execution time and startup time of tasks especially where tasks are executed frequently.
 
 You can run tasks with the daemon by adding the `--daemon` flag.
 

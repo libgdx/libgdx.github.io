@@ -42,11 +42,11 @@ List of callback interfaces (might not be complete):
 Properties are encapsulated by getter and setter methods. The naming of the getter and setter methods omits the `m_` prefix. For example, the `m_collisionObject` member of the native class `btCollisionObjectWrapper` is implemented as `getCollisionObject()` and `setCollisionObject(...)`.
 
 ## Creating and destroying objects
-Every time you create a bullet class in Java it also creates the corresponding class in C++. While the Java object is maintained by the garbage collector, the C++ object isn’t. To avoid having orphaned C++ objects resulting in memory leaks, the C++ object is by default automatically destroyed when the Java object is destroyed by the garbage collector. 
+Every time you create a bullet class in Java it also creates the corresponding class in C++. While the Java object is maintained by the garbage collector, the C++ object isn’t. To avoid having orphaned C++ objects resulting in memory leaks, the C++ object is by default automatically destroyed when the Java object is destroyed by the garbage collector.
 
 While this might be useful in some cases, it’s merely a fail-safe and you shouldn't rely on it. Since you can’t control the garbage collector, you can’t control _if_, _when_ and _in which order_ the objects are actually being destroyed. Therefore the wrapper logs an error when an object is automatically destroyed by the garbage collector. You can disable this error logging using the second argument of the `Bullet.init()` method, but you should preferably use the method in the following paragraph.
 
-In order to ensure correct garbage collection you should keep a reference to every object you create until it’s not needed anymore and then destroy it yourself. You can destroy the C++ object by calling the `.dispose()` method on the Java object, after which you should remove all references to the Java object since it’s unusable after that. 
+In order to ensure correct garbage collection you should keep a reference to every object you create until it’s not needed anymore and then destroy it yourself. You can destroy the C++ object by calling the `.dispose()` method on the Java object, after which you should remove all references to the Java object since it’s unusable after that.
 
 The above is only true for the objects you are responsible of, which are all Bullet classes you create with the `new` keyword as well as classes you create using helper methods. You don’t have to dispose objects that are returned by regular methods or provided to you in callback methods.
 

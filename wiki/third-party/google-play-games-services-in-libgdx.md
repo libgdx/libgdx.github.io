@@ -96,7 +96,7 @@ The easy way to find out which version is being referred to:
 
 ### Intel's Multi-OS Engine
 
-Checkout the specific page for more information on [Intel's Multi-OS Engine](https://software.intel.com/en-us/node/633261). 
+Checkout the specific page for more information on [Intel's Multi-OS Engine](https://software.intel.com/en-us/node/633261).
 
 In the meantime, you can check out the following sample to get you started:
 

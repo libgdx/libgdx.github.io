@@ -11,7 +11,7 @@ The [JSON](/wiki/utils/reading-and-writing-json) class can automatically convert
 
 ## libGDX Kryo Serializers
 
-Kryo can handle most POJOs and other classes, but some classes need special handling. Below are a few serializers for libGDX classes. 
+Kryo can handle most POJOs and other classes, but some classes need special handling. Below are a few serializers for libGDX classes.
 
 Note that classes like Texture should not be serialized in most cases. It would be better to have a String instead of a Texture object in your object graph. After serializing you would process the objects and look up the texture using the string path.
 

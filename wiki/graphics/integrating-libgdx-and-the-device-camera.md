@@ -1,7 +1,7 @@
 ---
 title: Integrating libgdx and the device camera
 ---
-This article shows how to integrate the Android device camera with your libGDX application. 
+This article shows how to integrate the Android device camera with your libGDX application.
 This functionality can be used in order to let the user see what going on behind the device while playing and walking on the street, or even have some interaction between  the game and the real world (FPS game using the face detection mechanism?)
 
 
@@ -130,7 +130,7 @@ We create a CameraSurface object which holds the Camera object and manages the S
 ```
 
 The camera object is only created by calling the static Camera.open() method after the `surfaceCreated()` callback is being called.
-Until then the camera is not ready and cannot be used. 
+Until then the camera is not ready and cannot be used.
 
 ## Showing the Camera preview
 When the `surfaceChanged()` callback is called, we set the camera preview size and sets our CameraSurface object as the Camera preview display.
@@ -190,7 +190,7 @@ We do this by calling startPreview method via its Async sibling
 	}
 ```
 
-In this state the user should see the Camera preview screen (assuming that we cleared the screen with a color having its alpha component sets to 0). 
+In this state the user should see the Camera preview screen (assuming that we cleared the screen with a color having its alpha component sets to 0).
 
 ## Taking a picture
 When we would like to take the picture, we set the suitable Camera parameters (we can do it in any stage before actually taking the picture)
@@ -278,7 +278,7 @@ and take the screenshot:
 	}
 ```
 
-The next two operations are CPU and time consuming tasks so they should probably done in a separate thread with some kind of progress bar. In the code sample they are done directly in the rendering thread, so the screen is frozen during this processing. 
+The next two operations are CPU and time consuming tasks so they should probably done in a separate thread with some kind of progress bar. In the code sample they are done directly in the rendering thread, so the screen is frozen during this processing.
 
 ## Merging the screenshot and the Camera picture together
 We now have to merge the two Pixmap object. The libGDX Pixmap object can do this for us, but since the camera picture may have different aspect ratio we first need to fix it manually.
@@ -317,9 +317,9 @@ We now have to merge the two Pixmap object. The libGDX Pixmap object can do this
 ```
 
 ## Saving the resulting image as a Jpeg
-In order to save the resulting image we can save it to the storage using the PixmapIO class. however, the CIM format is not interoperable, and the PNG format will probably result in huge files. 
-One way is to save the resulting image as a Jpeg using the Android Bitmap class. This function is implemented inside the AndroidDeviceCameraController, since it is Android specific. 
-However, the libGDX pixel format is RGBA and the Bitmap pixel format is ARGB so we need to shuffle some bits around to get the colors right. 
+In order to save the resulting image we can save it to the storage using the PixmapIO class. however, the CIM format is not interoperable, and the PNG format will probably result in huge files.
+One way is to save the resulting image as a Jpeg using the Android Bitmap class. This function is implemented inside the AndroidDeviceCameraController, since it is Android specific.
+However, the libGDX pixel format is RGBA and the Bitmap pixel format is ARGB so we need to shuffle some bits around to get the colors right.
 ```java
 	@Override
 	public void saveAsJpeg(FileHandle jpgfile, Pixmap pixmap) {
@@ -369,7 +369,7 @@ After finishing to save the picture, we stop the preview and remove the !CameraS
 
 	@Override
 	public synchronized void stopPreview() {
-        // stop previewing. 
+        // stop previewing.
 		if (cameraSurface != null) {
 			if (cameraSurface.getCamera() != null) {
 				cameraSurface.getCamera().stopPreview();
@@ -636,7 +636,7 @@ public class AndroidDeviceCameraController implements DeviceCameraControl, Camer
 
 	@Override
 	public synchronized void stopPreview() {
-        // stop previewing. 
+        // stop previewing.
         if (cameraSurface != null) {
 			ViewParent parentView = cameraSurface.getParent();
 			if (parentView instanceof ViewGroup) {
