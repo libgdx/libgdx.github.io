@@ -29,7 +29,7 @@ Distributing java applications as JAR file can be very unhandy and prone to issu
 
 This will create an unsigned APK file in the `android/build/outputs/apk` folder. Before you can install or publish this APK, you must [sign it](http://developer.android.com/tools/publishing/app-signing.html). The APK build by the above command is already in release mode, you only need to follow the steps for keytool and jarsigner. You can install this APK file on any Android device that allows [installation from unknown sources](http://developer.android.com/distribute/open.html#unknown-sources).
 
-# <a id="Deploy_to_iOS"></a>Deploy to iOS ##
+# <a id="Deploy_to_iOS"></a>Deploy to iOS
 *This section assumes you're familiar with the basic deployment steps for iOS apps.*
 
 ### Prerequisites:

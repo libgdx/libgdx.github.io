@@ -1,7 +1,7 @@
 ---
 title: Scene2d
 ---
-## Overview ##
+## Overview
 
 scene2d is a 2D scene graph for building applications and UIs using a hierarchy of actors. If you're looking for the UI component of scene2d, see [Scene2d.ui](/wiki/graphics/2d/scene2d/scene2d-ui)
 
@@ -31,13 +31,13 @@ scene2d has three classes at its core:
 
 1. The Stage class has a camera, SpriteBatch, and a root group and handles drawing the actors and distributing input events.
 
-### Stage ###
+### Stage
 
 Stage is an InputProcessor. When it receives input events, it fires them on the appropriate actors. If the stage is being used as a UI on top of other content (eg, a HUD), an InputMultiplexer can be used to first give the stage a chance to handle an event. If an actor in the stage handles an event, stage's InputProcessor methods will return true, indicating the event has been handled and should not continue on to the next InputProcessor.
 
 Stage has an `act` method that takes a delta time since last frame. This causes the `act` method on every actor in the scene to be called, allowing the actors to take some action based on time. By default, the Actor `act` method updates all actions on the actor. Calling `act` on the stage is optional, but actor actions and enter/exit events will not occur if it is omitted.
 
-### Viewport ###
+### Viewport
 
 The stage's viewport is determined by a [Viewport](/wiki/graphics/viewports) instance. The viewport manages a `Camera` and controls how the stage is displayed on the screen, the stage's aspect ratio (whether it is stretched) and whether black bars appear (letterboxing). The viewport also converts screen coordinates to and from stage coordinates.
 
@@ -110,7 +110,7 @@ stage.getViewport().update(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), tr
 
 See [Viewport](/wiki/graphics/viewports) for more information.
 
-## Drawing ##
+## Drawing
 
 When `draw` is called on the stage, it calls draw on every actor in the stage. Actors' `draw` method can be overridden to perform drawing:
 
@@ -160,11 +160,11 @@ public void draw (Batch batch, float parentAlpha) {
 }
 ```
 
-### Group transform ###
+### Group transform
 
 When a group is rotated or scaled, the children draw as normal and the Batch's transform draws them correctly rotated or scaled. Before a group draws, the Batch is flushed so the transform can be set. This flush may become a performance bottleneck if there are many dozens of groups. If the actors in a group are not rotated or scaled, then `setTransform(false)` can be used for the group. When this is done, each child's position will be offset by the group's position for drawing, causing the children to appear in the correct location even though the Batch has not been transformed. This cannot be used for a group that has rotation or scale.
 
-## Hit detection ##
+## Hit detection
 
 The Actor `hit` method receives a point and returns the deepest actor at that point, or null if no actor was hit. Here is the default `hit` method:
 
@@ -179,7 +179,7 @@ The coordinates are given in the actor's coordinate system. This simply returns 
 
 When `hit` is called on the stage, `hit` is called on the stage's root group, which in turn calls `hit` on each child. The first non-null actor found is returned as the actor deepest in the hierarchy that contains the given point.
 
-## Event system ##
+## Event system
 
 scene2d uses a generic event system. Each actor has a list of listeners that are notified for events on that actor. Events are propagated in two phases. First, during the "capture" phase an event is given to each actor from the root down to the target actor. Only capture listeners are notified during this phase. This gives parents a chance to intercept and potentially cancel events before children see them. Next, during the "normal" phase the event is given to each actor from the target up to the root. Only normal listeners are notified during this phase. This allows actors to handle an event themselves or let the parent have a try at it.
 
@@ -187,7 +187,7 @@ The event provided to each actor when it is notified contains state about the ev
 
 For example, imagine a group (a button) which has a child (a label). When the label is clicked, capture listeners are fired. Usually there are none. Next, the label's normal listeners are notified. The label is both the target and the listener actor. If the event was not stopped, the button gets the event and its normal listeners are notified. The label is the target and the button is the listener actor. This continues up to the root. This system allows a single listener on a parent to handle events on its children.
 
-### InputListener ###
+### InputListener
 
 EventListeners are added to actors to be notified about events. EventListener is an interface with a `handle(Event)` method. Classes that implement the EventListener interface use `instanceof` to determine whether they should handle the event. For most types of events, specific listener classes are provided for convenience. For example, [InputListener](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/InputListener.html) is provided for receiving and handling InputEvents. An actor just needs to add an InputListener to start receiving input events. InputListener has several methods that may be overridden, and two are shown below:
 
@@ -220,7 +220,7 @@ To handle key input, override the `keyDown`, `keyUp`, and `keyTyped` methods. Th
 
 If `setTouchable(false)` or `setVisible(false)` is called on an actor, it will not receive input events.
 
-### Other listeners ###
+### Other listeners
 
 Other listeners are provided for common handling of input events. ClickListener has a boolean that is true when a touch or mouse button is pressed over the actor and a `clicked` method that is called when the actor is clicked. ActorGestureListener detects tap, longPress, fling, pan, zoom, and pinch gestures on an actor.
 
@@ -241,7 +241,7 @@ actor.addListener(new ActorGestureListener() {
 });
 ```
 
-## Actions ##
+## Actions
 
 Each actor has a list of actions. These are updated each frame by the Actor `act` method. Many types of actions are included with libgdx. These can be instantiated, configured, and added to an actor. When the action is complete, it will automatically be removed from the actor.
 
@@ -254,7 +254,7 @@ actor.addAction(action);
 
 Check out [LibGDX.info](https://libgdxinfo.wordpress.com/basic_action/) for a tutorial on Actions
 
-### Action pooling ###
+### Action pooling
 
 To avoid allocating a new action each time it is needed, a pool can be used:
 
@@ -294,7 +294,7 @@ import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
 actor.addAction(moveTo(x, y, duration));
 ```
 
-### Complex actions ###
+### Complex actions
 
 More complex actions can be built by running actions at the same time or in sequence. ParallelAction has a list of actions and runs them at the same time. SequenceAction has a list of actions and runs them one after another. Use of the static import for the Actions class makes defining complex actions very easy:
 
@@ -302,7 +302,7 @@ More complex actions can be built by running actions at the same time or in sequ
 actor.addAction(sequence(moveTo(200, 100, 2), color(Color.RED, 6), delay(0.5f), rotateTo(180, 5)));
 ```
 
-### Action completion ###
+### Action completion
 
 To run code when an action is complete, a sequence with a RunnableAction can be used:
 
@@ -314,7 +314,7 @@ actor.addAction(sequence(fadeIn(2), run(new Runnable() {
 })));
 ```
 
-### Interpolation ###
+### Interpolation
 
 The tweening curve can be set for actions that manipulate an actor over time. This is done by giving the action an instance of Interpolation. The Interpolation class has many static fields for convenience, or you can write your own. See [InterpolationTest](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/InterpolationTest.java) for an interactive demo of each interpolation.
 
@@ -336,7 +336,7 @@ actor.addAction(parallel(moveTo(250, 250, 2, bounceOut), color(Color.RED, 6), de
 actor.addAction(forever(sequence(scaleTo(2, 2, 0.5f), scaleTo(1, 1, 0.5f), delay(0.5f))));
 ```
 
-### External Links ##
+### External Links
 
  * [netthreads](https://www.netthreads.co.uk/2012/01/31/libgdx-example-of-using-scene2d-actions-and-event-handling/) A fully documented scene2d example game.
  * [gdx-ui-app](https://github.com/broken-e/gdx-ui-app) A library on top of scene2d for easier development.

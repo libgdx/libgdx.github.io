@@ -41,7 +41,7 @@ When in doubt about whether a specific class needs to be disposed of, check if i
 
 > An idea to list all of such classes is to clone libGDX to your system, then use text editor such as Sublime Text or others to open its root directory, search for `implements Disposable`. It will show you result of all source files (thus class) you need to call `dispose()` when you're done with it. Note that all other classes that extend from such result classes are also applicable. List above is already complete. Note that a few classes from result come from test class of libGDX itself which are not relevant to your interest.
 
-### Object pooling ###
+### Object pooling
 
 Object pooling is the principle of reusing inactive or "dead" objects, instead of creating new objects every time. This is achieved by creating an object pool, and when you need a new object, you obtain it from that pool. If the pool has an available (free) object, it is returned. If the pool is empty, or does not contain free objects, a new instance of the object is created and returned. When you no longer need an object, you "free" it, which means it is returned to the pool.
 This way, object allocation memory is reused, and garbage collector is happy.

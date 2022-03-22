@@ -1,14 +1,14 @@
 ---
 title: Graphics
 ---
-# REWRITE THIS #
+# REWRITE THIS
 This page needs to be rewritten.
 
-# Introduction #
+# Introduction
 
 The [Graphics](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Graphics.html) module provides information about the current device display and application window as well as information about and access to the current OpenGL context. Specifically, information regarding screen size, pixel density, and frame-buffer properties such as color-depth, depth/stencil buffers, and anti-aliasing capabilities can all be found within this class. As with other common modules, access is provided via static fields of the [Gdx class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Gdx.html).
 
-# OpenGL Context #
+# OpenGL Context
 
 A particular use of this module concerns more direct access to the current OpenGL context for lower-level commands and queries.
 
@@ -26,7 +26,7 @@ Each version of OpenGL ES is available through its own respective interface as w
 
 Access to the OpenGL Utility class ( **that doesn't exist, this article needs to be rewritten!** ) is also provided, although this functionality may be better handled through Libgdx's own [Orthographic](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/OrthographicCamera.java) and [Perspective](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/PerspectiveCamera.java) camera classes. There is also a simple method for querying support for named extensions in `supportsExtension()`. Just supply the name of the extension to determine support on the current device.
 
-# Frame Time #
+# Frame Time
 
 One particularly useful method in the Graphics class is `getDeltaTime()`, which provides the time elapsed since the last rendered frame. This can be useful for time-based animation when frame independence is not necessary. For instance [Actor](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/scenes/scene2d/Actor.java) or [UI](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/#gdx%2Fscenes%2Fscene2d%2Fui) animation in a [Stage](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/scenes/scene2d/Stage.java) instance might be controlled by a call such as the following in the application's render method:
 
@@ -38,7 +38,7 @@ Notice the use of a maximum time step of 1/30 seconds. This is to avoid potentia
 
 Another useful method is `getFramesPerSecond()`, which returns a running average of the current frame-rate for simple diagnostic purposes. However for more serious profiling efforts, the use of [FPSLogger](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/FPSLogger.java) is recommended.
 
-# Platform Differences #
+# Platform Differences
 
 On the desktop, the Graphics class also provides the ability to set a window's icon and title values. Obviously these methods have no effect on platforms which lack an icon or title.
 

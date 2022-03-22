@@ -1,19 +1,19 @@
 ---
 title: Pixmaps
 ---
-# Introduction #
+# Introduction
 
 A [Pixmap](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Pixmap.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Pixmap.java) encapsulates image data resident in memory. It supports simple file loading and draw operations for basic image manipulation. The most typical use is preparation of an image for upload to the GPU by wrapping in a 
 [Texture](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Texture.java) instance. There are also methods for image saving/loading through the 
 [PixmapIO](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/PixmapIO.html)
-[(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/PixmapIO.java) class. PixmapIO supports uncompressed [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics) as well as _CIM_, a compression format peculiar to libGDX which is useful for quick storage access such as during state saving/loading between application focus changes.
+[(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/PixmapIO.java) class. PixmapIO supports uncompressed [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) as well as _CIM_, a compression format peculiar to libGDX which is useful for quick storage access such as during state saving/loading between application focus changes.
 
 *As a Pixmap resides in native heap memory it must be disposed of by calling `dispose()` when no longer needed to prevent memory leaks.*
 
-# Pixmap Creation #
+# Pixmap Creation
 
-Pixmaps can be created from a _byte array_ containing image data encoded as [JPEG](http://en.wikipedia.org/wiki/Jpeg), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics) or [BMP](http://en.wikipedia.org/wiki/BMP_file_format), a 
+Pixmaps can be created from a _byte array_ containing image data encoded as [JPEG](https://en.wikipedia.org/wiki/Jpeg), [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) or [BMP](https://en.wikipedia.org/wiki/BMP_file_format), a 
 [FileHandle](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/files/FileHandle.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/files/FileHandle.java), or a specification of dimensions and a format. Once created it can be further manipulated before being uploaded to an OpenGL [Texture](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Texture.java)  for rendering or saved for some future use.
@@ -56,6 +56,6 @@ public void resume() {
 
 In the preceding example, _pixmap_ will be written to an external location using a simple compression scheme upon application focus loss, and subsequently upon regaining focus it will be reloaded if extant at the specified location.
 
-# Drawing #
+# Drawing
 
 Pixmap supports simple drawing operations such as the drawing of lines, filled or unfilled rectangles and circles, as well as the setting of individual pixels and drawing of other pixmaps. These operations are also affected by color, blending, and filters which are controlled by `setColor()`, `setBlending()`, and `setFilter()` respectively.

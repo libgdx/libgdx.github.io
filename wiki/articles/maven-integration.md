@@ -38,7 +38,7 @@ To handle these issues, libGDX relies on the following Maven plugins:
 To ease all of this, we supply a Maven archetype that will generate a multi-module Maven project.
 
 ## Maven Archetype
-The Maven archetype is currently not found in any repository. You can get it at https://github.com/libgdx/libgdx-maven-archetype and compile and install it yourself to your local Maven repository like this from your shell:
+The Maven archetype is currently not found in any repository. You can get it at [https://github.com/libgdx/libgdx-maven-archetype](https://github.com/libgdx/libgdx-maven-archetype) and compile and install it yourself to your local Maven repository like this from your shell:
 
 ```
 git clone git://github.com/libgdx/libgdx-maven-archetype.git
@@ -120,7 +120,7 @@ To run and test the HTML5 project, run:
 mvn -Phtml install
 ```
 
-And browse to http://127.0.0.1:8080/index.html
+And browse to [http://127.0.0.1:8080/index.html](http://127.0.0.1:8080/index.html)
 
 ## IDE Integration
 Eclipse, Intellij Idea and NetBeans all support Maven projects in some form. The archetype goes to great lengths to make your libGDX project usable within Eclipse and Intellij Idea. NetBeans is unsupported at the time of writing.

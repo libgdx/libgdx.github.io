@@ -63,4 +63,4 @@ To upgrade your Gradle wrapper.
 
 If you're used to Maven, you are probably familiar with this already. The Gradle versions plugin allows one to run `gradle dependencyUpdates` and it will return a list of dependencies you are using that need updating, and what the newest version is (configurable). The output can either be text/stdout, json, xml, etc.
 
-For more info, see: https://github.com/ben-manes/gradle-versions-plugin
+For more info, see: [https://github.com/ben-manes/gradle-versions-plugin](https://github.com/ben-manes/gradle-versions-plugin)

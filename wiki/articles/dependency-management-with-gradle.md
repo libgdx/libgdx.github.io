@@ -359,7 +359,7 @@ and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="B
 
 #### Ashley Gradle
 
-* **Note:** This extension release cycle is not dependent on the main libGDX library, and so it is not unusual to have a new version published between two libGDX releases. If you want to pull in a new (or different) version, check https://repo1.maven.org/maven2/com/badlogicgames/ashley/ashley/ and change the `ashleyVersion` value in the `ext` section.
+* **Note:** This extension release cycle is not dependent on the main libGDX library, and so it is not unusual to have a new version published between two libGDX releases. If you want to pull in a new (or different) version, check [https://repo1.maven.org/maven2/com/badlogicgames/ashley/ashley/](https://repo1.maven.org/maven2/com/badlogicgames/ashley/ashley/) and change the `ashleyVersion` value in the `ext` section.
 
 **Core Dependency:**
 ```groovy
@@ -379,7 +379,7 @@ and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='c
 
 #### AI Gradle
 
-* **Note:** This extension release cycle is not dependent on the main libGDX library, and so it is not unusual to have a new version published between two libGDX releases. If you want to pull in a new (or different) version, check https://repo1.maven.org/maven2/com/badlogicgames/gdx/gdx-ai/ and change the `aiVersion` value in the `ext` section.
+* **Note:** This extension release cycle is not dependent on the main libGDX library, and so it is not unusual to have a new version published between two libGDX releases. If you want to pull in a new (or different) version, check [https://repo1.maven.org/maven2/com/badlogicgames/gdx/gdx-ai/](https://repo1.maven.org/maven2/com/badlogicgames/gdx/gdx-ai/) and change the `aiVersion` value in the `ext` section.
 
 **Core Dependency:**
 ```groovy

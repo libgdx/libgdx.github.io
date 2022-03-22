@@ -1,7 +1,7 @@
 ---
 title: Internationalization and Localization
 ---
-## Overview ##
+## Overview
 
 Technically speaking, _internationalization_ is the process of designing a software so that it can potentially be adapted to various languages and regions without engineering changes.
  _Localization_ is the process of adapting internationalized software for a specific region or language by adding locale-specific components and translating text.
@@ -10,7 +10,7 @@ Due to the length of the terms, both internationalization and localization are f
 In LibGDX, the [`I18NBundle` class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/I18NBundle.html) is used to store and fetch strings that are locale sensitive. A bundle allows you to easily provide different translations for your application.
 
 
-## Creating Properties Files ##
+## Creating Properties Files
 
 Each bundle is a set of properties files that share the same base name, `MyBundle` in the following example. The characters following the base name indicate the _language code_, _country code_, and _variant_ of a Locale, for example:
 
@@ -42,7 +42,7 @@ Notice that the key named `game` is missing from the Italian properties file sin
 
 
 
-## Creating a Bundle ##
+## Creating a Bundle
 
 An instance of the `I18NBundle` class manages the named strings for a locale after loading into memory the appropriate properties files.
 Invoke the factory method `createBundle` to get a new instance of the desired bundle:
@@ -74,7 +74,7 @@ Note that `createBundle` looks for files based on the default Locale before it s
 
 
 
-## Fetching Localized Strings ##
+## Fetching Localized Strings
 
 To retrieve a translated value from the bundle, invoke the `get` method as follows:
 ````java
@@ -99,7 +99,7 @@ When a string has no arguments, you might think that the methods `get` and `form
 
 
 
-## Message Format ##
+## Message Format
 
 As we have seen, the strings in a properties file can contain parameters. These strings are commonly called patterns and follow the syntax specified by the `java.text.MessageFormat` API. In short, a pattern can contain zero or more formats of the form `{index, type, style}` where the type and the style are optional. Refer to the [official JavaDoc of the `MessageFormat` class](https://docs.oracle.com/javase/7/docs/api/java/text/MessageFormat.html) to learn all its features.
 
@@ -111,7 +111,7 @@ Unlike `java.util.Properties`, the default encoding is `UTF-8`. If, for whatever
 
 
 
-## Plural Forms ##
+## Plural Forms
 
 Plural forms are supported through the standard `choice` format provided by `MessageFormat`.
 See the [official documentation of the class `java.text.ChoiceFormat`](https://docs.oracle.com/javase/7/docs/api/java/text/ChoiceFormat.html).
@@ -137,7 +137,7 @@ You collected hundreds of coins along the path.
 It's worth noting that the choice format can properly handle nested formats as we did with `{0,number,integer}` inside `{0,choice,...}`.
 
 
-## GWT Limitations and Compatibility ##
+## GWT Limitations and Compatibility
 
 As said before, the I18N system provided by libGDX is cross-platform. However there are some limitations when it comes to the GWT back-end.
 In particular:
@@ -150,7 +150,7 @@ If you don't do this, you'll get the localized string `3,14` for the Italian loc
 On the contrary, if `simpleFormat` is set to `true` you'll get the non-localized string `3.1415927` for any locale on any back-end.
 
 
-## Multiple Bundles ##
+## Multiple Bundles
 
 Of course you can use multiple bundles in your application. For example, you might want to use a different bundle for each level of your game. Using multiple bundles offers some advantages:
    * Your code is easier to read and to maintain.

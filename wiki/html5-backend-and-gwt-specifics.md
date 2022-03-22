@@ -16,7 +16,7 @@ So there are a few things that are fundamentally different about developing usin
 superDev allows you to debug your HTML5 application. This is not necessary in most cases: if there are problems in your core game, you can debug the desktop application. But sometimes, there are bugs only appearing when running on HTML5. You can debug the application with the following steps:
 
 * Run the `html:superdev` Gradle task. It compiles the game and sets up a local HTTP server. When it is done, it will idle to keep the server running.
-* Your game is available here: http://localhost:8080/index.html (current config) or http://localhost:8080/html/ (older Gradle configuration with Jetty plugin) - open the page with *Chrome* to debug
+* Your game is available here: [http://localhost:8080/index.html](http://localhost:8080/index.html) (current config) or [http://localhost:8080/html/](http://localhost:8080/html/) (older Gradle configuration with Jetty plugin) - open the page with *Chrome* to debug
 * Hit the big reload button and hit compile. The game will recompile and source maps will be set up.
 * After the game restarted, open Chrome's dev console with F12 and navigate to the sources tab. Hit Ctrl-P and enter the name of the Java file you want to debug. The Java file will open within Chrome's dev console and you can set a break point. You are able to step through the Java code lines. However, debug variables will be generated JS names but you'll be able to make sense of it.
 * When you are done, you can stop the Gradle task with Ctrl-C.
@@ -172,7 +172,7 @@ The implementation the official HTML5 backend uses has some other restrictions, 
   * Gdx.graphics.supportsExtension(...) should be called for each extension prior to enabling it in shaders.
 * Some libGDX extensions are not supported or require additional libraries:
   * Bullet
-  * Freetype requires https://github.com/intrigus/gdx-freetype-gwt
+  * Freetype requires [gdx-freetype-gwt](https://github.com/intrigus/gdx-freetype-gwt)
 
 ## Further Reading
 

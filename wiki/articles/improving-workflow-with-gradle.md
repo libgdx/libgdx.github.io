@@ -31,8 +31,8 @@ You can run tasks with the daemon by adding the `--daemon` flag.
 You can also add the option to run on all tasks by editing a `gradle.properties` file that resides in the root directory of your project.
 Add the line: `org.gradle.daemon=true`
 
-_Further reading:_
-_Daemon http://www.gradle.org/docs/current/userguide/gradle_daemon.html_
+#### Further reading:
+* Daemon - [https://docs.gradle.org/current/userguide/gradle_daemon.html](https://docs.gradle.org/current/userguide/gradle_daemon.html)
 
 ### Configuration on Demand
 This setting helps to solve the issue of Gradle configuring the world before execution.  Using this setting, the root project is always configured, the project in the directory where the build is executed is configured, and only dependent projects are configured, resulting in much faster build times.

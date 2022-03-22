@@ -3,7 +3,7 @@ title: Spritebatch, Textureregions, and Sprites
 ---
 This page gives a brief overview of how images are drawn using OpenGL and how libGDX simplifies and optimizes the task through the `SpriteBatch` class.
 
-## Drawing images ##
+## Drawing images
 
 An image that has been decoded from its original format (e.g., PNG) and uploaded to the GPU is called a texture. To draw a texture, geometry is described and the texture is applied by specifying where each vertex in the geometry corresponds on the texture. For example, the geometry could be a rectangle and the texture could be applied so that each corner of the rectangle corresponds to a corner of the texture. A rectangle that is a subset of a texture is called a texture region.
 
@@ -15,7 +15,7 @@ It is very common to draw a texture mapped to rectangular geometry. It is also v
 
 Changing textures every few rectangles that are drawn prevents `SpriteBatch` from batching much geometry. Also, binding a texture is a somewhat expensive operation. For these reasons, it is common to store many smaller images in a larger image and then draw regions of the larger image to both maximize geometry batching and avoid texture changes. See [TexturePacker](/wiki/tools/texture-packer) for more information.
 
-## SpriteBatch ##
+## SpriteBatch
 
 Using [`SpriteBatch`](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/SpriteBatch.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/SpriteBatch.java) in an application looks like this:
 
@@ -45,7 +45,7 @@ All `SpriteBatch` drawing calls must be made between the `begin` and `end` metho
 Gdx.gl.glActiveTexture(GL20.GL_TEXTURE0);
 ```
 
-## Texture ##
+## Texture
 
 The `Texture` class decodes an image file and loads it into GPU memory. The image file should be placed in the "assets" folder. The image's dimensions should be powers of two (16x16, 64x256, etc) for compatibility and performance reasons.
 
@@ -70,7 +70,7 @@ Here a texture is created and passed to a `SpriteBatch` to be drawn. The texture
 | `draw(Texture texture, float x, float y,`<br/>`float width, float height, float u,`<br/>`float v, float u2, float v2)` | This draws a portion of a texture, stretched to the `width` and `height`. This is a somewhat advanced method as it uses texture coordinates from 0-1 rather than pixel coordinates. |
 | `draw(Texture texture, float[] spriteVertices, int offset, int length)` | This is an advanced method for passing in the raw geometry, texture coordinates, and color information. This can be used to draw any quadrilateral, not just rectangles. |
 
-## TextureRegion ##
+## TextureRegion
 
 The [`TextureRegion` class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/TextureRegion.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/TextureRegion.java) describes a rectangle inside a texture and is useful for drawing only a portion of the texture.
 
@@ -95,7 +95,7 @@ Here the `20, 20, 50, 50` describes the portion of the texture, which is then dr
 | `draw(TextureRegion region, float x, float y,`<br/>`float width, float height)` | Draws the region, stretched to the `width` and `height`. |
 | `draw(TextureRegion region, float x, float y,`<br/>`float originX, float originY, float width, float height,`<br/>`float scaleX, float scaleY, float rotation)` | Draws the region, stretched to the `width` and `height`, and scaled and rotated around an origin. |
 
-## Sprite ##
+## Sprite
 
 The [`Sprite` class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/Sprite.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/Sprite.java) describes both a texture region, the geometry where it will be drawn, and the color it will be drawn.
 
@@ -118,7 +118,7 @@ Note that `Sprite` mixes model information (position, rotation, etc) with view i
 
 Also note that there is no Sprite constructor that is related to the position of the Sprite. calling `Sprite(Texture, int, int, int, int)` does ***not*** edit the position. It is necessary to call `Sprite#setPosition(float,float)` or else the sprite will be drawn at the default position of 0,0.
 
-## Tinting ##
+## Tinting
 
 When a texture is drawn, it can be tinted a color:
 
@@ -144,7 +144,7 @@ batch.end();
 
 This shows how to draw a texture, region, and sprite with a tint color. The color values here are described using RGBA values between 1 and 0. Alpha is ignored if blending is disabled.
 
-## Blending ##
+## Blending
 
 Blending is enabled by default. This means that when a texture is drawn, translucent portions of the texture are merged with pixels already on the screen at that location.
 
@@ -162,12 +162,12 @@ batch.end();
 
 _Note: Be sure to clear the screen each frame. If this is not done, a texture with alpha can be drawn on top of itself hundreds of times, making it appear opaque. Also, some GPU architectures perform better when the screen is cleared each frame, even if opaque images are being drawn over the entire screen._
 
-## Viewport ##
+## Viewport
 
 `SpriteBatch` manages its own projection and transformation matrixes. When a `SpriteBatch` is created, it uses the current application size to setup an orthographic projection using a y-up coordinate system. When `begin` is called, it sets up the [viewport](/wiki/graphics/viewports).
 
 
-## Performance tuning ##
+## Performance tuning
 
 `SpriteBatch` has a constructor that sets the maximum number of sprites that can be buffered before sending to the GPU. If this is too low, it will cause extra calls to the GPU. If this is too high, the `SpriteBatch` will be using more memory than is necessary.
 

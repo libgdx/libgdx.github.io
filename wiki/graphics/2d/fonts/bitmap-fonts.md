@@ -15,7 +15,7 @@ References point to bmFont being originally created by Andreas Jönsson over at 
 
 [BMFont](http://www.angelcode.com/products/bmfont/doc/file_format.html) - the original specification for the file format.
 
-[Glyph Designer](http://web.archive.org/web/20160830115758/https://71squared.com/blog/bitmap-font-file-format) - Details about output, include a binary format.
+[Glyph Designer](https://web.archive.org/web/20160830115758/https://71squared.com/blog/bitmap-font-file-format) - Details about output, include a binary format.
 
 
 ## Tools for Creating Bitmaps

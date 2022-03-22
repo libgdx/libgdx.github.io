@@ -6,7 +6,7 @@ The orthographic camera is to be used in 2D environments only as it implements a
 
 Code for a simple example of a Camera zooming and moving is available on [LibGDX.info here](https://libgdxinfo.wordpress.com/basic_camera/)
 
-# Description #
+# Description
 
 The Camera class operates as a very simple real world camera. It is possible to
  * move and rotate the camera around,

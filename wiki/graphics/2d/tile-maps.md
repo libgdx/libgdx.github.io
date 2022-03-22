@@ -1,18 +1,18 @@
 ---
 title: Tile maps
 ---
-# Maps #
+# Maps
 
 libGDX features a generic maps API. All map related classes can be found in the [com.badlogic.gdx.maps](https://libgdx.badlogicgames.com/nightlies/docs/api/index.html?com/badlogic/gdx/maps/package-use.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps) package. The root package contains the base classes, sub-packages contain specialized implementations for tile maps and other forms of maps.
 
-## Base Classes ##
+## Base Classes
 The set of base classes is meant to be generic so we can support not only tiled maps, but any 2D map format.
 
 A map is a set of layers. A layer contains a set of objects. Maps, layers and objects have properties, that depend on the format they've been loaded from. For some formats there are specialized map, layer and object implementations, more on that later. The class hierarchy of the base classes looks as follows:
 
 ![images/maps-api.png](/assets/wiki/images/maps-api.png)
 
-### Properties ###
+### Properties
 
 Properties of maps, layers or objects are represented by 
 [MapProperties](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapProperties.html)
@@ -28,7 +28,7 @@ object.getProperties().get("foo", Boolean.class);
 
 Many of the supported editors allow you to specify such properties on maps, layers and objects. What specific type these properties have is format specific. When in doubt, load up your map in your libGDX application, with one of the map loaders, and inspect the properties of the objects you are interested in.
 
-### Map Layers ###
+### Map Layers
 
 Layers within a map are ordered and indexed, starting by index 0. You can access the layers of a map like this:
 
@@ -68,7 +68,7 @@ MapObjects objects = layer.getObjects();
 
 The [MapObjects](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapObjects.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/MapObjects.java) instance allows you to retrieve objects by name, index or type. You can also insert and remove objects on the fly.
 
-### Map Objects ###
+### Map Objects
 
 The API already provides a handful of specialized map objects, such as 
 [CircleMapObject](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/objects/CircleMapObject.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/objects/CircleMapObject.java),
@@ -100,7 +100,7 @@ As in the case of maps and layers, you can also access the more generic properti
 
 *Note:* tiles of a tiled map are not stored as map objects. There are specialized layer implementations that store these kind of objects more efficiently, see below. Objects as described above are generally used to define trigger areas, spawn points, collision shapes and so on.
 
-### Map Renderer ###
+### Map Renderer
 
 The [MapRenderer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/MapRenderer.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/MapRenderer.java) interface defines methods that allow you to render the layers and objects of a map.
@@ -137,14 +137,14 @@ mapRenderer.render(foregroundLayers);
 
 By rendering each layer separately and modifying the view for every layer, you can also achieve a parallax effect.
 
-## Tiled Maps ##
+## Tiled Maps
 Maps that contain layers with tiles are handled by the classes in the [com.badlogic.gdx.maps.tiled](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps/tiled) package. The package contains loaders for different formats.
 
 Tile maps are loaded into 
 [TiledMap](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMap.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMap.java) instances. TiledMap is a subclass of the generic Map class, with additional methods and attributes. 
 
-### Tiled Map Layers ###
+### Tiled Map Layers
 Layers with tiles in them are stored in 
 [TiledMapTileLayer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileLayer.java) instances. In order to get access to the tiles, you will have to cast:
@@ -175,14 +175,14 @@ int columns = tileLayer.getWidth();
 int rows = tileLayer.getHeight();
 ```
 
-### Cells ###
+### Cells
 A cell is a container for a 
 [TiledMapTile](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTile.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTile.java). The cell itself stores a reference to a tile in addition to attributes that specify if the tile should be rotated or flipped when rendering it.
 
 Tiles are usually shared by multiple cells.
 
-### Tilesets & Tiles ###
+### Tilesets & Tiles
 A TiledMap contains one or more 
 [TiledMapTileSet](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTileSet.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/TiledMapTileSet.java) instances. A tile set contains a number of [TiledMapTile](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/TiledMapTile.html)
@@ -190,7 +190,7 @@ A TiledMap contains one or more
 
 Cells in a tile layer reference these tiles. Cells within a layer can reference tiles of multiple tile sets. It is however recommended to stick to a single tile set per layer to reduce texture switches.
 
-### Rendering Tiled Maps ###
+### Rendering Tiled Maps
 To render a TiledMap and its layers, you will need one of the [specialized MapRenderer implementations](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps/tiled/renderers). For orthogonal or top down maps, use 
 [OrthogonalTiledMapRenderer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/maps/tiled/renderers/OrthogonalTiledMapRenderer.html)
 [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/maps/tiled/renderers/OrthogonalTiledMapRenderer.java), for isometric maps use 
@@ -227,7 +227,7 @@ Again, you have to specify the map (which should be an isometric tiled map) and 
 
 *Note:* the isometric renderer is experimental, use at your own risk and please report any issues you find. From a performance perspective, rendering isometric maps on mobile devices is very costly, as every tile must have blending on. 
 
-### Loading TMX/Tiled maps ###
+### Loading TMX/Tiled maps
 ![images/tile-maps2.png](/assets/wiki/images/tile-maps2.png)
 
 [Tiled](http://www.mapeditor.org/) is a generic tile map editor for Windows/Linux/Mac OS X that allows you to create tile layers as well as object layers, containing arbitrary shapes for trigger areas and other purposes. libGDX provides a loader to read files generated by Tiled.
@@ -261,7 +261,7 @@ Once loaded you can treat the map just like an other TiledMap.
 
 *Note*: if you want to use TMX maps with the GWT backend, you need to make sure the map is saved with pure base64 encoding. The compressed TMX formats will not work due to limitations in GWT.
 
-### Loading Tide maps ###
+### Loading Tide maps
 ![images/tile-maps3.png](/assets/wiki/images/tile-maps3.png)
 
 [Tide](https://colinvella.github.io/tIDE/) is another general purpose tile map editor, available for Windows only. libGDX provides a loader for the format output by Tide.
@@ -279,14 +279,14 @@ assetManager.load("level1.tide", TiledMap.class);
 
 *Note* if you load your Tide map directly, you are responsible for calling TiledMap#dispose() once you no longer need it. This call will dispose of any textures loaded for the map.
 
-## Performance considerations ##
+## Performance considerations
 While we try to make the renderers as fast as possible, there are a few things you can consider to boost rendering performance.
 
   * Only use tiles from a single tile set in a layer. This will reduce texture binding.
   * Mark tiles that do not need blending as opaque. At the moment you can only do this programmatically, we will provide ways to do it in the editor or automatically.
   * Do not go overboard with the number of layers.
 
-## Examples ##
+## Examples
   * [Simple platformer using a TMX map](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/superkoalio/SuperKoalio.java)
   * [Programmatic creation of a TiledMap](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/bench/TiledMapBench.java)
   * [Tile map asset manager loading/rendering](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/TiledMapAssetManagerTest.java)

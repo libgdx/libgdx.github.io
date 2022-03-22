@@ -1,20 +1,20 @@
 ---
 title: jnigen
 ---
-jnigen is a small library that can be used with or without libGDX which allows C/C++ code to be written inline with Java source code. This increases the locality of code that conceptually belongs together (the Java native class methods and the actual implementation) and makes refactoring a lot easier compared to the usual [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) workflow. Arrays and direct buffers are converted for you, further reducing boilerplate. Building the natives for Windows, Linux, OS X, and Android is handled for you. jnigen also provides a mechanism for loading native libraries from a JAR at runtime, which avoids "java.library.path" troubles.
+jnigen is a small library that can be used with or without libGDX which allows C/C++ code to be written inline with Java source code. This increases the locality of code that conceptually belongs together (the Java native class methods and the actual implementation) and makes refactoring a lot easier compared to the usual [JNI](\nen.wikipedia.org/wiki/Java_Native_Interface) workflow. Arrays and direct buffers are converted for you, further reducing boilerplate. Building the natives for Windows, Linux, OS X, and Android is handled for you. jnigen also provides a mechanism for loading native libraries from a JAR at runtime, which avoids "java.library.path" troubles.
 
-## Setup ##
+## Setup
 
 You will need MinGW for both 32 and 64 bit. After installation, be sure the `bin` directory is on your path.
 
 Note that gdx-jnigen is a Java project. It has a blank AndroidManifest.xml because the Android NDK requires it, but it is not an Android project.
 
-### Windows ###
+### Windows
 
   * **MinGW 32 bit** Run [mingw-get-setup.exe](https://sourceforge.net/projects/mingw/files/Installer/), install with the GUI, choose `mingw32-base` and `mingw32-gcc-g++` under "Basic Setup", then Installation -> Apply Changes.
   * **MinGW 64 bit** Download the [MinGW 64 bit](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/4.8.2/threads-win32/seh/x86_64-4.8.2-release-win32-seh-rt_v3-rev1.7z/download) binaries and unzip.
 
-### Linux ###
+### Linux
 
   * Ubuntu and other Debian-based systems (unverified)
 
@@ -34,7 +34,7 @@ sudo pacman -S mingw-w64-gcc
 sudo dnf install mingw32-gcc-c++ mingw64-gcc-c++ mingw32-winpthreads-static mingw64-winpthreads-static
 ```
 
-## Quickstart ##
+## Quickstart
 
 Here is a barebones example, first the Java source with inline native code:
 
@@ -94,14 +94,14 @@ Next, `AntScriptGenerator` is used to output the Ant build scripts. The `BuildCo
 
 Lastly, the Ant scripts are run to build the actual native libraries and pack them into a JAR. To run the main method from the example above, the JAR just needs to be on the classpath.
 
-## How it works ##
+## How it works
 
 jnigen has two parts:
 
   * Inspect Java source files in a specific folder, detect native methods and the attached C++ implementation, and spit out a C++ source file and header, similar to what you'd create manually with JNI.
   * Provide a generator for Ant build scripts that build the native source for every platform.
 
-### Native code generation ###
+### Native code generation
 
 Here's an example of Java/C++ mixed in a single Java source file as understood by jnigen (taken from [BufferUtils](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/emu/com/badlogic/gdx/utils/BufferUtils.java)):
 
@@ -155,7 +155,7 @@ new NativeCodeGenerator().generate("src", "bin", "jni", new String[] {"**/*"}, n
 
 You specify the source folder, the folder containing the compiled .class files of your Java classes, the Java files to include (using Ant path patterns) and the files you want to exclude. See the source of [NativeCodeGenerator](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-jnigen/src/com/badlogic/gdx/jnigen/NativeCodeGenerator.java) for more info.
 
-#### Build script generation ####
+#### Build script generation#
 
 Once the native code files have been generated, we also want to create build scripts for all supported platforms. This currently includes Windows (32-/64-bit), Linux (32-/64-bit), Mac OS X (x86, 32-/64-bit), Android (arm6/arm7) and iOS (i386, arm7). The build script generator of jnigen has template Ant script files that can be parametrized for each platform. The parameters are specified via a [BuildTarget](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-jnigen/src/com/badlogic/gdx/jnigen/BuildTarget.java). You can create a BuildTarget for a specific platform like this:
 
@@ -188,7 +188,7 @@ BuildExecutor.executeAnt("jni/build-windows64.xml", "-v", "-Drelease=true", "cle
 BuildExecutor.executeAnt("jni/build.xml", "-v", "pack-natives");
 ```
 
-### More ###
+### More
 
 A video of Mario showing off jnigen:
 

@@ -1,7 +1,7 @@
 ---
 title: 3D Particle Effects
 ---
-Because of issues with perspective and depth, the 2D particle effects are not suitable for 3D applications.  Additionally, the 3d particle effects take full advantage of movement through 3d space, allowing a wide variety of dynamic graphical effects.
+Because of issues with perspective and depth, the 2D particle effects are not suitable for 3D applications. Additionally, the 3d particle effects take full advantage of movement through 3d space, allowing a wide variety of dynamic graphical effects.
 
 ![images/flamedemo.gif](/assets/wiki/images/flamedemo.gif)
 
@@ -17,20 +17,20 @@ There are 3 different kinds of 3D particle effects:
 
 **Billboards** are sprites that always face the camera (the Decal class in libGDX is essentially a billboard).
 
-**PointSprites** draw a sprite to a single 3d point.  They are simpler than billboards, but more efficient. More information about point sprites in OpenGL: http://www.informit.com/articles/article.aspx?p=770639&seqNum=7
+**PointSprites** draw a sprite to a single 3d point. They are simpler than billboards, but more efficient. More information about point sprites in OpenGL: [https://www.informit.com/articles/article.aspx?p=770639&seqNum=7](https://www.informit.com/articles/article.aspx?p=770639&seqNum=7)
 
-**ModelInstances** are familiar to you if you have done any 3D work in libgdx.  They are instances of 3D models.  Not surprisingly, this is the most taxing type of particle effect in terms of performance.
+**ModelInstances** are familiar to you if you have done any 3D work in libgdx. They are instances of 3D models. Not surprisingly, this is the most taxing type of particle effect in terms of performance.
 
 Due to those differences, each particle effect type has its own dedicated batch renderer: [BillboardParticleBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/particles/batches/BillboardParticleBatch.html), [PointSpriteParticleBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/particles/batches/PointSpriteParticleBatch.html), [ModelInstanceParticleBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/particles/batches/ModelInstanceParticleBatch.html).
 
 -----------------
 
 # Using 3D Particle Effects
-The easiest way to use 3D particle effects is by taking advantage of the ParticleSystem class, abstracting away various details and managing them for you. First we will create the batch of the type(s) we wish to use, then create the ParticleSystem.  In this case, we are going to use PointSprites.
+The easiest way to use 3D particle effects is by taking advantage of the ParticleSystem class, abstracting away various details and managing them for you. First we will create the batch of the type(s) we wish to use, then create the ParticleSystem. In this case, we are going to use PointSprites.
 
 For a more in depth look at how to use 3d particles programmatically, [take a look at the test class](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/g3d/ParticleControllerTest.java).
 
-**IMPORTANT**: When you import the **ParticleEffect** class into your IDE, make sure you do not accidentally import the 2D effect ParticleEffect class.  They share the same name, but have different import paths. You are looking for: **com.badlogic.gdx.graphics.g3d.particles.ParticleEffect**
+**IMPORTANT**: When you import the **ParticleEffect** class into your IDE, make sure you do not accidentally import the 2D effect ParticleEffect class. They share the same name, but have different import paths. You are looking for: **com.badlogic.gdx.graphics.g3d.particles.ParticleEffect**
 
 ### Step 1: Create Batches and ParticleSystem
 ```java
@@ -62,7 +62,7 @@ effect.start();  // optional: particle will begin playing immediately
 particleSystem.add(effect);
 ```
 
-Your game most likely will have many particle effects, either at once or over time during game play. You really don't want to make a new copy of the particle effect each time you create an object or graphical effect that needs it.  Instead, you should pool the effects to avoid new object creation. You can read more about Pooling [in this wiki](/wiki/articles/memory-management#object-pooling) or the libGDX Pool class documentation.
+Your game most likely will have many particle effects, either at once or over time during game play. You really don't want to make a new copy of the particle effect each time you create an object or graphical effect that needs it. Instead, you should pool the effects to avoid new object creation. You can read more about Pooling [in this wiki](/wiki/articles/memory-management#object-pooling) or the libGDX Pool class documentation.
 
 Here is an example of a Pool:
 ```java
@@ -99,7 +99,7 @@ private void renderParticleEffects() {
 }
 ```
 
-You can also translate and rotate the effect.  Depending on how your engine works you might want to use a specific matrix that is reset to identity on changes or only add the delta transformation/rotation.
+You can also translate and rotate the effect. Depending on how your engine works you might want to use a specific matrix that is reset to identity on changes or only add the delta transformation/rotation.
 
 ```java
 private void renderParticleEffects() {

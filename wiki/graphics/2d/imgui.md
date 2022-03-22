@@ -20,7 +20,7 @@ This is an example demonstrating what ImGui is capable of:
 
 # Option 1: [kotlin-graphics' Bindings](https://github.com/kotlin-graphics/imgui)
 
-There is an elaborate wiki entry over in the Kotlin-graphics's repo, detailing how ImGui can be used together with libGDX: https://github.com/kotlin-graphics/imgui/wiki/Using-libGDX
+There is an elaborate wiki entry over in the Kotlin-graphics's repo, detailing how ImGui can be used together with libGDX: [https://github.com/kotlin-graphics/imgui/wiki/Using-libGDX](https://github.com/kotlin-graphics/imgui/wiki/Using-libGDX)
 
 These are some very simple examples, how its usage may look like: 
 

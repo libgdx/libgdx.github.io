@@ -48,7 +48,7 @@ public class Drop extends Game {
 }
 ```
 
-We start the application with instantiating a SpriteBatch and a BitmapFont. It is a bad practice to create multiple objects that can be shared instead (see [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)). The SpriteBatch object is used to render objects onto the screen, such as textures; and the BitmapFont object is used, along with a SpriteBatch, to render text onto the screen. We will touch more on this in the Screen classes.
+We start the application with instantiating a SpriteBatch and a BitmapFont. It is a bad practice to create multiple objects that can be shared instead (see [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself)). The SpriteBatch object is used to render objects onto the screen, such as textures; and the BitmapFont object is used, along with a SpriteBatch, to render text onto the screen. We will touch more on this in the Screen classes.
 
 Next, we set the Screen of the Game to a `MainMenuScreen` object, with a Drop instance as its first and only parameter.
 

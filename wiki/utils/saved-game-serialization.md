@@ -1,15 +1,15 @@
 ---
 title: Saved game serialization
 ---
-# JSON serialization #
+# JSON serialization
 
 The [JSON](/wiki/utils/reading-and-writing-json) class can automatically convert Java objects to and from JSON.
 
-# Binary serialization #
+# Binary serialization
 
 [Kryo](https://github.com/EsotericSoftware/kryo) can be used to automatically and [efficiently](https://github.com/eishay/jvm-serializers/wiki) serialize game state.
 
-## libGDX Kryo Serializers ##
+## libGDX Kryo Serializers
 
 Kryo can handle most POJOs and other classes, but some classes need special handling. Below are a few serializers for libGDX classes. 
 

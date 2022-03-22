@@ -18,7 +18,7 @@ For each target platform, a starter class has to be written. This class instanti
 This article assumes you have followed the instructions in [Project Setup](/wiki/start/project-generation) as well as [Importing & Running a Project](/wiki/start/import-and-running) and you therefore have already set up the project in your IDE.
 {: .notice--info}
 
-# Desktop (LWJGL3) #
+# Desktop (LWJGL3)
 
 Since libGDX version 1.10.1, this has been the default desktop backend. You can find more information [here](/news/2021/07/devlog-7-lwjgl3).
 {: .notice--info}
@@ -63,7 +63,7 @@ From there on a window is created and the ApplicationListener is invoked as desc
    }
    ```
 
-# Desktop (LWJGL) #
+# Desktop (LWJGL)
 
 In version 1.10.1, libGDX switched its default desktop backend to LWJGL 3. If you want to upgrade, please take a look [here](/news/2021/07/devlog-7-lwjgl3#how-can-i-migrate).
 {: .notice--warning}
@@ -101,9 +101,9 @@ From there on a window is created and the ApplicationListener is invoked as desc
 
 - If an error like **`Process 'command 'C:/.../java.exe'' finished with non-zero exit value -1`** is shown, this can safely be ignored. A workaround is disabling forceExit: `config.forceExit = false;`.
 
-# Android #
+# Android
 
-## Game Activity ##
+## Game Activity
 
 Android applications do not use a `main()` method as the entry-point, but instead require an Activity. Open the `MainActivity.java` class in the `my-gdx-game-android` project:
 
@@ -131,7 +131,7 @@ The main entry-point method is the Activity's `onCreate()` method. Note that `Ma
 
 Android applications can have multiple activities. libGDX games should usually only consist of a single activity. Different screens of the game are implemented within libGDX, not as separate activities. The reason for this is that creating a new `Activity` also implies creating a new OpenGL context, which is time consuming and also means that all graphical resources have to be reloaded.
 
-## Game Fragment ##
+## Game Fragment
 
 A libGDX game can be hosted in an Android [Fragment](http://developer.android.com/guide/components/fragments.html) instead of using a complete Activity.  This allows it to take up a portion of the screen in an Activity or be moved between layouts. To create a libGDX fragment, subclass `AndroidFragmentApplication` and implement the `onCreateView()` with the following initialization:
 ```java
@@ -181,7 +181,7 @@ public class AndroidLauncher extends FragmentActivity implements AndroidFragment
 }
 ```
 
-## Manifest configuration ##
+## Manifest configuration
 Besides the `AndroidApplicationConfiguration`, an Android application is also configured via the `AndroidManifest.xml` file, found in the root directory of the Android project. This might look something like this:
 
 ```xml
@@ -207,14 +207,14 @@ Besides the `AndroidApplicationConfiguration`, an Android application is also co
 </manifest>
 ```
 
-#### Screen Orientation & Configuration Changes ####
+#### Screen Orientation & Configuration Changes#
 In addition to the targetSdkVersion, the `screenOrientation` and `configChanges` attributes of the activity element should always be set.
 
 The `screenOrientation` attribute specifies a fixed orientation for the application. One may omit this if the application can work with both landscape and portrait mode.
 
 The `configChanges` attribute is *crucial* and should always have the values shown above. Omitting this attribute means that the application will be restarted every time a physical keyboard is slid out/in or if the orientation of the device changes. If the `screenOrientation` attribute is omitted, a libGDX application will receive calls to `ApplicationListener.resize()` to indicate the orientation change. API clients can then re-layout the application accordingly.
 
-#### Permissions ####
+#### Permissions#
 If an application needs to be able to write to the external storage of a device (e.g. SD-card), needs internet access, uses the vibrator or wants to record audio, the following permissions need to be added to the `AndroidManifest.xml` file:
 
 ```xml
@@ -234,7 +234,7 @@ If your game needs the gyroscope sensor, you have to set `useGyroscope` to true 
 
 Please refer to the [Android Developer's Guide](http://developer.android.com/guide/index.html) for more information on how to set other attributes like icons for your application.
 
-## Live Wallpapers ##
+## Live Wallpapers
 A libGDX core application can also be used as an Android [Live Wallpaper](http://android-developers.blogspot.co.at/2010/02/live-wallpapers.html).
 The project setup is very similar to an Android game, but `AndroidLiveWallpaperService` is used in
 place of `AndroidApplication`. Live Wallpapers are Android [Services](https://developer.android.com/guide/components/services),
@@ -351,7 +351,7 @@ with `exported` true so they can be accessed by the Live Wallpaper picker.
 Live Wallpapers have some limitations concerning touch input. In general only one pointer will be reported. If you want
 full multi-touch events you can set the `AndroidApplicationConfiguration.getTouchEventsForLiveWallpaper` field to true.
 
-## Screen Savers (aka Daydreams) ##
+## Screen Savers (aka Daydreams)
 A libGDX core application can also be used as an Android [Screen Saver](http://developer.android.com/about/versions/android-4.2.html#Daydream).
 Screen Savers were once known as Daydreams, so many of the related classes have the term "Daydream" in their names. Screen
 Savers have no relation to Google's Daydream VR platform.
@@ -412,11 +412,11 @@ and the Screen Saver service must both be set with `exported` true so they can b
 </manifest>
 ```
 
-# iOS/Robovm #
+# iOS/Robovm
 
 [ToDo]
 
-# HTML5/GWT #
+# HTML5/GWT
 The main entry-point for an HTML5/GWT application is a `GwtApplication`. Open `GwtLauncher.java` in the my-gdx-game-html5 project:
 
 ```java
@@ -443,7 +443,7 @@ public class GwtLauncher extends GwtApplication {
 
 The main entry-point is composed of two methods, `GwtApplication.getConfig()` and `GwtApplication.createApplicationListener()`. The former has to return a [GwtApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/GwtApplicationConfiguration.java) instance, which specifies various configuration settings for the HTML5 application. The `GwtApplication.createApplicatonListener()` method returns the `ApplicationListener` to run.
 
-### Module Files ###
+### Module Files
 GWT needs the actual Java code for each jar/project that is referenced. Additionally, each of these jars/projects needs to have one module definition file, having the suffix gwt.xml.
 
 In the example project setup, the module file of the html5 project looks like this:
@@ -465,7 +465,7 @@ Both the gdx-backend-gwt jar and the core project have a similar module file, sp
 
 For more information on modules and dependencies refer to the [GWT Developer Guide](https://developers.google.com/web-toolkit/doc/1.6/DevGuide).
 
-### GWT Specifics ###
+### GWT Specifics
 
 The HTML backend has a number of caveats. Be sure to check out the  comprehensive [HTML Backend Guide](/wiki/html5-backend-and-gwt-specifics#differences-between-gwt-and-desktop-java)!
 {: .notice--warning}

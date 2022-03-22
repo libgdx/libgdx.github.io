@@ -5,7 +5,7 @@ Java apps need a Java Runtime Environment to run. Typically this is installed by
 
 The solution is to bundle a JRE with your app. This way you know exactly what users will be running and users will have fewer problems and they will not have to install a JVM. 
 
-## Packaging ##
+## Packaging
 There are a number of tools available for bundling a JRE:
 
 ### [jpackage](https://docs.oracle.com/en/java/javase/14/jpackage/packaging-overview.html#GUID-C1027043-587D-418D-8188-EF8F44A4C06A)
@@ -27,7 +27,7 @@ _-- seems to be no longer maintained --_
 
 If you're planning to deploy to MacOS as well, [notarization](https://developer.apple.com/documentation/xcode/notarizing_macos_software_before_distribution) (MacOS 10.15+) can be an issue. See [here](https://www.joelotter.com/2020/08/14/macos-java-notarization.html) on how to notarize your libGDX app.
 
-## Reducing Size ##
+## Reducing Size
 
 There are a number of files and classes that can be removed from the JRE to reduce the size. Below is a list of files to delete from the Windows JRE. Other platforms are very similar, though you may need classes on some platforms but not others (eg, xml classes are needed on Linux to use java.util.preferences). This list leaves Swing intact, if you don't need Swing the size could be reduced further.
 

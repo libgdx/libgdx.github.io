@@ -1,7 +1,7 @@
 ---
 title: Smaato in libGDX
 ---
-# Summary #
+# Summary
 
  * [Introduction](#introduction)
  * [Configuration](#configuration)
@@ -11,7 +11,7 @@ title: Smaato in libGDX
  * [Rewarded](#rewarded)
  * [Test Ads](#test-ads)
 
-# Introduction #
+# Introduction
 
 This article will show you how to add Smaato ads to your libGDX Android projects. You will be able to monetize your games with Banner, Interstitial and Rewarded Ads. This tutorial implies that you are already familiar with libGDX basics and how Android Views are handled. But there will be a short recap.
 
@@ -21,7 +21,7 @@ You will need:
 1. A libGDX Android Game Project
 2. Your [Smaato](https://spx.smaato.com) account
 
-# Configuration #
+# Configuration
 Add the following repository setup to your project’s main `build.gradle` file:
 ```java
 
@@ -101,7 +101,7 @@ zipStorePath=wrapper/dists
 zipStoreBase=GRADLE_USER_HOME
 ```
 
-# Recap #
+# Recap
 LibGDX Android game is created as a [View](https://developer.android.com/reference/android/view/View). In order to add ads that are constantly displayed (like Banners) another view holding that should be used. In other words, a Relative Layout having both views should be created.
 You can see that in the following code snippet:
 
@@ -131,7 +131,7 @@ public class AndroidLauncher extends AndroidApplication {
 ```
 The only missing piece here is the `createAdView` method that will be created in the next section.
 
-# Banner #
+# Banner
 In order to add Banner ads we will use `com.smaato.sdk.banner.widget.BannerView`. As mentioned previously, the Banner view will reside in the same Relative Layout as the Game view. 
 ```java
 public class AndroidLauncher extends AndroidApplication {
@@ -197,7 +197,7 @@ Let me walk you through this code snippet:
 * `showBannerAds`/`hideBannerAds` are supposed to be called as per the game lifecycle
 * `PUBLISHER_ID` and `BANNER_AD_SPACE_ID` can be used during testing. Please, refer to [Test Ads](#test-ads) section for all available test ads configurations.
 
-# Interstitial #
+# Interstitial
 Unlike Banners, Interstitial ads are not constantly displayed on the screen. Such ads should be only shown at natural transition points in the flow of an app, like finishing/failing of a level or switching between the screens. Hence there is no need to have an additional view for Interstitial ads as they will typically occupy the whole screen and will be destroyed upon closing.
 
 ```java
@@ -279,7 +279,7 @@ Let me walk you through this code snippet:
 * There are multiple useful callbacks of `Interstitial.loadAd` that can be used depending on your use case
 * `showInterstitial` is supposed to be called as per the game lifecycle
 
-# Rewarded #
+# Rewarded
 Rewarded ads are visually similar to Interstitial ads as they typically occupy the whole screen. 
 But workflow-wise they are completely different - such ads encourage users to interact with the ad content in exchange for in-app rewards, like extra lives, free coins or energy.
 
@@ -361,7 +361,7 @@ One more time, let me walk you through this code snippet:
 * There are multiple useful callbacks of `RewardedInterstitial.loadAd` that you can be used depending on your use case
 * `showRewarded` is supposed to be called whenever a user initiates a rewarded ad flow in your game
 
-# Test Ads #
+# Test Ads
 
 | Adspace ID    | Type               |
 | ------------- | ------------------ |

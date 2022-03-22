@@ -1,7 +1,7 @@
 ---
 title: The application framework
 ---
-## Modules ##
+## Modules
 At its core, libGDX consists of six [modules](/wiki/app/modules-overview) in the form of interfaces that provide means to interact with the operating system. Each backend implements these interfaces.
 
   * *[Application](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/Application.java)*: runs the application and informs an API client about application level events, such as window resizing. Provides logging facilities and querying methods, e.g., memory usage.
@@ -11,7 +11,7 @@ At its core, libGDX consists of six [modules](/wiki/app/modules-overview) in the
   * *[Audio](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/Audio.java)*: provides means to playback sound effects and streaming music as well as directly accessing audio devices for PCM audio input/output.
   * *[Graphics](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/Graphics.java)*: exposes OpenGL ES 2.0 (where available) and allows querying/setting video modes and similar things.
 
-## Starter Classes ##
+## Starter Classes
 The only platform specific code that needs to be written, are so called [starter classes](/wiki/app/starter-classes-and-configuration). For each platform that is targeted, a piece of code will instantiate a concrete implementation of the Application interface, provided by the back-end for the platform. For the desktop, this might look something like this, using the LWJGL 3 backend:
 
 ```java

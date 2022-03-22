@@ -3,8 +3,8 @@ title: Event handling
 ---
 Event handling allows you to get more granular and most of all chronological information about input from the user. Event handling provides a way to implement interactions with user interfaces, where specific input sequences are important, e.g. touch down, touch up on a button means the user clicked the button. Such interactions are hard to implement with polling.
 
-## Input Processor ##
-Event handling is done using the common [observer pattern](http://en.wikipedia.org/wiki/Observer_pattern). First we have to implement a listener interface called InputProcessor:
+## Input Processor
+Event handling is done using the common [observer pattern](https://en.wikipedia.org/wiki/Observer_pattern). First we have to implement a listener interface called InputProcessor:
 
 ```java
 public class MyInputProcessor implements InputProcessor {
@@ -67,7 +67,7 @@ Gdx.input.setInputProcessor(inputProcessor);
 
 From this point on, all new input events will be pushed to the `MyInputProcessor` instance. Events are dispatched right before the call to `ApplicationListener.render()`, on the rendering thread.
 
-## InputAdapter ##
+## InputAdapter
 
 `InputAdapter` implements all the `InputProcessor` methods, returning false from each. You can extend `InputAdapter` so you only need to implement the methods you need. You can also use an anonymous inner class.
 
@@ -87,7 +87,7 @@ Gdx.input.setInputProcessor(new InputAdapter () {
 });
 ```
 
-## InputMultiplexer ##
+## InputMultiplexer
 Sometimes you want to chain `InputProcessors`, e.g. you have one processor for your UI which should be invoked first, and a second processor for input events that manipulate your game's world. You can use the [InputMultiplexer](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/InputMultiplexer.html) class to achieve this:
 
 ```java
@@ -99,7 +99,7 @@ Gdx.input.setInputProcessor(multiplexer);
 
 The `InputMultiplexer` will hand any new events to the first `InputProcessor` that was added to it. If that processor returns false from the method invoked to handle the event, this indicates the event was not handled and the multiplexer will hand the event to the next processor in the chain. Through this mechanism, the `MyUiInputProcessor` can handle any events that fall inside one of its widgets and pass on any other events to the `MyGameInputProcessor`.
 
-## Example of continuous Input handle ##
+## Example of continuous Input handle
 If you want to move an actor using the Input Processor, you will notice that it will move only when the key is typed (or pressed with keydown).
 To continuosly handle input, or to move a sprite, you could add a flag to your actor like this:
 ```java

@@ -49,7 +49,7 @@ body.setCollisionFlags(e.body.getCollisionFlags() | btCollisionObject.CollisionF
 
 To identify a contact along the added, processed and destroyed callbacks, you can use the `setUserValue(int);` and `getUserValue();` of the `btManifoldPoint` instance that the callback provides. This is also the value supplied to the `onContactDestroyed(int)` method of the `ContactListener` class. Note that the `onContactDestroyed` callback is only triggered if the user value is non-zero.
 
-### <a id="Contact_Filtering"></a>Contact Filtering ###
+### <a id="Contact_Filtering"></a>Contact Filtering
 
 Contact callbacks are invoked a lot. JNI bridging between C++ and Java on every call adds quite an overhead, which decreases performance. Therefor the bullet wrapper allows you to specify for which objects you would like to receive contacts. This is done by contact filtering.
 

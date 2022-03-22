@@ -1,23 +1,23 @@
 ---
 title: Vectors, matrices, quaternions
 ---
-# Introduction #
+# Introduction
 
 libGDX has several linear algebra classes for dealing with common tasks in physics and applied math. These include:
 
-  * *[Vector](http://en.wikipedia.org/wiki/Euclidean_vector)*
-  * *[Matrix](http://en.wikipedia.org/wiki/Matrix_%28mathematics%29)*
-  * *[Quaternion](http://en.wikipedia.org/wiki/Quaternion)*
+  * *[Vector](https://en.wikipedia.org/wiki/Euclidean_vector)*
+  * *[Matrix](https://en.wikipedia.org/wiki/Matrix_%28mathematics%29)*
+  * *[Quaternion](https://en.wikipedia.org/wiki/Quaternion)*
 
 A full explanation of these concepts is beyond the current scope, but the above links may provide a starting point for further understanding. What follows is an overview of their use and implementation in Libgdx.
 
 ----
 
-# Vectors #
+# Vectors
 
-A vector is an array of numbers used to describe a concept with a direction and magnitude such as position, velocity, or acceleration. As such vectors are typically used to describe the physical properties of motion of a body through space. libGDX has vector classes for [two (Vector2)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Vector2.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Vector2.java) and [3-dimensional (Vector3)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Vector3.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Vector3.java) spaces. Each contains common operations for working with vector quantities such as addition, subtraction, normalization, and the cross and dot products. There are also methods for [linear](http://en.wikipedia.org/wiki/Linear_interpolation) and [spherical linear](http://en.wikipedia.org/wiki/Spherical_linear_interpolation) interpolation between two vectors.
+A vector is an array of numbers used to describe a concept with a direction and magnitude such as position, velocity, or acceleration. As such vectors are typically used to describe the physical properties of motion of a body through space. libGDX has vector classes for [two (Vector2)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Vector2.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Vector2.java) and [3-dimensional (Vector3)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Vector3.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Vector3.java) spaces. Each contains common operations for working with vector quantities such as addition, subtraction, normalization, and the cross and dot products. There are also methods for [linear](https://en.wikipedia.org/wiki/Linear_interpolation) and [spherical linear](https://en.wikipedia.org/wiki/Spherical_linear_interpolation) interpolation between two vectors.
 
-## Method Chaining ##
+## Method Chaining
 
 A pattern also found elsewhere in libGDX is the use of method chaining for convenience and reduced typing. Each operation which modifies a vector returns a reference to that vector to continue chaining operations in the same line call. The following example creates a unit vector pointing along the direction from a point _(x1, y1, z1)_ to another point _(x2, y2, z2)_:
 
@@ -35,7 +35,7 @@ vec.nor();                                // normalize result
 
 ----
 
-# Matrices #
+# Matrices
 
 A matrix is a two-dimensional array of numbers. Matrices are used in graphics to perform transformations on and projections of vertices in 3D space for display on 2D screens. As with OpenGL, libGDX stores matrices in column-major order. Matrices come in 
 [3x3 (Matrix3)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/math/Matrix3.html) 
@@ -43,7 +43,7 @@ A matrix is a two-dimensional array of numbers. Matrices are used in graphics to
 
 Probably the most common use for matrices in libGDX is through the view and projection matrices of the [Camera](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Camera.html)[(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/Camera.java) class which are used to control how geometry is rendered to the screen. Cameras, which come in [OrthographicCamera](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/OrthographicCamera.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/OrthographicCamera.java) and [PerspectiveCamera](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/PerspectiveCamera.html) [(code)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/PerspectiveCamera.java) varieties, provide a convenient and intuitive way to control the view in a rendered scene through a position and viewing direction, yet underneath are a simple group of 4x4 matrices which are used to tell OpenGL how to process geometry for render.
 
-## Method Chaining ##
+## Method Chaining
 
 As with vectors, operations on matrices in Libgdx return a reference to the modified matrix to allow chaining of operations in a single line call. The following creates a new 4x4 model-view matrix useful for an object with position _(x, y, z)_ and rotation described by an axis-angle pair:
 
@@ -59,7 +59,7 @@ mat.setToRotation( axis, angle );  // set rotation from axis-angle pair
 mat.trn( x, y, z );                // translate by x, y, z
 ```
 
-## Native Methods ##
+## Native Methods
 
 The matrix classes have a number of their operations available in static methods backed by fast native code. While member syntax is often easier to read and more convenient to write, these static methods should be used in areas where performance is a concern. The following example uses one of these methods to perform a multiplication between two 4x4 matrices:
 
@@ -76,8 +76,8 @@ matA.mul( matB );
 
 ----
 
-# Quaternions #
+# Quaternions
 
-Quaternions are four-dimensional number systems which extend complex numbers. They have many esoteric uses in higher mathematics and number theory. Specifically in the context Libgdx the use of unit-quaternions can be useful for describing rotations in three-dimensional space, as they provide for simpler composition, numerical stability, and the avoidance of [gimbal lock](http://en.wikipedia.org/wiki/Gimbal_lock) making them preferable often to other methods of rotational representation which may variously fall short in these areas.
+Quaternions are four-dimensional number systems which extend complex numbers. They have many esoteric uses in higher mathematics and number theory. Specifically in the context Libgdx the use of unit-quaternions can be useful for describing rotations in three-dimensional space, as they provide for simpler composition, numerical stability, and the avoidance of [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock) making them preferable often to other methods of rotational representation which may variously fall short in these areas.
 
 Quaternions can be constructed by supplying their four components explicitly or by passing an axis-angle pair. Note that while a quaternion is often described as the combination of a vector and a scalar, **_it is not merely an axis-angle pair._** Libgdx also provide methods for converting between quaternions and the various other rotational representations such as Euler angles, rotation matrices, and axis-angle pairs.

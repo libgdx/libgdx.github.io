@@ -9,11 +9,11 @@ This article uses the latest Jython beta (Jython 2.7b1 available [here](http://t
 
 **Note:** at the time of writting, you can only use Jython with libGDX on the desktop.
 
-## Setup ##
+## Setup
 
 Jython can be worked on with any text editor, including Vim or Emacs. [PyDev](http://pydev.org/) is an option for eclipse users. Once the environment is setup, create a new Jython project, and all of the libGDX dependencies to the PYTHONPATH. for using the desktop LWJGL backend, this includes `gdx.jar`, `gdx-backend-lwjgl.jar`, `gdx-backend-lwjgl-natives.jar`, `gdx-natives.jar`, and `gdx-sources.jar`.
 
-## Coding With Python ##
+## Coding With Python
 
 The entirety of the [Drop Tutorial](https://libgdx.com/dev/simple_game/) can be contained into a single python file.
 
@@ -139,6 +139,6 @@ if __name__ == '__main__':
 
 **note that during asset creation we need to specifiy the `assets/` folder. When not using android, we must specify the folder structure that we use, whereas on android all internal assets are assumed to be in the `assets/` directory.**
 
-## Games written in Python using libGDX ##
+## Games written in Python using libGDX
 
 * none (yet! if you have made a game using python in libgdx, please let me know and edit this article!)

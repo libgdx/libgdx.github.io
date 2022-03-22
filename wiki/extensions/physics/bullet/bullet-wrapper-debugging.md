@@ -36,13 +36,13 @@ Debugging on Windows
 -----
 To debug the native C++ code it is necessary to build the bullet.dll with debug information.
 
-### Getting the sources ###
+### Getting the sources
 To do this we will need the source code of the bullet wrapper. So head to the [libGDX github repo](https://github.com/libgdx/libgdx) and either download the whole repository as a .zip file, or clone it via git (`git clone https://github.com/libgdx/libgdx.git`). Remember that the Java project you'll be debugging has to use the very same libGDX version for which you'll be compiling gdx-bullet (preferably bleeding-edge SNAPSHOT one) - otherwise you'll probably get nasty low-level Java exceptions thrown everywhere due to export mismatches etc.
 
-### Getting the compiler/IDE ###
+### Getting the compiler/IDE
 Furthermore we need an IDE for the debugging as well as the compiler to build the dll. We get both these things with *Microsoft Visual Studio Express 2013*. An .iso file with the installation can be downloaded [here](http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-8). After downloading it, to install it you will either need to burn the image on a CD or mount it via a virtual CD drive (for example with Daemon Tools). *The following steps will work out-of-the-box only on VS Express 2013.* For example, to build on VS 2010 SP1, you'll have to change `ToolsVersion="12.0"` to `ToolsVersion="4.0"` & `<PlatformToolset>v120</PlatformToolset>` to `<PlatformToolset>v100</PlatformToolset>` in all the project files. The code *should* compile without errors on any reasonably recent build toolset (verified for VS 2010 SP1 as of November 2014), YMMV.
 
-### Building the debug .dll ###
+### Building the debug .dll
 This is really easy as you will find a Visual Studio Project (.sln "Solution") in the sources which should be able to work out of the box. You can find it in the libGDX repository at `libgdx\extensions\gdx-bullet\jni\vs\gdxBullet\gdxBullet.sln`.
 
 ![images/Iqyi9kf.png](/assets/wiki/images/Iqyi9kf.png)
@@ -53,7 +53,7 @@ Now right-click the `gdxBullet` project in the solution exporer and hit "Build".
 
 ![images/jdxPRUJ.png](/assets/wiki/images/jdxPRUJ.png)
 
-### Loading the correct DLL ###
+### Loading the correct DLL
 Usually to load the natives to run bullet it is necessary to call `Bullet.init()`, which will do exactly that. Since we do not want to load the default natives without debug information included, we have to manually load our newly created `gdxBullet.dll` ourselves. You can use the following code snippet to do so. Just replace the `customDesktopLib` string with the actual path. Then call the `initBullet()` method where you'd normally call the `Bullet.init()` method (e.g. in the `create` method).
 
 	// Set this to the path of the lib to use it on desktop instead of the default lib.
@@ -70,7 +70,7 @@ Usually to load the natives to run bullet it is necessary to call `Bullet.init()
 		Gdx.app.log("Bullet", "Version = " + LinearMath.btGetVersion());
 	}
 
-### Attaching the debugger ###
+### Attaching the debugger
 Now it's time to start your app and attach the C++ debugger. First, we need to start the Java app. It is a nice way to set a breakpoint at the startup of your app and then run it in debug mode. That way we'll have a lot of time to attach the C++ debugger. To do that, we switch to Visual Studio and Select `Debug -> Attach to Process...`.
 
 ![images/MrB0AYF.png](/assets/wiki/images/MrB0AYF.png)
@@ -79,7 +79,7 @@ Then select the correct `javaw.exe` process of your app in the list of available
 
 *Note: with MS VC++ 2010 Express you'll have to first enable Tools->Settings->Expert Settings to get an option to attach to process.*
 
-### Debugging ###
+### Debugging
 For testing if this setup works one might add a breakpoint to `btDiscreteDynamicsWorld.stepSimulation`. The file containing this code is in `gdxBullet -> Source Files -> BulletDynamics -> Dynamics -> btDiscreteDynamicsWorld.cpp`.
 
 ![images/Z5sAvDh.png](/assets/wiki/images/Z5sAvDh.png)

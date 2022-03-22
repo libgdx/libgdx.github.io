@@ -5,13 +5,13 @@ The libGDX 2D Particle Editor is a powerful tool for making particle effects. Se
 
 ![images/particle-editor.png](/assets/wiki/images/particle-editor.png)
 
-## Running the 2D Particle Editor ##
+## Running the 2D Particle Editor
 
 To run the editor, you can check out libGDX and run it [from source](https://libgdx.com/dev/from_source/). The editor is in the gdx-tools project. **Alternatively, download the editor [here](https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/runnable-2D-particles.jar).**
 
 Thirdly, if you are using Gradle and you added "Tools" extension to your project, you can easily run the particle editor from your IDE. For example, in IntelliJ: Open the Navigate menu (Cmd-N on OSX) and type ParticleEditor, and IntelliJ should find the ParticleEditor.java file. It has a .main() method that is used to launch the file. Right-click and select "Run ParticleEditor.main()" and IntelliJ will open the run configuration dialog box. In the "Use classpath of module:" dropdown, select your desktop project, and then click Run. This will create a run configuration that you can use later to launch the particle editor easily.
 
-## Using the Particle Editor ##
+## Using the Particle Editor
 
 Video:
 
@@ -27,19 +27,19 @@ The first step to creating an effect is to choose an image. The default image is
 
 When you are configuring properties, you are actually configuring the particle emitter that will create and manage the particles. In code, the emitter is represented by the ParticleEmitter class. A particle effect is made up of one or more emitters, which is managed in the lower left of the particle editor. In code, the effect is represented by the ParticleEffect class, which has a list of ParticleEmitters.
 
-### Properties Panel Elements ###
+### Properties Panel Elements
 
 There are some common elements that appear in several of the properties panels.
 
-#### Active button ####
+#### Active button#
 
 Properties with an "Active" toggle button can be turned off, which can minimize some of the work that needs to be done at run-time.
 
-#### Number / number range ####
+#### Number / number range#
 
 Some of the number fields have a `>` button beside them. Clicking this button changes the number into a number range, where at runtime, a random value is selected from between the two specified values, every time the number is referenced. For example, if a range of 1-2 is selected for the Life property, each new particle will have some random length life between 1 and 2 seconds.
 
-#### Chart ####
+#### Chart#
 
 A chart is used to control the value of a property over time. The word "Duration" or "Life" in the middle of the chart indicates whether the horizontal timeline of the chart is relative to the duration of the emitter, or the lifetime of each single particle.
 
@@ -56,7 +56,7 @@ The “Relative” checkbox. When unchecked, the value at any one point in time 
 
 Finally, the "Independent" checkbox. Some properties allow switching how the chart controls the property over time from emitter to single/independent particle. Let's imagine that we have a chart with ranged values defined on the "Life" property. By default the chart affects the emitter as a whole. Each time the emitter generates particles, a random value within the appropriate range for that time will be chosen and all emited particles will have that value set as life. On the other hand, if "Independent" is checked, a new random value will be calculated per emitted particle and set as life to each of them independently.
 
-### Properties ###
+### Properties
 
 **Delay:** When an effect starts, this emitter will do nothing for this many milliseconds. This can be used to synchronize multiple emitters.
 

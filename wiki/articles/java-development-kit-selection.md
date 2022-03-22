@@ -9,7 +9,7 @@ title: Java Development Kit   Selection
 
 Caveat: At the release of this wiki page, Java 15 is the current released Java Development Kit (JDK).
 
-# Introduction #
+# Introduction
 Every project will require the use of at least one Java Development Kit (JDK). This is the source, root, or core 
 of the code that will be used in each project. It may be a quick decision to just select the most recent JDK, though
 this might end in frustration and confusion during the build process. This wiki will review the different JDK versions
@@ -18,7 +18,7 @@ may contain additional features from the root JDK. The wiki page objective is to
 which version or distribution to use.
 
 
-# Background #
+# Background
 #### Distribution
 Various distributions from vendors existed prior to [Oracle](https://www.oracle.com/index.html) changing its licensing 
 structure and were used for various reasons, such as using variation(s) of the Java Virtual Machine (JVM) for 
@@ -35,15 +35,15 @@ about which JDK to choose. Free open source distributions exist for commercial u
 #### Version
 With the change of the licensing model [Oracle](https://www.oracle.com/index.html) also updated their release pipeline
 to include regular feature updates at a faster rate. The overall goal of the JDK development team is to move 
-forward with the bigger Java Enhancement Proposals (JEPs) ([Valhalla](http://openjdk.java.net/projects/valhalla/),
- [Panama](http://openjdk.java.net/projects/panama/)) by working out the foundational JEPs. Some smaller but related
+forward with the bigger Java Enhancement Proposals (JEPs) ([Valhalla](https://openjdk.java.net/projects/valhalla/),
+ [Panama](https://openjdk.java.net/projects/panama/)) by working out the foundational JEPs. Some smaller but related
  features that are foundational to the bigger JEPs are ([Records](https://openjdk.java.net/jeps/384), 
  [Sealed Classes](https://openjdk.java.net/jeps/360)) will be released in between the major features.
  
 * [All JEPs](https://openjdk.java.net/jeps/0)
 
 
-# Versions #
+# Versions
 Since each platform that Java works on is different the code; translation may leaves features out or may not be capable
 of being emulated from the desktop to mobile or web. Thus, if developing on a specific platform, you
 may not have much of a choice on which Java versions. As a developer you may also be faced with having to use multiple

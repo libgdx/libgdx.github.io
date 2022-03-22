@@ -1,7 +1,7 @@
 ---
 title: Modules overview
 ---
-## Introduction ##
+## Introduction
 
 libGDX comprises several modules that provide services for each step of a typical game architecture.
 
@@ -15,12 +15,12 @@ The following diagram shows the modules in a simple game architecture:
 
 ![images/modules-overview.png](/assets/wiki/images/modules-overview.png)
 
-## Modules ##
+## Modules
 
 The following part briefly describes each module providing the most common use cases for each. For more in-depth information, be sure to check out the individual wiki sections for the respective modules!
 {: .notice--primary}
 
-### Input ###
+### Input
 The _Input_ module enables the polling of different input states on every platform.
 It allows polling the state of each key, touchscreen and accelerometer. On the desktop the touchscreen is replaced by the mouse while the accelerometer is not available.
 
@@ -34,7 +34,7 @@ if (Gdx.input.isTouched()) {
 ```
 In similar fashion all the supported input means can be polled and handled.
 
-### Graphics ###
+### Graphics
 The _Graphics_ module abstracts the communication with the GPU and provides convenience methods to obtain instances of OpenGL ES wrappers. It takes care of all the boilerplate code needed to get hold of the OpenGL instance and handles all implementations provided by the manufacturer.
 
 Depending on the underlying hardware, the wrappers may be or may not be available.
@@ -64,7 +64,7 @@ The following API versions are supported:
 
 To learn more about the Graphics module check its documentation [here](/wiki/graphics/graphics).
 
-### Files ###
+### Files
 The _Files_ module provides a generic way to access files regardless of the platform.
 It makes it easy to read and write files. File writing has some limitations, which are due to the platform security limitations.
 
@@ -77,7 +77,7 @@ Texture myTexture = new Texture(Gdx.files.internal("assets/textures/brick.png"))
 ```
 This is a very powerful abstraction layer as it works on both Android and desktop.
 
-### Audio ###
+### Audio
 The _Audio_ module makes the creation and playback of audio files extremely simple. It also gives direct access to the sound hardware.
 
 It handles two types of sound files. *Music* and *Sound*. Both types support the WAV, MP3 and OGG formats.
@@ -94,7 +94,7 @@ music.play();
 music.setLooping(true);
 ```
 
-### Networking ###
+### Networking
 The _Networking_ module offers functions useful for game networking and can be used to add multiplayer, send players to your website, or perform other networking tasks. These features are available across multiple platforms, although some platforms may require additional considerations or lack certain features.
 
 The Networking module includes configurable TCP client and server sockets with settings optimized for low latency.

@@ -75,7 +75,7 @@ Please note that support for OpenGL ES 3.0 is experimental on iOS.
 ### Web
 On Web, the graphic stuff is handled by WebGL. Web only supports GL ES 2.0.
 
-## Precision modifiers ##
+## Precision modifiers
 OpenGL ES 2.0 requires the specification of precision modifiers for attributes, uniforms and locals. Desktop OpenGL does not support this. You will have to guard against that in your fragment shader with something similar to this code snippet:
 
 ```java
@@ -93,7 +93,7 @@ precision mediump float;
 
 This will define the LOWP, MED, and HIGH macros to equivalent OpenGL ES precision modifiers and sets the default precision for float to medium. This will only happen on platforms actually running OpenGL ES, on the desktop, the macros are defined to be empty.
 
-## OpenGL ES 2.0 Documentation ##
+## OpenGL ES 2.0 Documentation
 * [OpenGL ES 2.0 Reference Pages](http://www.khronos.org/opengles/sdk/docs/man/ "OpenGL ES 2.0 Reference Pages")
 * [OpenGL ES 2.0 Reference Card](http://www.khronos.org/opengles/sdk/docs/reference_cards/OpenGL-ES-2_0-Reference-card.pdf "OpenGL ES 2.0 Reference Card")
 * [OpenGL ES 2.0 Specification](http://www.khronos.org/registry/gles/#specs2 "OpenGL ES 2.0 Specification")

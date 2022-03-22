@@ -4,11 +4,11 @@ title: Ninepatches
 This article introduce NinePatch images, how they can be created and how they
 are used in a libGDX context.
 
-## Before you start ##
+## Before you start
 
 This guide was intended for the old scene2d and the skinpacker (the versions before 0.9.6). If you are running of the nightlies, this guide can give some hints, but won't work as a step-by-step guide. The main differences are that skinpacker and texturepacker has been unified in the texturepacker2 and that skins gets loaded in a different way. 
 
-## Introduction ##
+## Introduction
 
 A NinePatch image is an image with defined "stretchable" areas. With this
 property one can create images that repeats either to very small
@@ -25,11 +25,11 @@ including:
 
 In libGDX there are several ways to load resources, which also counts for NinePatches. When manually creating and instantiating a ninepatch, we are specifying the patch regions in code. When loading a NinePatch using Skins (and the SkinPacker to create them) the process is a bit different. This will also be covered on this page.
 
-## Creating and instantiating a NinePatch manually  ##
+## Creating and instantiating a NinePatch manually 
 
 This is a short introduction to instantiate a NinePatch image manually in code. It's basically to create an image, figure out what regions to stretch and note down the pixels of those regions.
 
-### Create your scalable image ###
+### Create your scalable image
 
 Keep in mind that some area of your image needs to hold the content
 (text, other images etc), and can therefore not contain any "special
@@ -46,7 +46,7 @@ corners of this button are plain translucent pixels. Notice that we do
 not define the stretchable areas on the image, since we will do this in
 code instead.
 
-### Instantiate the NinePatch ###
+### Instantiate the NinePatch
 
 The simplest form of instantiating a new NinePatch:
 ```java
@@ -71,13 +71,13 @@ The result of adding this TextButton to a stage is illustrated below:
 
 Our round image has now scaled with the content length (the text). The button use the standard BitmapFont and some awful colours.
 
-### Limitations when instantiating in code ###
+### Limitations when instantiating in code
 
 Limitations with instantiating a NinePatch directly (using Libgdx) is that your fixed regions all will be the same square. Below I have attached an image illustrating what the four integer arguments actually define in the NinePatch. The gray area not overlapped by cyan is the scaleable area.
 
 ![images/ninepatches3.png](/assets/wiki/images/ninepatches3.png)
 
-## Creating and instantiating a NinePatch using SkinPacker ##
+## Creating and instantiating a NinePatch using SkinPacker
 
 *Note:* _For the SkinPacker to properly recognize/parse NinePatch images
 the image needs to be postfixed with .9.png_ (if .png is your file
@@ -88,13 +88,13 @@ image itself, to be able to act as a NinePatch. These properties are
 added by padding the image with a 1 pixel border. The steps to create a
 NinePatch are described below.
 
-### Define stretchable areas ###
+### Define stretchable areas
 
 Now we need to alter the image, and add black borders where we want to
 allow the image to stretch. This can be done in any image editor. But
 there are editors to ease the process.
 
-#### github AndroidAssetStudio generator ####
+#### github AndroidAssetStudio generator#
 This is my personal favorite. No need for anything, just go to the site, specify your image, it automatically guestimates it (and gets it right in my experience) and hit the download button, it'll even put it in a nice zip for you for android (if you're not on android you can ignore it and go for the smallest one, since it is a ninepatch and scaleable as high as you want)
 https://romannurik.github.io/AndroidAssetStudio/nine-patches.html
 
@@ -126,13 +126,13 @@ code.
 
 ![images/ninepatches6.png](/assets/wiki/images/ninepatches6.png)
 
-## Defining a NinePatch programmatically ##
+## Defining a NinePatch programmatically
 
 See [this](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/NinePatch.html#NinePatch%28com.badlogic.gdx.graphics.Texture,%20int,%20int,%20int,%20int%29) NinePatch constructor.
 
 ![images/ninepatches7.png](/assets/wiki/images/ninepatches7.png)
 
-### Pack the image using SkinPacker ###
+### Pack the image using SkinPacker
 
 This step should be covered in other areas of this Wiki (preferable a node about the SkinPacker). Since the image is postfixed with _.9.png_ its areas will be analyzed by looking at the 1 pixel padded outer region (as we defined in the previous step).
 
