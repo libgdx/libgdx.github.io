@@ -28,11 +28,11 @@ title: ModelBatch
 # Overview
 So what does ModelBatch actually do?
 
-1.  It gathers render calls
-2.  It gathers a shader for each render call
-3.  It sorts the render calls
-4.  It manages the rendering context
-5.  It executes the render calls
+1. It gathers render calls
+2. It gathers a shader for each render call
+3. It sorts the render calls
+4. It manages the rendering context
+5. It executes the render calls
 
 That's it. Nothing more, nothing less. And every part of this is customizable. Please be aware that because of this design, there might be multiple ways to accomplish the same basic task.
 

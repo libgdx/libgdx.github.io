@@ -133,7 +133,7 @@ Android applications can have multiple activities. libGDX games should usually o
 
 ## Game Fragment
 
-A libGDX game can be hosted in an Android [Fragment](http://developer.android.com/guide/components/fragments.html) instead of using a complete Activity.  This allows it to take up a portion of the screen in an Activity or be moved between layouts. To create a libGDX fragment, subclass `AndroidFragmentApplication` and implement the `onCreateView()` with the following initialization:
+A libGDX game can be hosted in an Android [Fragment](http://developer.android.com/guide/components/fragments.html) instead of using a complete Activity. This allows it to take up a portion of the screen in an Activity or be moved between layouts. To create a libGDX fragment, subclass `AndroidFragmentApplication` and implement the `onCreateView()` with the following initialization:
 ```java
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

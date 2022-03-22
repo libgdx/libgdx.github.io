@@ -17,7 +17,7 @@ title: Dependency management with Gradle
 * [**Dependency Management for Libraries**](#dependency-management-for-libraries)
 
 ### Useful links
-Dependency management with Gradle is easy to understand, and has many different approaches.  If you are familiar with Maven or Ivy, Gradle is fully compatible with both approaches, as well as being able to support custom approaches.  If you aren't familiar with Gradle, there are great resources on their site to learn, it is recommended you give them a read to get comfortable with Gradle.
+Dependency management with Gradle is easy to understand, and has many different approaches. If you are familiar with Maven or Ivy, Gradle is fully compatible with both approaches, as well as being able to support custom approaches. If you aren't familiar with Gradle, there are great resources on their site to learn, it is recommended you give them a read to get comfortable with Gradle.
 * [Gradle's User Guide](http://www.gradle.org/docs/current/userguide/userguide.html)
 * [Gradle's Dependency Management Guide](http://www.gradle.org/docs/current/userguide/dependency_management.html)
 * [Declare your dependencies](http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies)
@@ -130,7 +130,7 @@ project(":core") {
 Dependencies are configured in the **root** `build.gradle` file as shown in the build.gradle guide above.
 In order to add an external dependency to a project, you must declare the dependency correctly under the correct part of the build.script.
 
-(Some) libGDX extensions are mavenized and pushed to the maven repo, which means we can very easily pull them into our projects from the `build.gradle` file.  You can see in the list [below](#libgdx-extensions) of the format that these dependencies take.
+(Some) libGDX extensions are mavenized and pushed to the maven repo, which means we can very easily pull them into our projects from the `build.gradle` file. You can see in the list [below](#libgdx-extensions) of the format that these dependencies take.
 If you are familiar with maven, notice the format:
 ```groovy
 compile '<groupId>:<artifactId>:<version>:<classifier>'
@@ -140,7 +140,7 @@ Let's take a quick example to see how this works with the root `build.gradle` fi
 
 As mentioned earlier, you do not need to  modify the individual `build.gradle` files in each of the different platform-specific folders (e.g., -desktop, -ios, -core). You only need to modify the root `build.gradle` file.
 
-[Here](#freetypefont-gradle) we see the dependencies for the FreeType Extension, say we want our Android project to have this dependency.  We locate our `project(":android")` stub in the root directory's `build.gradle`:
+[Here](#freetypefont-gradle) we see the dependencies for the FreeType Extension, say we want our Android project to have this dependency. We locate our `project(":android")` stub in the root directory's `build.gradle`:
 ```groovy
 project(":android") {
     apply plugin: "android"
@@ -401,7 +401,7 @@ and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='c
 
 ### External Dependencies
 #### Adding external repositories
-Gradle finds files defined as dependencies by looking through all the repositories defined in the buildscript.  Gradle understands several repository formats, which include Maven and Ivy.
+Gradle finds files defined as dependencies by looking through all the repositories defined in the buildscript. Gradle understands several repository formats, which include Maven and Ivy.
 
 Under the `allprojects` stub, you can see how repositories are defined. Here is an example:
 ```groovy
@@ -504,7 +504,7 @@ project(":android") {
 It is worth nothing that these file dependencies are not included in the published dependency descriptor for your project, but they are included in transitive project dependencies within the same build.
 
 ##### Android Pitfall
-When adding `flat file` dependencies to a project, for example the core project, you would need to duplicate the dependency declaration for the android project.  This is because the Android Gradle plugin currently [can't handle](https://code.google.com/p/android/issues/detail?id=186012) transitive `flat file` dependencies.
+When adding `flat file` dependencies to a project, for example the core project, you would need to duplicate the dependency declaration for the android project. This is because the Android Gradle plugin currently [can't handle](https://code.google.com/p/android/issues/detail?id=186012) transitive `flat file` dependencies.
 
 For example, if you were to add the all the jars in your `libs` directory as dependencies for your project, you would need to do the following.
 
@@ -543,7 +543,7 @@ This is done in the `gwt.xml` files in the gwt sub directory. You will need to m
 	<set-configuration-property name="gdx.assetpath" value="../android/assets" />
 </module>
 ```
-We depend on the libGDX gwt backend, as well as the core project, so we have them defined in a <inherits> tag.  So when you add your dependency via methods above, you need to add it here too!
+We depend on the libGDX gwt backend, as well as the core project, so we have them defined in a <inherits> tag. So when you add your dependency via methods above, you need to add it here too!
 
 #### libGDX Extension Inherits
 These are the libGDX extensions that are supported in gwt

@@ -38,7 +38,7 @@ boolean onContactAdded(btCollisionObject colObj0, int partId0, int index0, btCol
 boolean onContactAdded(int userValue0, int partId0, int index0, int userValue1, int partId1, int index1);
 ```
 
-As you can see it has three methods which provide the `btManifoldPoint` and three which don’t.  To provide the actual collision objects, you can choose between either the `btCollisionObjectWrapper`, `btCollisionObject` or the `userValue`.
+As you can see it has three methods which provide the `btManifoldPoint` and three which don’t. To provide the actual collision objects, you can choose between either the `btCollisionObjectWrapper`, `btCollisionObject` or the `userValue`.
 
 Make sure to override the method that only provides the arguments you are actually going to use. For example, if you are not going to use the `btManifoldPoint` then it wouldn’t make sense to create an object for that argument each time the callback is called. Likewise using `btCollisionObject` is more performant than using `btCollisionObjectWrapper`, because the `btCollisionObject` is reused. The `userValue` is even more performant, because the object isn’t mapped at all  (see [#btCollisionObject btCollisionObject] on how to use the useValue).
 

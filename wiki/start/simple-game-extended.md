@@ -94,7 +94,7 @@ Next, the final "meaty" method in the `MainMenuScreen` class: `render(float)`
 ```java
 public class MainMenuScreen implements Screen {
 
-        //public MainMenuScreen(final Drop game)....        
+        //public MainMenuScreen(final Drop game)....
 
 	@Override
 	public void render(float delta) {

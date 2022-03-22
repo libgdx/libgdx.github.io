@@ -19,7 +19,7 @@ Using the camera is the easy way to move around a game world without having to m
 The position field referes to the position of the center of the camera.
 The camera extends the selected viewport of the world so this matches the screen size of the device.
 
-The following little app demonstrates the use of a simple `OrthographicCamera` to move around a flat world.  
+The following little app demonstrates the use of a simple `OrthographicCamera` to move around a flat world. 
 
 
 ```java
@@ -142,14 +142,14 @@ public class OrthographicCameraExample implements ApplicationListener {
 
 ```
 
-The above class is the libGDX application that will use the orthographic camera to move around the world. Our world size is in arbitrary units that we can define however we want to. In this specific case, our world is 100x100 units.  
+The above class is the libGDX application that will use the orthographic camera to move around the world. Our world size is in arbitrary units that we can define however we want to. In this specific case, our world is 100x100 units. 
 
 ```java
     static final int WORLD_WIDTH = 100;
     static final int WORLD_HEIGHT = 100;
 ```
 
-Many people make the mistake of thinking in pixels when it comes to their world, and this is something that you should avoid doing.  It leads to unnecessary multiplying and dividing by constants, having weird "Pixel per unit" ratios dotted around your code, poor understanding of the pipeline and it confuses you!  There are many other problems, which can be easily avoided when you stop "thinking" in pixels.
+Many people make the mistake of thinking in pixels when it comes to their world, and this is something that you should avoid doing. It leads to unnecessary multiplying and dividing by constants, having weird "Pixel per unit" ratios dotted around your code, poor understanding of the pipeline and it confuses you!  There are many other problems, which can be easily avoided when you stop "thinking" in pixels.
 
 
 What are these units though? What do they mean? How will I know what size to make objects? How many units are displayed on the screen?  We will get to that shortly! Stick tight.
@@ -206,7 +206,7 @@ The `create` method is called when we create a new instance of our ApplicationLi
 
 **#2** - Creates our `Sprite`, from a new Texture that uses the file: `sc_map.png` Download the file [here](https://user-images.githubusercontent.com/12996613/34653163-6a5c206c-f3e8-11e7-8913-87738e62bc81.png), rename it to `sc_map.png` and place it in the `assets/` directory.
 
-**#3** - We set the position of our `mapSprite` to `0,0`.  (This isn't strictly required as the Sprite has default x,y of `0,0` anyway.)
+**#3** - We set the position of our `mapSprite` to `0,0`.(This isn't strictly required as the Sprite has default x,y of `0,0` anyway.)
 
 **#4** - We set the size of `mapSprite`, with width of `WORLD_WIDTH` and height of `WORLD_HEIGHT`. So our sprite now has dimensions of 100x100, or the size of our world.
 
@@ -214,9 +214,9 @@ The `create` method is called when we create a new instance of our ApplicationLi
 
 **#6** - We create a local variable that has the value of the current `height` of our application display. (This is in pixels)
 
-**#7** - We Create the `OrthographicCamera`. The 2 parameters specify the width and height of the viewport that will be created.  These values determine how much of our world we can see in each axis.
+**#7** - We Create the `OrthographicCamera`. The 2 parameters specify the width and height of the viewport that will be created. These values determine how much of our world we can see in each axis.
 
-In our example, we use `30` for our viewport width, and `30 * (h / w)` for our viewport height.  The width is trivial, we can see 30 units in the X axis.  For the viewport height we use `30` multiplied by the `aspect ratio` of our display.  This is so we see objects we draw in correct proportions.  Imagine if we ignored the aspect ratio, and just went with viewport width and height of 30,  unless we have a square display, which we most likely don't, when we render an object that has dimensions of 30x30 for example, it would show as a squished rectangle with the same shape as our display.  How can an object that is 30x30 not be a square?  This is because we assumed 30 viewport width and 30 viewport height, which doesn't match the aspect ratio of our device.
+In our example, we use `30` for our viewport width, and `30 * (h / w)` for our viewport height. The width is trivial, we can see 30 units in the X axis. For the viewport height we use `30` multiplied by the `aspect ratio` of our display. This is so we see objects we draw in correct proportions. Imagine if we ignored the aspect ratio, and just went with viewport width and height of 30,  unless we have a square display, which we most likely don't, when we render an object that has dimensions of 30x30 for example, it would show as a squished rectangle with the same shape as our display. How can an object that is 30x30 not be a square?  This is because we assumed 30 viewport width and 30 viewport height, which doesn't match the aspect ratio of our device.
 
 
 ```
@@ -327,11 +327,11 @@ Let’s take a deeper look at controlling our camera, which is all handled in ou
 	}
 ```
 
-So we can see that this method polls Keys, if a certain key is pressed, we do something to the camera.  
+So we can see that this method polls Keys, if a certain key is pressed, we do something to the camera. 
 
 The last 5 lines are responsible for keeping the camera within the bounds of our world.
 
-We need to make sure the camera's zoom does not grow or shrink to values that would invert our world, or show too much of our world.  To do this, we can calculate the `effectiveViewportWidth` and `effectiveViewportHeight`, which are just the viewportWidth/height * zoom (this gives us what we can see in the world given the current zoom).  We can then `clamp` the value of the camera's zoom to values we require.  `0.1f` to prevent being too zoomed in. `100/cam.viewportWidth` to prevent us being able to see more than the world's entire width.
+We need to make sure the camera's zoom does not grow or shrink to values that would invert our world, or show too much of our world. To do this, we can calculate the `effectiveViewportWidth` and `effectiveViewportHeight`, which are just the viewportWidth/height * zoom (this gives us what we can see in the world given the current zoom). We can then `clamp` the value of the camera's zoom to values we require. `0.1f` to prevent being too zoomed in. `100/cam.viewportWidth` to prevent us being able to see more than the world's entire width.
 
 The last two lines are responsible for making sure we can’t translate out of the world boundaries. < 0, or more than 100 in either Axis.
 

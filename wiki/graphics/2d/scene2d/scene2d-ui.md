@@ -198,7 +198,7 @@ It is highly recommended to read the [Table documentation](/wiki/graphics/2d/sce
 
 ### Container
 
-[The Container class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Container.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Container.java)) is equivalent to a Table with only a single child, but is more lightweight. Container has all of the constraints of a table cell and is useful for setting the size and alignment of a single widget.  If you implement with Scene2D, Container presents to you a much better personal development experience if you encounter trouble adjusting values for alignments and sizes for whatever an object holds and supports.  While the advantages of this class generally work best within a Table object, you may still find a benefit in certain scenarios even outside of such code.
+[The Container class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Container.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Container.java)) is equivalent to a Table with only a single child, but is more lightweight. Container has all of the constraints of a table cell and is useful for setting the size and alignment of a single widget. If you implement with Scene2D, Container presents to you a much better personal development experience if you encounter trouble adjusting values for alignments and sizes for whatever an object holds and supports. While the advantages of this class generally work best within a Table object, you may still find a benefit in certain scenarios even outside of such code.
 
 ### Stack
 

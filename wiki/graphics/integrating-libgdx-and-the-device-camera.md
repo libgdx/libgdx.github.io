@@ -190,7 +190,7 @@ We do this by calling startPreview method via its Async sibling
 	}
 ```
 
-In this state the user should see the Camera preview screen (assuming that we cleared the screen with a color having its alpha component sets to 0).  
+In this state the user should see the Camera preview screen (assuming that we cleared the screen with a color having its alpha component sets to 0). 
 
 ## Taking a picture
 When we would like to take the picture, we set the suitable Camera parameters (we can do it in any stage before actually taking the picture)
