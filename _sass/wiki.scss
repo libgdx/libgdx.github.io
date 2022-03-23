@@ -265,38 +265,22 @@ article.page {
     .sidebar__right {
         width: 300px;
         margin-right: -300px;
+        padding-bottom: 15px;
     }
 }
 
-@media (prefers-color-scheme: light) {
-  body {
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-      font-size: 16px;
-      line-height: 1.5;
-      color: #24292f;
-      word-wrap: break-word;
-  }
-
-  a {
-      color: #0969da;
-      text-decoration: none;
-  }
-  a:hover {
-      text-decoration: underline;
-  }
-  a:visited {
-      color: #0969da;
-  }
+// ACTUAL CONTENT
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-x: initial !important;
 }
 
-// ACTUAL CONTENT
 @media (prefers-color-scheme: light) {
   body {
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-      font-size: 16px;
-      line-height: 1.5;
       color: #24292f;
-      word-wrap: break-word;
   }
 
   a {
@@ -313,11 +297,7 @@ article.page {
 
 @media (prefers-color-scheme: dark) {
   body {
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-      font-size: 16px;
-      line-height: 1.5;
       color: #c9d1d9;
-      word-wrap: break-word;
   }
 
   a {
