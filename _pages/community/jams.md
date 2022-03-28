@@ -19,11 +19,6 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## [March 2022](/news/2022/02/jam-march-2022)
-Jam Suggestions: 13th-15th  
-Jam Voting: 17th-19th  
-Jam: 20th-26th
-
 ## June
 Jam Suggestions: 12th-14th  
 Jam Voting: 16th-18th  
@@ -54,6 +49,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [Underground](https://itch.io/jam/libgdx-jam-20) (March 2022)
 * [Machines & Slimes](https://itch.io/jam/libgdx-jam-19) (December 2021)
 * [ZERO GRAVITY](https://itch.io/jam/libgdx-jam-18) (September 2021)
 * [BALLS](https://itch.io/jam/libgdx-jam-17) (June 2021)
