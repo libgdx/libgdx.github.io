@@ -35,7 +35,7 @@ Texture texture = new Texture(Gdx.files.internal("image.etc1"));
 
 ## KTX/ZKTX Format
 
-KTX file format is a [standard](https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/) dedicated to storing OpenGL textures. Its main advantage is that it supports most features of OpenGL Textures (all compression formats, with or without mipmaps, cubemaps, texture arrays,...).
+KTX file format is a [standard](https://www.khronos.org/registry/KTX/specs/1.0/ktxspec_v1.html) dedicated to storing OpenGL textures. Its main advantage is that it supports most features of OpenGL Textures (all compression formats, with or without mipmaps, cubemaps, texture arrays,...).
 
 The ZKTX format is just a zipped KTX to limit the size of the file on disk.
 
