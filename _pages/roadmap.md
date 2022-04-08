@@ -27,13 +27,18 @@ There are also a lot of other improvements in the works, which may not be not bi
 <table>
   <tr>
     <td><h4>AWT Support for LWJGL 3</h4>
-    <br>Currently, AWT and Swing are not working with the LWJGL 3 backend due to some restrictions of GLFW. We have some ideas on how to work around this.<sup><a href="https://github.com/libgdx/libgdx/pull/6247">1</a>, <a href="https://github.com/libgdx/libgdx/pull/6673">1</a></sup></td>
+    <br>Currently, AWT and Swing are not working with the LWJGL 3 backend due to some restrictions of GLFW. We have some ideas on how to work around this.<sup><a href="https://github.com/libgdx/libgdx/pull/6247">1</a>, <a href="https://github.com/libgdx/libgdx/pull/6772">2</a></sup></td>
     <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
     <td><h4>Box2D Update</h4>
     <br>In July 2020, the original <a href="https://github.com/erincatto/box2d">Box2D</a> received its first update in over 6 years! Now we're working to include those changes in libGDX.<sup><a href="https://github.com/libgdx/libgdx/issues/5948#issuecomment-727643568">1</a></sup></td>
     <td>{% include status.html is='wip' %}</td>
+  </tr>
+  <tr>
+    <td><h4>Console Support</h4>
+    <br>Various users have explored the topic of libGDX console support.<sup><a href="/wiki/articles/console-support">1</a></sup></td>
+    <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
     <td><h4>Geometry/Tesselation/Compute Shaders</h4>
@@ -56,14 +61,14 @@ There are also a lot of other improvements in the works, which may not be not bi
     <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
-    <td><h4>Kotlin-Compatible Web Backend</h4>
-    <br>A Web backend that is compatible with other JVM languages has been talked about a few times now.<sup><a href="https://github.com/squins/gdx-backend-bytecoder">1</a>, <a href="https://github.com/Anuken/Arc/tree/6e9fd338866c05cd42ec20f26ec7fa7c3a25d6d5/backends/backend-teavm">2</a>, <a href="https://github.com/xpenatan/gdx-html5-tools">3</a></sup></td>
+    <td><h4 id="teavm">Kotlin-Compatible Web Backend</h4>
+    <br>A Web backend that is compatible with other JVM languages has been talked about for a couple of years. Ideas include using TeaVM and Bytecoder.<sup><a href="https://github.com/squins/gdx-backend-bytecoder">1</a>, <a href="https://github.com/Anuken/Arc/tree/6e9fd338866c05cd42ec20f26ec7fa7c3a25d6d5/backends/backend-teavm">2</a>, <a href="https://github.com/xpenatan/gdx-html5-tools">3</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
     <td><h4>Metal/Vulkan Support</h4>
     <br>We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal/Vulkan support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a>, <a href="https://github.com/LWJGL/lwjgl3#khronos-apis">2</a>, <a href="https://github.com/libgdx/libgdx/pull/6593">3</a>, <a href="https://github.com/libgdx/libgdx/pull/6672">4</a></sup></td>
-    <td>{% include status.html is='wip' %}</td>
+    <td>{% include status.html is='close' %}</td>
   </tr>
   <tr>
     <td><h4>TiledMap Extension</h4>
@@ -83,4 +88,4 @@ There are also a lot of other improvements in the works, which may not be not bi
 </table>
 
 <br/>
-Last updated: October 2021
+Last updated: April 2022

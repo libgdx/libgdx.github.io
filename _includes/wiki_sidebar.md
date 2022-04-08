@@ -211,3 +211,4 @@
 * [Maven Integration](/wiki/articles/maven-integration)
 * [Creating Asset Project in Eclipse](/wiki/articles/creating-a-separate-assets-project-in-eclipse)
 * [Java Development Kit - Selection](/wiki/articles/java-development-kit-selection)
+* [Console Support?](/wiki/articles/console-support)
