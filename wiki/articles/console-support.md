@@ -4,7 +4,7 @@ title: Console support?
 Console support for libGDX is a hotly debated topic. This page tries to give a broad overview of how you might go about getting your game to work on your favourite consoles, including Xbox, PlayStation and Nintendo Switch.
 
 ## Porting the Code Base Manually
-A straight-forward, but quite time-consuming approach of getting your libGDX game to run on consoles is to (manually) port your code to a different language & engine. Usually this is done by dedicated teams. Successful examples of this include _Slay the Spire_ as well as Orangepixel's [games](https://www.orangepixel.net/category/games/) (check out his devlogs for more information). A similar goal is being pursued by the [mini2Dx](https://github.com/mini2Dx/mini2Dx) project.
+A straight-forward, but quite time-consuming approach of getting your libGDX game to run on consoles is to (manually) port your code to a different language & engine. Usually this is done by dedicated teams. Successful examples of this include [Slay the Spire](https://pbs.twimg.com/media/ETkH_QvXkAAD2N7?format=png) as well as Orangepixel's [games](https://www.orangepixel.net/category/games/) (check out his devlogs for more information). A similar goal is being pursued by the [mini2Dx](https://github.com/mini2Dx/mini2Dx) project.
 
 ## Compiling/Transpiling
 A more user-friendly (but technologically complex) way of porting your game is to compile/transpile it to code that can run on your targeted platform. This involves writing a custom backend for the platform in question. Inspiration can be drawn from libGDX's Web (see [GWT](https://www.gwtproject.org/)) and iOS (see [RoboVM](https://github.com/MobiVM/robovm)) backends, which already do this.
