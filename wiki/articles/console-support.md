@@ -12,6 +12,6 @@ A more user-friendly (but technologically complex) way of porting your game is t
 This approach was successfully employed by Robotality to port Pathway to the Nintendo Switch platform. For this, they used a custom fork of RoboVM and their own SDL backend. See [here](https://www.reddit.com/r/NintendoSwitch/comments/npx21u/comment/h07ls1u/) for a short write up.
 
 Other options may include:
-- CodenameOne's [ParparVM](https://github.com/codenameone/CodenameOne/tree/master/vm); [TheLogicMaster](https://github.com/TheLogicMaster) is working on a PoC for this
+- CodenameOne's [ParparVM](https://github.com/codenameone/CodenameOne/tree/master/vm); [TheLogicMaster](https://github.com/TheLogicMaster) has a working PoC for this over at [SwitchGDX](https://github.com/TheLogicMaster/SwitchGDX)
 - IKVM (which was used by libGDX [in the past](https://code.google.com/archive/p/libgdx/wikis/IOSWIP.wiki)) & a SDL backend; see [here](https://github.com/ikvm-revived/ikvm) for IKVM's main fork and [here](https://github.com/Anuken/Arc/tree/master/backends/backend-sdl) for Ark's SDL backend
 - GWT/[TeaVM](/roadmap/#teavm) -> UWP; see [here](https://web.archive.org/web/20200428040905/https://www.badlogicgames.com/forum/viewtopic.php?f=17&t=14766) and [here](https://github.com/libgdx/libgdx/issues/5330)
