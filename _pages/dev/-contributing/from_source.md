@@ -26,7 +26,7 @@ If you want to submit code back to the project, please also take a moment to rev
    git clone git://github.com/libgdx/libgdx.git
    cd libgdx
    ```
-   If you want to reduce the size of the download, do a shallow clone (e.g. `git clone --depth 1 https://github.com/libgdx/libgdx`). To automatically initialise and update the submodules in the repository (i.e. FreeType) pass the `--recurse-submodules` argument.
+   If you want to reduce the size of the download, do a shallow clone (e.g. `git clone --depth 1 https://github.com/libgdx/libgdx`). To automatically initialise and update the submodules in the repository (i.e. FreeType) pass the `--recurse-submodules` argument. Please be aware that some of the generated filenames are rather long, which can lead to issues (i.e., `error: unable to create file [...]: Filename too long`) if your repo is located in too many subfolders.
    
 2. Fetch the native binaries, which were built on the snapshot build server. Even if you plan on building natives later yourself, it is recommended to bring these down so you can test your development environment is setup correctly before moving to the next step.
    ```
