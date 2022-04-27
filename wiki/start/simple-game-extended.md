@@ -25,7 +25,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 
-public class Drop extends Game {
+public class Game extends Game {
 
 	public SpriteBatch batch;
 	public BitmapFont font;
