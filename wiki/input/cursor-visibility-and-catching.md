@@ -1,8 +1,6 @@
 ---
 title: Cursor Visibility and Catching
 ---
-**The contents of this page apply only to the desktop and GWT backends.** The methods listed have no effect on the Android and iOS backends, but appear to work for GWT games (tested on Android 11 with multiple browsers using a USB mouse).
-
 ## Cursor catching
 
 For some games like first-person shooters, it is often necessary to catch the cursor so it stays in the center of the screen, and only use position deltas to rotate the camera. Other times we might want to position the cursor manually. Both things can be done as follows:
@@ -12,7 +10,7 @@ Gdx.input.setCursorCatched(true);
 Gdx.input.setCursorPosition(x, y);
 ```
 
-Cursor positioning is only available on the desktop backend.
+Cursor catching is only available on the desktop and GWT backends, and positioning is only available on the desktop backend.
 
 ## Custom cursor
 
@@ -29,23 +27,11 @@ Gdx.graphics.setCursor(cursor);
 
 **Note:** You should call `dispose()` on your cursor if you don't need it anymore.
 
-Only cursors of power-of-two resolutions are supported. For example, if your cursor is 24×24, you must pad it to 32×32. Remember that your cursor may appear small on HDPI monitors if you don't account for them.
-
-### Visibility
-
-You might have the idea to use a transparent pixmap for transparency, but it comes with a caveat: Windows has issues with fully transparent cursors, as well as ones of unusual resolution. We can work around this by creating a 32×32 cursor that contains a very-nearly-totally-transparent gray pixel. While not technically completely hidden, the cursor becomes impossible to see.
-
-```java
-Pixmap pixmap = new Pixmap(32, 32, Pixmap.Format.RGBA8888);
-pixmap.drawPixel(0, 0, 0x80808001);
-Cursor cursor = Gdx.graphics.newCursor(pixmap, 0, 0);
-pixmap.dispose();
-Gdx.graphics.setCursor(cursor);
-```
+Only cursors of power-of-two resolutions are supported. For example, if your cursor is 24×24, you must pad it to 32×32. Remember that your cursor may appear small on HDPI monitors if you don't account for them. Custom cursors are supported only on the desktop and GWT backends.
 
 ## System cursors
 
-You can also change the cursor to one of the other system cursors. This only works in the LWJGL3 and GWT backends.
+You can also change the cursor to one of the other system cursors. This only works on the LWJGL3, GWT and Android backends.
 It can be done as follows:
 ```java
 Gdx.graphics.setSystemCursor(SystemCursor.Crosshair);
@@ -107,9 +93,9 @@ You can hover over each row in the table with your mouse to see what the cursors
 		<strong>macOS:</strong> Uses private system API and may fail in future<br>
 		<strong>Linux:</strong> Uses newer standard that not all cursor themes support</td>
 	</tr>
-	<tr style="cursor: all-scroll">
+	<tr style="cursor: move">
 		<td><code>AllResize</code></td>
-		<td><img alt="all-scroll cursor" src="/assets/wiki/images/cursor-visibility-and-catching10.png" width="24" height="24"></td>
+		<td><img alt="move cursor" src="/assets/wiki/images/cursor-visibility-and-catching10.png" width="24" height="24"></td>
 		<td>Indicates the ability to scroll/pan in all directions</td>
 	</tr>
 	<tr style="cursor: not-allowed">
@@ -118,9 +104,14 @@ You can hover over each row in the table with your mouse to see what the cursors
 		<td>Indicates an action is prohibited<br>
 		<strong>Linux:</strong> Uses newer standard that not all cursor themes support</td>
 	</tr>
+	<tr style="cursor: none">
+		<td><code>None</code></td>
+		<td><div style="width: 24px; height: 24px"></div></td>
+		<td>Hides the cursor for when it may be unwanted, such as during video playback</td>
+	</tr>
 </table>
 
-Note that `NWSEResize` onwards are new in libGDX 1.10.1-SNAPSHOT. They aren't present in earlier versions.
+Note that `NWSEResize` onwards are new in libGDX 1.11.0. They aren't present in earlier versions.
 
 ## Additional resources
 
@@ -129,10 +120,5 @@ If you wish to let your HTML5 game use system cursors libGDX doesn't support, th
 * [CSS `cursor` values](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor#values)
 * [Interfacing with platform specific code](https://libgdx.com/wiki/app/interfacing-with-platform-specific-code)
 * [JSNI](http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsJSNI.html)
-
-If you're willing to modify libGDX's source code, it is possible to properly hide the mouse cursor:
-
-* [Hiding the cursor in LWJGL3](https://github.com/libgdx/libgdx/pull/6218/files#diff-a0799b3c4c6940b3235e9e4cabc483817a26f8afc7834a18761a12539771f33a)
-* [GWT implementation of `setSystemCursor()`](https://github.com/libgdx/libgdx/blob/79cf00af53b7f38667291fbacf544d3074a811bd/backends/gdx-backends-gwt/src/com/badlogic/gdx/backends/gwt/GwtGraphics.java#L558-L561)
 
 [Prev](/wiki/input/vibrator) | [Next](/wiki/input/back-and-menu-key-catching)
