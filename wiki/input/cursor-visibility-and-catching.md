@@ -10,7 +10,7 @@ Gdx.input.setCursorCatched(true);
 Gdx.input.setCursorPosition(x, y);
 ```
 
-Cursor catching is only available on the desktop and GWT backends, and positioning is only available on the desktop backend.
+Cursor catching is only available on the desktop and GWT backends, and positioning is only available on the desktop backends.
 
 ## Custom cursor
 
