@@ -24,12 +24,18 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 
 ## (2.) IDEA
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
+
+   Since Gradle does <u>not</u> support JDK 18 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 8-17**!
+   {: .notice--warning}
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) (the "Community" edition is sufficient)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
 
 ## (3.) Eclipse
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
+
+   Since Gradle does <u>not</u> support JDK 18 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 8-17**!
+   {: .notice--warning}
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
 - Android: not officially supported, but you may have success with [Andmore](https://projects.eclipse.org/projects/tools.andmore) or tinkering around with an older [ADT](https://marketplace.eclipse.org/content/android-development-tools-eclipse) version
 - For iOS: [RoboVM OSS Eclipse plugin](http://robovm.mobidevelop.com)
@@ -39,6 +45,9 @@ As NetBeans is not commonly used in the libGDX community, it may prove difficult
 {: .notice--info}
 
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
+
+   Since Gradle does <u>not</u> support JDK 18 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 8-17**!
+   {: .notice--warning}
 - IDE itself: [NetBeans](https://netbeans.apache.org/download/index.html) & the NetBeans Gradle Plugin
 - Android: not officially supported
 - iOS: not officially supported
@@ -48,6 +57,9 @@ It is also possible to develop libGDX applications entirely without any IDE, jus
 {: .notice--info}
 
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
+
+   Since Gradle does <u>not</u> support JDK 18 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 8-17**!
+   {: .notice--warning}
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - Set the ANDROID_HOME environment variable, or use gradle.properties
 
