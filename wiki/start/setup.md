@@ -45,7 +45,7 @@ Of course you can also use any other IDE for Java, e.g. NetBeans, Visual Studio 
 {: .notice--info}
 - [NetBeans](https://netbeans.apache.org/download/index.html) requires the NetBeans Gradle Plugin; Android and iOS are not officially supported
 - Visual Studio Code requires extensions to support Java; see the [Coding Pack for Java](https://code.visualstudio.com/docs/java/java-tutorial#_coding-pack-for-java); Android and iOS are not officially supported
-- [AIDE](https://play.google.com/store/apps/details?id=com.aide.ui) does only support Android development; libGDX's JAR files can be found [here](https://repo1.maven.org/maven2/com/badlogicgames/gdx/)
+- [AIDE](https://play.google.com/store/apps/details?id=com.aide.ui) only supports Android development; libGDX's JAR files can be found [here](https://repo1.maven.org/maven2/com/badlogicgames/gdx/)
 
 ## (5.) No IDE
 It is also possible to develop libGDX applications entirely without any IDE, just using a simple editor like Notepad or [Vim](https://www.vim.org). This is **not** recommended, because IDEs provide some very convenient features, such as code completion and error checking. However, if you insist on doing so: libGDX applications are Gradle applications, so they can be built and executed via the commandline.
