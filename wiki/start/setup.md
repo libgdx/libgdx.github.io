@@ -24,30 +24,37 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 
 ## (2.) IDEA
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
+
+   Since Gradle does <u>not</u> support JDK 18 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 8-17**!
+   {: .notice--warning}
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) (the "Community" edition is sufficient)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
 
 ## (3.) Eclipse
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
+
+   Since Gradle does <u>not</u> support JDK 18 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 8-17**!
+   {: .notice--warning}
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
 - Android: not officially supported, but you may have success with [Andmore](https://projects.eclipse.org/projects/tools.andmore) or tinkering around with an older [ADT](https://marketplace.eclipse.org/content/android-development-tools-eclipse) version
 - For iOS: [RoboVM OSS Eclipse plugin](http://robovm.mobidevelop.com)
 
-## (4.) NetBeans
-As NetBeans is not commonly used in the libGDX community, it may prove difficult to get any help if IDE-specific issues arise.
+## (4.) Other IDEs
+Of course you can also use any other IDE for Java, e.g. NetBeans, Visual Studio Code or even AIDE. However, as those are not commonly used in the libGDX community, it may prove difficult to get any help if IDE-specific issues arise!
 {: .notice--info}
-
-- JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
-- IDE itself: [NetBeans](https://netbeans.apache.org/download/index.html) & the NetBeans Gradle Plugin
-- Android: not officially supported
-- iOS: not officially supported
+- [NetBeans](https://netbeans.apache.org/download/index.html) requires the NetBeans Gradle Plugin; Android and iOS are not officially supported
+- Visual Studio Code requires extensions to support Java; see the [Coding Pack for Java](https://code.visualstudio.com/docs/java/java-tutorial#_coding-pack-for-java); Android and iOS are not officially supported
+- [AIDE](https://play.google.com/store/apps/details?id=com.aide.ui) only supports Android development; libGDX's JAR files can be found [here](https://repo1.maven.org/maven2/com/badlogicgames/gdx/)
 
 ## (5.) No IDE
 It is also possible to develop libGDX applications entirely without any IDE, just using a simple editor like Notepad or [Vim](https://www.vim.org). This is **not** recommended, because IDEs provide some very convenient features, such as code completion and error checking. However, if you insist on doing so: libGDX applications are Gradle applications, so they can be built and executed via the commandline.
 {: .notice--info}
 
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
+
+   Since Gradle does <u>not</u> support JDK 18 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 8-17**!
+   {: .notice--warning}
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - Set the ANDROID_HOME environment variable, or use gradle.properties
 
