@@ -73,13 +73,13 @@ To switch your existing libGDX projects to the LWJGL 3 desktop backend you need 
 ### Do I need to do anything else?
 If you are on Windows or Linux, you are all set!
 
-However, if you are on **macOS**, the LWJGL 3 backend is only working when the JVM is run with the [`-XstartOnFirstThread`](https://github.com/LWJGL/lwjgl3/blob/572f69802cb2d4930777403c73999c3e01de9d56/modules/lwjgl/glfw/src/main/java/org/lwjgl/glfw/EventLoop.java#L14-L23) argument. This ensures that your application’s `main()` method runs on the first (i.e., the AppKit) thread and will be familiar to those of you with experiences with SWT.
+However, if you are on **macOS**, there is another step involved in getting your applications to run with the LWJGL 3 backend. Since libGDX 1.11.0, you can either add the `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your desktop project (on Windows and Linux the extension is ignored) or you can run the JVM with the [`-XstartOnFirstThread`](https://github.com/LWJGL/lwjgl3/blob/572f69802cb2d4930777403c73999c3e01de9d56/modules/lwjgl/glfw/src/main/java/org/lwjgl/glfw/EventLoop.java#L14-L23) argument on macOS. This ensures that your application’s `main()` method runs on the first (i.e., the AppKit) thread and will be familiar to those of you with experiences with SWT.
 
-Typically, the argument can be set in the Launch/Run Configurations of your IDE, as is described [here](/dev/import-and-running/). Alternatively, if you're starting your project via Gradle, add this line to the `run` task of the desktop Gradle file:
+Typically, the argument can be set in the Launch/Run Configurations of your IDE, as is described [here](/wiki/start/import-and-running). Alternatively, if you're starting your project via Gradle, add this line to the `run` task of the desktop Gradle file:
 ```
     jvmArgs = ['-XstartOnFirstThread']
 ```
-A viable approach for _outside of your development environment_ is to just programatically restart the JVM if the argument is not present (see [here](https://github.com/crykn/guacamole/blob/master/gdx-desktop/src/main/java/de/damios/guacamole/gdx/StartOnFirstThreadHelper.java#L69) for a simple example). Alternatively, if you want to deploy your game by packaging a JRE with it (which is the recommended way to distribute your game), jpackage or packr allow you to set the JVM arguments.
+Another viable approach for _outside of your development environment_ is to just programatically restart the JVM if the argument is not present (see [here](https://github.com/crykn/guacamole/blob/master/gdx-desktop/src/main/java/de/damios/guacamole/gdx/StartOnFirstThreadHelper.java#L69) for a simple example). Alternatively, if you want to deploy your game by packaging a JRE with it (which is the recommended way to distribute your game), jpackage or packr allow you to set the JVM arguments.
 
 ### Are there any other things I need to be aware of?
 - Whenever your **application is minimised**, the LWJGL 3 backend calls `ApplicationListener#resize(0, 0)`. This can lead to unexpected issues, in particular if you are (re)building framebuffers whenever the application is resized.

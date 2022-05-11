@@ -1,9 +1,9 @@
 ---
-title: Updating LibGDX
+title: Updating libGDX
+description: "Updting libGDX, its dependencies and the Gradle Wrapper itself is straight-forward. Start by opening up the build.gradle file in the root of your project."
 ---
 * [**Switching libGDX Versions**](#switching-libgdx-versions)
-* [**Gradle Wrapper and Updating it**](#gradle-wrapper-and-updating-it)
-* [**Gradle Versions Plugin and Updating Your Dependencies**](#gradle-versions-plugin-and-updating-your-dependencies)
+* [**Updating Gradle Itself**](#updating-gradle-itself)
 
 # Switching libGDX Versions
 libGDX's Gradle based projects make it very easy to switch between libGDX versions. In general you'll be interested in two types of libGDX builds:
@@ -17,16 +17,16 @@ Your Gradle based project makes it very easy to switch between releases and nigh
  gdxVersion = "1.5.2"
 ```
 
-The version you see will most certainly be higher than `1.5.2`. Once you've located that string, you can simply change it to the latest release (or an older release) or to the current SNAPSHOT version. You may also have to update other modules in that same section of the `build.gradle` file, based on the [versions listing](/dev/versions/). Once edited, save the `build.gradle` file. For a much easier way to update your dependencies (automatically find the newest version of each), see [Gradle versions plugin](#gradle-versions-plugin-and-updating-your-dependencies).
+The version you see will most certainly be higher than `1.5.2`. Once you've located that string, you can simply change it to the latest release (or an older release) or to the current SNAPSHOT version. You may also have to update other modules and dependencies in that same section of the `build.gradle` file, based on the [versions listing](/dev/versions/). Once edited, save the `build.gradle` file.
 
 The next step is dependent on your IDE:
 
 * **Eclipse**: Select all your projects in the package explorer, right click, then click `Gradle -> Refresh All`. This will download the libGDX version you specified in `build.gradle` and wire up the JAR files with your projects correctly.
-* **Intellij IDEA**: will usually detect that your `build.gradle` has been updated and show a refresh button. Just click it and IDEA will update libGDX to the version you specified in `build.gradle`. Go into the gradle tasks panel/tool view and click the refresh button. Running a task like 'builddependents' also tends to do this.
+* **Intellij IDEA** / **Android Studio**: will usually detect that your `build.gradle` has been updated and show a refresh button. Just click it and IDEA will update libGDX to the version you specified in `build.gradle`. Go into the Gradle tasks panel/tool view and click the refresh button. Running a task like 'builddependents' also tends to do this.
 * **Netbeans**: in the "Projects" view, right-click the top-most project node and select "Reload Project". All sub-projects will also be reloaded with the new files.
 * **Command Line**: invoking any of the tasks will usually check for changes in dependency versions and redownload anything that changed.
 
-### Replacing additional files
+## Replacing additional files
 
 You may need to replace additional files for some releases. They are listed here:
 
@@ -41,26 +41,29 @@ Since version 1.9.13, breaking changes and corresponding migration steps are exp
 #### Update to release 1.9.6
 * Replace soundmanager files for HTML project, otherwise Web Application might not start. See [#2246](https://github.com/libgdx/libgdx/pull/4426).
 
-## Gradle Wrapper and Updating It
-Essentially, the gradle wrapper (`./gradlew`) is pretty standard for Gradle projects. You don't have to use it and can use a system Gradle installation. But basically, it's a very lightweight wrapper which will download the version of gradle you want into the project dir. This means that anyone can just clone your code, run `./gradlew` and it will automatically download said version of Gradle. No need for complex setup, etc.
+## Gradle Versions Plugin
 
-Though, gradle releases new versions quite steadily, so over the months/years, the version that is embedded (and stored in your repository), is old. You can just run following command line:
+In the spirit of the Maven Versions Plugin, the [https://github.com/ben-manes/gradle-versions-plugin](Gradle Versions Plugin) provides a simple `dependencyUpdates` task to determine which dependencies have updates.
+
+# Updating Gradle Itself
+You may also want to update your Gradle version.
+
+## Gradle Wrapper
+Essentially, the Gradle Wrapper (`./gradlew`) is a script that invokes a declared version of Gradle, downloading it beforehand if necessary. It is the recommended way to execute any Gradle build, because it does away with complex setups and allows any developer to get a project up and running in no time. Alternatively, you can use a system Gradle installation.
+
+To update the Gradle Wrapper version that is embedded (and stored in your repository), you can run the following command,
 
 ```
 ./gradlew wrapper --gradle-version #{GRADLE_VERSION}
 ```
 
-Or if you want to specify a Gradle distribution by URL(find official distributions [here](https://services.gradle.org)):
+where `#{GRADLE_VERSION}` is your preferred Gradle version. We advise you to use the one specified [here](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-setup/res/com/badlogic/gdx/setup/resources/gradle/wrapper/gradle-wrapper.properties#L3) for our setup tool.
+
+As an alternative, you can specify a Gradle distribution by URL (take a look [here](https://services.gradle.org) for official distributions):
 
 ```
 ./gradlew wrapper --gradle-distribution-url #{GRADLE_DISTRIBUTION_URL}
 ```
 
-To upgrade your Gradle wrapper.
-
-
-## Gradle Versions Plugin And Updating Your Dependencies
-
-If you're used to Maven, you are probably familiar with this already. The Gradle versions plugin allows one to run `gradle dependencyUpdates` and it will return a list of dependencies you are using that need updating, and what the newest version is (configurable). The output can either be text/stdout, json, xml, etc.
-
-For more info, see: [https://github.com/ben-manes/gradle-versions-plugin](https://github.com/ben-manes/gradle-versions-plugin)
+## Additional Steps
+Since Gradle updates often introduce breaking changes, you might need to take additional steps to get your project running again after an update. Usually, we recommend just recreating your project structure with the setup tool and then copying over your dependencies and code. Alternatively, you can take a look at the changes we made to the setup tool's example project [here](https://github.com/libgdx/libgdx/commits/master/extensions/gdx-setup).

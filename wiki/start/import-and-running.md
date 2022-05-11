@@ -45,7 +45,7 @@ If you want to execute your freshly imported project, you have to follow differe
 4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `assets` folder <br/>
   ![](/assets/images/dev/idea/1.png)
 
-    On **macOS**, LWJGL3 projects require one extra step: In your Run Configuration you need to set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
+    On **macOS**, LWJGL3 projects require one extra step: Either add the `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your desktop project, or, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
     {: .notice--warning}
 5. Run your application using the run button
 
@@ -60,7 +60,7 @@ If you want to execute your freshly imported project, you have to follow differe
 6. At the bottom, under 'Working directory' select 'Other' -> Workspace...
   ![](/assets/images/dev/eclipse/1.png)
 
-    On **macOS**, LWJGL3 projects require one extra step: In your Run Configuration you need to set the VM arguments to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
+    On **macOS**, LWJGL3 projects require one extra step: Either add the `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your desktop project, or, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
     {: .notice--warning}
 7. Then select your asset folder located in `assets`
 

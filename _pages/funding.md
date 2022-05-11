@@ -11,12 +11,12 @@ header:
     - label: "Patreon"
       url: "https://www.patreon.com/libgdx"
 
-excerpt: "libGDX is free, Apache 2 licensed open-source software anyone can use to create the games of their dreams. libGDX is made with love by over 300 contributors around the world."
+excerpt: "libGDX is a cross-platform Java game development framework that lets you deploy to Windows, macOS, Linux, Android, iOS and HTML5/WebGL with a single code base. It is free, Apache 2 licensed and allows anyone to create the games of their dreams."
 ---
 
-libGDX is being developed lovingly and not for profit by over [300 contributors](https://github.com/libgdx/libgdx/graphs/contributors) across the globe. Some of them work on it in their free time. Others make it part of their day job. All of them contribute their code under the very permissive Apache 2 license, which means you can use all our code in commercial and non-commercial projects without any strings or license fees attached.
+libGDX is being developed lovingly and not for profit by over [300 volunteers](https://github.com/libgdx/libgdx/graphs/contributors) across the globe. Most of us work on libGDX in our free time. Some can make it part of their day job. But all of us contribute our code under the very permissive Apache 2 license, which means you can use our code in commercial and non-commercial projects without any strings or license fees attached.
 
-Sadly, libGDX's infrastructure does not yet run on love. We currently have 2 Linodes and one Mac Mini which are responsible for serving you the forum, the blog, the nightly and release builds and which are also sharing the load of building nightlies on every code change via our Jenkins instance. All of this costs us roughly $45 per month. The libGDX [core team](https://github.com/orgs/libgdx/people) is hence kindly asking for minimal support to cover these monthly costs. Any excess income through [Patreon](https://www.patreon.com/libgdx) will be used to buy development and test devices for core contributors.
+Sadly, libGDX’s infrastructure does not yet run on love. Thus, to ensure that libGDX can keep growing at a steady pace, we need your support. Our recurring monthly expenses include the website, hosting space for nightly and release builds, as well as a contribution to the [MobiVM project](https://github.com/MobiVM). The libGDX [core team](https://github.com/orgs/libgdx/people) is hence kindly asking for your financial support to cover these monthly costs. Any excess income will be used to buy licenses as well as development and test devices for core contributors.
 
 <a href="https://www.patreon.com/libgdx"><img src="/assets/images/patreon.png" style="max-width:240px;display: block;margin: 0 auto;"></a>
 
