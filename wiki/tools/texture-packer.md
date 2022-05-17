@@ -141,7 +141,10 @@ Below is a JSON example with every available setting and the default value for e
 	grid: false,
 	scale: [ 1 ],
 	scaleSuffix: [ "" ],
-	scaleResampling: [ bicubic ]
+	scaleResampling: [ bicubic ],
+	atlasExtension: .atlas,
+	prettyPrint: true,
+	legacyOutput: true
 }
 ```
 
@@ -180,13 +183,16 @@ Note that this is libgdx's "minimal" JSON format, so double quotes are optional 
 | `debug` | If true, lines are drawn on the output pages to show the packed image bounds. | false |
 | `combineSubdirectories` | If true, the directory containing the settings file and all subdirectories are packed as if they were in the same directory. Any settings files in the subdirectories are ignored. | false |
 | `flattenPaths` | If true, subdirectory prefixes are stripped from image file names. Image file names should be unique. | false |
-| `premultiplyAlpha` | If true, the RGB will be multiplied by the alpha. See [here](http://blogs.msdn.com/b/shawnhar/archive/2009/11/06/premultiplied-alpha.aspx) for more information. | false |
+| `premultiplyAlpha` | If true, the RGB will be multiplied by the alpha. See [here](https://web.archive.org/web/20160311211957/http://blogs.msdn.com/b/shawnhar/archive/2009/11/06/premultiplied-alpha.aspx) for more information. | false |
 | `useIndexes` | If false, image names are used without stripping any image index suffix. | true |
 | `limitMemory` | If true, only one image is in memory at any given time, but each image will be read twice. If false, all images are kept in memory during packing but are only read once. | true |
 | `grid` | If true, images are packed in a uniform grid, in order. | false |
 | `scale` | For each scale, the images are scaled and an entire atlas is output. | `[ 1 ]` |
 | `scaleSuffix` | For each scale, the suffix to use for the output files. If omitted, files for multiple scales will be output with the same name to a subdirectory for each scale. | `[ "" ]` |
 | `scaleResampling` | For each scale, the type of interpolation used for resampling the source to the scaled size. One of `nearest`, `bilinear` or `bicubic`. | `[ bicubic ]` |
+| `atlasExtension` | The file extension to be appended to the atlas filename. | .atlas |
+| `prettyPrint` | If true, removes all whitespace except newlines. | true |
+| `legacyOutput` | If true, the atlas uses a less efficient output format. Exists for backwards-compatibility reasons. | true |
 
 ## Texture filter options
 
