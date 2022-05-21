@@ -3,10 +3,10 @@ title: Color Markup Language
 ---
 The `BitmapFontCache` class supports in-string colored text through a simple markup language.
 
-Markup is disabled by default. Use the public member [font.getData().markupEnabled](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/BitmapFont.BitmapFontData.html#markupEnabled) to turn it on/off.
+Markup is disabled by default. Use the public member [font.getData().markupEnabled](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g2d/BitmapFont.BitmapFontData.html#markupEnabled) to turn it on/off.
 
 The markup syntax is really simple but still versatile:
-- **[name]** Sets the color by name. There are a few predefined colors, see the [Colors.reset()](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/Colors.java) method for an exhaustive list. Users can define their own colors through the methods of the [Colors](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Colors.html) class.
+- **[name]** Sets the color by name. There are a few predefined colors, see the [Colors.reset()](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/Colors.java) method for an exhaustive list. Users can define their own colors through the methods of the [Colors](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Colors.html) class.
 - **[#xxxxxxxx]** Sets the color specified by the hex value `xxxxxxxx` in the form `RRGGBBAA` where AA is optional and defaults to 0xFF.
 - **[]** Sets the color to the previous color (kind of optional end tag)
 - **[[** Escapes the left bracket.

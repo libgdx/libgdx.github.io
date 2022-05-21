@@ -49,4 +49,4 @@ This is useful to know if you want to change or delete them manually for testing
 
 On Android, the system's [SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences) class is used. This means preferences will survive app updates, but are deleted when the app is uninstalled.
 
-On iOS, an NSMutableDictionary will be written to the given file. [per [javadocs](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Preferences.html)]
+On iOS, an NSMutableDictionary will be written to the given file. [per [javadocs](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Preferences.html)]

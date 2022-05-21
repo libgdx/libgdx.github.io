@@ -13,7 +13,7 @@ Polling for input from a Keyboard is done with just one simple line of code, lik
 boolean isAPressed = Gdx.input.isKeyPressed(Keys.A);
 ```
 
-The parameter passed to that method is a Key Code. Rather than having to memorize these codes there is a static class within the `Input` interface that contains the codes which you can use. They can be seen  [here](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Input.Keys.html).
+The parameter passed to that method is a Key Code. Rather than having to memorize these codes there is a static class within the `Input` interface that contains the codes which you can use. They can be seen  [here](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Input.Keys.html).
 
 ## Polling the Touch Screen / Mouse
 
@@ -83,7 +83,7 @@ boolean leftPressed = Gdx.input.isButtonPressed(Input.Buttons.LEFT);
 boolean rightPressed = Gdx.input.isButtonPressed(Input.Buttons.RIGHT);
 ```
 
-See the [Buttons](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/Input.Buttons.html) class for more constants.
+See the [Buttons](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Input.Buttons.html) class for more constants.
 
 Note that on Android we only emulate the left mouse button. Any touch event will be interpreted as if it was issued with a left mouse button press. Touch screens obviously don't have a notion of left, right and middle button.
 

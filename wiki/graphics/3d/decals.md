@@ -3,7 +3,7 @@ title: Decals
 ---
 A `Decal` is basically a `Sprite` that can be manipulated and rendered in 3D space. They allow you to draw a 2D texture within your 3D world very efficiently using a `DecalBatch`, with an API similar to that of the `Sprite` and `SpriteBatch`.
 
-## [Decal](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/decals/Decal.html)
+## [Decal](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/decals/Decal.html)
 
 A `Decal` represents a sprite in 3d space. Typical 3d transformations such as translation, rotation and scaling are supported.
 
@@ -16,7 +16,7 @@ If you have a texture that uses transparency, then you can use an alternative me
 
 	Decal decal = Decal.newDecal(textureRegion, true);
 
-Additional [methods](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/decals/Decal.html) are available for further specifying the size and blending properties of the region.
+Additional [methods](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/decals/Decal.html) are available for further specifying the size and blending properties of the region.
 
 ### Manipulation
 There are many methods for transforming a `Decal` in 3D space. Some examples:
@@ -26,7 +26,7 @@ There are many methods for transforming a `Decal` in 3D space. Some examples:
 - Scale: `setScale(x, y)`, `setScale(x)`, etc
 - Position: `setPosition(x, y, z)`, `setPosition(Vector3)`, etc
 
-For a more complete list of available methods, see [here](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/decals/Decal.html).
+For a more complete list of available methods, see [here](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/decals/Decal.html).
 
 ### Billboard
 If we wanted a decal to always face a PerspectiveCamera, we can easily do this using the `lookAt` method.
@@ -34,7 +34,7 @@ If we wanted a decal to always face a PerspectiveCamera, we can easily do this u
 	// For perspective camera
 	decal.lookAt(camera.position, camera.up);
 
-## [DecalBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/decals/DecalBatch.html)
+## [DecalBatch](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/decals/DecalBatch.html)
 Similar to `SpriteBatch`, we can use a `DecalBatch` to batch together many `Decals` for efficient rendering. The `DecalBatch` will allow us to queue as many Decals as we need before pushing big chunks of geometry to the graphics pipeline.
 We should create a DecalBatch only once, rather than every game loop.
 
