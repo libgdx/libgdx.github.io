@@ -196,7 +196,7 @@ Note that this is libgdx's "minimal" JSON format, so double quotes are optional 
 
 ## Texture filter options
 
-Texture packer use the filters specified in the [Texture.TextureFilter](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.TextureFilter.html) enum. The options for filterMin and filterMag are as following:<br/>
+Texture packer use the filters specified in the [Texture.TextureFilter](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Texture.TextureFilter.html) enum. The options for filterMin and filterMag are as following:<br/>
 Nearest: no filtering, no mipmaps<br/>
 Linear: filtering, no mipmaps<br/>
 MipMap & MipMapLinearLinear: filtering, smooth transition between mipmaps<br/>

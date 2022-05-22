@@ -25,7 +25,7 @@ dev:
       - title: "Wiki"
         url: /wiki/
       - title: "Javadocs"
-        url: https://libgdx.badlogicgames.com/ci/nightlies/docs/api/
+        url: https://javadoc.io/doc/com.badlogicgames.gdx
       - title: "Versions"
         url: /dev/versions/
   - title: "Tools & Frameworks"

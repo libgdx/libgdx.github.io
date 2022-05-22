@@ -3,10 +3,10 @@ title: Pixmaps
 ---
 # Introduction
 
-A [Pixmap](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Pixmap.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Pixmap.java) encapsulates image data resident in memory. It supports simple file loading and draw operations for basic image manipulation. The most typical use is preparation of an image for upload to the GPU by wrapping in a 
-[Texture](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html)
+A [Pixmap](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Pixmap.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Pixmap.java) encapsulates image data resident in memory. It supports simple file loading and draw operations for basic image manipulation. The most typical use is preparation of an image for upload to the GPU by wrapping in a 
+[Texture](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Texture.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Texture.java) instance. There are also methods for image saving/loading through the 
-[PixmapIO](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/PixmapIO.html)
+[PixmapIO](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/PixmapIO.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/PixmapIO.java) class. PixmapIO supports uncompressed [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) as well as _CIM_, a compression format peculiar to libGDX which is useful for quick storage access such as during state saving/loading between application focus changes.
 
 *As a Pixmap resides in native heap memory it must be disposed of by calling `dispose()` when no longer needed to prevent memory leaks.*
@@ -14,8 +14,8 @@ A [Pixmap](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/
 # Pixmap Creation
 
 Pixmaps can be created from a _byte array_ containing image data encoded as [JPEG](https://en.wikipedia.org/wiki/Jpeg), [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) or [BMP](https://en.wikipedia.org/wiki/BMP_file_format), a 
-[FileHandle](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/files/FileHandle.html)
-[(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/files/FileHandle.java), or a specification of dimensions and a format. Once created it can be further manipulated before being uploaded to an OpenGL [Texture](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html)
+[FileHandle](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/files/FileHandle.html)
+[(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/files/FileHandle.java), or a specification of dimensions and a format. Once created it can be further manipulated before being uploaded to an OpenGL [Texture](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Texture.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Texture.java)  for rendering or saved for some future use.
 
 The following example creates a 64x64 32-bit RGBA Pixmap, draws a filled green circle inside it, uploads it to a Texture and then disposes of the memory:

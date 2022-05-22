@@ -26,8 +26,8 @@ The [libGDX community](https://libgdx.com/community/) is glad to help you when y
 
 Please go through this short checklist to be sure you haven't missed an easy to find solution.
 
-  * Are you using the latest [nightly build](https://libgdx.badlogicgames.com/download.html)? Please try that first, as issues are being fixed every single day.
-  * Have you read the documentation on the [Table of Contents](/wiki/index)? It can also be very helpful to look at the [Javadocs](https://libgdx.badlogicgames.com/nightlies/docs/api/) and [source code](https://github.com/libgdx/libgdx) (don't be shy!). Search the [tests](https://github.com/libgdx/libgdx/tree/master/tests/gdx-tests/src/com/badlogic/gdx/tests) for a specific class to find example code.
+  * Are you using the latest nightly build? You can do so by changing `gdxVersion` in `build.gradle` to the snapshot version listed [on GitHub](https://github.com/libgdx/libgdx#readme). Please try that first, as issues are being fixed every single day.
+  * Have you read the documentation on the [Table of Contents](/wiki/index)? It can also be very helpful to look at the [Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx) and [source code](https://github.com/libgdx/libgdx) (don't be shy!). Search the [tests](https://github.com/libgdx/libgdx/tree/master/tests/gdx-tests/src/com/badlogic/gdx/tests) for a specific class to find example code.
   * Have you [searched on our Discord server](https://libgdx.com/community/discord/) for your problem?
   * Have you [searched the issue tracker](https://github.com/libgdx/libgdx/issues?q=is%3Aissue) for your problem? Be sure to search "All issues", not just "Open issues".
 

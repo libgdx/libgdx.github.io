@@ -1,7 +1,7 @@
 ---
 title: Networking
 ---
-libGDX includes some classes for cross-platform network operations. These classes are more commonly known as [Gdx.net](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Net.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/Net.java)
+libGDX includes some classes for cross-platform network operations. These classes are more commonly known as [Gdx.net](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Net.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/Net.java)
 
 # Features
 
@@ -53,7 +53,7 @@ Gdx.net.openURI(String URI)
 
 There are different technique to flexibly receive response back from HTTP request as shown above. Example in Kotlin as follows.
 
-1. Via class which implemented [HttpResponseListener](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Net.HttpResponseListener.html)
+1. Via class which implemented [HttpResponseListener](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Net.HttpResponseListener.html)
 
    For this, you have to create a class and implements `HTTPResponseListener`, then supply a method parameter with instance of such class.
 

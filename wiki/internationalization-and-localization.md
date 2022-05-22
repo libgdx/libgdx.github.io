@@ -7,7 +7,7 @@ Technically speaking, _internationalization_ is the process of designing a softw
  _Localization_ is the process of adapting internationalized software for a specific region or language by adding locale-specific components and translating text.
 Due to the length of the terms, both internationalization and localization are frequently abbreviated to i18n and l10n respectively, where 18 and 10 stand for the number of letters between the initial and the final letters of the respective words.
 
-In LibGDX, the [`I18NBundle` class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/I18NBundle.html) is used to store and fetch strings that are locale sensitive. A bundle allows you to easily provide different translations for your application.
+In LibGDX, the [`I18NBundle` class](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/utils/I18NBundle.html) is used to store and fetch strings that are locale sensitive. A bundle allows you to easily provide different translations for your application.
 
 
 ## Creating Properties Files
@@ -145,7 +145,7 @@ In particular:
 Format's type and style are not supported and cannot be used; otherwise an `IllegalArgumentException` is thrown.
 - **Non localizable arguments:** Formats are never localized, meaning that the arguments passed to the `format` method are converted to a string with the `toString` method, so without taking into account the bundle's locale.
 
-If your application can run on both GWT and non-GWT back-ends, you should call [I18NBundle.setSimpleFormat(true)](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/utils/I18NBundle.html#setSimpleFormatter%28boolean%29) when the application starts. This way all subsequent invocations of the factory method `createBundle` will create bundles having the same behavior on all back-ends.
+If your application can run on both GWT and non-GWT back-ends, you should call [I18NBundle.setSimpleFormat(true)](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/utils/I18NBundle.html#setSimpleFormatter%28boolean%29) when the application starts. This way all subsequent invocations of the factory method `createBundle` will create bundles having the same behavior on all back-ends.
 If you don't do this, you'll get the localized string `3,14` for the Italian locale on a non-GWT back-end (notice the comma and the rounding) and the non-localized string `3.1415927` for the same locale on the GWT back-end.
 On the contrary, if `simpleFormat` is set to `true` you'll get the non-localized string `3.1415927` for any locale on any back-end.
 
