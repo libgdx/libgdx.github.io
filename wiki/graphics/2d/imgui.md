@@ -58,13 +58,13 @@ IO.fonts.addFontFromFileTTF("extraFonts/ArialUni.ttf", 18f, glyphRanges = IO.fon
 ```
 
 # Option 2: [SpaiR's Bindings](https://github.com/SpaiR/imgui-java)
-### Required Dependencies
+### Required Dependencies for the LWJGL 3 Subproject
 ```groovy
-"io.github.spair:imgui-java-binding:<version>"
-"io.github.spair:imgui-java-lwjgl3:<version>"
-"io.github.spair:imgui-java-natives-linux:<version>"
-"io.github.spair:imgui-java-natives-macos:<version>"
-"io.github.spair:imgui-java-natives-windows:<version>"
+api "io.github.spair:imgui-java-binding:<version>"
+api "io.github.spair:imgui-java-lwjgl3:<version>"
+api "io.github.spair:imgui-java-natives-linux:<version>"
+api "io.github.spair:imgui-java-natives-macos:<version>"
+api "io.github.spair:imgui-java-natives-windows:<version>"
 ```
 
 ### Example Minimal Usage
