@@ -25,7 +25,7 @@ Follow the steps in the [Generating a Project](/wiki/start/project-generation) g
   * Package name: `com.badlogic.drop`
   * Game class: `Drop`
 
-Now fill in the destination. If you are interested in Android development, be sure to check that option an provide the Android SDK folder. For the purpose of this tutorial, we will uncheck the iOS sub project (as you would need OS X to run it) and all extensions (extensions are a more advanced topic).
+Now fill in the destination. If you are interested in Android development, be sure to check that option and provide the Android SDK folder. For the purpose of this tutorial, we will uncheck the iOS sub project (as you would need OS X to run it) and all extensions (extensions are a more advanced topic).
 
 Once imported into your IDE, you should have 5 projects or modules: the main one `drop`, and the sub projects `android` (or `drop-android` under Eclipse), `core` / `drop-core`, `desktop` / `drop-desktop`, and `html` / `drop-html`.
 
