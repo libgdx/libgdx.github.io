@@ -114,14 +114,14 @@ The awesome Zombie Age series returns with a lot more of savage zombies, deadly 
 ## [Deep Town](http://rockbitegames.com/deep-town/) by Rockbite Games
 <img align="right" src="https://play-lh.googleusercontent.com/LWZCyc_QVaXX1PBj3qByh38mc5ppWq3ZzevM8C4U13exF6JKMyO_JW9PEXSHZJ51Msw=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
 
-DIG DEEP and uncover the hidden story behind Deep Town and along the way discover story artifacts, dig deeper, and build mining stations to produce more resources! [[Android](https://play.google.com/store/apps/details?id=com.rockbite.deeptown&hl=en) / [iOS](https://apps.apple.com/us/app/deep-town-bergbaubetrieb/id1202240058)]
+DIG DEEP and uncover the hidden story behind Deep Town and along the way discover story artifacts, dig deeper, and build mining stations to produce more resources! [[Android](https://play.google.com/store/apps/details?id=com.rockbite.deeptown) / [iOS](https://apps.apple.com/us/app/deep-town-bergbaubetrieb/id1202240058)]
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
-## [Epic Heroes War](https://divmob.com/1700-epic-heroes-war.html) by DIVMOB
-<img align="left" src="https://play-lh.googleusercontent.com/2DsYF54m5GVjUVAuBedCfIw-O3F-sVo56FcDwwuQYz-aekdRwESRuXkNDDEF9Xc-kN8=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
+## [Let's Farm](https://www.facebook.com/letsfarmofficial) by Playday Games
+<img align="left" src="https://play-lh.googleusercontent.com/DPuKJ0C_FNTALF-m_0SL7eAdpbTOr-ETipzg2a8YFXY_kFjXv2ukgzkjF93U2eOfSdc=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
 
-Epic Heroes War is a real-time strategy game, online side-scroller defense combines RPG. Build up a powerful army and slaughter enemy hordes in quests and battles with other players! [[Android](https://play.google.com/store/apps/details?id=com.divmob.ageofheroes.braveheroes.battleheroes.epicheroeswar.epicheroes.en) / [iOS](https://apps.apple.com/us/app/epic-heroes-war/id1530763834)]
+Let's Farm is one of the most popular farming games on mobile! Grow your own crops, cook delicious food, feed lovely pets and trade with farmers from all over the world! [[Android](https://play.google.com/store/apps/details?id=letsfarm.com.playday) / [iOS](https://apps.apple.com/us/app/lets-farm/id911657164)]
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 

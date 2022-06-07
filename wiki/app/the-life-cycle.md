@@ -4,7 +4,7 @@ title: The life cycle
 A libGDX application has a well defined life-cycle, governing the states of an application, like creating, pausing and resuming, rendering and disposing the application.
 
 ## ApplicationListener
-An application developer hooks into these life-cycle events by implementing the [ApplicationListener](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/ApplicationListener.html) interface and passing an instance of that implementation to the `Application` implementation of a specific back-end (see [The Application Framework](/wiki/app/the-application-framework)). From there on, the `Application` will call the `ApplicationListener` every time an application level event occurs. A bare-bones `ApplicationListener` implementation may look like this:
+An application developer hooks into these life-cycle events by implementing the [ApplicationListener](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/ApplicationListener.html) interface and passing an instance of that implementation to the `Application` implementation of a specific back-end (see [The Application Framework](/wiki/app/the-application-framework)). From there on, the `Application` will call the `ApplicationListener` every time an application level event occurs. A bare-bones `ApplicationListener` implementation may look like this:
 
 ```java
 public class MyGame implements ApplicationListener {
@@ -28,7 +28,7 @@ public class MyGame implements ApplicationListener {
 }
 ```
 
-One can also derive from the [ApplicationAdapter](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/ApplicationAdapter.html) class, which provides empty default implementations for those methods.
+One can also derive from the [ApplicationAdapter](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/ApplicationAdapter.html) class, which provides empty default implementations for those methods.
 
 Once passed to the `Application`, the `ApplicationListener` methods will be called as follows:
 

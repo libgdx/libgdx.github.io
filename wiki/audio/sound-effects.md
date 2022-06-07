@@ -8,7 +8,7 @@ Sound effects can be stored in various formats, including MP3, OGG and WAV. Whic
 **Note:** On Android, a Sound instance can not be over 1mb in size (uncompressed raw PCM size, not the file size). If you have a bigger file, use [Music](/wiki/audio/streaming-music) instead.
 {: .notice--primary}
 
-Sound effects are represented by the [Sound](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/audio/Sound.html) interface. Loading a sound effect works as follows:
+Sound effects are represented by the [Sound](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/audio/Sound.html) interface. Loading a sound effect works as follows:
 
 ```java
 Sound sound = Gdx.audio.newSound(Gdx.files.internal("data/mysound.mp3"));

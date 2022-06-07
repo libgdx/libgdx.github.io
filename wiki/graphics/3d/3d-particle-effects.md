@@ -21,7 +21,7 @@ There are 3 different kinds of 3D particle effects:
 
 **ModelInstances** are familiar to you if you have done any 3D work in libgdx. They are instances of 3D models. Not surprisingly, this is the most taxing type of particle effect in terms of performance.
 
-Due to those differences, each particle effect type has its own dedicated batch renderer: [BillboardParticleBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/particles/batches/BillboardParticleBatch.html), [PointSpriteParticleBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/particles/batches/PointSpriteParticleBatch.html), [ModelInstanceParticleBatch](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g3d/particles/batches/ModelInstanceParticleBatch.html).
+Due to those differences, each particle effect type has its own dedicated batch renderer: [BillboardParticleBatch](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/particles/batches/BillboardParticleBatch.html), [PointSpriteParticleBatch](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/particles/batches/PointSpriteParticleBatch.html), [ModelInstanceParticleBatch](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/particles/batches/ModelInstanceParticleBatch.html).
 
 -----------------
 

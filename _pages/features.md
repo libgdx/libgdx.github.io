@@ -38,7 +38,7 @@ list2:
 list3:
   - "[Matrix, vector and quaternion](/wiki/math-utils/vectors-matrices-quaternions) classes; accelerated via native C code where possible (if you are interested in that, also note our [gdx-jnigen](/wiki/utils/jnigen) project)"
   - "[Bounding shapes and volumes as well as a Frustum class for picking and culling](/wiki/math-utils/circles-planes-rays-etc)"
-  - "[Intersection and overlap testing](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/math/Intersector.html)"
+  - "[Intersection and overlap testing](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/Intersector.html)"
   - "[Steering Behaviours, Formation Motion, Pathfinding, Behaviour Trees and Finite State Machines](https://github.com/libgdx/gdx-ai)"
   - "Common [interpolators](/wiki/math-utils/interpolation), different [spline implementations](/wiki/math-utils/path-interface-and-splines), concave polygon triangulators and more"
   - "2D physics: JNI wrapper for the popular [Box2D physics](/wiki/extensions/physics/box2d) (see also [Box2DLights](https://github.com/libgdx/box2dlights)). Alternatively, you can take a look at [jbump](https://github.com/implicit-invocation/jbump) for a simpler physics implementation."
@@ -64,7 +64,7 @@ list6:
       - "[Textures](/wiki/graphics/2d/spritebatch-textureregions-and-sprites)"
       - "[Framebuffer objects](/wiki/graphics/opengl-utils/frame-buffer-objects)"
       - "[Shaders](/wiki/graphics/opengl-utils/shaders), integrating easily with meshes"
-      - "[Immediate mode rendering](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ImmediateModeRenderer.html) emulation"
+      - "[Immediate mode rendering](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/glutils/ImmediateModeRenderer.html) emulation"
       - "Simple [shape rendering](/wiki/graphics/opengl-utils/rendering-shapes)"
       - "Automatic software or hardware mipmap generation"
       - "Automatic handling of OpenGL ES context loss"

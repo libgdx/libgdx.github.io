@@ -192,69 +192,69 @@ If excessive batch flushes are occurring due to transform being enabled on many 
 
 ### Table
 
-[The Table class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Table.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Table.java)) sizes and positions its children using a logical table, similar to HTML tables. Tables are intended to be used extensively in scene2d.ui to layout widgets, as they are easy to use and much more powerful than manually sizing and positioning widgets. Table-based layouts don't rely on absolute positioning and therefore automatically adjust to different widget sizes and screen resolutions.
+[The Table class](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Table.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Table.java)) sizes and positions its children using a logical table, similar to HTML tables. Tables are intended to be used extensively in scene2d.ui to layout widgets, as they are easy to use and much more powerful than manually sizing and positioning widgets. Table-based layouts don't rely on absolute positioning and therefore automatically adjust to different widget sizes and screen resolutions.
 
 It is highly recommended to read the [Table documentation](/wiki/graphics/2d/scene2d/table) before building a UI using scene2d.ui.
 
 ### Container
 
-[The Container class](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Container.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Container.java)) is equivalent to a Table with only a single child, but is more lightweight. Container has all of the constraints of a table cell and is useful for setting the size and alignment of a single widget. If you implement with Scene2D, Container presents to you a much better personal development experience if you encounter trouble adjusting values for alignments and sizes for whatever an object holds and supports. While the advantages of this class generally work best within a Table object, you may still find a benefit in certain scenarios even outside of such code.
+[The Container class](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Container.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Container.java)) is equivalent to a Table with only a single child, but is more lightweight. Container has all of the constraints of a table cell and is useful for setting the size and alignment of a single widget. If you implement with Scene2D, Container presents to you a much better personal development experience if you encounter trouble adjusting values for alignments and sizes for whatever an object holds and supports. While the advantages of this class generally work best within a Table object, you may still find a benefit in certain scenarios even outside of such code.
 
 ### Stack
 
-[Stack](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Stack.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Stack.java)) is a WidgetGroup that lays out each child to be the size of the stack. This is useful when it is necessary to have widgets stacked on top of each other. The first widget added to the stack is drawn on the bottom, and the last widget added is drawn on the top.
+[Stack](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Stack.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Stack.java)) is a WidgetGroup that lays out each child to be the size of the stack. This is useful when it is necessary to have widgets stacked on top of each other. The first widget added to the stack is drawn on the bottom, and the last widget added is drawn on the top.
 
 ### ScrollPane
 
-[ScrollPane](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/ScrollPane.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/ScrollPane.java)) scrolls a child widget using scrollbars and/or mouse or touch dragging. Scrolling is automatically enabled when the widget is larger than the scroll pane. If the widget is smaller than the scroll pane in one direction, it is sized to the scroll pane in that direction. ScrollPane has many settings for if and how touches control scrolling, fading scrollbars, etc. ScrollPane has drawables for the background, horizontal scrollbar and knob, and vertical scrollbar and knob. If touches are enabled (the default), all the drawables are optional.
+[ScrollPane](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/ScrollPane.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/ScrollPane.java)) scrolls a child widget using scrollbars and/or mouse or touch dragging. Scrolling is automatically enabled when the widget is larger than the scroll pane. If the widget is smaller than the scroll pane in one direction, it is sized to the scroll pane in that direction. ScrollPane has many settings for if and how touches control scrolling, fading scrollbars, etc. ScrollPane has drawables for the background, horizontal scrollbar and knob, and vertical scrollbar and knob. If touches are enabled (the default), all the drawables are optional.
 
 Note: ScrollPane doesn't support well children that dynamically change their size or move while dragging them. Having a children in your scrollpane that move while being dragged will make the ScrollPane flicker.
 
 ### SplitPane
 
-[SplitPane](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/SplitPane.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/SplitPane.java)) contains two widgets and is divided in two either horizontally or vertically. The user may resize the widgets with a draggable splitter. The child widgets are always sized to fill their half of the splitpane. SplitPane has a drawable for the draggable splitter.
+[SplitPane](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/SplitPane.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/SplitPane.java)) contains two widgets and is divided in two either horizontally or vertically. The user may resize the widgets with a draggable splitter. The child widgets are always sized to fill their half of the splitpane. SplitPane has a drawable for the draggable splitter.
 
 ### Tree
 
-[Tree](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Tree.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Tree.java)) displays a hierarchy of nodes. Each node may have child nodes and can be expanded or collapsed. Each node has an actor, allowing complete flexibility over how each item is displayed. Tree has drawables for the plus and minus icons next to each node's actor.
+[Tree](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Tree.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Tree.java)) displays a hierarchy of nodes. Each node may have child nodes and can be expanded or collapsed. Each node has an actor, allowing complete flexibility over how each item is displayed. Tree has drawables for the plus and minus icons next to each node's actor.
 
 ### VerticalGroup
 
-A [VerticalGroup](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/VerticalGroup.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/VerticalGroup.java)) is equivalent to a Table with only a single column, but is more lightweight. VerticalGroup allows widgets to be inserted in the middle and removed, while Table does not.
+A [VerticalGroup](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/VerticalGroup.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/VerticalGroup.java)) is equivalent to a Table with only a single column, but is more lightweight. VerticalGroup allows widgets to be inserted in the middle and removed, while Table does not.
 
 ### HorizontalGroup
 
-A [HorizontalGroup](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/HorizontalGroup.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/HorizontalGroup.java)) is equivalent to a Table with only a single row, but is more lightweight. HorizontalGroup allows widgets to be inserted in the middle and removed, while Table does not.
+A [HorizontalGroup](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/HorizontalGroup.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/HorizontalGroup.java)) is equivalent to a Table with only a single row, but is more lightweight. HorizontalGroup allows widgets to be inserted in the middle and removed, while Table does not.
 
 ## Widgets
 
 ### Label
 
-[Label](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Label.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Label.java)) displays text using a bitmap font and a color. The text may contain newlines. Word wrap may be enabled, in which case the width of the label should be set by the parent. The lines of text can be aligned relative to each other, and also all of the text aligned within the label widget.
+[Label](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Label.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Label.java)) displays text using a bitmap font and a color. The text may contain newlines. Word wrap may be enabled, in which case the width of the label should be set by the parent. The lines of text can be aligned relative to each other, and also all of the text aligned within the label widget.
 
 The labels that use the same font will be the same size, though they may have different colors. Bitmap fonts don't typical scale well, especially at small sizes. It is suggested to use a separate bitmap font for each font size. The bitmap font image should be packed into the skin's atlas to reduce texture binds.
 
-To create a label which contain text with different colors, the [BitmapFont](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/BitmapFont.html) used to create the label should have markup enabled by setting it in the [BitmapFont.BitmapFontData](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/BitmapFont.BitmapFontData.html) object passed via the constructor. If you're using the [AssetManager](/wiki/managing-your-assets), you can pass this data by passing an appropriate [BitmapFontParameter](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/loaders/BitmapFontLoader.BitmapFontParameter.html) object when you call [load](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/assets/AssetManager.html#load-java.lang.String-java.lang.Class-com.badlogic.gdx.assets.AssetLoaderParameters-).
+To create a label which contain text with different colors, the [BitmapFont](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g2d/BitmapFont.html) used to create the label should have markup enabled by setting it in the [BitmapFont.BitmapFontData](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g2d/BitmapFont.BitmapFontData.html) object passed via the constructor. If you're using the [AssetManager](/wiki/managing-your-assets), you can pass this data by passing an appropriate [BitmapFontParameter](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/assets/loaders/BitmapFontLoader.BitmapFontParameter.html) object when you call [load](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/assets/AssetManager.html#load-java.lang.String-java.lang.Class-com.badlogic.gdx.assets.AssetLoaderParameters-).
 
 ### Image
 
-[Image](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Image.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Image.java)) simply displays a drawable. The drawable can be a texture, texture region, ninepatch, sprite, etc. The drawable may be scaled and aligned within the image widget bounds in various ways.
+[Image](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Image.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Image.java)) simply displays a drawable. The drawable can be a texture, texture region, ninepatch, sprite, etc. The drawable may be scaled and aligned within the image widget bounds in various ways.
 
 For a tutorial on using Image (Create, rotate, resize and creating images with repeating texture [see this Image tutorial](https://libgdxinfo.wordpress.com/basic_image/))
 
 ### Button
 
-[Button](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Button.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Button.java)) by itself it is just an empty button, but it extends table so other widgets can be added to it. It has an `up` background that is normally displayed, and a `down` background that is displayed when pressed. It has a checked state which is toggled each time it is clicked, and when checked it will use the `checked` background instead of `up`, if defined. It also has pressed/unpressed offsets, which offset the entire button contents when pressed/unpressed.
+[Button](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Button.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Button.java)) by itself it is just an empty button, but it extends table so other widgets can be added to it. It has an `up` background that is normally displayed, and a `down` background that is displayed when pressed. It has a checked state which is toggled each time it is clicked, and when checked it will use the `checked` background instead of `up`, if defined. It also has pressed/unpressed offsets, which offset the entire button contents when pressed/unpressed.
 
 ### TextButton
 
-[TextButton](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/TextButton.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/TextButton.java)) extends Button and contains a label. TextButton adds to Button a bitmap font and a colors for the text in the up, down, and checked states.
+[TextButton](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/TextButton.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/TextButton.java)) extends Button and contains a label. TextButton adds to Button a bitmap font and a colors for the text in the up, down, and checked states.
 
 TextButton extends Button which extends Table, so widgets can be added to the TextButton using the Table methods.
 
 ### ImageButton
 
-[ImageButton](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/ImageButton.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/ImageButton.java)) extends Button and contains an image widget. ImageButton adds to Button a drawables for the image widget in the up, down, and checked states.
+[ImageButton](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/ImageButton.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/ImageButton.java)) extends Button and contains an image widget. ImageButton adds to Button a drawables for the image widget in the up, down, and checked states.
 
 Note that ImageButton extends Button, which already has a background drawable for the up, down, and checked states. ImageButton is only needed when it is desired to have a drawable (such as an icon) on top of the button background.
 
@@ -262,52 +262,52 @@ ImageButton extends Button which extends Table, so widgets can be added to the I
 
 ### CheckBox
 
-[CheckBox](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/CheckBox.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/CheckBox.java)) extends TextButton and adds an image widget to the left of the label. It has a drawable for the image widget for the checked and unchecked states.
+[CheckBox](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/CheckBox.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/CheckBox.java)) extends TextButton and adds an image widget to the left of the label. It has a drawable for the image widget for the checked and unchecked states.
 
 ### ButtonGroup
 
-[ButtonGroup](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/ButtonGroup.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/ButtonGroup.java)) is not an actor and has no visuals. Buttons are added to it and it enforces a minimum and maximum number of checked buttons. This allows for buttons (button, text button, checkbox, etc) to be used as "radio" buttons.
+[ButtonGroup](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/ButtonGroup.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/ButtonGroup.java)) is not an actor and has no visuals. Buttons are added to it and it enforces a minimum and maximum number of checked buttons. This allows for buttons (button, text button, checkbox, etc) to be used as "radio" buttons.
 
 ### TextField
 
-[TextField](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/TextField.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/TextField.java)) is a single line text entry field. It has drawables for the background, text cursor, and text selection, a font and font color for the entered text, and a font and font color for the message displayed when the text field is empty. Password mode can be enabled, where it will display asterisks instead of the entered text.
+[TextField](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/TextField.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/TextField.java)) is a single line text entry field. It has drawables for the background, text cursor, and text selection, a font and font color for the entered text, and a font and font color for the message displayed when the text field is empty. Password mode can be enabled, where it will display asterisks instead of the entered text.
 
 ### TextArea
 
-[TextArea](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/TextArea.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/TextArea.java)) is similiar to a TextField, but allows multiple line text entry.
+[TextArea](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/TextArea.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/TextArea.java)) is similiar to a TextField, but allows multiple line text entry.
 
 ### List
 
-[List](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/List.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/List.java)) is a list box that displays textual items and highlights the selected item. List has a font, selected item background drawable, and a font color for selected and unselected items. A list does not scroll on its own, but is often put in a scrollpane.
+[List](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/List.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/List.java)) is a list box that displays textual items and highlights the selected item. List has a font, selected item background drawable, and a font color for selected and unselected items. A list does not scroll on its own, but is often put in a scrollpane.
 
 ### SelectBox
 
-[SelectBox](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/SelectBox.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/SelectBox.java)) is a drop-down list, it allows one of a number of values to be chosen from a list. When inactive, the selected value is displayed. When activated, it shows the list of values that may be selected. SelectBox has drawables for the background, list background, and selected item background, a font and font color, and a setting for how much spacing is used between items.
+[SelectBox](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/SelectBox.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/SelectBox.java)) is a drop-down list, it allows one of a number of values to be chosen from a list. When inactive, the selected value is displayed. When activated, it shows the list of values that may be selected. SelectBox has drawables for the background, list background, and selected item background, a font and font color, and a setting for how much spacing is used between items.
 
 ### ProgressBar
 
-[ProgressBar](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/ProgressBar.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/ProgressBar.java)) is a widget that visually displays the progress of some activity or a variable value within a given range. The progress bar has a range (min, max) and a stepping between each value it represents. The percentage of completeness typically starts out as an empty progress bar and gradually becomes filled in as the task or value increases towards upper limit.
+[ProgressBar](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/ProgressBar.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/ProgressBar.java)) is a widget that visually displays the progress of some activity or a variable value within a given range. The progress bar has a range (min, max) and a stepping between each value it represents. The percentage of completeness typically starts out as an empty progress bar and gradually becomes filled in as the task or value increases towards upper limit.
 
 A progress bar can be setup to be of horizontal or vertical orientation, although the increment direction is always the same. For horizontal progress bar, is grows to the right, for vertical, upwards. Animation for changes to the progress bar value can be enabled to make the bar fill more smoothly over time.
 
 ### Slider
 
-[Slider](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Slider.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Slider.java)) is a horizontal indicator that allows a user to set a value. The slider has a range (min, max) and a stepping between each value the slider represents. Slider has drawables for the background, the slider knob, and for the portion of the slider before and after the knob.
+[Slider](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Slider.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Slider.java)) is a horizontal indicator that allows a user to set a value. The slider has a range (min, max) and a stepping between each value the slider represents. Slider has drawables for the background, the slider knob, and for the portion of the slider before and after the knob.
 
 A slider with touches disabled, a drawable before the knob, and without the knob can be used as a substitute for progress bar, as both widgets share the same codebase and use same visual style. Animation for changes to the slider value can be enabled to make the progress bar fill more smoothly.
 
 
 ### Window
 
-[Window](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Window.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Window.java)) is a table with a title bar area above the contents that displays a title. It can optionally act as a modal dialog, preventing touch events to widgets below. Window has a background drawable and a font and font color for the title.
+[Window](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Window.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Window.java)) is a table with a title bar area above the contents that displays a title. It can optionally act as a modal dialog, preventing touch events to widgets below. Window has a background drawable and a font and font color for the title.
 
 ### Touchpad
 
-[Touchpad](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Touchpad.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Touchpad.java)) is an onscreen joystick that moves in a circular area. It has a background drawable and a drawable for the knob that the user drags around. If you want to implement a "follow mode" for your joystick element, check out the example [here](https://github.com/libgdx/libgdx/issues/6688#issuecomment-962640273).
+[Touchpad](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Touchpad.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Touchpad.java)) is an onscreen joystick that moves in a circular area. It has a background drawable and a drawable for the knob that the user drags around. If you want to implement a "follow mode" for your joystick element, check out the example [here](https://github.com/libgdx/libgdx/issues/6688#issuecomment-962640273).
 
 ### Dialog
 
-[Dialog](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/scenes/scene2d/ui/Dialog.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Dialog.java)) is a window with a content table and a button table underneath. Anything can be added to the dialog, but convenience methods are provided to add a label to the content table and buttons to the button table.
+[Dialog](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/scenes/scene2d/ui/Dialog.html) ([code](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/scenes/scene2d/ui/Dialog.java)) is a window with a content table and a button table underneath. Anything can be added to the dialog, but convenience methods are provided to add a label to the content table and buttons to the button table.
 
 ## Widgets without scene2d.ui
 

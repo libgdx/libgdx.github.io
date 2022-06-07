@@ -3,7 +3,7 @@ title: Playing PCM audio
 ---
 The audio module can provide you direct access to the audio hardware for writing [PCM samples](https://en.wikipedia.org/wiki/Pulse-code_modulation) to it.
 
-The audio hardware is abstracted via the [AudioDevice](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/audio/AudioDevice.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/audio/AudioDevice.java) interface.
+The audio hardware is abstracted via the [AudioDevice](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/audio/AudioDevice.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/audio/AudioDevice.java) interface.
 
 To create a new `AudioDevice` instance we do the following:
 

@@ -19,7 +19,7 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## June 2022
+## [June 2022](/news/2022/06/jam-june-2022)
 Jam Suggestions: 12th-14th  
 Jam Voting: 16th-18th  
 Jam: 19th-25th

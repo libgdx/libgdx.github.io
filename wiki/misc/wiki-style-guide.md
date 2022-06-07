@@ -21,13 +21,13 @@ We use Markdown to format this wiki. To learn your way around this, here is GitH
 ## Linking to code/docs
 Links to code/docs should be done as follows: `[ClassName](link to docs) [(code)](link to code)`. For example:
 ```
-[Texture](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html)
+[Texture](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Texture.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Texture.java)
 ```
 
 renders the following:
 
-[Texture](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html)
+[Texture](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Texture.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/Texture.java)
 
 Don't use non-alphabetic characters in Wiki page names, because not all operating systems can handle
@@ -38,11 +38,11 @@ them when cloning Wiki as Git repository (for example, Windows doesn't support "
 - Please make the format `ClassName (Code)` with the word `Code`, not `Source` or any derivative of that. Consistency is key!
 - If a link to documentation ends in a right parenthesis `)`, it will mess up the markdown. Take this example:
    ```
-   https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth()
+   https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Texture.html#getWidth()
    ```
    When using the markdown formatting of `[]()` the end parenthesis will mess up the link, so please remember to escape the ending parenthesis (`)`). In the example, it should be:
    ```markdown
-   [Link to Texture#getWidth](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/Texture.html#getWidth(\))
+   [Link to Texture#getWidth](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/Texture.html#getWidth(\))
    ```
    Without the escaped parenthesis, a 404 is imminent!
 {% endcapture %}

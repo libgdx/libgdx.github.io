@@ -38,7 +38,7 @@ If you want to explore some other (third-party) tutorials or inspect some demos/
 # Documentation
 The libGDX codebase is documented in two ways:
 - In our [Wiki](/wiki/)
-- And via [Javadocs](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/)
+- And via [Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx)
 
 <br/>
 

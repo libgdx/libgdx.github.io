@@ -14,7 +14,7 @@ A NinePatch image is an image with defined "stretchable" areas. With this
 property one can create images that repeats either to very small
 regions, or scale to very big regions. Since the areas are pre-defined,
 the image won't look stretched (given that it has been created with
-scaling in mind). The corresponding NinePatch class in libGDX is located [here](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/NinePatch.html)
+scaling in mind). The corresponding NinePatch class in libGDX is located [here](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g2d/NinePatch.html)
 [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/graphics/g2d/NinePatch.java).
 
 A NinePatch is used in various of the Scene2d components of Libgdx,
@@ -128,7 +128,7 @@ code.
 
 ## Defining a NinePatch programmatically
 
-See [this](https://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/graphics/g2d/NinePatch.html#NinePatch%28com.badlogic.gdx.graphics.Texture,%20int,%20int,%20int,%20int%29) NinePatch constructor.
+See [this](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g2d/NinePatch.html#NinePatch%28com.badlogic.gdx.graphics.Texture,%20int,%20int,%20int,%20int%29) NinePatch constructor.
 
 ![images/ninepatches7.png](/assets/wiki/images/ninepatches7.png)
 
