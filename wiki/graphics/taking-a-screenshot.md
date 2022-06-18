@@ -12,7 +12,7 @@ Pixmap pixmap = Pixmap.createFromFrameBuffer(0, 0, Gdx.graphics.getBackBufferWid
 ByteBuffer pixels = pixmap.getPixels();
 
 // This loop makes sure the whole screenshot is opaque and looks exactly like what the user is seeing
-int size = Gdx.graphics.getBackBufferWidth()*Gdx.graphics.getBackBufferHeight()*4;
+int size = Gdx.graphics.getBackBufferWidth() * Gdx.graphics.getBackBufferHeight() * 4;
 for (int i = 3; i < size; i += 4) {
 	pixels.put(i, (byte) 255);
 }
