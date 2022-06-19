@@ -1,7 +1,7 @@
 ---
 title: Taking a Screenshot
 ---
-Screenshots are easy in libGDX!
+Screenshots are easy in libGDX! Only the GWT backend needs some additional steps, outlined [here](https://github.com/libgdx/libgdx.github.io/pull/108#issuecomment-1159568204).
 
 ## Post processing to guarantee clarity
 
