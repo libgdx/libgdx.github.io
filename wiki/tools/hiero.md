@@ -110,4 +110,4 @@ The [bmglyph](http://www.bmglyph.com/) tool is for OS X only and hasn't been eva
 
 ### Littera
 
-[https://kvazars.com/littera/littera.swf](https://kvazars.com/littera/littera.swf) (requires [Adobe Flash Player](https://www.adobe.com/support/flashplayer/debug_downloads.html))
+[https://kvazars.com/littera/littera.swf](https://kvazars.com/littera/littera.swf) (requires [Adobe Flash Player](https://archive.org/details/flashplayer32_0r0_363_win_sa))
