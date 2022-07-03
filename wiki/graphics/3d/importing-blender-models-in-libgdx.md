@@ -17,7 +17,7 @@ Make sure to use the Action Editor for you animation of your models. The name yo
 ![images/800px-Doc26-actionEditor.png](/assets/wiki/images/800px-Doc26-actionEditor.png)
 
 ### Exporting to FBX and converting to G3DB
-**Note:** _see this project [here](https://github.com/Dancovich/libgdx_blender_g3d_exporter) which converts directly from .blend files. *For Blender versions 2.8 and 2.9 this plugin appears to no longer work._
+**Note:** _see this project [here](https://github.com/haz00/blender-g3d-exporter)) which converts directly from .blend files. *For Older Blender versions <2.8, check this project: [here](https://github.com/Dancovich/libgdx_blender_g3d_exporter)._
 
 The default (preferred) method is to export to FBX. Make sure you select all and only those options (e.g. nodes and animations) you want to actually include. Don't include your camera, lights, etc. Next download the latest version of [fbx-conv](https://github.com/libgdx/fbx-conv) and convert the FBX file to G3DB. You'll need to flip texture coordinates by using the `-f` commandline option.
 `fbx-conv -f file.fbx`
