@@ -138,5 +138,14 @@ Emitter emitter = pfx.getControllers().first().emitter;
 		}
 ```
 
-### Simple examples
+### Simple Examples
 A simplified example of the above GdxTest.java can be found [here](https://github.com/SeanFelipe/SimpleParticles3d/blob/master/java/core/src/sbourges/game/gdxtest/GdxTest.java).
+
+
+### Custom Textures
+In order to create new particle images, you must save them as RGBA PNG with exactly 8 bytes per channel otherwise they will not be rendered properly.
+
+GIMP Settings:
+
+![gimp](https://user-images.githubusercontent.com/1824878/177935714-039f11df-d022-487c-9dc6-a372e1f02110.png)
+
