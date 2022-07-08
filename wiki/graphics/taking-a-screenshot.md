@@ -1,7 +1,7 @@
 ---
 title: Taking a Screenshot
 ---
-Screenshots are easy in libGDX! Only the GWT backend needs some additional steps, outlined [here](https://github.com/libgdx/libgdx.github.io/pull/108#issuecomment-1159568204).
+Screenshots are easy in libGDX!
 
 ## Post processing to guarantee clarity
 
@@ -20,6 +20,8 @@ for (int i = 3; i < size; i += 4) {
 PixmapIO.writePNG(Gdx.files.external("mypixmap.png"), pixmap, Deflater.DEFAULT_COMPRESSION, true);
 pixmap.dispose();
 ```
+
+The **GWT backend has some limitations** in this regard, which require additional steps outlined [here](https://github.com/libgdx/libgdx.github.io/pull/108#issuecomment-1175176650).
 
 ## No post-processing
 
