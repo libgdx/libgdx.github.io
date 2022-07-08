@@ -83,7 +83,8 @@ Right click the desktop project -> Run
 
 ![](/assets/images/dev/idea/2.png)
 
-3. Select the provisioning profile and simulator/device target
+3. Select the provisioning profile and simulator/device target <br>
+NOTE: arm64 simulators are not working by default. Either use x86_64 or use the MetalANGLE RoboVM backend instead ("com.badlogicgames.gdx:gdx-backend-robovm-metalangle:$gdxVersion")
 4. Run the created run configuration
 
 For more information on using and configuring the RoboVM IntelliJ plugin please see the [documentation](http://robovm.mobidevelop.com).
