@@ -20,7 +20,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 - JDK: is provided by Android Studio
 - IDE itself: [Android Studio](https://developer.android.com/studio)
 - Android: is offered out-of-the-box
-- For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
+- For iOS: [RoboVM OSS IntelliJ plugin](https://mobivm.github.io)
 
 ## (2.) IDEA
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
@@ -29,7 +29,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
    {: .notice--warning}
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) (the "Community" edition is sufficient)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
-- For iOS: [RoboVM OSS IntelliJ plugin](http://robovm.mobidevelop.com)
+- For iOS: [RoboVM OSS IntelliJ plugin](https://mobivm.github.io)
 
 ## (3.) Eclipse
 - JDK 8+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
@@ -38,7 +38,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
    {: .notice--warning}
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
 - Android: not officially supported, but you may have success with [Andmore](https://projects.eclipse.org/projects/tools.andmore) or tinkering around with an older [ADT](https://marketplace.eclipse.org/content/android-development-tools-eclipse) version
-- For iOS: [RoboVM OSS Eclipse plugin](http://robovm.mobidevelop.com)
+- For iOS: [RoboVM OSS Eclipse plugin](https://mobivm.github.io)
 
 ## (4.) Other IDEs
 Of course you can also use any other IDE for Java, e.g. NetBeans, Visual Studio Code or even AIDE. However, as those are not commonly used in the libGDX community, it may prove difficult to get any help if IDE-specific issues arise!
