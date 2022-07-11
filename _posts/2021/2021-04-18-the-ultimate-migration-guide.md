@@ -59,6 +59,7 @@ First things first: be sure to bring the versions of gradle, any plugins and you
 ## Miscellaneous
 - [1.9.11] `Base64Coder#encodeString()` uses `UTF-8` instead of the platform default encoding ([#6061](https://github.com/libgdx/libgdx/pull/6061)).
 - [1.9.11] Changed `TiledMapTileLayer#tileWidth` & `#tileHeight` from float to int.
+- [1.9.12] `Table#round` now uses `ceil`/`floor` and is applied during layout, rather than afterwards. This may slightly alter the way your UI looks. `table.setRound(false)` should be able to mitigate some of these effects.
 - [1.9.13] `TextureAtlas.AtlasRegion` and `Region` `splits` and `pads` fields have been removed and moved to name/value pairs. Use `#findValue("split")` and `#findValue("pad")` instead ([#6316](https://github.com/libgdx/libgdx/pull/6316)).
 - **[1.10.0] The JCenter repository is shutting down. To update your libGDX Gradle projects, open the main** `build.gradle` **file in your project and in both of the two** `repositories {}` **sections replace** `jcenter()` **with** `gradlePluginPortal()`**.**
 - [1.10.0] `Scaling` is now an object instead of an enum. This may change behaviour when used with serialisation.
@@ -92,3 +93,13 @@ Execution failed for task ':html:beforeRun'.
    > Could not find org.gretty:gretty-runner-jetty94:3.0.2.
 ```
 The Gretty dependency could not be resolved, because the corresponding repository is missing. Open the main `build.gradle` file in your project and in both of the two `repositories {}` sections add `gradlePluginPortal()`.
+
+### 4. Could not find gdx-platform-1.10.0-natives-armeabi.jar
+```
+Execution failed for task ':android:copyAndroidNatives'.
+> Could not resolve all files for configuration ':android:nativesCopy'.
+> Could not find gdx-platform-1.10.0-natives-armeabi.jar (com.badlogicgames.gdx:gdx-platform:1.10.0).
+     Searched in the following locations:
+         https://repo.maven.apache.org/maven2/com/badlogicgames/gdx/gdx-platform/1.10.0/gdx-platform-1.10.0-natives-armeabi.jar 
+```
+The `natives-armeabi` qualifier no longer exists and thus corresponding dependencies have to be removed. Check out the [Android section](#android) above.
