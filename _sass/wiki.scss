@@ -92,6 +92,13 @@ article.page {
   .wiki_toc__menu a:visited {
       color: #0969da;
   }
+  .wiki_toc__menu summary {
+      color: #2f7d95;
+  }
+  .wiki_toc__menu summary:hover {
+      text-decoration: underline;
+      cursor: pointer;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -113,6 +120,13 @@ article.page {
   }
   .wiki_toc__menu a:visited {
       color: #2f7d95;
+  }
+  .wiki_toc__menu summary {
+      color: #2f7d95;
+  }
+  .wiki_toc__menu summary:hover {
+      text-decoration: underline;
+      cursor: pointer;
   }
 }
 
