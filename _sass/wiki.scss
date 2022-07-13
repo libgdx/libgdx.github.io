@@ -342,6 +342,10 @@ ul {
     padding-inline-start: 40px;
 }
 
+details > summary {
+    cursor: pointer;
+}
+
 // WIKI COPYRIGHT FOOTER
 @media (prefers-color-scheme: light) {
   .copyright_footer {
