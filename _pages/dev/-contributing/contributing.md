@@ -22,7 +22,7 @@ If you want to submit code back to the project, please take a moment to review o
 ## API Changes & Additions
 If you modify a public API, or add a new one, make sure to add these changes to the [CHANGES](https://github.com/libgdx/libgdx/blob/master/CHANGES) file in the root of the repository.
 
-If you want to poll the brains of other devs, either open an issue on our issue tracker, send a pull request and start a conversation on Github, or join our official [Discord server](/community/discord/).
+If you want to pick the brains of other devs, either open an issue on our issue tracker, send a pull request and start a conversation on Github, or join our official [Discord server](/community/discord/).
 
 ## Contributor License Agreement
 libGDX is licensed under the [Apache 2.0 license](http://en.wikipedia.org/wiki/Apache_License). Before we can accept (major) code contributions, we need you to sign our [Contributor License Agreement](https://github.com/libgdx/libgdx/blob/master/CLA.txt). Just print it out, fill in the blanks and send a copy to contact@badlogicgames.com, with the subject `[libGDX] CLA`.
@@ -31,12 +31,9 @@ Signing the CLA will allow us to use and distribute your code. This is a non-exc
 {: .notice--info}
 
 ## Formatting
-If you are working on any of the libGDX code, we require you to use our formatter. Failure to do so will get your pull request rejected. You can find the Eclipse formatter file [here](https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml), which can also be imported into IntelliJ and Android Studio. See [here](https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/) for official documentation on this.
+If you are working on any of the libGDX code, we require you to use our formatter. To make our life easier, we have integrated the formatter into our build system with  [Spotless](https://github.com/diffplug/spotless). This allows you to run `./gradlew spotlessApply` to format your files locally and also ensures that pull requests are formatted automatically via GitHub Actions.
 
-To make our life easier, we used [Spotless](https://github.com/diffplug/spotless) to integrate the formatter into our build system, so you don't have to put up with the hassle of importing it into your IDE. Just run `./gradlew spotlessApply` and your edited files are formatted correctly.
-
-Please note that the CI build will fail, if the files are not formatted correctly!
-{: .notice--info}
+Alternatively, you can find the Eclipse formatter file [here](https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml), which can also be imported into IntelliJ and Android Studio. See [here](https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/) for official documentation on how to do this.
 
 ## Code Style
 libGDX doesn't have an official coding standard, but we stand by the usual Java style, as should you.
