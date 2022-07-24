@@ -13,15 +13,15 @@ The Material class extends the Attributes class, see below for more information 
 
 ## Environment
 
-An Environment contains the uniform values specific for a location. For example, the lights are part of the Environment. Simple applications might use only Environment, while more complex applications might use multiple environments depending on the location of a ModelInstance. A ModelInstance (or Renderable) can only contain one Environment though.
+An Environment contains the uniform values specific for a location. For example, the lights are part of the Environment. Simple applications might use only one Environment, while more complex applications might use multiple environments depending on the location of a ModelInstance. A ModelInstance (or Renderable) can only contain one Environment though.
 
 The Environment class extends the Attributes class, see below for more information about Attributes.
 
 ### Lights
 
-Since version 1.5.7 lights are moved to attributes, which means that you can attach a light to either an environment or a material. Adding a light to an environment can still be done using the [`environment.add(light)`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/Environment.html#add-com.badlogic.gdx.graphics.g3d.environment.BaseLight-) method. However, you can also use the `DirectionalLightsAttribute`, `PointLightsAttribute` and `SpotLightsAttribute` attributes (see below). Each of these attributes has an array which you can use to attach one or more lights to it. Note however that you typically can only use one of both. If you add a light to the `PointLightsAttribute` of the environment and then add another light to the `PointLightsAttribute` of the material, then the `DefaultShader` will ignore the point light(s) added to the environment. Lights are always used by reference.
+Lights use attributes as well, which means that you can attach a light to either an environment or a material. Adding a light to an environment can be done using the [`environment.add(light)`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/Environment.html#add-com.badlogic.gdx.graphics.g3d.environment.BaseLight-) method. However, you can also use the `DirectionalLightsAttribute`, `PointLightsAttribute` and `SpotLightsAttribute` attributes (see below). Each of these attributes has an array which you can use to attach one or more lights to it. Note however that you typically can only use one of both. If you add a light to the `PointLightsAttribute` of the environment and then add another light to the `PointLightsAttribute` of the material, then the `DefaultShader` will ignore the point light(s) added to the environment. Lights are always used by reference.
 
-Lights should be sorted by importance. Usually this means that lights should be sorted on distance. The `DefaultShader` for example by default [(configurable)](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.Config.html#numPointLights) only uses the first five point lights for shader lighting. Any remaining lights will be added to an ambient cubemap which is much less accurate.
+Lights should be sorted by importance. Usually this means that lights should be sorted on distance. The `DefaultShader` for example by default [(configurable)](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g3d/shaders/DefaultShader.Config.html#numPointLights) only uses the first five point lights for shader lighting. Any remaining lights will be ignored.
 
 ## Attributes
 
