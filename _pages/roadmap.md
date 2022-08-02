@@ -33,7 +33,7 @@ There are also a lot of other improvements in the works, which may not be not bi
   <tr>
     <td><h4>Box2D Update</h4>
     <br>In July 2020, the original <a href="https://github.com/erincatto/box2d">Box2D</a> received its first update in over 6 years! Now we're working to include those changes in libGDX.<sup><a href="https://github.com/libgdx/libgdx/issues/5948#issuecomment-727643568">1</a></sup></td>
-    <td>{% include status.html is='wip' %}</td>
+    <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
     <td><h4>Console Support</h4>
@@ -43,17 +43,17 @@ There are also a lot of other improvements in the works, which may not be not bi
   <tr>
     <td><h4>Geometry/Tesselation/Compute Shaders</h4>
     <br>We really want to look into geometry, tesselation and compute shaders. However, we can't give any promises yet, as this is still just a far-off idea.<sup><a href="https://github.com/libgdx/libgdx/pull/4963">1</a>, <a href="https://github.com/mgsx-dev/libgdx/tree/modern-shaders/compute">2</a></sup></td>
-    <td>{% include status.html is='planned' %}</td>
+    <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
     <td><h4>gdx-video Resurrection</h4>
     <br>We have some plans drawn up to revive the old <a href="https://github.com/libgdx/gdx-video">gdx-video</a> extension. The first snapshots are now available!</td>
-    <td>{% include status.html is='wip' %}</td>
+    <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
-    <td><h4>GL ES 3.1 Support</h4>
-    <br>Currently, the libGDX backends are aimed at offering support for OpenGL ES 2.0 and 3.0. This could be expanded to include the feature set of OpenGL ES 3.1.<sup><a href="https://github.com/libgdx/libgdx/pull/4628">1</a></sup></td>
-    <td>{% include status.html is='planned' %}</td>
+    <td><h4>GL ES 3.1 and 3.2 Support</h4>
+    <br>Currently, the libGDX backends are aimed at offering support for OpenGL ES 2.0 and 3.0. This could be expanded to include the feature set of OpenGL ES 3.1 and 3.2.<sup><a href="https://github.com/libgdx/libgdx/pull/4628">1</a>, <a href="https://github.com/libgdx/libgdx/pull/6945">2</a></sup></td>
+    <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
     <td><h4>GWT 2.9.0</h4>
@@ -73,7 +73,7 @@ There are also a lot of other improvements in the works, which may not be not bi
   <tr>
     <td><h4>TiledMap Extension</h4>
     <br>Our TiledMap implementation is not as up to date as we would like it to be. Therefore, we are considering to move it to its own repo to separate its release cycle from libGDX's and to assess its compatibility with other map editors than <a href="https://www.mapeditor.org">Tiled</a>.<sup><a href="https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Atilemap+">1</a>, <a href="https://github.com/libgdx/libgdx/pulls?q=is%3Apr+is%3Aopen+label%3Atilemap">2</a>, <a href="https://github.com/lyze237/gdx-TiledMap">3</a></sup></td>
-    <td>{% include status.html is='wip' %}</td>
+    <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
     <td><h4>Web-Based Setup Tool</h4>
@@ -88,4 +88,4 @@ There are also a lot of other improvements in the works, which may not be not bi
 </table>
 
 <br/>
-Last updated: April 2022
+Last updated: August 2022
