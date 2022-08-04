@@ -159,4 +159,4 @@ Beware of leaking references to Pooled objects. Just because you invoke "free" o
 
 If you're encountering memory leaks, tools like [VisualVM](https://visualvm.github.io/) (free) and [JProfiler](https://www.ej-technologies.com/products/jprofiler/overview.html) (trial/paid) prove useful in tracking down the issue. These memory profilers will tell you what type of object is eating up the memory. From there on you can start tracking down the leak.
 
-[LeakCanary](https://square.github.io/leakcanary/) is a free tool initially developed to automatically detect leaks in Android application, but it can be [configured to run on the JVM](https://square.github.io/leakcanary/recipes/#detecting-leaks-in-jvm-applications) as well.
+[LeakCanary](https://square.github.io/leakcanary/) is a free tool initially developed to automatically detect leaks in Android applications, but it can be [configured to run on the JVM](https://square.github.io/leakcanary/recipes/#detecting-leaks-in-jvm-applications) as well.
