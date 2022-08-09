@@ -55,6 +55,10 @@ These are webpages where individuals or companies write about their experience w
 * [Video tutorial series by dermetfan](https://www.youtube.com/playlist?list=PLXY8okVWvwZ0qmqSBhOtqYRjzWtUCWylb)
    * [gdx-tiled-preprocessor video tutorial](https://www.youtube.com/watch?v=q5D-TzlCRPM) (Warning: the gdx-tiled-preprocessor was merged into gdx-tools)
 
+### Kotlin and 3D
+* [Build in 3D for Android Using LibGDX and Kotlin](https://betterprogramming.pub/build-in-3d-for-android-using-libgdx-in-kotlin-1cbf496cae2e)
+* [Build in 3D for iOS Using LibGDX and Kotlin](https://betterprogramming.pub/build-in-3d-for-ios-using-libgdx-and-kotlin-e509fb6ce7fd)
+
 # Some simple open-source projects for reference
 These are some open-source projects found on the web that use libGDX and can be used as reference. This list is intentionally kept as clean and interesting as possible (you won't see repeated projects nor _Hello-World kind-of-games_ here).
 * [Fire and Ice](https://github.com/lyze237/FireAndIce) (uses tile maps)
