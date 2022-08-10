@@ -8,9 +8,9 @@ Whenever libGDX is talking about GL20 or GL30, it is in fact referring to GL ES 
 By default, version 2.0 of OpenGL ES is used, but libGDX can be configured to use 3.0 as well. See for example:
 
 ```java
-LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
+Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
 // ...
-cfg.useGL30 = true;
+cfg.setOpenGLEmulation(GLEmulation.GL30, 3, 2);
 ```
 
 ## And what about GLSL (ES)?
