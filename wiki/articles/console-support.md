@@ -17,6 +17,6 @@ There are a couple of games, which have successfully done this in the past:
 ## Different Approaches & Other Resources
 - TheLogicMaster has a working PoC of a Nintendo Switch homebrew backend over at [SwitchGDX](https://github.com/TheLogicMaster/SwitchGDX), which uses a [custom fork](https://github.com/TheLogicMaster/clearwing-vm) of CodenameOne's [ParparVM](https://github.com/codenameone/CodenameOne/tree/master/vm)
 - IKVM (which was used by libGDX [in the past](https://code.google.com/archive/p/libgdx/wikis/IOSWIP.wiki)) could prove as another viable option; see [here](https://github.com/ikvm-revived/ikvm) for IKVM's current main fork
-- Anuken's Ark has a SDL backend [here](https://github.com/Anuken/Arc/tree/master/backends/backend-sdl)
+- Anuken's Ark has a SDL backend [here](https://github.com/Anuken/Arc/tree/master/backends/backend-sdl); SDL has a [working port for Nintendo Switch](https://wiki.libsdl.org/Installation#nintendo_switch)
 - GWT/[TeaVM](/roadmap/#teavm) could be used to transpile code to Javascript, which could then be used in a UWP app; see [here](https://web.archive.org/web/20200428040905/https://www.badlogicgames.com/forum/viewtopic.php?f=17&t=14766) and [here](https://github.com/libgdx/libgdx/issues/5330) for some thoughts on this approach
 - A similar goal is being pursued by the [mini2Dx](https://github.com/mini2Dx/mini2Dx) project.
