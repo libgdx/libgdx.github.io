@@ -1,5 +1,5 @@
 ---
-title: Using libgdx with Clojure
+title: Using libGDX with Clojure
 ---
 Clojure is a dialect of Lisp, written for the JVM and with functional programming in mind. Clojure comes with native Java interoperability, making it able to leverage the powerful existing libraries in the Java ecosystem. [ClojureTV on YouTube](https://www.youtube.com/user/ClojureTV) has a lot of good videos, specifically [Clojure for Java Programmers](https://www.youtube.com/watch?v=P76Vbsk_3J0) [(Part 2)](https://www.youtube.com/watch?v=hb3rurFxrZ8).
 
