@@ -1,5 +1,5 @@
 ---
-title: Admob in libgdx
+title: Admob in libGDX
 ---
  * [Introduction](#introduction)
  * [Background](#background)
