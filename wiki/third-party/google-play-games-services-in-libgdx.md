@@ -1,5 +1,5 @@
 ---
-title: Google Play Games Services in LibGDX
+title: Google Play Games Services in libGDX
 ---
 [Google Play Games Services](https://developers.google.com/games/services/) offers social leaderboards, achievements, and much more (realtime multiplayer, cloud saves, anti-piracy...)
 
