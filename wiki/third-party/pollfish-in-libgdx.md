@@ -1,5 +1,5 @@
 ---
-title: Pollfish in libgdx
+title: Pollfish in libGDX
 ---
 # **Introduction**
 
