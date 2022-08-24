@@ -1,5 +1,5 @@
 ---
-title: Using libGDX with other JVM languages
+title: Using libGDX With Other JVM languages
 ---
 libGDX is mainly a Java-based framework. However, because Java produces Java bytecodes, and the virtual machine runs these bytecodes, it is possible to run libGDX in any JVM language with proper Java interoperability.
 

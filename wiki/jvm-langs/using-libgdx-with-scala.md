@@ -1,5 +1,5 @@
 ---
-title: Using libgdx with Scala
+title: Using libGDX with Scala
 ---
 
 Scala is a functional, object-oriented programming language for the JVM that works seamlessly with Java libraries, frameworks, and tools. It has a concise syntax and a REPL, which makes it feel like a scripting language, but it is being used in mission critical server software at companies like Twitter and LinkedIn.

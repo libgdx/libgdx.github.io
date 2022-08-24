@@ -1,5 +1,5 @@
 ---
-title: Using libgdx with Python
+title: Using libGDX with Python
 ---
 Python is a dynamic and strongly typed language that supports many programming paradigms, such as procedural, object oriented, and functional programming.
 
