@@ -117,6 +117,31 @@ Moving on to the **Android project**, we want the application to be run in lands
 
 The setup tool already filled in the correct values for us, `android:screenOrientation` is set to "landscape". If we wanted to run the game in portrait mode we would have set that attribute to "portrait".
 
+We also want the application to be displayed in full screen mode. Therefore, we need to modify the `style` file, which looks like this:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<style name="libTheme" parent="android:Theme">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:colorBackgroundCacheHint">@null</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowFullscreen">true</item>
+
+    <!-- The following content will make the area drawn by the game include the unsafe places on the screen -->
+    <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+
+</style>
+
+</resources>
+```
+
+`styles` are usually in the "res/values/styles.xml" file of the Android project. The "shortEdges" in the above content will tell the device to render the graphics to the risky screen part.
+These parts are usually partially incomplete due to the front camera of the mobile device, but they are the parts that most games with immersive experience will display. 
+
 We also want to conserve battery and disable the accelerometer and compass. We do this in the `AndroidLauncher.java` file in `android/src/…` (or `drop-android`), which should look something like this:
 
 ```java
