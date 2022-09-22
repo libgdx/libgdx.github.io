@@ -13,8 +13,8 @@ To setup your first project and download the necessary dependencies, libGDX offe
 1. Download the libGDX Project Setup Tool (gdx-setup):
 
     <!--<a href="/assets/downloads/legacy_setup/gdx-setup_latest.jar" class="btn btn--success" style="margin-right: 10px">Stable Release</a>
-    <a href="https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Nightly Version</a>-->
-    <a href="https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Download</a>
+    <a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Nightly Version</a>-->
+    <a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Download</a>
 
 2. Double-click the downloaded file. If this doesn't work, open your command line tool, go to the download folder and run <br><!--`java -jar gdx-setup_latest.jar`-->`java -jar gdx-setup.jar`
 
