@@ -160,8 +160,8 @@ PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
-## [Kelvin and the Infamous Machine](https://pokemmo.eu/) by Blyts
-<img align="left" src="[https://pokemmo.eu/build/images/screenshot/c.f3968293.png](https://cdn.akamai.steamstatic.com/steam/apps/376520/header.jpg?t=1586284366)" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 215px" class="lazyload">
+## [Kelvin and the Infamous Machine](https://infamousmachine.com/) by Blyts
+<img align="left" src="https://cdn.akamai.steamstatic.com/steam/apps/376520/header.jpg?t=1586284366" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 215px" class="lazyload">
 
 Kelvin and the Infamous Machine is a hilarious point-and-click adventure in which you stumble irresponsibly through history to help legendary geniuses complete their masterworks! [[Android](https://play.google.com/store/apps/details?id=com.blyts.infamousmachine) / [iOS](https://apps.apple.com/us/app/infamous-machine/id1162886079) / [Desktop](https://store.steampowered.com/app/376520/Kelvin_and_the_Infamous_Machine/)]
 
