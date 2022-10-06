@@ -26,7 +26,6 @@ The following little app demonstrates the use of a simple `OrthographicCamera` t
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -135,11 +134,22 @@ public class OrthographicCameraExample implements ApplicationListener {
 	public void pause() {
 	}
 
-	public static void main(String[] args) {
-		new LwjglApplication(new OrthographicCameraExample());
-	}
 }
 
+```
+
+```java
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+
+public class DesktopLauncher {
+	public static void main (String[] arg) {
+		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
+		config.setForegroundFPS(60);
+		config.setTitle("orthographic-camera-example");
+		new Lwjgl3Application(new OrthographicCameraExample(), config);
+	}
+}
 ```
 
 The above class is the libGDX application that will use the orthographic camera to move around the world. Our world size is in arbitrary units that we can define however we want to. In this specific case, our world is 100x100 units.
