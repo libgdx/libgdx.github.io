@@ -19,11 +19,6 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## [September 2022](/news/2022/09/jam-september-2022)
-Jam Suggestions: 11th-13th  
-Jam Voting: 15th-17th  
-Jam: 18th-24th
-
 ## December 2022
 Jam Suggestions: 4th-6th  
 Jam Voting: 8th-10th  
@@ -44,6 +39,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [Post Apocalyptic](https://itch.io/jam/libgdx-jam-22) (September 2022)
 * [Floating Cities](https://itch.io/jam/libgdx-jam-21) (June 2022)
 * [Underground](https://itch.io/jam/libgdx-jam-20) (March 2022)
 * [Machines & Slimes](https://itch.io/jam/libgdx-jam-19) (December 2021)
