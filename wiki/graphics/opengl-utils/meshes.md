@@ -28,7 +28,7 @@ public Mesh createFullScreenQuad() {
   verts[i++] = 0f; // v2
 
   verts[i++] = 1f; // x3
-  verts[i++] = 1f; // y2
+  verts[i++] = 1f; // y3
   verts[i++] = 0;
   verts[i++] = 1f; // u3
   verts[i++] = 1f; // v3
