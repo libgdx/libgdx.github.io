@@ -167,6 +167,13 @@ Kelvin and the Infamous Machine is a hilarious point-and-click adventure in whic
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
+## [Kakele Online](https://kakele.io/) by ViVa Games
+<img align="right" src="https://lh5.googleusercontent.com/Q2gvO_Yag6fNIrej_m4OWcBbE6sJqicK2C6hKG_igsG7oVW7vNw-i_-SgHcNMVic_Qk=w2400" style="margin-left: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 215px" class="lazyload">
+
+Kakele Online is a cross platform, 2D open world MMORPG. In Kakele, you join players from all over the world to fight monsters, explore mysterious caves, complete tasks and quests, collect items and much more! [[Android](https://play.google.com/store/apps/details?id=mmorpg.main) / [iOS](https://apps.apple.com/us/app/id1526962408) / [Steam](https://store.steampowered.com/app/1541020/Kakele_Online__MMORPG/)]
+
+<div style="clear: both; width: 100%; height: 1px;"></div>
+
 <br/>
 <br/>
 
