@@ -74,7 +74,7 @@ task texturePacker {
 In this way, running `./gradlew texturePacker desktop:run` will perform the texture packing before the desktop:run task is started. And if the textures have not changed, then all one has to do is omit the texturePacker argument.
 
 
-TexturePacker can also be run from the [standalone nightly](https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/runnable-texturepacker.jar):
+TexturePacker can also be run from the [standalone nightly](https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/runnable-texturepacker.jar):
 
 ```
 // OS X / Linux
@@ -225,7 +225,7 @@ java -cp gdx.jar:gdx-tools.jar com.badlogic.gdx.tools.texturepacker.TexturePacke
 java -cp gdx.jar;gdx-tools.jar com.badlogic.gdx.tools.texturepacker.TexturePacker inputDir outputDir packFileName
 ```
 
-TexturePacker can also be run from the [standalone nightly](https://libgdx.badlogicgames.com/nightlies/runnables/) without gdx.jar (i.e. without the rest of libGDX at all), just substitute `runnable-texturepacker.jar` for `gdx.jar;gdx-tools.jar` in the above.
+TexturePacker can also be run from the [standalone nightly](https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/runnable-texturepacker.jar) without gdx.jar (i.e. without the rest of libGDX at all), just substitute `runnable-texturepacker.jar` for `gdx.jar;gdx-tools.jar` in the above.
 
 `inputDir` is the root directory containing the images. `outputDir` is the output directory where the packed images will be placed. `packFileName` is the name of the pack file and the prefix used for the output packed image files.
 
