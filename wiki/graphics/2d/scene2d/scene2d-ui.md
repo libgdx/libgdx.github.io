@@ -143,7 +143,7 @@ Drawable provides a minimum size, which can be used as a hint for the smallest i
 
 By default, NinePatchDrawable uses the top, right, bottom, and left sizes of the corresponding nine patch texture regions. However, the drawable sizes are separate from the nine patch sizes. The drawable sizes can be changed to draw content on the nine patch with more or less padding than the actual nine patch regions.
 
-Creating drawables is very common and somewhat tedious. It is recommended to use the [skin methods](/wiki/graphics/2d/scene2d/skin#wiki-Conversions) to automatically obtain a drawable of the appropriate type.
+Creating drawables is very common and somewhat tedious. It is recommended to use the [skin methods](/wiki/graphics/2d/scene2d/skin#conversions) to automatically obtain a drawable of the appropriate type.
 
 ### ChangeEvents
 
@@ -169,7 +169,7 @@ Actors added to a table using the `add` Table methods get a table cell and will 
 
 ## Rotation and scale
 
-As [described previously](/wiki/graphics/2d/scene2d/scene2d#wiki-group-transform), a scene2d group that has transform enabled causes a SpriteBatch flush before drawing its children. A UI often has dozens, if not hundreds, of groups. Flushing for each group would severely limit performance, so most scene2d.ui groups have transform set to false by default. Rotation and scale is ignored when the group's transform is disabled.
+As [described previously](/wiki/graphics/2d/scene2d/scene2d#group-transform), a scene2d group that has transform enabled causes a SpriteBatch flush before drawing its children. A UI often has dozens, if not hundreds, of groups. Flushing for each group would severely limit performance, so most scene2d.ui groups have transform set to false by default. Rotation and scale is ignored when the group's transform is disabled.
 
 Transforms can be enabled as needed, with some caveats. Not all widgets support all features when rotation or scaling is applied. Eg, transform can be enabled for a Table and then it can be rotated and scaled. Children will be drawn rotated and scaled, input is routed correctly, etc. However, other widgets may perform drawing without taking rotation and/or scale into account. A workaround for this problem is to wrap a widget in a table or container with transform enabled and set the rotation and scale on the table or container, not on the widget:
 

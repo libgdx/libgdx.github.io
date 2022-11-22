@@ -18,7 +18,7 @@ Box2D is an extension and not included with libGDX by default. Thus a manual ins
     * [Dynamic Bodies](/wiki/extensions/physics/box2d#dynamic-bodies)
     * [Static Bodies](/wiki/extensions/physics/box2d#static-bodies)
     * [Kinematic Bodies](/wiki/extensions/physics/box2d#kinematic-bodies)
-  * [Impulses/Forces](/wiki/extensions/physics/box2d#wiki-impulsesforces)
+  * [Impulses/Forces](/wiki/extensions/physics/box2d#impulsesforces)
   * [Joints and Gears](/wiki/extensions/physics/box2d#joints-and-gears)
   * [Fixture Shapes](/wiki/extensions/physics/box2d#fixture-shapes)
   * [Sprites and Bodies](/wiki/extensions/physics/box2d#sprites-and-bodies)
