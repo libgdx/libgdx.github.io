@@ -13,7 +13,7 @@ The [`PerformanceCounter`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/late
 
 # OpenGL
 ## Profiling
-Profiling the actual OpenGL calls that happen while your game is running is often not very easy to do, since libGDX tries to abstract all those low-level things away. In order to enable the collection of these information, there is the [`GLProfiler`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLProfiler.html).
+Profiling the actual OpenGL calls that happen while your game is running is often not very easy to do, since libGDX tries to abstract all those low-level things away. In order to enable the collection of this information, there is the [`GLProfiler`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLProfiler.html).
 
 To enable it you have to call the static method `GLProfiler.enable()`. Behind the scenes this will replace the original `GL20` and `GL30` instances (`Gdx.gl` etc.) with the profilers.
 
@@ -41,9 +41,9 @@ To see how to use this you can have a look at the [Benchmark3DTest](https://gith
 
 Almost all GL calls can in some circumstances produce errors. These errors are not thrown or logged like Java errors, but they have to be explicitly checked for (`Gdx.gl.getError()`), so they can be hard to find. Enabled `GLProfiler` (see above on how to enable) will automatically check for GL errors after every GL call and report it, so you don't have to.
 
-By default, encountered errors will be printed to console (using `Gdx.app.error`). However, this can be customized (for example for your own logging/crash reporting system) by setting up a different error listener in [`GLProfiler.listener`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLProfiler.html#listener).
+By default, encountered errors will be printed to the console (using `Gdx.app.error`). However, this can be customized (for example for your own logging/crash reporting system) by setting up a different error listener in [`GLProfiler.listener`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLProfiler.html#listener).
 
-If you want to know where exactly did the error happen in your code, you may want to use the [`GLErrorListener.THROWING_LISTENER`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLErrorListener.html#THROWING_LISTENER) which throws an exception on any GL error. Error listener callback is called inside GL call, so the stack trace will reveal where exactly things went wrong. _(Throwing an exception on GL error will most likely crash your application in case of errors, so it is not used by default.)_
+If you want to know where exactly the error happened in your code, you may want to use the [`GLErrorListener.THROWING_LISTENER`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLErrorListener.html#THROWING_LISTENER) which throws an exception on any GL error. Error listener callback is called inside GL call, so the stack trace will reveal where exactly things went wrong. _(Throwing an exception on GL error will most likely crash your application in case of errors, so it is not used by default.)_
 
 For example use and testing, there is a [GLProfilerErrorTest](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/GLProfilerErrorTest.java)
 
