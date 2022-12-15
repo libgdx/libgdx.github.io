@@ -83,7 +83,7 @@ Another viable approach for _outside of your development environment_ is to just
 
 ### Are there any other things I need to be aware of?
 - Whenever your **application is minimised**, the LWJGL 3 backend calls `ApplicationListener#resize(0, 0)`. This can lead to unexpected issues, in particular if you are (re)building framebuffers whenever the application is resized.
-- To use **Swing or AWT** APIs, you'll have to depend on the gdx-lwjgl3-glfw-awt-macos extension. See `AwtTestLWJGL` in gdx-tests-lwjgl3 for an example.
+- To use **Swing or AWT** APIs, you'll have to depend on the gdx-lwjgl3-glfw-awt-macos extension. See [`AwtTestLWJGL`](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests-lwjgl3/src/com/badlogic/gdx/tests/lwjgl3/AwtTestLWJGL.java) in gdx-tests-lwjgl3 for an example.
 - The LWJGL 3 backend does [not yet](https://github.com/libgdx/libgdx/pull/6247) have an equivalent for `LwjglAWTCanvas` and `LwjglAWTFrame`.
 - As the graphical tools in **gdx-tools** require the `LwjglAWTCanvas` class, the library has a hard dependency on LWJGL 2. If you are using one of the non-graphical tools of the gdx-tools project (in particular [TexturePacker](/wiki/tools/texture-packer#from-source)) and the LWJGL 3 backend _in the same (!) project_, you need to modify your gdx-tools dependency like this:
    ```groovy
