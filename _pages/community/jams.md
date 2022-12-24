@@ -32,7 +32,7 @@ Jam: 18th – 24th
 ## September 2023
 Special Halloween/Horror Jam  
 No suggestions or voting.  
-All games must include the special theme  
+All games must include the special theme.
 All other Jam rules apply.  
 Jam: 17th – 23rd
 
