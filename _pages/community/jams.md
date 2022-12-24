@@ -19,10 +19,27 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## December 2022
-Jam Suggestions: 4th-6th  
-Jam Voting: 8th-10th  
-Jam: 11th-17th
+## March 2023
+Jam Suggestions: 12th – 14th  
+Jam Voting: 16th – 18th  
+Jam: 19th – 25th
+
+## June 2023
+Jam Suggestions: 11th – 13th  
+Jam Voting: 15th – 17th  
+Jam: 18th – 24th
+
+## September 2023
+Special Halloween/Horror Jam  
+No suggestions or voting.  
+All games must include the special theme.
+All other Jam rules apply.  
+Jam: 17th – 23rd
+
+## December 2023
+Jam Suggestions: 3rd – 5th  
+Jam Voting: 7th – 9th  
+Jam: 10th – 16th
 
 <br/>
 
@@ -39,6 +56,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [DYSTOPIAN CHRISTMAS](https://itch.io/jam/libgdx-jam-23) (December 2022)
 * [Post Apocalyptic](https://itch.io/jam/libgdx-jam-22) (September 2022)
 * [Floating Cities](https://itch.io/jam/libgdx-jam-21) (June 2022)
 * [Underground](https://itch.io/jam/libgdx-jam-20) (March 2022)
