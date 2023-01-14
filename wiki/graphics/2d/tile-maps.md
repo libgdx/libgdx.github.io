@@ -257,10 +257,9 @@ TiledMap map = assetManager.get("level1.tmx");
 
 Once loaded you can treat the map just like an other TiledMap.
 
-*Note* if you load your TMX map directly, you are responsible for calling `TiledMap#dispose()` once you no longer need it. This call will dispose of any textures loaded for the map.
-
-*Note*: if you want to use TMX maps with the GWT backend, you need to make sure the map is saved with pure base64 encoding. The compressed TMX formats will not work due to limitations in GWT.
-
+*Note* if you load your TMX map directly, you are responsible for calling `TiledMap#dispose()` once you no longer need it. This call will dispose of any textures loaded for the map.  
+*Note* if you want to use TMX maps with the GWT backend, you need to make sure the map is saved with pure base64 encoding. The compressed TMX formats will not work due to limitations in GWT.  
+*Note* libGDX does not support infinite size for TMX maps. Use only size-limited TMX maps.
 ### Loading Tide maps
 ![images/tile-maps3.png](/assets/wiki/images/tile-maps3.png)
 
