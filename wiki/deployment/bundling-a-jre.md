@@ -20,6 +20,9 @@ A packaging tool created and maintained by the libGDX team. Take a look at the [
 ### [Parcl](https://github.com/mini2Dx/parcl)
 A Gradle plugin that performs similar actions as launch4j. See its [README](https://github.com/mini2Dx/parcl#how-to-use) for instructions.
 
+### [Jpackage Gradle Plugin](https://github.com/petr-panteleyev/jpackage-gradle-plugin)
+A Gradle plugin that conveniently wraps jpackage in line with modern gradle standards. See its [README](https://github.com/petr-panteleyev/jpackage-gradle-plugin/blob/master/README.md) for usage instructions.
+
 ### [launch4j](http://launch4j.sourceforge.net/)
 _-- seems to be no longer maintained --_
 
