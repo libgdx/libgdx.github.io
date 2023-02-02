@@ -39,7 +39,7 @@ feature_row2:
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/skin_composer.png
     title: "Skin Composer"
-    excerpt: 'A skin creator for libGDX's scene2d.ui'
+    excerpt: "A skin creator for libGDX's scene2d.ui"
     url: "https://github.com/raeleus/skin-composer/wiki"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
