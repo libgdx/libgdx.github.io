@@ -13,7 +13,7 @@ excerpt: "There are different tools – both official and community-made – tha
 feature_row:
   - image_path: /assets/images/dev/tools/spine.jpg
     title: "Spine"
-    excerpt: 'An animation tool that focuses specifically on 2D game animations'
+    excerpt: 'An animation tool that focuses on 2D game animations'
     url: "http://en.esotericsoftware.com/"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
@@ -39,7 +39,7 @@ feature_row2:
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/skin_composer.png
     title: "Skin Composer"
-    excerpt: 'A skin creator for libGDX'
+    excerpt: 'A skin creator for libGDX's scene2d.ui'
     url: "https://github.com/raeleus/skin-composer/wiki"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
@@ -53,19 +53,19 @@ feature_row2:
 feature_row3:
   - image_path: /assets/images/dev/tools/flame.gif
     title: "Flame"
-    excerpt: 'A powerful 3D particle editor'
+    excerpt: 'A powerful 3D particle editor for libGDX'
     url: "/wiki/graphics/3d/3d-particle-effects"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/hiero.png
     title: "Hiero"
-    excerpt: 'A bitmap font packing tool'
+    excerpt: 'A bitmap font packing tool compatible with libGDX'
     url: "/wiki/tools/hiero"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/fbx_conv.gif
     title: "fbx-conv"
-    excerpt: 'A command line for converting FBX/Collada/Obj to libGDX friendly formats'
+    excerpt: 'A tool for converting 3D models to libGDX-friendly formats'
     url: "https://github.com/libgdx/fbx-conv"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
