@@ -247,7 +247,7 @@ private void drawMasked() {
     /* Enable RGBA color writing. */
     Gdx.gl.glColorMask(true, true, true, true);
 
-    /* Set the depth function to LESS. */
+    /* Set the depth function to EQUAL. */
     Gdx.gl.glDepthFunc(GL20.GL_EQUAL);
 
     /* Render masked elements. */
