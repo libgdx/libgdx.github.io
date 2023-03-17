@@ -404,6 +404,8 @@ public void render() {
 
 ![Masked sprite and original sprites](https://imgur.com/Lmqecgk.png)
 
+This example renders directly to the screen buffer, but it's recommended that you render to a [FrameBuffer  object](/wiki/graphics/opengl-utils/frame-buffer-objects) if you intend to draw anything underneath your masked elements.
+
 ## 5. Masking using Pixmaps (Shapes or Textures)
 
 This technique allows the mask to be any image or shape and takes the alpha channel into account. This time we'll be using the libGDX’s Pixmap class.
