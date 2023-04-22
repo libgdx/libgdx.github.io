@@ -14,7 +14,7 @@ _A common misunderstanding is to think that immediate mode gui == immediate mode
 Dear ImGui is particularly suited to integration in realtime 3D applications, fullscreen applications, embedded applications, games, or any applications on consoles platforms where operating system features are non-standard.
 
 This is an example demonstrating what ImGui is capable of:
-![Sample](https://cloud.githubusercontent.com/assets/8225057/20628927/33e14cac-b329-11e6-80f6-9524e93b048a.png)
+![Sample](/assets/wiki/images/imgui1.png)
 
 <br/>
 
