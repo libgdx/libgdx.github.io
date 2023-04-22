@@ -49,7 +49,7 @@ imgui.inputText("string", buf);
 imgui.sliderFloat("float", f, 0f, 1f);
 ```
 
-![screenshot of sample code alongside its output with ImGui](https://i.imgur.com/KOhZQTu.png)
+![screenshot of sample code alongside its output with ImGui](/assets/wiki/images/imgui1.png)
 
 ImGui supports also other languages, such as Japanese, initiliazed [here](https://github.com/pakoito/imgui/blob/master/src/test/kotlin/imgui/gl/test%20lwjgl.kt#L79) as:
 
@@ -120,4 +120,4 @@ The following instructions detail how ImGui can be used on top of a 3D scene in 
 
 5. The result:
 
-   <img src="https://i.imgur.com/cnfOMDR.png" alt="Screenshot of ImGui in libGDX" width="500"/>
+   <img src="/assets/wiki/images/imgui2.png" alt="Screenshot of ImGui in libGDX" width="500"/>
