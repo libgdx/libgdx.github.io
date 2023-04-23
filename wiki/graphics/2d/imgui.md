@@ -14,7 +14,7 @@ _A common misunderstanding is to think that immediate mode gui == immediate mode
 Dear ImGui is particularly suited to integration in realtime 3D applications, fullscreen applications, embedded applications, games, or any applications on consoles platforms where operating system features are non-standard.
 
 This is an example demonstrating what ImGui is capable of:
-![Sample](https://cloud.githubusercontent.com/assets/8225057/20628927/33e14cac-b329-11e6-80f6-9524e93b048a.png)
+![Sample](/assets/wiki/images/imgui1.png)
 
 <br/>
 
@@ -49,7 +49,7 @@ imgui.inputText("string", buf);
 imgui.sliderFloat("float", f, 0f, 1f);
 ```
 
-![screenshot of sample code alongside its output with ImGui](https://i.imgur.com/KOhZQTu.png)
+![screenshot of sample code alongside its output with ImGui](/assets/wiki/images/imgui1.png)
 
 ImGui supports also other languages, such as Japanese, initiliazed [here](https://github.com/pakoito/imgui/blob/master/src/test/kotlin/imgui/gl/test%20lwjgl.kt#L79) as:
 
@@ -120,4 +120,4 @@ The following instructions detail how ImGui can be used on top of a 3D scene in 
 
 5. The result:
 
-   <img src="https://i.imgur.com/cnfOMDR.png" alt="Screenshot of ImGui in libGDX" width="500"/>
+   <img src="/assets/wiki/images/imgui2.png" alt="Screenshot of ImGui in libGDX" width="500"/>

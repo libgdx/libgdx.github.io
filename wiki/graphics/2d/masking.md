@@ -89,7 +89,7 @@ public void render() {
 }
 ```
 
-![Circle masked by a rectangle](https://i.imgur.com/3VHdLDS.png)
+![Circle masked by a rectangle](/assets/wiki/images/masking1.png)
 
 ## 2. Masking using the ScissorStack (Rectangles)
 
@@ -192,7 +192,7 @@ public void render() {
 }
 ```
 
-![Circle masked by 2 rectangles](https://i.imgur.com/HEa7EQK.png)
+![Circle masked by 2 rectangles](/assets/wiki/images/masking2.png)
 
 ## 3. Masking using the Depth Buffer (Shapes)
 
@@ -294,7 +294,7 @@ public void render() {
 }
 ```
 
-![Circle masked by another circle and a triangle](https://imgur.com/Pmlfn7M.png)
+![Circle masked by another circle and a triangle](/assets/wiki/images/masking3.png)
 
 ## 4. Masking using Blending Function (Shapes or Textures)
 
@@ -303,14 +303,16 @@ For the demanding GDXer with complex masking needs, this technique allows us to 
 ### Step 1 - Preparations
 
 These are the images we're gonna use:
-| ![The mask](https://imgur.com/WPHeXdB.png) | ![The sprite](https://imgur.com/Gf2pQYJ.png) |
-| :-: | :-: |
-| [The mask](https://imgur.com/J8dkKVI) | [The sprite to mask](https://imgur.com/JjMCVTh) |
+
+| [The mask](/assets/wiki/images/masking4.png) | [The sprite to mask](/assets/wiki/images/masking5.png) |
+|:--------------------------------------------:|:------------------------------------------------------:|
+|    ![](/assets/wiki/images/masking6.png)     |         ![](/assets/wiki/images/masking7.png)          |
 
 The images in a black background for clarity:
-| ![The mask](https://imgur.com/rm13HUV.png) | ![The sprite](https://imgur.com/eGoidRi.png) |
-| :-: | :-: |
-| The mask | The sprite to mask |
+
+|               The mask                |          The sprite to mask           |
+|:-------------------------------------:|:-------------------------------------:|
+| ![](/assets/wiki/images/masking8.png) | ![](/assets/wiki/images/masking9.png) |
 
 ```java
 /* Some attributes we're gonna need. */
@@ -402,7 +404,7 @@ public void render() {
 }
 ```
 
-![Masked sprite and original sprites](https://imgur.com/Lmqecgk.png)
+![Masked sprite and original sprites](/assets/wiki/images/masking10.png)
 
 This example renders directly to the screen buffer, but it's recommended that you render to a [FrameBuffer  object](/wiki/graphics/opengl-utils/frame-buffer-objects) if you intend to draw anything underneath your masked elements.
 
@@ -524,7 +526,7 @@ public void render() {
 }
 ```
 
-![Original and masked images + contours](https://imgur.com/NWR32Oj.png)
+![Original and masked images + contours](/assets/wiki/images/masking11.png)
 
 ## 6. Masking using Shaders (Textures)
 
@@ -710,7 +712,7 @@ public void render() {
 }
 ```
 
-![Masked sprite and original sprites](https://imgur.com/h7fgM3Z.png)
+![Masked sprite and original sprites](/assets/wiki/images/masking12.png)
 
 ## 7. Masking using BlendFuncSeparate (Removal)
 
@@ -805,7 +807,7 @@ public void render() {
 }
 ```
 
-![Masked sprite and original sprites](https://imgur.com/ZsA3PRq.png)
+![Masked sprite and original sprites](/assets/wiki/images/masking13.png)
 
 ## 8. Masking using Blending Function (Tinting)
 
@@ -888,4 +890,4 @@ public void render() {
 }
 ```
 
-![Masked sprite and original sprites](https://imgur.com/YsX0Rre.png)
+![Masked sprite and original sprites](/assets/wiki/images/masking14.png)

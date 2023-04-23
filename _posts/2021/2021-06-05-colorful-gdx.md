@@ -321,7 +321,7 @@ have a way to set the degree of bias toward one color or another, it can mix mor
 Using `lerpFloatColors()` with changing values for its last parameter (`change`) leads to smooth blends, which can be
 used for gradients or changes over time. That's what Beatrix used for this slick effect:
 
-![Pretty Triangle!](https://i.imgur.com/ojBUypw.gif)
+![Pretty triangle!](/assets/images/posts/2021-06-05/pretty-triangle.gif)
 
 ## Future Directions
 

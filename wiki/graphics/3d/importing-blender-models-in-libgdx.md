@@ -26,7 +26,9 @@ Optionally, you may also convert your file to the G3DJ format, which is a JSON f
 
 Please note that there is a known limitation to using the FBX export in Blender. The current exporter only supports texface textures (i.e. textures assigned to an UV map).
 
-Also note that Blender exports at 1 unit = 1 meter, while libGDX imports at a scale of 1 unit = 1 cm, making imported models 100x bigger. Change the export options from the default 1.00 to 0.01 to fix. ![Changing Blender fbx export options.](https://i.imgur.com/h2Pw7HA.png)
+Also note that Blender exports at 1 unit = 1 meter, while libGDX imports at a scale of 1 unit = 1 cm, making imported models 100x bigger. Change the export options from the default 1.00 to 0.01 to fix.
+
+![Changing Blender fbx export options.](/assets/wiki/images/importing-blender-models-in-libgdx1.png)
 
 ### Setting the coordinate system (up-axis)
 The coordinate system Blender uses (z-up) is different compared to the most common system used for games (y-up). The Blender FBX exporter contains the option to change the coordinate system to y-up (which might be even the default in the FBX exporter), do not use this option, instead set it to Blender's default (z-up).
