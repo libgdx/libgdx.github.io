@@ -78,6 +78,8 @@ You can directly run individual tests and/or configure the test starter by setti
 ./gradlew tests:gdx-tests-gwt:superDev
 ```
 
+GL30 emulation (WebGL 2.0) can be enabled via URL parameters :  [`http://localhost:8080/index.html?useGL30=true`](http://localhost:8080/index.html?useGL30=true)
+
 <br/>
 
 # Building
