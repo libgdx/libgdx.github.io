@@ -65,8 +65,11 @@ If you set everything up correctly, you can try to give the libGDX tests a go.
 You can directly run individual tests and/or configure the test starter by setting its program arguments: `[options] [Test class name]`, possible options being:
 
 - `--angle` enables the Angle emulation (default is disabled)
-- `--gl30` enable GLES 3 with core profile 3.2 (default is GLES 2.0)
+- `--gl30` enable GLES 3.0 with core profile 4.3 (or 3.2 for MacOS)
+- `--gl31` enable GLES 3.1 with core profile 4.5 (Lwjgl3 only)
+- `--gl32` enable GLES 3.2 with core profile 4.6 (Lwjgl3 only)
 - `--glErrors` enable GLProfiler and log any GL errors (default is disabled)
+- Note that `--gl30`, `--gl31`, and `--gl32` options are mutually exclusive, when none of them are specified, GLES 2.0 is used.
 
 **Android:** Use the following command to install the tests on the test device:
 ```
