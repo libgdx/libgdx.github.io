@@ -15,22 +15,22 @@ The [`PerformanceCounter`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/late
 ## Profiling
 Profiling the actual OpenGL calls that happen while your game is running is often not very easy to do, since libGDX tries to abstract all those low-level things away. In order to enable the collection of this information, there is the [`GLProfiler`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLProfiler.html).
 
-To enable it you have to call the static method `GLProfiler.enable()`. Behind the scenes this will replace the original `GL20` and `GL30` instances (`Gdx.gl` etc.) with the profilers.
+To enable it you need to instantiate a new GLProfiler object, then call the  method `glProfiler.enable()`. Behind the scenes this will replace the original `GL20` and `GL30` instances (`Gdx.gl` etc.) with the profilers.
 
-Now those will be active and start to monitor the actual GL calls (and GL errors, see below) for you. One information you might be interested in, could be the amount of texture bindings that happen, which are costly and might slow down your game. To optimize this, you might start to use a `TextureAtlas`. To prove with actual numbers that the texture bindings become less, you can read the static field `GLProfiler.textureBindings` from the profiler.
+Now those will be active and start to monitor the actual GL calls (and GL errors, see below) for you. One information you might be interested in, could be the amount of texture bindings that happen, which are costly and might slow down your game. To optimize this, you might start to use a `TextureAtlas`. To prove with actual numbers that the texture bindings become less, you can call `glProfiler.getTextureBindings()`.
 
-You might also implement something like view frustum culling to render only those things that are visible on the screen. The static field `GLProfiler.drawCalls` will show the results of these kind of optimizations.
+You might also implement something like view frustum culling to render only those things that are visible on the screen. The method `glProfiler.getDrawCalls()` will return the total number of draw calls made.
 
-Currently the following informations are provided by the profiler:
+The following information is provided by the profiler:
 - Amount of total OpenGL calls
 - Amount of draw calls
 - Amount of texture bindings
 - Amount of shader switches
 - Amount of used vertices
 
-`GLProfiler.vertexCount` is actually a [`FloatCounter`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/FloatCounter.html). Besides `GLProfiler.vertexCount.total` it has more information like `GLProfiler.vertexCount.min`, `GLProfiler.vertexCount.max` or `GLProfiler.vertexCount.average`, which are the values based on individual drawcalls.
+`glProfiler.getVertexCount()` returns a [`FloatCounter`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/FloatCounter.html). From the FloatCounter you can access fields which provide more information (count, total, min, max, average, latest, and value).
 
-In order to reset all these numbers once you have read and displayed them (probably once per frame), you have to call the `GLProfiler.reset()` method. To completely disable the profiling and replace the profilers with the original `GL20` and `GL30` instances, use `GLProfiler.disable()`.
+In order to reset all these numbers once you have read and displayed them (probably once per frame), you have to call the `glProfiler.reset()` method. To completely disable the profiling and replace the profilers with the original `GL20` and `GL30` instances, use `glProfiler.disable()`.
 
 *Note that in case you are using `Gdx.graphics.getGL20()` or `Gdx.graphics.getGL30()` you are bypassing the profiler and that's why you should use `Gdx.gl20` or `Gdx.gl30` directly.*
 
@@ -39,9 +39,9 @@ To see how to use this you can have a look at the [Benchmark3DTest](https://gith
 ## Error checking _(since 1.6.5)_
 `GLProfiler` has one more useful feature and that is error checking.
 
-Almost all GL calls can in some circumstances produce errors. These errors are not thrown or logged like Java errors, but they have to be explicitly checked for (`Gdx.gl.getError()`), so they can be hard to find. Enabled `GLProfiler` (see above on how to enable) will automatically check for GL errors after every GL call and report it, so you don't have to.
+Almost all GL calls can in some circumstances produce errors. These errors are not thrown or logged like Java errors, but they have to be explicitly checked for (`Gdx.gl.getError()`), so they can be hard to find. Enabling `GLProfiler` (see above on how to enable) will automatically check for GL errors after every GL call and report it, so you don't have to.
 
-By default, encountered errors will be printed to the console (using `Gdx.app.error`). However, this can be customized (for example for your own logging/crash reporting system) by setting up a different error listener in [`GLProfiler.listener`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLProfiler.html#listener).
+By default, encountered errors will be printed to the console (using `Gdx.app.error`). However, this can be customized (for example for your own logging/crash reporting system) by setting up a different error listener with [`glProfiler.setListener()`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLProfiler.html#setListener-com.badlogic.gdx.graphics.profiling.GLErrorListener-).
 
 If you want to know where exactly the error happened in your code, you may want to use the [`GLErrorListener.THROWING_LISTENER`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/profiling/GLErrorListener.html#THROWING_LISTENER) which throws an exception on any GL error. Error listener callback is called inside GL call, so the stack trace will reveal where exactly things went wrong. _(Throwing an exception on GL error will most likely crash your application in case of errors, so it is not used by default.)_
 
