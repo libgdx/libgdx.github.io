@@ -53,22 +53,17 @@ There are also a lot of other improvements in the works, which may not be not bi
   <tr>
     <td><h4>GL ES 3.1 and 3.2 Support</h4>
     <br>Currently, the libGDX backends are aimed at offering support for OpenGL ES 2.0 and 3.0. This could be expanded to include the feature set of OpenGL ES 3.1 and 3.2.<sup><a href="https://github.com/libgdx/libgdx/pull/4628">1</a>, <a href="https://github.com/libgdx/libgdx/pull/6945">2</a></sup></td>
-    <td>{% include status.html is='wip' %}</td>
+    <td>{% include status.html is='done' %}</td>
   </tr>
   <tr>
-    <td><h4>GWT 2.9.0</h4>
-    <br>The Web backend of libGDX is currently based on GWT 2.8.2. An update to version 2.9.0 would offer support for Java 11 language features, like the 'var' keyword.<sup><a href="https://github.com/tommyettinger/gdx-backends#19120">1</a>, <a href="http://www.gwtproject.org/release-notes.html#Release_Notes_2_9_0">2</a></sup></td>
+    <td><h4>GWT 2.10.0</h4>
+    <br>The Web backend of libGDX is currently based on GWT 2.8.2. An update to version 2.9+ would offer support for Java 11 language features, like the 'var' keyword.<sup><a href="https://github.com/tommyettinger/gdx-backends#19120">1</a>, <a href="http://www.gwtproject.org/release-notes.html#Release_Notes_2_9_0">2</a></sup></td>
     <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
     <td><h4 id="teavm">Kotlin-Compatible Web Backend</h4>
     <br>A Web backend that is compatible with other JVM languages has been talked about for a couple of years. Ideas include using TeaVM and Bytecoder.<sup><a href="https://github.com/squins/gdx-backend-bytecoder">1</a>, <a href="https://github.com/Anuken/Arc/tree/6e9fd338866c05cd42ec20f26ec7fa7c3a25d6d5/backends/backend-teavm">2</a>, <a href="https://github.com/xpenatan/gdx-html5-tools">3</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
-  </tr>
-  <tr>
-    <td><h4>Metal/Vulkan Support</h4>
-    <br>We are well aware that Apple has deprecated OpenGL (ES) on iOS and macOS. Thus, we are looking into Metal/Vulkan support in the near future. Projects like <a href="https://github.com/google/angle">ANGLE</a> look very promising for this.<sup><a href="https://github.com/libgdx/libgdx/issues/5251">1</a>, <a href="https://github.com/LWJGL/lwjgl3#khronos-apis">2</a>, <a href="https://github.com/libgdx/libgdx/pull/6593">3</a>, <a href="https://github.com/libgdx/libgdx/pull/6672">4</a></sup></td>
-    <td>{% include status.html is='done' %}</td>
   </tr>
   <tr>
     <td><h4>TiledMap Extension</h4>
@@ -83,7 +78,7 @@ There are also a lot of other improvements in the works, which may not be not bi
   <tr>
     <td><h4>WebGL 2.0</h4>
     <br>Our web backend is the last one, where support for OpenGL ES 3.0 (~ WebGL 2.0) is still lacking. We have plans to change that!<sup><a href="https://github.com/libgdx/libgdx/pull/5763">1</a></sup></td>
-    <td>{% include status.html is='planned' %}</td>
+    <td>{% include status.html is='done' %}</td>
   </tr>
 </table>
 
