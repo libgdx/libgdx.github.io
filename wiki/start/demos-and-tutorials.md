@@ -24,5 +24,3 @@ The official libGDX organization on GitHub also offers a few **demo projects** t
 * [Super Jumper - a Doodle jump clone with programmer's art](https://github.com/libgdx/libgdx-demo-superjumper)
 * [Vector Pinball - a Box2D-based pinball game](https://github.com/libgdx/libgdx-demo-vector-pinball)
 * [The Plane that couldn't fly good - a flappy bird's clone](https://github.com/badlogic/theplanethatcouldntflygood)
-
-You can also try all these demos [right in your browser!](https://libgdx.badlogicgames.com/demos/)
