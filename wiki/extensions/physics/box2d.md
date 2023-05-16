@@ -64,10 +64,12 @@ Box2DDebugRenderer debugRenderer = new Box2DDebugRenderer();
 To update our simulation we need to tell our world to step. Stepping basically updates the world objects through time. The best place to call our step function is at the end of our `render()` loop. In a perfect world everyone's frame rate is the same
 
 ```java
-world.step(1/60f, 6, 2);
+world.step(1/120f, 6, 2);
 ```
 
-The first argument is the time-step, or the amount of time you want your world to simulate. In most cases you want this to be a fixed time step. libGDX recommends using a value between `1/60f` (which is 1/60th of a second) and `1/240f` (1/240th of a second).
+The first argument is the time-step, or the amount of time you want your world to simulate. In most cases you want this to be a fixed time step. libGDX recommends using a value between `1/120f` (which is 1/120th of a second) and `1/240f` (1/240th of a second).
+
+In general, you should always at least use a rate which is twice as your FPS (and so your time step should be half the length of a frame), see [Nyquist rate](https://en.m.wikipedia.org/wiki/Nyquist_rate).
 
 The other two arguments are `velocityIterations` and `positionIterations`. For now we will leave these at `6` and `2`, but you can read more about them in the Box2D documentation.
 
