@@ -43,7 +43,7 @@ Since version 1.9.13, breaking changes and corresponding migration steps are exp
 
 ## Gradle Versions Plugin
 
-In the spirit of the Maven Versions Plugin, the [https://github.com/ben-manes/gradle-versions-plugin](Gradle Versions Plugin) provides a simple `dependencyUpdates` task to determine which dependencies have updates.
+In the spirit of the Maven Versions Plugin, the [Gradle Versions Plugin](https://github.com/ben-manes/gradle-versions-plugin) provides a simple `dependencyUpdates` task to determine which dependencies have updates.
 
 # Updating Gradle Itself
 You may also want to update your Gradle version.
