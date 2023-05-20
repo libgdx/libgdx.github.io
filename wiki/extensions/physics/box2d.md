@@ -69,7 +69,7 @@ world.step(1/120f, 6, 2);
 
 The first argument is the time-step, or the amount of time you want your world to simulate. In most cases you want this to be a fixed time step. libGDX recommends using a value between `1/120f` (which is 1/120th of a second) and `1/240f` (1/240th of a second).
 
-In general, you should always at least use a rate which is twice as your FPS (and so your time step should be half the length of a frame), see [Nyquist rate](https://en.m.wikipedia.org/wiki/Nyquist_rate).
+In general, you should always at least use a rate which is twice as your FPS (and so your time step should be half the length of a frame).
 
 The other two arguments are `velocityIterations` and `positionIterations`. For now we will leave these at `6` and `2`, but you can read more about them in the Box2D documentation.
 
