@@ -51,11 +51,6 @@ There are also a lot of other improvements in the works, which may not be not bi
     <td>{% include status.html is='planned' %}</td>
   </tr>
   <tr>
-    <td><h4>GL ES 3.1 and 3.2 Support</h4>
-    <br>Currently, the libGDX backends are aimed at offering support for OpenGL ES 2.0 and 3.0. This could be expanded to include the feature set of OpenGL ES 3.1 and 3.2.<sup><a href="https://github.com/libgdx/libgdx/pull/4628">1</a>, <a href="https://github.com/libgdx/libgdx/pull/6945">2</a></sup></td>
-    <td>{% include status.html is='done' %}</td>
-  </tr>
-  <tr>
     <td><h4>GWT 2.10.0</h4>
     <br>The Web backend of libGDX is currently based on GWT 2.8.2. An update to version 2.9+ would offer support for Java 11 language features, like the 'var' keyword.<sup><a href="https://github.com/tommyettinger/gdx-backends#19120">1</a>, <a href="http://www.gwtproject.org/release-notes.html#Release_Notes_2_9_0">2</a></sup></td>
     <td>{% include status.html is='wip' %}</td>
@@ -75,12 +70,7 @@ There are also a lot of other improvements in the works, which may not be not bi
     <br>We already have a working prototype of our new web-based setup tool and are now working on polishing it up to start public testing.<sup><a href="https://github.com/MrStahlfelge/gdx-setup">1</a>, <a href="https://raeleus.itch.io/libgdx-project-setup">2</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
-  <tr>
-    <td><h4>WebGL 2.0</h4>
-    <br>Our web backend is the last one, where support for OpenGL ES 3.0 (~ WebGL 2.0) is still lacking. We have plans to change that!<sup><a href="https://github.com/libgdx/libgdx/pull/5763">1</a></sup></td>
-    <td>{% include status.html is='done' %}</td>
-  </tr>
 </table>
 
 <br/>
-Last updated: April 2023
+Last updated: June 2023

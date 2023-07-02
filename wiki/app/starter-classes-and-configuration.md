@@ -50,7 +50,7 @@ From there on a window is created and the ApplicationListener is invoked as desc
 
 #### Common issues:
 
-1. On **macOS**, there is another step required to get LWJGL 3 apps running. Either add the `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your desktop project set the VM Options to `-XstartOnFirstThread`. The latter can typically be done in the Launch/Run Configurations of your IDE, as is described [here](/wiki/start/import-and-running). Alternatively, if you're starting your project via Gradle, add this line to `run` task of the desktop Gradle file:
+1. On **macOS**, there is another step required to get LWJGL 3 apps running. Either add the ([experimental](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw-awt-macos)) `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your desktop project set the VM Options to `-XstartOnFirstThread`. The latter can typically be done in the Launch/Run Configurations of your IDE, as is described [here](/wiki/start/import-and-running). Alternatively, if you're starting your project via Gradle, add this line to `run` task of the desktop Gradle file:
    ```
     jvmArgs = ['-XstartOnFirstThread']
    ```

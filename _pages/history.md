@@ -7,7 +7,7 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/history.jpeg
   caption: "Photo credit: [**Mr Cup / Fabien Barral**](https://unsplash.com/photos/Fo5dTm6ID1Y)"
-excerpt: "The libGDX project was started over 10 years ago. Over the years, libGDX and its community matured: nowadays, libGDX is a well proven and reliable framework with a sound base and documentation."
+excerpt: "Since the libGDX project has been started over 10 years ago, libGDX and its community has matured: nowadays, libGDX is a well proven and reliable framework with a sound base and documentation."
 ---
 
 <style>
@@ -161,6 +161,18 @@ p a:active {
 <link rel="stylesheet" href="/assets/css/aos.css" />
 
 <div class="timeline">
+  <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
+    <div class="content">
+      <h2>2022</h2>
+      <p>2022 brought you all the version <a href="/news/2022/05/gdx-1-11">1.11</a> of libGDX. With its release, <a href="/news/2021/07/devlog-7-lwjgl3">LWJGL 3</a> became the default desktop backend – something that had been in the works since 2015. We were also very proud to announce our <a href="/news/2022/02/jam-march-2022">20th libGDX game jam</a>.</p>
+    </div>
+  </div>
+  <div class="container right" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom">
+    <div class="content">
+      <h2>2021</h2>
+      <p>In 2021, we released the versions <a href="/news/2021/01/gdx_1_9_13">1.9.13</a>, <a href="/news/2021/02/gdx-1-9-14">1.9.14/a>, and most notably <a href="/news/2021/04/gdx-1-10">1.10</a>. In the course of this, we also migrated our whole build setup to GitHub Actions to make it more robust and future-proof. We also introduced <a href="/news/2021/01/devlog_5_community_showcases">Community Showcases</a> on our website to give some of the interesting community projects surrounding libGDX the chance to present themselves to a wider audience.</p>
+    </div>
+  </div>
   <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
     <div class="content">
       <h2>2020 - New Beginnings</h2>
