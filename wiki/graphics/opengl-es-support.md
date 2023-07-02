@@ -5,12 +5,12 @@ title: OpenGL (ES) Support
 
 Whenever libGDX is talking about GL20 or GL30, it is in fact referring to GL ES 2.0 and GL ES 3.0. OpenGL ES can be seen as a subset of OpenGL and is designed for embedded systems (smartphones in particular).
 
-By default, version 2.0 of OpenGL ES is used, but libGDX can be configured to use 3.0 as well. See for example:
+By default, version 2.0 of OpenGL ES is used, but libGDX can be configured to use 3.0 as well. The LWJGL 3 backend also supports GLES 3.1 and 3.2. See for example:
 
 ```java
 Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
 // ...
-cfg.setOpenGLEmulation(GLEmulation.GL30, 3, 2);
+cfg.setOpenGLEmulation(GLEmulation.GL30, 3, 2); // use GL 3.0 (emulated by OpenGL 3.2)
 ```
 
 ## And what about GLSL (ES)?
@@ -63,6 +63,8 @@ On Desktop, libGDX is mapping all its graphics calls to OpenGL.
 **GL ES 2.0** is roughly based on Open GL 2.0, however, there are some incompatibilities that weren't resolved until Open GL 4.1. To mimic GL ES 2.0, libGDX does not request any specific OpenGL version, so the driver will be more forgiving.
 
 **GL ES 3.0** is the successor of OpenGL ES 2.0. On desktop, OpenGL 4.3 provides full compatibility with OpenGL ES 3.0. For mimicking GL ES 3.0 on desktop, one can specify the exact OpenGL version, that should be used. Please note that MacOS only supports the [OpenGL 3.2 core](https://www.khronos.org/opengl/wiki/OpenGL_Context#OpenGL_3.2_and_Profiles) profile.
+
+**GL ES 3.1 & 3.2** have done a lot of work to bring the API's functionality significantly closer to it's desktop counterpart. OpenGL 4.5 should be able to fully emulate GL ES 3.1.
 
 ### Android
 On Android Open GL ES 2.0 and 3.0 can be used. To prevent your application from being shown to unsupported devices in the Play Store, add one of the following lines to your Android Manifest:
