@@ -19,11 +19,6 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## June 2023
-Jam Suggestions: 11th – 13th  
-Jam Voting: 15th – 17th  
-Jam: 18th – 24th
-
 ## September 2023
 Special Halloween/Horror Jam  
 No suggestions or voting.  
@@ -51,6 +46,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [UNDERWATER](https://itch.io/jam/libgdx-jam-25) (June 2023)
 * [Pixel Wars](https://itch.io/jam/libgdx-jam-24) (March 2023)
 * [DYSTOPIAN CHRISTMAS](https://itch.io/jam/libgdx-jam-23) (December 2022)
 * [Post Apocalyptic](https://itch.io/jam/libgdx-jam-22) (September 2022)
