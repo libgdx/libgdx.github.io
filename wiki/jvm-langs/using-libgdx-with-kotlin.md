@@ -71,7 +71,7 @@ Add Kotlin’s stdlib to your core project's dependencies list:
 
 ```Groovy
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 }
 ```
 
@@ -79,7 +79,7 @@ If you intend to use Kotlin’s reflection capabilities as well, add the respect
 
 ```Kotlin
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
 }
 ```
 
@@ -89,7 +89,7 @@ If you made Intellij automatically configure `build.gradle` for you, and chose K
 
 ```Kotlin
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion"
 }
 ```
 
