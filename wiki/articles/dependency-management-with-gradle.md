@@ -64,7 +64,7 @@ allprojects {
     ext {
         appName = "the-name-of-your-game"
         //Versions of the libGDX dependencies (used further below on those 'compile' lines)
-        gdxVersion = '1.11.0'
+        gdxVersion = '1.12.0'
         roboVMVersion = '2.3.19'
         box2DLightsVersion = '1.5'
         ashleyVersion = '1.7.4'
