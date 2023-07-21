@@ -49,9 +49,7 @@ imgui.inputText("string", buf);
 imgui.sliderFloat("float", f, 0f, 1f);
 ```
 
-![screenshot of sample code alongside its output with ImGui](/assets/wiki/images/imgui1.png)
-
-ImGui supports also other languages, such as Japanese, initiliazed [here](https://github.com/pakoito/imgui/blob/master/src/test/kotlin/imgui/gl/test%20lwjgl.kt#L79) as:
+ImGui also supports other languages, such as Japanese, initiliazed [here](https://github.com/pakoito/imgui/blob/master/src/test/kotlin/imgui/gl/test%20lwjgl.kt#L79) as:
 
 ```kotlin
 IO.fonts.addFontFromFileTTF("extraFonts/ArialUni.ttf", 18f, glyphRanges = IO.fonts.glyphRangesJapanese)!!
@@ -67,57 +65,80 @@ api "io.github.spair:imgui-java-natives-macos:<version>"
 api "io.github.spair:imgui-java-natives-windows:<version>"
 ```
 
+Replace `<version>` with the latest  version found at the top of the README file [here](https://github.com/SpaiR/imgui-java#readme). 
+
 ### Example Minimal Usage
-The following instructions detail how ImGui can be used on top of a 3D scene in libGDX.
+The following instructions detail how ImGui can be used in a libGDX game. For easier use, you can put most of the methods in a specialised class, e.g. `ImGuiRenderer`.
 
-1. Initialize ImGui at the beginning of the program:
+1. Initialize ImGui. This has to be done once for your application, for example in `Game#create()`:
 
    ```java
-   ImGuiImplGlfw imGuiGlfw = new ImGuiImplGlfw();
-   ImGuiImplGl3 imGuiGl3 = new ImGuiImplGl3();
+   	private static ImGuiImplGlfw imGuiGlfw;
+   	private static ImGuiImplGl3 imGuiGl3;
+   
+   	public static void init() {
+		imGuiGlfw = new ImGuiImplGlfw();
+		imGuiGl3 = new ImGuiImplGl3();
+		long windowHandle = ((Lwjgl3Graphics) Gdx.graphics).getWindow().getWindowHandle();
+		ImGui.createContext();
+		ImGuiIO io = ImGui.getIO();
+		io.setIniFilename(null);
+		io.getFonts().addFontDefault();
+		io.getFonts().build();
+		imGuiGlfw.init(windowHandle, true);
+		imGuiGl3.init("#version 150");
+   	}
    ```
 
-2. In `create()`:
+2. Before you start using any of the ImGui methods in the `render()` method of your screens, you need to start a new frame:
 
    ```java
-   // create 3D scene
-   GLFWErrorCallback.createPrint(System.err).set();
-   if (!glfwInit())
-   {
-      throw new IllegalStateException("Unable to initialize GLFW");
+   private static InputProcessor tmpProcessor;
+
+   public static void start() {
+		if (tmpProcessor != null) { // this makes sure that ImGui catches all inputs
+			Gdx.input.setInputProcessor(tmpProcessor);
+			tmpProcessor = null;
+		}
+
+		imGuiGlfw.newFrame();
+		ImGui.newFrame();
    }
-   ImGui.createContext();
-   final ImGuiIO io = ImGui.getIO();
-   io.setIniFilename(null);
-   ImGuiTools.setupFonts(io);
-   
-   windowHandle = ((Lwjgl3Graphics) Gdx.graphics).getWindow().getWindowHandle();
-   
-   imGuiGlfw.init(windowHandle, true);
-   imGuiGl3.init(glslVersion);
    ```
 
-3. In `render()`:
+3. Then you can render any UI stuff you want, e.g.:
 
    ```java
-   // render 3D scene
-   imGuiGlfw.newFrame();
-   ImGui.newFrame();
    ImGui.button("I'm a Button!");
-   ImGui.render();
-   imGuiGl3.renderDrawData(ImGui.getDrawData());
-   glfwSwapBuffers(windowHandle);
-   glfwPollEvents();
    ```
 
-4. In `dispose()`:
+3. Afterwards, you need to actually render the ImGui frame:
 
    ```java
-   imGuiGl3.dispose();
-   imGuiGlfw.dispose();
-   ImGui.destroyContext();
+	public static void end() {
+		ImGui.render();
+		imGuiGl3.renderDrawData(ImGui.getDrawData());
+
+		if (ImGui.getIO().getWantCaptureKeyboard()
+				|| ImGui.getIO().getWantCaptureMouse()) {
+			tmpProcessor = Gdx.input.getInputProcessor();
+			Gdx.input.setInputProcessor(null);
+		}
+	}
    ```
 
-5. The result:
+4. Be sure to dispose ImGui if you no longer need it:
+
+   ```java
+	public static void dispose() {
+		imGuiGl3.dispose();
+		imGuiGl3 = null;
+		imGuiGlfw.dispose();
+		imGuiGlfw = null;
+		ImGui.destroyContext();
+	}
+   ```
+
+5. The result can look like this:
 
    <img src="/assets/wiki/images/imgui2.png" alt="Screenshot of ImGui in libGDX" width="500"/>
