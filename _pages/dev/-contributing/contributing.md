@@ -14,7 +14,7 @@ sidebar:
 
 {% include breadcrumbs.html %}
 
-Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on the [Discord](/community/), pledge to the [Patreon](/funding/) page, and submit [code](https://github.com/libgdx/libgdx/) and [documentation](/wiki/) back to the project on GitHub.
+Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on the [Discord](/community/), pledge to the [Patreon](/funding/) page, and submit [code](https://github.com/libgdx/libgdx/) and [documentation](/wiki/) back to the project on GitHub. Check out the [CONTRIBUTING.md](https://github.com/libgdx/libgdx/blob/master/.github/CONTRIBUTING.md) file on GitHub to find out more!
 
 If you want to submit code back to the project, please take a moment to review our guidelines below.
 
@@ -105,25 +105,7 @@ To reduce the chances of introducing errant behavior and to increase the chance 
 
 <br/>
 
-# How to contribute code
-libGDX uses git, with our codebase situated on GitHub. In order to submit changes back to the official libGDX project, you will need to fork the project, clone your fork, [work on its source](/dev/from-source/), push changes back to your fork, and then submit a pull request based on your changes.
-
-Pull requests will then be checked by automation tools as well as the core contributors before merging. Please do not leave it up to the core contributors to test your code, make sure it compiles, and test on every platform you can. State in your pull request what you have tested on.
-
-To sum it up, this is the general workflow:
-- [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the libGDX repository on GitHub.
-- Clone the forked repository either via the command line or your IDE.
-- Add the libGDX repository as a remote (to sync latest changes).
-- Make your changes to your locally cloned (of your fork), repository, ideally on a new branch. See [here](/dev/from-source/) for a guide on how to get the libGDX code running locally.
-- Commit your changes, and push the changes back to your forked repository on GitHub.
-- Go to GitHub, view your forked repository, select your branch and create a pull request.
-- Write a detailed description of what your pull request does, how it has been tested, what platforms it has been tested on, and why it belongs in libGDX.
-
-For a very extensive explanation of how the pull request system on GitHub is supposed to work, check out [this guide](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#Forked-Public-Project).
-
-Pull requests may be denied for not being ready, or not fitting the scope of the project. Please do not take any offense to having a pull request rejected. We appreciate every contribution, but some code submissions are just not a good fit for the project.
-
-## Other development resources
+# Other development resources
 There are a few wiki articles concerned with contributing to libGDX:
 
 - [Adding new keycodes](/wiki/misc/adding-new-keycodes)

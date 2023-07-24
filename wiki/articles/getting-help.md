@@ -24,10 +24,10 @@ The [libGDX community](https://libgdx.com/community/) is glad to help you when y
 
 ## Helping Yourself
 
-Please go through this short checklist to be sure you haven't missed an easy to find solution.
+Please go through this short checklist to make sure you haven't missed an easy to find solution.
 
   * Are you using the latest nightly build? You can do so by changing `gdxVersion` in `build.gradle` to the snapshot version listed [on GitHub](https://github.com/libgdx/libgdx#readme). Please try that first, as issues are being fixed every single day.
-  * Have you read the documentation on the [Table of Contents](/wiki/index)? It can also be very helpful to look at the [Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx) and [source code](https://github.com/libgdx/libgdx) (don't be shy!). Search the [tests](https://github.com/libgdx/libgdx/tree/master/tests/gdx-tests/src/com/badlogic/gdx/tests) for a specific class to find example code.
+  * Have you read the documentation on the [wiki](/wiki/)? It can also be very helpful to look at the [Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx) and [source code](https://github.com/libgdx/libgdx) (don't be shy!). Search the [tests](https://github.com/libgdx/libgdx/tree/master/tests/gdx-tests/src/com/badlogic/gdx/tests) for a specific class to find example code.
   * Have you [searched on our Discord server](https://libgdx.com/community/discord/) for your problem?
   * Have you [searched the issue tracker](https://github.com/libgdx/libgdx/issues?q=is%3Aissue) for your problem? Be sure to search "All issues", not just "Open issues".
 
@@ -36,13 +36,10 @@ Please go through this short checklist to be sure you haven't missed an easy to 
 Otherwise, if you wish to [post a new issue](https://github.com/libgdx/libgdx/blob/master/CONTRIBUTING.md) on the [tracker](https://github.com/libgdx/libgdx/issues), keep reading.
 
 ## Help Us Help You
-If you believe your issue, error, or suspected bug is related to a specific backend, please present the following information with your issue. If you are on the Discord/IRC have the following information on hand.
+If you believe your issue, error, or suspected bug is related to a specific backend, please present the following information with your issue. If you are on the Discord have the following information on hand.
 
 **For Android backend issues**
  - **Note:** Android issues can sometimes be more difficult due to device manufactures breaking things or buggy drivers.
-
-- **Note 2:** libGDX only works completely on the Android Runtime (ART) on devices running the Android L developer preview and higher. Some functions will not work on the ART builds in 4.4.x due to an issue in ART that was fixed and included in the L developer preview.
-
 - Please have the device name and Android version in the bug report. Providing things won't be broken, we will make an attempt to fix the issue or implement a workaround for the device.
 
 **For Desktop backend issues (LWJGL 2 & 3)**
@@ -55,6 +52,7 @@ If you believe your issue, error, or suspected bug is related to a specific back
 **For GWT (WebGL) backend issues**
  - Please list the operating system and version, and architecture.
  - Please list the browser and browser version
+
 Listing this information can greatly reduce the workload on us and can greatly increase the chances your issue will be resolved or an available fix or workaround implemented.
 
 ## Title

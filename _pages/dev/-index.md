@@ -53,6 +53,4 @@ A curated list of our favourite libraries can be found at **[Awesome-libGDX](htt
 <br/>
 
 # Contributing to libGDX
-Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on our [Discord](/community/), pledge to the [Patreon page](/funding/), or [submit code and documentation back to the project](/dev/contributing/) on GitHub.
-
-If you want to contribute to the code base of libGDX, please review our [contributing guidelines](/dev/contributing/). After that, you need to get libGDX set up on your local machine. Instructions for that can be found [here](/dev/from_source/).
+Contributing to libGDX can come in a few different forms: you can [report issues](/dev/issues/), help out on our [Discord](/community/), pledge to the [Patreon page](/funding/), or [submit code and documentation back to the project](/dev/contributing/) on GitHub. Check out the [CONTRIBUTING.md](https://github.com/libgdx/libgdx/blob/master/.github/CONTRIBUTING.md) file on GitHub to find out more!
