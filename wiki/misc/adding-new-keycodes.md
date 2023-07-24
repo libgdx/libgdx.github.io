@@ -1,6 +1,6 @@
 ---
 title: Adding new Keycodes
-# Not listed in ToC
+# Not listed in ToC, but linked via /dev/contributing/
 ---
 ## Short info on how to add new keycodes:
 

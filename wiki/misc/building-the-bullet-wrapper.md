@@ -1,6 +1,6 @@
 ---
 title: Building the Bullet wrapper
-# Not listed in ToC
+# Not listed in ToC, but linked via /dev/contributing/
 ---
 * [Modifying the wrapper](#modifying-the-wrapper)
 * [Building the Java module](#building-the-java-module)
