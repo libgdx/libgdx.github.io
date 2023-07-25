@@ -65,11 +65,6 @@ There are also a lot of other improvements in the works, which may not be not bi
     <br>Our TiledMap implementation is not as up to date as we would like it to be. Therefore, we are considering to move it to its own repo to separate its release cycle from libGDX's and to assess its compatibility with other map editors than <a href="https://www.mapeditor.org">Tiled</a>.<sup><a href="https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Atilemap+">1</a>, <a href="https://github.com/libgdx/libgdx/pulls?q=is%3Apr+is%3Aopen+label%3Atilemap">2</a>, <a href="https://github.com/lyze237/gdx-TiledMap">3</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
-  <tr>
-    <td><h4>Web-Based Setup Tool</h4>
-    <br>We already have a working prototype of our new web-based setup tool and are now working on polishing it up to start public testing.<sup><a href="https://github.com/MrStahlfelge/gdx-setup">1</a>, <a href="https://raeleus.itch.io/libgdx-project-setup">2</a></sup></td>
-    <td>{% include status.html is='planned' %}</td>
-  </tr>
 </table>
 
 <br/>
