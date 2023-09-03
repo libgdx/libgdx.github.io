@@ -170,7 +170,7 @@ p a:active {
   <div class="container right" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom">
     <div class="content">
       <h2>2021</h2>
-      <p>In 2021, we released the versions <a href="/news/2021/01/gdx_1_9_13">1.9.13</a>, <a href="/news/2021/02/gdx-1-9-14">1.9.14/a>, and most notably <a href="/news/2021/04/gdx-1-10">1.10</a>. In the course of this, we also migrated our whole build setup to GitHub Actions to make it more robust and future-proof. We also introduced <a href="/news/2021/01/devlog_5_community_showcases">Community Showcases</a> on our website to give some of the interesting community projects surrounding libGDX the chance to present themselves to a wider audience.</p>
+      <p>In 2021, we released the versions <a href="/news/2021/01/gdx_1_9_13">1.9.13</a>, <a href="/news/2021/02/gdx-1-9-14">1.9.14</a>, and most notably <a href="/news/2021/04/gdx-1-10">1.10</a>. In the course of this, we also migrated our whole build setup to GitHub Actions to make it more robust and future-proof. We also introduced <a href="/news/2021/01/devlog_5_community_showcases">Community Showcases</a> on our website to give some of the interesting community projects surrounding libGDX the chance to present themselves to a wider audience.</p>
     </div>
   </div>
   <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
@@ -224,8 +224,7 @@ p a:active {
   <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
     <div class="content">
       <h2>2012 - New Worlds</h2>
-      <p>In 2012, <a href="http://web.archive.org/web/20170608015410/http://www.badlogicgames.com/wordpress/?p=2254">gdx-jnigen</a> was created. It became an integral part of libGDX's native code development, making it a lot easier to integrate C/C++ libraries with the framework. Apart from that, 2012 became the year of discovering new worlds: HTML5/WebGL, iOS, GitHub and Maven. Inspired by Google's <a href="https://github.com/playn/playn">PlayN</a> Mario started working on the GWT backend, which to this day remains an essential part of libGDX' identity. The next big change came in June, when the team <a href="http://web.archive.org/web/20200928225224/https://www.badlogicgames.com/wordpress/?p=2450">started investigating iOS</a>, again based on work done in the PlayN camp. In August, discussing started regarding <a href="http://web.archive.org/web/20200928230258/https://www.badlogicgames.com/wordpress/?p=2551">moving to GitHub and adding proper Maven support</a>.
-      </p>
+      <p>In 2012, <a href="http://web.archive.org/web/20170608015410/http://www.badlogicgames.com/wordpress/?p=2254">gdx-jnigen</a> was created. It became an integral part of libGDX's native code development, making it a lot easier to integrate C/C++ libraries with the framework. Apart from that, 2012 became the year of discovering new worlds: HTML5/WebGL, iOS, GitHub and Maven. Inspired by Google's <a href="https://github.com/playn/playn">PlayN</a> Mario started working on the GWT backend, which to this day remains an essential part of libGDX' identity. The next big change came in June, when the team <a href="http://web.archive.org/web/20200928225224/https://www.badlogicgames.com/wordpress/?p=2450">started investigating iOS</a>, again based on work done in the PlayN camp. In August, discussing started regarding <a href="http://web.archive.org/web/20200928230258/https://www.badlogicgames.com/wordpress/?p=2551">moving to GitHub and adding proper Maven support</a>.</p>
     </div>
   </div>
   <div class="container right" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom">
