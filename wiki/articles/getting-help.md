@@ -33,7 +33,7 @@ Please go through this short checklist to make sure you haven't missed an easy t
 
 **If you still have a problem, the way to get help is the [libGDX Discord](https://libgdx.com/community/discord/). There are a lot of active users, any one of which could answer your question right now.**
 
-Otherwise, if you wish to [post a new issue](https://github.com/libgdx/libgdx/blob/master/CONTRIBUTING.md) on the [tracker](https://github.com/libgdx/libgdx/issues), keep reading.
+Otherwise, if you wish to [post a new issue](https://github.com/libgdx/libgdx/blob/master/.github/CONTRIBUTING.md) on the [tracker](https://github.com/libgdx/libgdx/issues), keep reading.
 
 ## Help Us Help You
 If you believe your issue, error, or suspected bug is related to a specific backend, please present the following information with your issue. If you are on the Discord have the following information on hand.
