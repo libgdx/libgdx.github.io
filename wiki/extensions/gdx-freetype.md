@@ -35,7 +35,7 @@ To add to an existing Gradle project, see [Dependency management with Gradle](/w
 
 #### HTML5
 
-gdx-freetype is not compatible with HTML5. However, you may use the [gdx-freetype-gwt](https://github.com/intrigus/gdx-freetype-gwt) library by Intrigus to enable HTML5 functionality. Version 1.9.10.1 remains compatible with never versions of libGDX, including 1.10.0.
+gdx-freetype is not compatible with HTML5. However, you may use the [gdx-freetype-gwt](https://github.com/intrigus/gdx-freetype-gwt) library by Intrigus to enable HTML5 functionality. Version 1.9.10.1 remains compatible with newer versions of libGDX, including 1.10.0.
 
 ### How to use gdx-freetype in code
 
