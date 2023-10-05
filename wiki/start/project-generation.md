@@ -16,7 +16,7 @@ To setup your first project and download the necessary dependencies, libGDX offe
     <a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Nightly Version</a>-->
     <a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Download</a>
 
-2. Double-click the downloaded file. If this doesn't work, open your command line tool, go to the download folder and run <br><!--`java -jar gdx-setup_latest.jar`-->`java -jar gdx-setup.jar`
+2. Double-click the downloaded file. If this doesn't work, open your command line tool, go to the download folder and run <br><!--`java -jar gdx-setup_latest.jar`-->`java -jar gdx-setup.jar`. On Linux, you might need to right-click the file, select "Properties" and then check "Allow executing the file as program" in the "Permission" tab.
 
 This will open the following setup that will allow you to generate your project:
 
@@ -30,7 +30,7 @@ You are asked to provide the following parameters:
 * **Package**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
 * **Game Class**: the name of the main game Java class of your app, e.g. `MyGame`
 * **Destination**: the folder where your app will be created
-* **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" -> "SDK Manager". By default it is in `/Users/username/Library/Android/sdk` <br>
+* **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" (on recent versions, this is replaced by a three dots icon at the top right) -> "SDK Manager". By default it is in `/Users/username/Library/Android/sdk` <br>
 
 
 ![Android Studio welcome screen](/assets/images/dev/setup/1.png){: style="width: 700px;" }
