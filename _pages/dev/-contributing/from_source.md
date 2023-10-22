@@ -86,13 +86,43 @@ GL30 emulation (WebGL 2.0) can be enabled via URL parameters :  [`http://localho
 
 <br/>
 
-# Building
-To use your local changes in another project, you can install libGDX to your local maven repository by running the following command:
+# Building and Publishing
+To use your local libGDX changes in another project you need to install it to a private repository.
+
+## Versioning
+First recommended step is changing the version in `gradle.properties` to avoid conflicts with official release.
+One option is to add an extra number to current version, for example changing `version=1.12.0` to `version=1.12.0.1`.
+
+## Publishing a Snapshot version
+
+You can install a libGDX snapshot version to your local Maven repository by running the following command:
 ```
 ./gradlew publishToMavenLocal
 ```
+This will build and install libGDX and all core components to your local maven repository with the current version declared in the gradle.properties file plus the SNAPSHOT qualifier (in our example `1.12.0.1-SNAPSHOT`).
 
-This will build and install libGDX and all core components to your local maven repository with the current version declared in the gradle.properties file. If you are working with an older branch of libGDX, try `mvn install` instead. If you want to include a local libGDX project as dependency without having to publish it after every change, add `includeBuild "<path-to-libgdx-repo>"` to a `settings.gradle` file in your other project.
+## Publishing a Release version
+
+Publishing properties are defined in `publish.gradle` file. To install a release version in your local Maven repository the following changes are required:
+1. Disable the signing plugin
+```
+// apply plugin: 'signing'
+```
+2. Remove the `signing` configuration block
+```
+// signing {
+//  useGpgCmd()
+// ...
+// }
+```
+You can build and install a libGDX release version to your local Maven repository with the current version declared in the `gradle.properties` by running:
+```
+gradlew.bat -P RELEASE publishToMavenLocal
+```
+
+## Local project dependency
+
+If you want to include a local libGDX project as dependency without having to publish it after every change, add `includeBuild "<path-to-libgdx-repo>"` to a `settings.gradle` file in your other project.
 
 <br/>
 
