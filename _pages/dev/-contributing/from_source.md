@@ -103,21 +103,43 @@ This will build and install libGDX and all core components to your local maven r
 
 ## Publishing a Release version
 
-Publishing properties are defined in `publish.gradle` file. To install a release version in your local Maven repository the following changes are required:
-1. Disable the signing plugin
+Publishing properties are defined in the `publish.gradle` file. To install a release version in your local Maven you can override the default repository by creating a file called `override.gradle` in the root folder with the following content
 ```
-// apply plugin: 'signing'
+configure([
+        project(":gdx"),
+        project(":backends:gdx-backend-android"),
+        project(":backends:gdx-backend-headless"),
+        project(":backends:gdx-backend-lwjgl"),
+        project(":backends:gdx-backend-lwjgl3"),
+        project(":backends:gdx-backend-robovm"),
+        project(":backends:gdx-backend-robovm-metalangle"),
+        project(":backends:gdx-backend-gwt"),
+        project(":extensions:gdx-box2d-parent"),
+        project(":extensions:gdx-box2d-parent:gdx-box2d"),
+        project(":extensions:gdx-box2d-parent:gdx-box2d-gwt"),
+        project(":extensions:gdx-bullet"),
+        project(":extensions:gdx-freetype"),
+        project(":extensions:gdx-lwjgl3-angle"),
+        project(":extensions:gdx-lwjgl3-glfw-awt-macos"),
+        project(":extensions:gdx-tools")
+]) {
+    afterEvaluate { project ->
+        publishing.repositories {
+            // Add your repositories
+        }
+
+        gradle.taskGraph.whenReady {
+            tasks.withType(Sign) {
+                onlyIf { false }
+            }
+        }
+    }
+}
 ```
-2. Remove the `signing` configuration block
+
+You can build and install a libGDX release version to your local Maven repository (or any private repo you configure) with the current version declared in the `gradle.properties` by running:
 ```
-// signing {
-//  useGpgCmd()
-// ...
-// }
-```
-You can build and install a libGDX release version to your local Maven repository with the current version declared in the `gradle.properties` by running:
-```
-gradlew.bat -P RELEASE publishToMavenLocal
+gradlew.bat -PRELEASE publishToMavenLocal
 ```
 
 ## Local project dependency
