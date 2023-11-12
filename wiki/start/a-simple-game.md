@@ -217,7 +217,7 @@ Next we load the sound effect and the background music. libGDX differentiates be
 
 Loading of a `Sound` or `Music` instance is done via `Gdx.audio.newSound()` and `Gdx.audio.newMusic()`. Both of these methods take a `FileHandle`, just like the `Texture` constructor.
 
-At the end of the `create()` method we also tell the `Music` instance to loop and start playback immediately. If you run the application you'll see a nice pink background and hear the rain fall.
+At the end of the `create()` method we also tell the `Music` instance to loop and start playback immediately. If you run the application you'll see a nice red background and hear the rain fall.
 
 ## A Camera and a SpriteBatch
 Next up, we want to create a camera and a `SpriteBatch`. We'll use the former to ensure we can render using our target resolution of 800x480 pixels no matter what the actual screen resolution is. The `SpriteBatch` is a special class that is used to draw 2D images, like the textures we loaded.
