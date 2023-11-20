@@ -22,7 +22,7 @@ Another in-depth LibGDX-based tutorial for adding Google Play Game Services can 
 
 Latest tutorial using Android Studio can be found [here](https://chandruscm.wordpress.com/2015/12/30/how-to-setup-google-play-game-services-in-libgdx-using-android-studio/)
 
-### Intellij IDEA and Android Studio Setup
+### IntelliJ IDEA and Android Studio Setup
 
 1. Install Google Play Service and Google Play Repository using and Android SDK
 

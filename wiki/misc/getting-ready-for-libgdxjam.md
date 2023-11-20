@@ -68,7 +68,7 @@ All hail ye who are brave enough to take up on the #libGDXJam challenge, have yo
 Make sure you have decided on:
 
 * Libraries: obviously Libgdx, but... Are you using any extensions or third party libraries?
-* Programming language and IDE: Java, Kotlin, Clojure or Scala? Eclipse, Intellij IDEA, Netbeans, Sublime, Vim, Emacs?
+* Programming language and IDE: Java, Kotlin, Clojure or Scala? Eclipse, IntelliJ IDEA, Netbeans, Sublime, Vim, Emacs?
 * Graphic editors
 * Level editors
 * Sound generators and editors
