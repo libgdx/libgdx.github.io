@@ -123,9 +123,9 @@ mvn -Phtml install
 And browse to [http://127.0.0.1:8080/index.html](http://127.0.0.1:8080/index.html)
 
 ## IDE Integration
-Eclipse, Intellij Idea and NetBeans all support Maven projects in some form. The archetype goes to great lengths to make your libGDX project usable within Eclipse and Intellij Idea. NetBeans is unsupported at the time of writing.
+Eclipse, Intellij IDEA and NetBeans all support Maven projects in some form. The archetype goes to great lengths to make your libGDX project usable within Eclipse and Intellij IDEA. NetBeans is unsupported at the time of writing.
 
-While Maven is IDE agnostic, the plugins for GWT and Android are not. Plugins for Eclipse differ in how the interpret the Maven configuration for GWT and Android projects from those in Intellij. The following sections describe how to import a project into both IDE's after creating it using the libGDX archetype.
+While Maven is IDE agnostic, the plugins for GWT and Android are not. Plugins for Eclipse differ in how the interpret the Maven configuration for GWT and Android projects from those in Intellij IDEA. The following sections describe how to import a project into both IDE's after creating it using the libGDX archetype.
 
 ### Eclipse
 Before you can import your project, you need to install the following Eclipse plugins:
@@ -142,10 +142,10 @@ From there on you can run & debug just as you'd do if you setup your projects vi
 
 If you change anything in the assets, you need to run "mvn -Phtml package" again and refresh the html project in Eclipse.
 
-### IntelliJ Idea
-Before you start, you should make sure IntelliJ Idea knows where your Maven installation is located. Go to *File -> Settings*, and in the tree in the dialog chose Maven. Specify the directory where your Maven installation lives.
+### IntelliJ IDEA
+Before you start, you should make sure IntelliJ IDEA knows where your Maven installation is located. Go to *File -> Settings*, and in the tree in the dialog chose Maven. Specify the directory where your Maven installation lives.
 
-Once you created your project via the archetype you can import it into IntelliJ Idea. Go to *File -> Open Project*, then navigate to the root directory of the project.
+Once you created your project via the archetype you can import it into IntelliJ IDEA. Go to *File -> Open Project*, then navigate to the root directory of the project.
 
 Once the project is loaded, you have to enable the profiles. Open the Maven Project view and check the three profiles, desktop, android and HTML.
 

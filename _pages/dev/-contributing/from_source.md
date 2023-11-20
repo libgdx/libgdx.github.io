@@ -17,7 +17,7 @@ sidebar:
 {% include breadcrumbs.html %}
 
 # Setting the Project Up
-If you want to work on the code of libGDX itself, you need to get it set up on your local machine. For this, Android Studio is strongly recommended as IDE!
+If you want to work on the code of libGDX itself, you need to get it set up on your local machine. For this, IntelliJ IDEA/Android Studio is strongly recommended as IDE!
 
 If you want to submit code back to the project, please also take a moment to review our [guidelines](/dev/contributing/).
 
@@ -35,7 +35,7 @@ If you want to submit code back to the project, please also take a moment to rev
    ```
 4. Importing the project:
 
-    a) **Via IntelliJ/Android Studio:**
+    a) **Via IntelliJ IDEA/Android Studio:**
 
      - File -> Open -> libGDX root `build.gradle`
      - Import all projects
@@ -59,7 +59,7 @@ If you encounter any issues while setting up your development environment for li
 # Tests
 If you set everything up correctly, you can try to give the libGDX tests a go.
 
-**LWJGL/LWJGL3:** Run the `LwjglTestStart` class located in tests/gdx-tests/gdx-tests-lwjgl/src (or tests/gdx-tests/gdx-tests-lwjgl3/src respectively) by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ:
+**LWJGL/LWJGL3:** Run the `LwjglTestStart` class located in tests/gdx-tests/gdx-tests-lwjgl/src (or tests/gdx-tests/gdx-tests-lwjgl3/src respectively) by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ IDEA:
 
 ![](/assets/images/dev/source/0.png)
 
