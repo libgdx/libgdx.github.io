@@ -8,7 +8,7 @@ title: Improving workflow with Gradle
  * [**Gradle Daemon**](#gradle-daemon)
  * [**Configuration on Demand**](#configuration-on-demand)
 * [**Removing Gradle integration from your IDE**](#how-to-remove-gradle-ide-integration-from-your-project)
- * [**Intellij IDEA**](#creating-your-idea-project)
+ * [**IntelliJ IDEA**](#creating-your-idea-project)
  * [**Eclipse**](#creating-your-eclipse-project)
 * [**libGDX without Gradle**](#libgdx-without-gradle)
 * [**Why does libGDX recommend Gradle**](#why-does-libgdx-recommend-gradle)
@@ -17,7 +17,7 @@ title: Improving workflow with Gradle
 ## Introduction
 Gradle is very powerful, and once you get used to it is a great tool to be versed in and to have in your arsenal, but when mixed with your IDE it can cause workflow problems. This varies from project to project, and from person to person; here is an example of such an issue:
 
-Having a multi-project, multi-flavour project, where you want to be running your desktop build very often to check your latest changes. Due to how Gradle works (it allows the flexibility of accessing and changing any part of the build from any part of the project), it must configure all projects in a multi-project setup before any task is executed. When you have a project with desktop only, this is usually very speedy, but when you add in an android project and a html project the setup time starts to rack up. This is especially noticeable in Intellij IDEA.
+Having a multi-project, multi-flavour project, where you want to be running your desktop build very often to check your latest changes. Due to how Gradle works (it allows the flexibility of accessing and changing any part of the build from any part of the project), it must configure all projects in a multi-project setup before any task is executed. When you have a project with desktop only, this is usually very speedy, but when you add in an android project and a html project the setup time starts to rack up. This is especially noticeable in IntelliJ IDEA.
 
 ## Tips to speed up Gradle if you still want IDE integration
 
@@ -43,7 +43,7 @@ Add the line; `org.gradle.configureondemand=true`
 
 ## How to remove Gradle IDE integration from your project
 
-_Note: This only applies for Eclipse and Intellij IDEA users_
+_Note: This only applies for Eclipse and IntelliJ IDEA users_
 
 With the project that is generated from gdx-setup.jar, the Gradle IDEA, and Gradle Eclipse plugins are applied to all projects.
 These plugins allow you to generate IDE specific files that you can then work from.

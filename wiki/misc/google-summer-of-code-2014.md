@@ -258,7 +258,7 @@ This project could be done in collaboration with the Scripting Support project a
 
 **Goals**: libGDX projects are usually done with Eclipse in mind. While we support [Maven](/wiki/articles/maven-integration) and other IDEs and development environments, integration isn't as straight forward. Maven is problematic due to GWT and Android being somewhat second class citizens in that area. Also, IDE integration of Maven Android and GWT projects is lacking. In addition to IDE woes, packaging and deploying projects can be cumbersome. We'd like to develop a command line application that allows the creation of new libGDX projects, create project files for various IDEs, create POM and Gradle build files, can update dependencies automatically, can remove and add extensions, and package and deploy the application to connected devices. [Loom Engine](http://theengine.co/loom) and [Haxe NME](http://www.nme.io/developer/documentation/getting-started/) provide similar tools.
 
-**Required Skills**: Java, Maven, Gradle, Eclipse, Intellij, Netbeans
+**Required Skills**: Java, Maven, Gradle, Eclipse, IntelliJ, Netbeans
 **Links**: [Google Doc with requirements](https://docs.google.com/document/d/1yy3Q5B0K06yz_Oool1ZCtavtSvASJa56lic_5Yg1C9c/edit?usp=sharing)
 
 **Mentors**:
@@ -270,7 +270,7 @@ This project could be done in collaboration with the Scripting Support project a
 
 **Goals**: libGDX is used in production, and as such requires high robustness. One way of increasing robustness is to use static analysis tools that uncover bad practices and bugs. Applying such analysis to a code base as big as libGDX's is a challenge. Not only is the size an issue, but a gaming framework may have to rely on patterns for performance that are wrongly identified as issues by static analysis tools. For this idea, we'd like to see how static analysis tools can be exploited to increase libGDX's quality and how we could integrate them into our everyday workflow. It is expected that whatever tool is used for analysis needs to be adapted with new rules that fit for the requirements of a gaming framework.
 
-**Required Skills**: Java, Maven, Gradle, Eclipse, Intellij, Netbeans
+**Required Skills**: Java, Maven, Gradle, Eclipse, IntelliJ, Netbeans
 
 **Links**: [List of static analysis tools on Wikipedia](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis#Java)
 

@@ -33,7 +33,7 @@ Signing the CLA will allow us to use and distribute your code. This is a non-exc
 ## Formatting
 If you are working on any of the libGDX code, we require you to use our formatter. To make our life easier, we have integrated the formatter into our build system with  [Spotless](https://github.com/diffplug/spotless). This allows you to run `./gradlew spotlessApply` to format your files locally and also ensures that pull requests are formatted automatically via GitHub Actions.
 
-Alternatively, you can find the Eclipse formatter file [here](https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml), which can also be imported into IntelliJ and Android Studio. See [here](https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/) for official documentation on how to do this.
+Alternatively, you can find the Eclipse formatter file [here](https://github.com/libgdx/libgdx/blob/master/eclipse-formatter.xml), which can also be imported into IntelliJ IDEA and Android Studio. See [here](https://blog.jetbrains.com/idea/2014/01/intellij-idea-13-importing-code-formatter-settings-from-eclipse/) for official documentation on how to do this.
 
 ## Code Style
 libGDX doesn't have an official coding standard, but we stand by the usual Java style, as should you.
