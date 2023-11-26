@@ -25,81 +25,49 @@ Latest tutorial using Android Studio can be found [here](https://chandruscm.word
 ### IntelliJ IDEA and Android Studio Setup
 
 1. Install Google Play Service and Google Play Repository using and Android SDK
+   To do that on Android Studio, Open up SDK Manager, ( Click the button next to the AVD manager in the top toolbar ) click Launch Standalone SDK Manager
+   Scroll down to the Extras section and make sure these 2 packages are installed and updated to the latest :
+   * Google Play services
+   * Google Repository
+2. Download the BaseGameUtils sample project [here](https://github.com/playgameservices/android-basic-samples), copy folder `BaseGameUtils`, located in folder `BasicSamples` into your project root folder.
+3. Edit `settings.gradle`
+   ```groovy
+   include 'desktop', 'android', 'ios', 'html', 'core', "BaseGameUtils"
+   ```
+4. Edit root `build.gradle` and add the below as android dependency:
+   ```groovy
+   compile project(":BaseGameUtils")
+   ```
+5. in your `AndroidManifest.xml` file
+   * add two permissions:
+      ```xml
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      ```
+   * add to your application tag
+      ```xml
+      <meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@string/app_id" />
+      ```
+6. In your Android project, under 'res'->'values', in file `strings.xml` add app_id as follows, where 123456789 is your app ID as declared in the Google Play Developer Console:
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+     <resources>
+     <string name="app_name">sample_ios_google_signin</string>
+     <string name="app_id">123456789</string>
+   </resources>
+   ```
 
-To do that on Android Studio, Open up SDK Manager, ( Click the button next to the AVD manager in the top toolbar ) click Launch Standalone SDK Manager
-Scroll down to the Extras section and make sure these 2 packages are installed and updated to the latest :
-* Google Play services
-* Google Repository
+7. `build.gradle` in Android project
 
-2. Download BaseGameUtils sample project [here](https://github.com/playgameservices/android-basic-samples), copy folder `BaseGameUtils`, located in folder `BasicSamples` into your project root folder.
+   Synchronize with Gradle. you will get the following message:
+   ```
+   Error:Execution failed for task ':android:processDebugManifest'.
+   > Manifest merger failed : uses-sdk:minSdkVersion 9 cannot be smaller than version 15 declared in library [libgdx-GPGS:BaseGameUtils:1.0]
+   ```
 
-3. Edit settings.gradle 
-```
-include 'desktop', 'android', 'ios', 'html', 'core', "BaseGameUtils"
-```
-4. Edit root build.gradle and add the below as android dependency: 
-```
-compile project(":BaseGameUtils")
-```
-
-5. in your AndroidManifest.xml file
-
-* add two permissions:
-```
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
-
-* add to your application tag
-```
-<meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@string/app_id" />
-```
-
-6. string.xml
-
-in your android project, under 'res'->'values', in file `strings.xml` add app_id as follow, where 123456789 is your app ID in as declared in the Google Play Developer Console.
-
-```
-<?xml version="1.0" encoding="utf-8"?>
-  <resources>
-  <string name="app_name">sample_ios_google_signin</string>
-  <string name="app_id">123456789</string>
-</resources>
-```
-
-6. build.gradle in Android project
-
-Synchronize with Gradle. you will get the following message: 
-```
-Error:Execution failed for task ':android:processDebugManifest'.
-> Manifest merger failed : uses-sdk:minSdkVersion 9 cannot be smaller than version 15 declared in library [libgdx-GPGS:BaseGameUtils:1.0]
-```
-
-edit and set `minSdkVersion` to the version number in the message above (in this case '15')
+   edit and set `minSdkVersion` to the version number in the message above (in this case '15')
 
 ## iOS integration
 
-**Google Play Games' iOS support is deprecated and shouldn't be implemented in new games.**
-
-There are two ways (called `Backend`) to integrate Google Play Games Services with iOS depending whether your are using the open source, community supported [Mobidevelop's RoboVM and its Robopods](https://github.com/MobiDevelop/robovm) or [Intel's Multi-OS Engine](https://software.intel.com/en-us/node/633261) 
-
-### Mobidevelop's RoboVM and its Robopods
-
-Please read the specific page for more information on [Mobidevelop's RoboVM and its Robopods](https://github.com/MobiDevelop/robovm)
-
-*Warning:You can no longer create new Google Play Game Services accounts with iOS. There is a [Simple LIBDX Google Play Games Services integration for iOS](https://github.com/julienvillegas/libgdx-GPGS) but it explains why the new version of Google SDK does not allow iOS users to create a GPGS account from iOS (not a libGDX issue).*
-
-note: Until early 2016, libGDX iOS integration was achieved using RoboVM.com. This has been deprecated. Be careful when you check examples on the Internet as older examples may be based on this version.
-The easy way to find out which version is being referred to:
-* Supported version will have `com.mobidevelop.robovm` in the buid.gradle file
-* Deprecated examples will have `org.robovm:robovm` in the buid.gradle file   
-
-### Intel's Multi-OS Engine
-
-Checkout the specific page for more information on [Intel's Multi-OS Engine](https://software.intel.com/en-us/node/633261).
-
-In the meantime, you can check out the following sample to get you started:
-
-[Splinter Sweets](https://github.com/reime005/splintersweets) is a Kotlin based example that makes use of Leaderboards. It is available on Android and iOS (Gamecenter and Google Play Services integration).
-
-
+Google Play Game Services is no longer supported on iOS. You should use something like [gdx-gamesvcs](https://github.com/MrStahlfelge/gdx-gamesvcs) or [Firebase](/wiki/third-party/firebase-in-libgdx) instead.
+{: .notice--warning}
