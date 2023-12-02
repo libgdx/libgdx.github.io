@@ -1,0 +1,126 @@
+name: Create Game Jam Post
+
+on: 
+  workflow_dispatch:
+    inputs:
+      month-and-year:
+        description: "The month & year the jam is taking place in"    
+        required: true
+        default: 'December 2023'
+      number:
+        description: "The ordinal number of the jam"    
+        required: true
+        default: '27th'
+      video-id:
+        description: "The jam trailer's YouTube video ID"    
+        required: true
+        default: 'NE6vIKRfeDo'
+      itchio-link:
+        description: "The itch.io link of the jam"    
+        required: true
+        default: 'https://itch.io/jam/libgdx-jam-27'
+      date1:
+        description: "Theme submission start"    
+        required: true
+        default: '3rd'
+      date2:
+        description: "Theme submission end"    
+        required: true
+        default: '5th of December'
+      date3:
+        description: "Theme voting start"    
+        required: true
+        default: '7th'
+      date4:
+        description: "Theme voting end"    
+        required: true
+        default: '9th of December'
+      date5:
+        description: "Jam start"    
+        required: true
+        default: '10th'
+      date6:
+        description: "Jam end"    
+        required: true
+        default: '16th of December'
+
+jobs:
+  create-post:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4.1.1
+      
+      - name: Retrieve post year
+        run: echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
+        
+      - name: Retrieve post date
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Create jam name for link
+        run: |
+          TMP="${{ github.event.inputs.month-and-year }}"
+          TMP="${TMP,,}"
+          TMP="${TMP// /-}"
+          echo "JAM-LINK-NAME=${TMP}" >> ${GITHUB_ENV}
+
+      - name: Create post content
+        run: |
+          CONTENT=$(cat << EOF
+          ---
+          title: "libGDX Jam ${{ github.event.inputs.month-and-year }}"
+          classes: wide2
+          
+          header:
+            teaser: /assets/images/posts/${{ env.DATE }}/header.jpg
+          
+          show_author: true
+          author_username: "raeleus"
+          author_displayname: "raeleus"
+
+          categories: news
+          ---
+          
+          With our ${{ github.event.inputs.number }} collaboration, the [libGDX Jam](/community/jams/) continues the time-honoured tradition of making awesome games using the best framework out there. We encourage camaraderie, teamwork, and good sportsmanship with a side of well-intentioned buffoonery. The general jam rules can as always be found [here](/community/jams/#rules). **To participate take a look at the official [itch.io page of the jam](${{ github.event.inputs.itchio-link }}).** The humorous jam trailer can be found on [YouTube](https://www.youtube.com/watch?v=${{ github.event.inputs.video-id }}).
+          
+          Be sure to get involved with the community by joining the libGDX Discord server!
+          
+          ## Schedule
+          _The theme is yet to be revealed._
+          <!--The theme is **this**. Good luck everybody!-->
+          
+          - **Theme Submission:** ${{ github.event.inputs.date1 }} - ${{ github.event.inputs.date2 }}. Everyone will be allowed to submit a theme for the jam.
+          - **Voting:** ${{ github.event.inputs.date3 }} - ${{ github.event.inputs.date4 }}. Everyone will vote on their favourite theme. May the best win!
+          - **Jam:** ${{ github.event.inputs.date5 }} - ${{ github.event.inputs.date6 }}. Participants will create their games and rejoice!
+          
+          <!--## Submissions
+          The libGDX Jam ${{ github.event.inputs.month-and-year }} is now over! We hope everyone had a lot of fun and are proud to present the [N submissions](${{ github.event.inputs.itchio-link }}/entries).-->
+          EOF
+          )
+          echo "CONTENT<<EOF" >> $GITHUB_ENV
+          echo "$CONTENT" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+        
+      - name: Create post file
+        run: |
+          echo "${{ env.CONTENT }}" > _posts/${{ env.YEAR }}/${{ env.DATE }}-jam-${{ env.JAM-LINK-NAME }}.md
+
+      - name: Retrieve thumbnail
+      #  run: curl -o /assets/images/posts/${{env.DATE}}/header.jpg --create-dirs https://img.youtube.com/vi/${{github.event.inputs.video-id}}/mqdefault.jpg
+        uses: suisei-cn/actions-download-file@6d20a8a11783bc479f85ccb2015224f937160478
+        with:
+          url: "https://img.youtube.com/vi/${{github.event.inputs.video-id}}/mqdefault.jpg"
+          target: assets/images/posts/${{env.DATE}}/
+          filename: header.jpg
+          
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add _posts/
+          git add assets/
+          git commit -m "Add ${{ github.event.inputs.month-and-year }} jam post"
+          git push
