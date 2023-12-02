@@ -1,4 +1,4 @@
-name: Build and deploy Jekyll site to GitHub Pages
+name: Build and deploy site
 # see https://jekyllrb.com/docs/continuous-integration/github-actions/
 
 on:
