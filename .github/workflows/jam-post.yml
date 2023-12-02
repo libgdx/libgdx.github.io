@@ -1,46 +1,46 @@
 name: Create Game Jam Post
 
-on: 
+on:
   workflow_dispatch:
     inputs:
       month-and-year:
-        description: "The month & year the jam is taking place in"    
+        description: "The month & year the jam is taking place in"
         required: true
         default: 'December 2023'
       number:
-        description: "The ordinal number of the jam"    
+        description: "The ordinal number of the jam"
         required: true
         default: '27th'
       video-id:
-        description: "The jam trailer's YouTube video ID"    
+        description: "The jam trailer's YouTube video ID"
         required: true
         default: 'NE6vIKRfeDo'
       itchio-link:
-        description: "The itch.io link of the jam"    
+        description: "The itch.io link of the jam"
         required: true
         default: 'https://itch.io/jam/libgdx-jam-27'
       date1:
-        description: "Theme submission start"    
+        description: "Theme submission start"
         required: true
         default: '3rd'
       date2:
-        description: "Theme submission end"    
+        description: "Theme submission end"
         required: true
         default: '5th of December'
       date3:
-        description: "Theme voting start"    
+        description: "Theme voting start"
         required: true
         default: '7th'
       date4:
-        description: "Theme voting end"    
+        description: "Theme voting end"
         required: true
         default: '9th of December'
       date5:
-        description: "Jam start"    
+        description: "Jam start"
         required: true
         default: '10th'
       date6:
-        description: "Jam end"    
+        description: "Jam end"
         required: true
         default: '16th of December'
 
@@ -50,13 +50,13 @@ jobs:
 
     permissions:
       contents: write
-    
+
     steps:
-      - uses: actions/checkout@v4.1.1
-      
+      - uses: actions/checkout@v4
+
       - name: Retrieve post year
         run: echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
-        
+
       - name: Retrieve post date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
@@ -73,29 +73,29 @@ jobs:
           ---
           title: "libGDX Jam ${{ github.event.inputs.month-and-year }}"
           classes: wide2
-          
+
           header:
             teaser: /assets/images/posts/${{ env.DATE }}/header.jpg
-          
+
           show_author: true
           author_username: "raeleus"
           author_displayname: "raeleus"
 
           categories: news
           ---
-          
+
           With our ${{ github.event.inputs.number }} collaboration, the [libGDX Jam](/community/jams/) continues the time-honoured tradition of making awesome games using the best framework out there. We encourage camaraderie, teamwork, and good sportsmanship with a side of well-intentioned buffoonery. The general jam rules can as always be found [here](/community/jams/#rules). **To participate take a look at the official [itch.io page of the jam](${{ github.event.inputs.itchio-link }}).** The humorous jam trailer can be found on [YouTube](https://www.youtube.com/watch?v=${{ github.event.inputs.video-id }}).
-          
+
           Be sure to get involved with the community by joining the libGDX Discord server!
-          
+
           ## Schedule
           _The theme is yet to be revealed._
           <!--The theme is **this**. Good luck everybody!-->
-          
+
           - **Theme Submission:** ${{ github.event.inputs.date1 }} - ${{ github.event.inputs.date2 }}. Everyone will be allowed to submit a theme for the jam.
           - **Voting:** ${{ github.event.inputs.date3 }} - ${{ github.event.inputs.date4 }}. Everyone will vote on their favourite theme. May the best win!
           - **Jam:** ${{ github.event.inputs.date5 }} - ${{ github.event.inputs.date6 }}. Participants will create their games and rejoice!
-          
+
           <!--## Submissions
           The libGDX Jam ${{ github.event.inputs.month-and-year }} is now over! We hope everyone had a lot of fun and are proud to present the [N submissions](${{ github.event.inputs.itchio-link }}/entries).-->
           EOF
@@ -103,7 +103,7 @@ jobs:
           echo "CONTENT<<EOF" >> $GITHUB_ENV
           echo "$CONTENT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-        
+
       - name: Create post file
         run: |
           echo "${{ env.CONTENT }}" > _posts/${{ env.YEAR }}/${{ env.DATE }}-jam-${{ env.JAM-LINK-NAME }}.md
@@ -115,7 +115,7 @@ jobs:
           url: "https://img.youtube.com/vi/${{github.event.inputs.video-id}}/mqdefault.jpg"
           target: assets/images/posts/${{env.DATE}}/
           filename: header.jpg
-          
+
       - name: Commit files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -124,3 +124,57 @@ jobs:
           git add assets/
           git commit -m "Add ${{ github.event.inputs.month-and-year }} jam post"
           git push
+
+  # We can't rely on our usual deploy action since a push by an action doesn't trigger other
+  # actions (see: https://github.com/orgs/community/discussions/25702), so we're copying
+  # the stuff over from .github/workflows/github-pages.yml
+  build:
+    runs-on: ubuntu-latest
+    needs: create-post
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        with:
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+
+      - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v2
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
