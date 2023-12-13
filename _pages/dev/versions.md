@@ -18,7 +18,7 @@ sidebar:
 
 <!-- THIS DATA IS AUTOMATICALLY FETCHED BY _plugins/libgdx_fetch_versions.rb -->
 
-# libGDX 1.12.1
+# libGDX {{ site.data.versions.libgdxRelease }}
 Keep up to date with the latest versions of dependencies and dev tools! Instructions on how to  update your Gradle files can be found [here](/wiki/articles/updating-libgdx).
 
 ### RoboVM
