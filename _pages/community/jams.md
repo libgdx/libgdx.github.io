@@ -19,11 +19,26 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## December 2023
-Jam Suggestions: 3rd – 5th  
-Jam Voting: 7th – 9th  
-Jam: 10th – 16th
+## March 2024
+Jam Suggestions: 10th – 12th  
+Jam Voting: 14th – 16th  
+Jam: 17th – 23rd
 
+## June 2024
+Special Space Jam  
+No suggestions or voting  
+Theme announced before the Jam starts  
+Jam: 16th – 22nd
+
+## September 2024
+Suggestions: 8th - 10th  
+Voting: 12th - 14th  
+Jam: 15th – 21st
+
+## December 2024
+Suggestions: 1st – 3rd  
+Voting: 5th – 7th  
+Jam: 8th – 14th
 <br/>
 
 # Rules
@@ -39,6 +54,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [It Came From Above](https://itch.io/jam/libgdx-jam-27) (December 2023)
 * [A Terrifying (K)Night!](https://itch.io/jam/libgdx-jam-26) (September 2023)
 * [UNDERWATER](https://itch.io/jam/libgdx-jam-25) (June 2023)
 * [Pixel Wars](https://itch.io/jam/libgdx-jam-24) (March 2023)
