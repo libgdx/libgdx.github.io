@@ -28,5 +28,9 @@ public AndroidAudio createAudio(Context context, AndroidApplicationConfiguration
 
 Generally speaking, Audio on Android is problematic and there may be other scenarios or device especific issues.
 
-In an attempt to fix some of these issues Google created [Oboe](https://github.com/google/oboe) that can be used on libGDX projects thanks to [libGDX Oboe](https://github.com/barsoosayque/libgdx-oboe).
+## Alternatives
+
+In an attempt to fix some of these issues Google created [Oboe](https://github.com/google/oboe) that can be used on libGDX projects thanks to [libGDX Oboe](https://github.com/barsoosayque/libgdx-oboe). 
+
+Another alternative is [MiniAudio](https://miniaud.io/) through [gdx-miniaudio](https://github.com/rednblackgames/gdx-miniaudio) project which is an actively mantained cross-platform audio engine already used in production by some libGDX games.
 
