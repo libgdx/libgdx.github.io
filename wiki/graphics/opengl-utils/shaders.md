@@ -7,7 +7,7 @@ The thought of dabbling around in shaders might scare some people away from usin
 
 ## What are shaders?
 
-Shaders in OpenGL are little programs written in a C-like language called **GLSL** (OpenGL Shading Language) that runs on the GPU and processes the data necessary to render things. A shader can simply be viewed as a processing stage on the GPU. It receives a set of inputs which you can do a set of operations on and finally sends them back out. Think of this like function parameters and return values.
+Shaders in OpenGL are little programs written in a C-like language called **GLSL** (OpenGL Shading Language) that run on the GPU and process the data necessary to render things. A shader can simply be viewed as a processing stage on the GPU. It receives a set of inputs, on which you can do a set of operations, and then finally send them back out. Think of this like function parameters and return values.
 
 Typically, when rendering something in OpenGL ES 2.0 the data will be sent through the **vertex** shader first and then through the **fragment** shader.
 

@@ -21,7 +21,7 @@ Gdx.app.setLogLevel(logLevel);
 
 where `logLevel` can be one of the following values:
 
-  * `Application.LOG_NONE`: mutes all logging.
   * `Application.LOG_DEBUG`: logs all messages.
-  * `Application.LOG_ERROR`: logs only error messages.
   * `Application.LOG_INFO`: logs error and normal messages.
+  * `Application.LOG_ERROR`: logs only error messages.
+  * `Application.LOG_NONE`: mutes all logging.

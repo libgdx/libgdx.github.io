@@ -89,14 +89,14 @@ Right click the desktop project -> Run
    {: .notice--warning}
 4. Run the created run configuration
 
-For more information on using and configuring the RoboVM IntelliJ plugin please see the [documentation](https://mobivm.github.io).
+For more information on using and configuring the RoboVM IntelliJ IDEA plugin please see the [documentation](https://mobivm.github.io).
 
 ### In Eclipse
 - Right click the iOS RoboVM project > Run As > RoboVM runner of your choice
 
 ![](/assets/images/dev/eclipse/2.png)
 
-For more information on using and configuring the RoboVM IntelliJ plugin please see the [documentation](https://mobivm.github.io).
+For more information on using and configuring the RoboVM IntelliJ IDEA plugin please see the [documentation](https://mobivm.github.io).
 
 <br/>
 

@@ -83,9 +83,9 @@ dependencies {
 }
 ```
 
-#### Note for Intellij users
+#### Note for IntelliJ IDEA users
 
-If you made Intellij automatically configure `build.gradle` for you, and chose Kotlin 1.1 or higher version, it might add this dependency:
+If you made IntelliJ IDEA automatically configure `build.gradle` for you, and chose Kotlin 1.1 or higher version, it might add this dependency:
 
 ```Kotlin
 dependencies {
