@@ -1,19 +1,15 @@
 ---
 title: Clearing the screen
 ---
-To clear the screen in libGDX is not unlike clearing the screen in a regular OpenGL application. The only difference is in how one accesses the OpenGL context.
-
-The following example accesses the context in an OpenGL ES2 application to clear the frame and depth buffers, setting the color buffer to a solid red color:
+When rendering a new screen, we should clear the old screen first, i.e. dispose the current data held in the color buffer etc. In the following example, we'll clear both the color and depth buffer and set the color buffer to a solid red color (r: `1`, g: `0`, b: `0`, a: `1`). After that, we can start rendering stuff over our red background:
 
 ```java
 @Override
 public void render() {
+  ScreenUtils.clear(1, 0, 0, 1, true);
 
-  Gdx.gl.glClearColor( 1, 0, 0, 1 );
-  Gdx.gl.glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
-
-  // scene render code...
+  // Rendering stuff...
 }
 ```
 
-Simply set the desired clear color and then call `glClear()` with the desired buffers to clear. You are then free to render a fresh frame with new scene graphics.
+Simply call `ScreenUtils#clear` with the desired clear color and `clearDepth` true to clear the depth buffer as well. You are then free to render a fresh frame with new scene graphics. Internally, this code calls  `Gdx.gl.glClearColor( 1, 0, 0, 1 )` and `Gdx.gl.glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT )`. You can fall back to this if you need more granular control over the clearing, for example if you want to clear the stencil buffer (`GL20.GL_STENCIL_BUFFER_BIT`) as well.
