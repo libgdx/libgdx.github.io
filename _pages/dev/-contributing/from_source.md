@@ -33,7 +33,10 @@ If you want to submit code back to the project, please also take a moment to rev
    ```
    ./gradlew fetchNatives
    ```
-4. Importing the project:
+
+   Please note that the `fetchNatives` and the `build` tasks [need to be called separately](https://github.com/libgdx/libgdx/pull/7246#issuecomment-1807271546).
+   {: .notice--warning}
+5. Importing the project:
 
     a) **Via IntelliJ IDEA/Android Studio:**
 
