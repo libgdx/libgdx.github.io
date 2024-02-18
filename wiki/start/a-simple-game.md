@@ -63,7 +63,7 @@ To make the assets available to the game, we have to place them in the `assets` 
 Given our requirements we can now configure our different starter classes. We'll start with the **desktop project**. Open the `DesktopLauncher.java` class in `desktop/src/…` (or `drop-desktop` under Eclipse). We want a 800x480 window and set the title to "Drop". The code should look like this:
 
 ```java
-package com.badlogic.drop.desktop;
+package com.badlogic.drop;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
@@ -93,18 +93,23 @@ Moving on to the **Android project**, we want the application to be run in lands
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="20" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@drawable/ic_launcher"
+        android:isGame="true"
+        android:appCategory="game"
         android:label="@string/app_name"
-        android:theme="@style/GdxTheme" >
+        android:theme="@style/AppTheme"
+        tools:ignore="UnusedAttribute">
         <activity
-            android:name="com.badlogic.drop.android.AndroidLauncher"
+            android:name="com.badlogic.drop.AndroidLauncher"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -120,7 +125,7 @@ The setup tool already filled in the correct values for us, `android:screenOrien
 We also want to conserve battery and disable the accelerometer and compass. We do this in the `AndroidLauncher.java` file in `android/src/…` (or `drop-android`), which should look something like this:
 
 ```java
-package com.badlogic.drop.android;
+package com.badlogic.drop;
 
 import android.os.Bundle;
 
