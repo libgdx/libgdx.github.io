@@ -106,6 +106,7 @@ jobs:
 
       - name: Create post file
         run: |
+          mkdir -p _posts/${{ env.YEAR }}
           echo "${{ env.CONTENT }}" > _posts/${{ env.YEAR }}/${{ env.DATE }}-jam-${{ env.JAM-LINK-NAME }}.md
 
       - name: Retrieve thumbnail
