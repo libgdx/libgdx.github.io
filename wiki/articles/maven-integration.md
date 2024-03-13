@@ -1,29 +1,25 @@
 ---
 title: Maven integration
 ---
-Instead of using Gradle to setup your libGDX project, you can also use Maven. However, **this is _not_ recommended!** When issues arise, getting support will most certainly prove very difficult!
+*last update: 13/03-2024 (DDMMYYYY)*
 
-The article below may be outdated. Use it at your own risk!
-{: .notice--warning}
+Instead of using Gradle to setup your libGDX project, you can also use Maven. However, this is not as well supported!
 
 ## Introduction
-
-libGDX is currently published to the SonaType snapshot repository. This will continue to happen until the Maven integration is complete. The repository only contains the latest snapshot release for now. Eventually we will publish release builds to SonaType as well.
 
 Add the following to your settings.xml or your project's pom.xml:
 
 ```xml
-  <repositories>
-    <repository>
-      <id>gdx-nightlies</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-    </repository>
-  </repositories>
+  <dependency>
+      <groupId>com.badlogicgames.gdx</groupId>
+      <artifactId>gdx</artifactId>
+      <version>1.12.1</version>
+  </dependency>
 ```
 
 If you use the archetype you do not need to add the repository to your Maven settings.
 
-Setting up libGDX with Maven is non trivial as it
+Setting up libGDX in general is non-trivial as it
 
   * contains native libraries
   * deploys to GWT
