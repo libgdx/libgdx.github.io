@@ -1,23 +1,39 @@
 ---
 title: Maven integration
 ---
-*last update: 13/03-2024 (DDMMYYYY)*
 
-Instead of using Gradle to setup your libGDX project, you can also use Maven. However, this is not as well supported!
+Setting up your project with Maven is possible, but crossplatform support is heavily limited, and only desktop is known to work. It has not been further tested or used by the libGDX community, and there is no official support if any issues should arise.
+{: .notice--warning}
+
 
 ## Introduction
 
-Add the following to your settings.xml or your project's pom.xml:
+The current automated LibGDX setup tool sets up a Gradle project, so to set up a Maven one for Desktop only, simply add the following dependencies to your project's pom.xml:
 
 ```xml
   <dependency>
-      <groupId>com.badlogicgames.gdx</groupId>
-      <artifactId>gdx</artifactId>
-      <version>1.12.1</version>
-  </dependency>
+          <groupId>com.badlogicgames.gdx</groupId>
+          <artifactId>gdx</artifactId>
+          <version>1.12.1</version>
+      </dependency>
+        <dependency>
+          <groupId>com.badlogicgames.gdx</groupId>
+          <artifactId>gdx-backend-lwjgl3</artifactId>
+          <version>1.12.1</version>
+      </dependency>
+      <dependency>
+          <groupId>com.badlogicgames.gdx</groupId>
+          <artifactId>gdx-platform</artifactId>
+          <version>1.12.1</version>
+          <classifier>natives-desktop</classifier>
+      </dependency>
 ```
 
-If you use the archetype you do not need to add the repository to your Maven settings.
+And you got all you need to start up an Lwjgl3Application providing your own implementation of an ApplicationAdapter.
+
+Alternatively, an older method described below may provide some crossplatform capability, but you may have better luck changing your build system to Gradle at that point.
+
+## Using The Archetype
 
 Setting up libGDX in general is non-trivial as it
 
