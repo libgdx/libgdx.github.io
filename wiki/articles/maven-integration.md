@@ -1,29 +1,41 @@
 ---
 title: Maven integration
 ---
-Instead of using Gradle to setup your libGDX project, you can also use Maven. However, **this is _not_ recommended!** When issues arise, getting support will most certainly prove very difficult!
 
-The article below may be outdated. Use it at your own risk!
+Setting up your project with Maven is possible, but crossplatform support is heavily limited, and only desktop is known to work. It has not been further tested or used by the libGDX community, and there is no official support if any issues should arise.
 {: .notice--warning}
+
 
 ## Introduction
 
-libGDX is currently published to the SonaType snapshot repository. This will continue to happen until the Maven integration is complete. The repository only contains the latest snapshot release for now. Eventually we will publish release builds to SonaType as well.
-
-Add the following to your settings.xml or your project's pom.xml:
+The current automated LibGDX setup tool sets up a Gradle project, so to set up a Maven one for Desktop only, simply add the following dependencies to your project's pom.xml:
 
 ```xml
-  <repositories>
-    <repository>
-      <id>gdx-nightlies</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-    </repository>
-  </repositories>
+  <dependency>
+          <groupId>com.badlogicgames.gdx</groupId>
+          <artifactId>gdx</artifactId>
+          <version>1.12.1</version>
+      </dependency>
+        <dependency>
+          <groupId>com.badlogicgames.gdx</groupId>
+          <artifactId>gdx-backend-lwjgl3</artifactId>
+          <version>1.12.1</version>
+      </dependency>
+      <dependency>
+          <groupId>com.badlogicgames.gdx</groupId>
+          <artifactId>gdx-platform</artifactId>
+          <version>1.12.1</version>
+          <classifier>natives-desktop</classifier>
+      </dependency>
 ```
 
-If you use the archetype you do not need to add the repository to your Maven settings.
+And you got all you need to start up an Lwjgl3Application providing your own implementation of an ApplicationAdapter.
 
-Setting up libGDX with Maven is non trivial as it
+Alternatively, an older method described below may provide some crossplatform capability, but you may have better luck changing your build system to Gradle at that point.
+
+## Using The Archetype
+
+Setting up libGDX in general is non-trivial as it
 
   * contains native libraries
   * deploys to GWT
