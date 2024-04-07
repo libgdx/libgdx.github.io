@@ -20,9 +20,11 @@ toc_sticky: false
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
 ## June 2024
-Special Space Jam  
-No suggestions or voting  
-Theme announced before the Jam starts  
+***Easter Egg Madness Jam***  
+Why have one Easter egg, when you can have five! Will you put one or two Easter eggs in your game or will you succumb to the madness and put all five?? You decide!  
+Easter eggs will be revealed before the Jam starts.  
+No suggestions.  
+Theme voting will be done via Discord.  
 Jam: 16th – 22nd
 
 ## September 2024
