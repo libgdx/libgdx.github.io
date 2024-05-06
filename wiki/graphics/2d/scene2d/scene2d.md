@@ -338,7 +338,7 @@ actor.addAction(forever(sequence(scaleTo(2, 2, 0.5f), scaleTo(1, 1, 0.5f), delay
 
 ### External Links
 
- * [netthreads](https://www.netthreads.co.uk/2012/01/31/libgdx-example-of-using-scene2d-actions-and-event-handling/) A fully documented scene2d example game.
+ * [netthreads](https://web.archive.org/web/20200805185955/http://www.netthreads.co.uk/2012/01/31/libgdx-example-of-using-scene2d-actions-and-event-handling/) A fully documented scene2d example game.
  * [gdx-ui-app](https://github.com/broken-e/gdx-ui-app) A library on top of scene2d for easier development.
  * [Should I use scene2d for my game?](https://jvm-gaming.org/t/libgdx-actor-to-use-or-not-to-use-or-when-to-use/41938/7)
  * [Street Race game tutorial](https://theinvader360.blogspot.co.uk/2013/05/street-race-swipe-libgdx-scene2d.html)
