@@ -30,7 +30,10 @@ You are asked to provide the following parameters:
 * **Package**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
 * **Game Class**: the name of the main game Java class of your app, e.g. `MyGame`
 * **Destination**: the folder where your app will be created
-* **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" (on recent versions, this is replaced by a three dots icon at the top right) -> "SDK Manager". By default it is in `/Users/username/Library/Android/sdk` <br>
+* **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" (on recent versions, this is replaced by a three dots icon at the top right) -> "SDK Manager". By default the locations are:
+  * Linux: `~/Android/Sdk`
+  * Mac: `~/Library/Android/sdk`
+  * Windows: `%LOCALAPPDATA%\Android\Sdk` 
 
 
 ![Android Studio welcome screen](/assets/images/dev/setup/1.png){: style="width: 700px;" }
