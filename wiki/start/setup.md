@@ -1,4 +1,72 @@
----
+--import javafx.animation.AnimationTimer;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyCode;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+public class FlappyBird extends Application {
+
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
+
+    private double birdY = HEIGHT / 2;
+    private double velocity = 0;
+    private boolean gameOver = false;
+
+    public void start(Stage primaryStage) {
+        Pane root = new Pane();
+        Scene scene = new Scene(root, WIDTH, HEIGHT);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Flappy Bird");
+
+        Canvas canvas = new Canvas(WIDTH, HEIGHT);
+        root.getChildren().add(canvas);
+
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+
+        scene.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.SPACE && !gameOver) {
+                velocity = -10;
+            }
+        });
+
+        new AnimationTimer() {
+            public void handle(long now) {
+                velocity += 0.5;
+                birdY += velocity;
+
+                if (birdY > HEIGHT || birdY < 0) {
+                    gameOver = true;
+                }
+
+                gc.setFill(Color.LIGHTBLUE);
+                gc.fillRect(0, 0, WIDTH, HEIGHT);
+
+                gc.setFill(Color.GREEN);
+                gc.fillRect(0, HEIGHT - 150, WIDTH, 150);
+
+                gc.setFill(Color.YELLOW);
+                gc.fillOval(WIDTH / 4, birdY - 15, 30, 30);
+
+                if (gameOver) {
+                    gc.setFill(Color.RED);
+                    gc.fillText("Game Over", WIDTH / 2 - 50, HEIGHT / 2);
+                }
+            }
+        }.start();
+
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+-
 title: "Set Up a Dev Env"
 description: "Before you can get your first libGDX project up and running, you need to set up your development environment. The first step in doing this is choosing an IDE: Android Studio, IntelliJ IDEA or Eclipse are among the most common choices for this."
 redirect_from:
