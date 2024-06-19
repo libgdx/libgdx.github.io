@@ -64,7 +64,7 @@ To create your IPA, run
 `gradlew ios:createIPA`
 
 This will create an IPA in the `ios/build/robovm` folder that you distribute to the Apple App Store.
-To upload your app you will need to use the application loader within XCode (Xode->Open Developer Tool->Application loader)
+To upload your app you will need to use [Transporter](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) from the Mac App store 
 
 Note: as of iOS 11 instead of simply adding your icons into your data folder within your iOS project you need to include an asset Catalog.
 If you do not include one, you can still submit your app but later you receive a message regarding `Missing Info.plist value - A value for the Info.plist key CFBundleIconName is missing in the bundle '...'. Apps that provide icons in the asset catalog must also provide this Info.plist key.` To fix this, follow these [instructions to include an asset catalog](https://github.com/MobiVM/robovm/wiki/Howto-Create-an-Asset-Catalog-for-XCode-9-Appstore-Submission%3F).
