@@ -19,14 +19,6 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## June 2024
-***Easter Egg Madness Jam***  
-Why have one Easter egg, when you can have five! Will you put one or two Easter eggs in your game or will you succumb to the madness and put all five?? You decide!  
-Easter eggs will be revealed before the Jam starts.  
-No suggestions.  
-Theme voting will be done via Discord.  
-Jam: 16th – 22nd
-
 ## September 2024
 Suggestions: 8th - 10th  
 Voting: 12th - 14th  
@@ -51,6 +43,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [TIME TRAVEL](https://itch.io/jam/libgdx-jam-29) (June 2024)
 * [THE UNDERWORLD](https://itch.io/jam/libgdx-jam-28) (March 2024)
 * [It Came From Above](https://itch.io/jam/libgdx-jam-27) (December 2023)
 * [A Terrifying (K)Night!](https://itch.io/jam/libgdx-jam-26) (September 2023)
