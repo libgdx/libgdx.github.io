@@ -26,10 +26,10 @@ This will open the following setup that will allow you to generate your project:
 {: .notice--primary}
 
 You are asked to provide the following parameters:
-* **Name**: the name of the application; lower case with minuses is usually a good idea, e.g. `my-game`
-* **Package**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
-* **Game Class**: the name of the main game Java class of your app, e.g. `MyGame`
-* **Destination**: the folder where your app will be created
+* **Project name**: the name of the application; lower case with minuses is usually a good idea, e.g. `my-game`
+* **Package name**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
+* **Game class**: the name of the main game Java class of your app, e.g. `MyGame`
+* **Output folder**: the folder where your app will be created
 * **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" (on recent versions, this is replaced by a three dots icon at the top right) -> "SDK Manager". By default the locations are:
   * Linux: `~/Android/Sdk`
   * Mac: `~/Library/Android/sdk`
