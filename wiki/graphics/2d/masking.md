@@ -2,6 +2,7 @@
 title: Masking
 ---
 Masking is the technique of hiding portions of an image using the pixel information of another to decide whether a pixel of the original should or should not be shown. There’s more than one way to achieve this effect in libGDX.
+> :warning: **If you are targeting Android:** To ensure some techniques work, set the `AndroidApplicationConfiguration`'s alpha channel bits to 8 (default is 0 on android): `configuration.a = 8`
 
 ## Table of Contents
 1. [Masking using glScissor](/wiki/graphics/2d/masking#1-masking-using-glScissor-rectangle)
