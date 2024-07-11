@@ -10,30 +10,54 @@ To setup your first project and download the necessary dependencies, libGDX offe
 
 {% include setup_flowchart.html current='1' %}
 
-1. Download the libGDX Project Setup Tool (gdx-setup):
+1. Download the libGDX Project Setup Tool called Gdx-LiftOff.
 
     <!--<a href="/assets/downloads/legacy_setup/gdx-setup_latest.jar" class="btn btn--success" style="margin-right: 10px">Stable Release</a>
     <a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Nightly Version</a>-->
-    <a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Download</a>
+    <!--<a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Download</a>-->
+    <a href="https://github.com/libgdx/gdx-liftoff/releases" class="btn btn--success">Download Gdx-LiftOff</a>
+2. The file will be in the Assets section of the release.  Download the file that ends in `.jar`.
 
-2. Double-click the downloaded file. If this doesn't work, open your command line tool, go to the download folder and run <br><!--`java -jar gdx-setup_latest.jar`-->`java -jar gdx-setup.jar`. On Linux, you might need to right-click the file, select "Properties" and then check "Allow executing the file as program" in the "Permission" tab.
+3. Double-click the downloaded file. If this doesn't work, open your command line tool and go to the download folder where you saved the .jar file.  Run the command <br>`java -jar gdx-liftoff-x.x.x.x.jar`. Replace the 'x' with the version you downloaded.  For example 'gdx-liftoff-1.12.1.11.jar'.
+   <br>On Linux, you might need to right-click the file, select "Properties" and then check "Allow executing the file as program" in the "Permission" tab.
 
 This will open the following setup that will allow you to generate your project:
 
-![Setup UI](/assets/images/dev/setup/0.png){: style="width: 500px;" }
+![Setup UI](https://github.com/libgdx/gdx-liftoff/raw/master/.github/screenshot.png){: style="width: 500px;" }
 
 **Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](/wiki/start/project-setup-via-command-line) to create your project.
 {: .notice--primary}
 
 You are asked to provide the following parameters:
-* **Project name**: the name of the application; lower case with minuses is usually a good idea, e.g. `my-game`
-* **Package name**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
-* **Game class**: the name of the main game Java class of your app, e.g. `MyGame`
-* **Output folder**: the folder where your app will be created
+* **PROJECT NAME**: the name of the application; lower case with minuses is usually a good idea, e.g. `my-game`
+* **PACKAGE**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
+* **MAIN CLASS**: the name of the main game Java class of your app, e.g. `MyGame`
+<br><br>
+* **PROJECT OPTIONS**: will take you to a new screen where you can configure the project to your needs.  See the <a href="https://github.com/libgdx/gdx-liftoff/blob/master/Guide.md">Gdx-LiftOff Guide</a> for more information.
+* **QUICK PROJECT**: will create a project with the default settings.
+
+  <!--* **Game class**: the name of the main game class, e.g. `MyGame`
+  * **Main class package**: the package of the main game class, e.g. `com.badlogic.mygame`
+  * **Gradle version**: the version of Gradle to use. The default value is the latest stable version.
+  * **LibGDX version**: the version of libGDX to use. The default value is the latest stable version.
+  * **Language**: the programming language to use. The default value is Java.
+  * **Extensions**: the official extensions to include in your project. By default, none are selected.
+  * **Advanced settings**: will take you to a new screen where you can set the following parameters:
+    * **Build tools version**: the version of the Android build tools to use. The default value is the latest stable version.
+    * **API level**: the Android API level to target. The default value is 28.
+    * **Min API level**: the minimum Android API level to support. The default value is 9.
+    * **Target API level**: the target Android API level. The default value is 28.
+    * **Permissions**: the permissions to include in the Android manifest. By default, none are selected.
+    * **Dependencies**: the dependencies to include in the project. By default, none are selected.
+    * **Gradle plugins**: the Gradle plugins to include in the project. By default, none are selected.-->
+
+
+<!--* **Output folder**: the folder where your app will be created
 * **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" (on recent versions, this is replaced by a three dots icon at the top right) -> "SDK Manager". By default the locations are:
   * Linux: `~/Android/Sdk`
   * Mac: `~/Library/Android/sdk`
-  * Windows: `%LOCALAPPDATA%\Android\Sdk` 
+  * Windows: `%LOCALAPPDATA%\Android\Sdk` -->
+
 
 
 ![Android Studio welcome screen](/assets/images/dev/setup/1.png){: style="width: 700px;" }
