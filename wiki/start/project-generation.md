@@ -10,12 +10,12 @@ To setup your first project and download the necessary dependencies, libGDX offe
 
 {% include setup_flowchart.html current='1' %}
 
-1. Download the libGDX Project Setup Tool called Gdx-LiftOff.
+1. Download the libGDX Project Setup Tool called gdx-liftoff.
 
     <!--<a href="/assets/downloads/legacy_setup/gdx-setup_latest.jar" class="btn btn--success" style="margin-right: 10px">Stable Release</a>
     <a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Nightly Version</a>-->
     <!--<a href="https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Download</a>-->
-    <a href="https://github.com/libgdx/gdx-liftoff/releases" class="btn btn--success">Download Gdx-LiftOff</a>
+    <a href="https://github.com/libgdx/gdx-liftoff/releases" class="btn btn--success">Download gdx-liftoff</a>
 2. The file will be in the Assets section of the release.  Download the file that ends in `.jar`.
 
 3. Double-click the downloaded file. If this doesn't work, open your command line tool and go to the download folder where you saved the .jar file.  Run the command <br>`java -jar gdx-liftoff-x.x.x.x.jar`. Replace the 'x' with the version you downloaded.  For example 'gdx-liftoff-1.12.1.11.jar'.
