@@ -35,7 +35,7 @@ Since version 1.9.13, breaking changes and corresponding migration steps are exp
 
 #### Update to release 1.9.12
 
-* HTML: You can delete the soundmanager files for HTML Project and the references in index.html
+* HTML: You can delete the soundmanager files for HTML Project and the references iupdated pages replacing gdx-setup with gdx-liftoffn index.html
 * HTML: You should update code in HTMLLauncher according to setup template
 
 #### Update to release 1.9.6
@@ -66,4 +66,4 @@ As an alternative, you can specify a Gradle distribution by URL (take a look [he
 ```
 
 ## Additional Steps
-Since Gradle updates often introduce breaking changes, you might need to take additional steps to get your project running again after an update. Usually, we recommend just recreating your project structure with the gdx-liftoff setup tool and then copying over your dependencies and code. <!--Alternatively, you can take a look at the changes we made to the setup tool's example project [here](https://github.com/libgdx/libgdx/commits/master/extensions/gdx-setup).-->
+Since Gradle updates often introduce breaking changes, you might need to take additional steps to get your project running again after an update. Usually, we recommend just recreating your project structure with the gdx-liftoff setup tool and then copying over your dependencies and code.  Alternatively, you can take a look at the changes we made to the gdx-liftoff setup tool's demo project [here](https://github.com/libgdx/gdx-liftoff-demo). <!--and/or https://github.com/libgdx/gdx-liftoff-demo-kotlin .(https://github.com/libgdx/libgdx/commits/master/extensions/gdx-setup).-->
