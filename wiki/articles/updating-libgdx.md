@@ -66,4 +66,4 @@ As an alternative, you can specify a Gradle distribution by URL (take a look [he
 ```
 
 ## Additional Steps
-Since Gradle updates often introduce breaking changes, you might need to take additional steps to get your project running again after an update. Usually, we recommend just recreating your project structure with the setup tool and then copying over your dependencies and code. Alternatively, you can take a look at the changes we made to the setup tool's example project [here](https://github.com/libgdx/libgdx/commits/master/extensions/gdx-setup).
+Since Gradle updates often introduce breaking changes, you might need to take additional steps to get your project running again after an update. Usually, we recommend just recreating your project structure with the gdx-liftoff setup tool and then copying over your dependencies and code. <!--Alternatively, you can take a look at the changes we made to the setup tool's example project [here](https://github.com/libgdx/libgdx/commits/master/extensions/gdx-setup).-->
