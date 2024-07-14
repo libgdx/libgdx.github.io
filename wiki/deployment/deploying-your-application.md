@@ -11,11 +11,11 @@ The mechanism to deploy your game differs between platforms. This article aims t
 # Deploy to Windows/Linux/Mac OS X
 ### As JAR file
 The easiest way to deploy to Windows/Linux/Mac is to create a runnable JAR file. This can be done via the following console command:
-`./gradlew desktop:dist`
+`./gradlew lwjgl3:dist`
 
 If you are getting an error like `Unsupported class file major version 60`, your Java version (see [here](https://stackoverflow.com/q/9170832) for a list) is not supported by your Gradle version. To fix this, install an older JDK.
 
-The generated JAR file will be located in the `desktop/build/libs/` folder. It contains all necessary code as well as all your art assets from the android/assets folder and can be run either by double clicking or on the command line via `java -jar jar-file-name.jar`. Your audience must have a JVM installed for this to work. The JAR will work on Windows, Linux and Mac OS X!
+The generated JAR file will be located in the `lwjgl3/build/libs/` folder. It contains all necessary code as well as all your art assets from the android/assets folder and can be run either by double clicking or on the command line via `java -jar jar-file-name.jar`. Your audience must have a JVM installed for this to work. The JAR will work on Windows, Linux and Mac OS X!
 
 ### Alternative (modern) ways of deployment
 Distributing java applications as JAR file can be very unhandy and prone to issues, as not every user can be expected to have the right JRE (or even any JRE) installed. Other ways of deployment are for example:
@@ -79,6 +79,8 @@ Deploying to iOS is relatively straight forward, see [here](https://medium.com/@
 This will compile your app to Javascript and place the resulting Javascript, HTML and asset files in the `html/build/dist/` folder. The contents of this folder have to be served up by a web server, e.g. Apache or Nginx. Just treat the contents like you'd treat any other static HTML/Javascript site. There is no Java or Java Applets involved!
 
 When running the result, you might encounter errors like `Couldn't find Type for class ...`. To fix this, please see our wiki page [Reflection](/wiki/utils/reflection) and include the needed classes/packages.
+
+For more HTML5/GWT specifics, see [this video](https://youtu.be/I_85usDvJvQ) for details.
 
 With Python installed, you can test your distribution by executing the following in the `html/build/dist` folder:
 

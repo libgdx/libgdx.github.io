@@ -7,7 +7,7 @@ title: Java Development Kit   Selection
  * [Versions](#versions)
  
 
-Caveat: At the release of this wiki page, Java 15 is the current released Java Development Kit (JDK).
+Caveat: At the release of this wiki page, Java 22 is the current released Java Development Kit (JDK).
 
 # Introduction
 Every project will require the use of at least one Java Development Kit (JDK). This is the source, root, or core 
@@ -44,9 +44,9 @@ forward with the bigger Java Enhancement Proposals (JEPs) ([Valhalla](https://op
 
 
 # Versions
-Since each platform that Java works on is different the code; translation may leaves features out or may not be capable
-of being emulated from the desktop to mobile or web. Thus, if developing on a specific platform, you
-may not have much of a choice on which Java versions. As a developer you may also be faced with having to use multiple
+Since each platform that Java works on is different, the code translation may leave features out or may not be capable
+of being emulated from the desktop to mobile or web. If you're developing on a specific platform, you
+may not have much of a choice on which Java versions you can use. As a developer you may also be faced with having to use multiple
 JDKs to support the features and/or debugging capabilities required by the project. Most of the versions listed 
 will be Long Term Supported (LTS). Hot swapping code is a feature that allows one to compile and swap code
 during runtime debugging. This feature enhanced by using Dynamic Code Execution Virtual Machine (DCEVM). This is 
@@ -57,13 +57,18 @@ Note: LTS (Long Term Support)
 
 | Version  | Desktop  | Android  | iOS   | HTML | DCEVM | ARM |Notes |
 |:---:     |:---:     |:---:     |:---:  |:---: |:---:  |:---:|:---  |
-| 7        |  X       |  X       | X     | X    | X     |     |
-| 8        |  X       |  X       | X     | X    | X     |     | LTS - Most compatible
-| 9        |  X       |          |       | X    |       |     | Modules - Oracle Licensing Changed
-| 11       |  X       |          |       | X    | X     |     | LTS & HTML Support with 3rd Party Backend
+| 7        |  X       |  X       | X     | X    | X     |     | Android 5/6 support
+| 8        |  X       |  X       | X     | X    | X     |     | LTS - Most compatible. Android 7-12 support
+| 9        |  X       |  X       |       | X    |       |     | Modules - Oracle Licensing Changed. Android 9-12 support
+| 11       |  X       |  X       |       | X    | X     |     | LTS & HTML & Android 11/12 support
 | 15       |  X       |          |       |      |       |     | JPackage
-| 16       |          |          |       |      |       |     | TBD - March - Sept 2021
-| 17       |          |          |       |      |       |     | TBD - Sept 2021 - ? (LTS)
+| 16       |  X       |          |       |      |       |     | 
+| 17       |  X       |  X       |       |      |       |     | LTS & Android 13/14 support
+| 18       |  X       |          |       |      |       |     | 
+| 19       |  X       |          |       |      |       |     | 
+| 20       |  X       |          |       |      |       |     | 
+| 21       |  X       |          |       |      |       |     | LTS
+| 22       |  X       |          |       |      |       |     | 
 
 Of these versions it is recommended to use LTS versions & distributions. This way any issues that arise in the 
 JDK will be fixed or supported by the companies involved in the JDK maintenance.

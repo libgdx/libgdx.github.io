@@ -31,9 +31,9 @@ Generally speaking, Audio on Android is problematic and there may be other scena
 
 ## Alternatives
 
-In an attempt to fix some of these issues Google created [Oboe](https://github.com/google/oboe) that can be used on libGDX projects thanks to [libGDX Oboe](https://github.com/barsoosayque/libgdx-oboe). 
+In an attempt to fix some of these issues Google created [Oboe](https://github.com/google/oboe) that can be used on libGDX projects thanks to [libGDX Oboe](https://github.com/barsoosayque/libgdx-oboe).
 
 Another alternative is [MiniAudio](https://miniaud.io/) through [gdx-miniaudio](https://github.com/rednblackgames/gdx-miniaudio) project which is an actively mantained cross-platform audio engine already used in production by some libGDX games.
 
-The libGDX setup tool gdx-liftoff has options to load libGDX-Oboe and gdx-miniaudio.  You'll find these under the 3rd Party Section of gdx-liftoff.
+The libGDX setup tool gdx-liftoff has options to load libGDX-Oboe and gdx-miniaudio.  You'll find these under the Third-Party Section of gdx-liftoff.
 

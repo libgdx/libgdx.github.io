@@ -35,19 +35,22 @@ _Full script you will see will differ slightly depending on what other modules y
 buildscript {
     //Defines the repositories required by this script, e.g. hosting the android plugin
     repositories {
-        //local maven repository (advanced use)
-        mavenLocal()
         //maven central repository, needed for the android plugin
         mavenCentral()
-        gradlePluginPortal()
         //snapshot repository (in case this script depends on snapshot/prerelease artifacts)
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        gradlePluginPortal()
+        //local maven repository (advanced use)
+        mavenLocal()
         google()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
     }
     //Defines the artifacts this script depends on, e.g. the android plugin
     dependencies {
         //Adds the android gradle plugin as a dependency of this buildscript
-        classpath 'com.android.tools.build:gradle:7.2.2'
+        classpath "com.android.tools.build:gradle:8.1.4"
+        classpath "org.docstr:gwt-gradle-plugin:$gwtPluginVersion"
     }
 }
 
@@ -58,115 +61,88 @@ allprojects {
     apply plugin: "eclipse"
     apply plugin: "idea"
 
+    // This allows you to "Build and run using IntelliJ IDEA", an option in IDEA's Settings.
+    idea {
+        module {
+        outputDir file('build/classes/java/main')
+        testOutputDir file('build/classes/java/test')
+        }
+    }
+}
+
+configure(subprojects - project(':android')) {
+  apply plugin: 'java-library'
+  sourceCompatibility = 8
+  compileJava {
+    options.incremental = true
+  }
+  // From https://lyze.dev/2021/04/29/libGDX-Internal-Assets-List/
+  // The article can be helpful when using assets.txt in your project.
+  compileJava.doLast {
+    // projectFolder/assets
+    def assetsFolder = new File("${project.rootDir}/assets/")
+    // projectFolder/assets/assets.txt
+    def assetsFile = new File(assetsFolder, "assets.txt")
+    // delete that file in case we've already created it
+    assetsFile.delete()
+
+    // iterate through all files inside that folder
+    // convert it to a relative path
+    // and append it to the file assets.txt
+    fileTree(assetsFolder).collect { assetsFolder.relativePath(it) }.each {
+      assetsFile.append(it + "\n")
+    }
+  }
+}
+
+subprojects {
     //Version of your game
-    version = "1.0"
-    //Defines 'extra' (custom) properties for all projects
-    ext {
-        appName = "the-name-of-your-game"
-        //Versions of the libGDX dependencies (used further below on those 'compile' lines)
-        gdxVersion = '1.12.0'
-        roboVMVersion = '2.3.19'
-        box2DLightsVersion = '1.5'
-        ashleyVersion = '1.7.4'
-        aiVersion = '1.8.2'
-        gdxControllersVersion = '2.2.1'
-    }
-
-    //Defines all repositories needed for all projects
+    version = '1.0.0'
+    ext.appName = 'MyOriginalGame'
     repositories {
-        mavenLocal()
         mavenCentral()
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
-        maven { url "https://jitpack.io" }
+        maven { url 'https://s01.oss.sonatype.org' }
+        // You may want to remove the following line if you have errors downloading dependencies.
+        mavenLocal()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'https://jitpack.io' }
     }
 }
 
-//Configuration for the :desktop project
-project(":desktop") {
-    //Uses the java-library plugin (provides compiling, execution, etc.).
-    //That one is bundled with gradle, so we didn’t have to define it in the buildscript section.
-    apply plugin: "java-library"
-
-    //Defines dependencies for the :desktop project
-    dependencies {
-        //Adds dependency on the :core project as well as the gdx lwjgl backend and native dependencies
-        implementation project(":core")
-        api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
-        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-    }
-}
-
-//Configuration for the :android project
-project(":android") {
-    //Uses the android gradle plugin (provides compiling, copying on device, etc.)
-    apply plugin: "com.android.application"
-
-    configurations { natives }
-
-    //Defines dependencies for the :android project
-    dependencies {
-        //Adds dependencies on the :core project as well as the android backends and all platform natives.
-        //Note the 'natives' classifier in this project.
-        implementation project(":core")
-        api "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
-    }
-}
-
-//Configuration for the :core project
-project(":core") {
-    //Uses the java-library gradle plugin
-    apply plugin: "java-library"
-
-    dependencies {
-        //Defines dependencies for the :core project, in this example the gdx dependency
-        api "com.badlogicgames.gdx:gdx:$gdxVersion"
-    }
-}
-
+eclipse.project.name = 'MyOriginalGame' + '-parent'
 ```
 
 ### libGDX Dependencies
-Dependencies are configured in the **root** `build.gradle` file as shown in the build.gradle guide above.
-In order to add an external dependency to a project, you must declare the dependency correctly under the correct part of the build.script.
+Dependencies are configured in the respective `build.gradle` file of each subproject. For example: `core/build.gradle`,`android/build.gradle`,`html/build.gradle`, etc.
+In order to add an external dependency to a project, you must declare the dependency correctly under the correct part of the buildscript.
 
 (Some) libGDX extensions are mavenized and pushed to the maven repo, which means we can very easily pull them into our projects from the `build.gradle` file. You can see in the list [below](#libgdx-extensions) of the format that these dependencies take.
 If you are familiar with maven, notice the format:
 ```groovy
-compile '<groupId>:<artifactId>:<version>:<classifier>'
+implementation '<groupId>:<artifactId>:<version>:<classifier>'
 ```
 
-Let's take a quick example to see how this works with the root `build.gradle` file.
+Let's take a quick example to see how this works with the android `build.gradle` file.
 
-As mentioned earlier, you do not need to  modify the individual `build.gradle` files in each of the different platform-specific folders (e.g., -desktop, -ios, -core). You only need to modify the root `build.gradle` file.
-
-[Here](#freetypefont-gradle) we see the dependencies for the FreeType Extension, say we want our Android project to have this dependency. We locate our `project(":android")` stub in the root directory's `build.gradle`:
+[Here](#freetypefont-gradle) we see the dependencies for the FreeType Extension, say we want our Android project to have this dependency:
 ```groovy
-project(":android") {
-    apply plugin: "com.android.application"
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+    implementation "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+    implementation project(':core')
 
-    configurations { natives }
-
-    dependencies {
-        implementation project(":core")
-        api "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
-    }
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
 }
 ```
 
-**We know our FreeType extension has declarations:**
+**We know our FreeType extension has the following android declarations:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
 natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
 natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
 natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
 ```
@@ -174,25 +150,28 @@ natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
 **So all we need to do is whack it in the dependencies stub**
 
 ```groovy
-project(":android") {
-    apply plugin: "com.android.application"
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+    implementation "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+    implementation project(':core')
 
-    configurations { natives }
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+}
+```
 
-    dependencies {
-        implementation project(":core")
-        api "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+**Ensure that your Core project has the freetype extension in core/build.gradle**
 
-        api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
-        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
-        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
-        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
-    }
+```groovy
+dependencies {
+  api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+  api "com.badlogicgames.gdx:gdx:$gdxVersion"
 }
 ```
 And we are done, our android project now has the freetype dependency.
@@ -216,26 +195,25 @@ api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
 ```
 **Desktop Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+implementation "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
 ```
 **Android Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi-v7a"
 natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-arm64-v8a"
+natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi-v7a"
 natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86"
 natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
 ```
 **iOS Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
+implementation "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
 ```
 **HTML Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion:sources"
-api "com.badlogicgames.gdx:gdx-box2d-gwt:$gdxVersion:sources"
+implementation "com.badlogicgames.gdx:gdx-box2d:$gdxVersion:sources"
+implementation("com.badlogicgames.gdx:gdx-box2d-gwt:$gdxVersion:sources") {exclude group: "com.google.gwt", module: "gwt-user"}
 ```
-and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="com.badlogic.gdx.physics.box2d.box2d-gwt"/>`
+and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="com.badlogic.gdx.physics.box2d.box2d-gwt" />`
 
 ***
 
@@ -246,19 +224,19 @@ api "com.badlogicgames.gdx:gdx-bullet:$gdxVersion"
 ```
 **Desktop Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-desktop"
+implementation "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-desktop"
 ```
 **Android Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-bullet:$gdxVersion"
-natives "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-armeabi-v7a"
 natives "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-arm64-v8a"
+natives "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-armeabi-v7a"
 natives "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-x86"
 natives "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-x86_64"
+natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
 ```
 **iOS Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-ios"
+implementation "com.badlogicgames.gdx:gdx-bullet-platform:$gdxVersion:natives-ios"
 ```
 **HTML Dependency:**
 Not compatible!
@@ -272,26 +250,25 @@ api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
 ```
 **Desktop Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 ```
 **Android Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
 natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
 natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
 natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
 ```
 **iOS Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-ios"
+implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-ios"
 ```
 **iOS-MOE Dependency:**
 ```groovy
 natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-ios"
 ```
 **HTML Dependency:**
-Not compatible!
+Not compatible! See [gdx-freetype-gwt](https://github.com/intrigus/gdx-freetype-gwt) for an alternative.
 
 ***
 
@@ -302,24 +279,23 @@ api "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersi
 ```
 **Desktop Dependency:**
 ```groovy
-api "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:$gdxControllersVersion"
+implementation "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:$gdxControllersVersion"
 ```
 **Android Dependency:**
 ```groovy
-api "com.badlogicgames.gdx-controllers:gdx-controllers-android:$gdxControllersVersion"
+implementation "com.badlogicgames.gdx-controllers:gdx-controllers-android:$gdxControllersVersion"
 ```
 **iOS Dependency:**
 ```groovy
-api "com.badlogicgames.gdx-controllers:gdx-controllers-ios:$gdxControllersVersion"
+implementation "com.badlogicgames.gdx-controllers:gdx-controllers-ios:$gdxControllersVersion"
 ```
 
 **HTML Dependency:**
 ```groovy
-api "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion:sources"
-api "com.badlogicgames.gdx-controllers:gdx-controllers-gwt:$gdxControllersVersion"
-api "com.badlogicgames.gdx-controllers:gdx-controllers-gwt:$gdxControllersVersion:sources"
+implementation "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion:sources"
+implementation("com.badlogicgames.gdx-controllers:gdx-controllers-gwt:$gdxControllersVersion:sources"){exclude group: "com.badlogicgames.gdx", module: "gdx-backend-gwt"}
 ```
-and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='com.badlogic.gdx.controllers' />`  and `<inherits name='com.badlogic.gdx.controllers.controllers-gwt' />`
+and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="com.badlogic.gdx.controllers" />`  and `<inherits name="com.badlogic.gdx.controllers.controllers-gwt" />`
 
 ***
 
@@ -327,7 +303,7 @@ and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='c
 **Core Dependency:**
 Don't put me in core!
 
-**Desktop Dependency (LWJGL2 only):**
+**Desktop Dependency (LWJGL2 Legacy Desktop only):**
 ```groovy
 api "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
 ```
@@ -347,17 +323,19 @@ Not compatible!
 
 **Core Dependency:**
 ```groovy
-api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
+api "com.badlogicgames.box2dlights:box2dlights:$box2dlightsVersion"
 ```
+**Desktop Dependency:**
+No native dependency required.
+
 **Android Dependency:**
-```groovy
-api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
-```
+No native dependency required.
+
 **HTML Dependency:**
 ```groovy
-api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion:sources"
+implementation "com.badlogicgames.box2dlights:box2dlights:$box2dlightsVersion:sources"
 ```
-and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="Box2DLights"/>`
+and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="Box2DLights" />`
 
 ***
 
@@ -369,15 +347,18 @@ and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="B
 ```groovy
 api "com.badlogicgames.ashley:ashley:$ashleyVersion"
 ```
+
+**Desktop Dependency:**
+No native dependency required.
+
 **Android Dependency:**
-```groovy
-api "com.badlogicgames.ashley:ashley:$ashleyVersion"
-```
+No native dependency required.
+
 **HTML Dependency:**
 ```groovy
-api "com.badlogicgames.ashley:ashley:$ashleyVersion:sources"
+implementation "com.badlogicgames.ashley:ashley:$ashleyVersion:sources"
 ```
-and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='com.badlogic.ashley_gwt' />`
+and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="com.badlogic.ashley_gwt" />`
 
 ***
 
@@ -389,15 +370,18 @@ and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='c
 ```groovy
 api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
 ```
+
+**Desktop Dependency:**
+No native dependency required.
+
 **Android Dependency:**
-```groovy
-api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
-```
+No native dependency required.
+
 **HTML Dependency:**
 ```groovy
-api "com.badlogicgames.gdx:gdx-ai:$aiVersion:sources"
+implementation "com.badlogicgames.gdx:gdx-ai:$aiVersion:sources"
 ```
-and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='com.badlogic.gdx.ai' />`
+and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name="com.badlogic.gdx.ai" />`
 
 ***
 
@@ -407,14 +391,19 @@ and in `./html/src/yourgamedomain/GdxDefinition*.gwt.xml` add `<inherits name='c
 #### Adding external repositories
 Gradle finds files defined as dependencies by looking through all the repositories defined in the buildscript. Gradle understands several repository formats, which include Maven and Ivy.
 
-Under the `allprojects` stub, you can see how repositories are defined. Here is an example:
+Under the `subprojects` stub of the root build.gradle, you can see how repositories are defined. Here is an example:
 ```groovy
-allprojects {    
+subprojects {
+    version = '1.0.0'
+    ext.appName = 'MyOriginalGame'
     repositories {
-        mavenCentral() // Maven Central repo
-        mavenLocal() // local Maven repo
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" } // remote Maven repo: Sonatype snapshots
-        maven { url "https://jitpack.io" } // remote Maven repo: Jitpack
+        mavenCentral()
+        maven { url 'https://s01.oss.sonatype.org' }
+        // You may want to remove the following line if you have errors downloading dependencies.
+        mavenLocal()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'https://jitpack.io' }f
     }
 }
 ```
@@ -467,7 +456,7 @@ Also, don't forget that any dependencies added this way also need to be included
 ### File Dependencies
 If you have a dependency that is not mavenized, you can still depend on them!
 
-To do this, in your project stub in the root `build.gradle` file, locate the dependencies { } section as always, and add the following:
+To do this, in your project stub in the subproject's corresponding `build.gradle` file, locate the dependencies { } section and add the following:
 
 ```groovy
 dependencies {
@@ -488,18 +477,18 @@ project(":android") {
     configurations { natives }
 
     dependencies {
-        implementation project(":core")
-        api "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
-        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+        coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+        implementation "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+        implementation project(':core')
 
-        api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
-        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+        natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
         implementation fileTree(dir: 'libs', include: '*.jar')
     }
 }

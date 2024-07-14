@@ -7,58 +7,8 @@ libGDX has an elaborate API that lets you query monitors and display modes, and 
 ## Querying and setting monitors & display modes at configuration time
 Querying monitors and display modes at configuration time is platform specific. The following subsections illustrate what you can do on each platform with regards to monitors and display modes.
 
-### LWJGL backend
-Using the default LWJGL 2 backend, you can get the available display modes for the primary monitor as follows:
-
-```java
-DisplayMode[] modes = LwjglApplicationConfiguration.getDisplayModes();
-```
-
-You can get the current display mode of the primary monitor (also known as desktop mode) as follows:
-
-```java
-DisplayMode desktopMode = LwjglApplicationConfiguration.getDesktopDisplayMode();
-```
-
-Once you have a `DisplayMode`, you can set it on the `LwjglApplicationConfiguration`:
-
-```java
-DisplayMode displayMode = LwjglApplicationConfiguration.getDesktopDisplayMode();
-LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-config.setFromDisplayMode(displayMode);
-new LwjglApplication(new MyAppListener(), config);
-```
-
-Your app will be started in full-screen mode, using the resolution found in the `DisplayMode` object.
-
-To start your app in windowed mode, simply specify the width and height of the window:
-
-```java
-LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-config.width = 800;
-config.height = 600;
-new LwjglApplication(new MyAppListener(), config);
-```
-
-You can also position the window on the primary monitor by specifying its top-left corner coordinate relative to the monitors current display mode:
-
-```java
-config.x = 100;
-config.y = 100;
-```
-
-To center your window, use -1 for the coordinates (the default).
-
-Finally, you can also specify whether your app should start with vsync enabled or not:
-
-```java
-config.vSyncEnabled = true;
-```
-
-Disabling vsync will allow your your app to run above your monitor's refresh rate, provided `foregroundFPS` has been set accordingly.
-
-### LWJGL 3 backend
-The LWJGL 3 backend is much more elaborate when it comes to monitors and display modes. Unlike the LWJGL 2 backend, it supports multi-monitor setups.
+### Desktop LWJGL 3 backend
+Unlike the legacy LWJGL 2 backend, LWJGL 3 supports multi-monitor setups.
 
 Querying all available monitors at configuration time works like this:
 ```java

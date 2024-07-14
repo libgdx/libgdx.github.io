@@ -8,17 +8,36 @@ The solution is to bundle a JRE with your app. This way you know exactly what us
 ## Packaging
 There are a number of tools available for bundling a JRE:
 
-### [jpackage](https://docs.oracle.com/en/java/javase/14/jpackage/packaging-overview.html#GUID-C1027043-587D-418D-8188-EF8F44A4C06A)
+### [Construo](https://github.com/fourlastor-alexandria/construo?tab=readme-ov-file#construo)
+The modern way to minimize and package your libGDX apps for deployment on Windows, Linux, and Mac. Simply call the corresponding gradle command for the target platform. These commands can be called from any OS:
 
-Jpackage is a modern solution for providing native packaging options on Windows, MacOS and Linux introduced with [JEP-343](https://openjdk.java.net/jeps/343). It can be used to create an EXE that starts your bundled application via an embedded JRE.
+**Mac M1** lwjgl3:packageMacM1<br>
+**Mac OSX** lwjgl3:packageMacX64<br>
+**Linux** lwjgl3:packageLinuxX64<br>
+**Windows** lwjgl3:packageWinX64<br>
 
-See [this guide](https://github.com/raeleus/skin-composer/wiki/libGDX-and-JPackage) for more information on how to use it. A video version can be found [here](https://www.youtube.com/watch?v=R7CMXeQ11GM).
+This creates a zip file in `lwjgl3/build/construo/dist` containing your game and the minimized JRE for the target platform. See [this section](https://www.youtube.com/watch?v=VF6N_X_oWr0&t=1088s) in the GDX-Liftoff video.
+
+### [Graal Native Image](https://www.graalvm.org/latest/reference-manual/native-image/)
+Graal Native Image is a way to compile Java code ahead-of-time to create a native executable. This differs from other techniques requiring you to bundle a Java JRE with your game. Native executables are much smaller and require less resources to run, starting up almost instantaneously. To enable it you must set the following in your gradle.properties file:
+
+```
+enableGraalNative=true
+```
+
+You must also have a Graal JDK installed. Please note that there is a higher burden regarding reflection/resousource use and it is not expected to work out of the box. For more information take a look at the [official docs](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
 
 ### [Packr](https://github.com/libgdx/packr)
 A packaging tool created and maintained by the libGDX team. Take a look at the [repository](https://github.com/libgdx/packr#usage) if you are interested in using it.
 
 ### [Parcl](https://github.com/mini2Dx/parcl)
 A Gradle plugin that performs similar actions as launch4j. See its [README](https://github.com/mini2Dx/parcl#how-to-use) for instructions.
+
+### [jpackage](https://docs.oracle.com/en/java/javase/14/jpackage/packaging-overview.html#GUID-C1027043-587D-418D-8188-EF8F44A4C06A)
+
+Jpackage is a tool to provide native packaging options on Windows, MacOS and Linux introduced with [JEP-343](https://openjdk.java.net/jeps/343). It can be used to create an EXE that starts your bundled application via an embedded JRE. A significant downside is that it must be run directly on the target platforms (Windows, Linux, Mac) in order to create executables specific to those users.
+
+See [this guide](https://github.com/raeleus/skin-composer/wiki/libGDX-and-JPackage) for more information on how to use it. A video version can be found [here](https://www.youtube.com/watch?v=R7CMXeQ11GM). Note that these guides are outdated and no longer recommended.
 
 ### [Jpackage Gradle Plugin](https://github.com/petr-panteleyev/jpackage-gradle-plugin)
 A Gradle plugin that conveniently wraps jpackage in line with modern gradle standards. See its [README](https://github.com/petr-panteleyev/jpackage-gradle-plugin/blob/master/README.md) for usage instructions.
