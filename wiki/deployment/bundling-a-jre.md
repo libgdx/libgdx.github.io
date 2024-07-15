@@ -25,7 +25,7 @@ Graal Native Image is a way to compile Java code ahead-of-time to create a nativ
 enableGraalNative=true
 ```
 
-You must also have a Graal JDK installed. Please note that there is a higher burden regarding reflection/resousource use and it is not expected to work out of the box. For more information take a look at the [official docs](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
+You must also have a Graal JDK installed. Please note that there is a higher burden regarding reflection/resource use and it is not expected to work out of the box. For more information take a look at the [official docs](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
 
 ### [Packr](https://github.com/libgdx/packr)
 A packaging tool created and maintained by the libGDX team. Take a look at the [repository](https://github.com/libgdx/packr#usage) if you are interested in using it.
