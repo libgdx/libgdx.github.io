@@ -42,6 +42,7 @@ This guide describes how to migrate an existing libGDX project to Kotlin. You ca
 ## Configure Gradle
 
 UPDATE: Gdx-Liftoff has an option to enable Kotlin support in new projects and will handle most of the configuration for you. These instructions remain for posterity.
+{: .notice--warning}
 
 This step basically includes following the [instructions from the official Kotlin manual](https://kotlinlang.org/docs/reference/using-gradle.html).
 
