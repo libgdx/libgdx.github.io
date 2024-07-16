@@ -2,7 +2,6 @@
 title: Starter classes and configuration
 ---
 * [Desktop (LWJGL3)](#desktop-lwjgl3)
-* [Desktop (LWJGL)](#desktop-lwjgl)
 * [Android](#android)
   - [Game Activity](#game-activity)
   - [Game Fragment](#game-fragment)
