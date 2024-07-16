@@ -46,7 +46,7 @@ Clicking the Project Options button will take you to the Add-Ons screen:
   * **[Ai](https://github.com/libgdx/gdx-ai)**: An artificial intelligence framework.<br>
   * **[Box2d](/wiki/extensions/physics/box2d)**: Box2D is a 2D physics library.<br>
   * **[Bullet](/wiki/extensions/physics/bullet/bullet-physics)**: 3D Collision Detection and Rigid Body Dynamics Library.<br>
-  * **[Controllers](/wiki/input/controllers)** Library to handle controllers (e.g.: XBox 360 controller).<br>
+  * **[Controllers](https://github.com/libgdx/gdx-controllers?tab=readme-ov-file#%EF%B8%8F-game-controller-extension-for-libgdx-version-2)** Library to handle controllers (e.g.: XBox 360 controller).<br>
   * **[FreeType](/wiki/extensions/gdx-freetype)**: Scalable font. Great to manipulate font size dynamically. However be aware that it does not work with HTML target if you cross compile for that target.<br>
   * **Tools**: Set of tools including: particle editor (2d/3d), bitmap font and image texture packers.<br>
 * **Template**: Defines the base classes to be included in your project.<br>
