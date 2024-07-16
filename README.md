@@ -4,4 +4,6 @@
 
 If you want to contribute, please take a look at the [wiki](https://github.com/libgdx/libgdx.github.io/wiki) of this repo. For bigger changes, it is recommended to join our [Discord server](https://libgdx.com/community/discord/) and talk with the contributors about it. If you want to edit one of the wiki pages, those are located in the [wiki/](https://github.com/libgdx/libgdx.github.io/tree/dev/wiki) folder. Please also take a look at our [wiki style guide](https://libgdx.com/wiki/misc/wiki-style-guide).
 
+You can run the website locally using docker : `docker compose up jekyll`. In case of dependency changes (Gemfile or Gemfile.lock changes), you need to rebuild it before : `docker build .`.
+
 New content contributed to this repository is licensed under the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/).
