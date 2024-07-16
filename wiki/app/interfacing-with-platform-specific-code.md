@@ -37,13 +37,13 @@ public class AndroidLeaderboard implements Leaderboard {
 
 ## The desktop implementation
 
-The following code would go into the **desktop project**:
+The following code would go into the **desktop lwjgl3 project**:
 
 ```java
 /** Desktop implementation, we simply log invocations **/
-public class DesktopLeaderboard implements Leaderboard {
+public class Lwjgl3Leaderboard implements Leaderboard {
    public void submitScore(String user, int score) {
-      Gdx.app.log("DesktopLeaderboard", "would have submitted score for user " + user + ": " + score);
+      Gdx.app.log("Lwjgl3Leaderboard", "would have submitted score for user " + user + ": " + score);
    }
 }
 ```
@@ -52,7 +52,7 @@ public class DesktopLeaderboard implements Leaderboard {
 The following code would go into the **HTML5 project**:
 
 ```java
-/** Html5 implementation, same as DesktopLeaderboard **/
+/** Html5 implementation, same as Lwjgl3Leaderboard **/
 public class Html5Leaderboard implements Leaderboard {
    public void submitScore(String user, int score) {
       Gdx.app.log("Html5Leaderboard", "would have submitted score for user " + user + ": " + score);
@@ -80,7 +80,7 @@ In each [starter class](/wiki/app/starter-classes-and-configuration) we then sim
 ```java
 public static void main(String[] argv) {
    Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-   new Lwjgl3Application(new MyGame(new DesktopLeaderboard()), config);
+   new Lwjgl3Application(new MyGame(new Lwjgl3Leaderboard()), config);
 }
 ```
 
@@ -89,7 +89,7 @@ Alternatively, we can obtain the platform-specific implementation via reflection
 ```java
 if (Gdx.app.getType() == ApplicationType.Desktop || Gdx.app.getType() == ApplicationType.HeadlessDesktop) {
     try {
-		    this.leaderboard = (Leaderboard) ClassReflection.newInstance(ClassReflection.forName("com.mygame.desktop.DesktopLeaderboard"));
+		    this.leaderboard = (Leaderboard) ClassReflection.newInstance(ClassReflection.forName("com.mygame.lwjgl3.Lwjgl3Leaderboard"));
 		} catch (ReflectionException e) {
 		    e.printStackTrace();
 		}

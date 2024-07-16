@@ -2,7 +2,6 @@
 title: Starter classes and configuration
 ---
 * [Desktop (LWJGL3)](#desktop-lwjgl3)
-* [Desktop (LWJGL)](#desktop-lwjgl)
 * [Android](#android)
   - [Game Activity](#game-activity)
   - [Game Fragment](#game-fragment)
@@ -20,25 +19,37 @@ This article assumes you have followed the instructions in [Project Setup](/wiki
 
 # Desktop (LWJGL3)
 
-Since libGDX version 1.10.1, this has been the default desktop backend. You can find more information [here](/news/2021/07/devlog-7-lwjgl3).
+Since libGDX version 1.10.1, LWJGL3 has been the default desktop backend. You can find more information [here](/news/2021/07/devlog-7-lwjgl3).
 {: .notice--info}
 
-Opening the `DesktopLauncher.java` class in `my-gdx-game` shows the following:
+Opening the `Lwjgl3Launcher.java` class in `my-gdx-game` shows the following:
 
 ```java
 package com.me.mygdxgame;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import com.me.mygdxgame.MyGdxGame;
 
-public class DesktopLauncher {
-   public static void main(String[] args) {
-      Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-      config.setTitle("my-gdx-game");
-      config.setWindowedMode(480, 320);
+public class Lwjgl3Launcher {
+    public static void main(String[] args) {
+        if (StartupHelper.startNewJvmIfRequired()) return;
+        createApplication();
+    }
 
-      new Lwjgl3Application(new MyGdxGame(), config);
-   }
+    private static Lwjgl3Application createApplication() {
+        return new Lwjgl3Application(new MyGdxGame(), getDefaultConfiguration());
+    }
+
+    private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
+        Lwjgl3ApplicationConfiguration configuration = new Lwjgl3ApplicationConfiguration();
+        configuration.setTitle("my-gdx-game");
+        configuration.useVsync(true);
+        configuration.setForegroundFPS(Lwjgl3ApplicationConfiguration.getDisplayMode().refreshRate);
+        configuration.setWindowedMode(640, 480);
+        configuration.setWindowIcon("libgdx128.png", "libgdx64.png", "libgdx32.png", "libgdx16.png");
+        return configuration;
+    }
 }
 ```
 
@@ -48,64 +59,11 @@ Once the configuration object is set, an `Lwjgl3Application` is instantiated. Th
 
 From there on a window is created and the ApplicationListener is invoked as described in [The Life-Cycle](/wiki/app/the-life-cycle)
 
-#### Common issues:
-
-1. On **macOS**, there is another step required to get LWJGL 3 apps running. Either add the ([experimental](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw-awt-macos)) `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your desktop project set the VM Options to `-XstartOnFirstThread`. The latter can typically be done in the Launch/Run Configurations of your IDE, as is described [here](/wiki/start/import-and-running). Alternatively, if you're starting your project via Gradle, add this line to `run` task of the desktop Gradle file:
-   ```
-    jvmArgs = ['-XstartOnFirstThread']
-   ```
-   A fourth approach is to just programatically restart the JVM if the argument is not present (see [here](https://github.com/crykn/guacamole/blob/master/gdx-desktop/src/main/java/de/damios/guacamole/gdx/StartOnFirstThreadHelper.java#L69) for a simple example). Lastly, if you want to deploy your game by packaging a JRE with it (which is the recommended way to distribute your later game), jpackage or packr allow you to set the JVM arguments.
-
-2. If you are using **gdx-tools** and the lwjgl3 backend in the same project, you need to modify your gdx-tools dependency like this:
-   ```
-   compile ("com.badlogicgames.gdx:gdx-tools:$gdxVersion") {
-      exclude group: 'com.badlogicgames.gdx', module: 'gdx-backend-lwjgl'
-   }
-   ```
-
-# Desktop (LWJGL)
-
-In version 1.10.1, libGDX switched its default desktop backend to LWJGL 3. If you want to upgrade, please take a look [here](/news/2021/07/devlog-7-lwjgl3#how-can-i-migrate).
-{: .notice--warning}
-
-Opening the `DesktopLauncher.java` class in `my-gdx-game` shows the following:
-
-```java
-package com.me.mygdxgame;
-
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-
-public class DesktopLauncher {
-   public static void main(String[] args) {
-      LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-      cfg.title = "my-gdx-game";
-      cfg.useGL30 = false;
-      cfg.width = 480;
-      cfg.height = 320;
-
-      new LwjglApplication(new MyGdxGame(), cfg);
-   }
-}
-```
-
-First an [LwjglApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-lwjgl/src/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.java) is instantiated. This class lets one specify various configuration settings, such as the initial screen resolution, whether to use OpenGL ES 2.0 or 3.0 and so on. Refer to the [Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/backends/lwjgl/LwjglApplicationConfiguration.html) of this class for more information.
-
-Once the configuration object is set, an `LwjglApplication` is instantiated. The `MyGdxGame()` class is the ApplicationListener implementing the game logic.
-
-From there on a window is created and the ApplicationListener is invoked as described in [The Life-Cycle](/wiki/app/the-life-cycle)
-
-### Common issues:
-
-- When using a JDK of version 8 or later, an **"illegal reflective access"** warning is shown. This is nothing to be worried about. If it bothers you, downgrade the used JDK or switch to the LWJGL 3 backend.
-
-- If an error like **`Process 'command 'C:/.../java.exe'' finished with non-zero exit value -1`** is shown, this can safely be ignored. A workaround is disabling forceExit: `config.forceExit = false;`.
-
 # Android
 
 ## Game Activity
 
-Android applications do not use a `main()` method as the entry-point, but instead require an Activity. Open the `MainActivity.java` class in the `my-gdx-game-android` project:
+Android applications do not use a `main()` method as the entry-point, but instead require an Activity. Open the `AndroidLauncher.java` class in the `my-gdx-game-android` project:
 
 ```java
 package com.me.mygdxgame;
@@ -114,20 +72,20 @@ import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
+import com.me.mygdxgame.MyGdxGame;
 
-public class MainActivity extends AndroidApplication {
+public class AndroidLauncher extends AndroidApplication {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
-
-        initialize(new MyGdxGame(), cfg);
+        AndroidApplicationConfiguration configuration = new AndroidApplicationConfiguration();
+        configuration.useImmersiveMode = true;
+        initialize(new MyGdxGame(), configuration);
     }
 }
 ```
 
-The main entry-point method is the Activity's `onCreate()` method. Note that `MainActivity` derives from `AndroidApplication`, which itself derives from `Activity`. As in the desktop starter class, a configuration instance is created ([AndroidApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-android/src/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.java)). Once configured, the `AndroidApplication.initialize()` method is called, passing in the `ApplicationListener` (`MyGdxGame`) as well as the configuration. Refer to the [AndroidApplicationConfiguration Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.html) for more information on what configuration settings are available.
+The main entry-point method is the Activity's `onCreate()` method. Note that `AndroidLauncher` derives from `AndroidApplication`, which itself derives from `Activity`. As in the desktop starter class, a configuration instance is created ([AndroidApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-android/src/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.java)). Once configured, the `AndroidApplication.initialize()` method is called, passing in the `ApplicationListener` (`MyGdxGame`) as well as the configuration. Refer to the [AndroidApplicationConfiguration Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.html) for more information on what configuration settings are available.
 
 Android applications can have multiple activities. libGDX games should usually only consist of a single activity. Different screens of the game are implemented within libGDX, not as separate activities. The reason for this is that creating a new `Activity` also implies creating a new OpenGL context, which is time consuming and also means that all graphical resources have to be reloaded.
 
@@ -187,22 +145,29 @@ Besides the `AndroidApplicationConfiguration`, an Android application is also co
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.me.mygdxgame">
-
-    <application
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape"
-            android:configChanges="keyboard|keyboardHidden|orientation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+    xmlns:tools="http://schemas.android.com/tools">
+  <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+  <application
+      android:allowBackup="true"
+      android:fullBackupContent="true"
+      android:icon="@drawable/ic_launcher"
+      android:isGame="true"
+      android:appCategory="game"
+      android:label="@string/app_name"
+      tools:ignore="UnusedAttribute"
+      android:theme="@style/GdxTheme">
+    <activity
+        android:name="com.me.mygdxgame.android.AndroidLauncher"
+        android:label="@string/app_name"
+        android:screenOrientation="landscape"
+        android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout"
+        android:exported="true">
+        <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+  </application>
 
 </manifest>
 ```
@@ -414,30 +379,59 @@ and the Screen Saver service must both be set with `exported` true so they can b
 
 # iOS/Robovm
 
-[ToDo]
+Opening the `IOSLauncher.java` class in `my-gdx-game` shows the following:
+
+```java
+package com.me.mygdxgame.ios;
+
+import org.robovm.apple.foundation.NSAutoreleasePool;
+import org.robovm.apple.uikit.UIApplication;
+
+import com.badlogic.gdx.backends.iosrobovm.IOSApplication;
+import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;
+import com.me.mygdxgame.MyGdxGame;
+
+public class IOSLauncher extends IOSApplication.Delegate {
+    @Override
+    protected IOSApplication createApplication() {
+        IOSApplicationConfiguration configuration = new IOSApplicationConfiguration();
+        return new IOSApplication(new MyGdxGame(), configuration);
+    }
+
+    public static void main(String[] argv) {
+        NSAutoreleasePool pool = new NSAutoreleasePool();
+        UIApplication.main(argv, null, IOSLauncher.class);
+        pool.close();
+    }
+}
+```
+
+See [this medium article](https://medium.com/@bschulte19e/deploying-your-libgdx-game-to-ios-in-2020-4ddce8fff26c) for more details on deploying to iOS devices.
 
 # HTML5/GWT
 The main entry-point for an HTML5/GWT application is a `GwtApplication`. Open `GwtLauncher.java` in the my-gdx-game-html5 project:
 
 ```java
-package com.me.mygdxgame.client;
+package com.me.mygdxgame.gwt;
 
-import com.me.mygdxgame.MyGdxGame;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
+import com.me.mygdxgame.MyGdxGame;
 
 public class GwtLauncher extends GwtApplication {
-   @Override
-   public GwtApplicationConfiguration getConfig () {
-      GwtApplicationConfiguration cfg = new GwtApplicationConfiguration(480, 320);
-      return cfg;
-   }
+    @Override
+    public GwtApplicationConfiguration getConfig () {
+        GwtApplicationConfiguration cfg = new GwtApplicationConfiguration(true);
+        cfg.padVertical = 0;
+        cfg.padHorizontal = 0;
+        return cfg;
+    }
 
-   @Override
-   public ApplicationListener createApplicationListener () {
-      return new MyGdxGame();
-   }
+    @Override
+    public ApplicationListener createApplicationListener () {
+        return new MyGdxGame();
+    }
 }
 ```
 
@@ -450,12 +444,19 @@ In the example project setup, the module file of the html5 project looks like th
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit trunk//EN" "http://google-web-toolkit.googlecode.com/svn/trunk/distro-source/core/src/gwt-module.dtd">
-<module>
-   <inherits name='com.badlogic.gdx.backends.gdx_backends_gwt' />
-   <inherits name='MyGdxGame' />
-   <entry-point class='com.me.mygdxgame.client.GwtLauncher' />
-   <set-configuration-property name="gdx.assetpath" value="../my-gdx-game-android/assets" />
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.11.0//EN" "https://www.gwtproject.org/doctype/2.11.0/gwt-module.dtd">
+<module rename-to="html">
+  <source path="" />
+
+  <inherits name="com.badlogic.gdx.backends.gdx_backends_gwt" />
+  <inherits name="com.me.mygdxgame.MyGdxGame" />
+
+  <entry-point class="com.me.mygdxgame.gwt.GwtLauncher" />
+
+  <set-configuration-property name="gdx.assetpath" value="../assets" />
+  <set-configuration-property name="xsiframe.failIfScriptTag" value="FALSE"/>
+  <set-property name="user.agent" value="gecko1_8, safari"/>
+  <collapse-property name="user.agent" values="*" />
 </module>
 ```
 

@@ -55,9 +55,6 @@ It is also possible to develop libGDX applications entirely without any IDE, jus
 {: .notice--info}
 
 - JDK 11+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
-
-   Since Gradle does <u>not</u> support JDK 19 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 11-18**!
-   {: .notice--warning}
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - Set the ANDROID_HOME environment variable, or use gradle.properties
 

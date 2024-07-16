@@ -12,6 +12,8 @@ Next up, you need to import your project into your IDE.
 
 
 # Importing the Project
+If you have just generated the project in gdx-liftoff, you may click the option "Open in IntelliJ Idea" to get started right away. Otherwise, continue with the following steps:
+
 1. In **IntelliJ IDEA or Android Studio**, you can choose to open the `build.gradle` file and select "Open as Project" to get started.
 
    In **Eclipse**, choose `File -> Import... -> Gradle -> Existing Gradle Project` (make sure that your freshly generated project is not located inside of your workspace).

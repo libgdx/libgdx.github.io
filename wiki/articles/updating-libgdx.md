@@ -11,18 +11,18 @@ libGDX's Gradle based projects make it very easy to switch between libGDX versio
 * Release builds: these are considered stable. You can see the available release versions on [Maven Central](https://search.maven.org/search?q=g:com.badlogicgames.gdx%20AND%20a:gdx).
 * Nightly builds: also known as SNAPSHOT builds in Maven lingo. These are cutting edge versions of libGDX that are built on every change to the source repository. Snapshot builds also have a version number of the form `x.y.z-SNAPSHOT`, e.g. `1.9.10-SNAPSHOT`. You can find the latest SNAPSHOT version string [here](https://github.com/libgdx/libgdx/blob/master/gradle.properties#L8).
 
-Your Gradle based project makes it very easy to switch between releases and nightly builds. Open up the `build.gradle` file in the root of your project, and locate the following line:
+Your Gradle based project makes it very easy to switch between releases and nightly builds. Open up the `gradle.properties` file in the root of your project, and locate the following line:
 
 ```groovy
- gdxVersion = "1.5.2"
+gdxVersion=1.12.1
 ```
 
-The version you see will most certainly be higher than `1.5.2`. Once you've located that string, you can simply change it to the latest release (or an older release) or to the current SNAPSHOT version. You may also have to update other modules and dependencies in that same section of the `build.gradle` file, based on the [versions listing](/dev/versions/). Once edited, save the `build.gradle` file.
+The version you see may be higher than `1.12.1`. Once you've located that string, you can simply change it to the latest release (or an older release) or to the current SNAPSHOT version. You may also have to update other versions and dependencies based on the [versions listing](/dev/versions/). Once edited, save the `gradle.properties` file.
 
 The next step is dependent on your IDE:
 
-* **Eclipse**: Select all your projects in the package explorer, right click, then click `Gradle -> Refresh All`. This will download the libGDX version you specified in `build.gradle` and wire up the JAR files with your projects correctly.
-* **IntelliJ IDEA** / **Android Studio**: will usually detect that your `build.gradle` has been updated and show a refresh button. Just click it and IDEA will update libGDX to the version you specified in `build.gradle`. Go into the Gradle tasks panel/tool view and click the refresh button. Running a task like 'builddependents' also tends to do this.
+* **Eclipse**: Select all your projects in the package explorer, right click, then click `Gradle -> Refresh All`. This will download the libGDX version you specified in `gradle.properties` and wire up the JAR files with your projects correctly.
+* **IntelliJ IDEA** / **Android Studio**: will usually detect that your `gradle.properties` has been updated and show a refresh button. Just click it and IDEA will update libGDX to the version you specified in `gradle.properties`. Go into the Gradle tasks panel/tool view and click the refresh button. Running a task like 'builddependents' also tends to do this.
 * **Netbeans**: in the "Projects" view, right-click the top-most project node and select "Reload Project". All sub-projects will also be reloaded with the new files.
 * **Command Line**: invoking any of the tasks will usually check for changes in dependency versions and redownload anything that changed.
 
@@ -66,4 +66,4 @@ As an alternative, you can specify a Gradle distribution by URL (take a look [he
 ```
 
 ## Additional Steps
-Since Gradle updates often introduce breaking changes, you might need to take additional steps to get your project running again after an update. Usually, we recommend just recreating your project structure with the setup tool and then copying over your dependencies and code. Alternatively, you can take a look at the changes we made to the setup tool's example project [here](https://github.com/libgdx/libgdx/commits/master/extensions/gdx-setup).
+Since Gradle updates often introduce breaking changes, you might need to take additional steps to get your project running again after an update. Usually, we recommend just recreating your project structure with Gdx-Liftoff and then copying over your dependencies and code.  

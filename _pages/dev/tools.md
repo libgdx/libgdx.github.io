@@ -31,11 +31,11 @@ feature_row:
     btn_class: "btn--primary"
 
 feature_row2:
-  - image_path: /assets/images/dev/tools/setup_tool.jpg
-    title: "gdx-setup"
-    excerpt: 'A simple wizard tool for libGDX projects'
+  - image_path: /assets/images/dev/tools/gdx-liftoff.png
+    title: "gdx-liftoff"
+    excerpt: 'The official libGDX project generator'
     url: "/wiki/start/project-generation"
-    btn_label: "Download"
+    btn_label: "Documentation & Download"
     btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/skin_composer.png
     title: "Skin Composer"

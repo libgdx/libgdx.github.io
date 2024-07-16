@@ -10,6 +10,8 @@ Scala developers usually choose either Gradle or SBT as their build tool. This t
 
 # Using libGDX and Scala with Gradle
 
+UPDATE: Gdx-Liftoff has an option to enable Scala support in new projects and will handle most of the configuration for you. These instructions remain for posterity.
+
 The default build created by the gdx-setup.jar tool is the best place to start when going the Gradle route. A repo with the required modifications to the default "blank" gdx project can be found here: [gdx-scala-demo](https://github.com/LOFI/gdx-scala-demo). These changes have been outlined below.
 
 In order to support Scala compilation you need to update the build with a couple of additions:
