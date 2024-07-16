@@ -65,9 +65,9 @@ The final screen allows you to set versions and other options:
 * **Java Version**: The version of Java to be used to build your project.<br> 
   * `8` is the recommendation for most projects.<br>
   * Use `7` if you want to support old Android devices or iOS.<br>
-  * `11` is supported on desktop and HTML. Note that the GWT (HTML5) only supports a subset of Java libraries<br>
+  * `11` is supported on desktop and HTML. Note that the GWT (HTML5) only supports a [subset of Java libraries](https://www.gwtproject.org/doc/latest/DevGuideCodingBasicsCompatibility)<br>
   * The latest versions of Java like `22` are only supported on desktop<br>
-* **App Version**: The version number of your game used throughout your project. See <a href=https://semver.org/>semantic versioning</a>.<br>
+* **App Version**: The version number of your game used throughout your project. See [semantic versioning](https://semver.org/).<br>
 * **Add GUI Assets**: Adds a general use Scene2D UI skin.<br>
 * **Add README**: Adds a basic README file with placeholder text. Read the tips in the README to learn about helpful Gradle commands.<br>
 * **Add Gradle Tasks**: Add optional Gradle commands to be executed after the project is generated.<br>
