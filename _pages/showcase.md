@@ -146,7 +146,7 @@ Tap Wizard is an Idle Action-RPG like no other! Equip your Wizard with a loadout
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
-## [Mirage Realms](https://www.miragerealms.co.uk/devblog/) by Liam Stewart
+## [Mirage Realms](https://www.miragerealms.co.uk/) by Liam Stewart
 <img align="left" src="https://lh3.googleusercontent.com/dE5E2CzrSoT_NLCgMGiG7oN_0XSuqUT3QPRCgT9_d0QzTXN4_Pa_FCAweFhNiyQoLYQ=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 240px" class="lazyload">
 
 Mirage Realms is an ambitious solo project to produce a free to play MMORPG for different platforms. [[Android](https://play.google.com/store/apps/details?id=com.foxcake.mirage.android) / [Desktop](https://www.miragerealms.co.uk/devblog/play/)]
