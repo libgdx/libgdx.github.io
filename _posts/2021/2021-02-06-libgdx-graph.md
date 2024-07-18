@@ -14,7 +14,7 @@ categories: news
 
 <div class="notice--primary">
   <p>
-    Hey everybody! As announced in <a href="/news/2021/01/devlog_5_community_showcases">Status Report #5</a> we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. This is the second of these <b>Community Showcases</b>, in which Gempukku Studio is going to present his <a href="https://github.com/marcinsc/libgdx-graph">libGDX-graph tool</a>!
+    Hey everybody! As announced in <a href="/news/2021/01/devlog_5_community_showcases">Status Report #5</a> we want to give creators of interesting community projects the opportunity to present their exciting libraries or tools on the official blog. This is the second of these <b>Community Showcases</b>, in which Gempukku Studio is going to present his <a href="https://github.com/MarcinSc/gdx-graph">libGDX-graph tool</a>!
   </p>
   <p>
     If you are interested in other cool community projects, be sure to check out the <a href="https://github.com/rafaskb/awesome-libgdx#readme">libGDX Awesome List</a> as well. To participate in future showcases, take a look <a href="https://github.com/libgdx/libgdx.github.io/wiki/Community-Showcases">here</a>.
@@ -106,7 +106,7 @@ for an example.
 
 # How to get started
 The project's readme, as well as Wiki available on the project page is a good way to start:
-[project's page](https://github.com/marcinsc/libgdx-graph).
+[project's page](https://github.com/MarcinSc/gdx-graph).
 
 In addition, there is a [Devlog playlist](https://www.youtube.com/playlist?list=PLqpawGIg6Qj5CvjOaCbB536z862XhjPQi)
 available on [author's YouTube channel](https://www.youtube.com/GempukkuStudio). This devlog has plenty of examples
