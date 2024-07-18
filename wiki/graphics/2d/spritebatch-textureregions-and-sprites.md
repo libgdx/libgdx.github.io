@@ -60,14 +60,40 @@ batch.end();
 
 Here a texture is created and passed to a `SpriteBatch` to be drawn. The texture will be drawn in a rectangle positioned at 10,10 with a width and height equal to the size of the texture. `SpriteBatch` has many methods for drawing a texture:
 
-| *Method signature* | *Description* |
-| :------------------ | :-------------: |
-| `draw (Texture texture, float x, float y)` | Draws the texture using the texture's width and height |
-| `draw (Texture texture, float x, float y,`<br/>`int srcX, int srcY, int srcWidth, int srcHeight)` | Draws a portion of the texture. |
-| `draw (Texture texture, float x, float y,`<br/>`float width, float height, int srcX, int srcY,`<br/>`int srcWidth, int srcHeight, boolean flipX, boolean flipY)` | Draws a portion of a texture, stretched to the `width` and `height`, and optionally flipped. |
-| `draw (Texture texture, float x, float y,`<br/>`float originX, float originY, float width, float height,`<br/>`float scaleX, float scaleY, float rotation,`<br/>`int srcX, int srcY, int srcWidth, int srcHeight,`<br/>`boolean flipX, boolean flipY)` | This monster method draws a portion of a texture, stretched to the `width` and `height`, scaled and rotated around an origin, and optionally flipped. |
-| `draw (Texture texture, float x, float y,`<br/>`float width, float height, float u,`<br/>`float v, float u2, float v2)` | This draws a portion of a texture, stretched to the `width` and `height`. This is a somewhat advanced method as it uses texture coordinates from 0-1 rather than pixel coordinates. |
-| `draw (Texture texture, float[] spriteVertices, int offset, int length)` | This is an advanced method for passing in the raw geometry, texture coordinates, and color information. This can be used to draw any quadrilateral, not just rectangles. |
+<table>
+	<thead>
+	<tr>
+		<th style="width: 50%">Method signature</th>
+		<th style="width: 50%">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y)</code></td>
+		<td>Draws the texture using the texture's width and height.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y, int srcX, int srcY, int srcWidth, int srcHeight)</code></td>
+		<td>Draws a portion of the texture.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y, float width, float height, int srcX, int srcY, int srcWidth, int srcHeight, boolean flipX, boolean flipY)</code></td>
+		<td>Draws a portion of a texture, stretched to the <var>width</var> and <var>height</var>, and optionally flipped.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y, float originX, float originY, float width, float height, float scaleX, float scaleY, float rotation, int srcX, int srcY, int srcWidth, int srcHeight, boolean flipX, boolean flipY)</code></td>
+		<td>This monster method draws a portion of a texture, stretched to the <var>width</var> and <var>height</var>, scaled and rotated around an origin, and optionally flipped.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y, float width, float height, float u, float v, float u2, float v2)</code></td>
+		<td>This draws a portion of a texture, stretched to the <var>width</var> and <var>height</var>. This is a somewhat advanced method as it uses texture coordinates from 0-1 rather than pixel coordinates.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float[] spriteVertices, int offset, int length)</code></td>
+		<td>This is an advanced method for passing in the raw geometry, texture coordinates, and color information. This can be used to draw any quadrilateral, not just rectangles.</td>
+	</tr>
+	</tbody>
+</table>
 
 ## TextureRegion
 
@@ -88,11 +114,28 @@ Here the `20, 20, 50, 50` describes the portion of the texture, which is then dr
 
 `SpriteBatch` has many methods for drawing a texture region:
 
-| *Method signature* | *Description* |
-| :------------------ | :-------------: |
-| `draw (TextureRegion region, float x, float y)` | Draws the region using the width and height of the region. |
-| `draw (TextureRegion region, float x, float y,`<br/>`float width, float height)` | Draws the region, stretched to the `width` and `height`. |
-| `draw (TextureRegion region, float x, float y,`<br/>`float originX, float originY, float width, float height,`<br/>`float scaleX, float scaleY, float rotation)` | Draws the region, stretched to the `width` and `height`, and scaled and rotated around an origin. |
+<table>
+	<thead>
+	<tr>
+		<th style="width: 50%">Method signature</th>
+		<th style="width: 50%">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><code>draw (TextureRegion region, float x, float y)</code></td>
+		<td>Draws the region using the width and height of the region.</td>
+	</tr>
+	<tr>
+		<td><code>draw (TextureRegion region, float x, float y, float width, float height)</code></td>
+		<td>Draws the region, stretched to the <var>width</var> and <var>height</var>.</td>
+	</tr>
+	<tr>
+		<td><code>draw (TextureRegion region, float x, float y, float originX, float originY, float width, float height, float scaleX, float scaleY, float rotation)</code></td>
+		<td>Draws the region, stretched to the <var>width</var> and <var>height</var>, and scaled and rotated around an origin.</td>
+	</tr>
+	</tbody>
+</table>
 
 ## Sprite
 
