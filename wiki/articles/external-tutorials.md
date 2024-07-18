@@ -32,7 +32,7 @@ These are webpages where individuals or companies write about their experience w
 
 ### Lighting
  * [Normal Mapping](https://web.archive.org/web/20200508234246/http://www.java-gaming.org/topics/glsl-using-normal-maps-to-illuminate-a-2d-texture-libgdx/27516/view.html)
- * [Shadow Mapping](https://www.microbasic.net/tutorials/shadow-mapping/Full.html)
+ * [Shadow Mapping](https://web.archive.org/web/20200429061153/https://www.microbasic.net/tutorials/shadow-mapping/Full.html)
 
 ### UI with Scene2D
 * [From the Ground Up Series by raeleus](https://github.com/raeleus/skin-composer/wiki/From-the-Ground-Up:-Scene2D.UI-Tutorials) (recommended!)
