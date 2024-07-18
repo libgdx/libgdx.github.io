@@ -50,7 +50,7 @@
     * [Packing atlases at runtime](/wiki/graphics/2d/packing-atlases-at-runtime)
     * [Packing atlases offline](/wiki/graphics/2d/packing-atlases-offline)
     * [Pixmaps](/wiki/graphics/2d/pixmaps)
-    * [Spritebatch, Textureregions, and Sprites](/wiki/graphics/2d/spritebatch-textureregions-and-sprites)
+    * [SpriteBatch, TextureRegions, and Sprites](/wiki/graphics/2d/spritebatch-textureregions-and-sprites)
     * [Texture Compression](/wiki/graphics/2d/texture-compression)
     * [Tile maps](/wiki/graphics/2d/tile-maps)
     * [Using textureatlases](/wiki/graphics/2d/using-textureatlases)

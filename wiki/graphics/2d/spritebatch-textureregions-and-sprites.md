@@ -1,5 +1,5 @@
 ---
-title: Spritebatch, Textureregions, and Sprites
+title: SpriteBatch, TextureRegions, and Sprites
 ---
 This page gives a brief overview of how images are drawn using OpenGL, and how libGDX simplifies and optimizes the task through the `SpriteBatch` class.
 
