@@ -43,7 +43,7 @@ The Graphics module also provides methods to generate Pixmaps and Textures.
 
 For example, to obtain the OpenGL API 2.0 instance, the following code will be used:
 ```java
-GL20 gl = Gdx.graphics.getGL20 ();
+GL20 gl = Gdx.graphics.getGL20();
 ```
 The method will return an instance that can be used to draw onto the screen. In case the hardware configuration does not support OpenGL ES v2.0, null is returned.
 
