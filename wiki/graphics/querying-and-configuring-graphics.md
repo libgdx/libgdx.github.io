@@ -41,7 +41,7 @@ With a display mode in hand, you can set it on the `Lwjgl3ApplicationConfigurati
 DisplayMode primaryMode = Lwjgl3ApplicationConfiguration.getDisplayMode();
 Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
 config.setFullscreenMode(primaryMode);
-new Lwjgl3ApplicationConfiguration(new MyAppListener(), config);
+new Lwjgl3Application(new MyAppListener(), config);
 ```
 This will start your app in full-screen mode on the primary monitor, using that monitor's current resolution. If you pass a display mode from a different monitor, the app will be started in full-screen mode on that montior. **Note: it is recommended to always use the current display mode of a monitor. Other display modes may fail.**
 
@@ -144,7 +144,7 @@ Every application starts with one window that is set up during configuration tim
 ```java
 Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
 config.setWindowedMode(800, 600);
-new Lwjgl3ApplicationConfiguration(new MyMainWindowListener(), config);
+new Lwjgl3Application(new MyMainWindowListener(), config);
 ```
 
 In this example, the window is driven by `MyMainWindowListener`, a standard `ApplicationListener`. libGDX does not report events like iconification or focus loss directly. For this, the LWJGL 3 backend introduces a desktop specific interface called `Lwjgl3WindowListener`. You can provide an implementation of this interface to receive and react to such events:
