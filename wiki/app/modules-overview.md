@@ -56,10 +56,10 @@ It always returns the specific implementation of the API (lwjgl, jogl or android
 
 The following API versions are supported:
 
-|*GL Version* | *Method to access* |
-|:---------:|:-----------------:|
-|2.0 | `Gdx.graphics.getGL20();`|
-|3.0 |`Gdx.graphics.getGL30();`|
+| *GL Version* |    *Method to access*     |
+|:------------:|:-------------------------:|
+|     2.0      | `Gdx.graphics.getGL20();` |
+|     3.0      | `Gdx.graphics.getGL30();` |
 
 
 To learn more about the Graphics module check its documentation [here](/wiki/graphics/graphics).
