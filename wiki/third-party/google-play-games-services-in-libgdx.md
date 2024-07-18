@@ -14,7 +14,7 @@ Follow the readme and the project's wiki to integrate GPGS and other game servic
 
 The following article describes the manual integration in your project without using the library.
 
-A [Super Jumper](https://github.com/libgdx/libgdx-demo-superjumper) based example that makes use of Leaderboards and Achievements is available to download from [Google Play](https://play.google.com/store/apps/details?id=com.theinvader360.tutorial.libgdx.gameservices).
+A [Super Jumper](https://github.com/libgdx/libgdx-demo-superjumper) based example that makes use of Leaderboards and Achievements.
 
 The project is freely available on [GitHub](https://github.com/TheInvader360/libgdx-gameservices-tutorial), and a companion tutorial is available [here](https://theinvader360.blogspot.co.uk/2013/10/google-play-game-services-tutorial-example.html).
 
