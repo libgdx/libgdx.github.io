@@ -1,5 +1,8 @@
 ---
 title: Texture packer
+redirect_from:
+  - /wiki/graphics/2d/packing-atlases-offline
+  - /wiki/graphics/2d/using-textureatlases
 ---
  * [TexturePacker](#texturepacker)
    * [Running TexturePacker](#running-texturepacker)
