@@ -18,27 +18,18 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 {: .notice--info}
 
 - JDK: is provided by Android Studio
-
-   Please note that the latest Android Gradle Plugin requires JDK 11, so you might need to update your Android Studio installation if you plan on supporting Android!
-   {: .notice--warning}
 - IDE itself: [Android Studio](https://developer.android.com/studio)
 - Android: is offered out-of-the-box
 - For iOS: [RoboVM OSS IntelliJ plugin](https://mobivm.github.io)
 
 ## (2.) IDEA
-- JDK 11+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
-
-   Since Gradle does <u>not</u> support JDK 19 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 11-18**!
-   {: .notice--warning}
+- JDK 17 or 21: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) (the "Community" edition is sufficient)
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - For iOS: [RoboVM OSS IntelliJ plugin](https://mobivm.github.io)
 
 ## (3.) Eclipse
-- JDK 11+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
-
-   Since Gradle does <u>not</u> support JDK 19 yet, libGDX projects will not work with it either. As a consequence, you are advised to use **JDK 11-18**!
-   {: .notice--warning}
+- JDK 17 or 21: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
 - IDE itself: [Eclipse](https://www.eclipse.org/downloads/)
 - Android: not officially supported, but you may have success with [Andmore](https://projects.eclipse.org/projects/tools.andmore) or tinkering around with an older [ADT](https://marketplace.eclipse.org/content/android-development-tools-eclipse) version
 - For iOS: [RoboVM OSS Eclipse plugin](https://mobivm.github.io)
@@ -54,7 +45,7 @@ Of course you can also use any other IDE for Java, e.g. NetBeans, Visual Studio 
 It is also possible to develop libGDX applications entirely without any IDE, just using a simple editor like Notepad or [Vim](https://www.vim.org). This is **not** recommended, because IDEs provide some very convenient features, such as code completion and error checking. However, if you insist on doing so: libGDX applications are Gradle applications, so they can be built and executed via the commandline.
 {: .notice--info}
 
-- JDK 11+: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
+- JDK 17 or 21: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
 - For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
 - Set the ANDROID_HOME environment variable, or use gradle.properties
 
