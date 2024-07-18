@@ -17,7 +17,7 @@ These are webpages where individuals or companies write about their experience w
 
 ### Complete tutorial series
 - [GameDevelopment.blog – 17 parts](https://www.gamedevelopment.blog/full-libgdx-game-tutorial-flgt-home/) (2017)
-- [Flappy Bird Remake – 12 parts](http://www.kilobolt.com/zombie-bird-tutorial-flappy-bird-remake.html) (2016?)
+- [Flappy Bird Remake – 12 parts](https://web.archive.org/web/20140301152741/http://www.kilobolt.com/zombie-bird-tutorial-flappy-bird-remake.html) (2014)
 - [GameFromScratch.com – 17 parts](https://gamefromscratch.com/libgdx-tutorial-series/) (2014)
 
 ### Video tutorials
