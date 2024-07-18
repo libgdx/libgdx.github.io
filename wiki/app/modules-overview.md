@@ -43,7 +43,7 @@ The Graphics module also provides methods to generate Pixmaps and Textures.
 
 For example, to obtain the OpenGL API 2.0 instance, the following code will be used:
 ```java
-GL20 gl = Gdx.graphics.getGL20 ();
+GL20 gl = Gdx.graphics.getGL20();
 ```
 The method will return an instance that can be used to draw onto the screen. In case the hardware configuration does not support OpenGL ES v2.0, null is returned.
 
@@ -56,10 +56,10 @@ It always returns the specific implementation of the API (lwjgl, jogl or android
 
 The following API versions are supported:
 
-|*GL Version* | *Method to access* |
-|:---------:|:-----------------:|
-|2.0 | `Gdx.graphics.getGL20();`|
-|3.0 |`Gdx.graphics.getGL30();`|
+| *GL Version* |    *Method to access*     |
+|:------------:|:-------------------------:|
+|     2.0      | `Gdx.graphics.getGL20();` |
+|     3.0      | `Gdx.graphics.getGL30();` |
 
 
 To learn more about the Graphics module check its documentation [here](/wiki/graphics/graphics).
@@ -102,7 +102,7 @@ The Networking module includes configurable TCP client and server sockets with s
 There are also methods and utilities for making HTTP requests. One such utility is the Request Builder, which uses method chaining to easily create HTTP Requests.
 
 The Request Builder can be used to create HTTP Requests using the following code snippet:
-```
+```java
 HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
 HttpRequest httpRequest = requestBuilder.newRequest()
    .method(HttpMethods.GET)
@@ -112,7 +112,7 @@ Gdx.net.sendHttpRequest(httpRequest, httpResponseListener);
 ```
 
 It can also be used to create HTTP Requests with arguments using the following code snippet:
-```
+```java
 HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
 HttpRequest httpRequest = requestBuilder.newRequest()
    .method(HttpMethods.GET)
