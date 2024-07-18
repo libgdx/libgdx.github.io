@@ -66,5 +66,4 @@ These are some open-source projects found on the web that use libGDX and can be 
 * [TDGalaxy](https://github.com/TheLogicMaster/Tower-Defense-Galaxy) (modular 3D tower defense game)
 * [bombergame](https://github.com/mcol/bombergame)
 * [martianrun](https://github.com/wmora/martianrun) (2D running game; uses AdMob and Google Play Game Services)
-* [GdxCombat](https://github.com/gamedevpl/GdxCombat) (2D Mortal Kombat-like game)
 * [rpgboss-editor](https://github.com/rpgboss/rpgboss)
