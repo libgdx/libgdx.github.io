@@ -9,9 +9,9 @@ If this is your first time using libGDX, you're at the right place. The followin
 
 {% include setup_flowchart.html current='0' %}
 
-Before you can get started with libGDX, you need to set up an IDE (Integrated Development Environment). It is basically an editor for your java files, which makes developing java applications considerably more convenient in various ways. **If you already have an IDE installed, you can skip to the next [step](/wiki/start/project-generation).**
+Before you can get started with libGDX, you need to set up an IDE (Integrated Development Environment). It is basically an editor for your Java files, which makes developing Java applications considerably more convenient in various ways. **If you already have an IDE installed, you can skip to the next [step](/wiki/start/project-generation).**
 
-The java world offers a lot of different IDEs. All of them will have minor advantages and disadvantages, but in the end they all do their job, so feel free to choose whichever you like most.
+The Java world offers a lot of different IDEs. All of them will have minor advantages and disadvantages, but in the end they all do their job, so feel free to choose whichever you like most.
 
 ## (1.) Android Studio
 For newcomers wanting to not only target desktop, but mobile platforms as well, **we recommend Android Studio**.
