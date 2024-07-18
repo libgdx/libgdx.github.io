@@ -25,7 +25,7 @@ For newcomers wanting to not only target desktop, but mobile platforms as well, 
 ## (2.) IDEA
 - JDK 17 or 21: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
 - IDE itself: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) (the "Community" edition is sufficient)
-- For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
+- For Android: [Android SDK](https://developer.android.com/tools/releases/platform-tools)
 - For iOS: [RoboVM OSS IntelliJ plugin](https://mobivm.github.io)
 
 ## (3.) Eclipse
@@ -46,7 +46,7 @@ It is also possible to develop libGDX applications entirely without any IDE, jus
 {: .notice--info}
 
 - JDK 17 or 21: there are different distributions, but [Adoptium](https://adoptium.net/) should fit your needs
-- For Android: [Android SDK](https://developer.android.com/studio/releases/platform-tools)
+- For Android: [Android SDK](https://developer.android.com/tools/releases/platform-tools)
 - Set the ANDROID_HOME environment variable, or use gradle.properties
 
 <br/>
