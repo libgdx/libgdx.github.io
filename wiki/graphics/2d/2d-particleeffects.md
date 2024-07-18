@@ -156,8 +156,8 @@ batch.end();
 
 
   * [Particle Effect Example on LibGDX.info](https://libgdxinfo.wordpress.com/particleeffect/)
-  * [source](https://bitbucket.org/dermetfan/somelibgdxtests/src/207cfc0a6123b48200d5cf721df222cbe7faf1be/src/net/dermetfan/someLibgdxTests/screens/ParticleEffectsTutorial.java?at=default) of the video
-  * [source](https://bitbucket.org/dermetfan/somelibgdxtests/src/4582a1bf94bded4f30df47b9195d1ae14728b847/src/net/dermetfan/someLibgdxTests/screens/ParticleEffectsTutorial.java?at=default) of the video using [pooling](https://www.youtube.com/watch?v=3OwIiELYa70)
+  * [source](https://hg.sr.ht/~dermetfan/somelibgdxtests/browse/core/src/net/dermetfan/someLibgdxTests/screens/ParticleEffectsTutorial.java) of the video
+  * [source](https://hg.sr.ht/~dermetfan/somelibgdxtests/browse/core/src/net/dermetfan/someLibgdxTests/screens/PoolingTutorial.java) of the video using [pooling](https://www.youtube.com/watch?v=3OwIiELYa70)
 
 <a href="https://www.youtube.com/watch?feature=player_embedded&v=LCLa-rgR_MA
 " target="_blank"><img src="http://img.youtube.com/vi/LCLa-rgR_MA/0.jpg"
