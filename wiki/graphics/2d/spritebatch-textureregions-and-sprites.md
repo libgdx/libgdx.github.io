@@ -1,7 +1,7 @@
 ---
-title: Spritebatch, Textureregions, and Sprites
+title: SpriteBatch, TextureRegions, and Sprites
 ---
-This page gives a brief overview of how images are drawn using OpenGL and how libGDX simplifies and optimizes the task through the `SpriteBatch` class.
+This page gives a brief overview of how images are drawn using OpenGL, and how libGDX simplifies and optimizes the task through the `SpriteBatch` class.
 
 ## Drawing images
 
@@ -20,7 +20,6 @@ Changing textures every few rectangles that are drawn prevents `SpriteBatch` fro
 Using [`SpriteBatch`](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/graphics/g2d/SpriteBatch.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/graphics/g2d/SpriteBatch.java) in an application looks like this:
 
 ```java
-
 public class Game implements ApplicationAdapter {
 	private SpriteBatch batch;
 
@@ -29,7 +28,7 @@ public class Game implements ApplicationAdapter {
 	}
 
 	public void render () {
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT); // This cryptic line clears the screen.
+		ScreenUtils.clear(Color.DARK_GRAY);
 		batch.begin();
 		// Drawing goes here!
 		batch.end();
@@ -37,7 +36,7 @@ public class Game implements ApplicationAdapter {
 }
 ```
 
-All `SpriteBatch` drawing calls must be made between the `begin` and `end` methods. Non-`SpriteBatch` drawing cannot occur between `begin` and `end`.
+All `SpriteBatch` draw calls must be made between the `begin` and `end` methods. Non-`SpriteBatch` drawing cannot occur between `begin` and `end`.
 
 `SpriteBatch` assumes the active texture unit is 0. When using custom shaders and binding textures yourself, you can reset this with the following code:
 
@@ -47,7 +46,7 @@ Gdx.gl.glActiveTexture(GL20.GL_TEXTURE0);
 
 ## Texture
 
-The `Texture` class decodes an image file and loads it into GPU memory. The image file should be placed in the "assets" folder. The image's dimensions should be powers of two (16x16, 64x256, etc) for compatibility and performance reasons.
+The `Texture` class decodes an image file and loads it into GPU memory. The image file should be placed in the "assets" folder. The image's dimensions should be powers of two (16x16, 64x256, etc.) for compatibility and performance reasons.
 
 ```java
 private Texture texture;
@@ -61,14 +60,40 @@ batch.end();
 
 Here a texture is created and passed to a `SpriteBatch` to be drawn. The texture will be drawn in a rectangle positioned at 10,10 with a width and height equal to the size of the texture. `SpriteBatch` has many methods for drawing a texture:
 
-| *Method signature* | *Description* |
-| :------------------ | :-------------: |
-| `draw(Texture texture, float x, float y)` | Draws the texture using the texture's width and height |
-| `draw(Texture texture, float x, float y,`<br/>`int srcX, int srcY, int srcWidth, int srcHeight)` | Draws a portion of the texture. |
-| `draw(Texture texture, float x, float y,`<br/>`float width, float height, int srcX, int srcY,`<br/>`int srcWidth, int srcHeight, boolean flipX, boolean flipY)` | Draws a portion of a texture, stretched to the `width` and `height`, and optionally flipped. |
-| `draw(Texture texture, float x, float y,`<br/>`float originX, float originY, float width, float height,`<br/>`float scaleX, float scaleY, float rotation,`<br/>`int srcX, int srcY, int srcWidth, int srcHeight,`<br/>`boolean flipX, boolean flipY)` | This monster method draws a portion of a texture, stretched to the `width` and `height`, scaled and rotated around an origin, and optionally flipped. |
-| `draw(Texture texture, float x, float y,`<br/>`float width, float height, float u,`<br/>`float v, float u2, float v2)` | This draws a portion of a texture, stretched to the `width` and `height`. This is a somewhat advanced method as it uses texture coordinates from 0-1 rather than pixel coordinates. |
-| `draw(Texture texture, float[] spriteVertices, int offset, int length)` | This is an advanced method for passing in the raw geometry, texture coordinates, and color information. This can be used to draw any quadrilateral, not just rectangles. |
+<table>
+	<thead>
+	<tr>
+		<th style="width: 50%">Method signature</th>
+		<th style="width: 50%">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y)</code></td>
+		<td>Draws the texture using the texture's width and height.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y, int srcX, int srcY, int srcWidth, int srcHeight)</code></td>
+		<td>Draws a portion of the texture.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y, float width, float height, int srcX, int srcY, int srcWidth, int srcHeight, boolean flipX, boolean flipY)</code></td>
+		<td>Draws a portion of a texture, stretched to the <var>width</var> and <var>height</var>, and optionally flipped.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y, float originX, float originY, float width, float height, float scaleX, float scaleY, float rotation, int srcX, int srcY, int srcWidth, int srcHeight, boolean flipX, boolean flipY)</code></td>
+		<td>This monster method draws a portion of a texture, stretched to the <var>width</var> and <var>height</var>, scaled and rotated around an origin, and optionally flipped.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float x, float y, float width, float height, float u, float v, float u2, float v2)</code></td>
+		<td>This draws a portion of a texture, stretched to the <var>width</var> and <var>height</var>. This is a somewhat advanced method as it uses texture coordinates from 0-1 rather than pixel coordinates.</td>
+	</tr>
+	<tr>
+		<td><code>draw (Texture texture, float[] spriteVertices, int offset, int length)</code></td>
+		<td>This is an advanced method for passing in the raw geometry, texture coordinates, and color information. This can be used to draw any quadrilateral, not just rectangles.</td>
+	</tr>
+	</tbody>
+</table>
 
 ## TextureRegion
 
@@ -77,7 +102,7 @@ The [`TextureRegion` class](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/lat
 ```java
 private TextureRegion region;
 ...
-texture = new Texture(Gdx.files.internal("image.png"));
+Texture texture = new Texture(Gdx.files.internal("image.png"));
 region = new TextureRegion(texture, 20, 20, 50, 50);
 ...
 batch.begin();
@@ -89,11 +114,28 @@ Here the `20, 20, 50, 50` describes the portion of the texture, which is then dr
 
 `SpriteBatch` has many methods for drawing a texture region:
 
-| *Method signature* | *Description* |
-| :------------------ | :-------------: |
-| `draw(TextureRegion region, float x, float y)` | Draws the region using the width and height of the region. |
-| `draw(TextureRegion region, float x, float y,`<br/>`float width, float height)` | Draws the region, stretched to the `width` and `height`. |
-| `draw(TextureRegion region, float x, float y,`<br/>`float originX, float originY, float width, float height,`<br/>`float scaleX, float scaleY, float rotation)` | Draws the region, stretched to the `width` and `height`, and scaled and rotated around an origin. |
+<table>
+	<thead>
+	<tr>
+		<th style="width: 50%">Method signature</th>
+		<th style="width: 50%">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><code>draw (TextureRegion region, float x, float y)</code></td>
+		<td>Draws the region using the width and height of the region.</td>
+	</tr>
+	<tr>
+		<td><code>draw (TextureRegion region, float x, float y, float width, float height)</code></td>
+		<td>Draws the region, stretched to the <var>width</var> and <var>height</var>.</td>
+	</tr>
+	<tr>
+		<td><code>draw (TextureRegion region, float x, float y, float originX, float originY, float width, float height, float scaleX, float scaleY, float rotation)</code></td>
+		<td>Draws the region, stretched to the <var>width</var> and <var>height</var>, and scaled and rotated around an origin.</td>
+	</tr>
+	</tbody>
+</table>
 
 ## Sprite
 
@@ -102,7 +144,7 @@ The [`Sprite` class](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com
 ```java
 private Sprite sprite;
 ...
-texture = new Texture(Gdx.files.internal("image.png"));
+Texture texture = new Texture(Gdx.files.internal("image.png"));
 sprite = new Sprite(texture, 20, 20, 50, 50);
 sprite.setPosition(10, 10);
 sprite.setRotation(45);
@@ -114,9 +156,9 @@ batch.end();
 
 Here the `20, 20, 50, 50` describes the portion of the texture, which is rotated 45 degrees and then drawn at 10,10. The same can be achieved by passing the `Texture` or a `TextureRegion` and other parameters to `SpriteBatch`, but `Sprite` makes it convenient to have a single object that describes everything. Also, because `Sprite` stores the geometry and only recomputes it when necessary, it is slightly more efficient if the scale, rotation, or other properties are unchanged between frames.
 
-Note that `Sprite` mixes model information (position, rotation, etc) with view information (the texture being drawn). This makes `Sprite` inappropriate when applying a design pattern that wishes to strictly separate the model from the view. In that case, using `Texture` or `TextureRegion` may make more sense.
+Note that `Sprite` mixes model information (position, rotation, etc.) with view information (the texture being drawn). This makes `Sprite` inappropriate when applying a design pattern that wishes to strictly separate the model from the view. In that case, using `Texture` or `TextureRegion` may make more sense.
 
-Also note that there is no Sprite constructor that is related to the position of the Sprite. calling `Sprite(Texture, int, int, int, int)` does ***not*** edit the position. It is necessary to call `Sprite#setPosition(float,float)` or else the sprite will be drawn at the default position of 0,0.
+Also note that there is no `Sprite` constructor that is related to its position. Calling `Sprite(Texture, int, int, int, int)` does ***not*** edit the position. It is necessary to call `Sprite#setPosition(float, float)` or else the sprite will be drawn at the default position of 0,0.
 
 ## Tinting
 
@@ -151,7 +193,7 @@ Blending is enabled by default. This means that when a texture is drawn, translu
 When blending is disabled, anything already on the screen at that location is replaced by the texture. This is more efficient, so blending should always be disabled unless it is needed. E.g., when drawing a large background image over the whole screen, a performance boost can be gained by first disabling blending:
 
 ```java
-Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT); // This cryptic line clears the screen.
+ScreenUtils.clear(Color.DARK_GRAY);
 batch.begin();
 batch.disableBlending();
 backgroundSprite.draw(batch);
@@ -164,15 +206,16 @@ _Note: Be sure to clear the screen each frame. If this is not done, a texture wi
 
 ## Viewport
 
-`SpriteBatch` manages its own projection and transformation matrixes. When a `SpriteBatch` is created, it uses the current application size to setup an orthographic projection using a y-up coordinate system. When `begin` is called, it sets up the [viewport](/wiki/graphics/viewports).
-
+`SpriteBatch` manages its own projection and transformation matrices. When a `SpriteBatch` is created, it uses the current application size to set up an orthographic projection using a y-up coordinate system. When `begin` is called, it sets up the [viewport](/wiki/graphics/viewports).
 
 ## Performance tuning
 
-`SpriteBatch` has a constructor that sets the maximum number of sprites that can be buffered before sending to the GPU. If this is too low, it will cause extra calls to the GPU. If this is too high, the `SpriteBatch` will be using more memory than is necessary.
+`SpriteBatch` has a constructor that sets the maximum number of sprites that can be buffered before sending to the GPU. If this is too low, it will cause extra calls to the GPU. If this is too high, the `SpriteBatch` will be using more memory than is necessary. The default is 1000 and the maximum is 8191.
 
 `SpriteBatch` has a public int field named `maxSpritesInBatch`. This indicates the highest number of sprites that were sent to the GPU at once over the lifetime of the `SpriteBatch`. Setting a very large `SpriteBatch` size and then checking this field can help determine the optimum `SpriteBatch` size. It should be sized equal to or slightly more than `maxSpritesInBatch`. This field may be set to zero to reset it at any time.
 
 `SpriteBatch` has a public int field named `renderCalls`. After `end` is called, this field indicates how many times a batch of geometry was sent to the GPU between the last calls to `begin` and `end`. This occurs when a different texture must be bound, or when the `SpriteBatch` has cached enough sprites to be full. If the `SpriteBatch` is sized appropriately and `renderCalls` is large (more than maybe 15-20), it indicates that many texture binds are occurring.
 
 `SpriteBatch` has an additional constructor that takes a size and a number of buffers. This is an advanced feature that causes vertex buffer objects (VBOs) to be used rather than the usual vertex arrays (VAs). A list of buffers is kept, and each render call uses the next buffer in the list (wrapping around). When `maxSpritesInBatch` is low and `renderCalls` is large, this may provide a small performance boost.
+
+For more on this topic, see [Profiling](/wiki/graphics/profiling).
