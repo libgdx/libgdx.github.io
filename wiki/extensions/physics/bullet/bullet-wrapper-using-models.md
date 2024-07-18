@@ -60,7 +60,7 @@ To understand why this is, consider a simple box model. The physics shape of a b
 
 There are several more issues, e.g. a model typically contains more detail than would be needed for the physics. In fact, for some shapes it is possible to use a much cheaper collision detection algorithm than using the model's vertices. For example, in case of the box shape, it would be possible to use a single detection against a box, instead of a detection against the 12 triangles it is made of.
 
-There are several ways to work around these problems, ranging from approximating a model using primitive shapes to using a dedicated model or sharing vertices between visual model and physics shape. The [Bullet manual](https://github.com/erwincoumans/bullet2/blob/master/Bullet_User_Manual.pdf?raw=true)
+There are several ways to work around these problems, ranging from approximating a model using primitive shapes to using a dedicated model or sharing vertices between visual model and physics shape. The [Bullet manual](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf?raw=true)
 provides a decision chart to help you decide which method you should choose:
 ![images/bullet_shape_decision.png](/assets/wiki/images/bullet_shape_decision.png)
 
