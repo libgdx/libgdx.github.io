@@ -102,7 +102,7 @@ The Networking module includes configurable TCP client and server sockets with s
 There are also methods and utilities for making HTTP requests. One such utility is the Request Builder, which uses method chaining to easily create HTTP Requests.
 
 The Request Builder can be used to create HTTP Requests using the following code snippet:
-```
+```java
 HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
 HttpRequest httpRequest = requestBuilder.newRequest()
    .method(HttpMethods.GET)
@@ -112,7 +112,7 @@ Gdx.net.sendHttpRequest(httpRequest, httpResponseListener);
 ```
 
 It can also be used to create HTTP Requests with arguments using the following code snippet:
-```
+```java
 HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
 HttpRequest httpRequest = requestBuilder.newRequest()
    .method(HttpMethods.GET)
