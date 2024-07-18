@@ -53,7 +53,6 @@
   * [Artificial Intelligence](/wiki/extensions/artificial-intelligence)
   * [Gdx freetype](/wiki/extensions/gdx-freetype)
   * [gdx pay](/wiki/extensions/gdx-pay)
-  * [Third Party Extension Support](/wiki/extensions/third-party-extension-support)
 </div>
 </details>
 
