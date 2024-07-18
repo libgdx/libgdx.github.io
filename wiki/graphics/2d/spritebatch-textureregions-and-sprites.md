@@ -28,7 +28,7 @@ public class Game implements ApplicationAdapter {
 	}
 
 	public void render () {
-    	ScreenUtils.clear(Color.DARK_GRAY);
+		ScreenUtils.clear(Color.DARK_GRAY);
 		batch.begin();
 		// Drawing goes here!
 		batch.end();
