@@ -10,7 +10,7 @@ In addition, you need a custom libGDX backend with bindings for the device in qu
 
 ## Successful Examples
 There are a couple of games, which have successfully done this in the past:
-- [Orangepixel's games](https://www.orangepixel.net/category/games/), which are transpiled to C#<sup><a href="https://cdn.discordapp.com/attachments/348229413785305089/1154868391887245332/image.png">[1]</a></sup>
+- [Orangepixel's games](https://www.orangepixel.net/category/games/), which are transpiled to C#<sup><a href="https://web.archive.org/web/20231211232755/https://cdn.discordapp.com/attachments/348229413785305089/1154868391887245332/image.png">[1]</a></sup>
 - [Pathway](https://store.steampowered.com/app/546430/Pathway/), which uses a custom fork of RoboVM and a SDL backend<sup><a href="https://www.reddit.com/r/NintendoSwitch/comments/npx21u/comment/h07ls1u/">[2]</a></sup>
 - [Slay the Spire](https://store.steampowered.com/app/646570/Slay_the_Spire/), which was ported by [Sickhead Games](https://www.sickhead.com/) first to C# and then to C++<sup><a href="https://pbs.twimg.com/media/ETkH_QvXkAAD2N7?format=png">[3]</a></sup>
 
