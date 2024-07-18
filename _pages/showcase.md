@@ -154,7 +154,7 @@ Mirage Realms is an ambitious solo project to produce a free to play MMORPG for 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
 ## [PokeMMO](https://pokemmo.eu/)
-<img align="right" src="https://pokemmo.eu/build/images/screenshot/c.f3968293.png" style="margin-left: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 215px" class="lazyload">
+<img align="right" src="https://web.archive.org/web/20231101175437/https://pokemmo.com/build/images/screenshot/c.f3968293.png" style="margin-left: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 215px" class="lazyload">
 
 PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to a new era of online monster battles! [[Android](https://pokemmo.eu/downloads/android/) / [Desktop](https://pokemmo.eu/downloads/)]
 
