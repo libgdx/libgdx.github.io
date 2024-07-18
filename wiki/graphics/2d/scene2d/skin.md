@@ -171,7 +171,7 @@ Note that order is important. A resource must be declared in the JSON above wher
 
 Skin files from the [libGDX tests](https://github.com/libgdx/libgdx/tree/master/tests/gdx-tests-android/assets/data) can be used as a starting point: uiskin.png, uiskin.atlas, uiskin.json, and default.fnt.
 
-Loading and configuring a freetype font via the skin json file requires some additional steps. Either use [Scene Composer](https://github.com/raeleus/skin-composer/wiki/Creating-FreeType-Fonts#using-a-custom-serializer) or a library like [freetype-skin](https://github.com/acanthite/freetype-skin).
+Loading and configuring a freetype font via the skin json file requires some additional steps. [Scene Composer](https://github.com/raeleus/skin-composer/wiki/Creating-FreeType-Fonts#using-a-custom-serializer) can help.
 
 ### Color
 
