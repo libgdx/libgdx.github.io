@@ -3,7 +3,7 @@ title: Tile maps
 ---
 # Maps
 
-libGDX features a generic maps API. All map related classes can be found in the [com.badlogic.gdx.maps](https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/maps/package-use.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps) package. The root package contains the base classes, sub-packages contain specialized implementations for tile maps and other forms of maps.
+libGDX features a generic maps API. All map related classes can be found in the [com.badlogic.gdx.maps](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/maps/package-use.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/maps) package. The root package contains the base classes, sub-packages contain specialized implementations for tile maps and other forms of maps.
 
 ## Base Classes
 The set of base classes is meant to be generic so we can support not only tiled maps, but any 2D map format.
