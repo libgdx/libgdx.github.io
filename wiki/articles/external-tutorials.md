@@ -17,7 +17,7 @@ These are webpages where individuals or companies write about their experience w
 
 ### Complete tutorial series
 - [GameDevelopment.blog – 17 parts](https://www.gamedevelopment.blog/full-libgdx-game-tutorial-flgt-home/) (2017)
-- [Flappy Bird Remake – 12 parts](http://www.kilobolt.com/zombie-bird-tutorial-flappy-bird-remake.html) (2016?)
+- [Flappy Bird Remake – 12 parts](https://web.archive.org/web/20140301152741/http://www.kilobolt.com/zombie-bird-tutorial-flappy-bird-remake.html) (2014)
 - [GameFromScratch.com – 17 parts](https://gamefromscratch.com/libgdx-tutorial-series/) (2014)
 
 ### Video tutorials
@@ -32,7 +32,7 @@ These are webpages where individuals or companies write about their experience w
 
 ### Lighting
  * [Normal Mapping](https://web.archive.org/web/20200508234246/http://www.java-gaming.org/topics/glsl-using-normal-maps-to-illuminate-a-2d-texture-libgdx/27516/view.html)
- * [Shadow Mapping](https://www.microbasic.net/tutorials/shadow-mapping/Full.html)
+ * [Shadow Mapping](https://web.archive.org/web/20200429061153/https://www.microbasic.net/tutorials/shadow-mapping/Full.html)
 
 ### UI with Scene2D
 * [From the Ground Up Series by raeleus](https://github.com/raeleus/skin-composer/wiki/From-the-Ground-Up:-Scene2D.UI-Tutorials) (recommended!)
@@ -66,5 +66,4 @@ These are some open-source projects found on the web that use libGDX and can be 
 * [TDGalaxy](https://github.com/TheLogicMaster/Tower-Defense-Galaxy) (modular 3D tower defense game)
 * [bombergame](https://github.com/mcol/bombergame)
 * [martianrun](https://github.com/wmora/martianrun) (2D running game; uses AdMob and Google Play Game Services)
-* [GdxCombat](https://github.com/gamedevpl/GdxCombat) (2D Mortal Kombat-like game)
 * [rpgboss-editor](https://github.com/rpgboss/rpgboss)

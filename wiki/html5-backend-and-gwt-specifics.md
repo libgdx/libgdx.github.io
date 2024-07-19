@@ -180,6 +180,6 @@ The implementation the official HTML5 backend uses has some other restrictions, 
 
 [How to speed up GWT compilation](https://www.gamefromscratch.com/post/2013/10/07/Speeding-up-GWT-compilation-speeds-in-a-LibGDX-project.aspx)
 
-[Building libGDX from source and adding new files to gdx.gwt.xml](/wiki/misc/local-libgdx-package-use-with-gwt)
+[Contributing to libGDX and adding new files to gdx.gwt.xml](/dev/contributing/#considerations-for-gwt-compatibility)
 
 [HTML5 - GWT Explained on YouTube](https://www.youtube.com/watch?v=I_85usDvJvQ)

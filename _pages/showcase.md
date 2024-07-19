@@ -121,7 +121,7 @@ DIG DEEP and uncover the hidden story behind Deep Town and along the way discove
 ## [Let's Farm](https://www.facebook.com/letsfarmofficial) by Playday Games
 <img align="left" src="https://play-lh.googleusercontent.com/DPuKJ0C_FNTALF-m_0SL7eAdpbTOr-ETipzg2a8YFXY_kFjXv2ukgzkjF93U2eOfSdc=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
 
-Let's Farm is one of the most popular farming games on mobile! Grow your own crops, cook delicious food, feed lovely pets and trade with farmers from all over the world! [[Android](https://play.google.com/store/apps/details?id=letsfarm.com.playday) / [iOS](https://apps.apple.com/us/app/lets-farm/id911657164)]
+Let's Farm is one of the most popular farming games on mobile! Grow your own crops, cook delicious food, feed lovely pets and trade with farmers from all over the world! [[Android](https://www.amazon.com/Playday-Games-Limited-Lets-Farm/dp/B00FFAEBAU) / [iOS](https://apps.apple.com/us/app/lets-farm/id911657164)]
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
@@ -146,7 +146,7 @@ Tap Wizard is an Idle Action-RPG like no other! Equip your Wizard with a loadout
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
-## [Mirage Realms](https://www.miragerealms.co.uk/devblog/) by Liam Stewart
+## [Mirage Realms](https://www.miragerealms.co.uk/) by Liam Stewart
 <img align="left" src="https://lh3.googleusercontent.com/dE5E2CzrSoT_NLCgMGiG7oN_0XSuqUT3QPRCgT9_d0QzTXN4_Pa_FCAweFhNiyQoLYQ=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 240px" class="lazyload">
 
 Mirage Realms is an ambitious solo project to produce a free to play MMORPG for different platforms. [[Android](https://play.google.com/store/apps/details?id=com.foxcake.mirage.android) / [Desktop](https://www.miragerealms.co.uk/devblog/play/)]
@@ -154,7 +154,7 @@ Mirage Realms is an ambitious solo project to produce a free to play MMORPG for 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
 ## [PokeMMO](https://pokemmo.eu/)
-<img align="right" src="https://pokemmo.eu/build/images/screenshot/c.f3968293.png" style="margin-left: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 215px" class="lazyload">
+<img align="right" src="https://web.archive.org/web/20231101175437/https://pokemmo.com/build/images/screenshot/c.f3968293.png" style="margin-left: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 215px" class="lazyload">
 
 PokeMMO, a fan-made, free-to-play MMORPG based on the Pokémon games. Welcome to a new era of online monster battles! [[Android](https://pokemmo.eu/downloads/android/) / [Desktop](https://pokemmo.eu/downloads/)]
 
