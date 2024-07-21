@@ -108,8 +108,8 @@ In the above example, each variable will be `true` under the following circumsta
 
 |OS|`vibration`|`amplitude`|
 |--|-----------|-----------|
-|Android|The device supports vibration. This does not mean the app has permission to vibrate!|The device supports amplitude control vibration.|
-|iOS|`useHaptics` is `true` and the device has a phone form factor. This includes the iPod touch, which lacks a vibration motor.|`useHaptics` is `true` and the device supports vibration beyond the 400ms fallback.|
+|**Android**|The device supports vibration. This does not mean the app has permission to vibrate!|The device supports amplitude control vibration.|
+|**iOS**|`useHaptics` is `true` and the device has a phone form factor. This includes the iPod touch, which lacks a vibration motor.|`useHaptics` is `true` and the device supports vibration beyond the 400ms fallback.|
 
 Especially on Android, this can be useful for scenarios such as only displaying vibration settings to devices that support vibration, and providing your own fallbacks to less advanced vibration:
 
