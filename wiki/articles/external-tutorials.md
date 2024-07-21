@@ -29,16 +29,15 @@ These are webpages where individuals or companies write about their experience w
 ## Topic-specific tutorials
 
 ### 3D Graphics
-
-- [Video series by JamesTKhan](https://www.youtube.com/playlist?list=PLjUR2MkQ0cuHZ70Ps8F9WMyoyKHKAbYvQ), covering [gdx-gltf](https://github.com/mgsx-dev/gdx-gltf), player/camera movement, and terrain
-  - [Accompanying GitHub repository](https://github.com/JamesTKhan/gdx-gltf-starter/commits/video_7_terrain_collision/) 
+* [Video series by JamesTKhan](https://www.youtube.com/playlist?list=PLjUR2MkQ0cuHZ70Ps8F9WMyoyKHKAbYvQ), covering [gdx-gltf](https://github.com/mgsx-dev/gdx-gltf), player/camera movement, and terrain
+  * [Accompanying GitHub repository](https://github.com/JamesTKhan/gdx-gltf-starter/commits/video_7_terrain_collision/) 
 
 ### AdMob integration for libGDX Android projects
 * [norakomi.com](https://web.archive.org/web/20200807000743/http://norakomi.com/tutorial_admob_introduction.php)
 
 ### Lighting
- * [Normal Mapping](https://web.archive.org/web/20200508234246/http://www.java-gaming.org/topics/glsl-using-normal-maps-to-illuminate-a-2d-texture-libgdx/27516/view.html)
- * [Shadow Mapping](https://web.archive.org/web/20200429061153/https://www.microbasic.net/tutorials/shadow-mapping/Full.html)
+* [Normal Mapping](https://web.archive.org/web/20200508234246/http://www.java-gaming.org/topics/glsl-using-normal-maps-to-illuminate-a-2d-texture-libgdx/27516/view.html)
+* [Shadow Mapping](https://web.archive.org/web/20200429061153/https://www.microbasic.net/tutorials/shadow-mapping/Full.html)
 
 ### UI with Scene2D
 * [From the Ground Up Series by raeleus](https://github.com/raeleus/skin-composer/wiki/From-the-Ground-Up:-Scene2D.UI-Tutorials) (recommended!)
