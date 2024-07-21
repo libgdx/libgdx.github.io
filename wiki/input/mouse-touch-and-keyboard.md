@@ -2,6 +2,7 @@
 title: Mouse, Touch and Keyboard
 redirect_from:
   - /wiki/mouse,-touch-&-keyboard
+  - /wiki/input/on-screen-keyboard
 ---
 The main input devices libGDX supports are the mouse on the desktop/browser, touch screens on Android and keyboards. Let's review how libGDX abstracts those.
 
