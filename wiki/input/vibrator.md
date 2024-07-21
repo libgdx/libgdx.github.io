@@ -1,7 +1,7 @@
 ---
 title: Vibrator
 ---
-While not strictly an input device, it nevertheless is a kind of a peripheral. We felt it belonged in the input model.
+While not strictly an input device, it nevertheless is a kind of peripheral. We felt it belonged in the input model.
 
 The vibrator allows you to vibrate the user's mobile device. This can be used to provide feedback to the user in addition to or instead of sound effects.
 
@@ -39,7 +39,7 @@ This only works in Chromium-based browsers on Android devices that are not in si
 
 ## Vibration
 
-### Simple vibration
+### Simple
 
 The simplest form of vibration runs the motor for a period of time given in milliseconds.
 
@@ -67,9 +67,9 @@ Gdx.input.vibrate(1000, 127, false);
 Gdx.input.vibrate(1000, 255, true);
 ```
 
-If the `fallback` boolean is `true`, devices without amplitude control will ignore the amplitude argument.
+If the `fallback` boolean is `true`, Android devices without amplitude control will ignore the amplitude argument, and iPhones without iOS 13 or newer will ignore all arguments.
 
-### Preset vibrations
+### Preset
 
 libGDX provides three preset vibration intensities:
 
@@ -81,7 +81,7 @@ Gdx.input.vibrate(Input.VibrationType.HEAVY);
 
 These are delegated to the system, and as such should provide a consistent experience with other apps the user may have. This also means they will not work on all devices.
 
-This method requires Android 10 and a device with amplitude control, or iOS 13 with Haptic Feedback. On budget or older devices, it will do nothing.
+This method requires at least Android 10 and a device with amplitude control, or iOS 13 with Haptic Feedback. On budget or older devices, it will do nothing.
 
 ### Pattern
 
