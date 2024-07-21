@@ -82,5 +82,3 @@ The `GestureListener` can signal whether it consumed the event or wants it to be
 As with the events reported to a normal `InputProcessor`, the respective methods will be called right before the call to `ApplicationListener.render()` on the rendering thread.
 
 The `GestureDetector` also has a second constructor that allows it to specify various parameters for gesture detection. Please refer to the [Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/input/GestureDetector.html#GestureDetector(float,%20float,%20float,%20float,%20com.badlogic.gdx.input.GestureDetector.GestureListener)) for more information.
-
-[Prev](/wiki/input/controllers) | [Next](/wiki/input/simple-text-input)

@@ -164,5 +164,3 @@ Then, in your Input processor:
 	    return true;
     }
 ```
-
-[Prev](/wiki/input/polling) | [Next](/wiki/input/controllers)

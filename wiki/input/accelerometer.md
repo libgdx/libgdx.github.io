@@ -59,5 +59,3 @@ Matrix4 matrix = new Matrix4();
 Gdx.input.getRotationMatrix(matrix.val);
 // use the matrix, Luke
 ```
-
-[Prev](/wiki/input/simple-text-input) | [Next](/wiki/input/compass)
