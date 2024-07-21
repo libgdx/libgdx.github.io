@@ -133,7 +133,7 @@ When designing your game, you may wish to consider which devices are likely to s
 
 Vibration can cause some users discomfort, so you should always allow them to disable it. This would typically be done from your game's settings or main menu.
 
-Some apps have been known to vibrate depending on whether the user's device is in silent mode (on Android, using `AudioManager#getRingerMode`) but this is not an ideal approach.
+Some apps disable vibration when the user's device is in silent mode (on Android, using `AudioManager#getRingerMode`) but this is not an ideal approach as the user may want their device to vibrate for notifications but not for your game and vice-versa.
 
 
 [Prev](/wiki/input/compass) | [Next](/wiki/input/cursor-visibility-and-catching)
