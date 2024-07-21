@@ -27,6 +27,12 @@ These are webpages where individuals or companies write about their experience w
 - [By dermetfan – 25 parts](https://www.youtube.com/playlist?list=PLXY8okVWvwZ0JOwHiH1TntAdq-UDPnC2L) (2013)
 
 # Topic-specific tutorials
+
+### 3D Graphics
+
+- [Video series by JamesTKhan](https://www.youtube.com/playlist?list=PLjUR2MkQ0cuHZ70Ps8F9WMyoyKHKAbYvQ), covering [gdx-gltf](https://github.com/mgsx-dev/gdx-gltf), player/camera movement, and terrain
+  - [Accompanying GitHub repository](https://github.com/JamesTKhan/gdx-gltf-starter/commits/video_7_terrain_collision/) 
+
 ### AdMob integration for libGDX Android projects
 * [norakomi.com](https://web.archive.org/web/20200807000743/http://norakomi.com/tutorial_admob_introduction.php)
 
