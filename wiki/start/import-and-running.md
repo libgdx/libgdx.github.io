@@ -131,7 +131,7 @@ All the targets can be run and deployed to via the command line interface.
 
 **Desktop:**
 ```
-./gradlew desktop:run
+./gradlew lwjgl3:run
 ```
 
 **Android:**
