@@ -24,7 +24,7 @@ If you have just generated the project in gdx-liftoff, you may click the option 
 
    In **IntelliJ IDEA/Android Studio**, the `Reimport all Gradle projects` button is a pair of circling arrows at the top left in the Gradle tool window, which can be opened with `View -> Tool Windows -> Gradle`.
 
-   In **Eclipse** right click on your project `Gradle -> Refresh Gradle Project`.
+   In **Eclipse** right-click on your project `Gradle -> Refresh Gradle Project`.
 
 <br/>
 
@@ -34,47 +34,47 @@ If you want to execute your freshly imported project, you have to follow differe
 ### In IDEA/Android Studio:
 1. Extend the Gradle tab on the right sight of your window: <br/>
   ![](/assets/images/dev/idea/3.png)
-2. Expand the tasks of your project and then select: desktop -> other -> run.
+2. Expand the tasks of your project and then select: lwjgl3 -> other -> run.
 
    **In Android Studio 4.2**, tasks are no longer shown by default. Go to `Settings -> Experimental` and uncheck `Do not build Gradle task list during Gradle sync`. Then sync the project via `File -> Sync Project with Gradle Files`
    {: .notice--primary}
 
 <b>Alternatively</b>, you can create a run configuration:
-1. Right click your DesktopLauncher class
-2. Select 'Run DesktopLauncher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
+1. Right-click your Lwjgl3Launcher class
+2. Select 'Run Lwjgl3Launcher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
 3. Open up Run Configurations <br/>
   ![](/assets/images/dev/idea/0.png)
-4. Edit the Run Configuration that was just created by running the desktop project and set the working directory to point to your `assets` folder <br/>
+4. Edit the Run Configuration that was just created by running the lwjgl3 project and set the working directory to point to your `assets` folder <br/>
   ![](/assets/images/dev/idea/1.png)
 
-    On **macOS**, LWJGL3 projects require one extra step: Either add the ([experimental](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw-awt-macos)) `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your desktop project, or, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
+    On **macOS**, LWJGL3 projects require one extra step: Either add the ([experimental](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw-awt-macos)) `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your lwjgl3 project, or, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
     {: .notice--warning}
 5. Run your application using the run button
 
 ### In Eclipse:
-1. Right click your desktop project -> Run as -> Run Configurations...
+1. Right-click your lwjgl3 project -> Run as -> Run Configurations...
 2. On the right side, select Java Application: <br/>
   ![](/assets/images/dev/eclipse/3.png)
 3. At the top left, click the icon to create a new run configuration:
   ![](/assets/images/dev/eclipse/0.png)
-4. As Main class select your `DesktopLauncher` class
+4. As Main class select your `Lwjgl3Launcher` class
 5. After that, click on the Arguments tab
 6. At the bottom, under 'Working directory' select 'Other' -> Workspace...
   ![](/assets/images/dev/eclipse/1.png)
 
-    On **macOS**, LWJGL3 projects require one extra step: Either add the ([experimental](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw-awt-macos)) `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your desktop project, or, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
+    On **macOS**, LWJGL3 projects require one extra step: Either add the ([experimental](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw-awt-macos)) `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your lwjgl3 project, or, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
     {: .notice--warning}
 7. Then select your asset folder located in `assets`
 
 ### In NetBeans:
-Right click the desktop project -> Run
+Right-click the lwjgl3 project -> Run
 
 <br/>
 
 ## Android
-- **IDEA/Android Studio:** Right click AndroidLauncher -> Run AndroidLauncher
-- **Eclipse:** Right click Android project -> Run As -> AndroidApplication
-- **NetBeans:** Right click Android project -> Run As -> AndroidApplication
+- **IDEA/Android Studio:** Right-click AndroidLauncher -> Run AndroidLauncher
+- **Eclipse:** Right-click Android project -> Run As -> AndroidApplication
+- **NetBeans:** Right-click Android project -> Run As -> AndroidApplication
 
 <br/>
 
@@ -83,7 +83,7 @@ Right click the desktop project -> Run
 1. Open Run/Debug Configurations
 2. Create a new run configuration for a RoboVM iOS application
 
-![](/assets/images/dev/idea/2.png)
+    ![](/assets/images/dev/idea/2.png)
 
 3. Select the provisioning profile and simulator/device target
 
@@ -94,7 +94,7 @@ Right click the desktop project -> Run
 For more information on using and configuring the RoboVM IntelliJ IDEA plugin please see the [documentation](https://mobivm.github.io).
 
 ### In Eclipse
-- Right click the iOS RoboVM project > Run As > RoboVM runner of your choice
+- Right-click the iOS RoboVM project > Run As > RoboVM runner of your choice
 
 ![](/assets/images/dev/eclipse/2.png)
 
@@ -131,7 +131,7 @@ All the targets can be run and deployed to via the command line interface.
 
 **Desktop:**
 ```
-./gradlew desktop:run
+./gradlew lwjgl3:run
 ```
 
 **Android:**
@@ -157,7 +157,7 @@ Then go to [`http://localhost:8080/index.html`](http://localhost:8080/index.html
 If whenever you invoke Gradle, the build or refresh fails to get more information, run the same command again and add the `--debug` parameter to the command, e.g.:
 
 ```
-./gradlew desktop:run --debug
+./gradlew lwjgl3:run --debug
 ```
 
 This will provide you with a stacktrace and give you a better idea of why gradle is failing.
@@ -166,4 +166,4 @@ This will provide you with a stacktrace and give you a better idea of why gradle
 <br/>
 
 # What to do next?
-Now that you're done with the set up, you can get to do some real coding. Take a look at our post [A Simple Game](/wiki/start/a-simple-game) for a step-by-step guide.
+Now that you're done with the set-up, you can get to do some real coding. Take a look at our post [A Simple Game](/wiki/start/a-simple-game) for a step-by-step guide.
