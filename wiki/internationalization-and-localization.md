@@ -27,7 +27,7 @@ game=My Super Cool Game
 newMission={0}, you have a new mission. Reach level {1}.
 coveredPath=You covered {0,number}% of the path
 highScoreTime=High score achieved on {0,date} at {0,time}
-````
+```
 
 To support an additional Locale, your localizers will create an _additional properties file_ that contains the translated values. No changes to your source code are required, because your program references the keys, not the values.
 
@@ -46,11 +46,11 @@ Notice that the key named `game` is missing from the Italian properties file sin
 
 An instance of the `I18NBundle` class manages the named strings for a locale after loading into memory the appropriate properties files.
 Invoke the factory method `createBundle` to get a new instance of the desired bundle:
-````java
+```java
 FileHandle baseFileHandle = Gdx.files.internal("i18n/MyBundle");
 Locale locale = new Locale("fr", "CA", "VAR1");
 I18NBundle myBundle = I18NBundle.createBundle(baseFileHandle, locale);
-````
+```
 
 The path "i18n/MyBundle", in this case, refers to files whose names begin with _MyBundle_ that are located in the _i18n_ folder, more precisely in "assets/i18n". You do not need to create the _MyBundle_ subfolder as well.
 
