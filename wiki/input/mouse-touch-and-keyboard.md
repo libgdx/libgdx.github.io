@@ -116,7 +116,7 @@ public class SimplerTouchTest extends ApplicationAdapter implements InputProcess
 
 	public static void main (String[] args) {
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-    	config.setWindowedMode(1280, 720);
+		config.setWindowedMode(1280, 720);
 		new Lwjgl3Application(new SimplerTouchTest(), config);
 	}
 }
