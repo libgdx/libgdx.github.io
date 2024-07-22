@@ -1,25 +1,24 @@
 ---
 title: Using libGDX with Python
 ---
-Python is a dynamic and strongly typed language that supports many programming paradigms, such as procedural, object oriented, and functional programming.
+Python is a dynamic and strongly typed language that supports many programming paradigms, such as procedural, object-oriented, and functional programming.
 
-Python has been implemented in several different ways; the standard interpreter in C (CPython), in python itself (PyPy), in the .Net Dynamic Language Runtime (C#) (IronPython), and in Java on the Java Virtual Machine (Jython). Jython comes with java interoperability; allowing it to leverage powerful java libraries, such as Libgdx, while keeping the succinctness and readability of Python.
+Python has been implemented in several different ways: the standard interpreter in C (CPython), in Python itself (PyPy), in the .Net Dynamic Language Runtime (C#) (IronPython), and in Java on the Java Virtual Machine (Jython). Jython comes with Java interoperability, allowing it to leverage powerful Java libraries, such as libGDX, while keeping the succinctness and readability of Python.
 
-This article uses the latest Jython beta (Jython 2.7b1 available [here](https://repo1.maven.org/maven2/org/python/jython-installer/2.7-b1/jython-installer-2.7-b1.jar)), this release aims to bring compatibility with CPython 2.7, so we will be programming with Python 2.7 syntax in this article.
+This article uses the Jython 2.7b1, which aims to bring compatibility with CPython 2.7. We will be programming with Python 2.7 syntax in this article. The current and older versions are available [here](https://www.jython.org/download.html).
 
-**Note:** at the time of writting, you can only use Jython with libGDX on the desktop.
+**Note:** At the time of writing, you can only use Jython with libGDX on the desktop.
 
 ## Setup
 
-Jython can be worked on with any text editor, including Vim or Emacs. [PyDev](http://pydev.org/) is an option for eclipse users. Once the environment is setup, create a new Jython project, and all of the libGDX dependencies to the PYTHONPATH. for using the desktop LWJGL backend, this includes `gdx.jar`, `gdx-backend-lwjgl.jar`, `gdx-backend-lwjgl-natives.jar`, `gdx-natives.jar`, and `gdx-sources.jar`.
+Jython can be worked on with any text editor, including Vim or Emacs. [PyDev](http://pydev.org/) is an option for Eclipse users. Once the environment is set up, create a new Jython project and add all the libGDX dependencies to the `PYTHONPATH`. For using the desktop LWJGL3 backend, this includes `gdx.jar`, `gdx-backend-lwjgl3.jar`, `gdx-platform-natives-desktop.jar`, and `gdx-sources.jar`.
 
 ## Coding With Python
 
-The entirety of the [Drop Tutorial](https://libgdx.com/dev/simple_game/) can be contained into a single python file.
-
+The entirety of the [Drop Tutorial](/wiki/start/a-simple-game) can be contained into a single python file.
 
 ```python
-from com.badlogic.gdx.backends.lwjgl import LwjglApplication, LwjglApplicationConfiguration
+from com.badlogic.gdx.backends.lwjgl import Lwjgl3Application, Lwjgl3ApplicationConfiguration
 from com.badlogic.gdx.utils import TimeUtils, Array
 from com.badlogic.gdx.math import MathUtils, Rectangle, Vector3
 from com.badlogic.gdx import ApplicationListener, Gdx, Input
@@ -126,19 +125,14 @@ class PyGdx(ApplicationListener):
 
 def main():
 
-    cfg = LwjglApplicationConfiguration()
-    cfg.title = "PyGdx";
-    cfg.width = 800
-    cfg.height = 480
+    config = Lwjgl3ApplicationConfiguration()
+    config.setTitle("PyGdx")
+    config.setWindowedMode(800, 480)
     
-    LwjglApplication(PyGdx(), cfg)
+    Lwjgl3Application(PyGdx(), config)
         
 if __name__ == '__main__':
     main()
 ```
 
-**note that during asset creation we need to specifiy the `assets/` folder. When not using android, we must specify the folder structure that we use, whereas on android all internal assets are assumed to be in the `assets/` directory.**
-
-## Games written in Python using libGDX
-
-* none (yet! if you have made a game using python in libgdx, please let me know and edit this article!)
+**Note that during asset creation we need to specify the `assets/` folder. When not using Android, we must specify the folder structure that we use, whereas on Android all internal assets are assumed to be in the `assets/` directory.**
