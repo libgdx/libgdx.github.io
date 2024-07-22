@@ -136,3 +136,7 @@ if __name__ == '__main__':
 ```
 
 **Note that during asset creation we need to specify the `assets/` folder. When not using Android, we must specify the folder structure that we use, whereas on Android all internal assets are assumed to be in the `assets/` directory.**
+
+## Games written in Python using libGDX
+
+* [Bubbles: PyGDX Edition](https://github.com/XyperCode/bubbles-pygdx)
