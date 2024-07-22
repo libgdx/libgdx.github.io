@@ -125,11 +125,11 @@ class PyGdx(ApplicationListener):
 
 def main():
 
-    config = Lwjgl3ApplicationConfiguration()
-    config.setTitle("PyGdx")
-    config.setWindowedMode(800, 480)
+    cfg = Lwjgl3ApplicationConfiguration()
+    cfg.setTitle("PyGdx")
+    cfg.setWindowedMode(800, 480)
     
-    Lwjgl3Application(PyGdx(), config)
+    Lwjgl3Application(PyGdx(), cfg)
         
 if __name__ == '__main__':
     main()
