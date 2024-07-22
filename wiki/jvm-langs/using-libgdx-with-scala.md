@@ -26,7 +26,7 @@ In order to support Scala compilation you need to update the build with a couple
     - **optional** Set the src directory for scala files: `sourceSets.main.scala.srcDirs = [ "src/" ]`
 - <root>/android/build.gradle
     - In the `android` section (top of the file) you need to add the following:
-        ```groovy
+        ```gradle
         lintOptions {
             abortOnError false // make sure you're paying attention to the linter output!
         }

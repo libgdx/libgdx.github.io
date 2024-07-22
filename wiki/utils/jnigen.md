@@ -116,7 +116,7 @@ jnigen outputs the Java line numbers in the generated native code, telling us wh
 
 The recommended way to use jnigen is through the gradle plugin, even though it is not requiered.  
 First of all, you need to apply the jnigen plugin:  
-```groovy
+```gradle
 // Add buildscript dependency
 buildscript {
     dependencies {
