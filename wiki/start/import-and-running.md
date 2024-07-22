@@ -157,7 +157,7 @@ Then go to [`http://localhost:8080/index.html`](http://localhost:8080/index.html
 If whenever you invoke Gradle, the build or refresh fails to get more information, run the same command again and add the `--debug` parameter to the command, e.g.:
 
 ```
-./gradlew desktop:run --debug
+./gradlew lwjgl3:run --debug
 ```
 
 This will provide you with a stacktrace and give you a better idea of why gradle is failing.
