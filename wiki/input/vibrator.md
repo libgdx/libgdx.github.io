@@ -35,10 +35,8 @@ native void vibrateJsni(int milliseconds) /*-{
 }-*/;
 ```
 
-<<<<<<< HEAD
 This only works in Chromium-based browsers on Android devices that are not in silent mode. Despite caniuse.com claiming Firefox for Android supports this, support has been disabled since Firefox 79 due to abuse.
 
-<<<<<<< HEAD
 ## Vibration
 
 ### Simple
