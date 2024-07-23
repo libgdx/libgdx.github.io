@@ -13,7 +13,7 @@ libGDX's Gradle based projects make it very easy to switch between libGDX versio
 
 Your Gradle based project makes it very easy to switch between releases and nightly builds. Open up the `gradle.properties` file in the root of your project, and locate the following line:
 
-```groovy
+```gradle
 gdxVersion=1.12.1
 ```
 

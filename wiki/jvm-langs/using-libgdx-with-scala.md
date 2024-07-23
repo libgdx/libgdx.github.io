@@ -26,33 +26,33 @@ In order to support Scala compilation you need to update the build with a couple
     - **optional** Set the src directory for scala files: `sourceSets.main.scala.srcDirs = [ "src/" ]`
 - <root>/android/build.gradle
     - In the `android` section (top of the file) you need to add the following:
-        ```groovy
-        lintOptions {
-            abortOnError false // make sure you're paying attention to the linter output!
-        }
+      ```gradle
+      lintOptions {
+          abortOnError false // make sure you're paying attention to the linter output!
+      }
 
-        // FIXME: How can we apply this simply for all builds? Copy-pasta makes me sad.
-        buildTypes {
-            release {
-                minifyEnabled true
-                proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
-                proguardFile 'proguard-project.txt'
-            }
-            debug {
-                minifyEnabled true
-                proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
-                proguardFile 'proguard-project.txt'
-            }
-        }
-        ```
+      // FIXME: How can we apply this simply for all builds? Copy-pasta makes me sad.
+      buildTypes {
+          release {
+              minifyEnabled true
+              proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+              proguardFile 'proguard-project.txt'
+          }
+          debug {
+              minifyEnabled true
+              proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+              proguardFile 'proguard-project.txt'
+          }
+      }
+      ```
 - <root>/android/proguard-project.txt
     - In order for Proguard to work you need to add the following lines:
 
-        ```
-        -dontwarn sun.misc.*
-        -dontwarn java.lang.management.**
-        -dontwarn java.beans.**
-        ```
+      ```
+      -dontwarn sun.misc.*
+      -dontwarn java.lang.management.**
+      -dontwarn java.beans.**
+      ```
     - It might also be required to then change the line `-dontwarn com.badlogic.gdx.jnigen.BuildTarget*` to `-dontwarn com.badlogic.gdx.jnigen.*`
 
 With all of these changes in-place you should be able to use Gradle exactly as you would otherwise from the shell or your favorite IDE.

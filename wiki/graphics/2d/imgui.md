@@ -53,7 +53,7 @@ IO.fonts.addFontFromFileTTF("extraFonts/ArialUni.ttf", 18f, glyphRanges = IO.fon
 
 # Option 2: [SpaiR's Bindings](https://github.com/SpaiR/imgui-java)
 ### Required Dependencies for the LWJGL 3 Subproject
-```groovy
+```gradle
 api "io.github.spair:imgui-java-binding:<version>"
 api "io.github.spair:imgui-java-lwjgl3:<version>"
 api "io.github.spair:imgui-java-natives-linux:<version>"
