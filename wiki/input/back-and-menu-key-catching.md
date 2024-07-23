@@ -29,5 +29,3 @@ Gdx.input.setCatchKey(Input.Keys.MENU, true);
 ```
 
 There might be other keys to catch as well. You should catch all keys used to control your game to tell the operating system to prevent triggering behaviour outside your apps. This could affect media control keys on Android TV, and some general keys if you target HTML5 as well (see [HTML 5 specifics article](/wiki/html5-backend-and-gwt-specifics#preventing-keys-from-triggering-scrolling-and-other-browser-functions) for more information)
-
-[Prev](/wiki/input/cursor-visibility-and-catching) | [Next](/wiki/input/on-screen-keyboard)

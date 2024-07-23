@@ -120,5 +120,3 @@ If you wish to let your HTML5 game use system cursors libGDX doesn't support, th
 * [CSS `cursor` values](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor#values)
 * [Interfacing with platform specific code](https://libgdx.com/wiki/app/interfacing-with-platform-specific-code)
 * [JSNI](http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsJSNI.html)
-
-[Prev](/wiki/input/vibrator) | [Next](/wiki/input/back-and-menu-key-catching)
