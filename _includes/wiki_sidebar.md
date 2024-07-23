@@ -128,7 +128,6 @@
   * [Gesture detection](/wiki/input/gesture-detection)
   * [Gyroscope](/wiki/input/gyroscope)
   * [Mouse, Touch and Keyboard](/wiki/input/mouse-touch-and-keyboard)
-  * [On screen keyboard](/wiki/input/on-screen-keyboard)
   * [Polling](/wiki/input/polling)
   * [Simple text input](/wiki/input/simple-text-input)
   * [Vibrator](/wiki/input/vibrator)
