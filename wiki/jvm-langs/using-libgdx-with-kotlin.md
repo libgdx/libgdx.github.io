@@ -50,7 +50,7 @@ This step basically includes following the [instructions from the official Kotli
 
 Add the following to your parent project’s `build.gradle`:
 
-```Groovy
+```gradle
 buildscript {
     ext.kotlinVersion = '<version to use>'
 
@@ -72,7 +72,7 @@ In the android sub-project, add `apply plugin: "kotlin-android"` after the `appl
 
 Add Kotlin’s stdlib to your core project's dependencies list:
 
-```Groovy
+```gradle
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 }

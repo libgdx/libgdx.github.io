@@ -74,7 +74,7 @@ task texturePacker {
 }
 ```
 
-In this way, running `./gradlew texturePacker desktop:run` will perform the texture packing before the desktop:run task is started. And if the textures have not changed, then all one has to do is omit the texturePacker argument.
+In this way, running `./gradlew texturePacker lwjgl3:run` will perform the texture packing before the lwjgl3:run task is started. And if the textures have not changed, then all one has to do is omit the texturePacker argument.
 
 
 TexturePacker can also be run from the [standalone nightly](https://libgdx-nightlies.s3.amazonaws.com/libgdx-runnables/runnable-texturepacker.jar):

@@ -86,7 +86,7 @@ Another viable approach for _outside of your development environment_ is to just
 - To use **Swing or AWT** APIs, you'll have to depend on the ([experimental](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw-awt-macos)) gdx-lwjgl3-glfw-awt-macos extension. See [`AwtTestLWJGL`](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests-lwjgl3/src/com/badlogic/gdx/tests/lwjgl3/AwtTestLWJGL.java) in gdx-tests-lwjgl3 for an example.
 - The LWJGL 3 backend does [not yet](https://github.com/libgdx/libgdx/pull/6247) have an equivalent for `LwjglAWTCanvas` and `LwjglAWTFrame`.
 - As the graphical tools in **gdx-tools** require the `LwjglAWTCanvas` class, the library has a hard dependency on LWJGL 2. If you are using one of the non-graphical tools of the gdx-tools project (in particular [TexturePacker](/wiki/tools/texture-packer#from-source)) and the LWJGL 3 backend _in the same (!) project_, you need to modify your gdx-tools dependency like this:
-   ```groovy
+   ```gradle
    compile ("com.badlogicgames.gdx:gdx-tools:$gdxVersion") {
       exclude group: 'com.badlogicgames.gdx', module: 'gdx-backend-lwjgl'
    }
