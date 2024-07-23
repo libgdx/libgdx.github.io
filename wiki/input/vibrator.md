@@ -28,5 +28,3 @@ Gdx.input.vibrate(new long[] { 0, 200, 200, 200}, -1);
 ```
 
 This will turn the vibrator on for 200 milliseconds, then turn it off for 200 milliseconds then on again for another 200 milliseconds. The second parameter specifies that the pattern should not be repeated. Refer to the [Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Input.html#vibrate(int)) for more information.
-
-[Prev](/wiki/input/compass) | [Next](/wiki/input/cursor-visibility-and-catching)

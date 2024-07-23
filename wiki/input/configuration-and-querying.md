@@ -50,5 +50,3 @@ To check whether a specific input device is available on the platform the applic
 Please refer to the [Peripheral](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/Input.java#L560) enumeration to see the rest of the available constants.
 
 Note that only a few Android devices have a hardware keyboard. Even if the keyboard is physically present, the user might not have slid it out. The method shown above will return false in this case.
-
-[Next](/wiki/input/mouse-touch-and-keyboard)

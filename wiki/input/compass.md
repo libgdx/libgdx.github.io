@@ -28,5 +28,3 @@ The angles are given in degrees. Here's the interpretation of these values:
 Here's an illustration of the axis relative to the earth.
 
 ![images/compass.png](/assets/wiki/images/compass.png)
-
-[Prev](/wiki/input/accelerometer) | [Next](/wiki/input/vibrator)
