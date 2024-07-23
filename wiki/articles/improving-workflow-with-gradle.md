@@ -5,11 +5,11 @@ title: Improving workflow with Gradle
 
 * [**Introduction**](#introduction)
 * [**Optimizing Gradle integration in your IDE and on the command line**](#tips-to-speed-up-gradle-if-you-still-want-ide-integration)
- * [**Gradle Daemon**](#gradle-daemon)
- * [**Configuration on Demand**](#configuration-on-demand)
+  * [**Gradle Daemon**](#gradle-daemon)
+  * [**Configuration on Demand**](#configuration-on-demand)
 * [**Removing Gradle integration from your IDE**](#how-to-remove-gradle-ide-integration-from-your-project)
- * [**IntelliJ IDEA**](#creating-your-idea-project)
- * [**Eclipse**](#creating-your-eclipse-project)
+  * [**IntelliJ IDEA**](#creating-your-idea-project)
+  * [**Eclipse**](#creating-your-eclipse-project)
 * [**libGDX without Gradle**](#libgdx-without-gradle)
 * [**Why does libGDX recommend Gradle**](#why-does-libgdx-recommend-gradle)
 
@@ -55,7 +55,7 @@ It also allows you to keep the power of Gradle at your disposal, to handle all y
 ### Creating your IDEA project
 From the command line, run the following command from your project root directory:
 (If on a UNIX based OS, use ./gradlew to invoke gradle)
-```groovy
+```gradle
 gradlew idea
 ```
 
@@ -64,7 +64,7 @@ File > OPEN > Locate the .ipr that the task above generates
 ### Creating your Eclipse Project
 From the command line, run the following command from your project root directory:
 (If on a UNIX based OS, use ./gradlew to invoke gradle)
-```groovy
+```gradle
 gradlew eclipse
 ```
 

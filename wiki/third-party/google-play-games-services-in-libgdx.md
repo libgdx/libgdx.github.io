@@ -31,11 +31,11 @@ Latest tutorial using Android Studio can be found [here](https://chandruscm.word
    * Google Repository
 2. Download the BaseGameUtils sample project [here](https://github.com/playgameservices/android-basic-samples), copy folder `BaseGameUtils`, located in folder `BasicSamples` into your project root folder.
 3. Edit `settings.gradle`
-   ```groovy
+   ```gradle
    include 'desktop', 'android', 'ios', 'html', 'core', "BaseGameUtils"
    ```
 4. Edit root `build.gradle` and add the below as android dependency:
-   ```groovy
+   ```gradle
    compile project(":BaseGameUtils")
    ```
 5. in your `AndroidManifest.xml` file

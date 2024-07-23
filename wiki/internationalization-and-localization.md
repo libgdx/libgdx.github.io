@@ -22,22 +22,22 @@ Each bundle is a set of properties files that share the same base name, `MyBundl
 `MyBundle_en_GB`, for example, matches the Locale specified by the language code for English (`en`) and the country code for Great Britain (`GB`).
 
 You should always create a _default properties file_, without any language code, country code or variant. In our example the contents of `MyBundle.properties` are as follows:
-````
+```properties
 game=My Super Cool Game
 newMission={0}, you have a new mission. Reach level {1}.
 coveredPath=You covered {0,number}% of the path
 highScoreTime=High score achieved on {0,date} at {0,time}
-````
+```
 
 To support an additional Locale, your localizers will create an _additional properties file_ that contains the translated values. No changes to your source code are required, because your program references the keys, not the values.
 
 For example, to add support for the Italian language, your localizers would translate the values in `MyBundle.properties` and place them in a file named `MyBundle_it.properties`. The contents of `MyBundle_it.properties` are as follows:
 
-````
+```properties
 newMission={0}, hai una nuova missione. Raggiungi il livello {1}.
 coveredPath=Hai coperto il {0,number}% del percorso
 highScoreTime=High score ottenuto il {0,date} alle ore {0,time}
-````
+```
 Notice that the key named `game` is missing from the Italian properties file since we want the game's name to remain unchanged regardless of the locale. If a key is not found, the key will be looked up in decreasingly specific properties files until found; for instance, if a key is not found in `MyBundle_en_GB.properties`, it will be looked up in `MyBundle_en.properties`, and if not found there either, in the default `MyBundle.properties`.
 
 
@@ -46,16 +46,16 @@ Notice that the key named `game` is missing from the Italian properties file sin
 
 An instance of the `I18NBundle` class manages the named strings for a locale after loading into memory the appropriate properties files.
 Invoke the factory method `createBundle` to get a new instance of the desired bundle:
-````java
+```java
 FileHandle baseFileHandle = Gdx.files.internal("i18n/MyBundle");
 Locale locale = new Locale("fr", "CA", "VAR1");
 I18NBundle myBundle = I18NBundle.createBundle(baseFileHandle, locale);
-````
+```
 
 The path "i18n/MyBundle", in this case, refers to files whose names begin with _MyBundle_ that are located in the _i18n_ folder, more precisely in "assets/i18n". You do not need to create the _MyBundle_ subfolder as well.
 
 Or, if you're using [`AssetManager`](/wiki/managing-your-assets):
-```
+```java
 assetManager.load("i18n/MyBundle", I18NBundle.class);
 // ... after loading ...
 I18NBundle myBundle = assetManager.get("i18n/MyBundle", I18NBundle.class);
@@ -77,23 +77,23 @@ Note that `createBundle` looks for files based on the default Locale before it s
 ## Fetching Localized Strings
 
 To retrieve a translated value from the bundle, invoke the `get` method as follows:
-````java
+```java
 String value = myBundle.get(key);
-````
+```
 The string returned by the `get` method corresponds to the specified key. The string is in the proper language, provided that a properties file exists for the specified locale. If no string for the given key can be found by the `get` method (or its parametric form `format`) a `MissingResourceException` is thrown.
 
 Translated strings can contain formatting parameters. To substitute values for those, invoke the `format` method as follows:
-````java
+```java
 String value = myBundle.format(key, arg1, arg2, ...);
-````
+```
 
 For example, to retrieve the strings from the properties files above your code might look like this:
-````java
+```java
 String game = myBundle.format("game");
 String mission = myBundle.format("newMission", player.getName(), nextLevel.getName());
 String coveredPath = myBundle.format("coveredPath", path.getPerc());
 String highScoreTime = myBundle.format("highScoreTime", highScore.getDate());
-````
+```
 
 When a string has no arguments, you might think that the methods `get` and `format` are equivalent. This is not entirely true. The `get` method returns the string exactly as it was specified in the properties file, while the `format` method might make replacements for escaping even if no arguments are present. As a result, `get` is slightly faster, but unless you are certain that none of your translations contain any escaping it's best to always use `format`.
 
@@ -116,23 +116,23 @@ Unlike `java.util.Properties`, the default encoding is `UTF-8`. If, for whatever
 Plural forms are supported through the standard `choice` format provided by `MessageFormat`.
 See the [official documentation of the class `java.text.ChoiceFormat`](https://docs.oracle.com/javase/7/docs/api/java/text/ChoiceFormat.html).
 I'm going to show you just an example. Let's consider the following property:
-````
+```properties
 collectedCoins=You collected {0,choice,0#no coins|1#one coin|1<{0,number,integer} coins|100<hundreds of coins} along the path.
-````
+```
 You can retrieve the localized string as usual:
-````java
+```java
 System.out.println(myBundle.format("collectedCoins", 0));
 System.out.println(myBundle.format("collectedCoins", 1));
 System.out.println(myBundle.format("collectedCoins", 32));
 System.out.println(myBundle.format("collectedCoins", 117));
-````
+```
 And the output result would be like the following:
-````
+```
 You collected no coins along the path.
 You collected one coin along the path.
 You collected 32 coins along the path.
 You collected hundreds of coins along the path.
-````
+```
 
 It's worth noting that the choice format can properly handle nested formats as we did with `{0,number,integer}` inside `{0,choice,...}`.
 

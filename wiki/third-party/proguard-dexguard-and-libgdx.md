@@ -54,7 +54,7 @@ Note that you will also have to keep any classes that you access via reflection 
 To apply ProGuard/R8 to your Android project on Release builds, you need to add the following config to `build.gradle` file (the one in the `android/` folder of your project, not the root `build.gradle`)
 
 
-```groovy
+```gradle
 buildTypes {
         release {
             minifyEnabled true
