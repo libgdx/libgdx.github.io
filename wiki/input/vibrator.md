@@ -104,8 +104,6 @@ boolean vibration = Gdx.input.isPeripheralAvailable(Input.Peripheral.Vibrator);
 boolean amplitude = Gdx.input.isPeripheralAvailable(Input.Peripheral.HapticFeedback);
 ```
 
-This will turn the vibrator on for 200 milliseconds, then turn it off for 200 milliseconds then on again for another 200 milliseconds. The second parameter specifies that the pattern should not be repeated. Refer to the [Javadocs](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Input.html#vibrate(int)) for more information.
-=======
 In the above example, each variable will be `true` under the following circumstances:
 
 |OS|`vibration`|`amplitude`|
