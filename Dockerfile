@@ -1,4 +1,4 @@
-FROM ruby:3.1.6
+FROM ruby:3.2.5
 RUN mkdir /srv/jekyll
 WORKDIR /srv/jekyll
 ADD Gemfile /srv/jekyll/Gemfile

@@ -1,7 +1,7 @@
 services:
   jekyll:
     build: .
-    command: jekyll serve --watch --incremental --force_polling --verbose --livereload --host 0.0.0.0
+    command: jekyll serve --watch --incremental --force_polling --livereload --host 0.0.0.0
     ports:
       - 4000:4000
       - 35729:35729
