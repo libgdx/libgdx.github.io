@@ -11,12 +11,12 @@ layout: default_wiki
       {% comment %}{% if page.last_modified_at %}Last edited on {{ page.last_modified_at | date: '%d %B %Y' }} • {% endif %}{% endcomment %}<a href="{{ site.github.repository_url }}/commits/dev/{{ page.path }}">View revision history</a> • <a href="{{ site.github.repository_url }}/edit/dev/{{ page.path }}">Edit on GitHub</a>
     </div>
   </header>
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
     <div class="page__inner-wrap">
       <section class="page__content e-content markdown-body" itemprop="text">
-      
+
           {{ content }}
-      
+
           <aside class="sidebar__right">
             <div class="toc">
               <div class="wiki_toc__menu">

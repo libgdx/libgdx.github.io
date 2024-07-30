@@ -75,9 +75,9 @@ For each new file added to LibGDX, you need to determine whether it is compatibl
 If the new file isn't added to `gdx/src/com/badlogic/gdx.gwt.xml`, an error similar to
 
 ```
-    [ERROR] Errors in 'jar:file:<...>'
-          [ERROR] Line <line num>: No source code is available for type com.badlogic.gdx.graphics.g3d.environment.PointShadowLight; did you forget to inherit a required module?
-    [ERROR] Aborting compile due to errors in some input files
+[ERROR] Errors in 'jar:file:<...>'
+      [ERROR] Line <line num>: No source code is available for type com.badlogic.gdx.graphics.g3d.environment.PointShadowLight; did you forget to inherit a required module?
+[ERROR] Aborting compile due to errors in some input files
 ```
 
 may be seen.

@@ -16,6 +16,7 @@ logo_dark: "/assets/brand/logo_dark.svg"
 masthead_title: " " # disable the written title in the header
 description: "libGDX is a cross-platform Java game development framework based on OpenGL (ES) that works on Windows, Linux, macOS, Android, your browser and iOS."
 github_username: libgdx
+enable_copy_code_button: true
 
 repository: libgdx/libgdx.github.io
 url: https://libgdx.com
@@ -30,7 +31,7 @@ og_image: /assets/images/logo.png # default open graph (= social media) image
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes@4.24.0 # 2021-07-05; when updating this, the theme overrides should be adapted accordingly!
+remote_theme: mmistakes/minimal-mistakes@4.26.2 # 2024-06-15; when updating this, the theme overrides in _includes, _layouts and _sass should be adapted accordingly!
 
 future: false # allow scheduling posts
 
@@ -99,6 +100,3 @@ defaults:
       type: pages
     values:
       layout: wiki
-
-after_footer_scripts:
-  - assets/js/clipboard.js

@@ -1,13 +1,9 @@
 /* overrides: https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes.scss */
 
-/*!
- * Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
- * Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
- * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
-*/
-
-
 /* ORIGINAL THEME STUFF */
+/* Copyright comment */
+@import "minimal-mistakes/copyright";
+
 /* Variables */
 @import "minimal-mistakes/variables";
 
@@ -129,4 +125,88 @@ html, body {
       padding-left: 25px;
     }
   }
+}
+
+.notice {
+    border-radius: 0;
+    margin: 1em 0 !important;  /* override*/
+    padding: 10px;
+    font-size: $type-size-5 !important;
+    font-style: normal;
+
+    border-left: 0.25em solid $light-gray !important;
+}
+
+.notice--primary {
+    border-radius: 0;
+    margin: 1em 0 !important;  /* override*/
+    padding: 10px;
+    font-size: $type-size-5 !important;
+    font-style: normal;
+
+    border-left: 0.25em solid $primary-color !important;
+}
+
+.notice--info {
+    border-radius: 0;
+    margin: 1em 0 !important;  /* override*/
+    padding: 10px;
+    font-size: $type-size-5 !important;
+    font-style: normal;
+
+    background-color: #cfeefc;
+    border-left: 0.25em solid #1f86b5 !important;
+    color: #2b5f76;
+}
+
+.notice--info a {
+    color: #2b5f76;
+}
+
+.notice--warning {
+    border-radius: 0;
+    margin: 1em 0 !important;  /* override*/
+    padding: 10px;
+    font-size: $type-size-5 !important;
+    font-style: normal;
+
+    background-color: rgba(255, 229, 100, .25) !important;
+    border-left: 0.25em solid #e7c000 !important;
+    color: #6b5900;
+}
+
+.notice--warning a {
+    color: #6b5900;
+}
+
+.notice--success {
+    border-radius: 0;
+    margin: 1em 0 !important;  /* override*/
+    padding: 10px;
+    font-size: $type-size-5 !important;
+    font-style: normal;
+
+    background-color: #e2f5ec;
+    border-left: 0.25em solid #42b983 !important;
+    color: #215d42;
+}
+
+.notice--success a {
+    color: #215d42;
+}
+
+.notice--danger {
+    border-radius: 0;
+    margin: 1em 0 !important;  /* override*/
+    padding: 10px;
+    font-size: $type-size-5 !important;
+    font-style: normal;
+
+    background-color: #ffe0e0;
+    border-left: 0.25em solid #c00 !important;
+    color: #600;
+}
+
+.notice--danger a {
+    color: #600;
 }
