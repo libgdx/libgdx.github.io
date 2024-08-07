@@ -48,11 +48,6 @@ There are also a lot of other improvements in the works, which may not be not bi
   <tr>
     <td><h4>gdx-video Resurrection</h4>
     <br>We have some plans drawn up to revive the old <a href="https://github.com/libgdx/gdx-video">gdx-video</a> extension. The first snapshots are now available!</td>
-    <td>{% include status.html is='planned' %}</td>
-  </tr>
-  <tr>
-    <td><h4>GWT 2.10.0</h4>
-    <br>The Web backend of libGDX is currently based on GWT 2.8.2. An update to version 2.9+ would offer support for Java 11 language features, like the 'var' keyword.<sup><a href="https://github.com/tommyettinger/gdx-backends#19120">1</a>, <a href="http://www.gwtproject.org/release-notes.html#Release_Notes_2_9_0">2</a></sup></td>
     <td>{% include status.html is='wip' %}</td>
   </tr>
   <tr>
@@ -65,12 +60,7 @@ There are also a lot of other improvements in the works, which may not be not bi
     <br>Our TiledMap implementation is not as up to date as we would like it to be. Therefore, we are considering to move it to its own repo to separate its release cycle from libGDX's and to assess its compatibility with other map editors than <a href="https://www.mapeditor.org">Tiled</a>.<sup><a href="https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Atilemap+">1</a>, <a href="https://github.com/libgdx/libgdx/pulls?q=is%3Apr+is%3Aopen+label%3Atilemap">2</a>, <a href="https://github.com/lyze237/gdx-TiledMap">3</a></sup></td>
     <td>{% include status.html is='planned' %}</td>
   </tr>
-  <tr>
-    <td><h4>Particle Editor Replacement</h4>
-    <br>The current particle editor depends on Swing and fails on M1 Macs. A completely overhauled particle editor created solely with libGDX will address this issue. The main goal is to modernize the app while maintaining full compatibility with libGDX particles.<sup><a href="https://github.com/raeleus/Particle-Park-Pro#particle-park-pro">1</a></sup></td>
-    <td>{% include status.html is='wip' %}</td>
-  </tr>
 </table>
 
 <br/>
-Last updated: June 2023
+Last updated: August 2024
