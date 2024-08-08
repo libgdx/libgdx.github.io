@@ -1,7 +1,7 @@
 ---
 title: Ninepatches
 ---
-This article introduce NinePatch images, how they can be created and how they
+This article introduces NinePatch images, how they can be created and how they
 are used in a libGDX context.
 
 ## Before you start
