@@ -1,21 +1,21 @@
 ---
 title: Saved game serialization
 ---
+For saving simpel data types, libGDX offers [Preferences](/wiki/preferences). However, if you want to save custom objects, in particular your whole game state – usually to save it to disk so it can be restored later – you need to serialize it first. There are a couple of different ways for doing this.
+
 # JSON serialization
 
-The [JSON](/wiki/utils/reading-and-writing-json) class can automatically convert Java objects to and from JSON.
+libGDX's [JSON](/wiki/utils/reading-and-writing-json) classes can automatically convert Java objects to and from JSON. Check out the corresponding wiki article to find out more.
 
 # Binary serialization
 
-[Kryo](https://github.com/EsotericSoftware/kryo) can be used to automatically and [efficiently](https://github.com/eishay/jvm-serializers/wiki) serialize game state.
+Another option for [efficiently](https://github.com/eishay/jvm-serializers/wiki) serializing Java objects is the [Kryo](https://github.com/EsotericSoftware/kryo) library. Kryo can handle most POJOs and other classes, but some classes need special handling. Below are a few custom serializers for libGDX classes.
 
-## libGDX Kryo Serializers
-
-Kryo can handle most POJOs and other classes, but some classes need special handling. Below are a few serializers for libGDX classes.
-
-Note that classes like Texture should not be serialized in most cases. It would be better to have a String instead of a Texture object in your object graph. After serializing you would process the objects and look up the texture using the string path.
+Note that classes like `Texture` should not be serialized in most cases. It would be better to have a String instead of a Texture object in your object graph. After serializing you would process the objects and look up the texture using the string path.
+{: .notice--warning}
 
 ```java
+// Register a custom Array serializer
 kryo.register(Array.class, new Serializer<Array>() {
 	{
 		setAcceptsNull(true);
@@ -65,6 +65,7 @@ kryo.register(Array.class, new Serializer<Array>() {
 	}
 });
 
+// Register a custom IntArray serializer
 kryo.register(IntArray.class, new Serializer<IntArray>() {
 	{
 		setAcceptsNull(true);
@@ -89,6 +90,7 @@ kryo.register(IntArray.class, new Serializer<IntArray>() {
 	}
 });
 
+// Register a custom FloatArray serializer
 kryo.register(FloatArray.class, new Serializer<FloatArray>() {
 	{
 		setAcceptsNull(true);
@@ -113,6 +115,7 @@ kryo.register(FloatArray.class, new Serializer<FloatArray>() {
 	}
 });
 
+// Register a custom Color serializer
 kryo.register(Color.class, new Serializer<Color>() {
 	public Color read (Kryo kryo, Input input, Class<Color> type) {
 		Color color = new Color();

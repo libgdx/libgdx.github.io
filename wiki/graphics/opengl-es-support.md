@@ -3,9 +3,9 @@ title: OpenGL (ES) Support
 ---
 # What are (Open) GL and GL ES?
 
-Whenever libGDX is talking about GL20 or GL30, it is in fact referring to **GL ES 2.0** and **GL ES 3.0**. OpenGL ES can be seen as a subset of _OpenGL_ (which itself is a graphics API) and is designed for embedded systems, in particular smartphones.
+Whenever libGDX is talking about GL20 or GL30, it is in fact referring to **OpenGL ES 2.0** and **OpenGL ES 3.0**. OpenGL ES is an API for rendering 2D and 3D computer graphics. Other popular graphics APIs are for example Direct3D, Metal or Vulcan. OpenGL ES exists in different versions (1.0, 1.1, 2.0, 3.0, 3.1, 3.2) which offer different functionality. It can be seen as a subset of _OpenGL_ (which itself is a graphics API) and is designed for embedded systems (hence the name OpenGL _ES_), in particular smartphones.
 
-By default, libGDX is relying on version 2.0 of OpenGL ES, but it can be configured to use 3.0 as well. The LWJGL 3 backend also supports **GL ES 3.1 and 3.2**. See for example:
+By default, libGDX is relying on version 2.0 of OpenGL ES, but it can be configured to use 3.0 as well. The LWJGL 3 backend also supports **GL ES 3.1 and 3.2**. To use a specific OpenGL ES version, it has to be enabled in the application configuration. For the LWJGL 3 backend, this works as follows:
 
 ```java
 Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
@@ -15,11 +15,11 @@ cfg.setOpenGLEmulation(GLEmulation.GL30, 3, 2); // use GL 3.0 (emulated by OpenG
 
 ## Platform specificities
 ### Desktop (Windows, Mac, Linux)
-On Desktop, libGDX is mapping all its graphics calls to OpenGL.
+On Desktop, libGDX is mapping all its graphics calls to OpenGL. In other words, while the GL20 object offers methods from the OpenGL ES 2.0 specification, on desktop those API calls are handed over to OpenGL. As OpenGL ES is inspired by and a subset of OpenGL, its versions are roughly equal to a version of the OpenGL API.
 
 **GL ES 2.0** is roughly based on Open GL 2.0, however, there are some incompatibilities that weren't resolved until Open GL 4.1. To mimic GL ES 2.0, libGDX does not request any specific OpenGL version, so the driver will be more forgiving.
 
-**GL ES 3.0** is the successor of OpenGL ES 2.0. On desktop, OpenGL 4.3 provides full compatibility with OpenGL ES 3.0. For mimicking GL ES 3.0 on desktop, one can specify the exact OpenGL version, that should be used. Please note that macOS only has [core profiles](https://www.khronos.org/opengl/wiki/OpenGL_Context#OpenGL_3.2_and_Profiles) for OpenGL 3.2+ and the [maximum supported version is 4.1]( https://support.apple.com/en-gb/101525).
+**GL ES 3.0** is the successor of OpenGL ES 2.0. On desktop, OpenGL 4.3 provides full compatibility with OpenGL ES 3.0. For mimicking GL ES 3.0 on desktop, one can specify the exact OpenGL version, that should be used. Please note that macOS only has [core profiles](https://www.khronos.org/opengl/wiki/OpenGL_Context#OpenGL_3.2_and_Profiles) for OpenGL 3.2+ and the [maximum supported version is 4.1](https://support.apple.com/en-gb/101525).
 
 **GL ES 3.1 & 3.2** have done a lot of work to bring the API's functionality significantly closer to it's desktop counterpart. OpenGL 4.5 should be able to fully emulate GL ES 3.1.
 
@@ -32,10 +32,10 @@ On Android Open GL ES 2.0 and 3.0 can be used. To prevent your application from 
 Please note that support for OpenGL ES 3.0 is experimental on iOS.
 
 ### Web
-On Web, the graphic stuff is handled by WebGL. Since 1.12.0 libGDX supports WebGL 2, which is the equivalent of GL ES 3.0. It can be enabled via `GwtApplicationConfiguration#useGL30`.
+On Web, the graphic stuff is handled by WebGL. Since 1.12.0, libGDX supports WebGL 2, which is the equivalent of GL ES 3.0. It can be enabled via `GwtApplicationConfiguration#useGL30`.
 
 # And what about GLSL (ES)?
-GLSL (or GLSL ES for mobile and web) is the language used for shaders. Its versioning is somewhat confusing:
+GLSL (or GLSL ES for mobile and web) is the language used for shaders. Its versioning has evolved alongside specific versions of the OpenGL API and is somewhat confusing:
 
 <details>
   <summary><b><i>GLSL - click to expand</i></b></summary>

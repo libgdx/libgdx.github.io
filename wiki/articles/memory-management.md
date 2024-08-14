@@ -1,9 +1,7 @@
 ---
 title: Memory management
 ---
-Games are resource heavy applications. Images and sound effects can take up a considerable amount of RAM. Also, most of these resources are not managed by the Java garbage collector. Instead they are managed by native drivers. Having the garbage collector decide when to release a 5 megabyte texture from video ram wouldn't be a too bright idea either.
-
-We want fine grained control over the life-time of our resources. There are multiple classes in libGDX which represent such resources. They all implement a common [Disposable](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/utils/Disposable.html) interface which indicates that instances of this class need to be disposed of manually at the end of the life-time. **Failure to dispose resources will lead to severe memory leaks!**
+Games are resource heavy applications. Images and sound effects in particular can take up a considerable amount of RAM. There are multiple classes in libGDX which represent such resources. They all implement a common [Disposable](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/utils/Disposable.html) interface which indicates that instances of this class need to be disposed of manually at the end of their life-time. This is because most of these resources are managed by native drivers and not by the Java garbage collector. **Failure to dispose resources will lead to severe memory leaks!**
 
 The following classes need to be disposed of manually (might not be complete, [click here](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/utils/Disposable.html) instead for the full list):
 
@@ -38,8 +36,6 @@ The following classes need to be disposed of manually (might not be complete, [c
 Resources should be disposed of as soon as they are no longer needed, freeing up memory associated with them. Accessing a disposed resource will result in undefined errors, so make sure to clear out all references you have to a disposed resource.
 
 When in doubt about whether a specific class needs to be disposed of, check if it has a `dispose()` method which implemented from `Disposable` interface of `com.badlogic.gdx.utils`. If it does, you are now working with a native resource.
-
-> An idea to list all of such classes is to clone libGDX to your system, then use text editor such as Sublime Text or others to open its root directory, search for `implements Disposable`. It will show you result of all source files (thus class) you need to call `dispose()` when you're done with it. Note that all other classes that extend from such result classes are also applicable. List above is already complete. Note that a few classes from result come from test class of libGDX itself which are not relevant to your interest.
 
 ### Object pooling
 

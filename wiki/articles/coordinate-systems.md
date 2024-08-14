@@ -4,8 +4,9 @@ title: Coordinate systems
 When working with libGDX (or any other OpenGL based system), you will have to deal with various [coordinate systems](https://en.wikipedia.org/wiki/Coordinate_system). This is because OpenGL abstracts away device dependent units, making it more convenient to target multiple devices and to focus on game logic. Sometimes you may need to convert between coordinate systems for which libGDX offers various methods.
 
 **It is crucial to understand in which coordinate system you are working. Otherwise it can be easy to get confused and to make assumptions which aren't correct.**
+{: .notice--info}
 
-On this page the various coordinate systems are listed. It is highly recommended to first get familiar with the [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system), which is the most widely used coordinate system.
+On this page the various coordinate systems are listed. It is highly recommended to first get familiar with the concept of [Cartesian coordinate systems](https://en.wikipedia.org/wiki/Cartesian_coordinate_system), which is the most widely used one.
 
  * [Touch coordinates](#touch-coordinates)
  * [Screen or image coordinates](#screen-or-image-coordinates)
@@ -17,12 +18,33 @@ On this page the various coordinate systems are listed. It is highly recommended
   * [Game coordinates](#game-coordinates)
 
 ## Touch coordinates
- * Units: pixels
- * System: y-down
- * Type: integer, can't be fractional
- * Range: (0,0) (upper left corner) to (`Gdx.graphics.getWidth()-1`, `Gdx.graphics.getHeight()-1`) (lower right corner)
- * Usage: touch/mouse coordinates
- * Dependence: device specific
+
+<table>
+  <tr>
+    <td>Units</td>
+    <td>pixels</td>
+  </tr>
+  <tr>
+    <td>System</td>
+    <td>y-down</td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td>integer (can't be fractional)</td>
+  </tr>
+  <tr>
+    <td>Range</td>
+    <td>(`0`, `0`) (upper left corner) to (`Gdx.graphics.getWidth()-1`, `Gdx.graphics.getHeight()-1`) (lower right corner)</td>
+  </tr>
+  <tr>
+    <td>Usage</td>
+    <td>touch/mouse coordinates</td>
+  </tr>
+  <tr>
+    <td>Dependence</td>
+    <td>device specific</td>
+  </tr>
+</table>
 
 Starts at the upper left *pixel* of the (application portion of the) physical screen and has the size of the (application portion of the) physical screens width and height in pixels.
 
@@ -35,12 +57,33 @@ This coordinate system is based on the classic representation of the display, wh
 Whenever working with [mouse or touch](/wiki/input/mouse-touch-and-keyboard) coordinates, you'll be using this coordinate system. You typically want to convert these coordinates as soon as possible to a more convenient coordinate system. E.g. the `camera.unproject` or `viewport.unproject` method let's you convert them to world coordinates (see below).
 
 ## Screen or image coordinates
- * Units: pixels
- * System: y-up
- * Type: integer, can't be fractional
- * Range: (0,0) (lower left corner) to (`Gdx.graphics.getWidth()-1`, `Gdx.graphics.getHeight()-1`) (upper right corner)
- * Usage: viewport, scissors and pixmap
- * Dependence: device/resource/asset specific
+
+<table>
+  <tr>
+    <td>Units</td>
+    <td>pixels</td>
+  </tr>
+  <tr>
+    <td>System</td>
+    <td>y-up</td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td>integer (can't be fractional)</td>
+  </tr>
+  <tr>
+    <td>Range</td>
+    <td>(`0`, `0`) (lower left corner) to (`Gdx.graphics.getWidth()-1`, `Gdx.graphics.getHeight()-1`) (upper right corner)</td>
+  </tr>
+  <tr>
+    <td>Usage</td>
+    <td>viewport, scissors and pixmap</td>
+  </tr>
+  <tr>
+    <td>Dependence</td>
+    <td>device/resource/asset specific</td>
+  </tr>
+</table>
 
 This is OpenGL's counterpart to touch coordinates; that is: it is used to specify (index) a pixel of the (portion of the) physical screen. It is also used as indexer for an image in memory. Likewise, these are integers, they can't be fractional.
 
@@ -61,12 +104,33 @@ The "problem" with this is that OpenGL expects the texture data to be in image c
 To compensate for this up-side-down texture, `SpriteBatch` flips the texture (UV) coordinates (see below) on the y axis when rendering. Likewise, fbx-conv has the option to flip texture coordinates on the y axis as well. However, when you use a texture which isn't loaded from a pixmap, for example a Framebuffer, then this might cause that texture to appear up-side-down.
 
 ## Normalized render coordinates
- * Units: one
- * System: y-up
- * Type: floating point
- * Range: (-1,-1) (lower left corner) to (+1,+1) (upper right corner)
- * Usage: shaders
- * Dependence: none
+
+<table>
+  <tr>
+    <td>Units</td>
+    <td>one</td>
+  </tr>
+  <tr>
+    <td>System</td>
+    <td>y-up</td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td>floating point</td>
+  </tr>
+  <tr>
+    <td>Range</td>
+    <td>(`-1`, `-1`) (lower left corner) to (`+1`, `+1`) (upper right corner)</td>
+  </tr>
+  <tr>
+    <td>Usage</td>
+    <td>shaders</td>
+  </tr>
+  <tr>
+    <td>Dependence</td>
+    <td>none</td>
+  </tr>
+</table>
 
 The above coordinate systems have one big issue in common: they are device specific. To solve that, OpenGL allows you to use a device independent coordinate system which is automatically mapped to screen coordinates when rendering. This coordinate system is normalized in the range [-1,-1] and [+1,+1] with (0,0) exactly in the center of the screen or framebuffer (the render target).
 
@@ -79,12 +143,33 @@ It might be worth to note that the normalization does not respect the aspect rat
 The coordinates are floating point and no longer indexers. The device (GPU) will map these coordinates to the actual screen pixels using [rasterisation](https://en.wikipedia.org/wiki/Rasterisation). A good article (although targeting DirectX it also applies to OpenGL) for more information on that can be found [here](https://msdn.microsoft.com/en-us/library/windows/desktop/cc627092(v=vs.85).aspx).
 
 ## Normalized texture (UV) coordinates
- * Units: one
- * System: y-up
- * Type: floating point
- * Range: (0,0) (lower left corner) to (1,1) (upper right corner)
- * Usage: shaders, mesh, texture region, sprite
- * Dependence: none
+
+<table>
+  <tr>
+    <td>Units</td>
+    <td>one</td>
+  </tr>
+  <tr>
+    <td>System</td>
+    <td>y-up</td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td>floating point</td>
+  </tr>
+  <tr>
+    <td>Range</td>
+    <td>(`0`, `0`) (lower left corner) to (`1`, `1`) (upper right corner)</td>
+  </tr>
+  <tr>
+    <td>Usage</td>
+    <td>shaders, mesh, texture region, sprite</td>
+  </tr>
+  <tr>
+    <td>Dependence</td>
+    <td>none</td>
+  </tr>
+</table>
 
 Likewise to the normalized render coordinates, OpenGL also uses normalized texture coordinates. The only difference is that these ranges from [0,0] to [1,1]. Depending on the specified wrap function, values outside that range will be mapped within that range.
 
@@ -97,12 +182,33 @@ The use of normalized texture coordinates is very important, because it makes th
 When rendering, the GPU converts the UV coordinates to a [texel](https://en.wikipedia.org/wiki/Texel_(graphics)) (texture pixel). This is called "texture sampling" and is based on the [texture filtering](https://en.wikipedia.org/wiki/Texture_filtering).
 
 ## World coordinates
- * Units: application specific, e.g. [SI Units](https://en.wikipedia.org/wiki/International_System_of_Units)
- * System: application specific, but usually y-up
- * Type: floating point
- * Range: application specific
- * Usage: game logic
- * Dependence: game/application
+
+<table>
+  <tr>
+    <td>Units</td>
+    <td>application specific, e.g. [SI Units](https://en.wikipedia.org/wiki/International_System_of_Units)</td>
+  </tr>
+  <tr>
+    <td>System</td>
+    <td>application specific, but usually y-up</td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td>typically floating point</td>
+  </tr>
+  <tr>
+    <td>Range</td>
+    <td>application specific</td>
+  </tr>
+  <tr>
+    <td>Usage</td>
+    <td>game logic</td>
+  </tr>
+  <tr>
+    <td>Dependence</td>
+    <td>game/application</td>
+  </tr>
+</table>
 
 Typically, your game logic should use a coordinate system which best fits the game logic. It should not depend on device or asset size. For example, a commonly used unit is meters.
 

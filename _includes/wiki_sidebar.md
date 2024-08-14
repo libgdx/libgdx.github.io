@@ -203,7 +203,6 @@
 * [Memory Management](/wiki/articles/memory-management)
 * [Updating Your libGDX Version](/wiki/articles/updating-libgdx)
 * [Dependency Management with Gradle: Adding Extensions and Third-Party Libraries](/wiki/articles/dependency-management-with-gradle)
-* [Improving Your Gradle Workflow](/wiki/articles/improving-workflow-with-gradle)
 * [Maven Integration](/wiki/articles/maven-integration)
 * [Creating Asset Project in Eclipse](/wiki/articles/creating-a-separate-assets-project-in-eclipse)
 * [Java Development Kit - Selection](/wiki/articles/java-development-kit-selection)
