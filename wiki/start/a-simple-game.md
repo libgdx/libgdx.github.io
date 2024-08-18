@@ -27,7 +27,7 @@ Follow the steps in the [Generating a Project](/wiki/start/project-generation) g
 
 Now fill in the destination. If you are interested in Android development, be sure to check that option and provide the Android SDK folder. For the purpose of this tutorial, we will uncheck the iOS sub project (as you would need OS X to run it) and all extensions (extensions are a more advanced topic).
 
-Once imported into your IDE, you should have 5 projects or modules: the main one `drop`, and the sub projects `android` (or `drop-android` under Eclipse), `core` / `drop-core`, `desktop` / `drop-desktop`, and `html` / `drop-html`.
+Once imported into your IDE, you should have 5 projects or modules: the main one `drop`, and the sub projects `android` (or `drop-android` under Eclipse), `core` / `drop-core`, `lwjgl3` / `drop-lwjgl3`, and `html` / `drop-html`.
 
 To launch or debug the game, see the page [Importing & Running a Project](/wiki/start/import-and-running).
 
@@ -60,7 +60,7 @@ The following sources provide some sample assets:
 To make the assets available to the game, we have to place them in the `assets` folder, which is located in the root directory of your game. I named the 4 files: _drop.wav_, _rain.mp3_, _droplet.png_ and _bucket.png_ and put them in `assets/`. We only need to store the assets once, as both the desktop and HTML5 projects are configured to 'see' this folder through different means. After that, depending on your IDE you may have to refresh the project tree to make the new files known (in Eclipse, right click -> Refresh), otherwise you may get a 'file not found' runtime exception.
 
 ## Configuring the Starter Classes
-Given our requirements we can now configure our different starter classes. We'll start with the **desktop project**. Open the `DesktopLauncher.java` class in `desktop/src/…` (or `drop-desktop` under Eclipse). We want a 800x480 window and set the title to "Drop". The code should look like this:
+Given our requirements we can now configure our different starter classes. We'll start with the **desktop project**. Open the `Lwjgl3Launcher.java` class in `lwjgl3/src/…` (or `drop-lwjgl3` under Eclipse). We want a 800x480 window and set the title to "Drop". The code should look like this:
 
 ```java
 package com.badlogic.drop;
@@ -69,7 +69,7 @@ import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.badlogic.drop.Drop;
 
-public class DesktopLauncher {
+public class Lwjgl3Launcher {
    public static void main (String[] arg) {
       Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
       config.setTitle("Drop");
