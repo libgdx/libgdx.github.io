@@ -5,6 +5,289 @@ redirect_from:
   - /dev/simple_game/
 ---
 
+Let's make a game! Game design is hard, but if you break up the process into small, achievable goals, you'll be able to produce wonders. In this simple game tutorial, you will learn how to make a basic game from scratch. These are the essential skills that you will build on in future projects.
+
+Click Here to Play! (libGDX logo with bucket graphic bottom right tilted with water spilling out very catchy)
+
+As you can see with the live demo, we're going to make a basic game where you control a bucket to collect water droplets falling from the sky. There is no score or end goal. Just enjoy the experience! Here are the steps that we will use to split up the game design process:
+
+  * Prerequisites
+  * Loading Assets
+  * The Game Life Cycle
+  * Rendering
+  * Input Controls
+  * Game Logic
+  * Sound
+  * Additional Steps
+  * Further Learning
+
+## Prerequisites
+There are a few things that you need to do before you begin this tutorial.
+
+  * Make sure to follow the setup instructions on libgdx.com to configure Java and your IDE. You need to know how to create a project and run it with the appropriate Gradle commands.
+  * Create a project in GDX-Liftoff with the following settings:
+  * Project Name: Drop
+  * Package: com.badlogic.drop
+  * Main Class: Main
+  * Include the Core and Desktop platforms. You may include others, however they will not be discussed in this tutorial.
+  * Use the ApplicationListener template
+
+If you have a knowledge of Java code, your experience in libGDX will be a lot easier. However, you should still be able to follow along in this tutorial even if you only have a minimal understanding of how code works.
+
+Comments will be used throughout the code examples to explain the facets of this tutorial. You do not have to copy these comments when writing your code:
+
+```java
+```
+
+However, it is good practice to make your own comments to explain confusing code or to label parts of your design.
+
+```java
+```
+
+Import statements are an important part of Java programming. Thankfully, they are automatically added by modern IDE's as you type your code. They are omitted in the examples, but assume they are necessary in your code. There are times where something named in libGDX is named the same as something found in another package:
+
+Always opt for the libGDX named class.
+
+## Loading Assets
+2D games made in libGDX need assets: images, audio, and other resources that comprise the project. In this case, we'll need a bucket, a raindrop, a background, a water drop sound effect, and music. If you're pretty resourceful, you can make these on your own. For simplicity's sake, you can download these examples which are optimized for this tutorial.
+
+bucket.png
+drop.png
+background.png
+drop.mp3
+music.mp3
+
+Just having these saved on your computer is not enough. These files need to be placed in the assets folder of your project. Look inside the folder path of the liftoff project you made:
+
+There are many folders in here for the different backends that libGDX supports. Assets is a folder shared by all the backends. Whatever you save in here gets distributed with your game. For example, your desktop game will include these files inside your JAR distributable. This is what you give your users so they can play your game.
+
+libGDX has an emphasis on code. Every asset you use must be loaded through code before you can use it in the rest of your game. This needs to happen when the game starts. Open the project in your chosen IDE, then open the Core project > Main.java. This file is the main file we're going to work in.
+
+Declare your variables at the top of the file. You'll need a variable for every asset you plan to use:
+
+```java
+```
+
+Enter the following code in the create method:
+
+```java
+```
+
+This loads the assets into memory. See that the background image is loaded as a texture. Textures are the way that games keep images in video ram. It's actually not efficient to have different textures for each element in the game. It should be one big Texture for them all. Learn about TextureAtlas and TextureRegion in the wiki. For now, we'll keep these as separate textures because it's easier to explain this way.
+
+Similarly, we have Sound to handle the raindrop audio file in our project. Sounds are loaded completely into memory so they can be played quickly and repeatedly. Music, on the other hand, is too large to keep entirely in memory. It's streamed from the file in chunks. There is no precise rule about what should or should not be a sound versus a music, but consider any audio shorter than 10 seconds to be a sound.
+
+```java
+```
+
+We have many assets to manage now. We should use an AssetManager to handle them. That can be found in the wiki too. Again, that's outside the scope of this tutorial. Let's keep it simple.
+
+## The Game Life Cycle
+The work we've done so far is in the create method. Create executes immediately when the game is run, so of course it makes sense to load our assets there. What are these other methods for?
+
+Resize is called whenever the game screen is resized. The width and height of the screen is important to have so you can make sure to not let your game look stretched or out of proportion.
+
+```java
+```
+
+Render is the main loop of your game. This is code that is executed again and again while your game is running. Each time Render is called, a frame of your game is drawn to the screen. This is where the main logic of your game should go followed by your rendering code which will draw your images.
+
+```java
+```
+
+Pause isn't like the pause menu you have in games you've played before. Pause is called when the game is minimized on Desktop or when the user presses home on Android, for example. It's basically when the game loop is paused by some action of the operating system.
+
+```java
+```
+
+Consequently, Resume is called when the game loop is activated again. With Pause and Resume, you can implement a sort of autosave feature, or rebuild assets if necessary. These are not things you'll need to deal with in this tutorial.
+
+```java
+```
+
+Dispose is code that is executed when your game is exited. This can be helpful for cleaning up resources, however you should note that the operating system will clean up these resources for you. This is more relevant for games with multiple screens.
+
+```java
+```
+
+You will use these methods to create your game and all future games you make in libGDX. You'll find that a lot of advanced systems you can use abstract the direct use of these methods, however these remain at the foundation of your code.
+
+## Rendering
+Now let's talk about rendering. For the most part, all modern games just manipulate textures, drawing them to the screen to give you the final image you see: the frame.
+
+This process is repeated many times per second to give the illusion of motion. That's what we're going to do here. Let's start with some boilerplate code. What is meant by boilerplate code is that you'll use similar code again and again without much change. And you'll see this pattern all over:
+
+```java
+```
+
+This code clears the screen. It's a good practice to clear the screen every frame. Otherwise, you'll get weird graphical errors. You can use any color you want, but we'll just settle on Black this time.
+
+```java
+```
+
+A viewport controls how we see the game. It's like a window from our world into another: the game world. The viewport controls how big this "window" is and how it's placed on our screen. There are many kinds of viewports you can use. A simple one to understand is the FitViewport which will ensure that no matter what size our window is, the full game view will always be visible. It will "fit" into the window. Each viewport also has a camera which controls what part of the game world is visible and at what zoom. Learn more about viewports and cameras in the wiki.
+
+```java
+```
+
+Ever wonder why your favorite games sometimes have poor FPS or Frames Per Second? Stuttering gameplay is often related to the number of textures being rendered and the capabilities of your player's graphics card. There are tricks to alleviate this. For one, it is more efficient to send all your draw calls at once to the graphics processing unit (GPU). The process of drawing an individual texture is called a draw call. The SpriteBatch is how libGDX combines these draw calls together. The projection matrix configures the SpriteBatch to use the coordinates of our Viewport.
+
+```java
+```
+
+It is important to order these lines appropriately. You should never draw from a SpriteBatch outside of a begin and an end. If you do, you will get an error message.
+
+Before we launch our game, we should set the size of the desktop window. Any configuration that needs to happen for the desktop version of your game needs to be set in the LWJGL3 project launcher class.
+
+```java
+```
+
+This code should now draw our bucket. You can run this game by calling the appropriate Gradle command in Idea or implement whatever steps are needed for your chosen development environment as listed in the setup guide. If all things have gone well, you should see our brave, lone bucket sitting in the darkness of the void.
+
+The coordinates we provide determine where the bucket will be drawn on the screen. The coordinates begin in the bottom left and grow to the right and up. Our game world is described in imaginary units best defined as meters. For reference our bucket at 100 pixels wide and 100 pixels tall will equal 1 meter, making our bucket 1x1 meters. This ratio or pixels per meter can be anything you want, but make sure whatever you choose is a simple value that makes sense in your game world. Your game logic should really know nothing about pixels.
+
+The constructor of the viewport determines how much of the game world we see in meters.
+
+```java
+```
+
+Let's cheer up this scene with the background. Drawing the background is similar to drawing the bucket.
+
+```java
+```
+
+But what happened to our bucket? We need to talk about draw order. Drawing happens consecutively in the order you list it in code. This is what really happens. The screen is cleared. The bucket is drawn on the screen. And then the background is drawn over everything. This final image is then shown on the screen. The process is repeated every frame.
+
+Simply reordering the code will resolve this issue.
+
+```java
+```
+
+We'll skip rendering the droplets for now and return to it when we have the logic to randomly create them.
+
+## Input Controls
+It's not fun to have a game without some sort of movement or action on screen. Let's enable the player's ability to control the bucket. As you know, there are all sorts of ways to get input from a user. We'll focus on a few: the keyboard, mouse, and touch.
+
+We need some way of keeping track of where the player bucket is in the game world. Texture does not store any position state. Sure, you can tell SpriteBatch where to draw it every frame by using the provided overloaded methods. What if you want to rotate it? Resize it? These methods get incredibly complicated the more you want to do.
+
+```java
+```
+
+Let's use a Sprite instead.
+
+```java
+```
+
+Erase the SpriteBatch.draw line. The Sprite draw code is written in a different way:
+
+```java
+```
+
+### Keyboard
+Now to capturing player input. This is how you detect if a player is pressing keys on the keyboard.
+
+```java
+```
+
+This is known as keyboard polling. Every time a frame is drawn, we're going to check if a key is pressed. There is a list of pretty much every conceivable key in Gdx.input.Keys. We want to react to the user pressing the left arrow key.
+
+```java
+```
+
+That's great, but what is supposed to happen when the key is pressed? We need to move the coordinates of the bucket sprite.
+
+```java
+```
+
+The number dictates how fast the bucket moves. Adding to the x makes the bucket move to the right. This basically means "set the bucket x to what it currently is right now plus a little bit more". Subtracting from the x makes the bucket move to the left.
+
+```java
+```
+
+An unfortunate side effect of having our logic inside the render method is that our code behaves differently on different hardware. This is because of differences in framerate. More frames per second means more movement per second.
+
+To counteract this, we need to use delta time. Delta time is the measured time between frames. If we multiply our movement by delta time, the movement will be consistent no matter what hardware we run this game on.
+
+```java
+```
+
+This effectively means that the number we select here is how far the bucket moves in one second. Remember to use delta time whenever you are calculating something that happens over time. Now let's copy the code for movement to the right. Flip the minus to a plus to move to the right.
+
+```java
+```
+
+### Mouse and Touch Controls
+Mouse and Touch controls are related. To react to the user clicking or tapping the screen, call the following method:
+
+```java
+```
+
+Now the player has clicked the screen, but where did they click? We can use the methods Gdx.input.getX() and Gdx.input.getY() for this. Unfortunately, these values are in window coordinates which don't correlate to our selected pixels per meter. The coordinates are also upside down because Window coordinates start from the top left. We need to create a Vector3 object to do some math. Notice that we have created a single instance variable for the Vector3 instead of creating it locally. By reusing this Vector3, we prevent the game from triggering the garbage collector frequently which causes lag spikes in the game.
+
+This converts the window coordinates to coordinates in our world space. You actually do not have to modify this code if you want to support input in mobile devices, however you should read about some other features that libGDX provides you.
+
+## Game Logic
+The player can move left and right now, but they can go completely off the screen. We need to prevent the player from doing that. Remember that the left side of the screen starts at 0.
+This code detects if the bucket goes too far left. If it does, it snaps its position at the farthest it's allowed to go. Let's do the other side.
+
+This kind of works, but it lets the bucket go just a little too far right. In fact, it's one whole unit too far to the right. This is because the bucket sprite has an origin on the bottom left of the image.
+
+To resolve this, we need to subtract the width of the bucket from the right edge.
+Now to spawn the rain drops. We'll create our first rain drop in the create method
+The size is the same as the player. Setting the y position at the top of the screen will make it appear as if it's falling from the sky. The following line adds the drop to a list of drops that we can manage in our render loop. Now you can call this method whenever you want to create a droplet. Let's create our first droplet in the create method.
+
+If you run the program now, you'll see nothing happen. That's because the droplet doesn't have any movement or render code. Begin coding the logic for the droplets in the render method.
+
+It might seem inefficient to have two separate loops for logic and rendering, but there is a good reason for this as you will soon see. It's also good practice to keep logic and rendering code independent from each other.
+
+We have a problem here. The rain drop only spawns on the left side every time. You could change the position, of course, but there is no variability. No randomness. We need it to be a random position between 0 and the width of the world.
+
+Again, we're subtracting the width of the sprite so none of the raindrops appear outside of the view. Success!
+
+That's only one droplet though. When it rains, we have multiple droplets over the course of time. Whenever we need something to be done in the future, we can use the Timer class. You'll need to wrap your existing code within this inner class.
+
+The parameters define how soon it should start this code in seconds (right away), how long is the interval before calling the code again (every second), and how many times it should do this (a negative number means it will do it forever).
+
+These droplets will fall off the screen never to be seen again. Java doesn't forget though. These droplets remain in memory forever. If you profile your game you'll see that we have a memory leak.
+
+So, we should remove the drop sprite from the list when it falls off screen. We need to make some modifications to the for loop.
+
+Removing items in a list while you are iterating through it can cause some unforeseen bugs. That's why you should iterate through the list backwards so you don't skip any indexes. Make sure to learn about other collections available like the SnapshotArray and the DelayedRemovalArray for more complex projects.
+
+This is great, however the drops don't interact with the bucket. This is where we incorporate some rudimentary collision detection. This can be achieved with the Rectangle class. We need two rectangles to make comparisons. One for the bucket and one to be reused with every drop.
+The code now sets the dropRectangle to the position and dimensions of the Sprite.
+
+This line checks if it overlaps with the bucketRectangle. If it does, remove the Sprite from the list of drop Sprites. That means it will no longer be drawn or acted upon. It simply doesn't exist anymore.
+
+## Sound
+It's very easy to add a line to play a sound effect now that we are at the end of our workflow. We want the drop sound to play when the bucket collides with the drop. It should not play when the drop falls out of the level.
+
+## Additional Steps
+So, you're at the final steps of making a game. You should test the game out. Tweak values to make the game easier or harder.
+
+If you want to let your friends and colleagues try your game out, you'll need to make a distributable that they can play. No one is going to want set up an IDE and copy your entire project just to play it. See the page on Importing & Running a project.
+
+## Further learning
+Now that you've completed the simple game, it's time to extend the simple game. This project managed to put all of its code in a single class. This was in the service of making it simple, but it is a terrible way to organize code. The next tutorial will teach you about the Game class and how to implement Screen to arrange your project. It will also cover other important improvements to your game. For example, these instructions skipped the use of the dispose() method because it's not relevant for single page project. When working with multiple screens, you may want to dispose of resources from the last screen to release the memory for new resources in your game.
+
+Game design is a constant journey of learning. The wiki goes furth in depth regarding all the subjects you have learned here. Look into collections, TexturePacker, AssetManager, audio, and user input.
+
+This tutorial focused entirely on desktop development. There are many more considerations you must make before you explore Android, iOS, and HTML5 development. Java is not truly "write once, run anywhere" but libGDX takes you pretty close to that goal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Before diving into the APIs provided by libGDX, let's create **a very simple "game"**, that touches each module provided by the framework, to get a feeling for things. We'll introduce a few different concepts without going into unnecessary detail.
 
 {% include setup_flowchart.html current='3' %}
@@ -31,7 +314,7 @@ Once imported into your IDE, you should have 5 projects or modules: the main one
 
 To launch or debug the game, see the page [Importing & Running a Project](/wiki/start/import-and-running).
 
-If we just run the project, we will get an error: `Couldn't load file: badlogic.jpg`. Your Run Configuration has to be properly configured first: Select as working directory `PATH_TO_YOUR_PROJECT/​drop/assets`. When we run the game now, we will get the default 'game' generated by the setup app: a Badlogic Games image on a red background. Not too exciting, but that’s about to change.
+If we just run the project, we will get an error: `Couldn't load file: badlogic.jpg`. Your Run Configuration has to be properly configured first: Select as working directory `PATH_TO_YOUR_PROJECT/​drop/assets`. When we run the game now, we will get the default 'game' generated by the setup app: a Badlogic Games image on a red background. Not too exciting, but that's about to change.
 
 ## The Game
 The game idea is very simple:
@@ -217,7 +500,7 @@ For each of our assets we have a field in the `Drop` class so we can later refer
 
 Next we load the sound effect and the background music. libGDX differentiates between sound effects, which are stored in memory, and music, which is streamed from wherever it is stored. Music is usually too big to be kept in memory completely, hence the differentiation. As a rule of thumb, you should use a `Sound` instance if your sample is shorter than 10 seconds, and a `Music` instance for longer audio pieces.
 
-**Note:** libGDX supports MP3, OGG and WAV files. Which format you should use, depends on your specific needs, as each format has its own advantages and disadvantages. For example, WAV files are quite large compared to other formats, OGG files don’t work on RoboVM (iOS) nor with Safari (GWT), and MP3 files have issues with seemless looping.
+**Note:** libGDX supports MP3, OGG and WAV files. Which format you should use, depends on your specific needs, as each format has its own advantages and disadvantages. For example, WAV files are quite large compared to other formats, OGG files don't work on RoboVM (iOS) nor with Safari (GWT), and MP3 files have issues with seemless looping.
 {: .notice--primary}
 
 Loading of a `Sound` or `Music` instance is done via `Gdx.audio.newSound()` and `Gdx.audio.newMusic()`. Both of these methods take a `FileHandle`, just like the `Texture` constructor.
