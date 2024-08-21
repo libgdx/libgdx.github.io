@@ -32,7 +32,7 @@ If you have just generated the project in gdx-liftoff, you may click the option 
 If you want to execute your freshly imported project, you have to follow different steps, depending on your IDE and the platform you are targeting.
 ## Desktop
 ### In IDEA/Android Studio:
-1. Extend the Gradle tab on the right sight of your window.<br/>
+1. Extend the Gradle tab on the right side of your window.<br/>
 2. Expand the tasks of your project and then select: `lwjgl3 -> Tasks -> application -> run`:<br/>
   ![](/assets/images/dev/idea/3.png)
 
