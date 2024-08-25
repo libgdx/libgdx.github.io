@@ -7,7 +7,7 @@ redirect_from:
 
 Let's make a game! Game design is hard, but if you break up the process into small, achievable goals, you'll be able to produce wonders. In this simple game tutorial, you will learn how to make a basic game from scratch. These are the essential skills that you will build on in future projects.
 
-Click Here to Play! (libGDX logo with bucket graphic bottom right tilted with water spilling out very catchy)
+{% include embed-gwt.html dir='wiki-example-poc' %}
 
 As you can see with the live demo, we're going to make a basic game where you control a bucket to collect water droplets falling from the sky. There is no score or end goal. Just enjoy the experience! Here are the steps that we will use to split up the game design process:
 
@@ -803,7 +803,7 @@ The music should play at the beginning of the game. It needs to loop continuousl
 @Override
 public void create() {
     ...
-    
+
     music.setLooping(true);
     music.setVolume(.5f);
     music.play();
