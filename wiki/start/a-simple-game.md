@@ -7,7 +7,7 @@ redirect_from:
 
 Let's make a game! Game design is hard, but if you break up the process into small, achievable goals, you'll be able to produce wonders. In this simple game tutorial, you will learn how to make a basic game from scratch. These are the essential skills that you will build on in future projects.
 
-{% include embed-gwt.html dir='wiki-example-poc' %}
+{% include embed-gwt.html dir='a-simple-game' %}
 
 As you can see with the live demo, we're going to make a basic game where you control a bucket to collect water droplets falling from the sky. There is no score or end goal. Just enjoy the experience! Here are the steps that we will use to split up the game design process:
 
@@ -647,16 +647,77 @@ public void create() {
 
 Again, we're subtracting the width of the sprite so none of the raindrops appear outside of the view. Success!
 
-That's only one droplet though. When it rains, we should have multiple droplets over the course of time. Whenever we need something to be done in the future or repeatedly over time, we can use the Timer class. You'll need to wrap your existing code within this inner class.
+That's only one droplet though. When it rains, we should have multiple droplets over the course of time. Let's move the droplet spawning code to the render method. This will make droplets repeatedly every frame.
 
 ```java
-Timer.schedule(new Task() { //Create an inner class
-    @Override
-    public void run() { //anything inside of run will be executed in the future
+public void create() {
+    ...
+    dropSprites = new Array<>();
+
+    //cut all the code from create
+}
+```
+
+```java
+@Override
+public void render() {
+    ...
+
+    //logic
+    float bucketWidth = bucketSprite.getWidth();
+    if (bucketSprite.getX() < 0) bucketSprite.setX(0);
+    else if (bucketSprite.getX() > worldWidth - bucketWidth) bucketSprite.setX(worldWidth - bucketWidth);
+
+    for (Sprite dropSprite : dropSprites) {
+        dropSprite.setY(dropSprite.getY() - 2f * delta);
+    }
+
+    //paste the spawn droplet code here
+    float dropWidth = 1;
+    float dropHeight = 1;
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
+    
+    Sprite dropSprite = new Sprite(dropTexture);
+    dropSprite.setSize(dropWidth, dropHeight);
+    dropSprite.setX(MathUtils.random(0f, worldWidth - dropWidth)); //Randomize the drop's x position
+    dropSprite.setY(worldHeight);
+    dropSprites.add(dropSprite);
+
+    //render
+    ...
+}
+```
+
+If you run this, you'll see that we have a catastrophe! There are too many droplets. There should be a delay between each spawn. Whenever we need something to be done in the repeatedly over time with a delay, we can use the TimeUtils class. Declare a new variable to store the time:
+
+```java
+public class Main implements ApplicationListener {
+    ...
+    private long lastDropTime;
+```
+
+`TimeUtils.millis()` gives us the total number of milliseconds that have elapsed January 1, 1970. We can use this to make comparisons over time as the game runs. Modify the spawn code:
+
+```java
+@Override
+public void render() {
+    ...
+
+    //logic
+    float bucketWidth = bucketSprite.getWidth();
+    if (bucketSprite.getX() < 0) bucketSprite.setX(0);
+    else if (bucketSprite.getX() > worldWidth - bucketWidth) bucketSprite.setX(worldWidth - bucketWidth);
+
+    for (Sprite dropSprite : dropSprites) {
+        dropSprite.setY(dropSprite.getY() - 2f * delta);
+    }
+
+    long time = TimeUtils.millis(); //Get the current time in milliseconds
+    if (time - lastDropTime > 1000) { //Check if it has been more than a second (1000ms = 1 s)
+        lastDropTime = time; //update the time, then create the droplet
         float dropWidth = 1;
         float dropHeight = 1;
-        float worldWidth = viewport.getWorldWidth();
-        float worldHeight = viewport.getWorldHeight();
 
         Sprite dropSprite = new Sprite(dropTexture);
         dropSprite.setSize(dropWidth, dropHeight);
@@ -664,10 +725,11 @@ Timer.schedule(new Task() { //Create an inner class
         dropSprite.setY(worldHeight);
         dropSprites.add(dropSprite);
     }
-}, 0f, 1f, -1); //The timer parameters
+    ...
+}
 ```
 
-The timer parameters define how soon it should start this code in seconds (right away), how long the interval is before calling the code again (every 1 second), and how many times it should do this (a negative number means it will do it forever).
+This code gets the current time every frame, then compares it to the last recorded time. If it's been more than a second, it will update the recorded time and proceed to create the droplet. This works as expected now.
 
 These droplets will fall off the screen never to be seen again. Java doesn't forget though. These droplets will remain in memory forever. If you [profile](https://visualvm.github.io/) your game you'll see that we have a memory leak.
 
@@ -693,6 +755,19 @@ public void render() {
 
         //if the top of the drop goes below the bottom of the view, remove it
         if (dropSprite.getY() < -dropHeight) dropSprites.removeIndex(i);
+    }
+
+    long time = TimeUtils.millis();
+    if (time - lastDropTime > 1000) {
+        lastDropTime = time;
+        float dropWidth = 1;
+        float dropHeight = 1;
+
+        Sprite dropSprite = new Sprite(dropTexture);
+        dropSprite.setSize(dropWidth, dropHeight);
+        dropSprite.setX(MathUtils.random(0f, worldWidth - dropWidth));
+        dropSprite.setY(worldHeight);
+        dropSprites.add(dropSprite);
     }
 
     //render
