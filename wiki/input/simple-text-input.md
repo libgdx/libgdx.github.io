@@ -3,7 +3,7 @@ title: Simple text input
 ---
 If an application needs to ask the user for a string, e.g a user name or a password, it can do so by using a simple dialog box that is customizable to some extent.
 
-On the desktop a Swing dialog will be opened, prompting the user to enter a string. ⚠ In the LWJGL3 backend is this method not implemented. (See [here](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backend-lwjgl3/src/com/badlogic/gdx/backends/lwjgl3/Lwjgl3Input.java#L335-L338))
+On the desktop a Swing dialog will be opened, prompting the user to enter a string. (⚠ In the LWJGL3 backend this method is [not yet implemented](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backend-lwjgl3/src/com/badlogic/gdx/backends/lwjgl3/DefaultLwjgl3Input.java#L306).)
 
 On Android a standard Android dialog will be opened, again prompting the user for input.
 
