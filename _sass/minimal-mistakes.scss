@@ -129,7 +129,7 @@ html, body {
 
 .notice {
     border-radius: 0;
-    margin: 1em 0 !important;  /* override*/
+    margin: 1em 0 !important;  /* override */
     padding: 10px;
     font-size: $type-size-5 !important;
     font-style: normal;
@@ -139,7 +139,7 @@ html, body {
 
 .notice--primary {
     border-radius: 0;
-    margin: 1em 0 !important;  /* override*/
+    margin: 1em 0 !important;  /* override */
     padding: 10px;
     font-size: $type-size-5 !important;
     font-style: normal;
@@ -149,64 +149,84 @@ html, body {
 
 .notice--info {
     border-radius: 0;
-    margin: 1em 0 !important;  /* override*/
+    margin: 1em 0 !important;  /* override */
     padding: 10px;
     font-size: $type-size-5 !important;
     font-style: normal;
 
-    background-color: #cfeefc;
+    background-color: rgba(63, 188, 244, .25) !important;
     border-left: 0.25em solid #1f86b5 !important;
-    color: #2b5f76;
 }
 
-.notice--info a {
+@media (prefers-color-scheme: light) {
+  .notice--info {
     color: #2b5f76;
+  }
+
+  .notice--info a {
+      color: #2b5f76;
+  }
 }
 
 .notice--warning {
     border-radius: 0;
-    margin: 1em 0 !important;  /* override*/
+    margin: 1em 0 !important;  /* override */
     padding: 10px;
     font-size: $type-size-5 !important;
     font-style: normal;
 
     background-color: rgba(255, 229, 100, .25) !important;
     border-left: 0.25em solid #e7c000 !important;
-    color: #6b5900;
 }
 
-.notice--warning a {
+@media (prefers-color-scheme: light) {
+  .notice--warning {
     color: #6b5900;
+  }
+
+  .notice--warning a {
+      color: #6b5900;
+  }
 }
 
 .notice--success {
     border-radius: 0;
-    margin: 1em 0 !important;  /* override*/
+    margin: 1em 0 !important;  /* override */
     padding: 10px;
     font-size: $type-size-5 !important;
     font-style: normal;
 
-    background-color: #e2f5ec;
+    background-color: rgba(112, 205, 162, .25) !important;
     border-left: 0.25em solid #42b983 !important;
-    color: #215d42;
 }
 
-.notice--success a {
-    color: #215d42;
+@media (prefers-color-scheme: light) {
+  .notice--success {
+      color: #215d42;
+  }
+
+  .notice--success a {
+      color: #215d42;
+  }
 }
 
 .notice--danger {
     border-radius: 0;
-    margin: 1em 0 !important;  /* override*/
+    margin: 1em 0 !important;  /* override */
     padding: 10px;
     font-size: $type-size-5 !important;
     font-style: normal;
 
-    background-color: #ffe0e0;
+    background-color: rgba(255, 72, 72, .25) !important;
     border-left: 0.25em solid #c00 !important;
-    color: #600;
 }
 
-.notice--danger a {
-    color: #600;
+@media (prefers-color-scheme: light) {
+  .notice--danger {
+      color: #600;
+  }
+
+  .notice--danger a {
+      color: #600;
+  }
 }

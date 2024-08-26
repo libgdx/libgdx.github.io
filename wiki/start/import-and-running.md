@@ -32,19 +32,21 @@ If you have just generated the project in gdx-liftoff, you may click the option 
 If you want to execute your freshly imported project, you have to follow different steps, depending on your IDE and the platform you are targeting.
 ## Desktop
 ### In IDEA/Android Studio:
-1. Extend the Gradle tab on the right sight of your window: <br/>
+1. Extend the Gradle tab on the right side of your window.<br/>
+2. Expand the tasks of your project and then select: `lwjgl3 -> Tasks -> application -> run`:<br/>
   ![](/assets/images/dev/idea/3.png)
-2. Expand the tasks of your project and then select: lwjgl3 -> other -> run.
 
-   **In Android Studio 4.2**, tasks are no longer shown by default. Go to `Settings -> Experimental` and uncheck `Do not build Gradle task list during Gradle sync`. Then sync the project via `File -> Sync Project with Gradle Files`
+   **In Android Studio 4.2**, tasks are no longer shown by default. Go to `Settings -> Experimental` and check `Configure all Gradle tasks during Gradle Sync`. Then sync the project via `File -> Sync Project with Gradle Files`:<br/>
+  ![](/assets/images/dev/idea/4.png)
    {: .notice--primary}
 
 <b>Alternatively</b>, you can create a run configuration:
 1. Right-click your Lwjgl3Launcher class
-2. Select 'Run Lwjgl3Launcher.main()'. This should fail with missing assets, because we need to hook up the assets folder first.
-3. Open up Run Configurations <br/>
+2. Select 'Run Lwjgl3Launcher.main()'. This should fail with missing assets, because we need to hook up the assets folder first:<br/>
+  ![](/assets/images/dev/idea/5.png)
+3. Open up Run Configurations:<br/>
   ![](/assets/images/dev/idea/0.png)
-4. Edit the Run Configuration that was just created by running the lwjgl3 project and set the working directory to point to your `assets` folder <br/>
+4. Edit the Run Configuration that was just created by running the lwjgl3 project and set the working directory to point to your `assets` folder:<br/>
   ![](/assets/images/dev/idea/1.png)
 
     On **macOS**, LWJGL3 projects require one extra step: Either add the ([experimental](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aglfw-awt-macos)) `com.badlogicgames.gdx:gdx-lwjgl3-glfw-awt-macos` dependency to your lwjgl3 project, or, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Additional information can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
