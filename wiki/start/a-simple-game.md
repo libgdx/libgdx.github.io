@@ -11,15 +11,15 @@ Let's make a game! Game design is hard, but if you break up the process into sma
 
 As you can see with the live demo, we're going to make a basic game where you control a bucket to collect water droplets falling from the sky. There is no score or end goal. Just enjoy the experience! Here are the steps that we will use to split up the game design process:
 
-  * Prerequisites
-  * Loading Assets
-  * The Game Life Cycle
-  * Rendering
-  * Input Controls
-  * Game Logic
-  * Sound and Music
-  * Additional Steps
-  * Further Learning
+  * [Prerequisites](/wiki/start/a-simple-game.md#prerequisites)
+  * [Loading Assets](/wiki/start/a-simple-game.md#loading-assets)
+  * [The Game Life Cycle](/wiki/start/a-simple-game.md#the-game-life-cycle)
+  * [Rendering](/wiki/start/a-simple-game.md#rendering)
+  * [Input Controls](/wiki/start/a-simple-game.md#input-controls)
+  * [Game Logic](/wiki/start/a-simple-game.md#game-logic)
+  * [Sound and Music](/wiki/start/a-simple-game.md#sound-and-music)
+  * [Additional Steps](/wiki/start/a-simple-game.md#additional-steps)
+  * [Further Learning](/wiki/start/a-simple-game.md#further-learning)
 
 ## Prerequisites
 There are a few things that you need to do before you begin this tutorial.
@@ -59,11 +59,15 @@ import com.badlogic.gdx.audio.Sound;
 
 There are times where something named in libGDX is named the same as something found in another package. Always opt for the libGDX named class.
 
+![image name](/assets/images/dev/a-simple-game/1.png)
+
 Decimal numbers in OpenGL based games are usually described with floating point variables like `22.5f`. Float is preferred over Double (such as `22.5`) because it uses less memory, it's what's supported by most hardware, and it's what OpenGL usually expects.
 
 Whenever you see ellipses `...` in the code examples below, assume that other code has been removed for brevity. Use the context of the lines you can see to figure out where you should be in the file. If you're completely lost, the complete example is listed at the bottom.
 
-Before we can test our game, we should set the size of the desktop window. Any configuration that needs to happen for the desktop version of your game needs to be set in the LWJGL3 project launcher class.
+Before we can test our game, we should set the size of the desktop window. Any configuration that needs to happen for the desktop version of your game needs to be set in the LWJGL3Launcher class. Find this file in the project folder:
+
+![image name](/assets/images/dev/a-simple-game/2.png)
 
 ```java
 ...
@@ -83,13 +87,15 @@ private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
 ## Loading Assets
 2D games made in libGDX need assets: images, audio, and other resources that comprise the project. In this case, we'll need a bucket, a raindrop, a background, a water drop sound effect, and music. If you're pretty resourceful, you can make these on your own. For simplicity's sake, you can download these examples which are optimized for this tutorial.
 
-[bucket.png](assets/downloads/tutorials/simple-game/bucket.png)
-[drop.png]()(assets/downloads/tutorials/simple-game/drop.png)
-[background.png]()(assets/downloads/tutorials/simple-game/background.png)
-[drop.mp3]()(assets/downloads/tutorials/simple-game/drop.mp3)
-[music.mp3]()(assets/downloads/tutorials/simple-game/music.mp3)
+[bucket.png](assets/downloads/tutorials/simple-game/bucket.png)<br>
+[drop.png](assets/downloads/tutorials/simple-game/drop.png)<br>
+[background.png](assets/downloads/tutorials/simple-game/background.png)<br>
+[drop.mp3](assets/downloads/tutorials/simple-game/drop.mp3)<br>
+[music.mp3](assets/downloads/tutorials/simple-game/music.mp3)
 
-Just having these saved on your computer is not enough. These files need to be placed in the assets folder of your project. Look inside the folder path of the liftoff project you made:
+Just having these saved on your computer is not enough. These files need to be placed in the assets folder of your project. Look inside the project folder:
+
+![image name](/assets/images/dev/a-simple-game/3.png)
 
 There are many folders in here for the different backends that libGDX supports. Assets is a folder shared by all the backends. Whatever you save in here gets distributed with your game. For example, your desktop game will include these files inside your JAR distributable. This is what you give your users so they can play your game.
 
