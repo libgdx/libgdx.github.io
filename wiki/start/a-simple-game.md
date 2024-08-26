@@ -32,7 +32,7 @@ There are a few things that you need to do before you begin this tutorial.
   * Include the Core and Desktop platforms. You may include others, however they will not be discussed in this tutorial.
   * Use the ApplicationListener template
 
-If you have a knowledge of Java code, your experience in libGDX will be a lot easier. However, you should still be able to follow along in this tutorial even if you only have a minimal understanding of how code works.
+Open the project in your chosen IDE. If you have a knowledge of Java code, your experience in libGDX will be a lot easier. However, you should still be able to follow along in this tutorial even if you only have a minimal understanding of how code works.
 
 Comments will be used throughout the code examples to explain the facets of this tutorial. You do not have to copy these comments when writing your code:
 
@@ -99,7 +99,9 @@ Just having these saved on your computer is not enough. These files need to be p
 
 There are many folders in here for the different backends that libGDX supports. Assets is a folder shared by all the backends. Whatever you save in here gets distributed with your game. For example, your desktop game will include these files inside your JAR distributable. This is what you give your users so they can play your game.
 
-libGDX has an emphasis on code. Every asset you use must be loaded through code before you can use it in the rest of your game. This needs to happen when the game starts. Open the project in your chosen IDE, then open the Core project > Main.java. This file is the main file we're going to work in.
+libGDX has an emphasis on code. Every asset you use must be loaded through code before you can use it in the rest of your game. This needs to happen when the game starts. Open the Core project > Main.java. This file is the main file we're going to work in.
+
+![image name](/assets/images/dev/a-simple-game/4.png)
 
 Declare your variables at the top of the file right underneath the `public class Main` line. You'll need a variable for every asset you plan to use:
 
@@ -123,9 +125,9 @@ public void create() {
 }
 ```
 
-This loads the assets into memory. See that the background image is loaded as a texture. Textures are the way that games keep images in video ram. It's actually not efficient to have different textures for each element in the game. It should be one big Texture for them all. Learn about TextureAtlas and TextureRegion in the wiki. For now, we'll keep these as separate textures because it's easier to explain this way.
+This loads the assets into memory. See that the background image is loaded as a texture. Textures are the way that games keep images in video ram. It's actually not efficient to have different textures for each element in the game. It should be one big Texture for them all. Learn about [TexturePacker](/wiki/tools/texture-packer) in the wiki. For now, we'll keep these as separate textures because it's easier to explain this way.
 
-Similarly, we have Sound to handle the raindrop audio file in our project. Sounds are loaded completely into memory so they can be played quickly and repeatedly. Music, on the other hand, is too large to keep entirely in memory. It's streamed from the file in chunks. There is no precise rule about what should or should not be a sound versus a music, but consider any audio shorter than 10 seconds to be a sound.
+Similarly, we have Sound to handle the raindrop audio file in our project. Sounds are loaded completely into memory so they can be played quickly and repeatedly. Music, on the other hand, is too large to keep entirely in memory. It's streamed from the file in chunks. There is no precise rule about what should or should not be a sound versus a music, but you may consider any audio shorter than 10 seconds to be a sound.
 
 ```java
 @Override
@@ -187,19 +189,22 @@ public void dispose() {
 }
 ```
 
-You will use these methods to create your game and all future games you make in libGDX. You'll find that a lot of advanced systems you can use abstract the direct use of these methods, however these remain at the foundation of your code.
+You will use these methods to create your game and all future games you make in libGDX. You'll find that a lot of advanced systems you can use abstract the direct use of these methods, however these remain at the foundation of your code. Most of the code in this example will be in the create and render methods.
 
 ## Rendering
 Now let's talk about rendering. For the most part, all modern games just manipulate textures, drawing them to the screen to give you the final image you see: the frame.
 
-This process is repeated many times per second to give the illusion of motion. That's what we're going to do here. Let's start with some boilerplate code. What is meant by boilerplate code is that you'll use similar code again and again without much change. And you'll see this pattern all over:
+This process is repeated many times per second to give the illusion of motion. That's what we're going to do here. Let's start with some boilerplate code. What is meant by boilerplate code is that you'll use similar code again and again without much change. And you'll see this pattern all over. Declare new variables:
 
 ```java
 public class Main implements ApplicationListener {
     ...
+
     SpriteBatch spriteBatch;
     FitViewport viewport;
 ```
+
+Initialize these variables in the create method:
 
 ```java
 @Override
@@ -209,6 +214,19 @@ public void create() {
     spriteBatch = new SpriteBatch();
 }
 ```
+
+A viewport controls how we see the game. It's like a window from our world into another: the game world. The viewport controls how big this "window" is and how it's placed on our screen. There are many kinds of viewports you can use. A simple one to understand is the FitViewport which will ensure that no matter what size our window is, the full game view will always be visible. The parameters determine how large our visible game world will be in game units. It will "fit" into the window. Each viewport also has a camera which controls what part of the game world is visible and at what zoom. Learn more about [viewports and cameras](/wiki/graphics/viewports) in the wiki.
+
+You should always remember to update the viewport in the resize method:
+
+```java
+@Override
+public void resize(int width, int height) {
+    viewport.update(width, height, true); //true centers the camera
+}
+```
+
+Add some rendering code:
 
 ```java
 public void render() {
@@ -223,18 +241,9 @@ public void render() {
 
 `ScreenUtils.clear(Color.BLACK);` clears the screen. It's a good practice to clear the screen every frame. Otherwise, you'll get weird graphical errors. You can use any color you want, but we'll just settle on Black this time.
 
-```java
-viewport = new FitViewport(8, 5); //The viewport is 8 meters wide and 5 meters tall
-```
-A viewport controls how we see the game. It's like a window from our world into another: the game world. The viewport controls how big this "window" is and how it's placed on our screen. There are many kinds of viewports you can use. A simple one to understand is the FitViewport which will ensure that no matter what size our window is, the full game view will always be visible. The parameters determine how large our visible game world will be in game units. It will "fit" into the window. Each viewport also has a camera which controls what part of the game world is visible and at what zoom. Learn more about [viewports and cameras](/wiki/graphics/viewports) in the wiki.
-
 Ever wonder why your favorite games sometimes have poor FPS or Frames Per Second? Stuttering gameplay is often related to the number of textures being rendered and the capabilities of your player's graphics card. There are tricks to alleviate this. For one, it is more efficient to send all your draw calls at once to the graphics processing unit (GPU). The process of drawing an individual texture is called a draw call. The SpriteBatch is how libGDX combines these draw calls together.
 
-This excerpt from the above example shows how the projection matrix from the Viewport is applied to the SpriteBatch. This is necessary for the images to be shown in the correct place:
-
-```java
-spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
-```
+`spriteBatch.setProjectionMatrix(viewport.getCamera().combined);` shows how the Viewport is applied to the SpriteBatch. This is necessary for the images to be shown in the correct place.
 
 It is important to order the begin and end lines appropriately. You should never draw from a SpriteBatch outside of a begin and an end. If you do, you will get an error message.
 
@@ -244,7 +253,9 @@ spriteBatch.begin();
 spriteBatch.end();
 ```
 
-So, let's do that. The coordinates we provide determine where the bucket will be drawn on the screen. The coordinates begin in the bottom left and grow to the right and up. Our game world is described in imaginary units best defined as meters. For reference our bucket is 100 pixels wide and 100 pixels tall. For simplicity, we will decide that 100 pixels will equal 1 meter, making our bucket 1x1 meters. This ratio of pixels per meter can be anything you want, but make sure whatever you choose is a simple value that makes sense in your game world. Your game logic should really know nothing about pixels:
+So, let's do that. The coordinates we provide determine where the bucket will be drawn on the screen. The coordinates begin in the bottom left and grow to the right and up. Our game world is described in imaginary units best defined as meters. For reference our bucket is 100 pixels wide and 100 pixels tall. For simplicity, we will decide that 100 pixels will equal 1 meter, making our bucket 1x1 meters. This ratio of pixels per meter can be anything you want, but make sure whatever you choose is a simple value that makes sense in your game world. This is typically the size of your tiles or the height of the player character. Your game logic should really know nothing about pixels.
+
+Add the line to draw the bucket:
 
 ```java
 public void render() {
@@ -253,13 +264,15 @@ public void render() {
     spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
     spriteBatch.begin();
 
-    spriteBatch.draw(bucketTexture, 0, 0); //draw the bucket
+    spriteBatch.draw(bucketTexture, 0, 0, 1, 1); //draw the bucket with width/height of 1 meter
 
     spriteBatch.end();
 }
 ```
 
 This code should now draw our bucket at the bottom of the screen in the lower left corner. You can run this game by calling the appropriate Gradle command in Idea or implement whatever steps are needed for your chosen development environment as listed in the [setup guide](/wiki/start/setup). If all things have gone well, you should see our brave, lone bucket sitting in the darkness of the void.
+
+![image name](/assets/images/dev/a-simple-game/5.png)
 
 Let's cheer up this scene with the background. Drawing the background is similar to drawing the bucket. It is drawn at the width/height of the viewport to ensure that the entire view is covered:
 
@@ -274,18 +287,22 @@ public void render() {
     spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
     spriteBatch.begin();
 
-    spriteBatch.draw(bucketTexture, 0, 0); //draw the bucket
+    spriteBatch.draw(bucketTexture, 0, 0, 1, 1); //draw the bucket
     spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight); //draw the background
 
     spriteBatch.end();
 }
 ```
 
-You can run the game and you'll see the background. But what happened to our bucket? We need to talk about draw order. Drawing happens consecutively in the order you list it in code. This is what really happens:
+You can run the game and you'll see the background.
+
+![image name](/assets/images/dev/a-simple-game/6.png)
+
+But what happened to our bucket? We need to talk about draw order. Drawing happens consecutively in the order you list it in code. This is what really happens:
 
 1. The screen is cleared.
 2. The bucket is drawn to the back buffer.
-3. Then the background is drawn over everything. This final image is then shown on the screen. 
+3. The background is drawn over everything. This final image is then shown on the screen. 
 
 This process is repeated every frame. To resolve this problem, we simply we need to reorder our draw calls.
 
@@ -300,11 +317,13 @@ public void render() {
     spriteBatch.begin();
 
     spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight); //draw the background
-    spriteBatch.draw(bucketTexture, 0, 0); //draw the bucket
+    spriteBatch.draw(bucketTexture, 0, 0, 1, 1); //draw the bucket
 
     spriteBatch.end();
 }
 ```
+
+![image name](/assets/images/dev/a-simple-game/7.png)
 
 We'll skip rendering the droplets for now and return to it when we have the logic to randomly create them.
 
@@ -312,6 +331,8 @@ We'll skip rendering the droplets for now and return to it when we have the logi
 It's not fun to have a game without some sort of movement or action on screen. Let's enable the player's ability to control the bucket. As you know, there are all sorts of ways to get input from a user. We'll focus on a few: the keyboard, mouse, and touch.
 
 We need some way of keeping track of where the player bucket is in the game world. Texture does not store any position state. Sure, you can tell SpriteBatch where to draw it every frame by using the provided overloaded methods. What if you want to rotate it? Resize it? These methods get incredibly complicated the more you want to do.
+
+![image name](/assets/images/dev/a-simple-game/8.png)
 
 Let's use a Sprite instead. Sprite is capable of doing all these things and keeping state. This means that it will remember its properties instead of you having to define them every frame.
 
@@ -333,7 +354,7 @@ public void create() {
 }
 ```
 
-Erase the SpriteBatch.draw line. The Sprite draw code is written in a different way:
+Erase the SpriteBatch.draw line for the bucket. The Sprite draw code is written in a different way:
 
 ```java
 public void render() {
@@ -361,12 +382,12 @@ public void render() {
     float worldWidth = viewport.getWorldWidth();
     float worldHeight = viewport.getWorldHeight();
 
-    //input
+    //input - label this section to divide our code
     if (Gdx.input.isKeyPressed(Keys.LEFT)) {
         //todo: Do something when the user presses the left arrow
     }
 
-    //rendering
+    //rendering - label this section to divide our code
     ScreenUtils.clear(Color.BLACK);
     viewport.apply();
     spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
@@ -381,43 +402,54 @@ public void render() {
 
 This is known as keyboard polling. Every time a frame is drawn, we're going to check if a key is pressed. There is a list of pretty much every conceivable key in Gdx.input.Keys. We want to react to the user pressing the left arrow key.
 
+![image name](/assets/images/dev/a-simple-game/9.png)
+
 That's great, but what is supposed to happen when the key is pressed? We need to move the coordinates of the bucket sprite.
 
 ```java
+...
+
 //input
-if (Gdx.input.isKeyPressed(Keys.LEFT)) {
-    bucketSprite.setX(bucketSprite.getX() - 4f); //Move the bucket left
+if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
+    bucketSprite.setX(bucketSprite.getX() + .5f); //Move the bucket right
 }
+
 ...
 ```
 
-The number dictates how fast the bucket moves. Adding to the x makes the bucket move to the right. This basically means "set the bucket x to what it currently is right now plus a little bit more". Subtracting from the x makes the bucket move to the left.
+The number `.5f` dictates how fast the bucket moves. Adding to the x makes the bucket move to the right. This basically means "set the bucket x to what it currently is right now plus a little bit more". Subtracting from the x makes the bucket move to the left.
 
 An unfortunate side effect of having our logic inside the render method is that our code behaves differently on different hardware. This is because of differences in framerate. More frames per second means more movement per second.
 
 To counteract this, we need to use delta time. Delta time is the measured time between frames. If we multiply our movement by delta time, the movement will be consistent no matter what hardware we run this game on.
 
 ```java
-//input
-float delta = Gdx.graphics.getDeltaTime();
+...
 
-if (Gdx.input.isKeyPressed(Keys.LEFT)) {
-    bucketSprite.setX(bucketSprite.getX() - 4f * delta); //Move the bucket left
+//input
+float delta = Gdx.graphics.getDeltaTime(); //retrieve the current delta
+
+if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
+    bucketSprite.setX(bucketSprite.getX() + .5f * delta); //Move the bucket right
 }
+
 ...
 ```
 
-This effectively means that the number we select here is how far the bucket moves in one second. Remember to use delta time whenever you are calculating something that happens over time. Now let's copy the code for movement to the right. Flip the minus to a plus to move to the right.
+This effectively means that the number we select here is how far the bucket moves in one second. Remember to use delta time whenever you are calculating something that happens over time. Adjust the number to a value that moves the bucket at an acceptable speed like `4f`. Now let's copy the code for movement to the right. Flip the plus to a minus to move to the right.
 
 ```java
+...
+
 //input
 float delta = Gdx.graphics.getDeltaTime();
 
-if (Gdx.input.isKeyPressed(Keys.LEFT)) {
-    bucketSprite.setX(bucketSprite.getX() - 4f * delta); //move the bucket left
-} else if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
+if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
     bucketSprite.setX(bucketSprite.getX() + 4f * delta); //move the bucket right
+} else if (Gdx.input.isKeyPressed(Keys.LEFT)) {
+    bucketSprite.setX(bucketSprite.getX() - 4f * delta); //move the bucket left
 }
+
 ...
 ```
 
@@ -425,6 +457,8 @@ if (Gdx.input.isKeyPressed(Keys.LEFT)) {
 Mouse and Touch controls are related. To react to the user clicking or tapping the screen, call the following method:
 
 ```java
+...
+
 //input
 float delta = Gdx.graphics.getDeltaTime();
 
@@ -437,6 +471,7 @@ if (Gdx.input.isKeyPressed(Keys.LEFT)) {
 if (Gdx.input.isTouched()) {
     //todo:React to the player touching the screen
 }
+
 ...
 ```
 
