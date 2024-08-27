@@ -411,15 +411,17 @@ That's great, but what is supposed to happen when the key is pressed? We need to
 
 //input
 if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
-    bucketSprite.setX(bucketSprite.getX() + .5f); //Move the bucket right
+    bucketSprite.setX(bucketSprite.getX() + .25f); //Move the bucket right
 }
 
 ...
 ```
 
-The number `.5f` dictates how fast the bucket moves. Adding to the x makes the bucket move to the right. This basically means "set the bucket x to what it currently is right now plus a little bit more". Subtracting from the x makes the bucket move to the left.
+The number `.25f` dictates how fast the bucket moves. Adding to the x makes the bucket move to the right. This basically means "set the bucket x to what it currently is right now plus a little bit more". Subtracting from the x makes the bucket move to the left.
 
 An unfortunate side effect of having our logic inside the render method is that our code behaves differently on different hardware. This is because of differences in framerate. More frames per second means more movement per second.
+
+![image name](/assets/images/dev/a-simple-game/10.png)
 
 To counteract this, we need to use delta time. Delta time is the measured time between frames. If we multiply our movement by delta time, the movement will be consistent no matter what hardware we run this game on.
 
@@ -430,7 +432,7 @@ To counteract this, we need to use delta time. Delta time is the measured time b
 float delta = Gdx.graphics.getDeltaTime(); //retrieve the current delta
 
 if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
-    bucketSprite.setX(bucketSprite.getX() + .5f * delta); //Move the bucket right
+    bucketSprite.setX(bucketSprite.getX() + .25f * delta); //Move the bucket right
 }
 
 ...
