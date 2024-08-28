@@ -18,7 +18,6 @@ As you can see with the live demo, we're going to make a basic game where you co
   * [Input Controls](/wiki/start/a-simple-game.md#input-controls)
   * [Game Logic](/wiki/start/a-simple-game.md#game-logic)
   * [Sound and Music](/wiki/start/a-simple-game.md#sound-and-music)
-  * [Additional Steps](/wiki/start/a-simple-game.md#additional-steps)
   * [Further Learning](/wiki/start/a-simple-game.md#further-learning)
 
 ## Prerequisites
@@ -210,6 +209,7 @@ Initialize these variables in the create method:
 @Override
 public void create() {
     ...
+
     viewport = new FitViewport(8, 5);
     spriteBatch = new SpriteBatch();
 }
@@ -278,14 +278,14 @@ Let's cheer up this scene with the background. Drawing the background is similar
 
 ```java
 public void render() {
-    //store the worldWidth and worldHeight as local variables for brevity
-    float worldWidth = viewport.getWorldWidth();
-    float worldHeight = viewport.getWorldHeight();
-
     ScreenUtils.clear(Color.BLACK);
     viewport.apply();
     spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
     spriteBatch.begin();
+
+    //store the worldWidth and worldHeight as local variables for brevity
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
 
     spriteBatch.draw(bucketTexture, 0, 0, 1, 1); //draw the bucket
     spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight); //draw the background
@@ -316,6 +316,7 @@ public void render() {
     spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
     spriteBatch.begin();
 
+    //rearrange these two lines
     spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight); //draw the background
     spriteBatch.draw(bucketTexture, 0, 0, 1, 1); //draw the bucket
 
@@ -325,7 +326,7 @@ public void render() {
 
 ![image name](/assets/images/dev/a-simple-game/7.png)
 
-We'll skip rendering the droplets for now and return to it when we have the logic to randomly create them.
+We'll skip rendering the droplets for now and return to it when we have the logic to create them.
 
 ## Input Controls
 It's not fun to have a game without some sort of movement or action on screen. Let's enable the player's ability to control the bucket. As you know, there are all sorts of ways to get input from a user. We'll focus on a few: the keyboard, mouse, and touch.
@@ -338,11 +339,8 @@ Let's use a Sprite instead. Sprite is capable of doing all these things and keep
 
 ```java
 public class Main implements ApplicationListener {
-    Texture backgroundTexture;
-    Texture bucketTexture;
-    Texture dropTexture;
-    Sprite bucketSprite; //Declare a new Sprite variable
     ...
+    Sprite bucketSprite; //Declare a new Sprite variable
 ```
 
 ```java
@@ -366,37 +364,57 @@ public void render() {
     spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
     spriteBatch.begin();
 
-    spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight); //draw the background
+    spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight);
     bucketSprite.draw(spriteBatch); //Sprites have their own draw method
 
     spriteBatch.end();
 }
 ```
 
-### Keyboard
-Now to capturing player input. This is how you detect if a player is pressing keys on the keyboard. This needs to happen in the render method before images are drawn.
+Our code is going to get more complex now. A good practice is to divide your code into separate methods. Create the following methods and move all your rendering code into the `draw()` method.
 
 ```java
 @Override
 public void render() {
-    float worldWidth = viewport.getWorldWidth();
-    float worldHeight = viewport.getWorldHeight();
+    //organize code into three methods
+    input();
+    logic();
+    draw();
+}
 
-    //input - label this section to divide our code
-    if (Gdx.input.isKeyPressed(Keys.LEFT)) {
-        //todo: Do something when the user presses the left arrow
-    }
+private void input() {
 
-    //rendering - label this section to divide our code
+}
+
+private void logic() {
+
+}
+
+private void draw() {
     ScreenUtils.clear(Color.BLACK);
     viewport.apply();
     spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
     spriteBatch.begin();
-
-    spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight);
-    bucketSprite.draw(spriteBatch);
-
+    
+    //store the worldWidth and worldHeight as local variables for brevity
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
+    
+    spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight); //draw the background
+    bucketSprite.draw(spriteBatch); //Sprites have their own draw method
+    
     spriteBatch.end();
+}
+```
+
+### Keyboard
+Now to capturing player input. This is how you detect if a player is pressing keys on the keyboard. This needs to happen in the input method
+
+```java
+private void input() {
+    if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
+        //todo: Do something when the user presses the right arrow
+    }
 }
 ```
 
@@ -407,14 +425,11 @@ This is known as keyboard polling. Every time a frame is drawn, we're going to c
 That's great, but what is supposed to happen when the key is pressed? We need to move the coordinates of the bucket sprite.
 
 ```java
-...
-
-//input
-if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
-    bucketSprite.setX(bucketSprite.getX() + .25f); //Move the bucket right
+private void input() {
+    if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
+        bucketSprite.setX(bucketSprite.getX() + .25f); //Move the bucket right
+    }
 }
-
-...
 ```
 
 The number `.25f` dictates how fast the bucket moves. Adding to the x makes the bucket move to the right. This basically means "set the bucket x to what it currently is right now plus a little bit more". Subtracting from the x makes the bucket move to the left.
@@ -426,98 +441,34 @@ An unfortunate side effect of having our logic inside the render method is that 
 To counteract this, we need to use delta time. Delta time is the measured time between frames. If we multiply our movement by delta time, the movement will be consistent no matter what hardware we run this game on.
 
 ```java
-...
+private void input() {
+    float delta = Gdx.graphics.getDeltaTime(); //retrieve the current delta
 
-//input
-float delta = Gdx.graphics.getDeltaTime(); //retrieve the current delta
-
-if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
-    bucketSprite.setX(bucketSprite.getX() + .25f * delta); //Move the bucket right
+    if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
+        bucketSprite.setX(bucketSprite.getX() + .25f * delta); //Move the bucket right
+    }
 }
-
-...
 ```
 
 This effectively means that the number we select here is how far the bucket moves in one second. Remember to use delta time whenever you are calculating something that happens over time. Adjust the number to a value that moves the bucket at an acceptable speed like `4f`. Now let's copy the code for movement to the right. Flip the plus to a minus to move to the right.
 
 ```java
-...
+private void input() {
+    float delta = Gdx.graphics.getDeltaTime();
 
-//input
-float delta = Gdx.graphics.getDeltaTime();
-
-if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
-    bucketSprite.setX(bucketSprite.getX() + 4f * delta); //move the bucket right
-} else if (Gdx.input.isKeyPressed(Keys.LEFT)) {
-    bucketSprite.setX(bucketSprite.getX() - 4f * delta); //move the bucket left
+    if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
+        bucketSprite.setX(bucketSprite.getX() + 4f * delta); //move the bucket right
+    } else if (Gdx.input.isKeyPressed(Keys.LEFT)) {
+        bucketSprite.setX(bucketSprite.getX() - 4f * delta); //move the bucket left
+    }
 }
-
-...
 ```
 
 ### Mouse and Touch Controls
 Mouse and Touch controls are related. To react to the user clicking or tapping the screen, call the following method:
 
 ```java
-...
-
-//input
-float delta = Gdx.graphics.getDeltaTime();
-
-if (Gdx.input.isKeyPressed(Keys.LEFT)) {
-    bucketSprite.setX(bucketSprite.getX() - 4f * delta);
-} else if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
-    bucketSprite.setX(bucketSprite.getX() + 4f * delta);
-}
-
-if (Gdx.input.isTouched()) {
-    //todo:React to the player touching the screen
-}
-
-...
-```
-
-Now the player has clicked the screen, but where did they click? We can use the methods Gdx.input.getX() and Gdx.input.getY() for this. Unfortunately, these values are in window coordinates which don't correlate to our selected pixels per meter. The coordinates are also upside down because Window coordinates start from the top left. We need to create a Vector3 object to do some math.
-
-```java
-public class Main implements ApplicationListener {
-    ...
-    Vector3 touchPos;
-```
-
-```java
-@Override
-public void create() {
-    ...
-    touchPos = new Vector3();
-}
-```
-
-Notice that we have created a single instance variable for the Vector3 instead of creating it locally. By reusing this Vector3, we prevent the game from triggering the garbage collector frequently which causes lag spikes in the game. This is how we use the vector3 to move the bucket:
-
-```java
-...
-if (Gdx.input.isTouched()) {
-    touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 1); //Get where the touch happened on screen
-    viewport.unproject(touchPos); //Convert the units to the world units of the viewport
-    bucketSprite.setX(touchPos.x); //Change the horizontal position of the bucket
-}
-...
-```
-
-This converts the window coordinates to coordinates in our world space. This code actually supports mobile devices as well, however you should read about [some other input features](/wiki/input/event-handling) that libGDX provides you.
-
-## Game Logic
-The player can move left and right now, but they can go completely off the screen. We need to prevent the player from doing that. Remember that the left side of the screen starts at 0.
-This code detects if the bucket goes too far left. If it does, it snaps its position at the farthest it's allowed to go. 
-
-```java
-@Override
-public void render() {
-    float worldWidth = viewport.getWorldWidth();
-    float worldHeight = viewport.getWorldHeight();
-
-    //input
+private void input() {
     float delta = Gdx.graphics.getDeltaTime();
 
     if (Gdx.input.isKeyPressed(Keys.LEFT)) {
@@ -526,66 +477,96 @@ public void render() {
         bucketSprite.setX(bucketSprite.getX() + 4f * delta);
     }
 
-    if (Gdx.input.isTouched()) {
-        touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 1);
-        viewport.unproject(touchPos);
-        bucketSprite.setX(touchPos.x);
+    if (Gdx.input.isTouched()) { //If the user has clicked or tapped the screen
+        //todo:React to the player touching the screen
+    }
+}
+```
+
+Now the player has clicked the screen, but where did they click? We can use the methods Gdx.input.getX() and Gdx.input.getY() for this. Unfortunately, these values are in window coordinates which don't correlate to our selected pixels per meter. The coordinates are also upside down because Window coordinates start from the top left. We need to declare a Vector3 object to do some math.
+
+```java
+public class Main implements ApplicationListener {
+    ...
+    Vector3 touchPos;
+```
+
+Initialize the Vector3:
+
+```java
+@Override
+public void create() {
+    ...
+
+    touchPos = new Vector3();
+}
+```
+
+Notice that we have created a single instance variable for the Vector3 instead of creating it locally. By reusing this Vector3, we prevent the game from triggering the garbage collector frequently which causes lag spikes in the game. This is how we use the Vector3 to move the bucket:
+
+```java
+private void input() {
+    float delta = Gdx.graphics.getDeltaTime();
+
+
+    if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
+        bucketSprite.setX(bucketSprite.getX() + 4f * delta);
+    } else if (Gdx.input.isKeyPressed(Keys.LEFT)) {
+        bucketSprite.setX(bucketSprite.getX() - 4f * delta);
     }
 
-    //logic
-    if (bucketSprite.getX() < 0) bucketSprite.setX(0); //If x is less than 0, reset to 0
+    if (Gdx.input.isTouched()) {
+        touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 1); //Get where the touch happened on screen
+        viewport.unproject(touchPos); //Convert the units to the world units of the viewport
+        bucketSprite.setX(touchPos.x); //Change the horizontal position of the bucket
+    }
+}
+```
 
-    //render
-    ...
+This converts the window coordinates to coordinates in our world space. This code actually supports mobile devices as well, however you should read about [some other input features](/wiki/input/event-handling) that libGDX provides you.
+
+## Game Logic
+The player can move left and right now, but they can go completely off the screen. We need to prevent the player from doing that. Remember that the left side of the screen starts at 0.
+This code detects if the bucket goes too far left. If it does, it snaps its position at the farthest it's allowed to go. Add the following line to the logic method
+
+```java
+private void logic() {
+    if (bucketSprite.getX() < 0) bucketSprite.setX(0); //If x is less than 0, reset to 0
 }
 ```
 
 Let's do the other side.
 
 ```java
-@Override
-public void render() {
+private void logic() {
+    //store the worldWidth and worldHeight as local variables for brevity
     float worldWidth = viewport.getWorldWidth();
     float worldHeight = viewport.getWorldHeight();
 
-    //input
-    ...
-
-    //logic
-    float bucketWidth = bucketSprite.getWidth(); //Store the bucket size for brevity
-    float bucketHeight = bucketSprite.getHeight();
-
     if (bucketSprite.getX() < 0) bucketSprite.setX(0);
     else if (bucketSprite.getX() > worldWidth) //If x is greater than world width
-        bucketSprite.setX(worldWidth); //reset x to world width
-
-    //render
-    ...
+        bucketSprite.setX(worldWidth); //Reset x to world width
 }
 ```
 
 This kind of works, but it lets the bucket go just a little too far right. In fact, it's one whole unit too far to the right. This is because the bucket sprite has an origin on the bottom left of the image. To resolve this, we need to subtract the width of the bucket from the right edge.
 
 ```java
-@Override
-public void render() {
-    //input
-    ...
+private void logic() {
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
 
-    //logic
+    //Store the bucket size for brevity
     float bucketWidth = bucketSprite.getWidth();
     float bucketHeight = bucketSprite.getHeight();
 
     if (bucketSprite.getX() < 0) bucketSprite.setX(0);
     else if (bucketSprite.getX() > worldWidth - bucketWidth) //Subtract the bucket width
         bucketSprite.setX(worldWidth - bucketWidth); //Subtract here too
-
-    //render
-    ...
 }
 ```
 
-Now to spawn the rain drops. We will have more than one raindrop, so we need a list to keep track of them. Thankfully, libGDX has many useful [collections](/wiki/utils/collections) to help with this.
+Now to spawn the rain drops. We will have more than one raindrop, so we need a list to keep track of them. Thankfully, libGDX has many useful [collections](/wiki/utils/collections) to help with this. Declare the list:
 
 ```java
 public class Main implements ApplicationListener {
@@ -593,41 +574,61 @@ public class Main implements ApplicationListener {
     Array<Sprite> dropSprites;
 ```
 
+Initialize the list:
+
 ```java
 public void create() {
     ...
+
     dropSprites = new Array<>();
 }
 ```
 
-We'll create our first rain drop in the create method.
+As before, it is advised to organize your code into methods. Create a new method to create a droplet. Place it after your draw method.
 
 ```java
-public void create() {
+private void draw() {
     ...
-    dropSprites = new Array<>();
+}
 
+private void createDroplet() {
     //create local variables for convenience
     float dropWidth = 1;
     float dropHeight = 1;
     float worldWidth = viewport.getWorldWidth();
     float worldHeight = viewport.getWorldHeight();
     
+    //create the drop sprite
     Sprite dropSprite = new Sprite(dropTexture);
     dropSprite.setSize(dropWidth, dropHeight);
     dropSprite.setX(MathUtils.random(0f, worldWidth - dropWidth));
     dropSprite.setY(worldHeight);
-    dropSprites.add(dropSprite);
+    dropSprites.add(dropSprite); //Add it to the list
+}
+
+@Override
+public void pause() {
+
 }
 ```
 
-The size is the same as the player. Setting the y position at the top of the screen will make it appear as if it's falling from the sky. The `dropSprites.add(dropSprite);` line adds the drop to the list of drops that we can manage in our render loop. Drawing each drop is pretty simple:
+The size is the same as the player. Setting the y position at the top of the screen will make it appear as if it's falling from the sky. The `dropSprites.add(dropSprite);` line adds the drop to the list of drops that we can manage in our render loop. 
+
+We'll call `createDroplet()` in the create method.
 
 ```java
-@Override
-public void render() {
+public void create() {
     ...
-    //rendering
+    dropSprites = new Array<>();
+
+    createDroplet();
+}
+```
+
+Drawing each drop is pretty simple. Add the sprite drawing code to the draw method:
+
+```java
+private void draw() {
     ScreenUtils.clear(Color.BLACK);
     viewport.apply();
     spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
@@ -648,33 +649,29 @@ public void render() {
 If you run the program now, you'll see nothing happen. That's because the droplet doesn't have any movement code. Begin coding the logic for the droplets after the bucket logic:
 
 ```java
-@Override
-public void render() {
-    ...
-    //logic
+private void logic() {
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
     float bucketWidth = bucketSprite.getWidth();
+    float bucketHeight = bucketSprite.getHeight();
+
     if (bucketSprite.getX() < 0) bucketSprite.setX(0);
-    else if (bucketSprite.getX() > worldWidth - bucketWidth) bucketSprite.setX(worldWidth - bucketWidth);
+    else if (bucketSprite.getX() > worldWidth - bucketWidth)
+        bucketSprite.setX(worldWidth - bucketWidth);
+
+    float delta = Gdx.graphics.getDeltaTime(); //retrieve the current delta
 
     //loop through each drop
     for (Sprite dropSprite : dropSprites) {
         dropSprite.setY(dropSprite.getY() - 2f * delta); //move the drop downward every frame
     }
-
-    //rendering
-    ...
 }
 ```
-
-It might seem inefficient to have two separate loops for logic and rendering, but there is a good reason for this as you will soon see. It's also good practice to keep logic and rendering code independent from each other.
 
 We have a problem here. The rain drop only spawns on the left side every time. You could change the position, of course, but there is no variability. No randomness. We need it to be a random position between 0 and the width of the world.
 
 ```java
-public void create() {
-    ...
-    dropSprites = new Array<>();
-
+public void createDroplet() {
     float dropWidth = 1;
     float dropHeight = 1;
     float worldWidth = viewport.getWorldWidth();
@@ -690,67 +687,65 @@ public void create() {
 
 Again, we're subtracting the width of the sprite so none of the raindrops appear outside of the view. Success!
 
-That's only one droplet though. When it rains, we should have multiple droplets over the course of time. Let's move the droplet spawning code to the render method. This will make droplets repeatedly every frame.
+That's only one droplet though. When it rains, we should have multiple droplets over the course of time. Let's move the droplet spawning code to the logic method. This will make droplets repeatedly every frame.
 
 ```java
 public void create() {
     ...
     dropSprites = new Array<>();
 
-    //cut all the code from create
+    //cut the createDroplet() line from the create method
 }
 ```
 
 ```java
-@Override
-public void render() {
-    ...
-
-    //logic
+private void logic() {
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
     float bucketWidth = bucketSprite.getWidth();
+    float bucketHeight = bucketSprite.getHeight();
+
     if (bucketSprite.getX() < 0) bucketSprite.setX(0);
-    else if (bucketSprite.getX() > worldWidth - bucketWidth) bucketSprite.setX(worldWidth - bucketWidth);
+    else if (bucketSprite.getX() > worldWidth - bucketWidth)
+        bucketSprite.setX(worldWidth - bucketWidth);
+
+    float delta = Gdx.graphics.getDeltaTime();
 
     for (Sprite dropSprite : dropSprites) {
         dropSprite.setY(dropSprite.getY() - 2f * delta);
     }
 
-    //paste the spawn droplet code here
-    float dropWidth = 1;
-    float dropHeight = 1;
-    float worldWidth = viewport.getWorldWidth();
-    float worldHeight = viewport.getWorldHeight();
-    
-    Sprite dropSprite = new Sprite(dropTexture);
-    dropSprite.setSize(dropWidth, dropHeight);
-    dropSprite.setX(MathUtils.random(0f, worldWidth - dropWidth)); //Randomize the drop's x position
-    dropSprite.setY(worldHeight);
-    dropSprites.add(dropSprite);
-
-    //render
-    ...
+    //paste the line here
+    createDroplet()
 }
 ```
 
-If you run this, you'll see that we have a catastrophe! There are too many droplets. There should be a delay between each spawn. Whenever we need something to be done in the repeatedly over time with a delay, we can use the TimeUtils class. Declare a new variable to store the time:
+If you run this, you'll see that we have a catastrophe! There are too many droplets.
+
+![image name](/assets/images/dev/a-simple-game/11.png)
+
+There should be a delay between each spawn. Whenever we need something to be done repeatedly over time with a delay, we can use the TimeUtils class. Declare a new variable to store the time:
 
 ```java
 public class Main implements ApplicationListener {
     ...
-    private long lastDropTime;
+    long lastDropTime;
 ```
 
-`TimeUtils.millis()` gives us the total number of milliseconds that have elapsed January 1, 1970. We can use this to make comparisons over time as the game runs. Modify the spawn code:
+`TimeUtils.millis()` gives us the total number of milliseconds that have elapsed January 1, 1970. We can use this to make comparisons over time as the game runs. Modify the code in the logic method:
 
 ```java
-@Override
-public void render() {
-    ...
-
-    //logic
+private void logic() {
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
     float bucketWidth = bucketSprite.getWidth();
+    float bucketHeight = bucketSprite.getHeight();
+
     if (bucketSprite.getX() < 0) bucketSprite.setX(0);
-    else if (bucketSprite.getX() > worldWidth - bucketWidth) bucketSprite.setX(worldWidth - bucketWidth);
+    else if (bucketSprite.getX() > worldWidth - bucketWidth)
+        bucketSprite.setX(worldWidth - bucketWidth);
+
+    float delta = Gdx.graphics.getDeltaTime();
 
     for (Sprite dropSprite : dropSprites) {
         dropSprite.setY(dropSprite.getY() - 2f * delta);
@@ -758,35 +753,34 @@ public void render() {
 
     long time = TimeUtils.millis(); //Get the current time in milliseconds
     if (time - lastDropTime > 1000) { //Check if it has been more than a second (1000ms = 1 s)
-        lastDropTime = time; //update the time, then create the droplet
-        float dropWidth = 1;
-        float dropHeight = 1;
-
-        Sprite dropSprite = new Sprite(dropTexture);
-        dropSprite.setSize(dropWidth, dropHeight);
-        dropSprite.setX(MathUtils.random(0f, worldWidth - dropWidth));
-        dropSprite.setY(worldHeight);
-        dropSprites.add(dropSprite);
+        lastDropTime = time; //Update the time
+        createDroplet(); //Create the droplet
     }
-    ...
 }
 ```
 
 This code gets the current time every frame, then compares it to the last recorded time. If it's been more than a second, it will update the recorded time and proceed to create the droplet. This works as expected now.
 
+![image name](/assets/images/dev/a-simple-game/12.png)
+
 These droplets will fall off the screen never to be seen again. Java doesn't forget though. These droplets will remain in memory forever. If you [profile](https://visualvm.github.io/) your game you'll see that we have a memory leak.
 
-So, we should remove the drop sprite from the list when it falls off screen. We need to make some considerable modifications to the logic for loop.
+![image name](/assets/images/dev/a-simple-game/13.png)
+
+If the player would leave the game on for a really long time, it will crash. So, we should remove the drop sprite from the list when it falls off screen. We need to make some considerable modifications to the logic for loop.
 
 ```java
-@Override
-public void render() {
-    ...
-
-    //logic
+private void logic() {
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
     float bucketWidth = bucketSprite.getWidth();
+    float bucketHeight = bucketSprite.getHeight();
+
     if (bucketSprite.getX() < 0) bucketSprite.setX(0);
-    else if (bucketSprite.getX() > worldWidth - bucketWidth) bucketSprite.setX(worldWidth - bucketWidth);
+    else if (bucketSprite.getX() > worldWidth - bucketWidth)
+        bucketSprite.setX(worldWidth - bucketWidth);
+
+    float delta = Gdx.graphics.getDeltaTime();
 
     //Loop through the sprites backwards to prevent out of bounds errors
     for (int i = dropSprites.size - 1; i >= 0; i--) {
@@ -803,24 +797,14 @@ public void render() {
     long time = TimeUtils.millis();
     if (time - lastDropTime > 1000) {
         lastDropTime = time;
-        float dropWidth = 1;
-        float dropHeight = 1;
-
-        Sprite dropSprite = new Sprite(dropTexture);
-        dropSprite.setSize(dropWidth, dropHeight);
-        dropSprite.setX(MathUtils.random(0f, worldWidth - dropWidth));
-        dropSprite.setY(worldHeight);
-        dropSprites.add(dropSprite);
+        createDroplet();
     }
-
-    //render
-    ...
 }
 ```
 
 Removing items in a list while you are iterating through it can cause some unforeseen bugs. That's why you should iterate through the list backwards so you don't skip any indexes. Make sure to learn about other [collections](/wiki/utils/collections#specialized-lists) available like the SnapshotArray and the DelayedRemovalArray for more complex projects.
 
-This is great, however the drops don't interact with the bucket. This is where we incorporate some rudimentary collision detection. This can be achieved with the Rectangle class. We need two rectangles to make comparisons. One for the bucket and one to be reused with every drop.
+We have made great progress, however the drops don't interact with the bucket. This is where we incorporate some rudimentary collision detection. This can be achieved with the Rectangle class. We need two rectangles to make comparisons. One for the bucket and one to be reused with every drop.
 
 ```java
 public class Main implements ApplicationListener {
@@ -833,6 +817,7 @@ public class Main implements ApplicationListener {
 @Override
 public void create() {
     ...
+
     bucketRectangle = new Rectangle();
     dropRectangle = new Rectangle();
 }
@@ -841,19 +826,18 @@ public void create() {
 The code now sets the rectangles to the position and dimensions of the Sprites.
 
 ```java
-@Override
-public void render() {
-    //input
-    ...
-
-    //logic
+private void logic() {
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
     float bucketWidth = bucketSprite.getWidth();
     float bucketHeight = bucketSprite.getHeight();
 
     if (bucketSprite.getX() < 0) bucketSprite.setX(0);
-    else if (bucketSprite.getX() > worldWidth - bucketWidth) bucketSprite.setX(worldWidth - bucketWidth);
+    else if (bucketSprite.getX() > worldWidth - bucketWidth)
+        bucketSprite.setX(worldWidth - bucketWidth);
 
-    //set the bucket position and size
+    float delta = Gdx.graphics.getDeltaTime();
+    //Apply the bucket position and size to the bucketRectangle
     bucketRectangle.set(bucketSprite.getX(), bucketSprite.getY(), bucketWidth, bucketHeight);
 
     for (int i = dropSprites.size - 1; i >= 0; i--) {
@@ -862,6 +846,7 @@ public void render() {
         float dropHeight = dropSprite.getHeight();
 
         dropSprite.setY(dropSprite.getY() - 2f * delta);
+        //Apply the drop position and size to the dropRectangle
         dropRectangle.set(dropSprite.getX(), dropSprite.getY(), dropWidth, dropHeight);
 
         if (dropSprite.getY() < -dropHeight) dropSprites.removeIndex(i);
@@ -870,29 +855,31 @@ public void render() {
         }
     }
 
-    //render
-    ...
+    long time = TimeUtils.millis();
+    if (time - lastDropTime > 1000) {
+        lastDropTime = time;
+        createDroplet();
+    }
 }
 ```
 
-`bucketRectangle.overlaps(dropRectangle)` checks if bucket overlaps the drop. If it does, remove the Sprite from the list of drop Sprites. That means it will no longer be drawn or acted upon. It simply doesn't exist anymore, making it look like the bucket collected it.
+`bucketRectangle.overlaps(dropRectangle)` checks if bucket overlaps the drop. If it does, the Sprite will be removed from the list of drop Sprites. That means it will no longer be drawn or acted upon. It simply doesn't exist anymore, making it look like the bucket collected it.
 
 ## Sound and Music
 It's very easy to add a line to play a sound effect now that we are at the end of our workflow. We want the drop sound to play when the bucket collides with the drop. It should not play when the drop falls out of the level.
 
 ```java
-@Override
-public void render() {
-    //input
-    ...
-
-    //logic
+private void logic() {
+    float worldWidth = viewport.getWorldWidth();
+    float worldHeight = viewport.getWorldHeight();
     float bucketWidth = bucketSprite.getWidth();
     float bucketHeight = bucketSprite.getHeight();
 
     if (bucketSprite.getX() < 0) bucketSprite.setX(0);
-    else if (bucketSprite.getX() > worldWidth - bucketWidth) bucketSprite.setX(worldWidth - bucketWidth);
+    else if (bucketSprite.getX() > worldWidth - bucketWidth)
+        bucketSprite.setX(worldWidth - bucketWidth);
 
+    float delta = Gdx.graphics.getDeltaTime();
     bucketRectangle.set(bucketSprite.getX(), bucketSprite.getY(), bucketWidth, bucketHeight);
 
     for (int i = dropSprites.size - 1; i >= 0; i--) {
@@ -902,7 +889,7 @@ public void render() {
 
         dropSprite.setY(dropSprite.getY() - 2f * delta);
         dropRectangle.set(dropSprite.getX(), dropSprite.getY(), dropWidth, dropHeight);
-
+        
         if (dropSprite.getY() < -dropHeight) dropSprites.removeIndex(i);
         else if (bucketRectangle.overlaps(dropRectangle)) {
             dropSprites.removeIndex(i);
@@ -910,8 +897,11 @@ public void render() {
         }
     }
 
-    //render
-    ...
+    long time = TimeUtils.millis();
+    if (time - lastDropTime > 1000) {
+        lastDropTime = time;
+        createDroplet();
+    }
 }
 ```
 
@@ -928,14 +918,13 @@ public void create() {
 }
 ```
 
-## Additional Steps
-So, you're at the final steps of making a game. You should test the game out. Tweak values to make the game easier or harder.
-
-If you want to let your friends and colleagues try your game out, you'll need to make a distributable that they can play. No one is going to want set up an IDE and copy your entire project just to play it. See the page on Importing & Running a project.
-
 ## Further learning
-Now that you've completed the simple game, it's time to extend the simple game. This project managed to put all of its code in a single class. This was in the service of making it simple, but it is a terrible way to organize code. The next tutorial will teach you about the Game class and how to implement Screen to arrange your project. It will also cover other important improvements to your game. For example, these instructions skipped the use of the dispose() method because it's not relevant for single page project. When working with multiple screens, you may want to dispose of resources from the last screen to release the memory for new resources in your game.
+So, you're at the final steps of making a game. You should test the game out. Tweak values to make the game easier or harder. This can be done by changing how fast the bucket moves and what rate the droplets spawn.
 
-Game design is a constant journey of learning. The wiki goes furth in depth regarding all the subjects you have learned here. Look into collections, TexturePacker, AssetManager, audio, and user input.
+If you want to let your friends and colleagues try your game out, you'll need to make a distributable that they can play. No one is going to want set up an IDE and copy your entire project just to play it. See the page on [Deploying your application](/wiki/deployment/deploying-your-application).
 
-This tutorial focused entirely on desktop development. There are many more considerations you must make before you explore Android, iOS, and HTML5 development. Java is not truly "write once, run anywhere" but libGDX takes you pretty close to that goal.
+Now that you've completed the simple game, it's time to [extend the simple game](/wiki/start/simple-game-extended). This project managed to put all of its code in a single class. This was in the service of making it simple, but it is a terrible way to organize code. The next tutorial will teach you about the Game class and how to implement Screen to arrange your project. It will also cover other important improvements to your game. For example, these instructions skipped the use of the dispose() method because it's not relevant for single page project. When working with multiple screens, you may want to dispose of resources from the last screen to release the memory for new resources in your game.
+
+Game design is a constant journey of learning. The [wiki](/wiki/) goes further in depth regarding all the subjects you have learned here. Look into [collections](/wiki/utils/collections), [TexturePacker](/wiki/tools/texture-packer), [AssetManager](/wiki/managing-your-assets), [audio](/wiki/audio/audio), and [user input](/wiki/input/input-handling).
+
+This tutorial focused entirely on desktop development. There are many more considerations you must make before you explore Android, iOS, and HTML5 development. There is an extensive article on [considerations for HTML5](/wiki/html5-backend-and-gwt-specifics), for example. Java is not truly "write once, run anywhere" but libGDX takes you pretty close to that goal.
