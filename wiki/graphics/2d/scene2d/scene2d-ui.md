@@ -45,7 +45,7 @@ Check out [libGDX.info](https://libgdxinfo.wordpress.com/) for examples showcasi
    * [Dialog](#dialog)
  * [Widgets without scene2d.ui](#widgets-without-scene2dui)
  * [Drag and Drop](#drag-and-drop-draganddrop-class)
- * [Usage without touch or mouse](#Keycontrol)
+ * [Usage without touch or mouse](#usage-without-touch-or-mouse)
  * [Examples](#examples)
 
 # Widget and WidgetGroup
