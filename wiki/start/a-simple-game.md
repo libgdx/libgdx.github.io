@@ -23,7 +23,7 @@ As you can see with the live demo, we're going to make a basic game where you co
 ## Prerequisites
 There are a few things that you need to do before you begin this tutorial.
 
-  * Make sure to follow the setup instructions on libgdx.com to configure Java and your IDE. You need to know how to create a project and run it with the appropriate Gradle commands.
+  * Make sure to follow the [setup instructions](/wiki/start/setup) on libgdx.com to configure Java and your IDE. You need to know how to create a project and run it with the appropriate Gradle commands.
   * Create a project in GDX-Liftoff with the following settings:
     * Project Name: Drop
     * Package: com.badlogic.drop
@@ -75,7 +75,7 @@ private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
     Lwjgl3ApplicationConfiguration configuration = new Lwjgl3ApplicationConfiguration();
     configuration.setTitle("Drop");
     configuration.useVsync(true);
-    configuration.setForegroundFPS(Lwjgl3ApplicationConfiguration.getDisplayMode().refreshRate);
+    configuration.setForegroundFPS(Lwjgl3ApplicationConfiguration.getDisplayMode().refreshRate + 1);
     configuration.setWindowedMode(800, 500); //this line changes the size of the window
     configuration.setWindowIcon("libgdx128.png", "libgdx64.png", "libgdx32.png", "libgdx16.png");
 
@@ -86,11 +86,11 @@ private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
 ## Loading Assets
 2D games made in libGDX need assets: images, audio, and other resources that comprise the project. In this case, we'll need a bucket, a raindrop, a background, a water drop sound effect, and music. If you're pretty resourceful, you can make these on your own. For simplicity's sake, you can download these examples which are optimized for this tutorial.
 
-[bucket.png](assets/downloads/tutorials/simple-game/bucket.png)<br>
-[drop.png](assets/downloads/tutorials/simple-game/drop.png)<br>
-[background.png](assets/downloads/tutorials/simple-game/background.png)<br>
-[drop.mp3](assets/downloads/tutorials/simple-game/drop.mp3)<br>
-[music.mp3](assets/downloads/tutorials/simple-game/music.mp3)
+[bucket.png](/assets/downloads/tutorials/simple-game/bucket.png)<br>
+[drop.png](/assets/downloads/tutorials/simple-game/drop.png)<br>
+[background.png](/assets/downloads/tutorials/simple-game/background.png)<br>
+[drop.mp3](/assets/downloads/tutorials/simple-game/drop.mp3)<br>
+[music.mp3](/assets/downloads/tutorials/simple-game/music.mp3)
 
 Just having these saved on your computer is not enough. These files need to be placed in the assets folder of your project. Look inside the project folder:
 
