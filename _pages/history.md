@@ -163,8 +163,14 @@ p a:active {
 <div class="timeline">
   <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
     <div class="content">
+      <h2>2023</h2>
+      <p>In 2023, we not only released versions <a href="/news/2023/07/gdx-1-12">1.12.0</a> and <a href="/news/2023/11/gdx-1-12-1">1.12.1</a> of libGDX, but raeleus also completely <a href="/news/2023/11/devlog-9-new-particle-editor">remade our particle editor</a>.</p>
+    </div>
+  </div>
+  <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
+    <div class="content">
       <h2>2022</h2>
-      <p>2022 brought you all the version <a href="/news/2022/05/gdx-1-11">1.11</a> of libGDX. With its release, <a href="/news/2021/07/devlog-7-lwjgl3">LWJGL 3</a> became the default desktop backend – something that had been in the works since 2015. We were also very proud to announce our <a href="/news/2022/02/jam-march-2022">20th libGDX game jam</a>.</p>
+      <p>2022 brought you all the version <a href="/news/2022/05/gdx-1-11">1.11</a> of libGDX. With its release, <a href="/news/2021/07/devlog-7-lwjgl3">LWJGL 3</a> became the default desktop backend – something that had been in the works since 2015. We were also very proud to announce our <a href="/news/2022/02/jam-march-2022">20th libGDX game jam</a>. In addition, at the start of the year, we <a href="/news/2022/01/devlog-8-wiki-migration">migrated our wiki</a> to this website.</p>
     </div>
   </div>
   <div class="container right" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom">
