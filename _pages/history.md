@@ -161,7 +161,7 @@ p a:active {
 <link rel="stylesheet" href="/assets/css/aos.css" />
 
 <div class="timeline">
-  <div class="container left" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
+  <div class="container right" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom">
     <div class="content">
       <h2>2023</h2>
       <p>In 2023, we not only released versions <a href="/news/2023/07/gdx-1-12">1.12.0</a> and <a href="/news/2023/11/gdx-1-12-1">1.12.1</a> of libGDX, but raeleus also completely <a href="/news/2023/11/devlog-9-new-particle-editor">remade our particle editor</a>.</p>
