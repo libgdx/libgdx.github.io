@@ -61,7 +61,7 @@ There are times where something named in libGDX is named the same as something f
 
 ![libGDX Rectangle class](/assets/images/dev/a-simple-game/1.png)
 
-Decimal numbers in OpenGL based games are usually described with floating point variables like `22.5f`. Float is preferred over Double (such as `22.5`) because it uses less memory, it's what's supported by most hardware, and it's what OpenGL usually expects.
+Decimal numbers in OpenGL based games (like those made with libGDX) are usually described with floating point variables like `22.5f`. Float is preferred over Double (such as `22.5`) because it uses less memory, it's what's supported by most hardware, and it's what OpenGL usually expects.
 
 Whenever you see ellipses `...` in the code examples below, assume that other code has been removed for brevity. Use the context of the lines you can see to figure out where you should be in the file. If you're completely lost, the complete example is listed at the bottom.
 
@@ -353,7 +353,7 @@ private void draw() {
 
 ![background with bucket](/assets/images/dev/a-simple-game/8.png)
 
-We'll skip rendering the droplets for now and return to it when we have the logic to create them.
+Ensure that your game shows the background and the bucket. We'll skip rendering the droplets for now and return to it when we have the logic to create them.
 
 ## Input Controls
 It's not fun to have a game without some sort of movement or action on screen. Let's enable the player's ability to control the bucket. As you know, there are all sorts of ways to get input from a user. We'll focus on a few: the keyboard, mouse, and touch.
@@ -379,7 +379,7 @@ public void create() {
 }
 ```
 
-Erase the SpriteBatch.draw line for the bucket. The Sprite draw code is written in a different way:
+Erase the `spriteBatch.draw(bucketTexture, 0, 0, 1, 1);` line for the bucket. The Sprite draw code is written in a different way:
 
 ```java
 private void draw() {
@@ -681,9 +681,11 @@ private void createDroplet() {
 
 Again, we're subtracting the width of the sprite so none of the raindrops appear outside of the view. Success!
 
-That's only one droplet though. When it rains, we should have multiple droplets over the course of time. Let's move the droplet spawning code to the logic method. This will make droplets repeatedly every frame.
+That's only one droplet though. When it rains, we should have multiple droplets over the course of time. Let's move the droplet spawning code to the logic method. This will make droplets repeatedly every frame. Cut the line from the create method:
 
 ![Cut the droplet](/assets/images/dev/a-simple-game/12.png)
+
+Paste it into the logic method:
 
 ```java
 private void logic() {
@@ -739,7 +741,7 @@ private void logic() {
     }
 
     long time = TimeUtils.millis(); //Get the current time in milliseconds
-    if (time - lastDropTime > 1000) { //Check if it has been more than a second (1000ms = 1 s)
+    if (time - lastDropTime > 1000) { //Check if it has been more than a second (1000ms = 1s)
         lastDropTime = time; //Update the time
         createDroplet(); //Create the droplet
     }
@@ -854,7 +856,7 @@ private void logic() {
 }
 ```
 
-`bucketRectangle.overlaps(dropRectangle)` checks if bucket overlaps the drop. If it does, the Sprite will be removed from the list of drop Sprites. That means it will no longer be drawn or acted upon. It simply doesn't exist anymore, making it look like the bucket collected it. Make sure your game works as expected. You're almost done!
+`bucketRectangle.overlaps(dropRectangle)` checks if the bucket overlaps the drop. If it does, the Sprite will be removed from the list of drop Sprites. That means it will no longer be drawn or acted upon. It simply doesn't exist anymore, making it look like the bucket collected it. Make sure your game works as expected. You're almost done!
 
 ## Sound and Music
 It's very easy to add a line to play a sound effect now that we are at the end of our workflow. We want the drop sound (the sound effect loaded at the beginning of this tutorial) to play when the bucket collides with the drop. It should not play when the drop falls out of the level.
@@ -945,7 +947,6 @@ import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.TimeUtils;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
-/** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class Main implements ApplicationListener {
     Texture backgroundTexture;
     Texture bucketTexture;
@@ -983,30 +984,29 @@ public class Main implements ApplicationListener {
 
     @Override
     public void resize(int width, int height) {
-        viewport.update(width, height, true); //true centers the camera
+        viewport.update(width, height, true);
     }
 
     @Override
     public void render() {
-        //organize code into three methods
         input();
         logic();
         draw();
     }
 
     private void input() {
-        float delta = Gdx.graphics.getDeltaTime(); //retrieve the current delta
+        float delta = Gdx.graphics.getDeltaTime();
 
         if (Gdx.input.isKeyPressed(Keys.RIGHT)) {
-            bucketSprite.setX(bucketSprite.getX() + 4f * delta); //move the bucket right
+            bucketSprite.setX(bucketSprite.getX() + 4f * delta);
         } else if (Gdx.input.isKeyPressed(Keys.LEFT)) {
-            bucketSprite.setX(bucketSprite.getX() - 4f * delta); //move the bucket left
+            bucketSprite.setX(bucketSprite.getX() - 4f * delta);
         }
 
         if (Gdx.input.isTouched()) {
-            touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 1); //Get where the touch happened on screen
-            viewport.unproject(touchPos); //Convert the units to the world units of the viewport
-            bucketSprite.setX(touchPos.x); //Change the horizontal position of the bucket
+            touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 1);
+            viewport.unproject(touchPos);
+            bucketSprite.setX(touchPos.x);
         }
     }
 
@@ -1051,14 +1051,12 @@ public class Main implements ApplicationListener {
         spriteBatch.setProjectionMatrix(viewport.getCamera().combined);
         spriteBatch.begin();
 
-        //store the worldWidth and worldHeight as local variables for brevity
         float worldWidth = viewport.getWorldWidth();
         float worldHeight = viewport.getWorldHeight();
 
-        spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight); //draw the background
-        bucketSprite.draw(spriteBatch); //Sprites have their own draw method
+        spriteBatch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight);
+        bucketSprite.draw(spriteBatch);
 
-        //draw each sprite
         for (Sprite dropSprite : dropSprites) {
             dropSprite.draw(spriteBatch);
         }
@@ -1067,33 +1065,31 @@ public class Main implements ApplicationListener {
     }
 
     private void createDroplet() {
-        //create local variables for convenience
         float dropWidth = 1;
         float dropHeight = 1;
         float worldWidth = viewport.getWorldWidth();
         float worldHeight = viewport.getWorldHeight();
 
-        //create the drop sprite
         Sprite dropSprite = new Sprite(dropTexture);
         dropSprite.setSize(dropWidth, dropHeight);
         dropSprite.setX(MathUtils.random(0f, worldWidth - dropWidth));
         dropSprite.setY(worldHeight);
-        dropSprites.add(dropSprite); //Add it to the list
+        dropSprites.add(dropSprite);
     }
 
     @Override
     public void pause() {
-        // Invoked when your application is paused.
+        
     }
 
     @Override
     public void resume() {
-        // Invoked when your application is resumed after pause.
+        
     }
 
     @Override
     public void dispose() {
-        // Destroy application's resources here.
+        
     }
 }
 ```
