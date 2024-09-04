@@ -476,7 +476,7 @@ private void input() {
     }
 
     if (Gdx.input.isTouched()) {
-        touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 1); // Get where the touch happened on screen
+        touchPos.set(Gdx.input.getX(), Gdx.input.getY()); // Get where the touch happened on screen
         viewport.unproject(touchPos); // Convert the units to the world units of the viewport
         bucketSprite.setCenterX(touchPos.x); // Change the horizontally centered position of the bucket
     }
