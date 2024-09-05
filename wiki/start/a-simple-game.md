@@ -63,7 +63,7 @@ There are times where something named in libGDX is named the same as something f
 
 Decimal numbers in OpenGL based games (like those made with libGDX) are usually described with floating point variables like `22.5f`. Forgetting the "f" can cause build errors. `float` is preferred over `double` (such as `22.5`) because it uses less memory, it's what's supported by most hardware, and it's what OpenGL usually expects. You can check what parameters a method expects by pressing `ctrl+p` in IDEA.
 
-~[method parameters](/assets/images/dev/a-simple-game/2.png)
+[method parameters](/assets/images/dev/a-simple-game/2.png)
 
 Whenever you see ellipses `...` in the code examples below, assume that other code has been removed for brevity. Use the context of the lines you can see to figure out where you should be in the file. If you're completely lost, the complete example is listed at the bottom.
 
@@ -92,8 +92,8 @@ private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
 <a href="/assets/downloads/tutorials/simple-game/bucket.png?nomagnify" download="bucket">bucket.png</a><br>
 <a href="/assets/downloads/tutorials/simple-game/drop.png?nomagnify" download="drop">drop.png</a><br>
 <a href="/assets/downloads/tutorials/simple-game/background.png?nomagnify" download="background">background.png</a><br>
-<a href="/assets/downloads/tutorials/simple-game/drop.png?nomagnify" download="drop">drop.mp3</a><br>
-<a href="/assets/downloads/tutorials/simple-game/music.png?nomagnify" download="music">music.mp3</a>
+<a href="/assets/downloads/tutorials/simple-game/drop.mp3?nomagnify" download="drop">drop.mp3</a><br>
+<a href="/assets/downloads/tutorials/simple-game/music.mp3?nomagnify" download="music">music.mp3</a>
 
 Just having these saved on your computer is not enough. These files need to be placed in the assets folder of your project. Look inside the project folder:
 
