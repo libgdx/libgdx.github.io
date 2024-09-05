@@ -87,13 +87,13 @@ private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
 ```
 
 ## Loading Assets
-2D games made in libGDX need assets: images, audio, and other resources that comprise the project. In this case, we'll need a bucket, a raindrop, a background, a water drop sound effect, and music. If you're pretty resourceful, you can make these on your own. For simplicity's sake, you can download these examples which are optimized for this tutorial (Right click > Save as)
+2D games made in libGDX need assets: images, audio, and other resources that comprise the project. In this case, we'll need a bucket, a raindrop, a background, a water drop sound effect, and music. If you're pretty resourceful, you can make these on your own. For simplicity's sake, you can download these examples which are optimized for this tutorial.
 
-[bucket.png](/assets/downloads/tutorials/simple-game/bucket.png)<br>
-[drop.png](/assets/downloads/tutorials/simple-game/drop.png)<br>
-[background.png](/assets/downloads/tutorials/simple-game/background.png)<br>
-[drop.mp3](/assets/downloads/tutorials/simple-game/drop.mp3)<br>
-[music.mp3](/assets/downloads/tutorials/simple-game/music.mp3)
+<a href="/assets/downloads/tutorials/simple-game/bucket.png?nomagnify" download="bucket">bucket.png</a><br>
+<a href="/assets/downloads/tutorials/simple-game/drop.png?nomagnify" download="drop">drop.png</a><br>
+<a href="/assets/downloads/tutorials/simple-game/background.png?nomagnify" download="background">background.png</a><br>
+<a href="/assets/downloads/tutorials/simple-game/drop.png?nomagnify" download="drop">drop.mp3</a><br>
+<a href="/assets/downloads/tutorials/simple-game/music.png?nomagnify" download="music">music.mp3</a>
 
 Just having these saved on your computer is not enough. These files need to be placed in the assets folder of your project. Look inside the project folder:
 
