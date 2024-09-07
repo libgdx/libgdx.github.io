@@ -11,15 +11,15 @@ Let's make a game! Game design is hard, but if you break up the process into sma
 
 As you can see with the live demo, we're going to make a basic game where you control a bucket to collect water droplets falling from the sky. There is no score or end goal. Just enjoy the experience! Here are the steps that we will use to split up the game design process:
 
-  * [Prerequisites](/wiki/start/a-simple-game.md#prerequisites)
-  * [Loading Assets](/wiki/start/a-simple-game.md#loading-assets)
-  * [The Game Life Cycle](/wiki/start/a-simple-game.md#the-game-life-cycle)
-  * [Rendering](/wiki/start/a-simple-game.md#rendering)
-  * [Input Controls](/wiki/start/a-simple-game.md#input-controls)
-  * [Game Logic](/wiki/start/a-simple-game.md#game-logic)
-  * [Sound and Music](/wiki/start/a-simple-game.md#sound-and-music)
-  * [Further Learning](/wiki/start/a-simple-game.md#further-learning)
-  * [Full Example Code](/wiki/start/a-simple-game.md#full-example-code)
+  * [Prerequisites](#prerequisites)
+  * [Loading Assets](#loading-assets)
+  * [The Game Life Cycle](#the-game-life-cycle)
+  * [Rendering](#rendering)
+  * [Input Controls](#input-controls)
+  * [Game Logic](#game-logic)
+  * [Sound and Music](#sound-and-music)
+  * [Further Learning](#further-learning)
+  * [Full Example Code](#full-example-code)
 
 ## Prerequisites
 There are a few things that you need to do before you begin this tutorial.
