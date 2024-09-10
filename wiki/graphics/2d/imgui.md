@@ -65,7 +65,8 @@ The following instructions detail how ImGui can be used in a libGDX game. For ea
          Gdx.input.setInputProcessor(tmpProcessor);
          tmpProcessor = null;
       }
-
+      
+      imGuiGl3.newFrame();
       imGuiGlfw.newFrame();
       ImGui.newFrame();
    }
