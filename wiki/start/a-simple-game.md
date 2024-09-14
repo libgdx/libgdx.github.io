@@ -704,7 +704,7 @@ private void logic() {
 
 ![3 droplets](/assets/images/dev/a-simple-game/15.png)
 
-These droplets will fall off the screen never to be seen again. Java doesn't forget though. These droplets will remain in memory forever. If you [profile](https:// visualvm.github.io/) your game you'll see that we have a memory leak.
+These droplets will fall off the screen never to be seen again. Java doesn't forget though. These droplets will remain in memory forever. If you [profile](https://visualvm.github.io/) your game you'll see that we have a memory leak.
 
 ![memory profile](/assets/images/dev/a-simple-game/16.png)
 
