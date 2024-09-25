@@ -63,7 +63,7 @@ There are times where something named in libGDX is named the same as something f
 
 Decimal numbers in OpenGL based games (like those made with libGDX) are usually described with floating point variables like `22.5f`. Forgetting the "f" can cause build errors. `float` is preferred over `double` (such as `22.5`) because it uses less memory, it's what's supported by most hardware, and it's what OpenGL usually expects. You can check what parameters a method expects by pressing `ctrl+p` in IDEA.
 
-[method parameters](/assets/images/dev/a-simple-game/2.png)
+![method parameters](/assets/images/dev/a-simple-game/2.png)
 
 Whenever you see ellipses `...` in the code examples below, assume that other code has been removed for brevity. Use the context of the lines you can see to figure out where you should be in the file. If you're completely lost, the complete example is listed at the bottom.
 
