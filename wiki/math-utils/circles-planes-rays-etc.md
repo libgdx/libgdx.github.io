@@ -43,7 +43,7 @@ A plane is an infinite two-dimensional surface in three-dimensional space descri
 
 ----
 
-# [Polygons](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/Polygon.html)[(code)] (https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Polygon.java)
+# [Polygons](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/Polygon.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Polygon.java)
 
 A simple class defining a two-dimensional polygon from a list of points. It can be easily translated, rotated, and scaled. It also provides the ability to test a point for containment within the polygon. Polygon to polygon intersection can be tested by using the [Intersector](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/Intersector.html) [(code)](https://github.com/libgdx/libgdx/tree/master/gdx/src/com/badlogic/gdx/math/Intersector.java) class, assuming the polygons are convex.
 
