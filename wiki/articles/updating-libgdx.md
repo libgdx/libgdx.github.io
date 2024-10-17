@@ -17,7 +17,7 @@ Your Gradle based project makes it very easy to switch between releases and nigh
 gdxVersion=1.12.1
 ```
 
-The version you see may be higher than `1.12.1`. Once you've located that string, you can simply change it to the latest release (or an older release) or to the current SNAPSHOT version. You may also have to update other versions and dependencies based on the [versions listing](/dev/versions/). Once edited, save the `gradle.properties` file.
+The version you see may be higher than `1.12.1`. Once you've located that string, you can simply change it to the latest release (or an older release) or to the current SNAPSHOT version. You may also have to update other versions and dependencies based on the changelog of libGDX. Once edited, save the `gradle.properties` file.
 
 The next step is dependent on your IDE:
 
