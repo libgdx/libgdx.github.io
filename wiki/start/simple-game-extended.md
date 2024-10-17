@@ -21,18 +21,28 @@ We will start by creating a `Drop` class, which extends Game and whose `create()
 package com.badlogic.drop;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.viewport.FitViewport;
 
 
 public class Drop extends Game {
 
 	public SpriteBatch batch;
 	public BitmapFont font;
+	public FitViewport viewport;
+
 
 	public void create() {
 		batch = new SpriteBatch();
 		font = new BitmapFont(); // use libGDX's default Arial font
+		viewport = new FitViewport(8, 5);
+		
+		//font has 15pt, but we need to scale it our viewport by ratio of viewport height to screen height 
+		font.setUseIntegerPositions(false);
+		font.getData().setScale(viewport.getWorldHeight() / Gdx.graphics.getHeight());
+		
 		this.setScreen(new MainMenuScreen(this));
 	}
 
@@ -48,7 +58,7 @@ public class Drop extends Game {
 }
 ```
 
-We start the application with instantiating a SpriteBatch and a BitmapFont. It is a bad practice to create multiple objects that can be shared instead (see [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself)). The SpriteBatch object is used to render objects onto the screen, such as textures; and the BitmapFont object is used, along with a SpriteBatch, to render text onto the screen. We will touch more on this in the Screen classes.
+We start the application with instantiating a SpriteBatch, BitmapFont and a Viewport. It is a bad practice to create multiple objects that can be shared instead (see [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself)). The SpriteBatch object is used to render objects onto the screen, such as textures; and the BitmapFont object is used, along with a SpriteBatch, to render text onto the screen. We will touch more on this in the Screen classes.
 
 Next, we set the Screen of the Game to a `MainMenuScreen` object, with a Drop instance as its first and only parameter.
 
@@ -66,19 +76,13 @@ package com.badlogic.drop;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 
 public class MainMenuScreen implements Screen {
 
 	final Drop game;
 
-	OrthographicCamera camera;
-
 	public MainMenuScreen(final Drop game) {
 		this.game = game;
-
-		camera = new OrthographicCamera();
-		camera.setToOrtho(false, 800, 480);
 	}
 
 
@@ -98,14 +102,15 @@ public class MainMenuScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
-		ScreenUtils.clear(0, 0, 0.2f, 1);
+		ScreenUtils.clear(Color.BLACK);
 
-		camera.update();
-		game.batch.setProjectionMatrix(camera.combined);
+		game.viewport.apply();
+		game.batch.setProjectionMatrix(game.viewport.getCamera().combined);
 
 		game.batch.begin();
-		game.font.draw(game.batch, "Welcome to Drop!!! ", 100, 150);
-		game.font.draw(game.batch, "Tap anywhere to begin!", 100, 100);
+		//draw text. Remember that x and y are in meters
+		game.font.draw(game.batch, "Welcome to Drop!!! ", 1, 1.5f);
+		game.font.draw(game.batch, "Tap anywhere to begin!", 1, 1);
 		game.batch.end();
 
 		if (Gdx.input.isTouched()) {
@@ -124,6 +129,15 @@ The code here is fairly straightforward, except for the fact that we need to cal
 
 We then check to see if the screen has been touched, if it has, then we check to set the games screen to a GameScreen instance, and then dispose of the current instance of MainMenuScreen. The rest of the methods that are needed to implement in the MainMenuScreen are left empty, so I'll continue to omit them (there is nothing to dispose of in this class).
 
+Also remember to update viewport on resize.
+
+```java
+@Override
+public void resize(int width, int height) {
+	game.viewport.update(width, height, true);
+}
+```
+
 ## The Game Screen
 Now that we have our main menu finished, it's time to finally get to making our game. We will be lifting most of the code from the [original game](/wiki/start/a-simple-game) as to avoid redundancy, and avoid having to think of a different game idea to implement as simply as Drop is.
 
@@ -131,148 +145,164 @@ Now that we have our main menu finished, it's time to finally get to making our 
 ```java
 package com.badlogic.drop;
 
-import java.util.Iterator;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.badlogic.gdx.utils.TimeUtils;
 
 public class GameScreen implements Screen {
 	final Drop game;
 
-	Texture dropImage;
-	Texture bucketImage;
+	Texture backgroundTexture;
+	Texture bucketTexture;
+	Texture dropTexture;
 	Sound dropSound;
-	Music rainMusic;
-	OrthographicCamera camera;
-	Rectangle bucket;
-	Array<Rectangle> raindrops;
-	long lastDropTime;
+	Music music;
+	Sprite bucketSprite;
+	Vector2 touchPos;
+	Array<Sprite> dropSprites;
+	float dropTimer;
+	Rectangle bucketRectangle;
+	Rectangle dropRectangle;
 	int dropsGathered;
 
 	public GameScreen(final Drop game) {
 		this.game = game;
 
-		// load the images for the droplet and the bucket, 64x64 pixels each
-		dropImage = new Texture(Gdx.files.internal("droplet.png"));
-		bucketImage = new Texture(Gdx.files.internal("bucket.png"));
+		// load the images for the background, bucket and droplet
+		backgroundTexture = new Texture("background.png");
+		bucketTexture = new Texture("bucket.png");
+		dropTexture = new Texture("drop.png");
 
-		// load the drop sound effect and the rain background "music"
-		dropSound = Gdx.audio.newSound(Gdx.files.internal("drop.wav"));
-		rainMusic = Gdx.audio.newMusic(Gdx.files.internal("rain.mp3"));
-		rainMusic.setLooping(true);
+		// load the drop sound effect and background music
+		dropSound = Gdx.audio.newSound(Gdx.files.internal("drop.mp3"));
+		music = Gdx.audio.newMusic(Gdx.files.internal("music.mp3"));
+		music.setLooping(true);
+		music.setVolume(0.5F);
 
-		// create the camera and the SpriteBatch
-		camera = new OrthographicCamera();
-		camera.setToOrtho(false, 800, 480);
-
-		// create a Rectangle to logically represent the bucket
-		bucket = new Rectangle();
-		bucket.x = 800 / 2 - 64 / 2; // center the bucket horizontally
-		bucket.y = 20; // bottom left corner of the bucket is 20 pixels above
-						// the bottom screen edge
-		bucket.width = 64;
-		bucket.height = 64;
-
-		// create the raindrops array and spawn the first raindrop
-		raindrops = new Array<Rectangle>();
-		spawnRaindrop();
-
-	}
-
-	private void spawnRaindrop() {
-		Rectangle raindrop = new Rectangle();
-		raindrop.x = MathUtils.random(0, 800 - 64);
-		raindrop.y = 480;
-		raindrop.width = 64;
-		raindrop.height = 64;
-		raindrops.add(raindrop);
-		lastDropTime = TimeUtils.nanoTime();
-	}
-
-	@Override
-	public void render(float delta) {
-		// clear the screen with a dark blue color. The
-		// arguments to clear are the red, green
-		// blue and alpha component in the range [0,1]
-		// of the color to be used to clear the screen.
-		ScreenUtils.clear(0, 0, 0.2f, 1);
-
-		// tell the camera to update its matrices.
-		camera.update();
-
-		// tell the SpriteBatch to render in the
-		// coordinate system specified by the camera.
-		game.batch.setProjectionMatrix(camera.combined);
-
-		// begin a new batch and draw the bucket and
-		// all drops
-		game.batch.begin();
-		game.font.draw(game.batch, "Drops Collected: " + dropsGathered, 0, 480);
-		game.batch.draw(bucketImage, bucket.x, bucket.y, bucket.width, bucket.height);
-		for (Rectangle raindrop : raindrops) {
-			game.batch.draw(dropImage, raindrop.x, raindrop.y);
-		}
-		game.batch.end();
-
-		// process user input
-		if (Gdx.input.isTouched()) {
-			Vector3 touchPos = new Vector3();
-			touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
-			camera.unproject(touchPos);
-			bucket.x = touchPos.x - 64 / 2;
-		}
-		if (Gdx.input.isKeyPressed(Keys.LEFT))
-			bucket.x -= 200 * Gdx.graphics.getDeltaTime();
-		if (Gdx.input.isKeyPressed(Keys.RIGHT))
-			bucket.x += 200 * Gdx.graphics.getDeltaTime();
-
-		// make sure the bucket stays within the screen bounds
-		if (bucket.x < 0)
-			bucket.x = 0;
-		if (bucket.x > 800 - 64)
-			bucket.x = 800 - 64;
-
-		// check if we need to create a new raindrop
-		if (TimeUtils.nanoTime() - lastDropTime > 1000000000)
-			spawnRaindrop();
-
-		// move the raindrops, remove any that are beneath the bottom edge of
-		// the screen or that hit the bucket. In the later case we increase the
-		// value our drops counter and add a sound effect.
-		Iterator<Rectangle> iter = raindrops.iterator();
-		while (iter.hasNext()) {
-			Rectangle raindrop = iter.next();
-			raindrop.y -= 200 * Gdx.graphics.getDeltaTime();
-			if (raindrop.y + 64 < 0)
-				iter.remove();
-			if (raindrop.overlaps(bucket)) {
-				dropsGathered++;
-				dropSound.play();
-				iter.remove();
-			}
-		}
-	}
-
-	@Override
-	public void resize(int width, int height) {
+		bucketSprite = new Sprite(bucketTexture);
+		bucketSprite.setSize(1, 1);
+		
+		touchPos = new Vector2();
+		
+		bucketRectangle = new Rectangle();
+		dropRectangle = new Rectangle();
+		
+		dropSprites = new Array<>();
 	}
 
 	@Override
 	public void show() {
 		// start the playback of the background music
 		// when the screen is shown
-		rainMusic.play();
+		music.play();
+	}
+
+	@Override
+	public void render(float delta) {
+		input();
+		logic();
+		draw();
+	}
+
+	private void input() {
+		float speed = 4f;
+		float delta = Gdx.graphics.getDeltaTime();
+        
+		if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+			bucketSprite.translateX(speed * delta);
+		}
+		else if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+			bucketSprite.translateX(-speed * delta);
+		}
+	
+		if (Gdx.input.isTouched()) {
+			touchPos.set(Gdx.input.getX(), Gdx.input.getY());
+			game.viewport.unproject(touchPos);
+			bucketSprite.setCenterX(touchPos.x);
+		}
+	}
+
+	private void logic() {
+		float worldWidth = game.viewport.getWorldWidth();
+		float worldHeight = game.viewport.getWorldHeight();
+		float bucketWidth = bucketSprite.getWidth();
+		float bucketHeight = bucketSprite.getHeight();
+		float delta = Gdx.graphics.getDeltaTime();
+	
+		bucketSprite.setX(MathUtils.clamp(bucketSprite.getX(), 0, worldWidth - bucketWidth));
+		bucketRectangle.set(bucketSprite.getX(), bucketSprite.getY(), bucketWidth, bucketHeight);
+	
+		for (int i = dropSprites.size - 1; i >= 0; i--) {
+			Sprite dropSprite = dropSprites.get(i);
+			float dropWidth = dropSprite.getWidth();
+			float dropHeight = dropSprite.getHeight();
+
+            dropSprite.translateY(-2f * delta);
+			dropRectangle.set(dropSprite.getX(), dropSprite.getY(), dropWidth, dropHeight);
+	
+			if (dropSprite.getY() < -dropHeight) dropSprites.removeIndex(i);
+			else if (bucketRectangle.overlaps(dropRectangle)) {
+				dropsGathered++;
+				dropSprites.removeIndex(i);
+				dropSound.play();
+			}
+		}
+	
+		dropTimer += delta;
+		if (dropTimer > 1f) {
+			dropTimer = 0;
+			createDroplet();
+		}
+	}
+
+	private void draw() {
+		ScreenUtils.clear(Color.BLACK);
+		game.viewport.apply();
+		game.batch.setProjectionMatrix(game.viewport.getCamera().combined);
+		game.batch.begin();
+		
+		float worldWidth = game.viewport.getWorldWidth();
+		float worldHeight = game.viewport.getWorldHeight();
+        
+		game.batch.draw(backgroundTexture, 0, 0, worldWidth, worldHeight);
+		bucketSprite.draw(game.batch);
+	
+		game.font.draw(game.batch, "Drops collected: " + dropsGathered, 0, worldHeight);
+	
+		for (Sprite dropSprite : dropSprites) {
+			dropSprite.draw(game.batch);
+		}
+	
+		game.batch.end();
+	}
+
+	private void createDroplet() {
+		float dropWidth = 1;
+		float dropHeight = 1;
+		float worldWidth = game.viewport.getWorldWidth();
+		float worldHeight = game.viewport.getWorldHeight();
+	
+		Sprite dropSprite = new Sprite(dropTexture);
+		dropSprite.setSize(dropWidth, dropHeight);
+		dropSprite.setX(MathUtils.random(0F, worldWidth - dropWidth));
+		dropSprite.setY(worldHeight);
+		dropSprites.add(dropSprite);
+	}
+
+	@Override
+	public void resize(int width, int height) {
+		game.viewport.update(width, height, true);
 	}
 
 	@Override
@@ -289,18 +319,18 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void dispose() {
-		dropImage.dispose();
-		bucketImage.dispose();
+		backgroundTexture.dispose();
 		dropSound.dispose();
-		rainMusic.dispose();
+		music.dispose();
+		dropTexture.dispose();
+		bucketTexture.dispose();
 	}
-
 }
 ```
 
 This code is almost 95% the same as the original implementation, except now we use a constructor instead of the `create()` method of the `ApplicationListener`, and pass in a `Drop` object, like in the `MainMenuScreen` class. We also start playing the music as soon as the Screen is set to `GameScreen`. Moreover, we added a string to the top left corner of the game, which tracks the number of raindrops collected.
 
-Note that the `dispose()` method of the `GameScreen` class is not called automatically, see the [Screen API](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Screen.html). It is your responsibility to take care of that. You can call this method from the `dispose()` method of the `Game` class, if the `GameScreen` class passes a reference to itself to the `Game` class. It is important to do this, else `GameScreen` assets might persist and occupy memory even after exiting the application.
+Note that the `dispose()` method of the `GameScreen` class is not called automatically, see the [Screen API](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Screen.html). It is your responsibility to take care of that. You can call this method from the `dispose()` method of the `Game` class, if the `GameScreen` class passes a reference to itself to the `Game` class or by calling `screen.dispose()` in `Drop` class `dispose()` method. It is important to do this, else `GameScreen` assets might persist and occupy memory even after exiting the application.
 
 And that's it, you have the complete game finished. That is all there is to know about the Screen interface and abstract Game Class, and all there is to creating multifaceted games with multiple states. The **full Java code** can be found [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-java). If you are developing in **Kotlin**, take a look [here](https://github.com/libgdx/libgdx.github.io/tree/master/assets/downloads/tutorials/extended-game-kotlin) for the full code.
 

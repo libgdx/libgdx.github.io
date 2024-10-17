@@ -2,31 +2,28 @@ package com.badlogic.drop;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.utils.ScreenUtils;
 
 public class MainMenuScreen implements Screen {
 
-  final Drop game;
-	OrthographicCamera camera;
+	final Drop game;
 
-	public MainMenuScreen(final Drop gam) {
-		game = gam;
-
-		camera = new OrthographicCamera();
-		camera.setToOrtho(false, 800, 480);
+	public MainMenuScreen(final Drop game) {
+		this.game = game;
 	}
 
 	@Override
 	public void render(float delta) {
-		ScreenUtils.clear(0, 0, 0.2f, 1);
+		ScreenUtils.clear(Color.BLACK);
 
-		camera.update();
-		game.batch.setProjectionMatrix(camera.combined);
+		game.viewport.apply();
+		game.batch.setProjectionMatrix(game.viewport.getCamera().combined);
 
 		game.batch.begin();
-		game.font.draw(game.batch, "Welcome to Drop!!! ", 100, 150);
-		game.font.draw(game.batch, "Tap anywhere to begin!", 100, 100);
+		//draw text. Remember that x and y are in meters
+		game.font.draw(game.batch, "Welcome to Drop!!! ", 1, 1.5f);
+		game.font.draw(game.batch, "Tap anywhere to begin!", 1, 1);
 		game.batch.end();
 
 		if (Gdx.input.isTouched()) {
@@ -37,6 +34,7 @@ public class MainMenuScreen implements Screen {
 
 	@Override
 	public void resize(int width, int height) {
+		game.viewport.update(width, height, true);
 	}
 
 	@Override
