@@ -49,13 +49,7 @@ If you want to execute your freshly imported project, you have to follow differe
 4. Edit the Run Configuration that was just created by running the lwjgl3 project and set the working directory to point to your `assets` folder:<br/>
   ![](/assets/images/dev/idea/1.png)
 
-    On **macOS**, LWJGL3 projects require one extra step: Either, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Or, add the following experimental code snippet to your `main()` method:
-    ```java
-    if (SharedLibraryLoader.isMac) {
-        Configuration.GLFW_LIBRARY_NAME.set("glfw_async");
-    }
-    ```
-    Additional information on this can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
+    On **macOS**, LWJGL3 projects require one extra step: Either, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Or, add the following experimental code snippet to your `main()` method: `if (SharedLibraryLoader.isMac) Configuration.GLFW_LIBRARY_NAME.set("glfw_async");` Additional information on this can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
     {: .notice--warning}
 5. Run your application using the run button
 
@@ -70,14 +64,9 @@ If you want to execute your freshly imported project, you have to follow differe
 6. At the bottom, under 'Working directory' select 'Other' -> Workspace...
   ![](/assets/images/dev/eclipse/1.png)
 
-   On **macOS**, LWJGL3 projects require one extra step: Either, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Or, add the following experimental code snippet to your `main()` method:
-   ```java
-   if (SharedLibraryLoader.isMac) {
-      Configuration.GLFW_LIBRARY_NAME.set("glfw_async");
-   }
-   ```
-   Additional information on this can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
+   On **macOS**, LWJGL3 projects require one extra step: Either, in your Run Configuration, set the VM Options to `-XstartOnFirstThread`. Or, add the following experimental code snippet to your `main()` method: `if (SharedLibraryLoader.isMac) Configuration.GLFW_LIBRARY_NAME.set("glfw_async");` Additional information on this can be found [here](/news/2021/07/devlog-7-lwjgl3#do-i-need-to-do-anything-else).
    {: .notice--warning}
+
 7. Then select your asset folder located in `assets`
 
 ### In NetBeans:
