@@ -16,10 +16,11 @@ public class Drop extends Game {
 
 	public void create() {
 		batch = new SpriteBatch();
-		font = new BitmapFont(); // use libGDX's default Arial font
+		// use libGDX's default Arial font
+		font = new BitmapFont();
 		viewport = new FitViewport(8, 5);
 
-		//font has 15pt, but we need to scale it our viewport by ratio of viewport height to screen height
+		//font has 15pt, but we need to scale it to our viewport by ratio of viewport height to screen height
 		font.setUseIntegerPositions(false);
 		font.getData().setScale(viewport.getWorldHeight() / Gdx.graphics.getHeight());
 
