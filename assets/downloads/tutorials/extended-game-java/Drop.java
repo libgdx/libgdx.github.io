@@ -16,7 +16,7 @@ public class Drop extends Game {
 
 	public void create() {
 		batch = new SpriteBatch();
-		// use libGDX's default Arial font
+		// use libGDX's default font
 		font = new BitmapFont();
 		viewport = new FitViewport(8, 5);
 
