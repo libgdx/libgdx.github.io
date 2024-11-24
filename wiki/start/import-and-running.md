@@ -54,6 +54,14 @@ If you want to execute your freshly imported project, you have to follow differe
 5. Run your application using the run button
 
 ### In Eclipse:
+
+1. Double click the `projectname-lwjgl3 -> application -> run` task under `Gradle Tasks`.
+  ![](/assets/images/dev/eclipse/4.png)
+
+    If the window is not visible, show it under `Window -> Show View -> Other -> Gradle -> Gradle Tasks` 
+    {: .notice--warning}
+
+<b>Alternatively</b>, you can create a run configuration:
 1. Right-click your lwjgl3 project -> Run as -> Run Configurations...
 2. On the right side, select Java Application: <br/>
   ![](/assets/images/dev/eclipse/3.png)
