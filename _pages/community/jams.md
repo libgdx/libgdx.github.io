@@ -19,15 +19,28 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## September 2024
-Suggestions: 8th - 10th  
+## March 2025
+Suggestions: 9th – 11th  
+Voting: 13th – 15th  
+Jam: 16th – 22nd
+
+## June 2025
+Summer Throwdown Jam  
+All entries must feature an epic boss fight.  
+No suggestions.  
+Theme voting will be done via discord.  
 Voting: 12th - 14th  
 Jam: 15th – 21st
 
-## December 2024
-Suggestions: 1st – 3rd  
-Voting: 5th – 7th  
-Jam: 8th – 14th
+## September 2025
+Suggestions: 7th - 9th  
+Voting: 11th - 13th  
+Jam: 14th – 20th
+
+## December 2025
+Suggestions: Nov. 30th – Dec. 2nd   
+Voting: 4th – 6th  
+Jam: 7th – 13th
 <br/>
 
 # Rules
@@ -43,6 +56,8 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [Roguelike](https://itch.io/jam/libgdx-jam-31) (December 2024)
+* [The 4 Elements(Fire, Water, Earth, Air)](https://itch.io/jam/libgdx-jam-30) (September 2024)
 * [TIME TRAVEL](https://itch.io/jam/libgdx-jam-29) (June 2024)
 * [THE UNDERWORLD](https://itch.io/jam/libgdx-jam-28) (March 2024)
 * [It Came From Above](https://itch.io/jam/libgdx-jam-27) (December 2023)
