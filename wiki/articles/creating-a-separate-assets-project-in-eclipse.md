@@ -49,7 +49,7 @@ My MyGame-Assets projects usually look like the following tree, with organized s
           /screens
           /shaders
           /sounds
-/assets-workfiles (where source/unoptimized files go, with a matching structure to assets)
+/assets-workfiles (where source/unoptimized files go, with a matching structure to assets) 
 
 
 \* I wouldn't recommend setting up a builder for just your assets until it makes sense, which is usually at the later stages of a game's development cycle. Keep it simple and real until you're closing in on production ready, determine if you absolutely need it, isolate what works best, and only THEN isolate how to optimize the packaging of your assets. At that point, you'll be able to measure the effects and maximize your effort to results ratio.
