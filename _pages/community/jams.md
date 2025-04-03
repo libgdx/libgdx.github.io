@@ -19,11 +19,6 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## March 2025
-Suggestions: 9th – 11th  
-Voting: 13th – 15th  
-Jam: 16th – 22nd
-
 ## June 2025
 Summer Throwdown Jam  
 All entries must feature an epic boss fight.  
@@ -56,6 +51,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [Magic and Spells](https://itch.io/jam/libgdx-jam-32) (March 2025)
 * [Roguelike](https://itch.io/jam/libgdx-jam-31) (December 2024)
 * [The 4 Elements (Fire, Water, Earth, Air)](https://itch.io/jam/libgdx-jam-30) (September 2024)
 * [TIME TRAVEL](https://itch.io/jam/libgdx-jam-29) (June 2024)
