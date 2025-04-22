@@ -1,0 +1,7 @@
+public class Flower {
+    private int type; // flower type (e.g., red, blue, yellow)
+    private boolean isMatched; // is the flower matched?
+
+    // getters and setters
+}
+``
