@@ -83,6 +83,12 @@ feature_row4:
     url: "/wiki/tools/texture-packer"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
+  - image_path: /assets/images/dev/tools/tiled_map_packer.gif
+    title: "Tiled Map Packer"
+    excerpt: 'A tool for packing TiledMap tilesets into an atlas'
+    url: "/wiki/tools/tiled-map-packer"
+    btn_label: "Documentation & Download"
+    btn_class: "btn--primary"
 
 sidebar:
   nav: "dev"

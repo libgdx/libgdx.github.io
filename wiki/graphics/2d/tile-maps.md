@@ -261,6 +261,17 @@ Once loaded you can treat the map just like an other TiledMap.
 *Note* if you want to use TMX maps with the GWT backend, you need to make sure the map is saved with pure base64 encoding. The compressed TMX formats will not work due to limitations in GWT.  
 *Note* libGDX does not support infinite size for TMX maps (see [#5764](https://github.com/libgdx/libgdx/issues/5764)). Use only size-limited TMX maps.
 
+### Loading TiledMapPacker Atlas TMX/TMJ Tiled maps
+The libGDX TiledMapPacker and AtlasTmxMapLoader have been around for years, but with recent updates it's been expanded to include
+more feature's and well as better documentation on how to use it.
+
+Maps processed by TiledMapPacker must be loaded using the AtlasTmxMapLoader or AtlasTmjMapLoader classes instead of the standard map loaders.
+These specialized loaders recognize the extra atlas property embedded in the map file, ensuring tilesets, image layers, and collection-of-images tilesets are properly loaded from the generated TextureAtlas.
+
+Using these loaders reduces draw calls, minimizes texture binds, and improves rendering efficiency. Especially for maps which heavily rely on image layers and multiple tilesets.
+
+See the full [TiledMapPacker documentation](/wiki/tools/tiled-map-packer) for usage instructions.
+
 ### Loading Tide maps
 ![images/tile-maps3.png](/assets/wiki/images/tile-maps3.png)
 

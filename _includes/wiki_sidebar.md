@@ -182,6 +182,7 @@
   * [Overlap2D](/wiki/tools/overlap2d)
   * [Skin Composer](/wiki/tools/skin-composer)
   * [Texture packer](/wiki/tools/texture-packer)
+  * [Tiled Map Packer](/wiki/tools/tiled-map-packer)
 </div>
 </details>
 
