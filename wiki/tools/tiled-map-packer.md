@@ -4,27 +4,26 @@ title: "Tiled Map Packer"
 
 # TiledMapPacker
 
-> **Warning**, while the latest TiledMapPacker is available for download.
-> In order to use maps created with it. You must be using the latest SNAPSHOT version of libGDX, currently *1.13.2-SNAPSHOT*.
+> **Warning:** While the latest TiledMapPacker is available for download, you must be
+> using the latest SNAPSHOT version of libGDX, currently 1.13.2-SNAPSHOT, to load maps created with it.
 
 You can download the runnable JAR release of **TiledMapPacker**, [here](https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/runnable-tiledmappacker.jar).
 
-*Offline tool for processing one or more Tiled maps (`.tmx` or `.tmj`) into a single optimized `TextureAtlas`, combining tilesets,
-image layers, and individual images into an atlas for use with the `AtlasTmxMapLoader` or `AtlasTmjMapLoader`.*
-
+*Offline tool for preparing Tiled maps (`.tmx` or `.tmj`) to use a single optimized `TextureAtlas` for rendering
+in libGDX, by combining tilesets, image layers, and individual images. Designed for use with `AtlasTmxMapLoader` or `AtlasTmjMapLoader`.*
 
 ## Why use TiledMapPacker?
 
 TiledMapPacker is designed to optimize your Tiled maps for better runtime performance:
 
-- **Fewer draw calls** – By combining multiple tilesets, images, and layers into a single optimized `TextureAtlas`, 
-your game can render entire maps faster with fewer texture switches. This is especially helpful for parallax backgrounds made using imagelayers, and maps that use a variety of tilesets.
+- **Fewer draw calls** – By combining multiple tilesets, images, and layers into a single optimized `TextureAtlas`,
+  your game can render entire maps faster with fewer texture switches. This is especially helpful for parallax backgrounds made using imagelayers, and maps that use a variety of tilesets.
 - **Optional tile stripping** – Unused tiles can be omitted to reduce file size and memory use.
 
 
 ## Running TiledMapPacker
 
-### Stand‑alone JAR
+### Standalone JAR
 
 ```
 # Creates an output directory named "output" next to INPUTDIR
@@ -33,15 +32,14 @@ java -jar runnable-tiledmappacker.jar ./maps
 # Explicit output directory
 java -jar runnable-tiledmappacker.jar ./maps ./maps-packed
 
-# Explicit output directory, as well maps needing .tiled-project files to load
+# Explicit output directory, as well as loading maps that require .tiled-project files
 java -jar runnable-tiledmappacker.jar ./maps ./maps-packed ./customClass.tiled-project
 
 # Various options are available as well such as verbose logging and stripping unused tiles
-java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused`
+java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused
 ```
 
 > **Note:** TiledMapPacker internally uses `TmxMapLoader` and `TmjMapLoader`, which require a valid OpenGL context. The runnable JAR automatically creates a minimal LwjglApplication that opens a small window.
-
 
 ## Positional arguments
 
@@ -64,7 +62,7 @@ java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused`
 ## Default Per‑Map Atlases vs Combined
 
 - **Per‑map** (default) – Each individual map gets its own atlas.
-    
+
   *Command*: `java -jar tiledmappacker.jar ./maps`.
 
 - **Combined** – All tilesets across every map are packed into a single giant
@@ -89,7 +87,6 @@ java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused`
    assetManager.load("maps/testLevel.tmx", TiledMap.class);
    ```
 
-
 ## Handling ImageLayers
 
 Image‑layers are detected automatically. Each image is renamed to a safe region
@@ -110,8 +107,8 @@ is rewritten. The modified atlas map loaders resolve these names automatically.
 
 ## Results
 
-In a worse case scenario we have below a map created with 3 different tilesets, one of those tilesets being a
-"collection-of-images". As well as 8 image layers being used to for parallax background effects.
+In a worst-case scenario, we have a map that uses three different tilesets,
+including a "collection-of-images" tileset, along with eight image layers for parallax background effects.
 
 ![TiledMap UI Layers](/assets/wiki/images/tiledmappacker1.png)
 
@@ -120,14 +117,14 @@ In the below example we range 12 to 14 depending on where we are on the screen.
 
 ![Unoptimized TMX Map](/assets/wiki/images/tiledmappacker2.gif)
 
-But choosing to use the TiledMapPacker and an `AtlasTmxMapLoader`. We can significantly reduce our draw calls.
+But by using the TiledMapPacker and an AtlasTmxMapLoader, we can significantly reduce our draw calls.
 In this case, down to 1.
 
 ![Optimized Atlas TMX Map](/assets/wiki/images/tiledmappacker3.gif)
-
-
 
 ## Example Tests
 * [Running TiledMapPacker](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-tools/src/com/badlogic/gdx/tiledmappacker/TiledMapPackerTest.java)
 * [Rendering Packed Atlas Tiled Maps](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-tools/src/com/badlogic/gdx/tiledmappacker/TiledMapPackerTestRender.java)
 
+## Asset Credits
+* Example .gifs use free assets from the [**SunnyLand Tileset**](https://ansimuz.itch.io/sunny-land-pixel-game-art).
