@@ -1,6 +1,6 @@
 ---
 title: "Tiled Map Packer"
--------------------------
+---
 
 # TiledMapPacker
 
@@ -12,7 +12,6 @@ You can download the runnable JAR release of **TiledMapPacker**, [here](https://
 *Offline tool for processing one or more Tiled maps (`.tmx` or `.tmj`) into a single optimized `TextureAtlas`, combining tilesets,
 image layers, and individual images into an atlas for use with the `AtlasTmxMapLoader` or `AtlasTmjMapLoader`.*
 
----
 
 ## Why use TiledMapPacker?
 
@@ -23,7 +22,6 @@ your game can render entire maps faster with fewer texture switches. This is esp
 - **Optional tile stripping** – Unused tiles can be omitted to reduce file size and memory use.
 
 
----
 ## Running TiledMapPacker
 
 ### Stand‑alone JAR
@@ -44,7 +42,6 @@ java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused`
 
 > **Note:** TiledMapPacker internally uses `TmxMapLoader` and `TmjMapLoader`, which require a valid OpenGL context. The runnable JAR automatically creates a minimal LwjglApplication that opens a small window.
 
----
 
 ## Positional arguments
 
@@ -63,7 +60,6 @@ java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused`
 | `--ignore-coi`       | Skip "*collection‑of‑images*" tilesets.                                       |
 | `-v`                 | Verbose output (lists every tile or image that is packed/stripped).           |
 
----
 
 ## Default Per‑Map Atlases vs Combined
 
@@ -76,7 +72,6 @@ java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused`
 
   *Option*: `--combine-tilesets`.
 
----
 
 ## Typical Workflow
 
@@ -94,7 +89,6 @@ java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused`
    assetManager.load("maps/testLevel.tmx", TiledMap.class);
    ```
 
----
 
 ## Handling ImageLayers
 
@@ -102,7 +96,6 @@ Image‑layers are detected automatically. Each image is renamed to a safe regio
 ID (prefixed with `atlas_imagelayer_`), packed into the atlas, and the map file
 is rewritten. The modified atlas map loaders resolve these names automatically.
 
----
 
 ## Limitations
 
@@ -115,7 +108,6 @@ is rewritten. The modified atlas map loaders resolve these names automatically.
 - `--combine-tilesets` is experimental. Complex folder hierarchies or absolute
   tileset paths may fail to resolve correctly.
 
----
 ## Results
 
 In a worse case scenario we have below a map created with 3 different tilesets, one of those tilesets being a
