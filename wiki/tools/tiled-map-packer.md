@@ -4,7 +4,10 @@ title: "Tiled Map Packer"
 
 # TiledMapPacker
 
-You can download the runnable JAR release of Tiled Map Packer [here](https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/runnable-tiledmappacker.jar).
+> **Warning**, while the latest TiledMapPacker is available for download.
+> In order to use maps created with it. You must be using the latest SNAPSHOT version of libGDX, currently *1.13.2-SNAPSHOT*.
+
+You can download the runnable JAR release of **TiledMapPacker**, [here](https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/runnable-tiledmappacker.jar).
 
 *Offline tool for processing one or more Tiled maps (`.tmx` or `.tmj`) into a single optimized `TextureAtlas`, combining tilesets,
 image layers, and individual images into an atlas for use with the `AtlasTmxMapLoader` or `AtlasTmjMapLoader`.*
@@ -35,7 +38,7 @@ java -jar runnable-tiledmappacker.jar ./maps ./maps-packed
 # Explicit output directory, as well maps needing .tiled-project files to load
 java -jar runnable-tiledmappacker.jar ./maps ./maps-packed ./customClass.tiled-project
 
-# Various options are avilable as well such as verbose logging and stripping unused tiles
+# Various options are available as well such as verbose logging and stripping unused tiles
 java -jar runnable-tiledmappacker.jar ./maps ./maps-packed -v --strip-unused`
 ```
 
@@ -134,5 +137,5 @@ In this case, down to 1.
 
 ## Example Tests
 * [Running TiledMapPacker](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-tools/src/com/badlogic/gdx/tiledmappacker/TiledMapPackerTest.java)
-* [Rendering Packed Atlas Tiled Maps](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-tools/src/com/badlogic/gdx/tiledmappacker/TiledMapPackerTestRenderer.java)
+* [Rendering Packed Atlas Tiled Maps](https://github.com/libgdx/libgdx/blob/master/extensions/gdx-tools/src/com/badlogic/gdx/tiledmappacker/TiledMapPackerTestRender.java)
 
