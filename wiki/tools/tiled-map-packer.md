@@ -4,9 +4,7 @@ title: "Tiled Map Packer"
 
 # TiledMapPacker
 
-> **Warning:** While the latest TiledMapPacker is available for download, you must be
-> using the latest SNAPSHOT version of libGDX, currently 1.13.2-SNAPSHOT, to load maps created with it.
-
+> **Note:** The most recent TiledMapPacker runnable is now available and requires libGDX version 1.13.5 or higher to load maps created with it.
 You can download the runnable JAR release of **TiledMapPacker**, [here](https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/runnable-tiledmappacker.jar).
 
 *Offline tool for preparing Tiled maps (`.tmx` or `.tmj`) to use a single optimized `TextureAtlas` for rendering
