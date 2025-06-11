@@ -133,7 +133,7 @@ Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
 ## [Unciv](https://github.com/yairm210/Unciv) by Yair Morgenstern <a href="https://github.com/yairm210/Unciv" style="margin-left 10px" class="btn btn--primary">On GitHub</a>
-<img align="left" src="https://play-lh.googleusercontent.com/l8fuQ2DnNjoD9pFnHLsli1xt8OClfr6O9GSBJJ9w7IIb2VHOyxqKZ9lNZXtMqOabCfyI=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
+<img align="left" src="https://play-lh.googleusercontent.com/WaVgGe_q-HN2uCGhEltkPbPIoKKFAZoHwFfQFiodfFVhhX6ag_run_JARZMFRg-Do_g=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
 
 An open-source reimplementation of the most famous civilization-building game ever - fast, small, no ads, free forever! Build your civilization, research technologies, expand your cities and defeat your foes! [[Android](https://play.google.com/store/apps/details?id=com.unciv.app) / [Desktop](https://yairm210.itch.io/unciv)]
 
