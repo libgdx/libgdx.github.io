@@ -331,6 +331,14 @@ public class GameScreen implements Screen {
 
 This code is almost 95% the same as the original implementation, except now we use a constructor instead of the `create()` method of the `ApplicationListener`, and pass in a `Drop` object, like in the `MainMenuScreen` class. We also start playing the music as soon as the Screen is set to `GameScreen`. Moreover, we added a string to the top left corner of the game, which tracks the number of raindrops collected.
 
+To finish connecting the new code to the launcher, we need to pass the Drop class to the Lwjgl3Application. In the "Lwjgl3Launcher" class replace `return new Lwjgl3Application(new Main() {}, getDefaultConfiguration());` with the following line:
+
+```java
+return new Lwjgl3Application(new Drop() {}, getDefaultConfiguration());
+```
+
+You can then delete the Main class from your project since it is no longer needed.
+
 Note that the `dispose()` method of the `GameScreen` class is not called automatically, see the [Screen API](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Screen.html). It is your responsibility to take care of that. You can call this method from the `dispose()` method of the `Game` class, if the `GameScreen` class passes a reference to itself to the `Game` class or by calling `screen.dispose()` in `Drop` class `dispose()` method. It is important to do this, else `GameScreen` assets might persist and occupy memory even after exiting the application.
 
 And that's it, you have the complete game finished. That is all there is to know about the Screen interface and abstract Game Class, and all there is to creating multifaceted games with multiple states. The **full Java code** can be found [here](https://github.com/libgdx/libgdx.github.io/tree/dev/assets/downloads/tutorials/extended-game-java). If you are developing in **Kotlin**, take a look [here](https://github.com/libgdx/libgdx.github.io/tree/dev/assets/downloads/tutorials/extended-game-kotlin) for the full code.
