@@ -83,6 +83,12 @@ feature_row4:
     url: "/wiki/tools/texture-packer"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
+  - image_path: /assets/images/dev/tools/texture_packer_pro.png
+    title: "Texture Packer Pro"
+    excerpt: 'Create sprite sheets and optimize your game graphics'
+    url: "https://www.codeandweb.com/texturepacker"
+    btn_label: "Documentation & Download"
+    btn_class: "btn--primary"
   - image_path: /assets/images/dev/tools/tiled_map_packer.gif
     title: "Tiled Map Packer"
     excerpt: 'A tool for packing TiledMap tilesets into an atlas'
