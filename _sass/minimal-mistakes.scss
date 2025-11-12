@@ -230,3 +230,22 @@ html, body {
       color: #600;
   }
 }
+
+.archive__item-tag {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #eee;
+  color: #333;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.tag--paid {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.tag--free {
+  background-color: #4caf50;
+  color: #fff;
+}
