@@ -23,15 +23,17 @@
                 {% if f.title %}
                 <h2 class="archive__item-title">
                     {{ f.title }}
+                </h2>
+                {% endif %}
 
-                    {% if f.tags %}
+                {% if f.tags %}
+                <div class="tools__item-tags">
                     {% for tag in f.tags %}
-                    <span class="archive__item-tag tag--{{ tag | downcase | replace: ' ', '-' }}">
+                    <span class="tools__item-tag tag--{{ tag | downcase | replace: ' ', '-' }}">
                   {{ tag }}
                 </span>
                     {% endfor %}
-                    {% endif %}
-                </h2>
+                </div>
                 {% endif %}
 
                 {% if f.excerpt %}

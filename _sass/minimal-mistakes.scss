@@ -231,21 +231,35 @@ html, body {
   }
 }
 
-.archive__item-tag {
+/* Container to handle spacing between Title and Tags */
+.tools__item-tags {
+  display: block;
+  line-height: 0;
+  margin-bottom: 8px;
+}
+
+/* Base Tag Style */
+.tools__item-tag {
   display: inline-block;
   font-size: 12px;
-  background-color: #eee;
-  color: #333;
-  padding: 2px;
-  border-radius: 3px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  background-color: transparent;
+  color: #777;
+  margin-right: 4px;
 }
 
+/* PAID Tag: Gold border and text */
 .tag--paid {
-  background-color: #ffd700;
-  color: #000;
+  border-color: #e6c200;
+  color: #e6c200;
 }
 
+/* FREE Tag: Green border and text */
 .tag--free {
-  background-color: #4caf50;
-  color: #fff;
+  border-color: #4caf50;
+  color: #4caf50;
 }

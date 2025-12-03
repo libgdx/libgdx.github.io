@@ -17,21 +17,21 @@ feature_row:
     url: "http://en.esotericsoftware.com/"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["paid"]
+    tags: ["Paid"]
   - image_path: /assets/images/dev/tools/talos.jpg
     title: "Talos"
     excerpt: 'A node based, open source VFX Editor with powerful interface'
     url: "https://talosvfx.com"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
   - image_path: /assets/images/dev/tools/hyperlap.gif
     title: "HyperLap2D"
     excerpt: 'A visual editor for complex 2D worlds and scenes'
     url: "https://github.com/rednblackgames/HyperLap2D"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
 
 feature_row2:
   - image_path: /assets/images/dev/tools/gdx-liftoff.png
@@ -40,21 +40,21 @@ feature_row2:
     url: "/wiki/start/project-generation"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
   - image_path: /assets/images/dev/tools/skin_composer.png
     title: "Skin Composer"
     excerpt: "A skin creator for libGDX's scene2d.ui"
     url: "https://github.com/raeleus/skin-composer/wiki"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
   - image_path: /assets/images/dev/tools/particle_editor.png
     title: "Particle Editor"
     excerpt: 'A powerful tool for making 2D particle effects'
     url: "/wiki/tools/2d-particle-editor"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
 
 feature_row3:
   - image_path: /assets/images/dev/tools/flame.gif
@@ -63,21 +63,21 @@ feature_row3:
     url: "/wiki/graphics/3d/3d-particle-effects"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
   - image_path: /assets/images/dev/tools/hiero.png
     title: "Hiero"
     excerpt: 'A bitmap font packing tool compatible with libGDX'
     url: "/wiki/tools/hiero"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
   - image_path: /assets/images/dev/tools/fbx_conv.gif
     title: "fbx-conv"
     excerpt: 'A tool for converting 3D models to libGDX-friendly formats'
     url: "https://github.com/libgdx/fbx-conv"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
 
 feature_row4:
   - image_path: /assets/images/dev/tools/tiled.png
@@ -86,21 +86,21 @@ feature_row4:
     url: "https://www.mapeditor.org"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
   - image_path: /assets/images/dev/tools/texture_packer.jpeg
     title: "Texture Packer"
     excerpt: 'A tool for packing images into atlases'
     url: "/wiki/tools/texture-packer"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
   - image_path: /assets/images/dev/tools/texture_packer_pro.png
     title: "Texture Packer Pro"
     excerpt: 'Create sprite sheets and optimize your game graphics'
     url: "https://www.codeandweb.com/texturepacker"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free", "paid"]
+    tags: ["Free", "Paid"]
     
 feature_row5:
   - image_path: /assets/images/dev/tools/tiled_map_packer.gif
@@ -109,7 +109,7 @@ feature_row5:
     url: "/wiki/tools/tiled-map-packer"
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
-    tags: ["free"]
+    tags: ["Free"]
 
 sidebar:
   nav: "dev"
