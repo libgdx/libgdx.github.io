@@ -81,10 +81,12 @@ Videos can be included like this:
 
 Actual libGDX examples can be embedded via GWT as iframes. To do this, use the `embed-gwt` element on a wiki page:
 ```yml
-{% raw %}{% include embed-gwt.html dir='viewport-example' %}{% endraw %}
+{% raw %}{% include embed-gwt.html dir='viewport-example' width="800" height="500" %}{% endraw %}
 ```
 
 `dir` refers to the directory in the [libgdx-wiki-examples](https://github.com/libgdx/libgdx-wiki-examples) repo, where the source code of the examples is located. In particular, it denotes the path to the root folder of the example's Gradle project (without leading and trailing slashes; in this case, `viewport-example` refers to the  `/viewport-example/` folder which contains `/html/build.gradle`). The examples are automatically built via GH Actions (by calling `./gradlew html:dist`) and then deployed through GH Pages.
+
+If `width` and `height` are **both** set they are used for the container dimensions. They represent the dimensions in pixels and must be given as raw numbers without units.
 
 To style the embedded content, use the `containerstyle` and `iframestyle` attributes.
 
