@@ -61,7 +61,7 @@ Proceeding to the next screen takes you to the Third-Party screen. These are add
 ## Settings
 The final screen allows you to set versions and other options:
 
-* **libGDX Version**: The official version of libGDX to be included in your project. The latest stable version is `1.12.1`. To implement the latest changes and bugfixes, use `1.12.2-SNAPSHOT`. Keep in mind that snapshot builds may be unstable and subject to API breaking changes.<br>
+* **libGDX Version**: The official version of libGDX to be included in your project. The latest stable version is `1.14.0`. To implement the latest changes and bugfixes, use `1.14.1-SNAPSHOT`. Keep in mind that snapshot builds may be unstable and subject to API breaking changes.<br>
 * **Java Version**: The version of Java to be used to build your project.<br> 
   * `8` is the recommendation for most projects.<br>
   * Use `7` if you want to support old Android devices or iOS.<br>
