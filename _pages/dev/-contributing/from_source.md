@@ -63,7 +63,7 @@ If you encounter any issues while setting up your development environment for li
 # Tests
 If you set everything up correctly, you can try to give the libGDX tests a go.
 
-**LWJGL/LWJGL3:** Run the `LwjglTestStart` class located in tests/gdx-tests/gdx-tests-lwjgl/src (or tests/gdx-tests/gdx-tests-lwjgl3/src respectively) by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ IDEA:
+**LWJGL/LWJGL3:** Run the `LwjglTestStarter` class located in tests/gdx-tests-lwjgl/src (or tests/gdx-tests-lwjgl3/src respectively) by right clicking and running. You should get _assets not found_ when you try to run a test, so edit the run configuration and point it to the correct assets folder (`tests/gdx-tests-android/assets`). For IntelliJ IDEA:
 
 ![](/assets/images/dev/source/0.png)
 
