@@ -114,7 +114,7 @@ mapRenderer.setView(camera);
 Alternatively you can also specify a projection matrix and the view boundaries manually:
 
 ```java
-mapRenderer.setView(projectionMatrix, startX, startY, endx, endY);
+mapRenderer.setView(projectionMatrix, startX, startY, endX, endY);
 ```
 
 The view boundaries are given in the x/y plane, with the y-axis pointing upwards. The units used are specific to the map and format it was loaded from.
@@ -151,7 +151,7 @@ Layers with tiles in them are stored in
 
 ```java
 TiledMap tiledMap = loadMap(); // see below for this
-TiledMapTileLayer layer = (TiledMapTileLayer)tiledMap.getLayers().get(0); // assuming the layer at index on contains tiles
+TiledMapTileLayer layer = (TiledMapTileLayer)tiledMap.getLayers().get(0); // assuming the layer at index 0 contains tiles
 ```
 
 A TiledMapTileLayer has all the same attributes as the generic MapLayer, e.g. properties, objects and so on.
