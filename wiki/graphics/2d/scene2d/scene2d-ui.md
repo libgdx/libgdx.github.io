@@ -7,7 +7,7 @@ scene2d is libGDX's 2D scene graph. At its core, it provides basic 2D scene grap
 
 It is highly recommended to read or least skim the [scene2d documentation](/wiki/graphics/2d/scene2d/scene2d) before continuing.
 
-Check out [libGDX.info](https://libgdxinfo.wordpress.com/) for examples showcasing Scene2d actors, scenes, Stages Images etc..
+Check out [libGDXinfo.wordpress.com](https://libgdxinfo.wordpress.com/) for examples showcasing Scene2d actors, scenes, Stages Images etc..
 
  * [Widget and WidgetGroup](#widget-and-widgetgroup)
  * [Layout](#layout)
