@@ -127,4 +127,4 @@ And that's it!
 
 The good thing about shaders in OpenGL ES 2.0 is that you have a huge library of shaders available to you. Pretty much anything that's done in WebGL can be easily ported over to run on mobiles. Go and experiment!
 
-A simple demo of a shockwave effect shader with libGDX is available on [LibGDX.info](https://libgdxinfo.wordpress.com/shaders/)
+A simple demo of a shockwave effect shader with libGDX is available on [https://libgdxinfo.wordpress.com/shaders/](https://libgdxinfo.wordpress.com/shaders/)
