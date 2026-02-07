@@ -5,7 +5,7 @@ title: Scene2d
 
 scene2d is a 2D scene graph for building applications and UIs using a hierarchy of actors. If you're looking for the UI component of scene2d, see [Scene2d.ui](/wiki/graphics/2d/scene2d/scene2d-ui)
 
-Check out [LibGDX.info](https://libgdxinfo.wordpress.com/basic_action/) for Scene2d examples (Image, Label etc...)
+Check out [https://libgdxinfo.wordpress.com](https://libgdxinfo.wordpress.com/basic_action/) for Scene2d examples (Image, Label etc...)
 
 It provides the following features:
 
@@ -252,7 +252,7 @@ action.setDuration(duration);
 actor.addAction(action);
 ```
 
-Check out [LibGDX.info](https://libgdxinfo.wordpress.com/basic_action/) for a tutorial on Actions
+Check out [https://libgdxinfo.wordpress.com](https://libgdxinfo.wordpress.com/basic_action/) for a tutorial on Actions
 
 ### Action pooling
 

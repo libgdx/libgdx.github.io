@@ -548,7 +548,7 @@ The following is a list of tools for use with box2d and libgdx:
 
   * [Physics Body Editor](https://github.com/julienvillegas/box2d-editor)
 
-Code sample available on [LibGDX.info](https://libgdxinfo.wordpress.com/box2d-importing-complex-bodies//)
+Code sample available on [https://libgdxinfo.wordpress.com](https://libgdxinfo.wordpress.com/box2d-importing-complex-bodies//)
 
 ### Commercial
 
