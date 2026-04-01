@@ -47,7 +47,7 @@ The following instructions detail how ImGui can be used in a libGDX game. For ea
       long windowHandle = ((Lwjgl3Graphics) Gdx.graphics).getWindow().getWindowHandle();
       ImGui.createContext();
       ImGuiIO io = ImGui.getIO();
-      io.setIniFilename(null);
+      io.setIniFilename(null); //Optional. Disables saving window layouts between sessions
       io.getFonts().addFontDefault();
       io.getFonts().build();
       imGuiGlfw.init(windowHandle, true);
