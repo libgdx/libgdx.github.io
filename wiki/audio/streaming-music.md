@@ -30,6 +30,8 @@ boolean isLooping = music.isLooping(); // obvious as well :)
 float position = music.getPosition();  // returns the playback position in seconds
 ```
 
+Music that should loop seamlessly may work better in the Ogg format due to the limitations of MP3 (see 'Why cant MP3 files be seamlessly spliced together?' at [LAME Technical FAQ](https://lame.sourceforge.io/tech-FAQ.txt)).
+
 `Music` instances are heavy on some backends (such as Android), you should usually not have more than about 10 loaded and more than 1 or 2 playing at the same time.
 
 A `Music` instance needs to be disposed if it is no longer needed, to free up resources.
