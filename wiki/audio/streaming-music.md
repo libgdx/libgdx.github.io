@@ -30,8 +30,6 @@ boolean isLooping = music.isLooping(); // obvious as well :)
 float position = music.getPosition();  // returns the playback position in seconds
 ```
 
-Music that should loop seamlessly may work better in the Ogg format due to the limitations of MP3 (see 'Why cant MP3 files be seamlessly spliced together?' at [LAME Technical FAQ](https://lame.sourceforge.io/tech-FAQ.txt)).
-
 `Music` instances are heavy on some backends (such as Android), you should usually not have more than about 10 loaded and more than 1 or 2 playing at the same time.
 
 A `Music` instance needs to be disposed if it is no longer needed, to free up resources.
@@ -39,3 +37,11 @@ A `Music` instance needs to be disposed if it is no longer needed, to free up re
 ```java
 music.dispose();
 ```
+
+## Seamless Music
+
+If you have music that needs to loop seamlessly be aware that whilst the MP3 format is compatible across all platforms it has technical limitations preventing fully seamless play (see 'Why cant MP3 files be seamlessly spliced together?' at [LAME Technical FAQ](https://lame.sourceforge.io/tech-FAQ.txt)). The approach to solving this will vary depending on the platforms you need to target:
+
+- For **desktop and web only** the Ogg format may work better as it avoids the gap issue of MP3 and (as a bonus) has higher fidelity for the same bitrates. The format is not supported on iOS however and on Android there will still be some gap due to current limitations of the LibGDX Audio module.
+- If targeting **iOS and Android** look at using a third-party cross-platform audio backend [alternative](https://libgdx.com/wiki/audio/audio#alternatives), in particular [gdx-miniaudio](https://github.com/rednblackgames/gdx-miniaudio).
+- For **web only** you could also consider streaming pre-looped music directly from your server. Do this by excluding the music from the preload filter and not using the AssetManager. This allows you to loop music for as long as needed, without increasing game load times.
