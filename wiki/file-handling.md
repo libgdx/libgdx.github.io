@@ -100,7 +100,7 @@ The following code obtains a handle for the internal `myfile.txt` file.
 FileHandle handle = Gdx.files.internal("myfile.txt");
 ```
 
-If you used the [gdx-setup tool](/wiki/start/project-generation), this file will be contained in your project's `assets` folder, `/assets/data` to be specific. Your desktop and html projects link to this folder in Eclipse, and will pick it up automatically when executed from within Eclipse.
+If you used the [gdx-liftoff tool](/wiki/start/project-generation), this file will be contained in your project's `assets` folder. Your desktop and html projects link to this folder in Eclipse, and will pick it up automatically when executed from within Eclipse.
 
 ```java
 FileHandle handle = Gdx.files.classpath("myfile.txt");
