@@ -88,7 +88,7 @@ Music instances on the other hand are streams from files on the disk (or SD card
 
 The following code snippet plays a sound file, _myMusicFile.mp3_, from disk repeatedly with the volume half turned up:
 ```java
-Music music = Gdx.audio.newMusic(Gdx.files.getFileHandle("data/myMusicFile.mp3", FileType.Internal));
+Music music = Gdx.audio.newMusic(Gdx.files.getFileHandle("myMusicFile.mp3", FileType.Internal));
 music.setVolume(0.5f);
 music.play();
 music.setLooping(true);

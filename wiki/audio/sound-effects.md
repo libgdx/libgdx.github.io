@@ -11,10 +11,10 @@ Sound effects can be stored in various formats, including MP3, OGG and WAV. Whic
 Sound effects are represented by the [Sound](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/audio/Sound.html) interface. Loading a sound effect works as follows:
 
 ```java
-Sound sound = Gdx.audio.newSound(Gdx.files.internal("data/mysound.mp3"));
+Sound sound = Gdx.audio.newSound(Gdx.files.internal("sounds/mysound.mp3"));
 ```
 
-This loads an audio file called `"mysound.mp3"` from the internal directory `data`.
+This loads an audio file called `"mysound.mp3"` from the internal directory `sounds`.
 
 Once we have the sound loaded we can play it back:
 

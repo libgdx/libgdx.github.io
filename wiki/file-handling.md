@@ -40,7 +40,7 @@ Files can also be stored on what the Android documentation refers to as [interna
 Finally, files can be stored on the external storage, accessible via `Gdx.files.external` in LibGDX. The behaviour regarding external files was changed in Android over the times, hence in LibGDX:
 
 * libGDX up to 1.9.11 uses the Android external storage directory. That is up to Android 4.3 the sd card directory, which might not always be available, and a virtual emulated sd card directory on later versions. For accessing these files, you need to add a permission to your AndroidManifest.xml file, see [Permissions](/wiki/app/starter-classes-and-configuration#permissions). From Android 6 on, even a runtime permission is needed to use the directory and starting from Android 11, access is forbidden completely for normal apps (if you want to publish on the Play Store).
-* libGDX 1.9.12 or later uses the App external storage directory. This directory (located at Android/data/data/your_package_id/) is readable and writable from your app without any further permission and changes. Other apps (like file managers) can access the files up to Android 10, from Android 11 on the directory is only accessible via USB access. Note: If the user uninstalls the app, the data saved here will be deleted if not copied to another location before by the user.
+* libGDX 1.9.12 or later uses the App external storage directory. This directory (located at Android/data/your_package_id/) is readable and writable from your app without any further permission and changes. Other apps (like file managers) can access the files up to Android 10, from Android 11 on the directory is only accessible via USB access. Note: If the user uninstalls the app, the data saved here will be deleted if not copied to another location before by the user.
 
 The App external storage is initialized at game start for you to use, therefore Android creates an empty directory. If you don't use external files and want to suppress this behaviour, you can do so by overriding the instantiation of `AndroidFiles` in `AndroidApplication#createFiles` (1.9.14 and up):
 
@@ -97,7 +97,7 @@ A `FileHandle` is obtained by using one of the aforementioned types directly fro
 The following code obtains a handle for the internal `myfile.txt file`.
 
 ```java
-FileHandle handle = Gdx.files.internal("data/myfile.txt");
+FileHandle handle = Gdx.files.internal("myfile.txt");
 ```
 
 If you used the [gdx-setup tool](/wiki/start/project-generation), this file will be contained in your project's `assets` folder, `/assets/data` to be specific. Your desktop and html projects link to this folder in Eclipse, and will pick it up automatically when executed from within Eclipse.
@@ -148,11 +148,11 @@ for(FileHandle file: files) {
 We can also ask for the parent directory of a file or create a FileHandle for a file in a directory (aka "child").
 
 ```java
-FileHandle parent = Gdx.files.internal("data/graphics/myimage.png").parent();
-FileHandle child = Gdx.files.internal("data/sounds/").child("myaudiofile.mp3");
+FileHandle parent = Gdx.files.internal("graphics/myimage.png").parent();
+FileHandle child = Gdx.files.internal("sounds/").child("myaudiofile.mp3");
 ```
 
-`parent` would point to `"data/graphics/"`, child would point to `data/sounds/myaudiofile.mp3"`.
+`parent` would point to `"graphics/"`, child would point to `sounds/myaudiofile.mp3"`.
 
 There are many more methods in FileHandle that let you check for specific attributes of a file. Please refer to the Javadocs for detail.
 

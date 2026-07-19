@@ -35,7 +35,7 @@ References point to bmFont being originally created by Andreas Jönsson over at 
 Examples
 : [(more)](https://github.com/libgdx/libgdx/blob/master/tests/gdx-tests/src/com/badlogic/gdx/tests/extensions/InternationalFontsTest.java)
 
-	FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("data/unbom.ttf"));
+	FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("unbom.ttf"));
 
 	FreeTypeFontParameter parameter = new FreeTypeFontParameter();
 	parameter.size = 18;
@@ -44,7 +44,7 @@ Examples
 	BitmapFont koreanFont = generator.generateFont(parameter);
 
 	parameter.characters = FreeTypeFontGenerator.DEFAULT_CHARS;
-	generator = new FreeTypeFontGenerator(Gdx.files.internal("data/russkij.ttf"));
+	generator = new FreeTypeFontGenerator(Gdx.files.internal("russkij.ttf"));
 	BitmapFont cyrillicFont = generator.generateFont(parameter);
 	generator.dispose();
 

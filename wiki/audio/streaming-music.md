@@ -6,10 +6,10 @@ For any sound that's longer than a few seconds it is preferable to stream it fro
 To load a Music instance we can do the following:
 
 ```java
-Music music = Gdx.audio.newMusic(Gdx.files.internal("data/mymusic.mp3"));
+Music music = Gdx.audio.newMusic(Gdx.files.internal("music/mymusic.mp3"));
 ```
 
-This loads an MP3 file called `"mymusic.mp3"` from the internal directory `data`.
+This loads an MP3 file called `"mymusic.mp3"` from the internal directory `music`.
 
 Playing back the music instance works as follows:
 

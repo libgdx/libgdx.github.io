@@ -169,7 +169,7 @@ public class MyGdxGame extends ApplicationAdapter {
     public void create() {
 
         batch = new SpriteBatch();
-        skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+        skin = new Skin(Gdx.files.internal("uiskin.json"));
         stage = new Stage();
 
         final TextButton showBtn = new TextButton("Show", skin, "default");
@@ -244,5 +244,3 @@ It happens that time had past since you initialized Pollfish and a survey is rec
 ```
 PollFish.isPollfishPresent();
 ```
-
-

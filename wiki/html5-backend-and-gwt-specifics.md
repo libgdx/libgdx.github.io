@@ -106,7 +106,7 @@ From 1.9.12 on, you can decrease your preload time a lot if you use asset manage
 public class AssetFilter extends DefaultAssetFilter {
     @Override
     public boolean preload(String file) {
-        return !file.endsWith(".png") || file.startsWith("data/hud/");
+        return !file.endsWith(".png") || file.startsWith("hud/");
     }
 }
 ```

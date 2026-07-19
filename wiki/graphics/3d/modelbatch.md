@@ -170,8 +170,8 @@ public static class MyShaderProvider extends DefaultShaderProvider {
 	public MyShaderProvider(DefaultShader.Config defaultConfig) {
 		super(defaultConfig);
 		albedoConfig = new DefaultShader.Config();
-		albedoConfig.vertexShader = Gdx.files.internal("data/albedo.vertex.glsl").readString();
-		albedoConfig.fragmentShader = Gdx.files.internal("data/albedo.fragment.glsl").readString();
+		albedoConfig.vertexShader = Gdx.files.internal("albedo.vertex.glsl").readString();
+		albedoConfig.fragmentShader = Gdx.files.internal("albedo.fragment.glsl").readString();
 	}
 	@Override
 	protected Shader createShader (Renderable renderable) {

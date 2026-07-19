@@ -150,7 +150,7 @@ public class BarebonesBatch extends ApplicationAdapter {
 
 	public void create () {
 		batch = new SpriteBatch();
-		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"));
+		texture = new Texture(Gdx.files.internal("badlogic.jpg"));
 	}
 
 	public void render () {

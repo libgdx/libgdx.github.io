@@ -52,9 +52,9 @@ To load assets, the AssetManager needs to know how to load a specific type of as
 Loading a specific asset is simple:
 
 ```java
-manager.load("data/mytexture.png", Texture.class);
-manager.load("data/myfont.fnt", BitmapFont.class);
-manager.load("data/mymusic.ogg", Music.class);
+manager.load("mytexture.png", Texture.class);
+manager.load("myfont.fnt", BitmapFont.class);
+manager.load("mymusic.ogg", Music.class);
 ```
 
 These calls will enqueue those assets for loading. The assets will be loaded in the order we called the [AssetManager.load()](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/assets/AssetManager.html#load-java.lang.String-java.lang.Class-) method. Some loaders allow you to also pass parameters to them via AssetManager.load(). Say we want to specify a non-default filter and mipmapping setting for loading a texture:
@@ -63,7 +63,7 @@ These calls will enqueue those assets for loading. The assets will be loaded in 
 TextureParameter param = new TextureParameter();
 param.minFilter = TextureFilter.Linear;
 param.genMipMaps = true;
-manager.load("data/mytexture.png", Texture.class, param);
+manager.load("mytexture.png", Texture.class, param);
 ```
 
 Look into the loaders mentioned above to find out about their parameters.
@@ -162,16 +162,16 @@ manager.load("arial20.ttf", BitmapFont.class, arial20);
 That's again easy:
 
 ```java
-Texture tex = manager.get("data/mytexture.png", Texture.class);
-BitmapFont font = manager.get("data/myfont.fnt", BitmapFont.class);
+Texture tex = manager.get("mytexture.png", Texture.class);
+BitmapFont font = manager.get("myfont.fnt", BitmapFont.class);
 ```
 
 This of course assumes that those assets have been successfully loaded. If we want to poll whether a specific asset has been loaded we can do the following:
 
 ```java
-if(manager.isLoaded("data/mytexture.png")) {
+if(manager.isLoaded("mytexture.png")) {
    // texture is available, let's fetch it and do something interesting
-   Texture tex = manager.get("data/mytexture.png", Texture.class);
+   Texture tex = manager.get("mytexture.png", Texture.class);
 }
 ```
 
@@ -179,7 +179,7 @@ if(manager.isLoaded("data/mytexture.png")) {
 Easy again, and here you can see the real power of the AssetManager:
 
 ```java
-manager.unload("data/myfont.fnt");
+manager.unload("myfont.fnt");
 ```
 
 If that font references a Texture that you loaded manually before, the texture won't get destroyed! It will be reference counted, getting one reference from the bitmap font and another from itself. As long as this count is not zero, the texture won't be disposed.
@@ -211,7 +211,7 @@ public interface FileHandleResolver {
 }
 ```
 
-By default, every loader uses an InternalFileHandleResolver. That will return a FileHandle pointing at an internal file (just like Gdx.files.internal("data/mytexture.png"). You can write your own resolvers! Look into the assets/loaders/resolvers package for more FileHandleResolver implementation. One use case for this would be a caching system, where you check if you have a newer version downloaded to the external storage first, and fall back to the internal storage if it's not available. The possibilities are endless.
+By default, every loader uses an InternalFileHandleResolver. That will return a FileHandle pointing at an internal file (just like Gdx.files.internal("mytexture.png"). You can write your own resolvers! Look into the assets/loaders/resolvers package for more FileHandleResolver implementation. One use case for this would be a caching system, where you check if you have a newer version downloaded to the external storage first, and fall back to the internal storage if it's not available. The possibilities are endless.
 
 You can set the FileHandleResolver to be used via the second constructor of AssetManager:
 
@@ -232,7 +232,7 @@ Once you are done writing your loader, tell the AssetManager about it:
 
 ```java
 manager.setLoader(MyAssetClass.class, new MyAssetLoader(new InternalFileHandleResolver()));
-manager.load("data/myasset.mas", MyAssetClass.class);
+manager.load("myasset.mas", MyAssetClass.class);
 ```
 
 ### Resuming with a Loading Screen
