@@ -94,7 +94,7 @@ String locRoot = Gdx.files.getLocalStoragePath();
 
 ## Obtaining FileHandles
 A `FileHandle` is obtained by using one of the aforementioned types directly from the *Files* module.
-The following code obtains a handle for the internal `myfile.txt file`.
+The following code obtains a handle for the internal `myfile.txt` file.
 
 ```java
 FileHandle handle = Gdx.files.internal("myfile.txt");
