@@ -90,13 +90,6 @@ Breathtakingly fast and tough-as-nails, Rifter is an acrobatic platformer drench
 # Mobile Games
 libGDX really shines if you plan to release games for mobile platforms as well!
 
-## [Disney Heroes: Battle Mode](https://perblue.com/our-games/) by PerBlue Entertainment
-<img align="left" src="https://lh3.googleusercontent.com/9iWANe2crKqFiDCY8EVGMhrLzq9O47lQIu0t-1k-snQ1Tj3P-OJx2qQHgiW_rNpv11-t=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
-
-Battle your way through a dangerous digital world and save it from an evil virus with the help of your favorite Disney and Pixar heroes! It’s no-holds barred in this battle-packed RPG starring heroes from Frozen, Wall-E, Toy Story, The Lion King, Pirates of the Caribbean, and more.  [[Android](https://play.google.com/store/apps/details?id=com.perblue.disneyheroes) / [iOS](https://itunes.apple.com/us/app/disney-heroes-battle-mode/id1327925104?mt=8)]
-
-<div style="clear: both; width: 100%; height: 1px;"></div>
-
 ## [Sandship](https://rockbitegames.com/games/sandship) by Rockbite Games
 <img align="right" src="https://play-lh.googleusercontent.com/zVcowfZOhVnUaYCRDu5YkLTczk7eHG2JeVoHZ36aY249O1I0Mm2e_f_IqzPsDNzUug=w460-h215-r" style="margin-left: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
 
@@ -171,6 +164,13 @@ Kelvin and the Infamous Machine is a hilarious point-and-click adventure in whic
 <img align="right" src="https://lh5.googleusercontent.com/Q2gvO_Yag6fNIrej_m4OWcBbE6sJqicK2C6hKG_igsG7oVW7vNw-i_-SgHcNMVic_Qk=w2400" style="margin-left: 25px; margin-top: 17px; margin-bottom: 10px; max-height: 215px" class="lazyload">
 
 Kakele Online is a cross platform, 2D open world MMORPG. In Kakele, you join players from all over the world to fight monsters, explore mysterious caves, complete tasks and quests, collect items and much more! [[Android](https://play.google.com/store/apps/details?id=mmorpg.main) / [iOS](https://apps.apple.com/us/app/id1526962408) / [Steam](https://store.steampowered.com/app/1541020/Kakele_Online__MMORPG/)]
+
+<div style="clear: both; width: 100%; height: 1px;"></div>
+
+## [Disney Heroes: Battle Mode](https://perblue.com/our-games/) by PerBlue Entertainment
+<img align="left" src="https://lh3.googleusercontent.com/9iWANe2crKqFiDCY8EVGMhrLzq9O47lQIu0t-1k-snQ1Tj3P-OJx2qQHgiW_rNpv11-t=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
+
+Battle your way through a dangerous digital world and save it from an evil virus with the help of your favorite Disney and Pixar heroes! It’s no-holds barred in this battle-packed RPG starring heroes from Frozen, Wall-E, Toy Story, The Lion King, Pirates of the Caribbean, and more. [formerly on Android / iOS]
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
