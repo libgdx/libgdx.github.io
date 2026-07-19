@@ -118,10 +118,10 @@ DIG DEEP and uncover the hidden story behind Deep Town and along the way discove
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
-## [Let's Farm](https://www.facebook.com/letsfarmofficial) by Playday Games
-<img align="left" src="https://play-lh.googleusercontent.com/DPuKJ0C_FNTALF-m_0SL7eAdpbTOr-ETipzg2a8YFXY_kFjXv2ukgzkjF93U2eOfSdc=w460-h215-r" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
+## [Slice & Dice](https://tann.fun/games/dice/) by tann
+<img align="left" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1775490/header.jpg" style="margin-right: 25px; margin-top: 17px; margin-bottom: 10px" class="lazyload">
 
-Let's Farm is one of the most popular farming games on mobile! Grow your own crops, cook delicious food, feed lovely pets and trade with farmers from all over the world! [[Android](https://www.amazon.com/Playday-Games-Limited-Lets-Farm/dp/B00FFAEBAU) / [iOS](https://apps.apple.com/us/app/lets-farm/id911657164)]
+Tactical dice-rolling roguelike combat. Take control of 5 heroes, each with their own unique dice. Fight your way through 20 levels of monsters and try to take on the final boss. If you lose a single fight you have to start over so be careful (and lucky!). [[Android](https://play.google.com/store/apps/details?id=com.com.tann.dice) / [iOS](https://apps.apple.com/us/app/slice-dice/id6449848963) / [Desktop](https://store.steampowered.com/app/1775490/Slice__Dice/)]
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
