@@ -110,7 +110,14 @@ feature_row5:
     btn_label: "Documentation & Download"
     btn_class: "btn--primary"
     tags: ["Free"]
-
+  - image_path: /assets/images/dev/tools/pixscape.gif
+    title: "Pixscape"
+    excerpt: 'A visual 2D and 2.5D game engine built on LibGDX'
+    url: "https://pixscape.games/"
+    btn_label: "Documentation & Download"
+    btn_class: "btn--primary"
+    tags: ["Free"]
+    
 sidebar:
   nav: "dev"
 
