@@ -20,9 +20,9 @@ Example for IntelliJ IDEA: Go to the Hiero class, right click and select `Run Hi
 
 Hiero has multiple options for rasterizing fonts:
 
- * FreeType is typically the highest quality. It makes good use of hinting, which means that small fonts are rendered nicely. The `gamma` setting controls how much antialiasing is done. The `mono` setting disables all font smooth. No other effects are supported, though glyphs can be rendered with padding and effects applied via Photoshop or other tools. Hiero uses gdx-freetype, so generated bitmap fonts will exactly match those rendered on the fly by gdx-freetype.
- * Java's font rendering provides the vector outline for the glyphs which allows various effects to be applied, such as a drop shadow, outline, etc. Output is often blurry at small sizes, but larger sizes are good quality.
- * OS native rendering is the most simplistic. It does not provide tightly fitting bounds, so glyphs take up more atlas space.
+* FreeType is typically the highest quality. It makes good use of hinting, which means that small fonts are rendered nicely. The `gamma` setting controls how much antialiasing is done. The `mono` setting disables all font smooth. No other effects are supported, though glyphs can be rendered with padding and effects applied via Photoshop or other tools. Hiero uses gdx-freetype, so generated bitmap fonts will exactly match those rendered on the fly by gdx-freetype.
+* Java's font rendering provides the vector outline for the glyphs which allows various effects to be applied, such as a drop shadow, outline, etc. Output is often blurry at small sizes, but larger sizes are good quality.
+* OS native rendering is the most simplistic. It does not provide tightly fitting bounds, so glyphs take up more atlas space.
 
 Hiero will output kerning information for fonts with kerning entries.
 
@@ -70,9 +70,9 @@ new LwjglApplication(new ApplicationAdapter() {
 });
 ```
 
-### Glyph Designer
+### Skin Composer
 
-[Glyph Designer](https://www.71squared.com/glyphdesigner) is a commercial bitmap font tool designed specifically for Mac. It allows you to create beautifully styled text with custom backgrounds, gradient fills, gradient strokes & shadows. The command line interface allows you to export multi-lingual character sets and target multiple device profiles. At time of writing Glyph Designer is priced at $39.99.
+[Skin Composer](/wiki/tools/skin-composer) includes a BitmapFont editor and Image font generator.
 
 ### BMFont
 
@@ -84,30 +84,6 @@ char id=32   x=0   y=0    width=0     height=0     xoffset=0    yoffset=0    xad
 ```
 Change the xadvance as needed, this is the number of pixels for a space character.
 
-### TWL Theme Editor
+### bmGlyph
 
-The [TWL](https://web.archive.org/web/20181029091157/http://twl.l33tlabs.org/) Theme Editor has a font tool that also uses FreeType. It doesn't support the supersampling. [Theme Editor JWS](https://web.archive.org/web/20180113081423/http://twl.l33tlabs.org/themer/themer.jnlp).
-
-### gdx-fontpack
-
-The [gdx-fontpack](https://github.com/mattdesl/gdx-fontpack) tool also uses FreeType. It doesn't yet support supersampling.
-
-### FontPacker
-
-The [FontPacker](https://web.archive.org/web/20190910225125/http://www.java-gaming.org/topics/fontpacker-pack-truetype-fonts-into-your-game/30219/view.html) tool is written in C# and uses .NET's TextRenderer, FontFamily, and Graphics classes to render.
-
-### ShoeBox
-
-[ShoeBox](http://renderhjs.net/shoebox/) has a tool for creating Angel Code fonts.
-
-### JME
-
-jMonkeyEngine has an Angel Code [font tool](https://web.archive.org/web/20120104011845/http://jmonkeyengine.org/groups/jmonkeyplatform/forum/topic/font-creator-for-jmp/), though it looks simplistic and most likely uses Java's font rendering.
-
-### bmglyph
-
-The [bmglyph](http://www.bmglyph.com/) tool is for OS X only and hasn't been evaluated.
-
-### Littera
-
-[https://kvazars.com/littera/littera.swf](https://kvazars.com/littera/littera.swf) (requires [Adobe Flash Player](https://archive.org/details/flashplayer32_0r0_363_win_sa))
+The [bmGlyph](https://www.bmglyph.com/) tool is for macOS only.
