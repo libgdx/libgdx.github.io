@@ -31,7 +31,7 @@ Examples
 ```java
 FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("unbom.ttf"));
 parameter.size = 18;
-parameter.characters = "한국어/조선어";
+parameter.characters = "한국어/조선말";
 BitmapFont koreanFont = generator.generateFont(parameter);
 generator.dispose();
 ```
