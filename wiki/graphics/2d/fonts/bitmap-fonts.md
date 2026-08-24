@@ -17,9 +17,11 @@ References point to bmFont being originally created by Andreas Jönsson over at 
 
 ## Tools for Creating Bitmaps
 
-[Hiero](/wiki/tools/hiero) - a utility for converting a system font to a bitmap
-
-[Skin Composer](/wiki/tools/skin-composer) - includes a BitmapFont editor and Image font generator
+* [Hiero](/wiki/tools/hiero) - a utility for converting a system font to a bitmap
+* [Skin Composer](/wiki/tools/skin-composer) - includes a BitmapFont editor and Image font generator
+* [BMFont](https://www.angelcode.com/products/bmfont/) - a Windows tool with supersampling features for smoother glyphs
+* [bmGlyph](https://www.bmglyph.com/) - a macOS tool with support for custom images
+* [fontwriter](https://github.com/tommyettinger/fontwriter) - a command line tool to generate fonts for use with the [TextraTypist](https://github.com/tommyettinger/textratypist) or [BitmapFontBridge](https://github.com/tommyettinger/BitmapFontBridge) libraries
 
 ## Other Tools
 
