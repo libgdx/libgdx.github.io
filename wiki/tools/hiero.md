@@ -86,4 +86,8 @@ Change the xadvance as needed, this is the number of pixels for a space characte
 
 ### bmGlyph
 
-The [bmGlyph](https://www.bmglyph.com/) tool is for macOS only.
+The [bmGlyph](https://www.bmglyph.com/) tool is for macOS only. It supports embedding custom images into a font.
+
+### fontwriter
+
+[fontwriter](https://github.com/tommyettinger/fontwriter) is a command line tool to generate fonts for use with the [TextraTypist](https://github.com/tommyettinger/textratypist) or [BitmapFontBridge](https://github.com/tommyettinger/BitmapFontBridge) libraries. It supports creation of MSDF fonts and can achieve more accurate font metrics than Hiero.
