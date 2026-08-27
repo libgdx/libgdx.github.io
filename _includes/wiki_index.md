@@ -77,6 +77,7 @@
   * [Querying and Configuring Graphics (monitors, display modes, vsync, display cutouts)](/wiki/graphics/querying-and-configuring-graphics)
   * [Taking a Screenshot](/wiki/graphics/taking-a-screenshot)
   * [Viewports](/wiki/graphics/viewports)
+  * [ANGLE](/wiki/graphics/angle)
 * [HTML5 Backend and GWT Specifics](/wiki/html5-backend-and-gwt-specifics)
 * [Input Handling](/wiki/input/input-handling)
   * [Accelerometer](/wiki/input/accelerometer)

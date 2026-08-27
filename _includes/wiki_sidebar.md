@@ -109,6 +109,7 @@
   * [Querying and Configuring Graphics (monitors, display modes, vsync, display cutouts)](/wiki/graphics/querying-and-configuring-graphics)
   * [Taking a Screenshot](/wiki/graphics/taking-a-screenshot)
   * [Viewports](/wiki/graphics/viewports)
+  * [ANGLE](/wiki/graphics/angle)
 </div>
 </details>
 
