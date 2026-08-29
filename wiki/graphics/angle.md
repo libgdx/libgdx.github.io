@@ -16,7 +16,7 @@ Currently, libGDX only supports OpenGL ES 2 on Windows, Linux and MacOS.
 Add `gdx-lwjgl3-angle` as a dependency to your LWJGL3 desktop project:
 
 ```gradle
-implementation "com.badlogicgames.gdx:gdx-lwjgl3-angle:<version>"
+implementation "com.badlogicgames.gdx:gdx-lwjgl3-angle:$gdxVersion"
 ```
 
 Then use `GLEmulation.ANGLE_GLES20` in your `Lwjgl3ApplicationConfiguration`:
