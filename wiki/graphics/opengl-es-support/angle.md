@@ -7,9 +7,16 @@ title: ANGLE
 ANGLE (Almost Native Graphics Layer Engine) is an open-source, cross-platform graphics engine abstraction layer developed by Google.
 ANGLE translates OpenGL ES 2/3 calls to Direct3D9, 11, OpenGL, Vulkan or Metal API calls.[^1]
 
-## libGDX limitation
+**Pros**:
+* Better compatibility with systems that don’t support OpenGL 2 by using Direct3D on Windows and Metal on macOS.
+* Up to 15-20% performance increase can be observed
+* May fix some OpenGL driver issues.
 
-Currently, libGDX only supports OpenGL ES 2 on Windows, Linux and MacOS.
+**Cons**:
+* Does only support OpenGL ES 2.0
+* Currently contains non-working 32-bit Windows natives (see [#6806](https://github.com/libgdx/libgdx/issues/6806)).
+* Doesn’t support window transparency on macOS/Linux.
+* And a few other [bugs](https://github.com/libgdx/libgdx/issues?q=is%3Aissue+is%3Aopen+label%3Aangle), that will need to be ironed out.
 
 # Usage
 
