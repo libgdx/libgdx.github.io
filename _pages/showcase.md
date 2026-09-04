@@ -119,9 +119,9 @@ Tactical dice-rolling roguelike combat. Take control of 5 heroes, each with thei
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
 ## [Shattered Pixel Dungeon](https://shatteredpixel.com) by Shattered Pixel <a href="https://github.com/00-Evan/shattered-pixel-dungeon" style="margin-left: 10px" class="btn btn--primary">On GitHub</a>
-<img align="right" src="https://images-na.ssl-images-amazon.com/images/I/51MadCajQaL.png" style="margin-left: 25px; margin-top: 17px; margin-bottom: 25px; max-height: 215px" class="lazyload">
+<img align="right" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1769170/6c8fb7501bad0bba6ed7f005a033df1fa80c9116/header.jpg" style="margin-left: 25px; margin-top: 17px; margin-bottom: 25px; max-height: 215px" class="lazyload">
 
-Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels, and over 150 items to collect and use. [[Android](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon) / [Desktop](https://github.com/00-Evan/shattered-pixel-dungeon/blob/master/docs/getting-started-desktop.md#quick-setup)]
+Shattered Pixel Dungeon is a Roguelike RPG, with pixel art graphics and lots of variety and replayability. Every game is unique, with four different playable characters, randomized levels, and over 150 items to collect and use. [[Android](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon) / [iOS](https://apps.apple.com/us/app/shattered-pixel-dungeon/id1563121109) / [Desktop](https://shatteredpixel.com/shatteredpd/)]
 
 <div style="clear: both; width: 100%; height: 1px;"></div>
 
