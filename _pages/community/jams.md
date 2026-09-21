@@ -19,11 +19,6 @@ toc_sticky: false
 # Upcoming
 If you want to stay up to date – join the official [libGDX Discord](/community/discord/)!
 
-## September 2026
-Suggestions: 6th – 8th  
-Voting: 10th – 12th  
-Jam: 13th – 19th
-
 ## December 2026
 Suggestions: Nov. 29th – Dec. 1st  
 Voting: 3rd – 5th  
@@ -42,6 +37,7 @@ We encourage camaraderie, teamwork, and good sportsmanship with a side of well-i
 <br/>
 
 # Past Jams
+* [EVERYTHING IS BROKEN](https://itch.io/jam/libgdx-jam-38) (September 2026)
 * [One Life Only](https://itch.io/jam/libgdx-jam-37) (June 2026)
 * [That's a Weapon?](https://itch.io/jam/libgdx-jam-36) (March 2026)
 * [BRIDGES](https://itch.io/jam/libgdx-jam-35) (December 2025)
